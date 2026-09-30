@@ -127,6 +127,12 @@
     <!-- mail button end -->
 
 
+    @php
+        use App\Models\StudyAbroadUniversity;
+
+        $studyAbroadUniversities = StudyAbroadUniversity::where('status', 1)->get()->groupBy('country');
+    @endphp
+
     <!-- header-area-start -->
     <header class="header-area tp-header-transparent p-relative">
 
@@ -1496,7 +1502,9 @@
                                             </li>
                                             <li><a href="{{ route('dmit-test') }}">DMIT Assessment</a>
                                             </li>
-                                            <li><a href="#">Psychometric Assessment</a>
+                                            <li> <a href="{{ route('counselling.psychometric_assessment') }}">
+                                                    Psychometric Assessment
+                                                </a>
                                             </li>
                                         </ul>
                                     </li>

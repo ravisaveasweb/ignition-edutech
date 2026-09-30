@@ -150,7 +150,7 @@
                             Left as a plain form here since the exact
                             component signature wasn't available to match.
                         --}}
-                            <form method="POST" action="{{ route('leads.store') ?? '/leads' }}" class="psy-form">
+                            <form method="POST" action="#" class="psy-form">
                                 @csrf
                                 <input type="hidden" name="source" value="psychometric-assessment">
                                 <div class="mb-3">

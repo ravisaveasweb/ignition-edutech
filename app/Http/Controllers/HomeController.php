@@ -154,6 +154,7 @@ class HomeController extends Controller
         return view('career-counselling');
     }
 
+
     public function psychometric_assessment()
     {
         return view('psychometric_assessment', [
