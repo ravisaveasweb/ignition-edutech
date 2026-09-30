@@ -15,13 +15,18 @@
 
                 <div class="col-lg-6">
                     <div class="tp-instructor-apply-input">
-                        <input type="text" name="name" placeholder="Full Name" required>
+                        <input type="text" name="name" placeholder="Full Name" required minlength="3"
+                            pattern="[A-Za-z ]{2,}" title="Name must contain at least 2 letters and no numbers."
+                            oninput="this.value = this.value.replace(/[^A-Za-z ]/g, '')">
                     </div>
                 </div>
 
                 <div class="col-lg-6">
                     <div class="tp-instructor-apply-input">
-                        <input type="text" name="mobile" placeholder="Mobile Number" required>
+                        <input type="text" name="mobile" placeholder="Mobile Number" required maxlength="10"
+                            inputmode="numeric" pattern="[0-9]{10}"
+                            title="Mobile number must contain exactly 10 digits."
+                            oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0, 10)">
                     </div>
                 </div>
 
@@ -33,7 +38,7 @@
 
                 <div class="col-lg-6">
                     <div class="tp-instructor-apply-input">
-                        <input type="text" name="subject" placeholder="Subject" required>
+                        <input type="text" name="subject" placeholder="Current Class / Highest Qualification" required>
                     </div>
                 </div>
 

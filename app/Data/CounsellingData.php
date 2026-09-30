@@ -26,11 +26,12 @@ class CounsellingData
                 'subtitle' => 'Choosing the right career is easier when you understand yourself first. Our Psychometric Assessment helps you understand your interests, aptitude, personality traits, strengths and natural preferences, so you can explore career paths that are genuinely aligned with who you are.',
                 'stats' => [
                     ['value' => '5', 'label' => 'Assessment dimensions'],
-                    ['value' => '5', 'label' => 'Learner stages covered'],
+                    ['value' => '5+', 'label' => 'Learner stages covered'],
                     ['value' => '5', 'label' => 'Step guided process'],
                 ],
-                'cta_primary' => ['label' => 'Take the Assessment', 'href' => '#psy-book'],
+                'cta_primary' => ['label' => 'Take the Assessment', 'href' => route('contact')],
                 'cta_secondary' => ['label' => 'See what it measures', 'href' => '#psy-pillars'],
+                'cta_tertiary' => ['label' => 'Explore the 5 pillars', 'href' => '#edu-psy-pillars',],
             ],
             'pillars' => [
                 'kicker' => 'Psychometric Assessment Framework',
@@ -62,16 +63,17 @@ class CounsellingData
                 'kicker' => 'Who Can Take the Assessment?',
                 'title' => 'Useful at every stage of the academic journey',
                 'items' => [
-                    ['title' => 'Students after Class 8–10', 'text' => 'Explore interests and understand possible academic streams and career directions.'],
-                    ['title' => 'Students after Class 10', 'text' => 'Gain insights while choosing between Science, Commerce, Arts/Humanities or other pathways.'],
-                    ['title' => 'Students after Class 12', 'text' => 'Explore undergraduate courses and career options aligned with their profile.'],
-                    ['title' => 'College Students & Graduates', 'text' => 'Understand strengths, interests and possible career directions for further education or employment.'],
-                    ['title' => 'Working Professionals', 'text' => 'Gain clarity when considering career transitions, higher education or professional development.'],
+                    ['title' => 'Students after Class 8–10', 'text' => 'Explore interests and understand possible academic streams and career directions.', 'icon' => 'bi bi-mortarboard-fill',],
+                    ['title' => 'Students after Class 10', 'text' => 'Gain insights while choosing between Science, Commerce, Arts/Humanities or other pathways.',  'icon' => 'bi bi-book-half',],
+                    ['title' => 'Students after Class 12', 'text' => 'Explore undergraduate courses and career options aligned with their profile.', 'icon' => 'bi bi-journal-bookmark-fill',],
+                    ['title' => 'College Students & Graduates', 'text' => 'Understand strengths, interests and possible career directions for further education or employment.',  'icon' => 'bi bi-person-workspace',],
+                    ['title' => 'Working Professionals', 'text' => 'Gain clarity when considering career transitions, higher education or professional development.',  'icon' => 'bi bi-briefcase-fill',],
                 ],
             ],
             'process' => [
                 'kicker' => 'What You Get',
                 'title' => 'Assessment → Analysis → Guidance → Action',
+            
                 'steps' => [
                     ['title' => 'Psychometric Assessment', 'text' => 'Complete a structured assessment designed to understand multiple aspects of your profile.'],
                     ['title' => 'Detailed Report', 'text' => 'Receive insights into your aptitude, interests, personality and career preferences.'],

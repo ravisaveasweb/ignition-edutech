@@ -39,7 +39,7 @@
                     <p class="lede">Guiding you to Uplift your Career Paths, enabling you to reach the Summit of
                         SUCCESS — through an AI-powered assessment across five dimensions of you.</p>
                     <div class="hero-cta">
-                        <a href="#psy-book" class="btn-psy">Take the Assessment</a>
+                       <a href="{{ route('contact') }}" class="btn-psy">Take the Assessment</a>
                         <a href="#psy-pillars" class="btn-outline-psy">Explore the 5 pillars</a>
                     </div>
                     <div class="stat-strip">
