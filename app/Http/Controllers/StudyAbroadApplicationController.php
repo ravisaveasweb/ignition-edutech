@@ -6,9 +6,10 @@ use App\Models\StudyAbroadApplication;
 use App\Models\StudyAbroadPersonalDetail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Services\Msg91OtpService;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\StudyAbroadApplicationMail;
+use App\Mail\StudyAbroadOtpMail;
+use App\Models\OtpVerification;
 
 class StudyAbroadApplicationController extends Controller
 {
@@ -281,53 +282,43 @@ class StudyAbroadApplicationController extends Controller
                 ]);
             });
 
-            // Generate 4-digit OTP
-            // $otp = (string) random_int(1000, 9999);
+            
 
             // Delete previous OTP
-            // \App\Models\OtpVerification::where(
-            //     'application_id',
-            //     $applicationId
-            // )->delete();
-
-            // Store new OTP
-            // \App\Models\OtpVerification::create([
-            //     'application_id' => $applicationId,
-            //     'phone' => $application->phone,
-            //     'otp' => $otp,
-            //     'expires_at' => now()->addMinutes(5),
-            // ]);
-
-            // Send OTP through MSG91
-            // $otpService->sendOtp(
-            //     $application->phone,
-            //     $otp
-            // );
-
+            
 
             // Delete previous OTP
-\App\Models\OtpVerification::where(
+OtpVerification::where(
     'application_id',
     $applicationId
 )->delete();
 
-// Development/Test OTP
-$otp = '1234';
+// Generate random 4-digit OTP
+$otp = (string) random_int(1000, 9999);
 
-// Store test OTP
-\App\Models\OtpVerification::create([
+// Store OTP
+OtpVerification::create([
     'application_id' => $applicationId,
     'phone' => $application->phone,
+    'email' => $application->email,
     'otp' => $otp,
     'expires_at' => now()->addMinutes(5),
 ]);
 
-// Do not send SMS in development
-\Log::info('TEST OTP', [
-    'application_id' => $applicationId,
-    'phone' => $application->phone,
-    'otp' => $otp,
-]);
+// Send OTP to user's email
+Mail::to($application->email)
+    ->send(
+        new StudyAbroadOtpMail($otp)
+    );
+
+// Go to OTP page
+return redirect()
+    ->route('study-abroad.otp')
+    ->with(
+        'success',
+        'A 4-digit OTP has been sent to your email address.'
+    );
+        
 
 
             // Go to OTP page
@@ -367,82 +358,88 @@ $otp = '1234';
     }
 
 
+
     public function verifyOtp(Request $request)
-    {
-        $applicationId = session('study_abroad_application_id');
+{
+    $applicationId = session('study_abroad_application_id');
 
-        if (!$applicationId) {
-            return redirect()
-                ->route('study-abroad.application')
-                ->with('error', 'Application session expired.');
-        }
-
-        $request->validate([
-            'otp' => [
-                'required',
-                'digits:4',
-            ],
-        ]);
-
-        $verification = \App\Models\OtpVerification::where(
-            'application_id',
-            $applicationId
-        )
-            ->where('otp', $request->otp)
-            ->whereNull('verified_at')
-            ->latest()
-            ->first();
-
-        if (!$verification) {
-            return back()
-                ->withInput()
-                ->with('error', 'Incorrect OTP. Please try again.');
-        }
-
-        if ($verification->expires_at->isPast()) {
-            return back()
-                ->withInput()
-                ->with('error', 'OTP has expired. Please request a new OTP.');
-        }
-
-        DB::transaction(function () use (
-            $verification,
-            $applicationId
-        ) {
-
-            $verification->update([
-                'verified_at' => now(),
-            ]);
-
-            StudyAbroadApplication::where(
-                'id',
-                $applicationId
-            )->update([
-                'otp_verified' => true,
-                'status' => 'completed',
-            ]);
-        });
-
-        $application = StudyAbroadApplication::with([
-            'personalDetails',
-            'educationPreference',
-            'testScores',
-            'pastEducation',
-        ])->findOrFail($applicationId);
-
-        Mail::to(config('mail.admin_email'))
-            ->send(
-                new StudyAbroadApplicationMail($application)
-            );
-
+    if (!$applicationId) {
         return redirect()
-            ->route('study-abroad.completed')
-            ->with(
-                'success',
-                'Phone number verified successfully.'
-            );
+            ->route('study-abroad.application')
+            ->with('error', 'Application session expired.');
     }
 
+    $request->validate([
+        'otp' => [
+            'required',
+            'digits:4',
+        ],
+    ]);
+
+    $verification = OtpVerification::where(
+        'application_id',
+        $applicationId
+    )
+        ->whereNull('verified_at')
+        ->latest()
+        ->first();
+
+    if (!$verification) {
+        return back()
+            ->withInput()
+            ->with('error', 'No OTP found. Please request a new OTP.');
+    }
+
+    if ($verification->expires_at->isPast()) {
+        return back()
+            ->withInput()
+            ->with('error', 'OTP has expired. Please request a new OTP.');
+    }
+
+    if ($verification->otp !== $request->otp) {
+        return back()
+            ->withInput()
+            ->with('error', 'Incorrect OTP. Please try again.');
+    }
+
+    DB::transaction(function () use (
+        $verification,
+        $applicationId
+    ) {
+
+        $verification->update([
+            'verified_at' => now(),
+        ]);
+
+        StudyAbroadApplication::where(
+            'id',
+            $applicationId
+        )->update([
+            'otp_verified' => true,
+            'status' => 'completed',
+        ]);
+    });
+
+    $application = StudyAbroadApplication::with([
+        'personalDetails',
+        'educationPreference',
+        'testScores',
+        'pastEducation',
+    ])->findOrFail($applicationId);
+
+    // Send completed application to admin
+    Mail::to(config('mail.admin_email'))
+        ->send(
+            new StudyAbroadApplicationMail($application)
+        );
+
+    return redirect()
+        ->route('study-abroad.completed')
+        ->with(
+            'success',
+            'Email verified successfully.'
+        );
+}
 
     public function completed()
     {

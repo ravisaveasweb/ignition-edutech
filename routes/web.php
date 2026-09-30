@@ -141,3 +141,24 @@ Route::get('/study-abroad/application/completed', [
 
 Route::get('/counselling/psychometric_assessment', [HomeController::class, 'psychometric_assessment'])
     ->name('counselling.psychometric_assessment');
+
+Route::get(
+    '/study-abroad',
+    [StudyAbroadApplicationController::class, 'create']
+)->name('study-abroad.application');
+
+Route::get(
+    '/study-abroad/otp',
+    [StudyAbroadApplicationController::class, 'otp']
+)->name('study-abroad.otp');
+
+Route::post(
+    '/study-abroad/verify-otp',
+    [StudyAbroadApplicationController::class, 'verifyOtp']
+)->name('study-abroad.verify-otp');
+
+Route::get(
+    '/study-abroad/completed',
+    [StudyAbroadApplicationController::class, 'completed']
+)->name('study-abroad.completed');
+    

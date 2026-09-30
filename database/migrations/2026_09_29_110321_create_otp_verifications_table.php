@@ -15,8 +15,9 @@ return new class extends Migration
                 ->constrained('study_abroad_applications')
                 ->cascadeOnDelete();
 
-            $table->string('phone', 20);
-            $table->string('otp');
+            $table->string('phone')->nullable();
+            $table->string('email');
+               $table->string('otp', 4);
             $table->timestamp('expires_at');
             $table->timestamp('verified_at')->nullable();
 
