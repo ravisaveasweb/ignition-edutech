@@ -1,0 +1,643 @@
+.jain-online-page {
+  --jain-ink: #192531;
+  --jain-soft: #647486;
+  --jain-deep: #101922;
+  --jain-lime: #a7cf3a;
+  --jain-green: #648b1f;
+  --jain-cream: #fffce9;
+  --jain-mint: #eef7d7;
+  --jain-line: rgba(25, 37, 49, 0.1);
+  --jain-shadow: 0 22px 58px rgba(16, 25, 34, 0.12);
+  --jain-shadow-soft: 0 12px 30px rgba(16, 25, 34, 0.08);
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(238, 247, 215, 0.9),
+      transparent 26%
+    ),
+    linear-gradient(180deg, #fbfcf6 0%, #f5f8ef 100%);
+  color: var(--jain-ink);
+}
+
+.jain-online-page a {
+  text-decoration: none;
+}
+
+.jain-online-page img {
+  max-width: 100%;
+  display: block;
+}
+
+.jain-kicker {
+  display: inline-block;
+  margin: 0 0 14px;
+  color: var(--jain-green);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.jain-hero,
+.jain-value-band,
+.jain-section,
+.jain-cta {
+  position: relative;
+  padding: 90px 0;
+}
+
+.jain-hero {
+  padding-top: 54px;
+  padding-bottom: 44px;
+}
+
+.jain-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 880px;
+  background:
+    linear-gradient(120deg, rgba(16, 25, 34, 0.95), rgba(100, 139, 31, 0.78)),
+    url("../img/hero/jain-hero.jpg") center/cover no-repeat;
+  clip-path: ellipse(135% 100% at 50% 0%);
+}
+
+.jain-hero-layout,
+.jain-value-layout,
+.jain-experience-layout,
+.jain-cta-panel,
+.jain-section-head-split {
+  display: grid;
+  gap: 28px;
+}
+
+.jain-hero-layout {
+  position: relative;
+  z-index: 1;
+  grid-template-columns: minmax(0, 1.16fr) minmax(320px, 420px);
+}
+
+.jain-hero-copy {
+  color: #fff;
+  padding-top: 28px;
+}
+
+.jain-hero-copy h1,
+.jain-enquiry-card h3,
+.jain-value-copy h2,
+.jain-section-head h2,
+.jain-experience-copy h2,
+.jain-cta-copy h2 {
+  margin: 0;
+  /* font-family: Georgia, "Times New Roman", serif; */
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+}
+
+.jain-hero-copy h1 {
+  max-width: 770px;
+  color: #fff;
+  font-size: 40px;
+}
+
+.jain-hero-copy h1 span {
+  color: #dff59c;
+}
+
+.jain-lead,
+.jain-enquiry-card p,
+.jain-value-card p,
+.jain-profile-card p,
+.jain-program-card p,
+.jain-experience-copy p,
+.jain-testimonial-card p,
+.jain-cta-copy p,
+.jain-section-head p {
+  margin: 16px 0 0;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.jain-lead {
+  max-width: 650px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 17px;
+}
+
+.jain-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.jain-btn,
+.jain-program-card a,
+.jain-lead-form button,
+.jain-cta-form button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0 22px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+  text-transform: uppercase;
+}
+
+.jain-btn:hover,
+.jain-program-card a:hover,
+.jain-lead-form button:hover,
+.jain-cta-form button:hover {
+  transform: translateY(-2px);
+}
+
+.jain-btn-primary,
+.jain-program-card a,
+.jain-lead-form button,
+.jain-cta-form button {
+  background: linear-gradient(135deg, #dff59c, #a7cf3a);
+  color: var(--jain-deep);
+  box-shadow: 0 18px 34px rgba(167, 207, 58, 0.28);
+}
+
+.jain-btn-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.jain-hero-grid-cards,
+.jain-value-cards,
+.jain-profile-grid,
+.jain-program-grid,
+.jain-testimonial-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.jain-hero-grid-cards {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 34px;
+}
+
+.jain-hero-card,
+.jain-enquiry-card,
+.jain-snapshot-card,
+.jain-value-card,
+.jain-profile-card,
+.jain-program-card,
+.jain-testimonial-card {
+  border: 1px solid var(--jain-line);
+  border-radius: 28px;
+  box-shadow: var(--jain-shadow-soft);
+}
+
+.jain-hero-card {
+  display: flex;
+  gap: 14px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.jain-hero-card i {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: rgba(223, 245, 156, 0.18);
+  color: #dff59c;
+}
+
+.jain-hero-card strong {
+  display: block;
+  color: #fff;
+  font-size: 15px;
+}
+
+.jain-hero-card span {
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.jain-hero-aside {
+  display: grid;
+  gap: 18px;
+}
+
+.jain-enquiry-card,
+.jain-snapshot-card,
+.jain-value-card,
+.jain-profile-card,
+.jain-program-card,
+.jain-testimonial-card {
+  background: #fff;
+}
+
+.jain-enquiry-card {
+  padding: 28px;
+}
+
+.jain-pill {
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: #f1f8dc;
+  color: var(--jain-green);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.jain-enquiry-card h3,
+.jain-value-copy h2,
+.jain-section-head h2,
+.jain-experience-copy h2,
+.jain-cta-copy h2 {
+  margin-top: 16px;
+  color: var(--jain-ink);
+  font-size: clamp(2rem, 3vw, 3.1rem);
+}
+
+.jain-enquiry-card h3 {
+  font-size: 25px;
+}
+
+.jain-enquiry-card p,
+.jain-value-card p,
+.jain-profile-card p,
+.jain-program-card p,
+.jain-experience-copy p,
+.jain-testimonial-card p,
+.jain-cta-copy p,
+.jain-section-head p {
+  color: var(--jain-soft);
+}
+
+.jain-lead-form,
+.jain-cta-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.jain-lead-form input,
+.jain-lead-form select,
+.jain-cta-form input {
+  min-height: 52px;
+  padding: 0 16px;
+  border: 1px solid rgba(25, 37, 49, 0.12);
+  border-radius: 16px;
+  background: #fbfcf8;
+}
+
+.jain-lead-form small {
+  color: #75836e;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.jain-snapshot-card {
+  padding: 24px;
+  background: linear-gradient(180deg, #fffef1 0%, #ffffff 100%);
+}
+
+.jain-snapshot-card h4,
+.jain-profile-card h3,
+.jain-program-card h3,
+.jain-experience-step h4 {
+  margin: 0;
+  color: var(--jain-ink);
+  font-size: 22px;
+  line-height: 1.25;
+}
+
+.jain-snapshot-card ul {
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.jain-snapshot-card li {
+  position: relative;
+  padding-left: 22px;
+  color: var(--jain-soft);
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.jain-snapshot-card li + li {
+  margin-top: 8px;
+}
+
+.jain-snapshot-card li::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--jain-lime);
+}
+
+.jain-value-band {
+  padding-top: 74px;
+  padding-bottom: 0;
+}
+
+.jain-value-layout {
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  align-items: start;
+}
+
+.jain-value-cards {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.jain-value-card,
+.jain-program-card,
+.jain-testimonial-card {
+  padding: 24px;
+}
+
+.jain-value-card strong {
+  display: block;
+  font-size: 18px;
+  color: var(--jain-ink);
+}
+
+.jain-section-alt {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.84),
+    rgba(238, 247, 215, 0.4)
+  );
+}
+
+.jain-section-head {
+  max-width: 820px;
+  margin-bottom: 38px;
+}
+
+.jain-section-head-split {
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 400px);
+  align-items: end;
+}
+
+.jain-profile-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.jain-profile-card {
+  overflow: hidden;
+}
+
+.jain-profile-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.jain-profile-card div {
+  padding: 22px;
+}
+
+.jain-program-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.jain-program-tag {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: #f1f8dc;
+  color: var(--jain-green);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.jain-program-card-accent {
+  background: linear-gradient(180deg, #101922, #344a11);
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.jain-program-card-accent .jain-program-tag,
+.jain-program-card-accent h3,
+.jain-program-card-accent p {
+  color: #fff;
+}
+
+.jain-program-card-accent .jain-program-tag {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.jain-program-card-accent p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.jain-experience-layout {
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  align-items: center;
+}
+
+.jain-experience-steps {
+  display: grid;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.jain-experience-step {
+  display: flex;
+  gap: 18px;
+  padding: 20px 22px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid var(--jain-line);
+}
+
+.jain-experience-step strong {
+  width: 50px;
+  height: 33px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #101922, #648b1f);
+  color: #fff;
+  font-size: 17px;
+}
+
+.jain-experience-step p {
+  margin: 8px 0 0;
+  color: var(--jain-soft);
+}
+
+.jain-experience-visual img {
+  width: 100%;
+  min-height: 580px;
+  object-fit: cover;
+  border-radius: 34px;
+  box-shadow: var(--jain-shadow);
+}
+
+.jain-testimonial-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.jain-stars {
+  color: var(--jain-green);
+  font-size: 18px;
+  letter-spacing: 0.14em;
+}
+
+.jain-person {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.jain-person img {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.jain-person strong {
+  display: block;
+  color: var(--jain-ink);
+}
+
+.jain-person span {
+  color: #75836e;
+  font-size: 13px;
+}
+
+.jain-cta {
+  padding-top: 0;
+  padding-bottom: 112px;
+}
+
+.jain-cta-panel {
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 410px);
+  align-items: center;
+  padding: 42px;
+  border-radius: 34px;
+  background:
+    linear-gradient(130deg, rgba(16, 25, 34, 0.95), rgba(100, 139, 31, 0.82)),
+    url("../img/campus/jain-university-online.jpg") center/cover no-repeat;
+  box-shadow: var(--jain-shadow);
+}
+
+.jain-cta-copy .jain-kicker,
+.jain-cta-copy h2,
+.jain-cta-copy p {
+  color: #fff;
+}
+
+.jain-cta-copy p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.jain-cta-form {
+  padding: 24px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.jain-cta-form input {
+  background: rgba(255, 255, 255, 0.98);
+}
+
+@media (max-width: 1399px) {
+  .jain-hero-grid-cards,
+  .jain-value-cards,
+  .jain-program-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1199px) {
+  .jain-hero-layout,
+  .jain-value-layout,
+  .jain-experience-layout,
+  .jain-cta-panel,
+  .jain-section-head-split {
+    grid-template-columns: 1fr;
+  }
+
+  .jain-profile-grid,
+  .jain-testimonial-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991px) {
+  .jain-hero::before {
+    height: 760px;
+    clip-path: none;
+  }
+
+  .jain-hero-grid-cards,
+  .jain-value-cards,
+  .jain-profile-grid,
+  .jain-program-grid,
+  .jain-testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .jain-hero,
+  .jain-value-band,
+  .jain-section,
+  .jain-cta {
+    padding: 72px 0;
+  }
+
+  .jain-experience-visual img {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 767px) {
+  .jain-hero-copy h1,
+  .jain-enquiry-card h3,
+  .jain-value-copy h2,
+  .jain-section-head h2,
+  .jain-experience-copy h2,
+  .jain-cta-copy h2 {
+    font-size: 2rem;
+  }
+
+  .jain-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .jain-btn,
+  .jain-program-card a {
+    width: 100%;
+  }
+
+  .jain-enquiry-card,
+  .jain-snapshot-card,
+  .jain-value-card,
+  .jain-program-card,
+  .jain-testimonial-card,
+  .jain-cta-panel,
+  .jain-cta-form {
+    padding: 22px;
+    border-radius: 24px;
+  }
+}

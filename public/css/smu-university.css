@@ -1,0 +1,605 @@
+.smu-online-page {
+  --smu-ink: #14334a;
+  --smu-soft: #607991;
+  --smu-deep: #0f2940;
+  --smu-ocean: #1f6f8b;
+  --smu-mist: #e7f5fb;
+  --smu-sand: #f6ebe0;
+  --smu-line: rgba(20, 51, 74, 0.1);
+  --smu-card: #ffffff;
+  --smu-shadow: 0 22px 54px rgba(15, 41, 64, 0.12);
+  --smu-shadow-soft: 0 12px 30px rgba(15, 41, 64, 0.08);
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(231, 245, 251, 0.9),
+      transparent 28%
+    ),
+    linear-gradient(180deg, #f7fbfd 0%, #eff5f8 100%);
+  color: var(--smu-ink);
+}
+
+.smu-online-page a {
+  text-decoration: none;
+}
+
+.smu-online-page img {
+  max-width: 100%;
+  display: block;
+}
+
+.smu-kicker {
+  display: inline-block;
+  margin: 0 0 14px;
+  color: #efa962;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.smu-hero,
+.smu-proof-band,
+.smu-section,
+.smu-cta {
+  position: relative;
+  padding: 88px 0;
+}
+
+.smu-hero {
+  padding-top: 54px;
+  padding-bottom: 44px;
+}
+
+.smu-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 835px;
+  background:
+    linear-gradient(125deg, rgba(15, 41, 64, 0.96), rgba(31, 111, 139, 0.8)),
+    url("../img/hero/smu-hero.jpg") center/cover no-repeat;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+}
+
+.smu-hero-layout,
+.smu-proof-grid,
+.smu-journey-layout,
+.smu-cta-panel,
+.smu-section-head-split {
+  display: grid;
+  gap: 28px;
+}
+
+.smu-hero-layout {
+  position: relative;
+  z-index: 1;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 410px);
+  align-items: start;
+}
+
+.smu-hero-copy {
+  color: #fff;
+  padding-top: 26px;
+}
+
+
+.smu-hero-copy h1 {
+  max-width: 760px;
+  color: #fff;
+  font-size: 40px;
+}
+
+.smu-hero-copy h1 span {
+  color: #efa962;
+}
+
+.smu-lead,
+.smu-enquiry-card p,
+.smu-proof-card p,
+.smu-fit-card p,
+.smu-program-card p,
+.smu-journey-copy p,
+.smu-testimonial-card p,
+.smu-cta-copy p,
+.smu-section-head p {
+  margin: 16px 0 0;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.smu-lead {
+  max-width: 650px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 17px;
+}
+
+.smu-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.smu-btn,
+.smu-program-card a,
+.smu-lead-form button,
+.smu-cta-form button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0 22px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.smu-btn:hover,
+.smu-program-card a:hover,
+.smu-lead-form button:hover,
+.smu-cta-form button:hover {
+  transform: translateY(-2px);
+}
+
+.smu-btn-primary,
+.smu-program-card a,
+.smu-lead-form button,
+.smu-cta-form button {
+  background: linear-gradient(135deg, #b0cb1f, #b0cb1f);
+  color: #fff;
+  box-shadow: 0 18px 34px rgba(118, 216, 239, 0.28);
+}
+
+.smu-btn-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.smu-hero-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.smu-highlight-card,
+.smu-proof-card,
+.smu-fit-card,
+.smu-program-card,
+.smu-testimonial-card,
+.smu-enquiry-card,
+.smu-quick-panel {
+  border: 1px solid var(--smu-line);
+  box-shadow: var(--smu-shadow-soft);
+}
+
+.smu-highlight-card {
+  display: flex;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.smu-highlight-card i {
+  width: 75px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: rgba(184, 240, 255, 0.18);
+  color: #b0cb1f;
+}
+
+.smu-highlight-card strong {
+  display: block;
+  color: #fff;
+  font-size: 15px;
+}
+
+.smu-highlight-card span {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.smu-hero-aside {
+  display: grid;
+  gap: 18px;
+}
+
+.smu-enquiry-card,
+.smu-quick-panel,
+.smu-proof-card,
+.smu-fit-card,
+.smu-program-card,
+.smu-testimonial-card {
+  background: var(--smu-card);
+  border-radius: 28px;
+}
+
+.smu-enquiry-card {
+  padding: 28px;
+}
+
+.smu-pill {
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: #b0cb1f;
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.smu-enquiry-card h3 {
+  font-size: 2rem;
+}
+
+.smu-enquiry-card p,
+.smu-proof-card p,
+.smu-fit-card p,
+.smu-program-card p,
+.smu-journey-copy p,
+.smu-testimonial-card p,
+.smu-cta-copy p,
+.smu-section-head p {
+  color: var(--smu-soft);
+}
+
+.smu-lead-form,
+.smu-cta-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.smu-lead-form input,
+.smu-lead-form select,
+.smu-cta-form input {
+  min-height: 52px;
+  padding: 0 16px;
+  border: 1px solid rgba(20, 51, 74, 0.12);
+  border-radius: 16px;
+  background: #f8fbfc;
+}
+
+.smu-lead-form small {
+  color: #71879b;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.smu-quick-panel {
+  padding: 24px;
+  background: linear-gradient(180deg, #fff7f0 0%, #ffffff 100%);
+}
+
+.smu-quick-panel h4,
+.smu-fit-card h3,
+.smu-program-card h3,
+.smu-journey-item h4 {
+  margin: 0;
+  color: var(--smu-ink);
+  font-size: 22px;
+  line-height: 1.25;
+}
+
+.smu-quick-panel ul {
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.smu-quick-panel li {
+  position: relative;
+  padding-left: 22px;
+  color: var(--smu-soft);
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.smu-quick-panel li + li {
+  margin-top: 8px;
+}
+
+.smu-quick-panel li::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #b0cb1f;
+}
+
+.smu-proof-band {
+  padding-top: 72px;
+  padding-bottom: 0;
+}
+
+.smu-proof-grid {
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  align-items: start;
+}
+
+.smu-proof-cards,
+.smu-fit-grid,
+.smu-program-grid,
+.smu-testimonial-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.smu-proof-cards {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.smu-proof-card,
+.smu-program-card,
+.smu-testimonial-card {
+  padding: 24px;
+}
+
+.smu-proof-card strong {
+  display: block;
+  color: var(--smu-ink);
+  font-size: 18px;
+}
+
+.smu-section-alt {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.86),
+    rgba(231, 245, 251, 0.5)
+  );
+}
+
+.smu-section-head {
+  /* max-width: 820px; */
+  margin-bottom: 38px;
+}
+
+.smu-section-head-split {
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 400px);
+  align-items: end;
+}
+
+.smu-fit-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.smu-fit-card {
+  overflow: hidden;
+}
+
+.smu-fit-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.smu-fit-card div {
+  padding: 22px;
+}
+
+.smu-program-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.smu-program-tag {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: #b0cb1f;
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.smu-journey-layout {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+}
+
+.smu-journey-list {
+  display: grid;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.smu-journey-item {
+  display: flex;
+  gap: 18px;
+  padding: 20px 22px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid var(--smu-line);
+}
+
+.smu-journey-item strong {
+  width: 50px;
+  height: 50px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #0f2940, #1f6f8b);
+  color: #fff;
+  font-size: 17px;
+}
+
+.smu-journey-item p {
+  margin: 8px 0 0;
+  color: var(--smu-soft);
+}
+
+.smu-journey-visual img {
+  width: 100%;
+  min-height: 560px;
+  object-fit: cover;
+  border-radius: 34px;
+  box-shadow: var(--smu-shadow);
+}
+
+.smu-testimonial-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.smu-stars {
+  color: #f6cd33;
+  font-size: 18px;
+  letter-spacing: 0.14em;
+}
+
+.smu-person {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.smu-person img {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.smu-person strong {
+  display: block;
+  color: var(--smu-ink);
+}
+
+.smu-person span {
+  color: #71879b;
+  font-size: 13px;
+}
+
+.smu-cta {
+  padding-top: 0;
+  padding-bottom: 110px;
+}
+
+.smu-cta-panel {
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 410px);
+  align-items: center;
+  padding: 40px;
+  border-radius: 34px;
+  background:
+    linear-gradient(130deg, rgba(15, 41, 64, 0.96), rgba(31, 111, 139, 0.88)),
+    url("../img/campus/sikkim-manipal-university.jpg") center/cover no-repeat;
+  box-shadow: var(--smu-shadow);
+}
+
+.smu-cta-copy .smu-kicker,
+.smu-cta-copy h2,
+.smu-cta-copy p {
+  color: #fff;
+}
+
+.smu-cta-copy p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.smu-cta-form {
+  padding: 24px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.smu-cta-form input {
+  background: rgba(255, 255, 255, 0.98);
+}
+
+@media (max-width: 1399px) {
+  .smu-hero-highlights,
+  .smu-proof-cards,
+  .smu-program-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1199px) {
+  .smu-hero-layout,
+  .smu-proof-grid,
+  .smu-journey-layout,
+  .smu-cta-panel,
+  .smu-section-head-split {
+    grid-template-columns: 1fr;
+  }
+
+  .smu-fit-grid,
+  .smu-testimonial-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991px) {
+  .smu-hero::before {
+    height: 760px;
+  }
+
+  .smu-hero-highlights,
+  .smu-proof-cards,
+  .smu-fit-grid,
+  .smu-program-grid,
+  .smu-testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .smu-hero,
+  .smu-proof-band,
+  .smu-section,
+  .smu-cta {
+    padding: 72px 0;
+  }
+
+  .smu-journey-visual img {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 767px) {
+  .smu-hero-copy h1,
+  .smu-enquiry-card h3,
+  .smu-proof-intro h2,
+  .smu-section-head h2,
+  .smu-journey-copy h2,
+  .smu-cta-copy h2 {
+    font-size: 2rem;
+  }
+
+  .smu-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .smu-btn,
+  .smu-program-card a {
+    width: 100%;
+  }
+
+  .smu-enquiry-card,
+  .smu-quick-panel,
+  .smu-proof-card,
+  .smu-program-card,
+  .smu-testimonial-card,
+  .smu-cta-panel,
+  .smu-cta-form {
+    padding: 22px;
+    border-radius: 24px;
+  }
+}

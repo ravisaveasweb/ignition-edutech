@@ -1,0 +1,400 @@
+:root {
+  /* Design System Tokens */
+  --jo-primary: #4e6700;
+  --jo-primary-container: #a7cf3a;
+  --jo-on-primary-container: #415600;
+  --jo-surface: #f7faf5;
+  --jo-surface-bright: #f7faf5;
+  --jo-surface-dim: #d8dbd6;
+  --jo-surface-container: #ecefea;
+  --jo-surface-container-low: #f1f4ef;
+  --jo-surface-container-lowest: #ffffff;
+  --jo-outline-variant: #c4c9b1;
+  --jo-on-surface: #191c1a;
+  --jo-on-surface-variant: #444936;
+  --jo-radius: 0.5rem;
+  --jo-radius-lg: 0.75rem;
+}
+
+/* Logic Separation for PHP includes */
+
+/* --- JO Header Styles --- */
+.jo-navbar {
+  background-color: var(--jo-surface);
+  border-bottom: 1px solid var(--jo-outline-variant);
+  height: 64px;
+}
+
+.jo-navbar__brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--jo-on-surface);
+  text-decoration: none;
+}
+
+.jo-navbar__link {
+  font-size: 1rem;
+  color: var(--jo-on-surface-variant);
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.2s;
+}
+
+.jo-navbar__link--active {
+  color: var(--jo-primary);
+  font-weight: 600;
+  border-bottom: 2px solid var(--jo-primary);
+}
+
+.jo-navbar__link:hover {
+  color: var(--jo-primary);
+}
+
+/* --- JO Global Components --- */
+.jo-btn {
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--jo-radius);
+  font-weight: 600;
+  transition: all 0.2s;
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.jo-btn--primary {
+  background-color: var(--jo-primary-container);
+  color: var(--jo-on-primary-container);
+}
+
+.jo-btn--primary:hover {
+  opacity: 0.9;
+}
+
+.jo-btn--outline {
+  background-color: transparent;
+  border: 1px solid var(--jo-outline-variant);
+  color: var(--jo-on-surface-variant);
+}
+
+.jo-btn--outline:hover {
+  border-color: var(--jo-primary);
+}
+
+.jo-section {
+  padding: 100px 0;
+}
+
+.jo-card {
+  background-color: var(--jo-surface-container-lowest);
+  border: 1px solid var(--jo-outline-variant);
+  border-radius: var(--jo-radius-lg);
+  /* overflow: hidden; */
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.jo-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* --- JO Hero Styles --- */
+.jo-hero {
+  position: relative;
+  background-color: var(--jo-surface);
+  overflow: hidden;
+}
+
+.jo-hero__badge {
+  background-color: rgba(167, 207, 58, 0.2);
+  color: var(--jo-on-primary-container);
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.jo-hero__accent {
+  color: var(--jo-primary);
+}
+
+.jo-hero__text {
+  font-size: 1.125rem;
+  color: var(--jo-on-surface-variant);
+  max-width: 500px;
+  margin-top: 1.5rem;
+}
+
+.jo-hero__form-card {
+  padding: 2rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* --- JO Form Styles --- */
+.jo-form-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--jo-on-surface);
+}
+
+.jo-form-control {
+  background-color: var(--jo-surface);
+  border: 1px solid var(--jo-outline-variant);
+  padding: 0.75rem;
+  border-radius: var(--jo-radius);
+}
+
+.jo-form-control:focus {
+  border-color: var(--jo-primary);
+  box-shadow: 0 0 0 2px rgba(78, 103, 0, 0.1);
+  outline: none;
+}
+
+/* --- JO Stats Styles --- */
+.jo-stats-band {
+  background-color: var(--jo-surface-container-low);
+  border-top: 1px solid var(--jo-outline-variant);
+  border-bottom: 1px solid var(--jo-outline-variant);
+  padding: 2.5rem 0;
+}
+
+.jo-stat__number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #b0cb1f;
+}
+
+.jo-stat__label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--jo-on-surface-variant);
+  text-transform: uppercase;
+}
+
+/* --- JO Step Styles --- */
+.jo-step__number {
+  width: 64px;
+  height: 64px;
+  background-color: var(--jo-primary-container);
+  color: var(--jo-on-primary-container);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* --- JO Footer Styles --- */
+.jo-footer {
+  background-color: var(--jo-surface-container-low);
+  border-top: 1px solid var(--jo-outline-variant);
+  padding: 48px 0;
+}
+
+.jo-footer__title {
+  color: var(--jo-primary);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+}
+
+.jo-footer__link {
+  color: var(--jo-on-surface-variant);
+  text-decoration: underline;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.jo-footer__link:hover {
+  color: var(--jo-primary);
+}
+
+.fill-1 {
+  font-variation-settings: "FILL" 1;
+}
+
+/* --- Core Hero Container Changes --- */
+.jo-hero {
+  position: relative;
+  background-color: var(
+    --navy-dark
+  ); /* Ensure a dark fallback background color under the image/overlay */
+  overflow: hidden;
+  padding: 120px 0;
+  background-image: url("../img/hero/gla-hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Fixed Overlay: Cleaned up duplicates, set proper z-index and positioning */
+.jo-hero__bg-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(19, 28, 37, 0.95) 0%,
+    rgba(19, 28, 37, 0.85) 40%,
+    rgba(19, 28, 37, 0.4) 70%,
+    rgba(19, 28, 37, 0.15) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Ensure content sits structural layer above the overlay */
+.z-3 {
+  z-index: 3;
+}
+
+/* Text readability adjustments over dark overlay */
+.text-white-50 {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.jo-hero__title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+/* Highlighting accent using the bright lime token to pop off the dark overlay */
+.jo-hero__accent {
+  color: var(--jo-primary-container);
+}
+
+/* Translucent frosted container tags for the trust elements */
+.jo-hero__trust-tag {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 0.5rem 1rem;
+  border-radius: var(--jo-radius);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.jo-hero__trust-tag .material-symbols-outlined {
+  color: var(--jo-primary-container);
+}
+
+/* Badge update to keep high contrast visibility */
+.jo-hero__badge {
+  background-color: var(--jo-primary-container);
+  color: var(--navy-dark);
+  padding: 0.5rem 1.25rem;
+  border-radius: 50rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Responsive adjustment for small screens: makes gradient vertical to support stacked elements */
+@media (max-width: 991.98px) {
+  .jo-hero__bg-glow {
+    background: linear-gradient(
+      180deg,
+      rgba(19, 28, 37, 0.95) 0%,
+      rgba(19, 28, 37, 0.85) 100%
+    );
+  }
+}
+
+/* Section Container Styling */
+.jo-career-section {
+  padding: 4rem 0;
+}
+
+/* Main Banner Card */
+.jo-career-card {
+  background-image: url("../img/help/gla-help-image.jpg");
+  background-size: cover;
+  /* background-position: center; */
+  border-radius: 2rem;
+}
+
+/* Background Dark Overlay for text legibility */
+.jo-card-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Content wrapper ensuring vertical alignment */
+.jo-content-row {
+  z-index: 1;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+/* Left Typography Styling */
+.jo-main-heading {
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.jo-sub-text {
+  max-width: 650px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Right Glassmorphism Form container */
+.jo-glass-form {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Custom Uniform Form Input & Select Styling */
+.jo-form-field {
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border: 0 !important;
+}
+
+.jo-form-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ff9f43' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 16px 12px;
+}
+
+/* Lime Green Submit Button from image_4b6a3e.jpg */
+.jo-btn-submit {
+  background: #c4f866;
+  color: #333333;
+  border-radius: 3rem;
+  transition:
+    transform 0.2s ease-in-out,
+    background-color 0.2s;
+}
+
+.jo-btn-submit:hover {
+  background: #b2e655;
+  transform: scale(1.02);
+}
+.jo-btn-submit:active {
+  background: #b2e655 !important;
+  transform: scale(1.02);
+}

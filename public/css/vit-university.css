@@ -1,0 +1,2592 @@
+.vit-online-page {
+  background: #f7f9fd;
+  color: #10213c;
+}
+
+.vit-page-shell {
+  font-family: "DM Sans", sans-serif;
+}
+
+.vit-online-page a {
+  text-decoration: none;
+}
+
+.vit-topbar {
+  background: #052253;
+  color: #fff;
+  font-size: 13px;
+}
+
+.vit-topbar-inner,
+.vit-navbar-inner,
+.vit-hero-grid,
+.vit-cta-grid,
+.vit-footer-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vit-topbar-inner {
+  min-height: 40px;
+  gap: 16px;
+}
+
+.vit-topbar-inner p {
+  margin: 0;
+}
+
+.vit-topbar-inner a {
+  color: #fff7d0;
+  font-weight: 600;
+}
+
+.vit-navbar {
+  background: #fff;
+  border-bottom: 1px solid rgba(4, 21, 56, 0.08);
+  box-shadow: 0 8px 28px rgba(8, 29, 72, 0.05);
+}
+
+.vit-navbar-inner {
+  min-height: 92px;
+  gap: 20px;
+}
+
+.vit-brand img {
+  width: 188px;
+  max-width: 100%;
+}
+
+.vit-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.vit-nav-links a {
+  color: #12305f;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.vit-apply-btn,
+.vit-sidebar-cta,
+.vit-about-card a,
+.vit-stat-panel a,
+.vit-lead-form button,
+.vit-cta-form button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #f8c03f 0%, #b8d830 100%);
+  color: #0d234c;
+  font-weight: 700;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.vit-apply-btn {
+  min-height: 48px;
+  padding: 0 28px;
+}
+
+.vit-apply-btn:hover,
+.vit-sidebar-cta:hover,
+.vit-about-card a:hover,
+.vit-stat-panel a:hover,
+.vit-lead-form button:hover,
+.vit-cta-form button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(255, 153, 0, 0.22);
+}
+
+.vit-hero-section {
+  position: relative;
+  padding: 28px 0 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 26, 66, 0.94) 0%,
+      rgba(9, 50, 112, 0.74) 35%,
+      rgba(8, 62, 138, 0.34) 50%
+    ),
+    url("../img/hero/vit-hero.jpg") right/cover no-repeat;
+}
+
+.vit-hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 78%,
+    rgba(9, 50, 112, 0.64) 100%
+  );
+  pointer-events: none;
+}
+
+.vit-hero-grid {
+  position: relative;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 54px 0 82px;
+  z-index: 1;
+}
+
+.vit-hero-copy {
+  max-width: 700px;
+  color: #fff;
+}
+
+.vit-eyebrow,
+.vit-section-heading span {
+  margin-bottom: 12px;
+  color: #eb933a;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.vit-hero-copy h1 {
+  margin: 0 0 18px;
+  color: #fff;
+  /* font-size: 64px; */
+  line-height: 1.06;
+  /* font-weight: 800; */
+  max-width: 620px;
+}
+
+.vit-hero-copy h1 span {
+  color: #ffb347;
+}
+
+.vit-hero-text {
+  max-width: 610px;
+  margin-bottom: 26px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.vit-hero-badges {
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.vit-hero-badge,
+.vit-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.vit-hero-badge {
+  /* min-width: 178px; */
+  padding: 12px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 16px;
+  background: rgba(9, 20, 52, 0.42);
+  /* backdrop-filter: blur(10px); */
+}
+
+.vit-hero-badge img,
+.vit-trust-item img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.vit-hero-badge strong,
+.vit-trust-item strong {
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.vit-hero-badge span {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 13px;
+}
+
+.vit-review-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.vit-review-avatars {
+  display: flex;
+  align-items: center;
+}
+
+.vit-review-avatars img {
+  width: 44px;
+  height: 44px;
+  margin-left: -8px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.vit-review-avatars img:first-child {
+  margin-left: 0;
+}
+
+.vit-review-score {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(6, 18, 45, 0.5);
+}
+
+.vit-stars {
+  color: #ffbe3d;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+}
+
+.vit-review-score span {
+  color: #fff;
+  font-weight: 700;
+}
+
+.vit-google-mark img {
+  width: 34px;
+}
+
+.vit-hero-form-card {
+  width: 390px;
+  padding: 30px 28px 24px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 32px 80px rgba(5, 32, 82, 0.28);
+}
+
+.vit-hero-form-card h3 {
+  margin: 0 0 8px;
+  color: #16356a;
+  /* font-size: 36px; */
+  /* font-weight: 800; */
+}
+
+.vit-hero-form-card > p {
+  margin-bottom: 18px;
+  color: #52637f;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.vit-lead-form,
+.vit-cta-form {
+  display: grid;
+  gap: 12px;
+}
+
+.vit-lead-form input,
+.vit-lead-form select,
+.vit-cta-form input,
+.vit-cta-form select {
+  width: 100%;
+  min-height: 54px;
+  padding: 0 16px;
+  border: 1px solid #dce4f1;
+  border-radius: 12px;
+  background: #fff;
+  color: #16356a;
+  font-size: 15px;
+}
+
+.vit-lead-form button,
+.vit-cta-form button {
+  min-height: 56px;
+  border: 0;
+  background: linear-gradient(180deg, #ff9d36 0%, #ff7026 100%);
+  color: #fff;
+}
+
+.vit-lead-form small,
+.vit-cta-form small {
+  display: block;
+  color: #7b879c;
+  text-align: center;
+}
+
+.vit-floating-actions {
+  position: absolute;
+  right: -18px;
+  top: 170px;
+  display: grid;
+  gap: 16px;
+}
+
+.vit-float-pill {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 150px;
+  padding: 12px 12px 12px 10px;
+  border-radius: 40px;
+  background: #fff;
+  color: #183a70;
+  box-shadow: 0 20px 40px rgba(5, 32, 82, 0.18);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.25;
+}
+
+.vit-float-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 24px;
+}
+
+.vit-float-whatsapp .vit-float-icon {
+  background: #23c25d;
+}
+
+.vit-float-call .vit-float-icon {
+  background: #ff8d29;
+}
+
+.vit-trust-strip {
+  margin-top: -26px;
+  position: relative;
+  z-index: 2;
+}
+
+.vit-trust-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+  padding: 18px 24px;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 22px 50px rgba(8, 29, 72, 0.08);
+}
+
+.vit-trust-item {
+  min-width: 0;
+}
+
+.vit-trust-item strong {
+  color: #12305f;
+}
+
+.vit-trust-item span {
+  color: #5e6f8f;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.vit-section {
+  padding: 70px 0 0;
+}
+
+.vit-section-soft {
+  padding-bottom: 10px;
+}
+
+.vit-section-heading {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.vit-section-heading-left {
+  text-align: left;
+}
+
+.vit-section-heading h2 {
+  margin: 0;
+  color: #102d5f;
+  /* font-size: 40px; */
+  /* font-weight: 800; */
+  line-height: 1.18;
+}
+
+.vit-section-heading p {
+  margin: 8px 0 0;
+  color: #6a7792;
+  font-size: 16px;
+}
+
+.vit-card-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.vit-five-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.vit-info-card,
+.vit-program-card,
+.vit-testimonial-card {
+  background: #fff;
+  border: 1px solid #e7edf7;
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(12, 35, 82, 0.06);
+}
+
+.vit-info-card {
+  padding: 14px 14px 18px;
+}
+
+.vit-info-card img,
+.vit-program-card img {
+  width: 100%;
+  height: 170px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+.vit-info-card h3,
+.vit-program-card h4,
+.vit-about-card h3,
+.vit-advantage-card h3,
+.vit-stat-panel h3,
+.vit-step-card h3 {
+  color: #ff8326;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.vit-info-card h3 {
+  margin: 16px 0 10px;
+}
+
+.vit-info-card p,
+.vit-program-card p,
+.vit-about-card p,
+.vit-advantage-card li,
+.vit-stat-panel p,
+.vit-testimonial-card p,
+.vit-step-card p,
+.vit-learning-icon p,
+.vit-footer-brand p,
+.vit-footer-contact p {
+  color: #5d6d89;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.vit-program-layout,
+.vit-learning-layout,
+.vit-bottom-feature-layout,
+.vit-testimonial-layout {
+  display: grid;
+  gap: 24px;
+}
+
+.vit-program-layout {
+  grid-template-columns: minmax(0, 2fr) 340px;
+  align-items: start;
+}
+
+.vit-program-group + .vit-program-group {
+  margin-top: 22px;
+}
+
+.vit-program-group > h3 {
+  margin: 0 0 18px;
+  color: #102d5f;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.vit-program-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.vit-program-card {
+  padding: 12px;
+}
+
+.vit-program-card h4 {
+  margin: 16px 0 10px;
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+.vit-program-grid-two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.vit-program-card-wide {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  align-items: center;
+  gap: 16px;
+}
+
+.vit-program-card-wide img {
+  height: -webkit-fill-available;
+}
+
+.vit-program-card-wide h4 {
+  margin-top: 0;
+}
+
+.vit-program-sidebar,
+.vit-stat-panel {
+  border-radius: 22px;
+  background: linear-gradient(180deg, #0d285d 0%, #071937 100%);
+  color: #fff;
+  box-shadow: 0 24px 48px rgba(7, 25, 55, 0.24);
+}
+
+.vit-program-sidebar {
+  padding: 28px;
+  position: sticky;
+  top: 20px;
+}
+
+.vit-program-sidebar h3,
+.vit-stat-panel h3 {
+  margin: 0 0 18px;
+  color: #fff;
+  font-size: 32px;
+}
+
+.vit-program-sidebar ul,
+.vit-about-card ul,
+.vit-advantage-card ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.vit-program-sidebar li,
+.vit-about-card li,
+.vit-advantage-card li {
+  position: relative;
+  padding-left: 26px;
+}
+
+.vit-program-sidebar li {
+  margin-bottom: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.vit-program-sidebar li::before,
+.vit-about-card li::before,
+.vit-advantage-card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.vit-program-sidebar li::before {
+  background: linear-gradient(180deg, #ffb74b 0%, #ff7f2a 100%);
+}
+
+.vit-sidebar-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 28px 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.vit-sidebar-stats strong,
+.vit-stat-highlights strong,
+.vit-rank-row strong {
+  display: block;
+  color: #ffb84d;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.vit-sidebar-stats span,
+.vit-stat-highlights span,
+.vit-rank-row span {
+  display: block;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.vit-sidebar-cta {
+  min-height: 56px;
+  width: 100%;
+  color: #fff;
+  background: linear-gradient(180deg, #ff9d36 0%, #ff7026 100%);
+}
+
+.vit-learning-layout {
+  grid-template-columns: minmax(0, 1.2fr) minmax(420px, 0.8fr);
+  align-items: center;
+}
+
+.vit-learning-icons {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.vit-learning-icon {
+  text-align: center;
+}
+
+.vit-learning-icon i {
+  margin-bottom: 14px;
+  color: #12305f;
+  font-size: 34px;
+}
+
+.vit-learning-icon h4 {
+  margin: 0 0 8px;
+  color: #12305f;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.vit-learning-image img,
+.vit-advantage-card img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.vit-learning-image img {
+  min-height: 390px;
+  box-shadow: 0 18px 45px rgba(10, 35, 82, 0.14);
+}
+
+.vit-bottom-feature-layout {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.vit-about-card,
+.vit-advantage-card {
+  padding: 28px;
+  border: 1px solid #e7edf7;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(12, 35, 82, 0.06);
+}
+
+.vit-about-card h3,
+.vit-advantage-card h3 {
+  margin: 0 0 14px;
+  color: #102d5f;
+  font-size: 30px;
+}
+
+.vit-about-card ul,
+.vit-advantage-card ul {
+  margin: 20px 0 22px;
+  display: grid;
+  gap: 14px;
+}
+
+.vit-about-card li::before,
+.vit-advantage-card li::before {
+  background: linear-gradient(180deg, #c6e848 0%, #7bc229 100%);
+}
+
+.vit-about-card a,
+.vit-stat-panel a {
+  min-height: 48px;
+  padding: 0 22px;
+  width: fit-content;
+  color: #fff;
+  background: linear-gradient(180deg, #ff9d36 0%, #ff7026 100%);
+}
+
+.vit-advantage-card img {
+  margin-top: 14px;
+  height: 210px;
+}
+
+.vit-stat-panel {
+  padding: 28px;
+}
+
+.vit-stat-highlights,
+.vit-rank-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.vit-stat-highlights {
+  margin-bottom: 18px;
+}
+
+.vit-rank-row {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 20px 0 26px;
+}
+
+.vit-testimonial-layout {
+  grid-template-columns: minmax(0, 1fr) 180px;
+  align-items: center;
+}
+
+.vit-testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.vit-testimonial-card {
+  padding: 24px;
+}
+
+.vit-testimonial-card p {
+  margin: 18px 0 20px;
+}
+
+.vit-person {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.vit-person img {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.vit-person strong {
+  display: block;
+  color: #12305f;
+  font-size: 16px;
+}
+
+.vit-person span {
+  color: #6a7792;
+  font-size: 13px;
+}
+
+.vit-rating-column {
+  display: grid;
+  gap: 18px;
+}
+
+.vit-rating-item {
+  text-align: left;
+}
+
+.vit-rating-item img {
+  max-width: 120px;
+  max-height: 32px;
+  object-fit: contain;
+}
+
+.vit-rating-item strong,
+.vit-rating-item span {
+  display: block;
+}
+
+.vit-rating-item strong {
+  margin-top: 6px;
+  color: #12305f;
+  font-size: 26px;
+}
+
+.vit-rating-item span {
+  color: #ffb84d;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+}
+
+.vit-how-section {
+  padding-bottom: 70px;
+}
+
+.vit-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 14px;
+  align-items: center;
+}
+
+.vit-step-card {
+  padding: 22px 18px;
+  border: 1px solid #e7edf7;
+  border-radius: 18px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 12px 28px rgba(12, 35, 82, 0.06);
+  width: 230px;
+}
+
+.vit-step-no {
+  margin-bottom: 10px;
+  color: #6b7c98;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.vit-step-card i {
+  margin-bottom: 14px;
+  color: #12305f;
+  font-size: 34px;
+}
+
+.vit-step-card h3 {
+  margin: 0 0 8px;
+  color: #12305f;
+  font-size: 18px;
+}
+
+.vit-step-arrow {
+  text-align: end;
+  color: #12305f;
+  font-size: 24px;
+}
+
+.vit-cta-band {
+  padding-bottom: 0;
+}
+
+.vit-cta-grid {
+  position: relative;
+  gap: 24px;
+  align-items: center;
+  padding: 34px 32px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #0f285c 0%, #08162f 100%);
+  overflow: hidden;
+}
+
+.vit-cta-grid::after {
+  content: "";
+  position: absolute;
+  inset: auto -80px -120px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 164, 48, 0.22) 0%,
+    rgba(255, 164, 48, 0) 72%
+  );
+}
+
+.vit-cta-copy {
+  max-width: 360px;
+  position: relative;
+  z-index: 1;
+}
+
+.vit-cta-copy h2 {
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.16;
+}
+
+.vit-cta-copy p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 16px;
+}
+
+.vit-cta-form {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.vit-cta-form button,
+.vit-cta-form small {
+  grid-column: span 2;
+}
+
+.vit-cta-cap {
+  position: relative;
+  z-index: 1;
+  color: #ffb84d;
+  font-size: 110px;
+}
+
+.vit-page-footer {
+  background: #fff;
+  padding: 34px 0 0;
+}
+
+.vit-footer-grid {
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.vit-footer-grid > div {
+  flex: 1;
+}
+
+.vit-footer-brand img {
+  width: 170px;
+  margin-bottom: 14px;
+}
+
+.vit-footer-socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.vit-footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #f0f4fb;
+  color: #12305f;
+}
+
+.vit-footer-links h3,
+.vit-footer-contact h3 {
+  margin: 0 0 14px;
+  color: #ff8326;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.vit-footer-links {
+  display: grid;
+  gap: 8px;
+}
+
+.vit-footer-links a,
+.vit-footer-contact a {
+  color: #5d6d89;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.vit-footer-contact {
+  display: grid;
+  gap: 10px;
+}
+
+.vit-footer-bottom {
+  margin-top: 22px;
+  padding: 18px 0;
+  border-top: 1px solid #ebeff6;
+  text-align: center;
+}
+
+.vit-footer-bottom p {
+  margin: 0;
+  color: #5d6d89;
+  font-size: 14px;
+}
+
+@media (max-width: 1399px) {
+  .vit-floating-actions {
+    display: none;
+  }
+
+  .vit-five-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1199px) {
+  .vit-nav-links {
+    gap: 18px;
+  }
+
+  .vit-hero-copy h1 {
+    font-size: 52px;
+  }
+
+  .vit-program-layout,
+  .vit-learning-layout,
+  .vit-testimonial-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .vit-program-sidebar {
+    position: static;
+  }
+
+  .vit-learning-icons {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .vit-bottom-feature-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .vit-steps-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .vit-step-arrow {
+    display: none;
+  }
+
+  .vit-cta-grid {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .vit-cta-copy {
+    max-width: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .vit-topbar-inner,
+  .vit-navbar-inner,
+  .vit-hero-grid,
+  .vit-footer-grid {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .vit-navbar-inner {
+    padding: 18px 0;
+  }
+
+  .vit-nav-links {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .vit-hero-grid {
+    padding: 36px 0 64px;
+  }
+
+  .vit-hero-copy h1 {
+    font-size: 42px;
+  }
+
+  .vit-hero-form-card {
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .vit-trust-grid,
+  .vit-program-grid,
+  .vit-testimonial-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .vit-five-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .vit-program-grid-two,
+  .vit-sidebar-stats,
+  .vit-stat-highlights,
+  .vit-rank-row {
+    grid-template-columns: 1fr;
+  }
+
+  .vit-program-card-wide {
+    grid-template-columns: 1fr;
+  }
+
+  .vit-section-heading h2,
+  .vit-hero-form-card h3,
+  .vit-program-sidebar h3,
+  .vit-stat-panel h3,
+  .vit-cta-copy h2,
+  .vit-about-card h3,
+  .vit-advantage-card h3 {
+    font-size: 32px;
+  }
+
+  .vit-steps-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .vit-topbar-inner {
+    min-height: auto;
+    padding: 10px 0;
+  }
+
+  .vit-topbar-inner a,
+  .vit-topbar-inner p {
+    font-size: 12px;
+  }
+
+  .vit-brand img {
+    width: 155px;
+  }
+
+  .vit-hero-copy h1 {
+    font-size: 34px;
+  }
+
+  .vit-hero-text,
+  .vit-info-card p,
+  .vit-program-card p,
+  .vit-testimonial-card p {
+    font-size: 14px;
+  }
+
+  .vit-hero-badges,
+  .vit-review-row,
+  .vit-learning-icons,
+  .vit-trust-grid,
+  .vit-program-grid,
+  .vit-testimonial-grid,
+  .vit-steps-grid,
+  .vit-cta-form {
+    grid-template-columns: 1fr;
+  }
+
+  .vit-trust-grid,
+  .vit-five-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vit-hero-badge,
+  .vit-review-score {
+    width: 100%;
+  }
+
+  .vit-learning-icons {
+    display: grid;
+  }
+
+  .vit-learning-image img {
+    min-height: 260px;
+  }
+
+  .vit-rating-column {
+    grid-template-columns: 1fr;
+  }
+
+  .vit-cta-grid {
+    padding: 28px 18px;
+  }
+
+  .vit-cta-cap {
+    display: none;
+  }
+
+  .vit-cta-form {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .vit-cta-form button,
+  .vit-cta-form small {
+    grid-column: span 1;
+  }
+}
+
+/* =========================
+   RESPONSIVE FIXES
+========================= */
+
+/* Large tablets */
+@media (max-width: 1199px) {
+  .vit-hero-grid {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .vit-hero-copy {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .vit-hero-form-card {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .vit-hero-badges {
+    flex-wrap: wrap;
+  }
+
+  .vit-approved-trusted {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .vit-about-card ul,
+  .vit-advantage-card ul {
+    text-align: left;
+  }
+
+  .vit-rating-column {
+    grid-auto-flow: column;
+  }
+
+  .vit-step-card {
+    width: 100%;
+  }
+
+  .vit-program-sidebar ul,
+  .vit-about-card ul,
+  .vit-advantage-card ul {
+    text-align: left;
+  }
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .vit-hero-grid {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .vit-hero-copy h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    max-width: 100%;
+  }
+
+  .vit-hero-text {
+    max-width: 100%;
+  }
+
+  .vit-hero-badges {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .vit-hero-badge {
+    min-width: 220px;
+  }
+
+  .vit-review-row {
+    justify-content: center;
+  }
+
+  .vit-hero-form-card {
+    width: 100%;
+    max-width: 550px;
+  }
+
+  .vit-approved-trusted {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .vit-hero-section {
+    padding: 20px 0 40px;
+  }
+
+  .vit-hero-grid {
+    padding: 20px 0;
+  }
+
+  .vit-hero-copy h1 {
+    font-size: 30px;
+  }
+
+  .vit-eyebrow {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .vit-hero-text {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .vit-hero-badges {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .vit-hero-badge {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .vit-review-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .vit-review-score {
+    width: auto;
+  }
+
+  .vit-hero-form-card {
+    padding: 22px;
+    width: 100%;
+  }
+
+  .vit-floating-actions {
+    position: fixed;
+    right: 12px;
+    bottom: 15px;
+    top: auto;
+    display: flex;
+    flex-direction: column;
+    z-index: 9999;
+  }
+
+  .vit-float-pill {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .vit-float-pill span:last-child {
+    display: none;
+  }
+
+  .vit-approved-trusted {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .vit-stat-approved,
+  .vit-stat-approved-two {
+    padding: 18px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .vit-hero-copy h1 {
+    font-size: 26px;
+  }
+
+  .vit-hero-form-card h3 {
+    font-size: 24px;
+  }
+
+  .vit-review-avatars img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .vit-stars {
+    font-size: 15px;
+  }
+}
+
+/* ===============================
+   TESTIMONIAL SECTION RESPONSIVE
+================================= */
+
+.vit-testimonial-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 30px;
+  align-items: center;
+}
+
+.vit-testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.vit-testimonial-card {
+  background: #fff;
+  padding: 28px;
+  border: 1px solid #e8eef8;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(16, 45, 95, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.vit-testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(16, 45, 95, 0.12);
+}
+
+.vit-stars {
+  color: #ffb400;
+  font-size: 18px;
+  letter-spacing: 2px;
+  /* margin-bottom: 14px; */
+}
+
+.vit-testimonial-card p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #5d6d89;
+  margin: 0 0 20px;
+}
+
+.vit-person {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 16px;
+  border-top: 1px solid #edf2fa;
+}
+
+.vit-person img {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.vit-person strong {
+  display: block;
+  font-size: 16px;
+  color: #12305f;
+}
+
+.vit-person span {
+  font-size: 13px;
+  color: #7a8aa5;
+}
+
+.vit-rating-column {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.vit-rating-item {
+  background: #fff;
+  border: 1px solid #e8eef8;
+  border-radius: 18px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 10px 24px rgba(16, 45, 95, 0.06);
+}
+
+.vit-rating-item img {
+  max-width: 100px;
+  width: 100%;
+  height: 30px;
+  object-fit: contain;
+}
+
+.vit-rating-item strong {
+  display: block;
+  font-size: 26px;
+  color: #12305f;
+  margin: 8px 0 4px;
+}
+
+.vit-rating-item span {
+  display: block;
+  color: #ffb400;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+/* LARGE LAPTOP */
+@media (max-width: 1200px) {
+  .vit-testimonial-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .vit-rating-column {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .vit-rating-item {
+    min-width: 200px;
+  }
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+  .vit-testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .vit-testimonial-card {
+    padding: 24px;
+  }
+
+  .vit-testimonial-card p {
+    font-size: 14px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .vit-section {
+    padding: 50px 0;
+  }
+
+  .vit-testimonial-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .vit-rating-column {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .vit-rating-item {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .vit-testimonial-card {
+    padding: 22px;
+  }
+
+  .vit-person img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .vit-stars {
+    font-size: 16px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .vit-section-heading h2 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .vit-section-heading p {
+    font-size: 14px;
+  }
+
+  .vit-testimonial-card {
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .vit-testimonial-card p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .vit-person {
+    gap: 10px;
+  }
+
+  .vit-person img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .vit-person strong {
+    font-size: 14px;
+  }
+
+  .vit-person span {
+    font-size: 12px;
+  }
+
+  .vit-rating-item {
+    padding: 16px;
+  }
+
+  .vit-rating-item strong {
+    font-size: 22px;
+  }
+
+  .vit-rating-item span {
+    font-size: 14px;
+  }
+}
+
+/* APPROVED SECTION */
+.vit-approved-service {
+  padding: 50px 0 0;
+  margin: 0;
+}
+
+.vit-approved-service h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #0b2a4a;
+}
+
+.vit-approved-trusted {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid #eee;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.vit-stat-approved,
+.vit-stat-approved-two {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 15px;
+  flex: 1 1 220px;
+  justify-content: center;
+  text-align: left;
+}
+
+.vit-approved-content {
+  margin-top: 5px;
+  padding-right: 14px;
+  border-right: 2px solid #0000002b;
+}
+
+.vit-approved-content-two {
+  margin-top: 5px;
+}
+
+.vit-approved img {
+  width: 40px;
+  max-width: 100%;
+}
+
+.vit-approved-content h3,
+.vit-approved-content-two h3 {
+  font-size: 14px;
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+
+.vit-approved-content h3 {
+  color: #0b2a4a;
+}
+
+.vit-approved-content-two h3 {
+  color: #196629;
+}
+
+.vit-approved-content p,
+.vit-approved-content-two p {
+  font-size: 13px;
+  color: #777;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* LARGE TABLETS */
+@media (max-width: 1199px) {
+  .feature-item {
+    flex: 1 1 30%;
+    min-width: 220px;
+  }
+}
+
+/* TABLETS */
+@media (max-width: 991px) {
+  .vit-feature-grid {
+    gap: 15px;
+  }
+
+  .feature-item {
+    flex: 1 1 45%;
+    min-width: 240px;
+    padding: 15px;
+  }
+
+  .vit-approved-service h2 {
+    font-size: 28px;
+  }
+
+  .vit-approved-content {
+    border-right: none;
+    padding-right: 0;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .vit-feature-strip {
+    padding: 15px 0;
+  }
+
+  .feature-item {
+    flex: 1 1 100%;
+    min-width: 100%;
+    justify-content: flex-start;
+    padding: 12px 15px;
+  }
+
+  .feature-item .icons img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .vit-feature-strip .text strong {
+    font-size: 18px;
+  }
+
+  .vit-feature-strip .text span {
+    font-size: 13px;
+  }
+
+  .vit-approved-service {
+    padding: 35px 0;
+  }
+
+  .vit-approved-service h2 {
+    font-size: 24px;
+  }
+
+  .vit-stat-approved,
+  .vit-stat-approved-two {
+    flex: 1 1 100%;
+    justify-content: flex-start;
+    padding: 15px;
+  }
+
+  .vit-approved img {
+    width: 35px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .feature-item {
+    gap: 10px;
+    padding: 10px 12px;
+  }
+
+  .feature-item .icons img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .vit-feature-strip .text strong {
+    font-size: 16px;
+  }
+
+  .vit-feature-strip .text span {
+    font-size: 12px;
+  }
+
+  .vit-approved-service h2 {
+    font-size: 20px;
+  }
+
+  .vit-approved-content h3,
+  .vit-approved-content-two h3 {
+    font-size: 13px;
+  }
+
+  .vit-approved-content p,
+  .vit-approved-content-two p {
+    font-size: 12px;
+  }
+}
+
+.vit-help-section {
+  padding: 60px 0 0;
+  background: #ffffff;
+}
+
+.vit-help-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  background: linear-gradient(135deg, #fafafa, #f4f7fb);
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+/* New  */
+.vit-overview-section {
+  background: #f8f9fc;
+}
+
+.vit-subtitle {
+  color: #eb933a;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.vit-main-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.vit-main-title span {
+  color: #eb933a;
+}
+
+.vit-section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.vit-content-box {
+  background: #fff;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.vit-content-box h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.vit-content-box p {
+  line-height: 1.9;
+  color: #555;
+}
+
+.vit-feature-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  height: 100%;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.vit-feature-card:hover {
+  transform: translateY(-8px);
+}
+
+.vit-feature-card h5 {
+  color: #eb933a;
+  margin-bottom: 15px;
+}
+
+.vit-table thead {
+  background: #eb933a;
+  color: #fff;
+  font-size: 16px;
+}
+
+.vit-table tbody {
+  font-size: 16px;
+}
+
+.vit-table tbody > tr > td {
+  padding: 16px;
+  font-size: 16px;
+}
+
+.vit-table th {
+  padding: 16px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.vit-list {
+  padding-left: 18px;
+}
+
+.vit-list li {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.vit-steps li {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.vit-highlight-box {
+  background: #eb933a;
+  color: #fff;
+  border-radius: 15px;
+  padding: 45px;
+}
+
+.vit-highlight-box h3 {
+  margin-bottom: 20px;
+}
+
+.vit-highlight-box p {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+  .vit-main-title {
+    font-size: 32px;
+  }
+
+  .vit-section-title {
+    font-size: 26px;
+  }
+
+  .vit-content-box {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .vit-main-title {
+    font-size: 26px;
+  }
+
+  .vit-section-title {
+    font-size: 22px;
+  }
+}
+
+.vit-highlight-box h3 {
+  color: white;
+}
+
+/*=============================
+ NMIMS FAQ SECTION
+==============================*/
+
+.vit-faq-section {
+  background: #f8f9fc;
+}
+
+.vit-faq-section .accordion {
+  border: 0;
+}
+
+.vit-faq-subtitle {
+  color: #eb933a;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.vit-faq-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.vit-faq-title span {
+  color: #eb933a;
+}
+
+.vit-faq-desc {
+  color: #6c757d;
+  max-width: 700px;
+  margin: auto;
+}
+
+.vit-custom-accordion .accordion-item {
+  border: none;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+}
+
+.vit-custom-accordion .accordion-button {
+  background: #fff;
+  color: #222;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 20px 25px;
+  box-shadow: none;
+}
+
+.vit-custom-accordion .accordion-button:not(.collapsed) {
+  background: #eb933a;
+  color: #fff;
+}
+
+.vit-custom-accordion .accordion-button:focus {
+  box-shadow: none;
+}
+
+.vit-custom-accordion .accordion-body {
+  padding: 25px;
+  line-height: 1.9;
+  color: #555;
+  background: #fff;
+  font-size: 16px;
+}
+
+.accordion-button::after {
+  filter: brightness(0);
+}
+
+.accordion-button:not(.collapsed)::after {
+  filter: brightness(0) invert(1);
+}
+
+@media (max-width: 991px) {
+  .vit-faq-title {
+    font-size: 32px;
+  }
+
+  .vit-custom-accordion .accordion-button {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 576px) {
+  .vit-faq-title {
+    font-size: 26px;
+  }
+
+  .vit-custom-accordion .accordion-button {
+    font-size: 16px;
+    padding: 18px;
+  }
+
+  .vit-custom-accordion .accordion-body {
+    padding: 20px;
+  }
+}
+
+.vit-faq-section .accordion {
+  border: 0;
+}
+
+/* --- Main Section Wrapper --- */
+.vit-section {
+  padding: 5rem 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* --- Grid Layout (Two Columns) --- */
+.vit-learning-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr; /* Gives slightly more space to the features column */
+  gap: 3.5rem;
+  align-items: center;
+}
+
+/* --- Section Heading --- */
+.vit-section-heading span {
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #ff882e; /* Primary Accent Color */
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.vit-section-heading h2 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.25;
+  margin-bottom: 2.5rem;
+}
+
+/* --- Feature Cards Grid --- */
+.vit-learning-icons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* Individual Card Styling */
+.vit-learning-icon {
+  background: #ffffff;
+  padding: 1.75rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+.vit-learning-icon:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.08);
+  border-color: #cbd5e1;
+}
+
+/* Icon Styling */
+.vit-learning-icon i {
+  font-size: 1.75rem;
+  color: #ff882e;
+  background-color: #eff6ff;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-bottom: 1.25rem;
+}
+
+.vit-learning-icon h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.vit-learning-icon p {
+  font-size: 0.925rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* --- Image Container & Frame --- */
+.vit-learning-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+}
+
+.vit-learning-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+  .vit-learning-layout {
+    grid-template-columns: 1fr; /* Stack vertically on tablets and mobile */
+    gap: 2.5rem;
+  }
+
+  .vit-learning-image {
+    order: -1; /* Move image to the top on smaller screens */
+    min-height: 300px;
+    max-height: 450px;
+  }
+}
+
+@media (max-width: 576px) {
+  .vit-learning-icons {
+    grid-template-columns: 1fr; /* Single column feature cards on mobile */
+  }
+
+  .vit-section-heading h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* --- Section Container --- */
+.vit-section {
+  padding: 5rem 1.5rem;
+}
+
+.vit-section-soft {
+  background-color: #f1f5f9;
+}
+
+/* --- Section Header --- */
+.vit-section-heading {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.vit-section-heading span {
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #ff882e;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.vit-section-heading h2 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+.vit-section-heading p {
+  font-size: 1.05rem;
+  color: #64748b;
+}
+
+/* --- Main Layout Grid (Content + Sidebar) --- */
+.vit-program-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+/* --- Program Section Groups --- */
+.vit-program-group {
+  margin-bottom: 3rem;
+}
+
+.vit-program-group:last-child {
+  margin-bottom: 0;
+}
+
+.vit-program-group h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+/* --- Program Cards Grid --- */
+.vit-program-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.vit-program-grid-two {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Card Styling */
+.vit-program-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.vit-program-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.08);
+  border-color: #cbd5e1;
+}
+
+.vit-program-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.vit-program-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  padding: 1.25rem 1.25rem 0.5rem 1.25rem;
+  line-height: 1.35;
+}
+
+.vit-program-card p {
+  font-size: 0.9rem;
+  color: #64748b;
+  padding: 0 1.25rem 1.25rem 1.25rem;
+  flex-grow: 1;
+}
+
+/* Wide Horizontal Cards (Certificate Section) */
+.vit-program-card-wide {
+  display: flex;
+  flex-direction: row;
+}
+
+.vit-program-card-wide img {
+  width: 40%;
+  height: 100%;
+  min-height: 160px;
+}
+
+.vit-program-card-wide div {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.vit-program-card-wide h4 {
+  padding-top: 1.25rem;
+}
+
+/* --- Sidebar Styling --- */
+.vit-program-sidebar {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 2rem;
+}
+
+.vit-program-sidebar h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1.25rem;
+}
+
+.vit-program-sidebar ul {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.vit-program-sidebar li {
+  font-size: 0.95rem;
+  color: #334155;
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+  font-weight: 500;
+}
+
+/* Custom Checkmark Icons for List */
+.vit-program-sidebar li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #16a34a;
+  font-weight: 800;
+}
+
+/* Sidebar Stats Block */
+.vit-sidebar-stats {
+  border-top: 1px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
+  padding: 1.25rem 0;
+  margin-bottom: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.vit-sidebar-stats div {
+  display: flex;
+  flex-direction: column;
+}
+
+.vit-sidebar-stats strong {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ff882e;
+  line-height: 1;
+}
+
+.vit-sidebar-stats span {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Sidebar Call to Action Button */
+.vit-sidebar-cta {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: #ff882e;
+  color: #ffffff;
+  padding: 0.875rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.vit-sidebar-cta:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* --- Responsive Layout Adjustments --- */
+@media (max-width: 1100px) {
+  .vit-program-layout {
+    grid-template-columns: 1fr; /* Stack sidebar under content */
+  }
+
+  .vit-program-sidebar {
+    position: static;
+  }
+
+  .vit-sidebar-stats {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  .vit-program-grid,
+  .vit-program-grid-two {
+    grid-template-columns: 1fr; /* Single column cards on tablet/mobile */
+  }
+
+  .vit-program-card-wide {
+    flex-direction: column;
+  }
+
+  .vit-program-card-wide img,
+  .vit-program-card-wide div {
+    width: 100%;
+  }
+
+  .vit-section-heading h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* --- Section Container --- */
+.vit-section {
+  padding: 5rem 1.5rem;
+  background-color: #f8fafc;
+}
+
+/* --- Section Heading --- */
+.vit-section-heading {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.vit-section-heading span {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #ff882e; /* Primary Accent */
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.vit-section-heading h2 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.25;
+}
+
+/* --- 5-Column Grid Layout --- */
+.vit-card-grid.vit-five-grid {
+  display: grid;
+  /* 5 equal columns on desktop screens */
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+}
+
+/* --- Individual Card Styling --- */
+.vit-info-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.vit-info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.08);
+  border-color: #cbd5e1;
+}
+
+/* Image Container & Aspect Ratio */
+.vit-info-card img {
+  width: 100%;
+  height: 160px; /* Uniform height for all card images */
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.vit-info-card:hover img {
+  transform: scale(1.05); /* Subtle image zoom on hover */
+}
+
+/* Card Content Typography */
+.vit-info-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  padding: 1.25rem 1rem 0.5rem 1rem;
+  line-height: 1.3;
+}
+
+.vit-info-card p {
+  font-size: 0.875rem;
+  color: #64748b;
+  padding: 0 1rem 1.25rem 1rem;
+  line-height: 1.55;
+  flex-grow: 1; /* Pushes content evenly across cards */
+}
+
+/* --- Responsive Breakpoints --- */
+
+/* Laptops / Smaller Desktops */
+@media (max-width: 1200px) {
+  .vit-card-grid.vit-five-grid {
+    grid-template-columns: repeat(3, 1fr); /* Switch to 3 columns, wrapping 2 below */
+    gap: 1.5rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .vit-card-grid.vit-five-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet view */
+  }
+
+  .vit-section-heading h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  .vit-card-grid.vit-five-grid {
+    grid-template-columns: 1fr; /* Single column stack */
+  }
+
+  .vit-info-card img {
+    height: 180px; /* Slightly taller images for full-width mobile view */
+  }
+}

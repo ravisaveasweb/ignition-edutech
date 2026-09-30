@@ -1,0 +1,844 @@
+.manipal-online-page {
+  --manipal-ink: #10233f;
+  --manipal-ink-soft: #54657f;
+  --manipal-navy: #0d2140;
+  --manipal-navy-deep: #07152b;
+  --manipal-sky: #d8ecff;
+  --manipal-cream: #fff9ef;
+  --manipal-gold: #f2b544;
+  --manipal-gold-deep: #d38c18;
+  --manipal-card: #ffffff;
+  --manipal-line: rgba(16, 35, 63, 0.1);
+  --manipal-shadow: 0 22px 60px rgba(10, 31, 67, 0.12);
+  --manipal-shadow-soft: 0 12px 34px rgba(9, 27, 58, 0.08);
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(216, 236, 255, 0.8),
+      transparent 30%
+    ),
+    linear-gradient(180deg, #f6f9fc 0%, #f9fbfd 42%, #f1f5f9 100%);
+  color: var(--manipal-ink);
+}
+
+.manipal-online-page a {
+  text-decoration: none;
+}
+
+.manipal-online-page img {
+  max-width: 100%;
+  display: block;
+}
+
+.manipal-shell {
+  overflow: clip;
+}
+
+.manipal-kicker {
+  display: inline-block;
+  margin: 0 0 14px;
+  color: var(--manipal-gold-deep);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.manipal-hero {
+  position: relative;
+  padding: 54px 0 34px;
+}
+
+.manipal-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 560px;
+  background:
+    linear-gradient(
+      115deg,
+      rgba(7, 21, 43, 0.96) 18%,
+      rgba(13, 33, 64, 0.86) 58%,
+      rgba(13, 33, 64, 0.35) 100%
+    ),
+    url("../img/hero/manipal-hero.jpg") center/cover no-repeat;
+  clip-path: ellipse(120% 100% at 50% 0%);
+}
+
+.manipal-hero-layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 420px);
+  gap: 32px;
+  align-items: start;
+}
+
+.manipal-hero-copy {
+  padding: 36px 0 24px;
+  color: #fff;
+}
+
+.manipal-hero-copy h1 {
+  max-width: 760px;
+  margin: 0;
+  color: #fff;
+  /* font-family: Georgia, "Times New Roman", serif; */
+  font-size: clamp(2.6rem, 4vw, 4.75rem);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+}
+
+.manipal-hero-copy h1 span {
+  color: #ffd37b;
+}
+
+.manipal-lead {
+  max-width: 660px;
+  margin: 22px 0 0;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.manipal-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.manipal-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0 24px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    background 0.22s ease,
+    color 0.22s ease;
+}
+
+.manipal-btn:hover,
+.manipal-lead-form button:hover,
+.manipal-program-card-accent a:hover,
+.manipal-cta-form button:hover {
+  transform: translateY(-2px);
+}
+
+.manipal-btn-primary,
+.manipal-lead-form button,
+.manipal-program-card-accent a,
+.manipal-cta-form button {
+  background: linear-gradient(135deg, #ffcf70 0%, #f2b544 52%, #d38c18 100%);
+  color: var(--manipal-navy);
+  box-shadow: 0 18px 34px rgba(211, 140, 24, 0.28);
+}
+
+.manipal-btn-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  backdrop-filter: blur(10px);
+}
+
+.manipal-hero-bullets {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 34px;
+}
+
+.manipal-bullet-card {
+  display: flex;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  /* background: rgba(255, 255, 255, 0.08); */
+  background: linear-gradient(180deg, #fef6e8 0%, #fffdf8 100%);
+  backdrop-filter: blur(12px);
+}
+
+.manipal-bullet-card i {
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: rgb(255 170 0 / 14%);
+  color: #ffaa00;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.manipal-bullet-card strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #000000;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.manipal-bullet-card span {
+  color: #000;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.manipal-hero-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.manipal-hero-metrics div {
+  min-width: 150px;
+  padding: 16px 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  background: #fefaf3;
+  border: 1px solid var(--manipal-line);
+  border-radius: 21px;
+}
+
+.manipal-hero-metrics strong {
+  display: block;
+  color: #000;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.manipal-hero-metrics span {
+  color: #000;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.manipal-hero-aside {
+  display: grid;
+  gap: 18px;
+}
+
+.manipal-enquiry-card,
+.manipal-glance-card,
+.manipal-outcome-card,
+.manipal-program-card,
+.manipal-differentiator-card,
+.manipal-testimonial-card,
+.manipal-journey-panel {
+  background: var(--manipal-card);
+  border: 1px solid var(--manipal-line);
+  box-shadow: var(--manipal-shadow-soft);
+}
+
+.manipal-enquiry-card {
+  margin-top: 18px;
+  padding: 28px;
+  border-radius: 30px;
+}
+
+.manipal-card-topline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: #fff5de;
+  color: #99630c;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.manipal-enquiry-card h3,
+.manipal-cta-copy h2,
+.manipal-trust-intro h2,
+.manipal-section-head h2,
+.manipal-journey-copy h2 {
+  margin: 16px 0 0;
+  color: var(--manipal-ink);
+  /* font-family: Georgia, "Times New Roman", serif; */
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+}
+
+.manipal-enquiry-card h3 {
+  font-size: 2rem;
+}
+
+.manipal-enquiry-card p,
+.manipal-trust-item span,
+.manipal-outcome-card p,
+.manipal-program-card p,
+.manipal-journey-copy p,
+.manipal-differentiator-card p,
+.manipal-testimonial-card p,
+.manipal-section-head p,
+.manipal-cta-copy p {
+  margin: 14px 0 0;
+  color: var(--manipal-ink-soft);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.manipal-lead-form,
+.manipal-cta-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.manipal-lead-form input,
+.manipal-lead-form select,
+.manipal-cta-form input {
+  width: 100%;
+  min-height: 52px;
+  padding: 0 16px;
+  border: 1px solid rgba(16, 35, 63, 0.12);
+  border-radius: 16px;
+  background: #f8fafc;
+  color: var(--manipal-ink);
+  font-size: 14px;
+}
+
+.manipal-lead-form input:focus,
+.manipal-lead-form select:focus,
+.manipal-cta-form input:focus {
+  outline: none;
+  border-color: rgba(211, 140, 24, 0.45);
+  box-shadow: 0 0 0 4px rgba(242, 181, 68, 0.12);
+}
+
+.manipal-lead-form button,
+.manipal-cta-form button {
+  min-height: 54px;
+  border: 0;
+  border-radius: 16px;
+  font-weight: 600;
+}
+
+.manipal-lead-form small {
+  color: #7a8799;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.manipal-glance-card {
+  padding: 24px;
+  border-radius: 26px;
+  background: linear-gradient(180deg, #fef6e8 0%, #fffdf8 100%);
+}
+
+.manipal-glance-card h4,
+.manipal-program-card h3,
+.manipal-outcome-card h3,
+.manipal-differentiator-card h3,
+.manipal-journey-panel h3,
+.manipal-journey-step h4 {
+  margin: 0;
+  color: var(--manipal-ink);
+  font-size: 22px;
+  line-height: 1.25;
+}
+
+.manipal-glance-card ul,
+.manipal-program-card ul {
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.manipal-glance-card li,
+.manipal-program-card li {
+  position: relative;
+  padding-left: 24px;
+  color: var(--manipal-ink-soft);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.manipal-glance-card li + li,
+.manipal-program-card li + li {
+  margin-top: 10px;
+}
+
+.manipal-glance-card li::before,
+.manipal-program-card li::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f2b544, #d38c18);
+}
+
+.manipal-trust-bar,
+.manipal-section,
+.manipal-cta-section {
+  position: relative;
+  padding: 40px 0;
+}
+
+.manipal-trust-bar {
+  padding-top: 72px 0;
+}
+
+.manipal-section-alt {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.92),
+    rgba(246, 250, 255, 0.86)
+  );
+}
+
+.manipal-trust-grid,
+.manipal-journey-layout,
+.manipal-cta-panel {
+  display: grid;
+  gap: 30px;
+}
+
+.manipal-trust-grid {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: start;
+}
+
+.manipal-trust-points {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.manipal-trust-item {
+  padding: 24px 22px;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--manipal-line);
+  box-shadow: var(--manipal-shadow-soft);
+}
+
+.manipal-trust-item i,
+.manipal-differentiator-card i {
+  width: 54px;
+  height: 54px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #e6f2ff, #fff2d6);
+  color: var(--manipal-navy);
+  font-size: 20px;
+}
+
+.manipal-trust-item strong {
+  display: block;
+  color: var(--manipal-ink);
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.manipal-section-head {
+  max-width: 840px;
+  margin-bottom: 38px;
+}
+
+.manipal-section-head-split {
+  max-width: none;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+  gap: 24px;
+  align-items: end;
+}
+
+.manipal-outcome-grid,
+.manipal-program-grid,
+.manipal-differentiator-grid,
+.manipal-testimonial-grid {
+  display: grid;
+  gap: 22px;
+}
+
+.manipal-outcome-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.manipal-outcome-card {
+  overflow: hidden;
+  border-radius: 28px;
+}
+
+.manipal-outcome-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.manipal-outcome-card div {
+  padding: 24px;
+}
+
+.manipal-program-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.manipal-program-card {
+  padding: 24px;
+  border-radius: 28px;
+}
+
+.manipal-program-badge {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: #eef5ff;
+  color: #33517d;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.manipal-program-card-accent {
+  background:
+    linear-gradient(180deg, rgba(13, 33, 64, 0.96), rgba(7, 21, 43, 0.98)),
+    #09152a;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.manipal-program-card-accent .manipal-program-badge,
+.manipal-program-card-accent h3,
+.manipal-program-card-accent p {
+  color: #fff;
+}
+
+.manipal-program-card-accent .manipal-program-badge {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.manipal-program-card-accent p {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.manipal-program-card-accent a {
+  display: inline-flex;
+  margin-top: 18px;
+  min-height: 48px;
+  padding: 0 18px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.manipal-journey-layout {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+}
+
+.manipal-journey-steps {
+  display: grid;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.manipal-journey-step {
+  display: flex;
+  gap: 18px;
+  padding: 20px 22px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid var(--manipal-line);
+}
+
+.manipal-journey-step strong {
+  width: 52px;
+  height: 52px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #10233f, #244878);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.manipal-journey-step p {
+  margin: 8px 0 0;
+}
+
+.manipal-journey-visual {
+  position: relative;
+  padding-left: 36px;
+}
+
+.manipal-journey-visual img {
+  width: 100%;
+  min-height: 620px;
+  object-fit: cover;
+  border-radius: 34px;
+  box-shadow: var(--manipal-shadow);
+}
+
+.manipal-journey-panel {
+  position: absolute;
+  left: 0;
+  right: 54px;
+  bottom: 30px;
+  padding: 24px;
+  border-radius: 28px;
+  width: max-content;
+}
+
+.manipal-profile-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.manipal-profile-list div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--manipal-ink);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.manipal-profile-list i {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: #eef5ff;
+  color: #23436f;
+  flex-shrink: 0;
+}
+
+.manipal-differentiator-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.manipal-differentiator-card {
+  padding: 24px;
+  border-radius: 28px;
+}
+
+.manipal-testimonial-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.manipal-testimonial-card {
+  padding: 26px;
+  border-radius: 28px;
+}
+
+.manipal-stars {
+  color: var(--manipal-gold-deep);
+  font-size: 18px;
+  letter-spacing: 0.16em;
+}
+
+.manipal-person {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.manipal-person img {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.manipal-person strong {
+  display: block;
+  color: var(--manipal-ink);
+  font-size: 16px;
+}
+
+.manipal-person span {
+  color: #6c7a8f;
+  font-size: 13px;
+}
+
+.manipal-cta-section {
+  padding-top: 0;
+  padding-bottom: 110px;
+}
+
+.manipal-cta-panel {
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
+  align-items: center;
+  padding: 42px;
+  border-radius: 36px;
+  background:
+    linear-gradient(135deg, rgba(13, 33, 64, 0.97), rgba(22, 56, 101, 0.94)),
+    url("../img/campus/manipal-university.jpg") center/cover no-repeat;
+  box-shadow: var(--manipal-shadow);
+}
+
+.manipal-cta-copy h2,
+.manipal-cta-copy p,
+.manipal-cta-copy .manipal-kicker {
+  color: #fff;
+}
+
+.manipal-cta-copy .manipal-kicker {
+  color: #ffd37b;
+}
+
+.manipal-cta-copy p {
+  max-width: 620px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.manipal-cta-form {
+  padding: 24px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+.manipal-cta-form input {
+  background: rgba(255, 255, 255, 0.98);
+}
+
+@media (max-width: 1399px) {
+  .manipal-hero-bullets,
+  .manipal-trust-points,
+  .manipal-differentiator-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .manipal-program-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1199px) {
+  .manipal-hero-layout,
+  .manipal-trust-grid,
+  .manipal-journey-layout,
+  .manipal-cta-panel,
+  .manipal-section-head-split {
+    grid-template-columns: 1fr;
+  }
+
+  .manipal-hero {
+    padding-top: 34px;
+  }
+
+  .manipal-journey-visual {
+    padding-left: 0;
+  }
+
+  .manipal-journey-panel {
+    right: 24px;
+    left: 24px;
+  }
+
+  .manipal-outcome-grid,
+  .manipal-testimonial-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 991px) {
+  .manipal-hero::before {
+    height: 760px;
+    clip-path: none;
+  }
+
+  .manipal-hero-bullets,
+  .manipal-outcome-grid,
+  .manipal-program-grid,
+  .manipal-differentiator-grid,
+  .manipal-testimonial-grid,
+  .manipal-trust-points {
+    grid-template-columns: 1fr;
+  }
+
+  .manipal-trust-bar,
+  .manipal-section,
+  .manipal-cta-section {
+    padding: 72px 0;
+  }
+
+  .manipal-journey-visual img {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 767px) {
+  .manipal-hero-copy {
+    padding-top: 16px;
+  }
+
+  .manipal-hero-copy h1,
+  .manipal-enquiry-card h3,
+  .manipal-cta-copy h2,
+  .manipal-trust-intro h2,
+  .manipal-section-head h2,
+  .manipal-journey-copy h2 {
+    font-size: 2rem;
+  }
+
+  .manipal-enquiry-card,
+  .manipal-glance-card,
+  .manipal-program-card,
+  .manipal-differentiator-card,
+  .manipal-testimonial-card,
+  .manipal-cta-panel,
+  .manipal-cta-form {
+    padding: 22px;
+    border-radius: 24px;
+  }
+
+  .manipal-bullet-card,
+  .manipal-journey-step {
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .manipal-hero-actions,
+  .manipal-hero-metrics {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .manipal-btn,
+  .manipal-program-card-accent a {
+    width: 100%;
+  }
+
+  .manipal-journey-panel {
+    position: static;
+    margin-top: 18px;
+  }
+
+  .manipal-journey-visual img {
+    min-height: auto;
+  }
+}
+
+.manipal-trust-intro p {
+  margin-top: 20px;
+}

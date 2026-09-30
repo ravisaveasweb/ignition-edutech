@@ -1,0 +1,645 @@
+:root {
+  /* Theme Colors based on DESIGN_SYSTEM_1 */
+  --primary: #040f1b;
+  --secondary: #4e6700;
+  --secondary-fixed: #c8f25a;
+  --secondary-fixed-dim: #acd53f;
+  --on-secondary-fixed: #151f00;
+  --surface: #f7f9ff;
+  --surface-container-low: #edf4ff;
+  --on-surface: #0c1d2c;
+  --on-surface-variant: #44474b;
+  --outline-variant: #c4c6cc;
+  --secondary-container: #c5ef57;
+  --on-secondary-container: #526b00;
+}
+
+/* Typography */
+.amity-display-lg {
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.headline-lg {
+  font-size: 32px;
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.headline-md {
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.body-lg {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.label-md {
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  .display-lg {
+    font-size: 40px;
+  }
+}
+
+/* Custom Editorial Components */
+.glass-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 1rem;
+}
+
+.momentum-gradient {
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(167, 207, 58, 0.15),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(100, 139, 31, 0.05),
+      transparent 40%
+    );
+}
+
+.nav-link-custom {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--on-surface-variant);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-link-custom:hover {
+  color: var(--primary);
+}
+
+.nav-link-custom.active {
+  color: var(--secondary);
+  border-bottom: 2px solid var(--secondary);
+  padding-bottom: 4px;
+}
+
+.btn-primary-custom {
+  background-color: var(--secondary-fixed);
+  color: var(--on-secondary-fixed);
+  border-radius: 9999px;
+  border: none;
+  padding: 12px 32px;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.btn-primary-custom:hover {
+  transform: scale(1.05);
+  color: var(--on-secondary-fixed);
+}
+
+.amity-btn-primary-custom {
+  background-color: var(--secondary-fixed);
+  color: var(--on-secondary-fixed);
+  border-radius: 9999px;
+  border: none;
+  padding: 12px 32px;
+  font-weight: 600;
+  transition: transform 0.2s;
+}
+
+.amity-btn-primary-custom:hover {
+  transform: scale(1.05);
+  color: var(--on-secondary-fixed);
+}
+
+.amity-btn-primary-custom:active {
+  transform: scale(1.05);
+  color: var(--on-secondary-fixed);
+  background-color: #c5ef57;
+}
+
+.btn-outline-custom {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  border-radius: 9999px;
+  padding: 12px 32px;
+  font-weight: 600;
+  transition: all 0.2s;
+  background: transparent;
+}
+
+.btn-outline-custom:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.feature-card {
+  background: var(--surface-container-low);
+  padding: 24px;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(196, 198, 204, 0.1);
+}
+
+.form-underlined {
+  border: none;
+  border-bottom: 1px solid var(--outline-variant);
+  background: transparent;
+  border-radius: 0;
+  padding: 12px 0;
+  box-shadow: none !important;
+}
+
+.form-underlined:focus {
+  border-bottom-color: var(--secondary);
+}
+
+.value-band {
+  background-color: var(--primary);
+  color: white;
+  padding: 60px 0;
+}
+
+.profile-card {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  aspect-ratio: 4/5;
+}
+
+.profile-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s;
+}
+
+.profile-card:hover img {
+  transform: scale(1.05);
+}
+
+.profile-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    var(--primary),
+    rgba(4, 15, 27, 0.2),
+    transparent
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 32px;
+}
+
+.program-card {
+  padding: 32px;
+  border-radius: 1rem;
+  border: 1px solid rgba(196, 198, 204, 0.2);
+  transition: all 0.3s;
+  height: 100%;
+}
+
+.program-card:hover {
+  border-color: var(--secondary);
+}
+
+.program-card.accent {
+  background-color: var(--secondary-fixed);
+  border: none;
+}
+
+.experience-step-num {
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 800;
+  color: rgba(172, 213, 63, 0.4);
+}
+
+.footer {
+  background-color: var(--primary);
+  color: white;
+  padding: 80px 0;
+}
+
+.footer a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: all 0.2s;
+  display: inline-block;
+}
+
+.footer a:hover {
+  color: var(--secondary-fixed);
+  transform: translateX(4px);
+}
+
+.section-gap {
+  margin-bottom: 60px;
+}
+
+.material-symbols-outlined {
+  vertical-align: middle;
+}
+
+.amity-hero-section {
+  position: relative;
+  background-image: url(../img/hero/amity-hero.jpg);
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 80px 0;
+  background-position: center;
+}
+
+.amity-hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(4, 15, 27, 0.88) 0%,
+    rgba(4, 15, 27, 0.72) 30%,
+    rgba(4, 15, 27, 0.35) 55%,
+    rgba(4, 15, 27, 0) 100%
+  );
+  z-index: 1;
+}
+
+.amity-hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.amity-cta-section {
+  background-color: #fff;
+}
+
+.amity-cta-background {
+  background-image: url("../img/help/amity-cta-button-help.jpg");
+  background-position: center;
+}
+
+.amity-cta-heading {
+  font-size: 30px;
+  color: #eb933a;
+}
+
+.amity-testimonials-section {
+  background: #f8fafc;
+}
+
+.amity-testimonials-label {
+  display: inline-block;
+  padding: 8px 18px;
+  background: #eb933a15;
+  color: #eb933a;
+  font-weight: 600;
+  border-radius: 50px;
+  margin-bottom: 15px;
+}
+
+.amity-testimonials-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #1e293b;
+}
+
+.amity-testimonials-subtitle {
+  max-width: 700px;
+  margin: auto;
+  color: #64748b;
+  font-size: 18px;
+}
+
+.amity-review-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 35px;
+  height: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+  transition: 0.4s ease;
+  border: 1px solid #edf2f7;
+}
+
+.amity-review-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.amity-review-stars {
+  color: #f59e0b;
+  font-size: 22px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.amity-review-text {
+  color: #475569;
+  line-height: 1.8;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.amity-review-footer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.amity-review-footer img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.amity-review-footer h5 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.amity-review-footer span {
+  color: #64748b;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .amity-testimonials-title {
+    font-size: 30px;
+  }
+
+  .amity-review-card {
+    padding: 25px;
+  }
+}
+
+.amity-testimonial-section {
+  padding: 60px 0;
+}
+
+.request-callback-btn {
+  background: #b0cb1f;
+  border-color: #b0cb1f;
+}
+
+/*=============================
+ Amity Online FAQ SECTION
+==============================*/
+
+.amity-faq-section {
+  background: #f8f9fc;
+}
+
+.amity-faq-section .accordion {
+  border: 0;
+}
+
+.amity-faq-subtitle {
+  color: #eb933a;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.amity-faq-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.amity-faq-title span {
+  color: #eb933a;
+}
+
+.amity-faq-desc {
+  color: #6c757d;
+  max-width: 700px;
+  margin: auto;
+}
+
+.amity-custom-accordion .accordion-item {
+  border: none;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+}
+
+.amity-custom-accordion .accordion-button {
+  background: #fff;
+  color: #222;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 20px 25px;
+  box-shadow: none;
+}
+
+.amity-custom-accordion .accordion-button:not(.collapsed) {
+  background: #eb933a;
+  color: #fff;
+}
+
+.amity-custom-accordion .accordion-button:focus {
+  box-shadow: none;
+}
+
+.amity-custom-accordion .accordion-body {
+  padding: 25px;
+  line-height: 1.9;
+  color: #555;
+  background: #fff;
+  font-size: 16px;
+}
+
+.accordion-button::after {
+  filter: brightness(0);
+}
+
+.accordion-button:not(.collapsed)::after {
+  filter: brightness(0) invert(1);
+}
+
+@media (max-width: 991px) {
+  .amity-faq-title {
+    font-size: 32px;
+  }
+
+  .amity-custom-accordion .accordion-button {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 576px) {
+  .amity-faq-title {
+    font-size: 26px;
+  }
+
+  .amity-custom-accordion .accordion-button {
+    font-size: 16px;
+    padding: 18px;
+  }
+
+  .amity-custom-accordion .accordion-body {
+    padding: 20px;
+  }
+}
+
+/* New  */
+.amity-overview-section {
+  background: #f8f9fc;
+}
+
+.amity-subtitle {
+  color: #eb933a;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.amity-main-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.amity-main-title span {
+  color: #eb933a;
+}
+
+.amity-section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.amity-content-box {
+  background: #fff;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.amity-content-box h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.amity-content-box p {
+  line-height: 1.9;
+  color: #555;
+}
+
+.amity-feature-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  height: 100%;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.amity-feature-card:hover {
+  transform: translateY(-8px);
+}
+
+.amity-feature-card h5 {
+  color: #eb933a;
+  margin-bottom: 15px;
+}
+
+.amity-table thead {
+  background: #eb933a;
+  color: #fff;
+  font-size: 16px;
+}
+
+.amity-table tbody {
+  font-size: 16px;
+}
+
+.amity-table tbody > tr > td {
+  padding: 16px;
+  font-size: 16px;
+}
+
+.amity-table th {
+  padding: 16px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.amity-list {
+  padding-left: 18px;
+}
+
+.amity-list li {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.amity-steps li {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.amity-highlight-box {
+  background: #eb933a;
+  color: #fff;
+  border-radius: 15px;
+  padding: 45px;
+}
+
+.amity-highlight-box h3 {
+  margin-bottom: 20px;
+}
+
+.amity-highlight-box p {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+  .amity-main-title {
+    font-size: 32px;
+  }
+
+  .amity-section-title {
+    font-size: 26px;
+  }
+
+  .amity-content-box {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .amity-main-title {
+    font-size: 26px;
+  }
+
+  .amity-section-title {
+    font-size: 22px;
+  }
+}
+
+.amity-highlight-box h3 {
+  color: white;
+}

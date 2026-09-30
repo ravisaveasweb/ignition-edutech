@@ -1,0 +1,585 @@
+:root {
+    --bs-primary: #000000;
+    --bs-secondary: #4e6700;
+    --navy-dark: #131c25;
+    --lime-green: #c8f25a;
+    --lime-green-dim: #acd53f;
+    --surface: #f7f9fb;
+    --on-surface: #191c1e;
+    --on-surface-variant: #44474b;
+}
+
+.btn-rounded {
+    border-radius: 50rem !important;
+    padding: 0.75rem 2rem;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    transition: transform 0.2s ease;
+}
+
+.btn-rounded:hover {
+    transform: scale(1.05);
+}
+
+.btn-lime {
+    background-color: var(--lime-green);
+    color: var(--navy-dark);
+    border: none;
+}
+
+.btn-lime:hover {
+    background-color: var(--lime-green-dim);
+    color: var(--navy-dark);
+}
+
+.btn-outline-dark-custom {
+    border: 2px solid var(--bs-primary);
+    color: var(--bs-primary);
+}
+
+.btn-outline-dark-custom:hover {
+    background-color: var(--bs-primary);
+    color: #fff;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 1.5rem;
+}
+
+.glass-card-dark {
+    background: rgba(19, 28, 37, 0.8);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.5rem;
+}
+
+.glass-card-dark .input-group {
+    margin-bottom: 1rem;
+}
+
+.card-custom {
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.card-custom:hover {
+    transform: translateY(-10px);
+}
+
+.bg-navy {
+    background-color: var(--navy-dark);
+    color: #ffffff;
+}
+
+.hero-section {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.hero-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--surface) 30%, transparent 100%);
+    z-index: -1;
+}
+
+.badge-custom {
+    background-color: var(--lime-green);
+    color: var(--navy-dark);
+    border-radius: 50rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.program-card {
+    border-bottom: 4px solid var(--lime-green);
+}
+
+.program-card.mca {
+    border-bottom-color: var(--bs-primary);
+}
+
+.program-card.ds {
+    border-bottom-color: var(--bs-secondary);
+}
+
+.timeline-step {
+    width: 80px;
+    height: 80px;
+    background-color: var(--lime-green);
+    color: var(--navy-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 0 20px rgba(200, 242, 90, 0.3);
+}
+
+.navbar-brand {
+    font-family: var(--heading-font);
+    font-weight: 800;
+}
+
+.nav-link-custom {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--on-surface-variant);
+    padding: 0.5rem 1rem;
+}
+
+.nav-link-custom:hover,
+.nav-link-custom.active {
+    color: var(--bs-secondary);
+}
+
+/* Component Tokens map to your root system variables */
+.vos-section {
+    position: relative;
+    background-color: #f7f9fb; /* var(--surface) */
+    padding: 6rem 1.5rem;
+    overflow: hidden;
+    font-family: "Hanken Grotesk", sans-serif;
+}
+
+/* Decorative blurred ambient backgrounds */
+.vos-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    z-index: 1;
+    pointer-events: none;
+}
+.vos-glow-1 {
+    top: -10%;
+    left: -10%;
+    width: 400px;
+    height: 400px;
+    background-color: rgba(
+        200,
+        242,
+        90,
+        0.15
+    ); /* var(--lime-green) with opacity */
+}
+.vos-glow-2 {
+    bottom: -5%;
+    right: 5%;
+    width: 350px;
+    height: 350px;
+    background-color: rgba(
+        78,
+        103,
+        0,
+        0.06
+    ); /* var(--bs-secondary) with opacity */
+}
+
+.vos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Section Header Structural Styles */
+.vos-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 4rem auto;
+}
+
+.vos-badge {
+    display: inline-block;
+    background-color: #c8f25a; /* var(--lime-green) */
+    color: #131c25; /* var(--navy-dark) */
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    margin-bottom: 1.25rem;
+}
+
+.vos-title {
+    font-size: 2.5rem;
+    color: #131c25;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.02em;
+}
+
+.vos-subtitle {
+    color: #44474b; /* var(--on-surface-variant) */
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Grid layout with flex/grid fallbacks */
+.vos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+.vos-card-wrapper {
+    display: flex;
+}
+
+/* Custom Cards Structure */
+.vos-card {
+    background-color: #ffffff;
+    border-radius: 1.25rem;
+    padding: 2.25rem;
+    width: 100%;
+    box-shadow: 0 12px 34px rgba(19, 28, 37, 0.03);
+    border: 1px solid rgba(19, 28, 37, 0.04);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition:
+        transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+        box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.vos-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(19, 28, 37, 0.07);
+}
+
+/* Colorized Program Borders matching your theme style variables */
+.vos-card-mba {
+    border-bottom: 4px solid #b0cb1f;
+} /* lime green */
+.vos-card-mca {
+    border-bottom: 4px solid #b0cb1f;
+} /* bs-primary */
+.vos-card-ds {
+    border-bottom: 4px solid #b0cb1f;
+} /* bs-secondary */
+
+.vos-card-content {
+    margin-bottom: 2rem;
+}
+
+/* Review Stars */
+.vos-stars {
+    display: flex;
+    gap: 2px;
+    color: #ffb300; /* Warm Accessible Amber Gold */
+    margin-bottom: 1.25rem;
+}
+
+.vos-stars .material-symbols-outlined {
+    font-size: 1.25rem;
+    font-variation-settings:
+        "FILL" 1,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24;
+}
+
+/* Typography inside quotes */
+.vos-quote {
+    color: #44474b;
+    font-size: 1rem;
+    line-height: 1.65;
+    margin: 0;
+}
+
+.vos-highlight {
+    color: #131c25;
+    font-weight: 600;
+}
+
+/* Profile Section Styling */
+.vos-profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.vos-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #f7f9fb;
+    border: 2px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.vos-profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.vos-username {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #131c25;
+    margin: 0 0 2px 0;
+}
+
+.vos-designation {
+    font-size: 0.8rem;
+    color: #71767a;
+    font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .vos-section {
+        padding: 4rem 1.25rem;
+    }
+    .vos-title {
+        font-size: 2rem;
+    }
+    .vos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.vos-section {
+    padding: 80px 0;
+}
+
+.vos-section2 {
+    padding-bottom: 80px;
+}
+
+/* Component Container Structural Setup */
+.nld-hero-section {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+    overflow: hidden;
+    background-color: var(--navy-dark); /* Solid fallback background color */
+    background-image: url("../img/hero/nld-hero.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Base Asset Image Layer */
+.nld-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("assets/img/hero/nld-hero.jpg");
+    background-size: cover;
+    background-position: center right;
+    z-index: 1;
+}
+
+/* Left-to-Right Rich Contrast Vignette Overlay */
+.nld-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Heavy dark background mask on the left fading beautifully into the crisp asset image on the right */
+    background: linear-gradient(
+        90deg,
+        rgba(19, 28, 37, 0.95) 0%,
+        rgba(19, 28, 37, 0.85) 40%,
+        rgba(19, 28, 37, 0.4) 70%,
+        rgba(19, 28, 37, 0.15) 100%
+    );
+    z-index: 2;
+}
+
+/* Layer Isolation Content Wrapper */
+.nld-hero-content {
+    position: relative;
+    z-index: 3;
+}
+
+/* Typography Overhauls for High-Contrast Readability */
+.nld-hero-badge {
+    background-color: var(--lime-green);
+    color: var(--navy-dark);
+    border-radius: 50rem;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.nld-hero-title {
+    font-weight: 700;
+    color: #ffffff !important;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.nld-hero-accent {
+    color: var(
+        --lime-green
+    ) !important; /* Highlighting the modern tech theme color */
+}
+
+.nld-hero-lead {
+    color: rgba(255, 255, 255, 0.75) !important;
+    font-size: 1.15rem;
+    line-height: 1.65;
+}
+
+/* Modern Rounded Action Buttons Layout */
+.nld-btn {
+    border-radius: 50rem !important;
+    padding: 0.85rem 2.25rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.nld-btn:hover {
+    transform: translateY(-2px);
+}
+
+.nld-btn-dark {
+    background-color: #ffffff;
+    color: var(--navy-dark);
+}
+
+.nld-btn-dark:hover {
+    background-color: var(--lime-green);
+    color: var(--navy-dark);
+}
+
+.nld-btn-outline {
+    border-color: rgba(255, 255, 255, 0.4);
+    color: #ffffff;
+    background: transparent;
+}
+
+.nld-btn-outline:hover {
+    border-color: #ffffff;
+    background-color: #ffffff;
+    color: var(--navy-dark);
+}
+
+/* Glassmorphism Conversion For Forms over Imagery */
+.nld-glass-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 1.75rem;
+}
+
+.nld-form-title {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.nld-form-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Custom Clean Input Elements inside Glass */
+.nld-form-input,
+.nld-form-select {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    border: 1px solid transparent !important;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95rem;
+    border-radius: 0.5rem;
+    color: var(--on-surface) !important;
+}
+
+.nld-form-input:focus,
+.nld-form-select:focus {
+    background-color: #ffffff !important;
+    box-shadow: 0 0 0 4px rgba(200, 242, 90, 0.25) !important;
+}
+
+/* Form Primary Button Accent */
+.nld-btn-submit {
+    background-color: var(--lime-green);
+    color: var(--navy-dark);
+    border: none;
+    border-radius: 50rem;
+    font-weight: 700;
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.nld-btn-submit:hover {
+    background-color: var(--lime-green-dim);
+    transform: translateY(-2px);
+}
+
+/* Responsive Grid Adaptations */
+@media (max-width: 991.98px) {
+    .nld-hero-section {
+        padding: 60px 0;
+    }
+    .nld-hero-overlay {
+        background: linear-gradient(
+            180deg,
+            rgba(19, 28, 37, 0.95) 0%,
+            rgba(19, 28, 37, 0.85) 100%
+        );
+    }
+    .nld-hero-title {
+        font-size: 2.25rem;
+    }
+}
+
+.vos-stars .material-symbols-outlined {
+    font-size: 1.25rem;
+    font-variation-settings:
+        "FILL" 1,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24;
+}

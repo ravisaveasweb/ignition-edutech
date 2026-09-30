@@ -1,0 +1,726 @@
+/* Navbar Custom Styling */
+.io-navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e1e3e4;
+  height: 80px;
+}
+
+.io-nav-link {
+  font-weight: 600;
+  color: #44474b;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.io-nav-link:hover,
+.io-nav-link.active {
+  color: #a7cf3a;
+}
+
+.io-nav-link.active {
+  border-bottom: 2px solid #a7cf3a;
+}
+/* --- Core Hero Layout With Asset Processing --- */
+.io-hero {
+  padding: 100px 0;
+  background-image: url("../img/hero/vgu-hero.jpg");
+  background-position: center right;
+  background-size: cover;
+  background-color: #111a24; /* Secure design engine fallback */
+  position: relative;
+  z-index: 1;
+}
+
+/* Linear Mask Gradient Overlay Layer */
+.io-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(17, 26, 36, 0.98) 0%,
+    rgba(17, 26, 36, 0.9) 40%,
+    rgba(17, 26, 36, 0.45) 75%,
+    rgba(17, 26, 36, 0.15) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Raising the core container layer safely above background textures */
+.io-hero-content {
+  z-index: 3;
+}
+
+/* Typography Overhaul for Enhanced Visibility */
+.text-white-70 {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.io-text-accent {
+  color: #a7cf3a !important;
+}
+
+/* --- Translucent Glass-Style Feature Cards --- */
+.io-feature-card {
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition:
+    transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
+    background-color 0.3s ease;
+}
+
+.io-feature-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.io-icon-circle {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(167, 207, 58, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- Premium Buttons Code --- */
+.io-btn-outline {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  background: transparent;
+  padding: 12px 34px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.io-btn-outline:hover {
+  background-color: #ffffff;
+  color: #192531;
+  transform: translateY(-2px);
+}
+
+/* --- Forms & Container Optimizations --- */
+.io-enquiry-card {
+  border-radius: 16px !important;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* --- Responsive Viewport Adaptation Rules --- */
+@media (max-width: 991.98px) {
+  .io-hero {
+    padding: 60px 0;
+  }
+  /* Changes linear mask direction to a vertical wash to cover smaller screens evenly */
+  .io-hero-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(17, 26, 36, 0.98) 0%,
+      rgba(17, 26, 36, 0.88) 100%
+    );
+  }
+  .max-w-xl {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .d-flex.flex-wrap.gap-3.mb-4,
+  .d-flex.flex-wrap.gap-3.mb-5 {
+    justify-content: center;
+    margin-bottom: 2.5rem !important;
+  }
+  .io-enquiry-card {
+    margin-top: 1.5rem;
+  }
+}
+
+/* Enquiry Card */
+.io-enquiry-card {
+  background: #ffffff;
+  border: 1px solid #e1e3e4;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 10px 25px -5px rgba(25, 37, 49, 0.08);
+  position: relative;
+}
+
+.io-badge-floating {
+  position: absolute;
+  top: -12px;
+  left: 32px;
+  background-color: #c8f25a;
+  color: #192531;
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Credentials Band */
+.io-credentials {
+  padding: 80px 0;
+  background-color: #192531;
+  color: #ffffff;
+}
+
+.io-cred-card {
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  height: 100%;
+  transition: background 0.3s;
+}
+
+.io-cred-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Program Cards */
+.io-program-card {
+  background: #ffffff;
+  border: 1px solid #e1e3e4;
+  border-radius: 8px;
+  padding: 24px;
+  height: 100%;
+  transition: border-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.io-program-card:hover {
+  border-color: #a7cf3a;
+}
+
+.io-icon-box {
+  width: 48px;
+  height: 48px;
+  background: #e1e3e4;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+/* Testimonials */
+.io-testimonial-card {
+  background: #ffffff;
+  border: 1px solid #e1e3e4;
+  border-radius: 8px;
+  padding: 32px;
+  height: 100%;
+}
+
+.io-star-rating {
+  display: flex;
+  gap: 2px;
+  color: #ffb300; /* Warm Accessible Amber Gold */
+  margin-bottom: 1.25rem;
+}
+
+.io-star-rating .material-symbols-outlined {
+  font-size: 1.25rem;
+  font-variation-settings:
+    "FILL" 1,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
+/* CTA Section */
+.io-cta {
+  background-color: #192531;
+  padding: 80px 0;
+  color: #ffffff;
+  overflow: hidden;
+  /* background-image: url(../img/hero/vgu-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+
+.vgu-overlay {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 22%,
+    rgba(0, 0, 0, 0) 60%
+  ) !important;
+}
+
+.io-cta-form {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.io-cta-input {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+}
+
+.io-cta-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.io-cta-input:focus {
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+  color: white;
+}
+
+/* Footer */
+.io-footer {
+  background-color: #192531;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 80px 0 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.io-footer h4 {
+  color: #a7cf3a;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.io-footer-link {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.io-footer-link:hover {
+  color: #a7cf3a;
+}
+
+/* Core Section Setup */
+.io-cta {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 4rem 0;
+}
+
+/* Background Image Layer */
+.io-cta-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+/* Base Darkening Overlay to preserve contrast */
+.vgu-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 2;
+}
+
+/* Ensure the Bootstrap container sits cleanly above backgrounds */
+.io-cta-container {
+  position: relative;
+  z-index: 3;
+}
+
+/* The Left-Sided Glassmorphism Panel */
+.io-cta-glass-panel {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 1.5rem;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Accent text mapping to your lime/green variable */
+.io-text-accent {
+  color: #eb933a; /* Replace with your var(--lime-green) if global */
+  /* letter-spacing: 0.1em; */
+}
+
+/* Inputs styling inside the glass panel */
+.io-cta-input {
+  background: #ffffff !important;
+  border: none !important;
+  color: #191c1e !important;
+  padding: 0.85rem 1.25rem;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.io-cta-input::placeholder {
+  color: #71767a;
+}
+
+/* Text adjustments for readability over background */
+.text-white-70 {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Responsive Overhaul for Extra Large Screens (Mimicking the image framing) */
+@media (min-width: 992px) {
+  .io-cta {
+    padding: 6rem 0;
+  }
+
+  /* Extends the panel slightly further to match standard hero section balancing */
+  .io-cta-glass-panel {
+    padding: 4rem;
+    margin-left: -1rem;
+  }
+}
+
+/* --- Refactored Hero Core Layout --- */
+.io-hero {
+  padding: 100px 0;
+  background-color: #f8f9fa;
+  position: relative;
+}
+
+.io-display-lg {
+  font-size: 50px;
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+/* Fallback limit spacing container */
+.max-w-xl {
+  max-width: 580px;
+}
+
+/* Refined Design Variables Mapping Code */
+.io-text-accent {
+  color: #a7cf3a !important;
+}
+
+.fill-1 {
+  font-variation-settings: "FILL" 1;
+}
+
+/* Micro Spacing Utility */
+.gap-25 {
+  gap: 0.65rem !important;
+}
+
+/* --- Upgraded Form Components --- */
+.io-hero-input,
+.io-hero-select {
+  background-color: #f1f3f4 !important;
+  border: 2px solid transparent !important;
+  font-size: 0.95rem !important;
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+  border-radius: 8px !important;
+  color: #192531 !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.io-hero-input:focus,
+.io-hero-select:focus {
+  background-color: #ffffff !important;
+  border-color: #a7cf3a !important;
+  box-shadow: 0 0 0 4px rgba(167, 207, 58, 0.2) !important;
+  outline: none !important;
+}
+
+/* --- Premium Action Buttons --- */
+.io-btn-accent {
+  background-color: #bdeb3f;
+  color: #192531;
+  border: none;
+  padding: 14px 36px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-size: 13px;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.io-btn-accent:hover {
+  background-color: #b3df3b;
+  transform: translateY(-2px);
+}
+
+.io-btn-outline {
+  border: 2px solid #192531;
+  color: #192531;
+  background: transparent;
+  padding: 12px 34px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.io-btn-outline:hover {
+  background-color: #192531;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.io-btn-primary {
+  border-radius: 8px;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.io-btn-primary:hover {
+  background-color: #0b1118;
+}
+
+/* --- Feature Grid Cards Layout --- */
+.io-feature-card {
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 12px rgba(25, 37, 49, 0.02);
+  transition:
+    transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
+    box-shadow 0.3s ease;
+}
+
+.io-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(25, 37, 49, 0.06);
+}
+
+.io-icon-circle {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(167, 207, 58, 0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- Floating Form Card Layer Container --- */
+.io-enquiry-card {
+  border-radius: 16px !important;
+  box-shadow: 0 30px 60px rgba(25, 37, 49, 0.08) !important;
+}
+
+.io-badge-floating {
+  top: -14px;
+  background-color: #c8f25a;
+  padding: 6px 18px;
+  box-shadow: 0 4px 10px rgba(200, 242, 90, 0.3);
+}
+
+/* --- Responsive Layout Optimization Logic --- */
+@media (max-width: 991.98px) {
+  .io-hero {
+    padding: 60px 0;
+  }
+  .io-display-lg,
+  .io-hero p {
+    text-align: center;
+  }
+  .max-w-xl {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .d-flex.flex-wrap.gap-3.mb-4 {
+    justify-content: center;
+    margin-bottom: 2.5rem !important;
+  }
+  .io-enquiry-card {
+    margin-top: 1rem;
+  }
+}
+
+/* --- Premium Modernized CTA Baseline Design --- */
+.io-modern-cta {
+  position: relative;
+  padding: 90px 0;
+  background-color: #111a24;
+  min-height: auto;
+  display: flex;
+  align-items: center;
+}
+
+/* Background Controller Layer */
+.io-cta-bg-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  background-image: url("../img/hero/hero-4/hero-bg-1.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+/* Modern Left-Weighted Contrast Matrix Overlay */
+.io-cta-vignette {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(17, 26, 36, 0.98) 0%,
+    rgba(17, 26, 36, 0.92) 45%,
+    rgba(17, 26, 36, 0.6) 75%,
+    rgba(17, 26, 36, 0.3) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Structural Utilities */
+.fw-800 {
+  font-weight: 800 !important;
+}
+.text-white-80 {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+.max-w-lg {
+  max-width: 520px;
+}
+.io-icon-accent {
+  color: #a7cf3a !important;
+}
+
+/* Micro Badge Indicator Element */
+.io-cta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(
+    135deg,
+    rgba(167, 207, 58, 0.2) 0%,
+    rgba(200, 242, 90, 0.1) 100%
+  );
+  border: 1px solid rgba(167, 207, 58, 0.3);
+  color: #c8f25a;
+  padding: 6px 16px;
+  border-radius: 50rem;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* High Conversion Form Card */
+.io-cta-card {
+  border-radius: 16px !important;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* Premium Form Field Component Modifiers */
+.io-card-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #495057;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.io-card-input {
+  background-color: #f1f3f4 !important;
+  border: 2px solid transparent !important;
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+  border-radius: 8px !important;
+  font-size: 0.95rem;
+  color: #192531 !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.io-card-input:focus {
+  background-color: #ffffff !important;
+  border-color: #a7cf3a !important;
+  box-shadow: 0 0 0 4px rgba(167, 207, 58, 0.15) !important;
+  outline: none;
+}
+
+/* High Contrast Submission Action Link */
+.io-btn-accent-modern {
+  background-color: #a7cf3a;
+  color: #192531;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  transition:
+    transform 0.2s cubic-bezier(0.165, 0.84, 0.44, 1),
+    background-color 0.2s ease;
+}
+
+.io-btn-accent-modern:hover {
+  background-color: #92b630;
+  transform: translateY(-2px);
+}
+
+/* --- Responsive Layout Optimization --- */
+@media (max-width: 991.98px) {
+  .io-modern-cta {
+    padding: 60px 0;
+  }
+  /* Smooth vertical wash correction layer rules for smaller screens */
+  .io-cta-vignette {
+    background: linear-gradient(
+      180deg,
+      rgba(17, 26, 36, 0.98) 0%,
+      rgba(17, 26, 36, 0.88) 100%
+    );
+  }
+  .io-cta-badge {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width: fit-content;
+  }
+  .io-modern-cta h2,
+  .io-modern-cta p {
+    text-align: center;
+  }
+  .max-w-lg {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .io-modern-cta .d-flex.flex-wrap {
+    justify-content: center;
+  }
+  .io-cta-card {
+    margin-top: 1.5rem;
+  }
+}

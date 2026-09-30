@@ -1,0 +1,360 @@
+:root {
+    --primary: #526600;
+    --primary-container: #d1ff1a;
+    --on-primary-container: #5d7400;
+    --primary-fixed-dim: #aed500;
+    --on-secondary-fixed: #011b3e;
+    --secondary: #4a5f85;
+    --secondary-container: #bdd2fe;
+    --on-secondary-container: #455a80;
+    --tertiary: #4e635d;
+    --tertiary-container: #dcf3eb;
+    --on-tertiary-container: #5b706a;
+    --background: #fcf8f8;
+    --surface: #fcf8f8;
+    --on-surface: #1c1b1b;
+    --on-surface-variant: #444933;
+    --outline-variant: #c4c9ac;
+    --surface-container-low: #f6f3f2;
+    --surface-container: #f0edec;
+    --surface-container-highest: #e5e2e1;
+    --surface-variant: #e5e2e1;
+}
+
+.font-headline {
+    font-weight: 700;
+}
+
+.font-display {
+    font-weight: 800;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.6);
+    /* backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px); */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 1rem;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.75); /* Slight opacity boost */
+    backdrop-filter: blur(
+        12px
+    ); /* Blurs the background image behind the card */
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 1rem;
+}
+
+.ambient-shadow {
+    box-shadow: 0 30px 60px -12px rgba(0, 26, 61, 0.12);
+}
+
+.kinetic-gradient {
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(209, 255, 26, 0.1),
+            transparent
+        ),
+        radial-gradient(
+            circle at bottom left,
+            rgba(1, 27, 62, 0.03),
+            transparent
+        );
+}
+
+.nav-link-custom {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--on-surface-variant);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: color 0.3s;
+}
+
+.nav-link-custom:hover,
+.nav-link-custom.active {
+    color: var(--primary);
+}
+
+.nav-link-custom.active {
+    border-bottom: 2px solid var(--primary);
+}
+
+.bennett-btn-primary {
+    background-color: var(--primary);
+    color: white;
+    border-radius: 9999px;
+    padding: 0.75rem 1.5rem;
+    font-size: 12px;
+    font-weight: 600;
+    border: none;
+    transition: transform 0.15s;
+}
+
+.bennett-btn-primary:hover {
+    transform: scale(0.95);
+    color: white;
+}
+
+.bennett-btn-large {
+    padding: 10px 20px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+.bennett-btn-large:hover {
+    background-color: #a9ce17;
+}
+
+.kicker {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.display-lg {
+    font-size: clamp(2.75rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    font-weight: 800;
+}
+
+.sidebar-form-container {
+    background-color: #011b3e99;
+    border-radius: 1.5rem;
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(12px);
+}
+
+.sidebar-form-container::before {
+    content: "";
+    position: absolute;
+    top: -5rem;
+    right: -5rem;
+    width: 10rem;
+    height: 10rem;
+    background: rgba(209, 255, 26, 0.1);
+    border-radius: 50%;
+    filter: blur(40px);
+}
+
+.form-control-custom {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.75rem;
+    color: white;
+    padding: 1rem;
+}
+
+.form-control-custom:focus {
+    background: #97959591;
+    border-color: var(--primary-container) !important;
+    color: white;
+    box-shadow: none;
+}
+
+.form-control-custom::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.material-symbols-outlined {
+    vertical-align: middle;
+    font-variation-settings:
+        "FILL" 0,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 24;
+}
+
+.card-hover-translate:hover {
+    transform: translateY(-8px);
+}
+
+.step-number {
+    width: 80px;
+    height: 80px;
+    background: white;
+    border: 4px solid #b0cb1f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin: 0 auto 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.footer-link {
+    color: rgba(229, 226, 225, 0.7);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: var(--primary-fixed-dim);
+}
+
+@media (max-width: 991.98px) {
+    .display-lg {
+        font-size: 2.75rem;
+    }
+
+    .bennett-mobile-grid-center {
+        display: grid;
+        justify-items: center;
+    }
+}
+
+/* .bennett-hero-section {
+  background-image: url('../img/hero/bennett-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+} */
+
+.bennett-hero-section {
+    /* Adds a 60% black overlay that shifts slightly darker to the right for the form */
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.65)),
+        url("../img/hero/bennett-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0; /* Slightly increased padding for better breathing room */
+    position: relative;
+}
+
+.main-color-used {
+    background-color: var(--primary-container);
+    color: black;
+}
+
+.bennett-get-started-btn {
+    background-color: var(--primary-container);
+    color: black;
+    font-size: 1.1rem;
+}
+
+.bennett-get-started-btn:hover {
+    background-color: #a2c519;
+    color: black;
+    font-size: 1.1rem;
+}
+
+.bennett-program-logo {
+    width: 64px;
+    height: 64px;
+    background: #b0cb1f;
+    color: white;
+}
+
+.bennett-hero-logo-circle {
+    width: 48px;
+    height: 48px;
+    background: var(--primary-container);
+}
+
+/* Core Section Panel Setup */
+.bu-career-panel {
+    padding: 5rem 0;
+}
+
+/* Master Wrapper with Background Photo */
+.bu-hero-card {
+    background-image: url("../img/help/bennett-help.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 2rem;
+    min-height: 480px;
+}
+
+/* Photo Legibility Shader Layer */
+.bu-card-shader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Narrative Segment Alignment */
+.bu-text-block {
+    color: #ffffff;
+}
+
+.bu-heading-main {
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    color: #fff;
+}
+
+.bu-paragraph-sub {
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 580px;
+}
+
+/* Translucent Frosted Glass Form Panel Box */
+.bu-glass-window {
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 1.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.15);
+}
+
+/* Uniform Form Elements */
+.bu-input-field {
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    border: 0 !important;
+    color: #222222 !important;
+}
+
+.bu-input-field::placeholder {
+    color: #777777;
+}
+
+/* Program Dropdown Selection Settings */
+.bu-select-custom {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ff9f43' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1.25rem center;
+    background-size: 14px 10px;
+}
+
+/* Lime Green High-Action Call To Action Button */
+.bu-btn-action {
+    background-color: #c4f866;
+    color: #111111;
+    border-radius: 3rem;
+    font-weight: 700;
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.bu-btn-action:hover {
+    background-color: #b3e755;
+    transform: translateY(-1px);
+    color: #111111;
+}
+
+.bu-disclaimer-text {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.85rem;
+}
