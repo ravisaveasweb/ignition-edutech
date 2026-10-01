@@ -119,8 +119,13 @@ if (studyMenu && studyTrigger && studyDrawer) {
         if (!studyMenu.contains(e.target)) {
             studyMenu.classList.remove('study-abroad-open');
         }
+
+        
     });
+
+    
 }
+
 
 
 // Open Study Abroad Subpage
@@ -156,6 +161,11 @@ document.querySelectorAll('.study-open-page').forEach(function (btn) {
         targetPage.scrollTop = 0;
     });
 
+});
+
+
+document.querySelector('.study-abroad-trigger').addEventListener('click', function () {
+    window.location.href = this.href;
 });
 
 

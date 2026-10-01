@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             BlogSeeder::class,
             ExamSeeder::class,
             ExamSectionSeeder::class,
+            WorldUniversityRankingSeeder::class,
 
         ]);
     }

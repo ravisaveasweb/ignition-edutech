@@ -1,5 +1,4 @@
-
-<x-frontend-header  :study-abroad-universities="$studyAbroadUniversities"/>
+<x-frontend-header :study-abroad-universities="$studyAbroadUniversities" />
 
 <section class="hero">
 
@@ -873,6 +872,11 @@
 
     </div>
 </section>
+
+
+<div class="hs-form-frame" data-region="na2" data-form-id="a7c9f6e6-c812-409c-8110-288692f5e36e" data-portal-id="247564101"></div>
+
+
 <x-frontend-footer />
 
 
@@ -928,3 +932,6 @@
 
     });
 </script>
+
+
+

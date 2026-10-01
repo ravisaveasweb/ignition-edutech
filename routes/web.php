@@ -162,3 +162,7 @@ Route::get(
     [StudyAbroadApplicationController::class, 'completed']
 )->name('study-abroad.completed');
     
+
+Route::get('/study-abroad', function () {
+    return view('study_abroad');
+})->name('study-abroad');   

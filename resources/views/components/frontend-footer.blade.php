@@ -178,6 +178,7 @@
 <script src="{{ asset('js/courses.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="{{ asset('js/script.js') }}"></script>
+<script src="https://js-na2.hsforms.net/forms/embed/247564101.js" defer></script>
 
 
 </body>

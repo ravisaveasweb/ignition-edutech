@@ -161,7 +161,9 @@
                                     {{-- STUDY ABROAD DROPDOWN --}}
                                     <li class="has-dropdown study-abroad-menu">
                                         {{-- MAIN TRIGGER --}}
-                                        <a href="javascript:void(0);" class="study-abroad-trigger">Study Abroad</a>
+                                        <a href="{{ route('study-abroad') }}" class="study-abroad-trigger">
+                                            Study Abroad
+                                        </a>
                                         <div id="studyAbroadList" class="study-abroad-drawer">
 
                                             {{-- LEVEL 1 : COUNTRY LIST --}}
