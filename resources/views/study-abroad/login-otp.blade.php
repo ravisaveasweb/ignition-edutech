@@ -131,7 +131,7 @@
 
         <form
             method="POST"
-            action="{{ route('study-abroad.otp.verify') }}"
+            action="{{ route('study-abroad.login.verify') }}"
         >
 
             @csrf

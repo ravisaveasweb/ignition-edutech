@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class StudyAbroadUniversity extends Model
 {
-    
-protected $table = 'study_abroad_universities';
+
+    protected $table = 'study_abroad_universities';
 
     protected $fillable = [
         'country',

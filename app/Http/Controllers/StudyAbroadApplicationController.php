@@ -4,22 +4,158 @@ namespace App\Http\Controllers;
 
 use App\Models\StudyAbroadApplication;
 use App\Models\StudyAbroadPersonalDetail;
+use App\Models\StudyAbroadEducationPreference;
+use App\Models\StudyAbroadTestScore;
+use App\Models\StudyAbroadPastEducation;
+use App\Models\OtpVerification;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\StudyAbroadApplicationMail;
 use App\Mail\StudyAbroadOtpMail;
-use App\Models\OtpVerification;
+use App\Models\WorldUniversityRanking;
+use App\Models\NirfHistoricalRanking;
+use App\Models\ApplicationMasterData;
 
 class StudyAbroadApplicationController extends Controller
 {
+    /**
+     * Show Auth Choice Page (Login or Register buttons)
+     */
+    public function showAuth()
+    {
+        return view('study-abroad.auth');
+    }
+
+    /**
+     * Redirect to Registration (Step 1)
+     */
+    public function register()
+    {
+        return redirect()->route('study-abroad.application');
+    }
+
+    /**
+     * Show Login Form (Enter Email)
+     */
+    public function showLoginForm()
+    {
+        return view('study-abroad.login');
+    }
+
+    /**
+     * Send OTP for Existing User Login
+     */
+    public function sendLoginOtp(Request $request)
+    {
+        $request->validate([
+            'email' => ['required', 'email', 'exists:study_abroad_applications,email'],
+        ], [
+            'email.required' => 'Please enter your registered email address.',
+            'email.exists' => 'No application found with this email address. Please register.',
+        ]);
+
+        try {
+            $application = StudyAbroadApplication::where('email', $request->email)->latest()->first();
+
+            if (!$application) {
+                return back()->with('error', 'Application not found.');
+            }
+
+            // Store application ID temporarily in session for login verification
+            session(['study_abroad_application_id' => $application->id]);
+
+            $this->generateAndSendOtp($application);
+
+            return redirect()
+                ->route('study-abroad.login.otp')
+                ->with('success', 'A login OTP has been sent to your email address.');
+        } catch (\Throwable $e) {
+            report($e);
+            return back()->withInput()->with('error', 'Unable to send login OTP. Please try again.');
+        }
+    }
+
+    /**
+     * Show Login OTP Verification Page
+     */
+    public function showLoginOtpForm()
+    {
+        $applicationId = session('study_abroad_application_id');
+
+        if (!$applicationId) {
+            return redirect()
+                ->route('study-abroad.login')
+                ->with('error', 'Session expired. Please enter your email again.');
+        }
+
+        $application = StudyAbroadApplication::findOrFail($applicationId);
+
+        return view('study-abroad.login-otp', compact('application'));
+    }
+
+    /**
+     * Verify Login OTP and Resume Application
+     */
+    public function verifyLoginOtp(Request $request)
+    {
+        $applicationId = session('study_abroad_application_id');
+
+        if (!$applicationId) {
+            return redirect()
+                ->route('study-abroad.login')
+                ->with('error', 'Session expired.');
+        }
+
+        $request->validate([
+            'otp' => ['required', 'digits:4'],
+        ]);
+
+        $verification = OtpVerification::where('application_id', $applicationId)
+            ->whereNull('verified_at')
+            ->latest()
+            ->first();
+
+        if (!$verification || $verification->expires_at->isPast() || $verification->otp !== $request->otp) {
+            return back()->withInput()->with('error', 'Invalid or expired OTP.');
+        }
+
+        $verification->update(['verified_at' => now()]);
+
+        $application = StudyAbroadApplication::findOrFail($applicationId);
+
+        // Redirect user based on their current application progress/status
+        // return match ($application->status) {
+        //     'step_1' => redirect()->route('study-abroad.step2')->with('success', 'Logged in successfully.'),
+        //     'step_2' => redirect()->route('study-abroad.step3')->with('success', 'Logged in successfully.'),
+        //     'completed' => redirect()->route('study-abroad.completed')->with('success', 'Logged in successfully.'),
+        //     default => redirect()->route('study-abroad.step2')->with('success', 'Logged in successfully.'),
+
+        // };
+
+        return redirect('/')->with('success', 'Logged in successfully.');
+    }
+
     /**
      * Show Step 1.
      */
     public function create()
     {
-        return view('study-abroad.application');
+
+        $cities = ApplicationMasterData::where('type', 'city')
+            ->where('status', 1)
+            ->orderBy('name')
+            ->get();
+
+        $courses = ApplicationMasterData::where('type', 'course')
+            ->where('status', 1)
+            ->orderBy('name')
+            ->get();
+        return view('study-abroad.application', compact('cities', 'courses'));
     }
+
+
+
 
     /**
      * Save Step 1.
@@ -46,8 +182,9 @@ class StudyAbroadApplicationController extends Controller
         ]);
 
         try {
-            DB::transaction(function () use ($validated, &$application) {
+            $application = null;
 
+            DB::transaction(function () use ($validated, &$application) {
                 $application = StudyAbroadApplication::create([
                     'phone' => $validated['phone'],
                     'email' => $validated['email'],
@@ -75,7 +212,6 @@ class StudyAbroadApplicationController extends Controller
                 ->route('study-abroad.step2')
                 ->with('success', 'Personal details saved successfully.');
         } catch (\Throwable $e) {
-
             report($e);
 
             return back()
@@ -83,11 +219,6 @@ class StudyAbroadApplicationController extends Controller
                 ->with('error', 'Unable to save your details. Please try again.');
         }
     }
-
-    /**
-     * Show Step 2.
-     */
-
 
     public function saveEducationPreferences(Request $request)
     {
@@ -118,8 +249,7 @@ class StudyAbroadApplicationController extends Controller
 
         try {
             DB::transaction(function () use ($validated, $applicationId) {
-
-                $education = \App\Models\StudyAbroadEducationPreference::updateOrCreate(
+                \App\Models\StudyAbroadEducationPreference::updateOrCreate(
                     [
                         'application_id' => $applicationId,
                     ],
@@ -168,7 +298,6 @@ class StudyAbroadApplicationController extends Controller
                 ->route('study-abroad.step3')
                 ->with('success', 'Education preferences saved successfully.');
         } catch (\Throwable $e) {
-
             report($e);
 
             return back()
@@ -179,8 +308,6 @@ class StudyAbroadApplicationController extends Controller
                 );
         }
     }
-
-
 
     public function step3()
     {
@@ -202,10 +329,8 @@ class StudyAbroadApplicationController extends Controller
         return view('study-abroad.step3', compact('application'));
     }
 
-    public function savePastEducation(
-        Request $request,
-        // Msg91OtpService $otpService
-    ) {
+    public function savePastEducation(Request $request)
+    {
         $applicationId = session('study_abroad_application_id');
 
         if (!$applicationId) {
@@ -242,16 +367,12 @@ class StudyAbroadApplicationController extends Controller
         ]);
 
         try {
-
-            // Get application
             $application = StudyAbroadApplication::findOrFail($applicationId);
 
             DB::transaction(function () use (
                 $validated,
                 $applicationId
             ) {
-
-                // Save / update education details
                 \App\Models\StudyAbroadPastEducation::updateOrCreate(
                     [
                         'application_id' => $applicationId,
@@ -272,7 +393,6 @@ class StudyAbroadApplicationController extends Controller
                     ]
                 );
 
-                // Move application to OTP pending
                 StudyAbroadApplication::where(
                     'id',
                     $applicationId
@@ -282,54 +402,15 @@ class StudyAbroadApplicationController extends Controller
                 ]);
             });
 
-            
+            $this->generateAndSendOtp($application);
 
-            // Delete previous OTP
-            
-
-            // Delete previous OTP
-OtpVerification::where(
-    'application_id',
-    $applicationId
-)->delete();
-
-// Generate random 4-digit OTP
-$otp = (string) random_int(1000, 9999);
-
-// Store OTP
-OtpVerification::create([
-    'application_id' => $applicationId,
-    'phone' => $application->phone,
-    'email' => $application->email,
-    'otp' => $otp,
-    'expires_at' => now()->addMinutes(5),
-]);
-
-// Send OTP to user's email
-Mail::to($application->email)
-    ->send(
-        new StudyAbroadOtpMail($otp)
-    );
-
-// Go to OTP page
-return redirect()
-    ->route('study-abroad.otp')
-    ->with(
-        'success',
-        'A 4-digit OTP has been sent to your email address.'
-    );
-        
-
-
-            // Go to OTP page
             return redirect()
                 ->route('study-abroad.otp')
                 ->with(
                     'success',
-                    'OTP has been sent to your mobile number.'
+                    'A 4-digit OTP has been sent to your email address.'
                 );
         } catch (\Throwable $e) {
-
             report($e);
 
             return back()
@@ -340,7 +421,6 @@ return redirect()
                 );
         }
     }
-
 
     public function otp()
     {
@@ -357,89 +437,85 @@ return redirect()
         return view('study-abroad.otp', compact('application'));
     }
 
-
-
     public function verifyOtp(Request $request)
-{
-    $applicationId = session('study_abroad_application_id');
+    {
+        $applicationId = session('study_abroad_application_id');
 
-    if (!$applicationId) {
-        return redirect()
-            ->route('study-abroad.application')
-            ->with('error', 'Application session expired.');
-    }
+        if (!$applicationId) {
+            return redirect()
+                ->route('study-abroad.application')
+                ->with('error', 'Application session expired.');
+        }
 
-    $request->validate([
-        'otp' => [
-            'required',
-            'digits:4',
-        ],
-    ]);
-
-    $verification = OtpVerification::where(
-        'application_id',
-        $applicationId
-    )
-        ->whereNull('verified_at')
-        ->latest()
-        ->first();
-
-    if (!$verification) {
-        return back()
-            ->withInput()
-            ->with('error', 'No OTP found. Please request a new OTP.');
-    }
-
-    if ($verification->expires_at->isPast()) {
-        return back()
-            ->withInput()
-            ->with('error', 'OTP has expired. Please request a new OTP.');
-    }
-
-    if ($verification->otp !== $request->otp) {
-        return back()
-            ->withInput()
-            ->with('error', 'Incorrect OTP. Please try again.');
-    }
-
-    DB::transaction(function () use (
-        $verification,
-        $applicationId
-    ) {
-
-        $verification->update([
-            'verified_at' => now(),
+        $request->validate([
+            'otp' => [
+                'required',
+                'digits:4',
+            ],
         ]);
 
-        StudyAbroadApplication::where(
-            'id',
+        $verification = OtpVerification::where(
+            'application_id',
             $applicationId
-        )->update([
-            'otp_verified' => true,
-            'status' => 'completed',
-        ]);
-    });
+        )
+            ->whereNull('verified_at')
+            ->latest()
+            ->first();
 
-    $application = StudyAbroadApplication::with([
-        'personalDetails',
-        'educationPreference',
-        'testScores',
-        'pastEducation',
-    ])->findOrFail($applicationId);
+        if (!$verification) {
+            return back()
+                ->withInput()
+                ->with('error', 'No OTP found. Please request a new OTP.');
+        }
 
-    // Send completed application to admin
-    Mail::to(config('mail.admin_email'))
-        ->send(
-            new StudyAbroadApplicationMail($application)
-        );
+        if ($verification->expires_at->isPast()) {
+            return back()
+                ->withInput()
+                ->with('error', 'OTP has expired. Please request a new OTP.');
+        }
 
-    return redirect()
-        ->route('study-abroad.completed')
-        ->with(
-            'success',
-            'Email verified successfully.'
-        );
-}
+        if ($verification->otp !== $request->otp) {
+            return back()
+                ->withInput()
+                ->with('error', 'Incorrect OTP. Please try again.');
+        }
+
+        DB::transaction(function () use (
+            $verification,
+            $applicationId
+        ) {
+            $verification->update([
+                'verified_at' => now(),
+            ]);
+
+            StudyAbroadApplication::where(
+                'id',
+                $applicationId
+            )->update([
+                'otp_verified' => true,
+                'status' => 'completed',
+            ]);
+        });
+
+        $application = StudyAbroadApplication::with([
+            'personalDetails',
+            'educationPreference',
+            'testScores',
+            'pastEducation',
+        ])->findOrFail($applicationId);
+
+        Mail::to(config('mail.admin_email'))
+            ->send(
+                new StudyAbroadApplicationMail($application)
+            );
+
+        return redirect()
+            ->route('study-abroad.completed')
+            ->with(
+                'success',
+                'Email verified successfully.'
+            );
+    }
 
     public function completed()
     {
@@ -463,7 +539,6 @@ return redirect()
         );
     }
 
-
     public function step2()
     {
         $applicationId = session('study_abroad_application_id');
@@ -477,6 +552,74 @@ return redirect()
         $application = StudyAbroadApplication::with('personalDetails')
             ->findOrFail($applicationId);
 
+
         return view('study-abroad.step2', compact('application'));
     }
+
+    /**
+     * Helper Method for Generating and Sending OTP
+     */
+    private function generateAndSendOtp(StudyAbroadApplication $application)
+    {
+        OtpVerification::where(
+            'application_id',
+            $application->id
+        )->delete();
+
+        $otp = (string) random_int(1000, 9999);
+
+        OtpVerification::create([
+            'application_id' => $application->id,
+            'phone' => $application->phone,
+            'email' => $application->email,
+            'otp' => $otp,
+            'expires_at' => now()->addMinutes(5),
+        ]);
+
+        Mail::to($application->email)
+            ->send(
+                new StudyAbroadOtpMail($otp)
+            );
+    }
+
+
+    // Study Abroad
+
+    public function studyAbroad()
+    {
+        $worldUniversities = WorldUniversityRanking::orderBy('rank_2026')
+          ->orderByRaw('CAST(rank_2026 AS UNSIGNED)')
+            ->get();
+
+        $worldCountries = $worldUniversities
+            ->pluck('country')
+            ->filter()
+            ->unique()
+            ->sort()
+            ->values();
+
+        return view('study_abroad', compact(
+            'worldUniversities',
+            'worldCountries'
+        ));
+    }
+
+    public function worldUniversities()
+{
+    $worldUniversities = WorldUniversityRanking::query()
+        ->orderByRaw('CAST(rank_2026 AS UNSIGNED)')
+        ->paginate(25);
+
+    $worldCountries = WorldUniversityRanking::query()
+        ->pluck('country')
+        ->filter()
+        ->unique()
+        ->sort()
+        ->values();
+
+    return view('world-universities', compact(
+        'worldUniversities',
+        'worldCountries'
+    ));
+}
 }

@@ -11,6 +11,7 @@ use App\Http\Controllers\ExamController;
 use App\Http\Controllers\StudyAbroadApplicationController;
 
 
+
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
@@ -165,4 +166,20 @@ Route::get(
 
 Route::get('/study-abroad', function () {
     return view('study_abroad');
-})->name('study-abroad');   
+})->name('study-abroad');  
+
+Route::get('/study-abroad', [StudyAbroadApplicationController::class, 'studyAbroad'])
+    ->name('study-abroad');
+
+Route::get('/world-universities', [StudyAbroadApplicationController::class, 'worldUniversities'])
+    ->name('world-universities');
+
+
+Route::get('study-abroad/auth', [StudyAbroadApplicationController::class, 'showAuth'])->name('study-abroad.auth');
+Route::get('study-abroad/login', [StudyAbroadApplicationController::class, 'showLoginForm'])->name('study-abroad.login');
+Route::post('study-abroad/login', [StudyAbroadApplicationController::class, 'sendLoginOtp'])->name('study-abroad.login.submit');
+Route::get('study-abroad/login-otp', [StudyAbroadApplicationController::class, 'showLoginOtpForm'])->name('study-abroad.login.otp');
+Route::post('study-abroad/login-otp', [StudyAbroadApplicationController::class, 'verifyLoginOtp'])->name('study-abroad.login.verify');
+// Register / Form Routes
+Route::get('study-abroad/application', [StudyAbroadApplicationController::class, 'create'])->name('study-abroad.application');
+

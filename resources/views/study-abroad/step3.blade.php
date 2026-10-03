@@ -6,156 +6,500 @@
 
     <title>Past Education Details</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+   <style>
+* {
+    box-sizing: border-box;
+}
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f7fb;
-            color: #222;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        .application-wrapper {
-            max-width: 850px;
-            margin: 40px auto;
-            padding: 20px;
-        }
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #252525;
+}
 
-        .application-box {
-            background: #fff;
-            border-radius: 15px;
-            padding: 35px;
-            box-shadow: 0 10px 35px rgba(0, 0, 0, .08);
-        }
+/* =========================================
+   MAIN
+========================================= */
 
-        .application-title {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+.application-wrapper {
+    width: 100%;
+    max-width: 780px;
+    margin: 35px auto;
+    padding: 0 15px;
+}
 
-        .application-title h1 {
-            margin: 0 0 10px;
-            font-size: 28px;
-        }
+.application-box {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #e5e7ea;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 12px 35px rgba(0,0,0,.07);
+}
 
-        .application-title p {
-            color: #777;
-            margin: 0;
-        }
+/* =========================================
+   HEADER
+========================================= */
 
-        .step-title {
-            margin-bottom: 25px;
-            font-size: 20px;
-        }
+.application-title {
+    padding: 18px 23px;
+    background: linear-gradient(135deg, #f5820b, #ff982d);
+    color: #fff;
+}
 
-        .section-title {
-            margin-top: 30px;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #eee;
-            font-size: 18px;
-        }
+.application-title h1 {
+    margin: 0 0 5px;
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 700;
+    letter-spacing: .2px;
+}
 
-        .form-group {
-            margin-bottom: 20px;
-        }
+.application-title p {
+    margin: 0;
+    color: rgba(255,255,255,.92);
+    font-size: 11px;
+}
 
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
+/* =========================================
+   STEP TITLE
+========================================= */
 
-        .form-control {
-            width: 100%;
-            padding: 13px 14px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 15px;
-            background: #fff;
-        }
+.step-title {
+    display: flex;
+    align-items: center;
+    gap: 11px;
 
-        .form-control:focus {
-            outline: none;
-            border-color: #eb933a;
-        }
+    margin: 0;
+    padding: 13px 23px;
 
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
+    border-bottom: 1px solid #eceeef;
 
-        .passport-group {
-            display: flex;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
+    background: #fff;
 
-        .passport-group label {
-            font-weight: normal;
-            display: flex;
-            align-items: center;
-            gap: 7px;
-        }
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #252525;
+}
 
-        .submit-button {
-            width: 100%;
-            border: 0;
-            background: #eb933a;
-            color: #fff;
-            padding: 14px;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: 600;
-            cursor: pointer;
-            margin-top: 25px;
-        }
+.step-title::before {
+    content: "3";
 
-        .submit-button:hover {
-            background: #d9822d;
-        }
+    width: 28px;
+    height: 28px;
 
-        .error-box {
-            background: #ffeaea;
-            color: #c00;
-            padding: 12px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-        .success-box {
-            background: #eaf8ee;
-            color: #16803c;
-            padding: 12px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
+    flex-shrink: 0;
 
-        @media (max-width: 600px) {
+    border-radius: 50%;
 
-            .application-wrapper {
-                margin: 20px auto;
-                padding: 10px;
-            }
+    background: #fff1e4;
+    color: #f5820b;
 
-            .application-box {
-                padding: 20px;
-            }
+    font-size: 11px;
+    font-weight: 700;
+}
 
-            .application-title h1 {
-                font-size: 23px;
-            }
+/* =========================================
+   FORM
+========================================= */
 
-            .form-row {
-                grid-template-columns: 1fr;
-                gap: 0;
-            }
-        }
-    </style>
+.application-box form {
+    padding: 20px 23px 24px;
+}
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.section-title {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    margin: 7px 0 15px;
+    padding: 0 0 9px;
+
+    border-bottom: 1px solid #eceeef;
+
+    color: #292d32;
+
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.section-title::before {
+    content: "";
+
+    width: 4px;
+    height: 17px;
+
+    flex-shrink: 0;
+
+    border-radius: 3px;
+
+    background: #f5820b;
+}
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.form-group {
+    margin-bottom: 14px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #3c4045;
+
+    font-size: 10.5px;
+    line-height: 1.4;
+
+    font-weight: 600;
+}
+
+/* =========================================
+   INPUT / SELECT
+========================================= */
+
+.form-control {
+    width: 100%;
+    height: 42px;
+
+    padding: 0 12px;
+
+    border: 1px solid #dfe2e6;
+    border-radius: 7px;
+
+    background: #fafbfc;
+
+    color: #252525;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+
+    outline: none;
+
+    transition:
+        border-color .2s ease,
+        background .2s ease,
+        box-shadow .2s ease;
+}
+
+.form-control:hover {
+    border-color: #cdd2d7;
+    background: #fff;
+}
+
+.form-control:focus {
+    border-color: #f5820b;
+    background: #fff;
+
+    box-shadow: 0 0 0 3px rgba(245,130,11,.08);
+}
+
+.form-control::placeholder {
+    color: #a5a9ae;
+}
+
+select.form-control {
+    cursor: pointer;
+}
+
+/* =========================================
+   TWO COLUMN ROW
+========================================= */
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px;
+}
+
+/* =========================================
+   PASSPORT
+========================================= */
+
+.passport-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.passport-group label {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    min-height: 34px;
+
+    margin: 0;
+
+    padding: 0 14px;
+
+    border: 1px solid #e0e3e6;
+    border-radius: 6px;
+
+    background: #fff;
+
+    color: #555;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: all .2s ease;
+}
+
+.passport-group label:hover {
+    border-color: #f5820b;
+    background: #fffaf5;
+    color: #f5820b;
+}
+
+.passport-group input {
+    width: 14px;
+    height: 14px;
+
+    margin: 0;
+
+    accent-color: #f5820b;
+
+    cursor: pointer;
+}
+
+/* =========================================
+   ALERTS
+========================================= */
+
+.error-box,
+.success-box {
+    margin-bottom: 16px;
+
+    padding: 10px 12px;
+
+    border-radius: 7px;
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.error-box {
+    border: 1px solid #f1d2d2;
+    background: #fff0f0;
+    color: #dc3545;
+}
+
+.success-box {
+    border: 1px solid #cfe9d8;
+    background: #eefaf2;
+    color: #16803c;
+}
+
+/* =========================================
+   SUBMIT
+========================================= */
+
+.submit-button {
+    width: 100%;
+    height: 44px;
+
+    margin-top: 8px;
+
+    border: 0;
+    border-radius: 7px;
+
+    background: linear-gradient(135deg, #f5820b, #fb8e1b);
+
+    color: #fff;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: .2px;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 10px rgba(245,130,11,.13);
+
+    transition: all .2s ease;
+}
+
+.submit-button:hover {
+    background: #df7105;
+
+    box-shadow: 0 6px 16px rgba(245,130,11,.22);
+
+    transform: translateY(-1px);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 700px) {
+
+    .application-wrapper {
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+
+    .application-title {
+        padding: 17px 18px;
+    }
+
+    .application-title h1 {
+        font-size: 19px;
+    }
+
+    .step-title {
+        padding: 12px 18px;
+    }
+
+    .application-box form {
+        padding: 20px 18px 22px;
+    }
+
+    .form-row {
+        gap: 14px;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .application-wrapper {
+        margin: 10px auto;
+        padding: 0 7px;
+    }
+
+    .application-box {
+        border-radius: 11px;
+    }
+
+    .application-title {
+        padding: 16px 14px;
+    }
+
+    .application-title h1 {
+        font-size: 17px;
+    }
+
+    .application-title p {
+        font-size: 9.5px;
+    }
+
+    .step-title {
+        padding: 11px 14px;
+        font-size: 13px;
+    }
+
+    .step-title::before {
+        width: 27px;
+        height: 27px;
+        font-size: 10px;
+    }
+
+    .application-box form {
+        padding: 18px 14px 20px;
+    }
+
+    .section-title {
+        margin-top: 5px;
+        margin-bottom: 13px;
+        font-size: 11.5px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .form-group {
+        margin-bottom: 13px;
+    }
+
+    .form-group label {
+        font-size: 10px;
+    }
+
+    .form-control {
+        height: 41px;
+        font-size: 11.5px;
+    }
+
+    .passport-group {
+        gap: 6px;
+    }
+
+    .passport-group label {
+        min-height: 32px;
+        padding: 0 12px;
+        font-size: 10px;
+    }
+
+    .passport-group input {
+        width: 13px;
+        height: 13px;
+    }
+
+    .submit-button {
+        height: 43px;
+        font-size: 11px;
+    }
+}
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 350px) {
+
+    .application-wrapper {
+        padding: 0 5px;
+    }
+
+    .application-title h1 {
+        font-size: 16px;
+    }
+
+    .application-box form {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .passport-group label {
+        width: 100%;
+    }
+}
+</style>
 </head>
 
 <body>

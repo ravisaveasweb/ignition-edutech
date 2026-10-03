@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
             ExamSeeder::class,
             ExamSectionSeeder::class,
             WorldUniversityRankingSeeder::class,
+             AllMiscellaneousDataSeeder::class,
 
         ]);
     }
