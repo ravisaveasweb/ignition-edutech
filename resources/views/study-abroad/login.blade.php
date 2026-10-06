@@ -1,3 +1,6 @@
+<link rel="shortcut icon" type="image/x-icon" href="http://127.0.0.1:8000/img/logo/favicon.png" />
+
+
 <style>
 .study-login-wrapper {
     min-height: 70vh;

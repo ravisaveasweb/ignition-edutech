@@ -10045,7 +10045,7 @@ table.ie-table tbody tr:nth-child(even) {
 
 
 
-/* Abroad universitires sections  */
+/* Abroad universitires Ranking sections  */
 
 
 /* =========================================
@@ -10413,6 +10413,7 @@ table.ie-table tbody tr:nth-child(even) {
 .ign-ranking-item:first-child .ign-rank-number {
     color: #eb933a;
 }
+
 
 
 /* =========================================
@@ -10893,3 +10894,4 @@ table.ie-table tbody tr:nth-child(even) {
         height: 34px;
     }
 }
+

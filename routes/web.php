@@ -9,6 +9,8 @@ use App\Http\Controllers\CorporateController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ExamController;
 use App\Http\Controllers\StudyAbroadApplicationController;
+use App\Http\Controllers\StudyAbroadVisaController;
+use App\Http\Controllers\StudyAbroadGlobalScholarshipController;
 
 
 
@@ -180,6 +182,33 @@ Route::get('study-abroad/login', [StudyAbroadApplicationController::class, 'show
 Route::post('study-abroad/login', [StudyAbroadApplicationController::class, 'sendLoginOtp'])->name('study-abroad.login.submit');
 Route::get('study-abroad/login-otp', [StudyAbroadApplicationController::class, 'showLoginOtpForm'])->name('study-abroad.login.otp');
 Route::post('study-abroad/login-otp', [StudyAbroadApplicationController::class, 'verifyLoginOtp'])->name('study-abroad.login.verify');
+Route::post('study-abroad/otp/resend', [StudyAbroadApplicationController::class, 'resendOtp'])
+    ->name('study-abroad.otp.resend');
+
+    Route::post('study-abroad/login-otp/resend', [StudyAbroadApplicationController::class, 'resendLoginOtp'])
+    ->name('study-abroad.login.otp.resend');
 // Register / Form Routes
 Route::get('study-abroad/application', [StudyAbroadApplicationController::class, 'create'])->name('study-abroad.application');
 
+// Visa Process
+Route::get(
+    'study-abroad/visa-process',
+    [StudyAbroadVisaController::class, 'index']
+)->name('study-abroad.visa-process');
+
+Route::get(
+    'study-abroad/visa-process/{country}',
+    [StudyAbroadVisaController::class, 'show']
+)->name('study-abroad.visa-guide');
+
+
+// Route::get('/study-abroad/global-scholarships', function () {
+//     return view('study-abroad.global-scholarship');
+// })->name('study-abroad.global-scholarships');
+
+
+Route::get('/study-abroad/global-scholarships', [StudyAbroadGlobalScholarshipController::class, 'index'])
+    ->name('study-abroad.global-scholarships');
+
+Route::get('/study-abroad/global-scholarships/{scholarship_id}', [StudyAbroadGlobalScholarshipController::class, 'show'])
+    ->name('study-abroad.global-scholarship.show');

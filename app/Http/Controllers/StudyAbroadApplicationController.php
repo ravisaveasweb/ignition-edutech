@@ -136,6 +136,56 @@ class StudyAbroadApplicationController extends Controller
         return redirect('/')->with('success', 'Logged in successfully.');
     }
 
+    public function resendLoginOtp(Request $request)
+{
+    $applicationId = session('study_abroad_application_id');
+
+    if (!$applicationId) {
+        return response()->json([
+            'success' => false,
+            'message' => 'Session expired. Please enter your email again.',
+        ], 401);
+    }
+
+    $application = StudyAbroadApplication::find($applicationId);
+
+    if (!$application) {
+        return response()->json([
+            'success' => false,
+            'message' => 'Application not found.',
+        ], 404);
+    }
+
+    $resendAt = session('study_abroad_login_otp_resend_at');
+
+    if ($resendAt && now()->timestamp < $resendAt) {
+        $remainingSeconds = $resendAt - now()->timestamp;
+
+        return response()->json([
+            'success' => false,
+            'message' => 'Please wait before requesting another OTP.',
+            'remaining_seconds' => $remainingSeconds,
+        ], 429);
+    }
+
+    try {
+        $this->generateAndSendLoginOtp($application);
+
+        return response()->json([
+            'success' => true,
+            'message' => 'A new OTP has been sent to your email address.',
+            'remaining_seconds' => 60,
+        ]);
+    } catch (\Throwable $e) {
+        report($e);
+
+        return response()->json([
+            'success' => false,
+            'message' => 'Unable to send OTP. Please try again.',
+        ], 500);
+    }
+}
+
     /**
      * Show Step 1.
      */
@@ -517,6 +567,58 @@ class StudyAbroadApplicationController extends Controller
             );
     }
 
+
+    public function resendOtp(Request $request)
+    {
+        $applicationId = session('study_abroad_application_id');
+
+        if (!$applicationId) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Application session expired. Please start again.',
+            ], 401);
+        }
+
+        $application = StudyAbroadApplication::find($applicationId);
+
+        if (!$application) {
+            return response()->json([
+                'success' => false,
+                'message' => 'Application not found.',
+            ], 404);
+        }
+
+        $resendAt = session('study_abroad_otp_resend_at');
+
+        if ($resendAt && now()->timestamp < $resendAt) {
+            $remainingSeconds = $resendAt - now()->timestamp;
+
+            return response()->json([
+                'success' => false,
+                'message' => 'Please wait before requesting another OTP.',
+                'remaining_seconds' => $remainingSeconds,
+            ], 429);
+        }
+
+        try {
+            $this->generateAndSendOtp($application);
+
+            return response()->json([
+                'success' => true,
+                'message' => 'A new OTP has been sent to your email address.',
+                'remaining_seconds' => 60,
+            ]);
+        } catch (\Throwable $e) {
+            report($e);
+
+            return response()->json([
+                'success' => false,
+                'message' => 'Unable to send OTP. Please try again.',
+            ], 500);
+        }
+    }
+
+
     public function completed()
     {
         $applicationId = session('study_abroad_application_id');
@@ -576,6 +678,12 @@ class StudyAbroadApplicationController extends Controller
             'expires_at' => now()->addMinutes(5),
         ]);
 
+        // Allow resend only after 60 seconds
+        session([
+            'study_abroad_otp_resend_at' => now()->addSeconds(60)->timestamp,
+        ]);
+
+
         Mail::to($application->email)
             ->send(
                 new StudyAbroadOtpMail($otp)
@@ -583,12 +691,40 @@ class StudyAbroadApplicationController extends Controller
     }
 
 
+private function generateAndSendLoginOtp(StudyAbroadApplication $application)
+{
+    OtpVerification::where(
+        'application_id',
+        $application->id
+    )->delete();
+
+    $otp = (string) random_int(1000, 9999);
+
+    OtpVerification::create([
+        'application_id' => $application->id,
+        'phone' => $application->phone,
+        'email' => $application->email,
+        'otp' => $otp,
+        'expires_at' => now()->addMinutes(5),
+    ]);
+
+    session([
+        'study_abroad_login_otp_resend_at' =>
+            now()->addSeconds(60)->timestamp,
+    ]);
+
+    Mail::to($application->email)
+        ->send(new StudyAbroadOtpMail($otp));
+}
+
+
+
     // Study Abroad
 
     public function studyAbroad()
     {
         $worldUniversities = WorldUniversityRanking::orderBy('rank_2026')
-          ->orderByRaw('CAST(rank_2026 AS UNSIGNED)')
+            ->orderByRaw('CAST(rank_2026 AS UNSIGNED)')
             ->get();
 
         $worldCountries = $worldUniversities
@@ -605,21 +741,21 @@ class StudyAbroadApplicationController extends Controller
     }
 
     public function worldUniversities()
-{
-    $worldUniversities = WorldUniversityRanking::query()
-        ->orderByRaw('CAST(rank_2026 AS UNSIGNED)')
-        ->paginate(25);
+    {
+        $worldUniversities = WorldUniversityRanking::query()
+            ->orderByRaw('CAST(rank_2026 AS UNSIGNED)')
+            ->paginate(25);
 
-    $worldCountries = WorldUniversityRanking::query()
-        ->pluck('country')
-        ->filter()
-        ->unique()
-        ->sort()
-        ->values();
+        $worldCountries = WorldUniversityRanking::query()
+            ->pluck('country')
+            ->filter()
+            ->unique()
+            ->sort()
+            ->values();
 
-    return view('world-universities', compact(
-        'worldUniversities',
-        'worldCountries'
-    ));
-}
+        return view('world-universities', compact(
+            'worldUniversities',
+            'worldCountries'
+        ));
+    }
 }

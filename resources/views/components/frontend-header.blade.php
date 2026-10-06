@@ -258,10 +258,13 @@
                                                         </li>
 
                                                         {{-- VISA --}}
-                                                        <li><a href="#"><span>Visa Process</span></a></li>
+                                                        <li><a href="{{ route('study-abroad.visa-process') }}"><span>Visa
+                                                                    Process</span> <i
+                                                                    class="fa-solid fa-angle-right"></i></a></li>
+
 
                                                         {{-- LEAD FORM --}}
-                                                        <li><a href="#"><span>Lead Form</span></a></li>
+                                                        <li><a href="{{ route('study-abroad.application') }}"><span>Lead Form</span></a></li>
 
                                                         {{-- EXAMS --}}
                                                         <li>
@@ -339,10 +342,14 @@
                                                     </div>
 
                                                     <ul class="study-drawer-list">
-                                                        <li><a href="#">Government Scholarships</a></li>
-                                                        <li><a href="#">University Scholarships</a></li>
-                                                        <li><a href="#">Merit Scholarships</a></li>
-                                                        <li><a href="#">Need Based Scholarships</a></li>
+                                                        <li><a href="{{ route('study-abroad.global-scholarships') }}">Government
+                                                                Scholarships</a></li>
+                                                        <li><a href="{{ route('study-abroad.global-scholarships') }}">University
+                                                                Scholarships</a></li>
+                                                        <li><a href="{{ route('study-abroad.global-scholarships') }}">Merit
+                                                                Scholarships</a></li>
+                                                        <li><a href="{{ route('study-abroad.global-scholarships') }}">Need
+                                                                Based Scholarships</a></li>
                                                     </ul>
                                                 </div>
 

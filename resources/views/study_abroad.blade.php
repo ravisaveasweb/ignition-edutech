@@ -358,228 +358,175 @@
 
 
     {{-- WORLD UNIVERSITY RANKINGS --}}
-<section class="ign-world-ranking">
-    <div class="ign-world-container">
+    <section class="ign-world-ranking">
+        <div class="ign-world-container">
 
-        {{-- Heading --}}
-        <div class="ign-world-heading">
-            <div class="ign-world-heading-left">
-                <div class="ign-world-badge">
-                    <i class="bi bi-globe2"></i>
-                    Global University Rankings
-                </div>
-                <h2>
-                    Discover the World's
-                    <span>Top Universities</span>
-                </h2>
-                <p>
-                    Explore globally recognised universities and compare
-                    their rankings, location, institutional status and
-                    overall performance to find the right destination
-                    for your international education journey.
-                </p>
-            </div>
-            <a href="{{ route('world-universities') }}" class="ign-world-view">
-                Explore All Universities
-                <i class="bi bi-arrow-right"></i>
-            </a>
-        </div>
-
-        {{-- Featured Top 3 Universities --}}
-        <div class="ign-featured-grid">
-            @foreach($worldUniversities->take(3) as $university)
-                <div class="ign-featured-card">
-                    <div class="ign-featured-top">
-                        <div class="ign-featured-rank">
-                            @if($loop->first)
-                                <i class="bi bi-trophy-fill"></i>
-                            @else
-                                <i class="bi bi-award-fill"></i>
-                            @endif
-                            #{{ $university->rank_2026 }} Ranked
-                        </div>
-                        <div class="ign-featured-score">
-                            {{ $university->overall_score }}
-                        </div>
+            {{-- Heading --}}
+            <div class="ign-world-heading">
+                <div class="ign-world-heading-left">
+                    <div class="ign-world-badge">
+                        <i class="bi bi-globe2"></i>
+                        Global University Rankings
                     </div>
-                    <div class="ign-featured-main">
-                        <div class="ign-featured-logo">
-                            {{ strtoupper(substr($university->institution_name, 0, 1)) }}
-                        </div>
-                        <div class="ign-featured-info">
-                            <h3>{{ $university->institution_name }}</h3>
-                            <p>
-                                <i class="bi bi-geo-alt-fill"></i>
-                                {{ $university->country }}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
-        </div>
-
-        {{-- Search / Filter --}}
-        <div class="ign-ranking-toolbar">
-            <div class="ign-ranking-search">
-                <i class="bi bi-search"></i>
-                <input
-                    type="text"
-                    id="ignUniversitySearch"
-                    placeholder="Search university by name..."
-                >
-            </div>
-            <div class="ign-ranking-filter">
-                <select id="ignCountryFilter">
-                    <option value="">All Countries</option>
-                    @foreach($worldCountries as $country)
-                        <option value="{{ strtolower($country) }}">{{ $country }}</option>
-                    @endforeach
-                </select>
-                <i class="bi bi-chevron-down"></i>
-            </div>
-        </div>
-
-        {{-- Ranking List --}}
-        <div class="ign-ranking-list">
-            <div class="ign-ranking-head">
-                <div>Rank</div>
-                <div>University</div>
-                <div>Country</div>
-                <div>Status</div>
-                <div>Overall Score</div>
-                <div>Action</div>
-            </div>
-
-            @foreach($worldUniversities->take(5) as $university)
-                <div
-                    class="ign-ranking-item"
-                    data-name="{{ strtolower($university->institution_name) }}"
-                    data-country="{{ strtolower($university->country) }}"
-                >
-                    {{-- Rank --}}
-                    <div class="ign-rank-number">
-                        #{{ $university->rank_2026 }}
-                    </div>
-
-                    {{-- University --}}
-                    <div class="ign-ranking-university">
-                        <div class="ign-ranking-logo">
-                            {{ strtoupper(substr($university->institution_name, 0, 1)) }}
-                        </div>
-                        <div class="ign-ranking-university-info">
-                            <h3>{{ $university->institution_name }}</h3>
-                            <span>World University Ranking 2026</span>
-                        </div>
-                    </div>
-
-                    {{-- Country --}}
-                    <div class="ign-ranking-country">
-                        <i class="bi bi-geo-alt-fill"></i>
-                        {{ $university->country }}
-                    </div>
-
-                    {{-- Status --}}
-                    <div class="ign-ranking-status">
-                        <span>{{ $university->status }}</span>
-                    </div>
-
-                    {{-- Overall Score --}}
-                    <div class="ign-ranking-score">
-                        <strong>{{ $university->overall_score }}</strong>
-                        <div class="ign-score-progress">
-                            <span style="width: {{ min((float) $university->overall_score, 100) }}%;"></span>
-                        </div>
-                    </div>
-
-                    {{-- Action --}}
-                    <div class="ign-ranking-action">
-                        <a
-                            href="{{ route('study-abroad.application') }}"
-                            class="ign-ranking-apply"
-                        >
-                            Apply Now
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            @endforeach
-        </div>
-
-        {{-- View All --}}
-        <div class="ign-ranking-view-all">
-            <a
-                href="{{ route('world-universities') }}"
-                class="ign-ranking-view-button"
-            >
-                View All Universities
-                <i class="bi bi-arrow-right"></i>
-            </a>
-        </div>
-
-        {{-- CTA --}}
-        <div class="ign-ranking-footer">
-            <div class="ign-ranking-footer-content">
-                <div class="ign-footer-icon">
-                    <i class="bi bi-mortarboard-fill"></i>
-                </div>
-                <div>
-                    <h4>Planning to study abroad?</h4>
+                    <h2>
+                        Discover the World's
+                        <span>Top Universities</span>
+                    </h2>
                     <p>
-                        Get personalised guidance to choose your university,
-                        course and study destination.
+                        Explore globally recognised universities and compare
+                        their rankings, location, institutional status and
+                        overall performance to find the right destination
+                        for your international education journey.
                     </p>
                 </div>
+                <a href="{{ route('world-universities') }}" class="ign-world-view">
+                    Explore All Universities
+                    <i class="bi bi-arrow-right"></i>
+                </a>
             </div>
-            <a
-                href="{{ route('study-abroad.application') }}"
-                class="ign-footer-button"
-            >
-                Get Free Counselling
-                <i class="bi bi-arrow-right"></i>
-            </a>
+
+            {{-- Featured Top 3 Universities --}}
+            <div class="ign-featured-grid">
+             @foreach ($worldUniversities->sortBy(fn($university) => (int) $university->rank_2026)->take(3) as $university)
+                    <div class="ign-featured-card">
+                        <div class="ign-featured-top">
+                            <div class="ign-featured-rank">
+                                @if ($loop->first)
+                                    <i class="bi bi-trophy-fill"></i>
+                                @else
+                                    <i class="bi bi-award-fill"></i>
+                                @endif
+                                #{{ $university->rank_2026 }} Ranked
+                            </div>
+                            <div class="ign-featured-score">
+                                {{ $university->overall_score }}
+                            </div>
+                        </div>
+                        <div class="ign-featured-main">
+                            <div class="ign-featured-logo">
+                                {{ strtoupper(substr($university->institution_name, 0, 1)) }}
+                            </div>
+                            <div class="ign-featured-info">
+                                <h3>{{ $university->institution_name }}</h3>
+                                <p>
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    {{ $university->country }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+
+            {{-- Search / Filter --}}
+            <div class="ign-ranking-toolbar">
+                <div class="ign-ranking-search">
+                    <i class="bi bi-search"></i>
+                    <input type="text" id="ignUniversitySearch" placeholder="Search university by name...">
+                </div>
+                <div class="ign-ranking-filter">
+                    <select id="ignCountryFilter">
+                        <option value="">All Countries</option>
+                        @foreach ($worldCountries as $country)
+                            <option value="{{ strtolower($country) }}">{{ $country }}</option>
+                        @endforeach
+                    </select>
+                    {{-- <i class="bi bi-chevron-down"></i> --}}
+                </div>
+            </div>
+
+            {{-- Ranking List --}}
+            <div class="ign-ranking-list">
+                <div class="ign-ranking-head">
+                    <div>Rank</div>
+                    <div>University</div>
+                    <div>Country</div>
+                    <div>Status</div>
+                    <div>Overall Score</div>
+                    <div>Action</div>
+                </div>
+
+                @foreach ($worldUniversities->sortBy(fn($university) => (int) $university->rank_2026)->take(5) as $university)
+                    <div class="ign-ranking-item" data-name="{{ strtolower($university->institution_name) }}"
+                        data-country="{{ strtolower($university->country) }}">
+                        {{-- Rank --}}
+                        <div class="ign-rank-number">
+                            #{{ $university->rank_2026 }}
+                        </div>
+
+                        {{-- University --}}
+                        <div class="ign-ranking-university">
+                            <div class="ign-ranking-logo">
+                                {{ strtoupper(substr($university->institution_name, 0, 1)) }}
+                            </div>
+                            <div class="ign-ranking-university-info">
+                                <h3>{{ $university->institution_name }}</h3>
+                                <span>World University Ranking 2026</span>
+                            </div>
+                        </div>
+
+                        {{-- Country --}}
+                        <div class="ign-ranking-country">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            {{ $university->country }}
+                        </div>
+
+                        {{-- Status --}}
+                        <div class="ign-ranking-status">
+                            <span>{{ $university->status }}</span>
+                        </div>
+
+                        {{-- Overall Score --}}
+                        <div class="ign-ranking-score">
+                            <strong>{{ $university->overall_score }}</strong>
+                            <div class="ign-score-progress">
+                                <span style="width: {{ min((float) $university->overall_score, 100) }}%;"></span>
+                            </div>
+                        </div>
+
+                        {{-- Action --}}
+                        <div class="ign-ranking-action">
+                            <a href="{{ route('study-abroad.application') }}" class="ign-ranking-apply">
+                                Apply Now
+                                <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+
+            {{-- View All --}}
+            <div class="ign-ranking-view-all">
+                <a href="{{ route('world-universities') }}" class="ign-ranking-view-button">
+                    View All Universities
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+
+            {{-- CTA --}}
+            <div class="ign-ranking-footer">
+                <div class="ign-ranking-footer-content">
+                    <div class="ign-footer-icon">
+                        <i class="bi bi-mortarboard-fill"></i>
+                    </div>
+                    <div>
+                        <h4>Planning to study abroad?</h4>
+                        <p>
+                            Get personalised guidance to choose your university,
+                            course and study destination.
+                        </p>
+                    </div>
+                </div>
+                <a href="{{ route('study-abroad.application') }}" class="ign-footer-button">
+                    Get Free Counselling
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+
         </div>
+    </section>
 
-    </div>
-</section>
-
-{{-- University Ranking JavaScript --}}
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const searchInput = document.getElementById('ignUniversitySearch');
-    const countryFilter = document.getElementById('ignCountryFilter');
-    const universityItems = document.querySelectorAll('.ign-ranking-item');
-
-    if (!searchInput || !countryFilter) {
-        return;
-    }
-
-    // Filter universities
-    function filterUniversities() {
-        const searchValue = searchInput.value.toLowerCase().trim();
-        const countryValue = countryFilter.value.toLowerCase();
-
-        universityItems.forEach(function (item) {
-            const universityName = item.dataset.name || '';
-            const universityCountry = item.dataset.country || '';
-            const nameMatch = universityName.includes(searchValue);
-            const countryMatch = !countryValue || universityCountry === countryValue;
-
-            if (nameMatch && countryMatch) {
-                item.style.display = '';
-            } else {
-                item.style.display = 'none';
-            }
-        });
-    }
-
-    // Search event
-    searchInput.addEventListener('input', filterUniversities);
-
-    // Country filter event
-    countryFilter.addEventListener('change', filterUniversities);
-});
-</script>
-
+  
 
 
     {{-- ============ ALL COURSES / ALL COUNTRIES ============ --}}
@@ -975,3 +922,42 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     })();
 </script>
+
+  {{-- University Ranking JavaScript --}}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('ignUniversitySearch');
+            const countryFilter = document.getElementById('ignCountryFilter');
+            const universityItems = document.querySelectorAll('.ign-ranking-item');
+
+            if (!searchInput || !countryFilter) {
+                return;
+            }
+
+            // Filter universities
+            function filterUniversities() {
+                const searchValue = searchInput.value.toLowerCase().trim();
+                const countryValue = countryFilter.value.toLowerCase();
+
+                universityItems.forEach(function(item) {
+                    const universityName = item.dataset.name || '';
+                    const universityCountry = item.dataset.country || '';
+                    const nameMatch = universityName.includes(searchValue);
+                    const countryMatch = !countryValue || universityCountry === countryValue;
+
+                    if (nameMatch && countryMatch) {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
+
+            // Search event
+            searchInput.addEventListener('input', filterUniversities);
+
+            // Country filter event
+            countryFilter.addEventListener('change', filterUniversities);
+            
+        });
+    </script>
