@@ -1,4 +1,5 @@
 <x-frontend-header :study-abroad-universities="$studyAbroadUniversities" />
+<x-study-india-header/>
 
 <section class="hero">
 
