@@ -14,6 +14,7 @@
 <body>
 
     <x-study-abroad-header />
+    {{-- <x-frontend-header/> --}}
 
     @php
         $selectedCountries = (array) request('country', []);

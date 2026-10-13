@@ -67,6 +67,11 @@
     <link rel="stylesheet" href="{{ asset('css/index-page.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/courses.css') }}" />
+        <link rel="stylesheet" href="{{ asset('css/entrance-exam-details.css') }}"> 
+               <link rel="stylesheet" href="{{ asset('css/entrance-exam.css') }}" />
+
+
+
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css" />
     <!-- Material Symbols -->

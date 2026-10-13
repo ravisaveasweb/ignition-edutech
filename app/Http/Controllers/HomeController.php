@@ -14,7 +14,9 @@ class HomeController extends Controller
         ->get()
         ->groupBy('country');
 
-    return view('welcome', compact('studyAbroadUniversities'));
+        $siAllCourseData = config('study_india_coursesData.courses', []);
+
+    return view('welcome', compact('studyAbroadUniversities', 'siAllCourseData'));
     }
     
     public function about()

@@ -362,14 +362,25 @@
 
                         {{-- Scholarships --}}
                         <li>
-                            <button type="button" class="sa-navmenu-page-link"
+                            {{-- <button type="button" class="sa-navmenu-page-link"
                                 data-target="saNavmenuScholarships-{{ $saNavmenuKey }}">
                                 <span>
                                     <b class="sa-navmenu-item-icon">🏆</b>
                                     Scholarships
                                 </span>
                                 <span class="sa-navmenu-arrow">›</span>
-                            </button>
+                            </button> --}}
+
+                             <a href="{{ route('study-abroad.global-scholarships')}}"class="sa-navmenu-direct-link"
+                                data-target="saNavmenuScholarships-{{ $saNavmenuKey }}">
+                                <span>
+                                    <b class="sa-navmenu-item-icon">🏆</b>
+                                    Scholarships
+                                </span>
+                                {{-- <span class="sa-navmenu-arrow">›</span> --}}
+
+                                
+                            </a>
                         </li>
 
                         {{-- Visa --}}
@@ -379,7 +390,7 @@
                                     <b class="sa-navmenu-item-icon">🛂</b>
                                     Visa Process
                                 </span>
-                                <span class="sa-navmenu-arrow">›</span>
+                                {{-- <span class="sa-navmenu-arrow">›</span> --}}
                             </a>
                         </li>
 
@@ -490,7 +501,7 @@
                 </div>
 
                 {{-- Scholarships Page --}}
-                <div class="sa-navmenu-page" id="saNavmenuScholarships-{{ $saNavmenuKey }}">
+                {{-- <div class="sa-navmenu-page" id="saNavmenuScholarships-{{ $saNavmenuKey }}">
                     <div class="sa-navmenu-header">
                         <button type="button" class="sa-navmenu-back"
                             data-target="saNavmenuCountry-{{ $saNavmenuKey }}">
@@ -547,8 +558,9 @@
                             </a>
                         </li>
                     </ul>
-                </div>
+                </div> --}}
 
+                
                 {{-- Exams Page --}}
                 <div class="sa-navmenu-page" id="saNavmenuExams-{{ $saNavmenuKey }}">
                     <div class="sa-navmenu-header">
