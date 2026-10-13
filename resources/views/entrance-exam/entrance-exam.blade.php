@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="{{ asset('css/entrance-exam.css') }}?v=5">
 
 @php
+$exams = collect(config('entrance_exam', []))->values()->all();
     $categories = collect($exams)
         ->pluck('category')
         ->filter()

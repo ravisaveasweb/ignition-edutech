@@ -12,6 +12,8 @@ use App\Http\Controllers\StudyAbroadApplicationController;
 use App\Http\Controllers\StudyAbroadVisaController;
 use App\Http\Controllers\StudyAbroadGlobalScholarshipController;
 use Illuminate\Support\Str;
+use App\Http\Controllers\CollegeNewsController;
+
 
 
 
@@ -219,12 +221,12 @@ Route::get('/study-abroad/global-scholarships/{scholarship_id}', [StudyAbroadGlo
 
 
 Route::get('/entrance-exams', function () {
-    $exams = collect(config('entrance_exams', []))->values()->all();
+    $exams = collect(config('entrance_exam', []))->values()->all();
     return view('entrance-exam.entrance-exam', compact('exams'));
 })->name('entrance-exams.index');
 
 Route::get('/entrance-exams-details/{slug?}', function ($slug = 'jee-main') {
-    $exams = collect(config('entrance_exams', []));
+    $exams = collect(config('entrance_exam', []));
     $exam = $exams->firstWhere('slug', $slug);
 
     abort_if(!$exam, 404);
@@ -239,3 +241,12 @@ Route::get('/entrance-exams-details/{slug?}', function ($slug = 'jee-main') {
 
     return view('entrance-exam.entrance-exam-details', compact('exam'));
 })->name('entrance-exams-details.index');
+
+
+
+
+Route::get('/education-news', [CollegeNewsController::class, 'index'])
+    ->name('college-news.index');
+
+Route::get('/education-news/{slug}', [CollegeNewsController::class, 'show'])
+    ->name('college-news.show');

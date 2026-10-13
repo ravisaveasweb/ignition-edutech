@@ -505,7 +505,7 @@
                     </span>
                     Entrance Exams
                 </a>
-                <a href="javascript:void(0);">
+                <a href="{{ route('college-news.index') }}">
                     <span>
                         <i class="bi bi-newspaper"></i>
                     </span>
