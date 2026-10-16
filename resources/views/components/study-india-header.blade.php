@@ -511,7 +511,7 @@
                     </span>
                     College News
                 </a>
-                <a href="javascript:void(0);">
+                <a href="{{ route('questions.index') }}">
                     <span>
                         <i class="bi bi-question-circle"></i>
                     </span>

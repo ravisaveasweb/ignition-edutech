@@ -13,6 +13,7 @@ use App\Http\Controllers\StudyAbroadVisaController;
 use App\Http\Controllers\StudyAbroadGlobalScholarshipController;
 use Illuminate\Support\Str;
 use App\Http\Controllers\CollegeNewsController;
+use App\Http\Controllers\QuestionController;
 
 
 
@@ -250,3 +251,23 @@ Route::get('/education-news', [CollegeNewsController::class, 'index'])
 
 Route::get('/education-news/{slug}', [CollegeNewsController::class, 'show'])
     ->name('college-news.show');
+
+
+ 
+Route::get('/questions', [QuestionController::class, 'index'])
+    ->name('questions.index');
+
+Route::get('/questions/ask', [QuestionController::class, 'create'])
+    ->middleware('auth')
+    ->name('questions.create');
+
+Route::post('/questions', [QuestionController::class, 'store'])
+    ->middleware('auth')
+    ->name('questions.store');
+
+Route::post('/questions/{slug}/answers', [QuestionController::class, 'storeAnswer'])
+    ->middleware('auth')
+    ->name('questions.answers.store');
+
+Route::get('/questions/{slug}', [QuestionController::class, 'show'])
+    ->name('questions.show');
