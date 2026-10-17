@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
     const answerInput = document.getElementById('iqdAnswerInput') || document.getElementById('iq-answer-body');
     const charCount = document.getElementById('iqdAnswerCharCount');
@@ -35,9 +34,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const icon = button.querySelector('i');
             if (icon) {
-                icon.className = alreadyVoted
-                    ? 'bi bi-hand-thumbs-up'
-                    : 'bi bi-hand-thumbs-up-fill';
+                icon.className = alreadyVoted ?
+                    'bi bi-hand-thumbs-up' :
+                    'bi bi-hand-thumbs-up-fill';
             }
 
             const card = button.closest('.iqd-answer-card');
@@ -92,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
             try {
                 if (navigator.share) {
                     await navigator.share({
-                        title: document.querySelector('.iqd-question-title')?.textContent.trim(),
+                        title: document.querySelector('.iqd-question-title') ? .textContent.trim(),
                         url: window.location.href
                     });
                 } else if (navigator.clipboard && window.isSecureContext) {
@@ -125,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 answerInput.focus();
             }
 
-            // Valid answers submit normally to Laravel and are saved by QuestionController.
+
         });
     }
 });

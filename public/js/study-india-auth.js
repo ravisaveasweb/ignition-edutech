@@ -1,0 +1,71 @@
+
+document.addEventListener('DOMContentLoaded', function () {
+    const otpForm = document.getElementById('siOtpForm');
+    const otpInput = document.getElementById('otp');
+    const verifyButton = document.getElementById('siVerifyButton');
+    const resendForm = document.getElementById('siResendOtpForm');
+    const resendButton = document.getElementById('siResendOtpButton');
+    const countdown = document.getElementById('siOtpCountdown');
+
+    if (otpInput) {
+        otpInput.addEventListener('input', function () {
+            this.value = this.value.replace(/\D/g, '').slice(0, 6);
+        });
+    }
+
+    if (otpForm && verifyButton) {
+        otpForm.addEventListener('submit', function () {
+            if (!otpForm.checkValidity()) return;
+            verifyButton.disabled = true;
+            verifyButton.textContent = 'Verifying OTP...';
+        });
+    }
+
+    if (resendForm && resendButton && countdown) {
+        let remaining = Math.max(0, Number(countdown.dataset.seconds) || 0);
+        let timer = null;
+
+        function updateCountdown() {
+            if (remaining <= 0) {
+                remaining = 0;
+                resendButton.disabled = false;
+                countdown.textContent = 'You can request a new OTP now.';
+                if (timer) clearInterval(timer);
+                return;
+            }
+
+            resendButton.disabled = true;
+            const minutes = String(Math.floor(remaining / 60)).padStart(2, '0');
+            const seconds = String(remaining % 60).padStart(2, '0');
+
+            countdown.textContent = 'Resend available in ' + minutes + ':' + seconds;
+            remaining--;
+        }
+
+        updateCountdown();
+        if (remaining > 0) timer = setInterval(updateCountdown, 1000);
+
+        resendForm.addEventListener('submit', function (event) {
+            if (resendButton.disabled) {
+                event.preventDefault();
+                return;
+            }
+
+            resendButton.disabled = true;
+            resendButton.textContent = 'Sending OTP...';
+        });
+    }
+
+    document.querySelectorAll('[data-si-auth-modal-close]').forEach(function (button) {
+        button.addEventListener('click', function () {
+            const modal = button.closest('.si-auth-modal-backdrop');
+            if (modal) modal.remove();
+        });
+    });
+
+    document.querySelectorAll('.si-auth-modal-backdrop').forEach(function (backdrop) {
+        backdrop.addEventListener('click', function (event) {
+            if (event.target === backdrop) backdrop.remove();
+        });
+    });
+});

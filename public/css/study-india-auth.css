@@ -1,0 +1,514 @@
+
+:root {
+    --sia-orange: #eb933a;
+    --sia-orange-dark: #d7791f;
+    --sia-navy: #0a2540;
+    --sia-text: #26364a;
+    --sia-muted: #718096;
+    --sia-border: #dce4ed;
+    --sia-input-height: 42px;
+    --sia-radius: 9px;
+}
+
+/* Base layout */
+.si-auth-page,
+.si-auth-card,
+.si-auth-card *,
+.si-auth-modal-backdrop,
+.si-auth-modal-backdrop * {
+    box-sizing: border-box;
+}
+
+.si-auth-page {
+    min-height: 55vh;
+    padding: 24px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f4f7fb, #fff9f2);
+}
+
+.si-auth-card {
+    width: 100%;
+    max-width: 680px;
+    padding: 25px 32px;
+    background: #fff;
+    border: 1px solid #e5eaf1;
+    border-radius: 15px;
+    box-shadow: 0 12px 38px rgba(10, 37, 64, .09);
+    animation: siaAppear .3s ease both;
+}
+
+/* Brand */
+.si-auth-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    color: var(--sia-navy);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: .25px;
+}
+
+.si-auth-brand-icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: #fff0df;
+    color: var(--sia-orange-dark);
+    font-size: 19px;
+}
+
+/* Heading */
+.si-auth-card h1 {
+    margin: 0 0 6px;
+    color: var(--sia-navy);
+    font-size: 27px;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -.4px;
+}
+
+.si-auth-card > p {
+    margin: 0 0 14px;
+    color: var(--sia-muted);
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+/* Form */
+.si-auth-card form {
+    width: 100%;
+}
+
+.si-auth-card form label {
+    display: block;
+    margin: 8px 0 5px;
+    color: var(--sia-text);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.si-auth-card input,
+.si-auth-card select {
+    display: block;
+    width: 100%;
+    min-height: var(--sia-input-height);
+    padding: 9px 12px;
+    border: 1px solid #d3dce7;
+    border-radius: 8px;
+    background: #fff;
+    color: var(--sia-text);
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.4;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.si-auth-card input:hover,
+.si-auth-card select:hover {
+    border-color: #aab9ca;
+}
+
+.si-auth-card input:focus,
+.si-auth-card select:focus {
+    outline: none;
+    border-color: var(--sia-orange);
+    box-shadow: 0 0 0 3px rgba(235, 147, 58, .16);
+}
+
+.si-auth-card input::placeholder {
+    color: #9aa6b5;
+    opacity: 1;
+}
+
+.si-auth-card input:disabled,
+.si-auth-card select:disabled {
+    background: #f3f5f8;
+    cursor: not-allowed;
+}
+
+/* Optional two-column registration grid */
+.si-auth-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 18px;
+    row-gap: 3px;
+}
+
+.si-auth-form-grid > div {
+    min-width: 0;
+}
+
+/* Submit button */
+.si-auth-card button[type="submit"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 44px;
+    margin-top: 16px;
+    padding: 10px 16px;
+    border: 0;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--sia-orange), var(--sia-orange-dark));
+    color: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 750;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(215, 121, 31, .16);
+    transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+
+.si-auth-card button[type="submit"]:hover {
+    background: linear-gradient(135deg, #e58a2d, #c96c17);
+    box-shadow: 0 6px 16px rgba(215, 121, 31, .25);
+    transform: translateY(-1px);
+}
+
+.si-auth-card button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+.si-auth-card button:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Validation */
+.si-auth-card small {
+    display: block;
+    margin-top: 5px;
+    color: #bd2929;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* Success and error messages */
+.si-auth-success,
+.si-auth-error {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    margin: 10px 0;
+    padding: 10px 12px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+}
+
+.si-auth-success {
+    border-color: #bce6ca;
+    background: #edfaf1;
+    color: #176534;
+}
+
+.si-auth-error {
+    border-color: #f1c6c6;
+    background: #fff1f1;
+    color: #a32020;
+}
+
+/* Divider and links */
+.si-auth-divider {
+    height: 1px;
+    margin: 14px 0;
+    background: #edf0f4;
+}
+
+.si-auth-switch {
+    margin: 13px 0 0 !important;
+    text-align: center;
+    font-size: 13px !important;
+}
+
+.si-auth-switch a {
+    color: #1264a3;
+    font-weight: 750;
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+.si-auth-switch a:hover {
+    color: var(--sia-orange-dark);
+    text-decoration: underline;
+}
+
+/* Information note */
+.si-auth-note {
+    margin-top: 11px;
+    padding: 9px 11px;
+    border: 1px solid #e8edf4;
+    border-radius: 8px;
+    background: #f6f8fb;
+    color: #617085;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* OTP */
+.si-auth-otp-input {
+    min-height: 52px !important;
+    text-align: center;
+    font-size: 23px !important;
+    font-weight: 800;
+    letter-spacing: 8px;
+}
+
+.si-auth-otp-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 9px;
+}
+
+.si-auth-countdown {
+    color: var(--sia-muted);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.si-auth-resend {
+    padding: 4px 0;
+    border: 0;
+    background: transparent;
+    color: #1264a3;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 750;
+    cursor: pointer;
+}
+
+.si-auth-resend:hover:not(:disabled) {
+    color: var(--sia-orange-dark);
+    text-decoration: underline;
+}
+
+.si-auth-resend:disabled {
+    color: #9ba5b2;
+    cursor: not-allowed;
+}
+
+/* Success popup */
+.si-auth-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    background: rgba(7, 22, 40, .68);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    animation: siaFade .22s ease both;
+}
+
+.si-auth-modal {
+    width: 100%;
+    max-width: 410px;
+    padding: 29px 27px 24px;
+    border: 1px solid #edf0f4;
+    border-radius: 17px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 24px 75px rgba(7, 22, 40, .25);
+    animation: siaModalIn .3s ease both;
+}
+
+.si-auth-modal-icon {
+    display: grid;
+    place-items: center;
+    width: 63px;
+    height: 63px;
+    margin: 0 auto 14px;
+    border: 6px solid #e5f8ee;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #25b873, #11965b);
+    color: #fff;
+    font-size: 30px;
+    font-weight: 800;
+    box-shadow: 0 6px 18px rgba(37, 184, 115, .18);
+    animation: siaCheckIn .4s .1s ease both;
+}
+
+.si-auth-modal h2 {
+    margin: 0 0 9px;
+    color: var(--sia-navy);
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.35;
+}
+
+.si-auth-modal p {
+    max-width: 330px;
+    margin: 0 auto 20px;
+    color: #667085;
+    font-size: 14px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.si-auth-modal-close {
+    display: block;
+    width: 100%;
+    min-height: 44px;
+    padding: 11px 18px;
+    border: 0;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--sia-orange), var(--sia-orange-dark));
+    color: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 750;
+    cursor: pointer;
+    box-shadow: 0 4px 13px rgba(215, 121, 31, .2);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.si-auth-modal-close:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 7px 18px rgba(215, 121, 31, .3);
+}
+
+.si-auth-modal-close:focus-visible {
+    outline: 3px solid var(--sia-navy);
+    outline-offset: 3px;
+}
+
+/* Animations */
+@keyframes siaAppear {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes siaFade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes siaModalIn {
+    from { opacity: 0; transform: translateY(18px) scale(.97); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes siaCheckIn {
+    from { opacity: 0; transform: scale(.65); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Tablet and mobile */
+@media (max-width: 520px) {
+    .si-auth-page {
+        min-height: 0;
+        padding: 20px 12px;
+    }
+
+    .si-auth-card {
+        max-width: 100%;
+        padding: 22px 18px;
+        border-radius: 13px;
+    }
+
+    .si-auth-brand {
+        margin-bottom: 13px;
+    }
+
+    .si-auth-card h1 {
+        font-size: 24px;
+    }
+
+    .si-auth-card > p {
+        margin-bottom: 12px;
+        font-size: 13px;
+    }
+
+    .si-auth-form-grid {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+    }
+
+    .si-auth-otp-meta {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .si-auth-modal {
+        max-width: 360px;
+        padding: 25px 20px 21px;
+        border-radius: 15px;
+    }
+
+    .si-auth-modal-icon {
+        width: 59px;
+        height: 59px;
+        font-size: 27px;
+    }
+
+    .si-auth-modal h2 {
+        font-size: 22px;
+    }
+
+    .si-auth-modal p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 360px) {
+    .si-auth-page {
+        padding: 15px 9px;
+    }
+
+    .si-auth-card {
+        padding: 19px 14px;
+    }
+
+    .si-auth-card h1 {
+        font-size: 22px;
+    }
+
+    .si-auth-otp-input {
+        letter-spacing: 5px;
+        font-size: 21px !important;
+    }
+
+    .si-auth-modal {
+        padding: 22px 16px 18px;
+    }
+}
+
+/* Keyboard accessibility */
+.si-auth-card a:focus-visible,
+.si-auth-resend:focus-visible {
+    outline: 2px solid var(--sia-orange);
+    outline-offset: 3px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .si-auth-card,
+    .si-auth-modal-backdrop,
+    .si-auth-modal,
+    .si-auth-modal-icon {
+        animation: none;
+    }
+
+    .si-auth-card button,
+    .si-auth-modal-close,
+    .si-auth-switch a {
+        transition: none;
+    }
+}

@@ -69,6 +69,7 @@
     <link rel="stylesheet" href="{{ asset('css/courses.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/study-india-header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/entrance-exam.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/study-india-auth.css?v=3') }}">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
@@ -551,7 +552,7 @@
     <div class="si-menu-overlay" id="siMenuOverlay"></div>
 
     {{-- Side Menu --}}
-    <aside class="si-menu-drawer" id="siMenuDrawer">
+    {{-- <aside class="si-menu-drawer" id="siMenuDrawer">
         <div class="si-menu-header">
             <div class="si-menu-user">
                 <div class="si-user-icon">
@@ -569,9 +570,123 @@
         <a href="{{ route('study-abroad.login') }}" class="si-login-btn">
             Login / Register
         </a>
-    </aside>
+    </aside> --}}
 
 
+
+    <aside class="si-menu-drawer" id="siMenuDrawer">
+    <div class="si-menu-header">
+        @php
+            $studyIndiaLoggedInUser = session('study_india_user_id')
+                ? \App\Models\StudyIndiaUser::find(session('study_india_user_id'))
+                : null;
+        @endphp
+
+        <div class="si-menu-user">
+            <div class="si-user-icon">
+                <i class="bi bi-person-fill"></i>
+            </div>
+            <div>
+                @if ($studyIndiaLoggedInUser)
+                    <strong>Hello, {{ $studyIndiaLoggedInUser->full_name }}</strong>
+                    <p>{{ $studyIndiaLoggedInUser->email }}</p>
+                @else
+                    <strong>Hello, Welcome to Ignition Edutech</strong>
+                    <p>Search Colleges, Courses & More</p>
+                @endif
+            </div>
+        </div>
+
+        <button type="button" id="siMenuClose" aria-label="Close menu">
+            <i class="bi bi-x-lg"></i>
+        </button>
+    </div>
+
+    @if ($studyIndiaLoggedInUser)
+        <a href="{{ url('/') }}" class="si-login-btn">
+            <i class="bi bi-house-door"></i> Study India Home
+        </a>
+
+        <form action="{{ route('study-india.logout') }}" method="POST">
+            @csrf
+            <button type="submit" class="si-login-btn">
+                <i class="bi bi-box-arrow-right"></i> Logout
+            </button>
+        </form>
+    @else
+        <a href="{{ route('study-india.login') }}" class="si-login-btn">
+            <i class="bi bi-box-arrow-in-right"></i> Login
+        </a>
+
+        <a href="{{ route('study-india.register') }}" class="si-login-btn">
+            <i class="bi bi-person-plus"></i> Register
+        </a>
+    @endif
+</aside>
+
+@if (session('study_india_auth_success'))
+    <div class="si-auth-modal-backdrop" role="presentation">
+        <section class="si-auth-modal" role="dialog" aria-modal="true"
+            aria-labelledby="siAuthSuccessTitle">
+            <div class="si-auth-modal-icon" aria-hidden="true">✓</div>
+            <h2 id="siAuthSuccessTitle">You're all set!</h2>
+            <p>{{ session('study_india_auth_success') }}</p>
+            <button type="button" class="si-auth-modal-close"
+                data-si-auth-modal-close>
+                Continue to Study India
+            </button>
+        </section>
+    </div>
+@endif
+
+    
+{{-- @php
+    $studyIndiaLoggedInUser = session('study_india_user_id')
+        ? \App\Models\StudyIndiaUser::find(session('study_india_user_id'))
+        : null;
+@endphp
+
+@if ($studyIndiaLoggedInUser)
+    <div class="si-menu-user">
+        <div class="si-user-icon">👤</div>
+        <div>
+            <strong>Hello, {{ $studyIndiaLoggedInUser->full_name }}</strong>
+            <p>{{ $studyIndiaLoggedInUser->email }}</p>
+        </div>
+    </div>
+
+    <a href="{{ url('/') }}">Study India Home</a>
+
+    <form action="{{ route('study-india.logout') }}" method="POST">
+        @csrf
+        <button type="submit">Logout</button>
+    </form>
+@else
+    <a href="{{ route('study-india.login') }}">Login</a>
+    <a href="{{ route('study-india.register') }}">Register</a>
+@endif --}}
+
+
+
+
+{{-- New  --}}
+
+{{-- 
+@if (session('study_india_auth_success'))
+    <div class="si-auth-modal-backdrop" role="presentation">
+        <section class="si-auth-modal" role="dialog" aria-modal="true"
+            aria-labelledby="siAuthSuccessTitle">
+            <div class="si-auth-modal-icon" aria-hidden="true">✓</div>
+            <h2 id="siAuthSuccessTitle">You're all set!</h2>
+            <p>{{ session('study_india_auth_success') }}</p>
+            <button type="button" class="si-auth-modal-close"
+                data-si-auth-modal-close>
+                Continue to Study India
+            </button>
+        </section>
+    </div> --}}
+
+    <script src="{{ asset('js/study-india-auth.js') }}?v=2" defer></script>
 
 
 
@@ -581,4 +696,24 @@
 <script> window.siNirfData = @json($siNirfData); </script>
 
 <script src="{{ asset('js/study-india-header.js') }}" defer></script>
+
+<script> 
+document.addEventListener('click', function (event) {
+    const closeButton = event.target.closest('[data-si-auth-modal-close]');
+
+    if (closeButton) {
+        const popup = closeButton.closest('.si-auth-modal-backdrop');
+        if (popup) popup.remove();
+    }
+});
+
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+        document.querySelectorAll('.si-auth-modal-backdrop').forEach(function (popup) {
+            popup.remove();
+        });
+    }
+});
+</script>
+
 

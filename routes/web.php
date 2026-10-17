@@ -14,6 +14,7 @@ use App\Http\Controllers\StudyAbroadGlobalScholarshipController;
 use Illuminate\Support\Str;
 use App\Http\Controllers\CollegeNewsController;
 use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\StudyIndiaAuthController;
 
 
 
@@ -90,9 +91,9 @@ Route::get('/exams/{slug}', [ExamController::class, 'show'])
     ->name('exams.show');
 
 
-    
 
-    /*
+
+/*
 |--------------------------------------------------------------------------
 | Study Abroad Application
 |--------------------------------------------------------------------------
@@ -169,11 +170,11 @@ Route::get(
     '/study-abroad/completed',
     [StudyAbroadApplicationController::class, 'completed']
 )->name('study-abroad.completed');
-    
+
 
 Route::get('/study-abroad', function () {
     return view('study_abroad');
-})->name('study-abroad');  
+})->name('study-abroad');
 
 Route::get('/study-abroad', [StudyAbroadApplicationController::class, 'studyAbroad'])
     ->name('study-abroad');
@@ -190,7 +191,7 @@ Route::post('study-abroad/login-otp', [StudyAbroadApplicationController::class, 
 Route::post('study-abroad/otp/resend', [StudyAbroadApplicationController::class, 'resendOtp'])
     ->name('study-abroad.otp.resend');
 
-    Route::post('study-abroad/login-otp/resend', [StudyAbroadApplicationController::class, 'resendLoginOtp'])
+Route::post('study-abroad/login-otp/resend', [StudyAbroadApplicationController::class, 'resendLoginOtp'])
     ->name('study-abroad.login.otp.resend');
 // Register / Form Routes
 Route::get('study-abroad/application', [StudyAbroadApplicationController::class, 'create'])->name('study-abroad.application');
@@ -253,7 +254,7 @@ Route::get('/education-news/{slug}', [CollegeNewsController::class, 'show'])
     ->name('college-news.show');
 
 
- 
+
 Route::get('/questions', [QuestionController::class, 'index'])
     ->name('questions.index');
 
@@ -271,3 +272,38 @@ Route::post('/questions/{slug}/answers', [QuestionController::class, 'storeAnswe
 
 Route::get('/questions/{slug}', [QuestionController::class, 'show'])
     ->name('questions.show');
+
+
+
+    // New Registration for Study india page
+
+
+Route::prefix('study-india')->name('study-india.')->group(function () {
+    Route::get('/register', [StudyIndiaAuthController::class, 'showRegister'])
+        ->name('register');
+
+    Route::post('/register', [StudyIndiaAuthController::class, 'register'])
+        ->middleware('throttle:10,1')
+        ->name('register.store');
+
+    Route::get('/login', [StudyIndiaAuthController::class, 'showLogin'])
+        ->name('login');
+
+    Route::post('/login', [StudyIndiaAuthController::class, 'sendLoginOtp'])
+        ->middleware('throttle:10,1')
+        ->name('login.send-otp');
+
+    Route::get('/verify-otp', [StudyIndiaAuthController::class, 'showOtp'])
+        ->name('otp.show');
+
+    Route::post('/verify-otp', [StudyIndiaAuthController::class, 'verifyOtp'])
+        ->middleware('throttle:10,1')
+        ->name('otp.verify');
+
+    Route::post('/resend-otp', [StudyIndiaAuthController::class, 'resendOtp'])
+        ->middleware('throttle:5,1')
+        ->name('otp.resend');
+
+    Route::post('/logout', [StudyIndiaAuthController::class, 'logout'])
+        ->name('logout');
+});

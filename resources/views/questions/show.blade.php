@@ -1,4 +1,3 @@
-
 <link rel="stylesheet" href="{{ asset('css/question-details.css') }}?v=1">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
@@ -79,12 +78,9 @@
 
                     <div class="iqd-answer-list" id="iqdAnswerList">
                         @forelse ($question->answers->sortByDesc('helpful_count')->values() as $answer)
-                            <article
-                                class="iqd-answer-card"
-                                data-helpful="{{ $answer->helpful_count }}"
+                            <article class="iqd-answer-card" data-helpful="{{ $answer->helpful_count }}"
                                 data-order="{{ $loop->index }}"
-                                data-date="{{ $answer->created_at?->timestamp ?? 0 }}"
-                            >
+                                data-date="{{ $answer->created_at?->timestamp ?? 0 }}">
                                 <div class="iqd-answer-header">
                                     <div class="iqd-answer-avatar">
                                         {{ strtoupper(substr($answer->user->name ?? 'S', 0, 1)) }}
@@ -112,11 +108,8 @@
                                         <span data-helpful-count>{{ $answer->helpful_count }}</span>
                                     </button>
 
-                                    <button
-                                        type="button"
-                                        class="iqd-answer-reply"
-                                        data-reply-name="{{ $answer->user->name ?? 'Student' }}"
-                                    >
+                                    <button type="button" class="iqd-answer-reply"
+                                        data-reply-name="{{ $answer->user->name ?? 'Student' }}">
                                         <i class="bi bi-reply"></i> Reply
                                     </button>
                                 </div>
@@ -135,23 +128,14 @@
 
                 @auth
                     @if ($question->status === 'open')
-                        <form
-                            action="{{ route('questions.answers.store', $question->slug) }}"
-                            method="POST"
-                            class="iq-answer-form"
-                        >
+                        <form action="{{ route('questions.answers.store', $question->slug) }}" method="POST"
+                            class="iq-answer-form">
                             @csrf
 
                             <label for="iq-answer-body">Write your answer</label>
 
-                            <textarea
-                                id="iq-answer-body"
-                                name="body"
-                                rows="5"
-                                maxlength="10000"
-                                placeholder="Share your knowledge or experience..."
-                                required
-                            >{{ old('body') }}</textarea>
+                            <textarea id="iq-answer-body" name="body" rows="5" maxlength="10000"
+                                placeholder="Share your knowledge or experience..." required>{{ old('body') }}</textarea>
 
                             @error('body')
                                 <p class="iq-answer-error">{{ $message }}</p>
@@ -180,16 +164,19 @@
                 <div class="iqd-sidebar-card">
                     <h3><i class="bi bi-lightbulb"></i> Answering Tips</h3>
                     <ul class="iqd-tips-list">
-                        <li><i class="bi bi-check-circle-fill"></i><span>Share accurate, relevant information.</span></li>
+                        <li><i class="bi bi-check-circle-fill"></i><span>Share accurate, relevant information.</span>
+                        </li>
                         <li><i class="bi bi-check-circle-fill"></i><span>Explain your advice clearly.</span></li>
-                        <li><i class="bi bi-check-circle-fill"></i><span>Share personal experience when useful.</span></li>
+                        <li><i class="bi bi-check-circle-fill"></i><span>Share personal experience when useful.</span>
+                        </li>
                         <li><i class="bi bi-check-circle-fill"></i><span>Respect different opinions.</span></li>
                     </ul>
                 </div>
 
                 <div class="iqd-sidebar-card iqd-guidelines-card">
                     <h3><i class="bi bi-shield-check"></i> Community Guidelines</h3>
-                    <p>Keep the community helpful. Avoid spam, abusive language, misleading claims and sharing private information.</p>
+                    <p>Keep the community helpful. Avoid spam, abusive language, misleading claims and sharing private
+                        information.</p>
                 </div>
             </aside>
         </div>

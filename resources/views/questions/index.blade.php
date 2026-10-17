@@ -1,5 +1,5 @@
 <x-frontend-header />
-<x-study-india-header/>
+<x-study-india-header />
 <link rel="stylesheet" href="{{ asset('css/student-questions.css') }}?v=3">
 
 <main class="iq-main">
@@ -88,7 +88,7 @@
                 <span class="iq-category-name">Faculty</span>
                 <i class="bi bi-arrow-up-right iq-category-arrow"></i>
             </button>
-            <button type="button" class="iq-category-card" data-category="Hostel & Accommodation" id="#iqQuestionList" >
+            <button type="button" class="iq-category-card" data-category="Hostel & Accommodation" id="#iqQuestionList">
                 <span class="iq-category-icon iq-color-teal"><i class="bi bi-house-door-fill"></i></span>
                 <span class="iq-category-name">Hostel & Accommodation</span>
                 <i class="bi bi-arrow-up-right iq-category-arrow"></i>
