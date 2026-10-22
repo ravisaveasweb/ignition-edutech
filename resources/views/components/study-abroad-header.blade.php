@@ -68,6 +68,8 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/courses.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/study-abroad-header.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/study-india-header.css') }}">
+
 
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css" />
@@ -76,6 +78,155 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        .sa-menu-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+        }
+
+        .sa-menu-user {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 0;
+        }
+
+        .sa-user-icon {
+            width: 48px;
+            height: 48px;
+            flex: 0 0 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #fff0df;
+            color: #d7791f;
+            font-size: 23px;
+        }
+
+        .sa-menu-user strong {
+            display: block;
+            overflow-wrap: anywhere;
+        }
+
+        .sa-menu-user p {
+            margin: 5px 0 0;
+            overflow-wrap: anywhere;
+        }
+
+        #saMenuClose {
+            border: 0;
+            background: transparent;
+            cursor: pointer;
+            font-size: 20px;
+            padding: 8px;
+        }
+
+        .sa-login-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 13px 15px;
+            margin-top: 12px;
+            border: 1px solid #f0e5d9;
+            border-radius: 8px;
+            background: #fff;
+            color: #0a2540;
+            font: inherit;
+            text-align: left;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.2s ease, border-color 0.2s ease;
+        }
+
+        .sa-login-btn:hover {
+            background: #fff5e9;
+            border-color: #eb933a;
+        }
+
+        .sa-menu-logout-form {
+            margin: 0;
+        }
+
+        .sa-auth-modal-backdrop {
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: rgb(10 37 64 / 55%);
+        }
+
+        .sa-auth-modal {
+            width: 100%;
+            max-width: 420px;
+            box-sizing: border-box;
+            padding: 30px 24px;
+            border-radius: 14px;
+            background: #fff;
+            text-align: center;
+            box-shadow: 0 20px 60px rgb(0 0 0 / 18%);
+        }
+
+        .sa-auth-modal-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 54px;
+            height: 54px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            background: #e8f7ed;
+            color: #218838;
+            font-size: 30px;
+        }
+
+        .sa-auth-modal h2 {
+            margin: 0 0 10px;
+            color: #0a2540;
+        }
+
+        .sa-auth-modal p {
+            margin: 0 0 20px;
+            color: #5b6570;
+            overflow-wrap: anywhere;
+        }
+
+        .sa-auth-modal-close {
+            padding: 12px 18px;
+            border: 0;
+            border-radius: 7px;
+            background: #eb933a;
+            color: #fff;
+            font: inherit;
+            cursor: pointer;
+        }
+
+        .sa-auth-modal-close:hover {
+            background: #d7791f;
+        }
+
+        .sa-menu-user .sa-user-icon {
+            position: relative;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .sa-menu-user .sa-menu-profile-photo {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    </style>
 
 </head>
 
@@ -97,115 +248,143 @@
             ->sort()
             ->values();
 
+        // $countryCodes = [
+        //     'Argentina' => 'ar',
+        //     'Armenia' => 'am',
+        //     'Australia' => 'au',
+        //     'Austria' => 'at',
+        //     'Azerbaijan' => 'az',
+        //     'Bahrain' => 'bh',
+        //     'Bangladesh' => 'bd',
+        //     'Belarus' => 'by',
+        //     'Belgium' => 'be',
+        //     'Bosnia and Herzegovina' => 'ba',
+        //     'Brazil' => 'br',
+        //     'Brunei Darussalam' => 'bn',
+        //     'Bulgaria' => 'bg',
+        //     'Canada' => 'ca',
+        //     'Chile' => 'cl',
+        //     'China (Mainland)' => 'cn',
+        //     'Colombia' => 'co',
+        //     'Costa Rica' => 'cr',
+        //     'Croatia' => 'hr',
+        //     'Cuba' => 'cu',
+        //     'Cyprus' => 'cy',
+        //     'Czechia' => 'cz',
+        //     'Denmark' => 'dk',
+        //     'Dominican Republic' => 'do',
+        //     'Ecuador' => 'ec',
+        //     'Egypt' => 'eg',
+        //     'Estonia' => 'ee',
+        //     'Ethiopia' => 'et',
+        //     'Finland' => 'fi',
+        //     'France' => 'fr',
+        //     'Georgia' => 'ge',
+        //     'Germany' => 'de',
+        //     'Ghana' => 'gh',
+        //     'Greece' => 'gr',
+        //     'Guatemala' => 'gt',
+        //     'Honduras' => 'hn',
+        //     'Hong Kong SAR, China' => 'hk',
+        //     'Hungary' => 'hu',
+        //     'Iceland' => 'is',
+        //     'India' => 'in',
+        //     'Indonesia' => 'id',
+        //     'Iran (Islamic Republic of)' => 'ir',
+        //     'Iraq' => 'iq',
+        //     'Ireland' => 'ie',
+        //     'Israel' => 'il',
+        //     'Italy' => 'it',
+        //     'Japan' => 'jp',
+        //     'Jordan' => 'jo',
+        //     'Kazakhstan' => 'kz',
+        //     'Kenya' => 'ke',
+        //     'Kuwait' => 'kw',
+        //     'Kyrgyzstan' => 'kg',
+        //     'Latvia' => 'lv',
+        //     'Lebanon' => 'lb',
+        //     'Libya' => 'ly',
+        //     'Lithuania' => 'lt',
+        //     'Luxembourg' => 'lu',
+        //     'Macao SAR, China' => 'mo',
+        //     'Malaysia' => 'my',
+        //     'Malta' => 'mt',
+        //     'Mexico' => 'mx',
+        //     'Morocco' => 'ma',
+        //     'Netherlands' => 'nl',
+        //     'New Zealand' => 'nz',
+        //     'Nigeria' => 'ng',
+        //     'Northern Cyprus' => 'cy',
+        //     'Norway' => 'no',
+        //     'Oman' => 'om',
+        //     'Pakistan' => 'pk',
+        //     'Palestine' => 'ps',
+        //     'Panama' => 'pa',
+        //     'Paraguay' => 'py',
+        //     'Peru' => 'pe',
+        //     'Philippines' => 'ph',
+        //     'Poland' => 'pl',
+        //     'Portugal' => 'pt',
+        //     'Puerto Rico' => 'pr',
+        //     'Qatar' => 'qa',
+        //     'Republic of Korea' => 'kr',
+        //     'Romania' => 'ro',
+        //     'Russian Federation' => 'ru',
+        //     'Saudi Arabia' => 'sa',
+        //     'Serbia' => 'rs',
+        //     'Singapore' => 'sg',
+        //     'Slovakia' => 'sk',
+        //     'Slovenia' => 'si',
+        //     'South Africa' => 'za',
+        //     'Spain' => 'es',
+        //     'Sri Lanka' => 'lk',
+        //     'Sudan' => 'sd',
+        //     'Sweden' => 'se',
+        //     'Switzerland' => 'ch',
+        //     'Syrian Arab Republic' => 'sy',
+        //     'Taiwan' => 'tw',
+        //     'Thailand' => 'th',
+        //     'Tunisia' => 'tn',
+        //     'Türkiye' => 'tr',
+        //     'Uganda' => 'ug',
+        //     'Ukraine' => 'ua',
+        //     'United Arab Emirates' => 'ae',
+        //     'United Kingdom' => 'gb',
+        //     'United States of America' => 'us',
+        //     'Uruguay' => 'uy',
+        //     'Uzbekistan' => 'uz',
+        //     'Venezuela (Bolivarian Republic of)' => 've',
+        //     'Viet Nam' => 'vn',
+        // ];
+
         $countryCodes = [
-            'Argentina' => 'ar',
-            'Armenia' => 'am',
             'Australia' => 'au',
-            'Austria' => 'at',
-            'Azerbaijan' => 'az',
-            'Bahrain' => 'bh',
-            'Bangladesh' => 'bd',
-            'Belarus' => 'by',
-            'Belgium' => 'be',
-            'Bosnia and Herzegovina' => 'ba',
-            'Brazil' => 'br',
-            'Brunei Darussalam' => 'bn',
-            'Bulgaria' => 'bg',
+            'UK (United Kingdom)' => 'gb',
             'Canada' => 'ca',
-            'Chile' => 'cl',
-            'China (Mainland)' => 'cn',
-            'Colombia' => 'co',
-            'Costa Rica' => 'cr',
-            'Croatia' => 'hr',
-            'Cuba' => 'cu',
-            'Cyprus' => 'cy',
-            'Czechia' => 'cz',
-            'Denmark' => 'dk',
-            'Dominican Republic' => 'do',
-            'Ecuador' => 'ec',
-            'Egypt' => 'eg',
-            'Estonia' => 'ee',
-            'Ethiopia' => 'et',
-            'Finland' => 'fi',
-            'France' => 'fr',
-            'Georgia' => 'ge',
-            'Germany' => 'de',
-            'Ghana' => 'gh',
-            'Greece' => 'gr',
-            'Guatemala' => 'gt',
-            'Honduras' => 'hn',
-            'Hong Kong SAR, China' => 'hk',
-            'Hungary' => 'hu',
-            'Iceland' => 'is',
-            'India' => 'in',
-            'Indonesia' => 'id',
-            'Iran (Islamic Republic of)' => 'ir',
-            'Iraq' => 'iq',
-            'Ireland' => 'ie',
-            'Israel' => 'il',
-            'Italy' => 'it',
-            'Japan' => 'jp',
-            'Jordan' => 'jo',
-            'Kazakhstan' => 'kz',
-            'Kenya' => 'ke',
-            'Kuwait' => 'kw',
-            'Kyrgyzstan' => 'kg',
-            'Latvia' => 'lv',
-            'Lebanon' => 'lb',
-            'Libya' => 'ly',
-            'Lithuania' => 'lt',
-            'Luxembourg' => 'lu',
-            'Macao SAR, China' => 'mo',
-            'Malaysia' => 'my',
-            'Malta' => 'mt',
-            'Mexico' => 'mx',
-            'Morocco' => 'ma',
-            'Netherlands' => 'nl',
+            'USA (United States)' => 'us',
             'New Zealand' => 'nz',
-            'Nigeria' => 'ng',
-            'Northern Cyprus' => 'cy',
-            'Norway' => 'no',
-            'Oman' => 'om',
-            'Pakistan' => 'pk',
-            'Palestine' => 'ps',
-            'Panama' => 'pa',
-            'Paraguay' => 'py',
-            'Peru' => 'pe',
-            'Philippines' => 'ph',
-            'Poland' => 'pl',
-            'Portugal' => 'pt',
-            'Puerto Rico' => 'pr',
-            'Qatar' => 'qa',
-            'Republic of Korea' => 'kr',
-            'Romania' => 'ro',
-            'Russian Federation' => 'ru',
-            'Saudi Arabia' => 'sa',
-            'Serbia' => 'rs',
             'Singapore' => 'sg',
-            'Slovakia' => 'sk',
-            'Slovenia' => 'si',
-            'South Africa' => 'za',
+            'France' => 'fr',
+            'Germany' => 'de',
             'Spain' => 'es',
-            'Sri Lanka' => 'lk',
-            'Sudan' => 'sd',
+            'Italy' => 'it',
+            'Netherlands' => 'nl',
             'Sweden' => 'se',
             'Switzerland' => 'ch',
-            'Syrian Arab Republic' => 'sy',
-            'Taiwan' => 'tw',
-            'Thailand' => 'th',
-            'Tunisia' => 'tn',
-            'Türkiye' => 'tr',
-            'Uganda' => 'ug',
-            'Ukraine' => 'ua',
-            'United Arab Emirates' => 'ae',
-            'United Kingdom' => 'gb',
-            'United States of America' => 'us',
-            'Uruguay' => 'uy',
-            'Uzbekistan' => 'uz',
-            'Venezuela (Bolivarian Republic of)' => 've',
-            'Viet Nam' => 'vn',
+            'Latvia' => 'lv',
+            'Lithuania' => 'lt',
+            'Malta' => 'mt',
+            'Finland' => 'fi',
+            'Norway' => 'no',
+            'Denmark' => 'dk',
+            'Malaysia' => 'my',
+            'Rest of Europe' => '',
         ];
+        // Display only these destinations in the country popup.
+        $worldCountries = collect(array_keys($countryCodes));
     @endphp
+
+
 
     <header class="sa-header">
         <div class="sa-header-top">
@@ -250,11 +429,11 @@
         <div class="sa-category-bar" id="saCategoryBar">
             <a href="javascript:void(0);" id="saCategoryMenu">☰ Menu</a>
 
-            @foreach ($worldCountries as $country)
+            {{-- @foreach ($worldCountries as $country)
                 <a href="javascript:void(0);" class="sa-category-country" data-country="{{ $country }}">
                     {{ $country }}
                 </a>
-            @endforeach
+            @endforeach --}}
         </div>
 
         {{-- Study Abroad Multi Level Category Menu --}}
@@ -371,7 +550,7 @@
                                 <span class="sa-navmenu-arrow">›</span>
                             </button> --}}
 
-                             <a href="{{ route('study-abroad.global-scholarships')}}"class="sa-navmenu-direct-link"
+                            <a href="{{ route('study-abroad.global-scholarships') }}"class="sa-navmenu-direct-link"
                                 data-target="saNavmenuScholarships-{{ $saNavmenuKey }}">
                                 <span>
                                     <b class="sa-navmenu-item-icon">🏆</b>
@@ -379,7 +558,7 @@
                                 </span>
                                 {{-- <span class="sa-navmenu-arrow">›</span> --}}
 
-                                
+
                             </a>
                         </li>
 
@@ -560,7 +739,7 @@
                     </ul>
                 </div> --}}
 
-                
+
                 {{-- Exams Page --}}
                 <div class="sa-navmenu-page" id="saNavmenuExams-{{ $saNavmenuKey }}">
                     <div class="sa-navmenu-header">
@@ -761,6 +940,8 @@
         </div>
     </div>
 
+
+    {{-- 
     <div class="sa-menu-overlay" id="saMenuOverlay"></div>
 
     <aside class="sa-menu-drawer" id="saMenuDrawer">
@@ -780,7 +961,138 @@
         <a href="{{ route('study-abroad.login') }}" class="sa-login-btn">
             Login/Register
         </a>
+    </aside> --}}
+
+
+
+
+
+    @php
+        /*
+    |--------------------------------------------------------------------------
+    | Study Abroad logged-in user
+    |--------------------------------------------------------------------------
+    */
+        $studyAbroadLoggedInUser = session('study_abroad_user_id')
+            ? \App\Models\StudyAbroadUser::where('id', session('study_abroad_user_id'))
+                ->where('is_active', true)
+                ->first()
+            : null;
+    @endphp
+
+    {{-- Drawer Overlay --}}
+    <div class="sa-menu-overlay" id="saMenuOverlay"></div>
+
+    {{-- Side Drawer --}}
+    <aside class="sa-menu-drawer" id="saMenuDrawer">
+
+        {{-- Header --}}
+        <div class="sa-menu-header">
+
+            <div class="sa-menu-user">
+
+                <div class="sa-user-icon">
+                    @if ($studyAbroadLoggedInUser && $studyAbroadLoggedInUser->profile_photo)
+                        <img src="{{ asset('storage/' . $studyAbroadLoggedInUser->profile_photo) }}"
+                            alt="{{ $studyAbroadLoggedInUser->full_name }}'s profile photo"
+                            class="sa-menu-profile-photo">
+                    @else
+                        <i class="bi bi-person-fill"></i>
+                    @endif
+                </div>
+
+                <div>
+                    @if ($studyAbroadLoggedInUser)
+                        <strong>Hello, {{ $studyAbroadLoggedInUser->full_name }}</strong>
+                        <p>{{ $studyAbroadLoggedInUser->email }}</p>
+                    @else
+                        <strong>Hello, Welcome to Ignition Edutech</strong>
+                        <p>Search Universities, Courses &amp; More</p>
+                    @endif
+                </div>
+
+            </div>
+
+            <button type="button" id="saMenuClose" aria-label="Close menu">
+                <i class="bi bi-x-lg"></i>
+            </button>
+
+        </div>
+
+        {{-- Logged-in menu --}}
+        @if ($studyAbroadLoggedInUser)
+            <a href="{{ route('study-abroad') }}" class="si-login-btn">
+                <i class="bi bi-house-door"></i>
+                Study Abroad Home
+            </a>
+
+
+            <a href="{{ route('study-abroad.profile') }}" class="si-login-btn">
+                <i class="bi bi-person"></i>
+                Your Profile
+            </a>
+
+            <a href="{{ route('study-abroad.settings') }}" class="si-login-btn">
+                <i class="bi bi-gear"></i>
+                Account Settings
+            </a>
+
+            <form action="{{ route('study-abroad.logout') }}" method="POST" class="sa-menu-logout-form">
+                @csrf
+                <button type="submit" class="si-login-btn">
+                    <i class="bi bi-box-arrow-right"></i>
+                    Logout
+                </button>
+            </form>
+
+            {{-- Guest menu --}}
+        @else
+            <a href="{{ route('study-abroad.login') }}" class="si-login-btn">
+                <i class="bi bi-box-arrow-in-right"></i>
+                Login
+            </a>
+
+            <a href="{{ route('study-abroad.application') }}" class="si-login-btn">
+                <i class="bi bi-person-plus"></i>
+                Register
+            </a>
+        @endif
+
     </aside>
+
+    {{-- Login success popup --}}
+    @if (session('study_abroad_auth_success'))
+        <div class="sa-auth-modal-backdrop" role="presentation">
+            <section class="sa-auth-modal" role="dialog" aria-modal="true" aria-labelledby="saAuthSuccessTitle">
+                <div class="sa-auth-modal-icon" aria-hidden="true">✓</div>
+                <h2 id="saAuthSuccessTitle">You're all set!</h2>
+                <p>{{ session('study_abroad_auth_success') }}</p>
+                <button type="button" class="sa-auth-modal-close" data-sa-auth-modal-close>
+                    Continue to Study Abroad
+                </button>
+            </section>
+        </div>
+    @endif
+
+    <script>
+        document.addEventListener('click', function(event) {
+            const closeButton = event.target.closest('[data-sa-auth-modal-close]');
+            if (closeButton) {
+                const popup = closeButton.closest('.sa-auth-modal-backdrop');
+                if (popup) popup.remove();
+            }
+        });
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                document.querySelectorAll('.sa-auth-modal-backdrop').forEach(function(popup) {
+                    popup.remove();
+                });
+            }
+        });
+    </script>
+
+
 
 
 

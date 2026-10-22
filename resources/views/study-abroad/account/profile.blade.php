@@ -1,38 +1,37 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/logo/favicon.png') }}" />
-
+<link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/logo/favicon.png') }}" />
 
 <style>
     :root {
-        --sip-orange: #eb933a;
-        --sip-orange-dark: #d7791f;
-        --sip-navy: #0a2540;
-        --sip-text: #26364a;
-        --sip-muted: #718096;
-        --sip-border: #e5eaf1;
-        --sip-bg: #f4f7fb;
-        --sip-radius: 14px;
-        --sip-shadow: 0 5px 24px rgba(10, 37, 64, .05);
-        --sip-shadow-hover: 0 12px 32px rgba(10, 37, 64, .09);
-        --sip-transition: .25s ease;
+        --sap-orange: #eb933a;
+        --sap-orange-dark: #d7791f;
+        --sap-navy: #0a2540;
+        --sap-text: #26364a;
+        --sap-muted: #718096;
+        --sap-border: #e5eaf1;
+        --sap-bg: #f4f7fb;
+        --sap-radius: 14px;
+        --sap-shadow: 0 5px 24px rgba(10, 37, 64, .05);
+        --sap-shadow-hover: 0 12px 32px rgba(10, 37, 64, .09);
+        --sap-transition: .25s ease;
     }
 
-    .si-profile-page,
-    .si-profile-page * {
+    .sa-profile-page,
+    .sa-profile-page * {
         box-sizing: border-box;
     }
 
-    .si-profile-page {
+    .sa-profile-page {
         min-height: 80vh;
         padding: 38px 20px 55px;
         background:
             radial-gradient(ellipse at top left, #fff3e4 0, transparent 30%),
-            var(--sip-bg);
-        color: var(--sip-text);
+            var(--sap-bg);
+        color: var(--sap-text);
         font-family: Arial, Helvetica, sans-serif;
     }
 
-    .si-profile-container {
+    .sa-profile-container {
         width: 100%;
         max-width: 1180px;
         margin: auto;
@@ -40,37 +39,37 @@
 
     /* Page heading */
 
-    .si-profile-heading {
+    .sa-profile-heading {
         margin-bottom: 26px;
-        animation: sipEnter .55s ease both;
+        animation: sapEnter .55s ease both;
     }
 
-    .si-profile-breadcrumb {
+    .sa-profile-breadcrumb {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         gap: 9px;
         margin-bottom: 15px;
-        color: var(--sip-muted);
+        color: var(--sap-muted);
         font-size: 13px;
     }
 
-    .si-profile-breadcrumb i {
-        color: var(--sip-orange);
+    .sa-profile-breadcrumb i {
+        color: var(--sap-orange);
     }
 
-    .si-profile-title {
+    .sa-profile-title {
         display: flex;
         align-items: center;
         gap: 13px;
         margin: 0 0 10px;
-        color: var(--sip-navy);
+        color: var(--sap-navy);
         font-size: clamp(27px, 3vw, 35px);
         font-weight: 750;
         letter-spacing: -.6px;
     }
 
-    .si-profile-title-icon {
+    .sa-profile-title-icon {
         display: grid;
         flex: 0 0 49px;
         width: 49px;
@@ -78,28 +77,28 @@
         place-items: center;
         border-radius: 14px;
         background: #fff0df;
-        color: var(--sip-orange-dark);
+        color: var(--sap-orange-dark);
         font-size: 24px;
-        transition: transform var(--sip-transition),
-            box-shadow var(--sip-transition);
+        transition: transform var(--sap-transition),
+            box-shadow var(--sap-transition);
     }
 
-    .si-profile-title-icon:hover {
+    .sa-profile-title-icon:hover {
         transform: rotate(-6deg) scale(1.06);
         box-shadow: 0 5px 15px #eb933a30;
     }
 
-    .si-profile-subtitle {
+    .sa-profile-subtitle {
         max-width: 680px;
         margin: 0;
-        color: var(--sip-muted);
+        color: var(--sap-muted);
         font-size: 15px;
         line-height: 1.75;
     }
 
     /* Alerts */
 
-    .si-profile-alert {
+    .sa-profile-alert {
         display: flex;
         align-items: flex-start;
         gap: 11px;
@@ -111,15 +110,15 @@
         color: #17653a;
         font-size: 14px;
         line-height: 1.6;
-        animation: sipEnter .35s ease both;
+        animation: sapEnter .35s ease both;
     }
 
-    .si-profile-alert>i {
+    .sa-profile-alert>i {
         margin-top: 2px;
         font-size: 18px;
     }
 
-    .si-profile-alert-error {
+    .sa-profile-alert-error {
         border-color: #f4c7c3;
         background: #fff3f2;
         color: #b42318;
@@ -127,46 +126,46 @@
 
     /* Two-column layout */
 
-    .si-profile-layout {
+    .sa-profile-layout {
         display: grid;
         grid-template-columns: minmax(250px, 300px) minmax(0, 1fr);
         align-items: start;
         gap: 23px;
     }
 
-    .si-profile-sidebar,
-    .si-profile-form-card {
+    .sa-profile-sidebar,
+    .sa-profile-form-card {
         min-width: 0;
         overflow: hidden;
-        border: 1px solid var(--sip-border);
-        border-radius: var(--sip-radius);
+        border: 1px solid var(--sap-border);
+        border-radius: var(--sap-radius);
         background: #fff;
-        box-shadow: var(--sip-shadow);
-        transition: box-shadow var(--sip-transition),
-            border-color var(--sip-transition);
-        animation: sipCardEnter .65s cubic-bezier(.2, .7, .25, 1) both;
+        box-shadow: var(--sap-shadow);
+        transition: box-shadow var(--sap-transition),
+            border-color var(--sap-transition);
+        animation: sapCardEnter .65s cubic-bezier(.2, .7, .25, 1) both;
     }
 
-    .si-profile-form-card {
+    .sa-profile-form-card {
         animation-delay: .1s;
     }
 
-    .si-profile-sidebar:hover,
-    .si-profile-form-card:hover {
+    .sa-profile-sidebar:hover,
+    .sa-profile-form-card:hover {
         border-color: #d7e0eb;
-        box-shadow: var(--sip-shadow-hover);
+        box-shadow: var(--sap-shadow-hover);
     }
 
     /* Profile summary */
 
-    .si-profile-sidebar-top {
+    .sa-profile-sidebar-top {
         padding: 27px 22px 25px;
-        border-bottom: 1px solid var(--sip-border);
+        border-bottom: 1px solid var(--sap-border);
         background: linear-gradient(145deg, #fff8ef, #fff);
         text-align: center;
     }
 
-    .si-profile-avatar {
+    .sa-profile-avatar {
         display: grid;
         width: 84px;
         height: 84px;
@@ -174,36 +173,36 @@
         margin: 0 auto 16px;
         border: 4px solid #fff;
         border-radius: 50%;
-        background: linear-gradient(145deg, #f8bd78, var(--sip-orange));
+        background: linear-gradient(145deg, #f8bd78, var(--sap-orange));
         box-shadow: 0 4px 15px #eb933a35;
         color: #fff;
         font-size: 35px;
-        animation: sipFloat 4s ease-in-out infinite;
-        transition: box-shadow var(--sip-transition);
+        animation: sapFloat 4s ease-in-out infinite;
+        transition: box-shadow var(--sap-transition);
     }
 
-    .si-profile-avatar:hover {
+    .sa-profile-avatar:hover {
         box-shadow: 0 8px 24px #eb933a55;
-        border: 1px solid #f8bd78
+        border: 1px solid #f8bd78;
     }
 
-    .si-profile-user-name {
+    .sa-profile-user-name {
         margin: 0 0 7px;
-        color: var(--sip-navy);
+        color: var(--sap-navy);
         font-size: 21px;
         font-weight: 700;
         overflow-wrap: anywhere;
     }
 
-    .si-profile-user-email {
+    .sa-profile-user-email {
         margin: 0;
-        color: var(--sip-muted);
+        color: var(--sap-muted);
         font-size: 13px;
         line-height: 1.7;
         overflow-wrap: anywhere;
     }
 
-    .si-profile-verified {
+    .sa-profile-verified {
         display: inline-flex;
         align-items: center;
         gap: 6px;
@@ -215,36 +214,36 @@
         color: #187544;
         font-size: 12px;
         font-weight: 700;
-        transition: transform var(--sip-transition);
+        transition: transform var(--sap-transition);
     }
 
-    .si-profile-verified:hover {
+    .sa-profile-verified:hover {
         transform: translateY(-2px);
     }
 
-    .si-profile-sidebar-content {
+    .sa-profile-sidebar-content {
         padding: 22px;
     }
 
-    .si-profile-sidebar-heading {
+    .sa-profile-sidebar-heading {
         margin: 0 0 19px;
-        color: var(--sip-navy);
+        color: var(--sap-navy);
         font-size: 14px;
         font-weight: 700;
     }
 
-    .si-profile-info-item {
+    .sa-profile-info-item {
         display: flex;
         align-items: flex-start;
         gap: 12px;
         margin-bottom: 19px;
     }
 
-    .si-profile-info-item:last-of-type {
+    .sa-profile-info-item:last-of-type {
         margin-bottom: 0;
     }
 
-    .si-profile-info-icon {
+    .sa-profile-info-icon {
         display: grid;
         flex: 0 0 36px;
         width: 36px;
@@ -252,36 +251,36 @@
         place-items: center;
         border-radius: 10px;
         background: #f1f5fa;
-        color: var(--sip-navy);
+        color: var(--sap-navy);
         font-size: 16px;
-        transition: background var(--sip-transition),
-            color var(--sip-transition),
-            transform var(--sip-transition);
+        transition: background var(--sap-transition),
+            color var(--sap-transition),
+            transform var(--sap-transition);
     }
 
-    .si-profile-info-item:hover .si-profile-info-icon {
+    .sa-profile-info-item:hover .sa-profile-info-icon {
         transform: translateY(-2px);
         background: #fff0df;
-        color: var(--sip-orange-dark);
+        color: var(--sap-orange-dark);
     }
 
-    .si-profile-info-label {
+    .sa-profile-info-label {
         display: block;
         margin-bottom: 5px;
-        color: var(--sip-muted);
+        color: var(--sap-muted);
         font-size: 12px;
     }
 
-    .si-profile-info-value {
+    .sa-profile-info-value {
         display: block;
-        color: var(--sip-text);
+        color: var(--sap-text);
         font-size: 14px;
         font-weight: 600;
         line-height: 1.55;
         overflow-wrap: anywhere;
     }
 
-    .si-profile-sidebar-link {
+    .sa-profile-sidebar-link {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -291,105 +290,105 @@
         border: 1px solid #f1d4b4;
         border-radius: 9px;
         background: #fffaf4;
-        color: var(--sip-orange-dark);
+        color: var(--sap-orange-dark);
         font-size: 13px;
         font-weight: 700;
         text-decoration: none;
-        transition: background var(--sip-transition),
-            border-color var(--sip-transition),
-            transform var(--sip-transition);
+        transition: background var(--sap-transition),
+            border-color var(--sap-transition),
+            transform var(--sap-transition);
     }
 
-    .si-profile-sidebar-link:hover {
+    .sa-profile-sidebar-link:hover {
         transform: translateX(3px);
-        border-color: var(--sip-orange);
+        border-color: var(--sap-orange);
         background: #fff1df;
-        color: var(--sip-orange-dark);
+        color: var(--sap-orange-dark);
     }
 
-    .si-profile-sidebar-link>i {
-        transition: transform var(--sip-transition);
+    .sa-profile-sidebar-link>i {
+        transition: transform var(--sap-transition);
     }
 
-    .si-profile-sidebar-link:hover>i {
+    .sa-profile-sidebar-link:hover>i {
         transform: translateX(4px);
     }
 
     /* Form card */
 
-    .si-profile-form-header {
+    .sa-profile-form-header {
         position: relative;
         padding: 24px 27px 22px;
-        border-bottom: 1px solid var(--sip-border);
+        border-bottom: 1px solid var(--sap-border);
     }
 
-    .si-profile-form-header::after {
+    .sa-profile-form-header::after {
         position: absolute;
         bottom: -1px;
         left: 27px;
         width: 55px;
         height: 3px;
         border-radius: 5px;
-        background: var(--sip-orange);
+        background: var(--sap-orange);
         content: "";
-        transition: width var(--sip-transition);
+        transition: width var(--sap-transition);
     }
 
-    .si-profile-form-card:hover .si-profile-form-header::after {
+    .sa-profile-form-card:hover .sa-profile-form-header::after {
         width: 95px;
     }
 
-    .si-profile-form-title {
+    .sa-profile-form-title {
         margin: 0 0 7px;
-        color: var(--sip-navy);
+        color: var(--sap-navy);
         font-size: 21px;
         font-weight: 750;
     }
 
-    .si-profile-form-description {
+    .sa-profile-form-description {
         margin: 0;
-        color: var(--sip-muted);
+        color: var(--sap-muted);
         font-size: 13px;
         line-height: 1.7;
     }
 
-    .si-profile-form-body {
+    .sa-profile-form-body {
         padding: 27px;
     }
 
     /* Form fields */
 
-    .si-profile-grid {
+    .sa-profile-grid {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 22px 18px;
     }
 
-    .si-profile-field {
+    .sa-profile-field {
         min-width: 0;
     }
 
-    .si-profile-field-full {
+    .sa-profile-field-full {
         grid-column: 1 / -1;
     }
 
-    .si-profile-label {
+    .sa-profile-label {
         display: block;
         margin-bottom: 8px;
-        color: var(--sip-navy);
+        color: var(--sap-navy);
         font-size: 13px;
         font-weight: 700;
     }
 
-    .si-profile-label-required {
+    .sa-profile-label-required {
         color: #d04438;
     }
 
-    .si-profile-input-wrap {
+    .sa-profile-input-wrap {
         position: relative;
     }
 
-    .si-profile-input-icon {
+    .sa-profile-input-icon {
         position: absolute;
         top: 50%;
         left: 14px;
@@ -397,10 +396,10 @@
         color: #8290a3;
         font-size: 16px;
         pointer-events: none;
-        transition: color var(--sip-transition);
+        transition: color var(--sap-transition);
     }
 
-    .si-profile-input {
+    .sa-profile-input {
         display: block;
         width: 100%;
         min-width: 0;
@@ -410,58 +409,58 @@
         border-radius: 9px;
         outline: none;
         background: #fff;
-        color: var(--sip-text);
+        color: var(--sap-text);
         font: inherit;
         font-size: 14px;
-        transition: border-color var(--sip-transition),
-            box-shadow var(--sip-transition),
-            background var(--sip-transition);
+        transition: border-color var(--sap-transition),
+            box-shadow var(--sap-transition),
+            background var(--sap-transition);
     }
 
-    .si-profile-input:hover {
+    .sa-profile-input:hover {
         border-color: #b8c5d5;
     }
 
-    .si-profile-input-wrap:focus-within .si-profile-input-icon {
-        color: var(--sip-orange-dark);
+    .sa-profile-input-wrap:focus-within .sa-profile-input-icon {
+        color: var(--sap-orange-dark);
     }
 
-    .si-profile-input:focus {
-        border-color: var(--sip-orange);
+    .sa-profile-input:focus {
+        border-color: var(--sap-orange);
         box-shadow: 0 0 0 3px #eb933a20;
     }
 
-    .si-profile-input[readonly] {
+    .sa-profile-input[readonly] {
         border-color: #e2e7ef;
         background: #f5f7fa;
         color: #64748b;
         cursor: not-allowed;
     }
 
-    .si-profile-input.is-invalid {
+    .sa-profile-input.is-invalid {
         border-color: #d92d20;
     }
 
-    .si-profile-input.is-invalid:focus {
+    .sa-profile-input.is-invalid:focus {
         box-shadow: 0 0 0 3px #d92d2020;
     }
 
-    .si-profile-input-help {
+    .sa-profile-input-help {
         display: flex;
         align-items: flex-start;
         gap: 6px;
         margin: 8px 0 0;
-        color: var(--sip-muted);
+        color: var(--sap-muted);
         font-size: 11px;
         line-height: 1.6;
     }
 
-    .si-profile-input-help i {
+    .sa-profile-input-help i {
         margin-top: 1px;
         color: #8a98ab;
     }
 
-    .si-profile-field-error {
+    .sa-profile-field-error {
         margin-top: 7px;
         color: #b42318;
         font-size: 12px;
@@ -470,7 +469,7 @@
 
     /* Form footer and buttons */
 
-    .si-profile-form-actions {
+    .sa-profile-form-actions {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -478,30 +477,30 @@
         gap: 15px;
         margin-top: 27px;
         padding-top: 22px;
-        border-top: 1px solid var(--sip-border);
+        border-top: 1px solid var(--sap-border);
     }
 
-    .si-profile-form-note {
+    .sa-profile-form-note {
         display: flex;
         align-items: center;
         gap: 7px;
-        color: var(--sip-muted);
+        color: var(--sap-muted);
         font-size: 12px;
         line-height: 1.5;
     }
 
-    .si-profile-form-note i {
+    .sa-profile-form-note i {
         color: #258451;
         font-size: 15px;
     }
 
-    .si-profile-buttons {
+    .sa-profile-buttons {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
     }
 
-    .si-profile-btn {
+    .sa-profile-btn {
         position: relative;
         isolation: isolate;
         display: inline-flex;
@@ -513,7 +512,7 @@
         padding: 11px 16px;
         border: 1px solid transparent;
         border-radius: 9px;
-        background: var(--sip-orange);
+        background: var(--sap-orange);
         color: #fff;
         font-family: inherit;
         font-size: 13px;
@@ -521,13 +520,13 @@
         text-align: center;
         text-decoration: none;
         cursor: pointer;
-        transition: transform var(--sip-transition),
-            box-shadow var(--sip-transition),
-            background var(--sip-transition),
-            border-color var(--sip-transition);
+        transition: transform var(--sap-transition),
+            box-shadow var(--sap-transition),
+            background var(--sap-transition),
+            border-color var(--sap-transition);
     }
 
-    .si-profile-btn::before {
+    .sa-profile-btn::before {
         position: absolute;
         z-index: -1;
         top: 0;
@@ -540,42 +539,42 @@
         transition: left .5s ease;
     }
 
-    .si-profile-btn:hover::before {
+    .sa-profile-btn:hover::before {
         left: 140%;
     }
 
-    .si-profile-btn:hover {
+    .sa-profile-btn:hover {
         transform: translateY(-2px);
         box-shadow: 0 6px 15px #0a254020;
-        background: var(--sip-orange-dark);
+        background: var(--sap-orange-dark);
         color: #fff;
     }
 
-    .si-profile-btn:active {
+    .sa-profile-btn:active {
         transform: scale(.98);
     }
 
-    .si-profile-btn-secondary {
+    .sa-profile-btn-secondary {
         border-color: #dbe2ec;
         background: #fff;
-        color: var(--sip-navy);
+        color: var(--sap-navy);
     }
 
-    .si-profile-btn-secondary:hover {
+    .sa-profile-btn-secondary:hover {
         border-color: #bdc9d8;
         background: #f4f7fb;
-        color: var(--sip-navy);
+        color: var(--sap-navy);
     }
 
-    .si-profile-btn:focus-visible,
-    .si-profile-sidebar-link:focus-visible {
+    .sa-profile-btn:focus-visible,
+    .sa-profile-sidebar-link:focus-visible {
         outline: 3px solid #eb933a75;
         outline-offset: 3px;
     }
 
     /* Animations */
 
-    @keyframes sipEnter {
+    @keyframes sapEnter {
         from {
             opacity: 0;
             transform: translateY(12px);
@@ -587,7 +586,7 @@
         }
     }
 
-    @keyframes sipCardEnter {
+    @keyframes sapCardEnter {
         from {
             opacity: 0;
             transform: translateY(18px);
@@ -599,7 +598,7 @@
         }
     }
 
-    @keyframes sipFloat {
+    @keyframes sapFloat {
 
         0%,
         100% {
@@ -614,26 +613,26 @@
     /* Tablet */
 
     @media (max-width: 900px) {
-        .si-profile-layout {
+        .sa-profile-layout {
             grid-template-columns: minmax(225px, 260px) minmax(0, 1fr);
             gap: 17px;
         }
 
-        .si-profile-sidebar-content {
+        .sa-profile-sidebar-content {
             padding: 19px;
         }
 
-        .si-profile-form-header,
-        .si-profile-form-body {
+        .sa-profile-form-header,
+        .sa-profile-form-body {
             padding-right: 20px;
             padding-left: 20px;
         }
 
-        .si-profile-grid {
+        .sa-profile-grid {
             gap: 20px 13px;
         }
 
-        .si-profile-form-actions {
+        .sa-profile-form-actions {
             align-items: flex-start;
             flex-direction: column;
         }
@@ -642,83 +641,83 @@
     /* Mobile */
 
     @media (max-width: 680px) {
-        .si-profile-page {
+        .sa-profile-page {
             padding: 27px 14px 38px;
         }
 
-        .si-profile-layout {
+        .sa-profile-layout {
             grid-template-columns: minmax(0, 1fr);
             gap: 18px;
         }
 
-        .si-profile-sidebar-top {
+        .sa-profile-sidebar-top {
             padding: 23px 18px;
         }
 
-        .si-profile-sidebar-content {
+        .sa-profile-sidebar-content {
             padding: 20px;
         }
 
-        .si-profile-form-header {
+        .sa-profile-form-header {
             padding: 21px 18px;
         }
 
-        .si-profile-form-header::after {
+        .sa-profile-form-header::after {
             left: 18px;
         }
 
-        .si-profile-form-body {
+        .sa-profile-form-body {
             padding: 22px 18px;
         }
 
-        .si-profile-grid {
+        .sa-profile-grid {
             grid-template-columns: minmax(0, 1fr);
             gap: 19px;
         }
 
-        .si-profile-field-full {
+        .sa-profile-field-full {
             grid-column: auto;
         }
 
-        .si-profile-title {
+        .sa-profile-title {
             font-size: 26px;
         }
 
-        .si-profile-form-actions {
+        .sa-profile-form-actions {
             gap: 16px;
         }
 
-        .si-profile-buttons {
+        .sa-profile-buttons {
             width: 100%;
         }
 
-        .si-profile-btn {
+        .sa-profile-btn {
             flex: 1 1 auto;
         }
     }
 
     @media (max-width: 380px) {
-        .si-profile-breadcrumb {
+        .sa-profile-breadcrumb {
             gap: 6px;
             font-size: 12px;
         }
 
-        .si-profile-title {
+        .sa-profile-title {
             gap: 10px;
             font-size: 24px;
         }
 
-        .si-profile-title-icon {
+        .sa-profile-title-icon {
             flex-basis: 43px;
             width: 43px;
             height: 43px;
         }
 
-        .si-profile-buttons {
+        .sa-profile-buttons {
             flex-direction: column;
         }
 
-        .si-profile-btn {
+        .sa-profile-btn {
             width: 100%;
         }
     }
@@ -727,105 +726,102 @@
 
     @media (prefers-reduced-motion: reduce) {
 
-        .si-profile-page *,
-        .si-profile-page *::before,
-        .si-profile-page *::after {
+        .sa-profile-page *,
+        .sa-profile-page *::before,
+        .sa-profile-page *::after {
             animation: none !important;
             transition: none !important;
             scroll-behavior: auto !important;
         }
     }
 
+    /* Clickable Study Abroad profile photo */
 
-    
-/* Clickable Study India profile photo */
-.si-profile-avatar-upload {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-}
+    .sa-profile-avatar-upload {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
 
-.si-profile-avatar-upload:focus-within {
-    outline: 3px solid #eb933a70;
-    outline-offset: 3px;
-}
+    .sa-profile-avatar-upload:focus-within {
+        outline: 3px solid #eb933a70;
+        outline-offset: 3px;
+    }
 
-.si-profile-avatar-image {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-}
+    .sa-profile-avatar-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+    }
 
-.si-profile-avatar-camera {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    display: grid;
-    width: 31px;
-    height: 31px;
-    place-items: center;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    background: #0a2540;
-    color: #fff;
-    font-size: 13px;
-    transition: background .2s ease;
-}
+    .sa-profile-avatar-camera {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: grid;
+        width: 31px;
+        height: 31px;
+        place-items: center;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        background: #0a2540;
+        color: #fff;
+        font-size: 13px;
+        transition: background .2s ease;
+    }
 
-.si-profile-avatar-upload:hover .si-profile-avatar-camera {
-    background: #d7791f;
-}
+    .sa-profile-avatar-upload:hover .sa-profile-avatar-camera {
+        background: #d7791f;
+    }
 
-.si-profile-photo-help {
-    margin: 0 12px 18px;
-    color: #718096;
-    font-size: 12px;
-    line-height: 1.6;
-    text-align: center;
-}
-
+    .sa-profile-photo-help {
+        margin: 0 12px 18px;
+        color: #718096;
+        font-size: 12px;
+        line-height: 1.6;
+        text-align: center;
+    }
 </style>
 
+{{-- Keep your Study Abroad header here if required --}}
+{{-- <x-study-abroad-header /> --}}
 
-{{-- Keep your Study India header here if required --}}
-{{-- <x-study-india-header /> --}}
-
-<main class="si-profile-page">
-    <div class="si-profile-container">
-        <header class="si-profile-heading">
-            <nav class="si-profile-breadcrumb" aria-label="Breadcrumb">
+<main class="sa-profile-page">
+    <div class="sa-profile-container">
+        <header class="sa-profile-heading">
+            <nav class="sa-profile-breadcrumb" aria-label="Breadcrumb">
                 <i class="bi bi-house-door" aria-hidden="true"></i>
-                <span>Study India</span>
+                <span>Study Abroad</span>
                 <i class="bi bi-chevron-right" aria-hidden="true"></i>
                 <span>My Account</span>
                 <i class="bi bi-chevron-right" aria-hidden="true"></i>
                 <span>Profile</span>
             </nav>
 
-            <h1 class="si-profile-title">
-                <span class="si-profile-title-icon">
+            <h1 class="sa-profile-title">
+                <span class="sa-profile-title-icon">
                     <i class="bi bi-person-circle" aria-hidden="true"></i>
                 </span>
                 Your Profile
             </h1>
 
-            <p class="si-profile-subtitle">
-                Manage your personal information and keep your Study India
+            <p class="sa-profile-subtitle">
+                Manage your personal information and keep your Study Abroad
                 account details up to date.
             </p>
         </header>
 
         @if (session('success'))
-            <div class="si-profile-alert" role="status">
+            <div class="sa-profile-alert" role="status">
                 <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
                 <div>{{ session('success') }}</div>
             </div>
         @endif
 
         @if ($errors->any())
-            <div class="si-profile-alert si-profile-alert-error" role="alert">
+            <div class="sa-profile-alert sa-profile-alert-error" role="alert">
                 <i class="bi bi-exclamation-circle-fill" aria-hidden="true"></i>
                 <div>
                     <strong>Please check the form.</strong>
@@ -834,96 +830,99 @@
             </div>
         @endif
 
-        <div class="si-profile-layout">
+        <div class="sa-profile-layout">
 
             {{-- Left column: profile summary --}}
 
-            <aside class="si-profile-sidebar">
-                <div class="si-profile-sidebar-top">
+            <aside class="sa-profile-sidebar">
+                <div class="sa-profile-sidebar-top">
 
                     {{-- Profile Photo Upload --}}
-                    <form action="{{ route('study-india.profile.photo.update') }}" method="POST"
-                        enctype="multipart/form-data" id="siProfilePhotoForm">
+
+                    <form action="{{ route('study-abroad.profile.photo.update') }}" method="POST"
+                        enctype="multipart/form-data" id="saProfilePhotoForm">
                         @csrf
 
-                        <label for="siProfilePhotoInput" class="si-profile-avatar si-profile-avatar-upload"
+                        <label for="saProfilePhotoInput" class="sa-profile-avatar sa-profile-avatar-upload"
                             title="Click to upload or change your profile photo">
-
-                            @if (!empty($user->profile_photo))
-                                <img src="{{ asset('storage/' . $user->profile_photo) }}" alt="Profile photo"
-                                    class="si-profile-avatar-image">
+                            @if (!empty($user->profile_image))
+                                <img src="{{ asset('storage/' . $user->profile_image) }}" alt="Profile photo"
+                                    class="sa-profile-avatar-image">
                             @else
                                 <i class="bi bi-person-fill" aria-hidden="true"></i>
                             @endif
 
-                            <span class="si-profile-avatar-camera">
+                            <span class="sa-profile-avatar-camera">
                                 <i class="bi bi-camera-fill" aria-hidden="true"></i>
                             </span>
                         </label>
 
-                        <input type="file" id="siProfilePhotoInput" name="profile_photo"
-                            accept="image/jpeg,image/png,image/webp" hidden required>
+                        <input type="file" id="saProfilePhotoInput" name="profile_image"
+                            accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp" hidden required>
                     </form>
 
-                    <p class="si-profile-photo-help">
+                    @error('profile_image')
+                        <div class="sa-profile-field-error">{{ $message }}</div>
+                    @enderror
+
+                    <p class="sa-profile-photo-help">
                         Click your photo to upload or change it. JPG, PNG or WebP; maximum 2 MB.
                     </p>
 
-                    @error('profile_photo')
-                        <div class="si-profile-field-error">{{ $message }}</div>
+                    @error('profile_image')
+                        <div class="sa-profile-field-error">{{ $message }}</div>
                     @enderror
 
-
-                    <h2 class="si-profile-user-name">
+                    <h2 class="sa-profile-user-name">
                         {{ $user->full_name }}
                     </h2>
 
-                    <p class="si-profile-user-email">
+                    <p class="sa-profile-user-email">
                         {{ $user->email }}
                     </p>
 
                     @if ($user->is_verified)
-                        <span class="si-profile-verified">
+                        <span class="sa-profile-verified">
                             <i class="bi bi-patch-check-fill" aria-hidden="true"></i>
                             Verified Account
                         </span>
                     @endif
                 </div>
 
-                <div class="si-profile-sidebar-content">
-                    <h3 class="si-profile-sidebar-heading">Account Overview</h3>
+                <div class="sa-profile-sidebar-content">
+                    <h3 class="sa-profile-sidebar-heading">Account Overview</h3>
 
-                    <div class="si-profile-info-item">
-                        <span class="si-profile-info-icon">
+                    <div class="sa-profile-info-item">
+                        <span class="sa-profile-info-icon">
                             <i class="bi bi-telephone" aria-hidden="true"></i>
                         </span>
                         <div>
-                            <span class="si-profile-info-label">Registered Phone</span>
-                            <span class="si-profile-info-value">{{ $user->phone }}</span>
+                            <span class="sa-profile-info-label">Registered Phone</span>
+                            <span class="sa-profile-info-value">{{ $user->phone }}</span>
                         </div>
                     </div>
 
-                    <div class="si-profile-info-item">
-                        <span class="si-profile-info-icon">
+                    <div class="sa-profile-info-item">
+                        <span class="sa-profile-info-icon">
                             <i class="bi bi-geo-alt" aria-hidden="true"></i>
                         </span>
                         <div>
-                            <span class="si-profile-info-label">City</span>
-                            <span class="si-profile-info-value">{{ $user->city }}</span>
+                            <span class="sa-profile-info-label">City</span>
+                            <span class="sa-profile-info-value">{{ $user->city }}</span>
                         </div>
                     </div>
 
-                    <div class="si-profile-info-item">
-                        <span class="si-profile-info-icon">
+                    <div class="sa-profile-info-item">
+                        <span class="sa-profile-info-icon">
                             <i class="bi bi-mortarboard" aria-hidden="true"></i>
                         </span>
                         <div>
-                            <span class="si-profile-info-label">Interested Course</span>
-                            <span class="si-profile-info-value">{{ $user->course_interested }}</span>
+                            <span class="sa-profile-info-label">Interested Course</span>
+                            <span class="sa-profile-info-value">{{ $user->course_interested }}</span>
                         </div>
                     </div>
 
-                    <a href="{{ route('study-india.settings') }}" class="si-profile-sidebar-link">
+                    <a href="{{ route('study-abroad.settings') }}" class="sa-profile-sidebar-link">
                         <span>
                             <i class="bi bi-sliders2 me-1" aria-hidden="true"></i>
                             Account Settings
@@ -935,123 +934,140 @@
 
             {{-- Right column: editable profile form --}}
 
-            <section class="si-profile-form-card">
-                <div class="si-profile-form-header">
-                    <h2 class="si-profile-form-title">Personal Information</h2>
-                    <p class="si-profile-form-description">
+            <section class="sa-profile-form-card">
+                <div class="sa-profile-form-header">
+                    <h2 class="sa-profile-form-title">Personal Information</h2>
+                    <p class="sa-profile-form-description">
                         Update the information below. Your registered email
                         address is read-only because it is used for OTP login.
                     </p>
                 </div>
 
-                <div class="si-profile-form-body">
-                    <form action="{{ route('study-india.profile.update') }}" method="POST">
+                <div class="sa-profile-form-body">
+                    <form action="{{ route('study-abroad.profile.update') }}" method="POST">
                         @csrf
                         @method('PUT')
 
-                        <div class="si-profile-grid">
+                        <div class="sa-profile-grid">
 
-                            <div class="si-profile-field">
-                                <label class="si-profile-label" for="siProfileName">
-                                    Full Name <span class="si-profile-label-required">*</span>
+                            <div class="sa-profile-field">
+                                <label class="sa-profile-label" for="saProfileName">
+                                    Full Name <span class="sa-profile-label-required">*</span>
                                 </label>
-                                <div class="si-profile-input-wrap">
-                                    <i class="bi bi-person si-profile-input-icon" aria-hidden="true"></i>
-                                    <input class="si-profile-input {{ $errors->has('full_name') ? 'is-invalid' : '' }}"
-                                        id="siProfileName" type="text" name="full_name"
+
+                                <div class="sa-profile-input-wrap">
+                                    <i class="bi bi-person sa-profile-input-icon" aria-hidden="true"></i>
+
+                                    <input
+                                        class="sa-profile-input {{ $errors->has('full_name') ? 'is-invalid' : '' }}"
+                                        id="saProfileName" type="text" name="full_name"
                                         value="{{ old('full_name', $user->full_name) }}" maxlength="100"
                                         autocomplete="name" required>
                                 </div>
+
                                 @error('full_name')
-                                    <div class="si-profile-field-error">{{ $message }}</div>
+                                    <div class="sa-profile-field-error">{{ $message }}</div>
                                 @enderror
                             </div>
 
-                            <div class="si-profile-field">
-                                <label class="si-profile-label" for="siProfileEmail">
+                            <div class="sa-profile-field">
+                                <label class="sa-profile-label" for="saProfileEmail">
                                     Email Address
                                 </label>
-                                <div class="si-profile-input-wrap">
-                                    <i class="bi bi-envelope si-profile-input-icon" aria-hidden="true"></i>
-                                    <input class="si-profile-input" id="siProfileEmail" type="email"
+
+                                <div class="sa-profile-input-wrap">
+                                    <i class="bi bi-envelope sa-profile-input-icon" aria-hidden="true"></i>
+
+                                    <input class="sa-profile-input" id="saProfileEmail" type="email"
                                         value="{{ $user->email }}" autocomplete="email" readonly
-                                        aria-describedby="siProfileEmailHelp">
+                                        aria-describedby="saProfileEmailHelp">
                                 </div>
-                                <p class="si-profile-input-help" id="siProfileEmailHelp">
+
+                                <p class="sa-profile-input-help" id="saProfileEmailHelp">
                                     <i class="bi bi-shield-lock" aria-hidden="true"></i>
                                     Used for OTP verification and login.
                                 </p>
                             </div>
 
-                            <div class="si-profile-field">
-                                <label class="si-profile-label" for="siProfilePhone">
-                                    Phone Number <span class="si-profile-label-required">*</span>
+                            <div class="sa-profile-field">
+                                <label class="sa-profile-label" for="saProfilePhone">
+                                    Phone Number <span class="sa-profile-label-required">*</span>
                                 </label>
-                                <div class="si-profile-input-wrap">
-                                    <i class="bi bi-telephone si-profile-input-icon" aria-hidden="true"></i>
-                                    <input class="si-profile-input {{ $errors->has('phone') ? 'is-invalid' : '' }}"
-                                        id="siProfilePhone" type="tel" name="phone"
+
+                                <div class="sa-profile-input-wrap">
+                                    <i class="bi bi-telephone sa-profile-input-icon" aria-hidden="true"></i>
+
+                                    <input class="sa-profile-input {{ $errors->has('phone') ? 'is-invalid' : '' }}"
+                                        id="saProfilePhone" type="tel" name="phone"
                                         value="{{ old('phone', $user->phone) }}" pattern="[0-9]{10,15}"
                                         maxlength="15" inputmode="numeric" autocomplete="tel" required>
                                 </div>
-                                <p class="si-profile-input-help">
+
+                                <p class="sa-profile-input-help">
                                     <i class="bi bi-info-circle" aria-hidden="true"></i>
                                     Enter 10 digits without spaces.
                                 </p>
+
                                 @error('phone')
-                                    <div class="si-profile-field-error">{{ $message }}</div>
+                                    <div class="sa-profile-field-error">{{ $message }}</div>
                                 @enderror
                             </div>
 
-                            <div class="si-profile-field">
-                                <label class="si-profile-label" for="siProfileCity">
-                                    City <span class="si-profile-label-required">*</span>
+                            <div class="sa-profile-field">
+                                <label class="sa-profile-label" for="saProfileCity">
+                                    City <span class="sa-profile-label-required">*</span>
                                 </label>
-                                <div class="si-profile-input-wrap">
-                                    <i class="bi bi-geo-alt si-profile-input-icon" aria-hidden="true"></i>
-                                    <input class="si-profile-input {{ $errors->has('city') ? 'is-invalid' : '' }}"
-                                        id="siProfileCity" type="text" name="city"
+
+                                <div class="sa-profile-input-wrap">
+                                    <i class="bi bi-geo-alt sa-profile-input-icon" aria-hidden="true"></i>
+
+                                    <input class="sa-profile-input {{ $errors->has('city') ? 'is-invalid' : '' }}"
+                                        id="saProfileCity" type="text" name="city"
                                         value="{{ old('city', $user->city) }}" maxlength="100"
                                         autocomplete="address-level2" required>
                                 </div>
+
                                 @error('city')
-                                    <div class="si-profile-field-error">{{ $message }}</div>
+                                    <div class="sa-profile-field-error">{{ $message }}</div>
                                 @enderror
                             </div>
 
-                            <div class="si-profile-field si-profile-field-full">
-                                <label class="si-profile-label" for="siProfileCourse">
-                                    Course Interested In <span class="si-profile-label-required">*</span>
+                            <div class="sa-profile-field sa-profile-field-full">
+                                <label class="sa-profile-label" for="saProfileCourse">
+                                    Course Interested In <span class="sa-profile-label-required">*</span>
                                 </label>
-                                <div class="si-profile-input-wrap">
-                                    <i class="bi bi-mortarboard si-profile-input-icon" aria-hidden="true"></i>
+
+                                <div class="sa-profile-input-wrap">
+                                    <i class="bi bi-mortarboard sa-profile-input-icon" aria-hidden="true"></i>
+
                                     <input
-                                        class="si-profile-input {{ $errors->has('course_interested') ? 'is-invalid' : '' }}"
-                                        id="siProfileCourse" type="text" name="course_interested"
+                                        class="sa-profile-input {{ $errors->has('course_interested') ? 'is-invalid' : '' }}"
+                                        id="saProfileCourse" type="text" name="course_interested"
                                         value="{{ old('course_interested', $user->course_interested) }}"
                                         maxlength="150" required>
                                 </div>
+
                                 @error('course_interested')
-                                    <div class="si-profile-field-error">{{ $message }}</div>
+                                    <div class="sa-profile-field-error">{{ $message }}</div>
                                 @enderror
                             </div>
 
                         </div>
 
-                        <div class="si-profile-form-actions">
-                            <div class="si-profile-form-note">
+                        <div class="sa-profile-form-actions">
+                            <div class="sa-profile-form-note">
                                 <i class="bi bi-shield-check" aria-hidden="true"></i>
                                 Your account details stay protected.
                             </div>
 
-                            <div class="si-profile-buttons">
-                                <a href="{{ route('study-india.settings') }}"
-                                    class="si-profile-btn si-profile-btn-secondary">
+                            <div class="sa-profile-buttons">
+                                <a href="{{ route('study-abroad.settings') }}"
+                                    class="sa-profile-btn sa-profile-btn-secondary">
                                     <i class="bi bi-gear" aria-hidden="true"></i>
                                     Settings
                                 </a>
 
-                                <button type="submit" class="si-profile-btn">
+                                <button type="submit" class="sa-profile-btn">
                                     <i class="bi bi-check2-circle" aria-hidden="true"></i>
                                     Save Changes
                                 </button>
@@ -1065,20 +1081,17 @@
     </div>
 </main>
 
-
-
-
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-    const photoInput = document.getElementById('siProfilePhotoInput');
-    const photoForm = document.getElementById('siProfilePhotoForm');
+    document.addEventListener('DOMContentLoaded', function() {
+        const photoInput = document.getElementById('saProfilePhotoInput');
+        const photoForm = document.getElementById('saProfilePhotoForm');
 
-    if (photoInput && photoForm) {
-        photoInput.addEventListener('change', function () {
-            if (this.files && this.files.length > 0) {
-                photoForm.submit();
-            }
-        });
-    }
-});
+        if (photoInput && photoForm) {
+            photoInput.addEventListener('change', function() {
+                if (this.files && this.files.length > 0) {
+                    photoForm.submit();
+                }
+            });
+        }
+    });
 </script>

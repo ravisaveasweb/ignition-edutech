@@ -58,4 +58,13 @@ class StudyAbroadApplication extends Model
             'application_id'
         );
     }
+
+
+    public function user()
+    {
+        return $this->belongsTo(
+            \App\Models\StudyAbroadUser::class,
+            'study_abroad_user_id'
+        );
+    }
 }

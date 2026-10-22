@@ -1,17 +1,17 @@
 <style>
     .si-menu-user .si-user-icon {
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
-}
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
 
-.si-menu-user .si-menu-profile-photo {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-}
+    .si-menu-user .si-menu-profile-photo {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
 </style>
 
 <!DOCTYPE html>
@@ -636,7 +636,7 @@
             <a href="{{ route('study-india.settings') }}" class="si-login-btn">
                 <i class="bi bi-gear"></i> Account Settings
             </a>
-             <a href="{{ route('study-india.logout') }}" class="si-login-btn">
+            <a href="{{ route('study-india.logout') }}" class="si-login-btn">
                 <i class="bi bi-box-arrow-in-right"></i> Logout
             </a>
         @else

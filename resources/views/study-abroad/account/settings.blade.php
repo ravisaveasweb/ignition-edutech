@@ -1,41 +1,40 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/logo/favicon.png') }}" />
-
+<link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/logo/favicon.png') }}" />
 
 <style>
     :root {
-        --sis-orange: #eb933a;
-        --sis-orange-dark: #d7791f;
-        --sis-navy: #0a2540;
-        --sis-text: #26364a;
-        --sis-muted: #718096;
-        --sis-border: #e5eaf1;
-        --sis-bg: #f4f7fb;
-        --sis-danger: #b42318;
-        --sis-radius: 15px;
-        --sis-shadow: 0 5px 24px rgba(10, 37, 64, .045);
-        --sis-shadow-hover: 0 14px 32px rgba(10, 37, 64, .09);
-        --sis-transition: .28s cubic-bezier(.2, .7, .25, 1);
+        --sas-orange: #eb933a;
+        --sas-orange-dark: #d7791f;
+        --sas-navy: #0a2540;
+        --sas-text: #26364a;
+        --sas-muted: #718096;
+        --sas-border: #e5eaf1;
+        --sas-bg: #f4f7fb;
+        --sas-danger: #b42318;
+        --sas-radius: 15px;
+        --sas-shadow: 0 5px 24px rgba(10, 37, 64, .045);
+        --sas-shadow-hover: 0 14px 32px rgba(10, 37, 64, .09);
+        --sas-transition: .28s cubic-bezier(.2, .7, .25, 1);
     }
 
-    .si-settings-page,
-    .si-settings-page * {
+    .sa-settings-page,
+    .sa-settings-page * {
         box-sizing: border-box;
     }
 
-    .si-settings-page {
+    .sa-settings-page {
         min-height: 80vh;
         padding: 38px 20px 60px;
         background:
             radial-gradient(ellipse at top left, #fff1df 0, transparent 34%),
             radial-gradient(ellipse at bottom right, #eaf2fc 0, transparent 38%),
-            var(--sis-bg);
-        color: var(--sis-text);
+            var(--sas-bg);
+        color: var(--sas-text);
         font-family: Arial, Helvetica, sans-serif;
         line-height: 1.65;
     }
 
-    .si-settings-container {
+    .sa-settings-container {
         width: 100%;
         max-width: 1000px;
         margin: 0 auto;
@@ -43,37 +42,37 @@
 
     /* Breadcrumb */
 
-    .si-settings-breadcrumb {
+    .sa-settings-breadcrumb {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         gap: 8px;
         margin-bottom: 18px;
-        color: var(--sis-muted);
+        color: var(--sas-muted);
         font-size: 12px;
-        animation: sisFadeIn .45s ease both;
+        animation: sasFadeIn .45s ease both;
     }
 
-    .si-settings-breadcrumb i {
-        color: var(--sis-orange-dark);
-        transition: transform var(--sis-transition);
+    .sa-settings-breadcrumb i {
+        color: var(--sas-orange-dark);
+        transition: transform var(--sas-transition);
     }
 
-    .si-settings-breadcrumb i:hover {
+    .sa-settings-breadcrumb i:hover {
         transform: translateX(3px);
     }
 
     /* Page heading */
 
-    .si-settings-header {
+    .sa-settings-header {
         display: flex;
         align-items: center;
         gap: 17px;
         margin-bottom: 12px;
-        animation: sisSlideUp .55s ease both;
+        animation: sasSlideUp .55s ease both;
     }
 
-    .si-settings-title-icon {
+    .sa-settings-title-icon {
         display: grid;
         flex: 0 0 55px;
         width: 55px;
@@ -82,51 +81,51 @@
         border: 1px solid #f5d6b5;
         border-radius: 16px;
         background: linear-gradient(145deg, #fff7ee, #ffe9d1);
-        color: var(--sis-orange-dark);
+        color: var(--sas-orange-dark);
         font-size: 26px;
         box-shadow: 0 4px 12px rgba(235, 147, 58, .08);
-        transition: transform .4s ease, box-shadow var(--sis-transition);
+        transition: transform .4s ease, box-shadow var(--sas-transition);
     }
 
-    .si-settings-title-icon:hover {
+    .sa-settings-title-icon:hover {
         transform: rotate(-9deg) scale(1.08);
         box-shadow: 0 9px 22px rgba(235, 147, 58, .2);
     }
 
-    .si-settings-title-icon i {
+    .sa-settings-title-icon i {
         transition: transform .55s ease;
     }
 
-    .si-settings-title-icon:hover i {
+    .sa-settings-title-icon:hover i {
         transform: rotate(35deg);
     }
 
-    .si-settings-title {
+    .sa-settings-title {
         margin: 0 0 7px;
-        color: var(--sis-navy);
+        color: var(--sas-navy);
         font-size: clamp(26px, 3vw, 34px);
         font-weight: 750;
         letter-spacing: -.6px;
         line-height: 1.3;
     }
 
-    .si-settings-muted {
+    .sa-settings-muted {
         margin: 0;
-        color: var(--sis-muted);
+        color: var(--sas-muted);
         font-size: 14px;
         line-height: 1.75;
     }
 
-    .si-settings-intro {
+    .sa-settings-intro {
         max-width: 680px;
         margin: 0 0 27px 72px;
-        animation: sisSlideUp .65s ease both;
+        animation: sasSlideUp .65s ease both;
     }
 
     /* Alerts */
 
-    .si-settings-alert,
-    .si-settings-error {
+    .sa-settings-alert,
+    .sa-settings-error {
         display: flex;
         align-items: flex-start;
         gap: 11px;
@@ -138,27 +137,27 @@
         color: #17653a;
         font-size: 14px;
         line-height: 1.65;
-        animation: sisAlertIn .4s ease both;
+        animation: sasAlertIn .4s ease both;
     }
 
-    .si-settings-alert>i,
-    .si-settings-error>i {
+    .sa-settings-alert>i,
+    .sa-settings-error>i {
         margin-top: 2px;
         font-size: 18px;
     }
 
-    .si-settings-alert>i {
-        animation: sisSuccessPop .5s ease both;
+    .sa-settings-alert>i {
+        animation: sasSuccessPop .5s ease both;
     }
 
-    .si-settings-error {
+    .sa-settings-error {
         display: block;
         border-color: #f4c7c3;
         background: #fff3f2;
-        color: var(--sis-danger);
+        color: var(--sas-danger);
     }
 
-    .si-settings-error-title {
+    .sa-settings-error-title {
         display: flex;
         align-items: center;
         gap: 8px;
@@ -168,75 +167,75 @@
 
     /* Settings cards */
 
-    .si-settings-section {
+    .sa-settings-section {
         position: relative;
         margin-bottom: 20px;
         overflow: hidden;
-        border: 1px solid var(--sis-border);
-        border-radius: var(--sis-radius);
+        border: 1px solid var(--sas-border);
+        border-radius: var(--sas-radius);
         background: #fff;
-        box-shadow: var(--sis-shadow);
-        animation: sisCardReveal .65s cubic-bezier(.2, .7, .25, 1) both;
+        box-shadow: var(--sas-shadow);
+        animation: sasCardReveal .65s cubic-bezier(.2, .7, .25, 1) both;
         transition:
-            box-shadow var(--sis-transition),
-            border-color var(--sis-transition),
-            transform var(--sis-transition);
+            box-shadow var(--sas-transition),
+            border-color var(--sas-transition),
+            transform var(--sas-transition);
     }
 
-    .si-settings-section:nth-of-type(1) {
+    .sa-settings-section:nth-of-type(1) {
         animation-delay: .05s;
     }
 
-    .si-settings-section:nth-of-type(2) {
+    .sa-settings-section:nth-of-type(2) {
         animation-delay: .12s;
     }
 
-    .si-settings-section:nth-of-type(3) {
+    .sa-settings-section:nth-of-type(3) {
         animation-delay: .19s;
     }
 
-    .si-settings-section:nth-of-type(4) {
+    .sa-settings-section:nth-of-type(4) {
         animation-delay: .26s;
     }
 
-    .si-settings-section:hover {
+    .sa-settings-section:hover {
         border-color: #e2c5a7;
-        box-shadow: var(--sis-shadow-hover);
+        box-shadow: var(--sas-shadow-hover);
         transform: translateY(-3px);
     }
 
     /* Small orange accent at top of each card */
 
-    .si-settings-section::before {
+    .sa-settings-section::before {
         position: absolute;
         top: 0;
         left: 0;
         width: 0;
         height: 3px;
-        background: linear-gradient(90deg, var(--sis-orange), #ffc27e);
+        background: linear-gradient(90deg, var(--sas-orange), #ffc27e);
         content: "";
         transition: width .4s ease;
     }
 
-    .si-settings-section:hover::before {
+    .sa-settings-section:hover::before {
         width: 100%;
     }
 
-    .si-settings-section-header {
+    .sa-settings-section-header {
         display: flex;
         align-items: center;
         gap: 13px;
         padding: 20px 24px;
-        border-bottom: 1px solid var(--sis-border);
+        border-bottom: 1px solid var(--sas-border);
         background: linear-gradient(110deg, #fffaf4, #fff);
-        transition: background var(--sis-transition);
+        transition: background var(--sas-transition);
     }
 
-    .si-settings-section:hover .si-settings-section-header {
+    .sa-settings-section:hover .sa-settings-section-header {
         background: linear-gradient(110deg, #fff7ed, #fff);
     }
 
-    .si-settings-icon {
+    .sa-settings-icon {
         display: grid;
         flex: 0 0 44px;
         width: 44px;
@@ -244,98 +243,98 @@
         place-items: center;
         border-radius: 12px;
         background: #fff0df;
-        color: var(--sis-orange-dark);
+        color: var(--sas-orange-dark);
         font-size: 21px;
         transition:
-            transform var(--sis-transition),
-            background var(--sis-transition),
-            box-shadow var(--sis-transition);
+            transform var(--sas-transition),
+            background var(--sas-transition),
+            box-shadow var(--sas-transition);
     }
 
-    .si-settings-section:hover .si-settings-icon {
+    .sa-settings-section:hover .sa-settings-icon {
         transform: translateY(-3px) rotate(-4deg);
         box-shadow: 0 5px 12px rgba(235, 147, 58, .14);
     }
 
-    .si-settings-icon-danger {
+    .sa-settings-icon-danger {
         background: #fff0ef;
-        color: var(--sis-danger);
+        color: var(--sas-danger);
     }
 
-    .si-settings-section-title {
+    .sa-settings-section-title {
         margin: 0 0 5px;
-        color: var(--sis-navy);
+        color: var(--sas-navy);
         font-size: 18px;
         font-weight: 750;
         line-height: 1.4;
     }
 
-    .si-settings-section-subtitle {
+    .sa-settings-section-subtitle {
         margin: 0;
-        color: var(--sis-muted);
+        color: var(--sas-muted);
         font-size: 12px;
         line-height: 1.6;
     }
 
-    .si-settings-section-body {
+    .sa-settings-section-body {
         padding: 23px 24px 25px;
     }
 
-    .si-settings-description {
+    .sa-settings-description {
         margin: 0 0 16px;
-        color: var(--sis-muted);
+        color: var(--sas-muted);
         font-size: 14px;
         line-height: 1.8;
     }
 
     /* Notification preference */
 
-    .si-settings-preference {
+    .sa-settings-preference {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 18px;
         padding: 17px;
-        border: 1px solid var(--sis-border);
+        border: 1px solid var(--sas-border);
         border-radius: 12px;
         background: #fafbfd;
         transition:
-            border-color var(--sis-transition),
-            background var(--sis-transition),
-            box-shadow var(--sis-transition),
-            transform var(--sis-transition);
+            border-color var(--sas-transition),
+            background var(--sas-transition),
+            box-shadow var(--sas-transition),
+            transform var(--sas-transition);
     }
 
-    .si-settings-preference:hover {
+    .sa-settings-preference:hover {
         border-color: #edbd8b;
         background: #fffaf5;
         box-shadow: 0 5px 16px rgba(235, 147, 58, .07);
         transform: translateY(-1px);
     }
 
-    .si-settings-preference:focus-within {
-        border-color: var(--sis-orange);
+    .sa-settings-preference:focus-within {
+        border-color: var(--sas-orange);
         box-shadow: 0 0 0 3px rgba(235, 147, 58, .12);
     }
 
-    .si-settings-preference-title {
+    .sa-settings-preference-title {
         display: block;
         margin-bottom: 5px;
-        color: var(--sis-navy);
+        color: var(--sas-navy);
         font-size: 14px;
         font-weight: 700;
     }
 
-    .si-settings-preference-description {
+    .sa-settings-preference-description {
         margin: 0;
-        color: var(--sis-muted);
+        color: var(--sas-muted);
         font-size: 12px;
         line-height: 1.6;
     }
 
     /* Animated toggle */
 
-    .si-settings-toggle {
+    .sa-settings-toggle {
         position: relative;
         display: inline-flex;
         flex: 0 0 48px;
@@ -345,26 +344,26 @@
         cursor: pointer;
     }
 
-    .si-settings-toggle input {
+    .sa-settings-toggle input {
         position: absolute;
         width: 1px;
         height: 1px;
         opacity: 0;
     }
 
-    .si-settings-toggle-track {
+    .sa-settings-toggle-track {
         position: absolute;
         inset: 0;
         border: 1px solid #cbd5e1;
         border-radius: 30px;
         background: #dfe5ed;
         transition:
-            background var(--sis-transition),
-            border-color var(--sis-transition),
-            box-shadow var(--sis-transition);
+            background var(--sas-transition),
+            border-color var(--sas-transition),
+            box-shadow var(--sas-transition);
     }
 
-    .si-settings-toggle-track::before {
+    .sa-settings-toggle-track::before {
         position: absolute;
         top: 3px;
         left: 3px;
@@ -374,70 +373,70 @@
         background: #fff;
         box-shadow: 0 1px 4px #0a254025;
         content: "";
-        transition: transform var(--sis-transition);
+        transition: transform var(--sas-transition);
     }
 
-    .si-settings-toggle:hover .si-settings-toggle-track {
+    .sa-settings-toggle:hover .sa-settings-toggle-track {
         box-shadow: 0 0 0 4px rgba(235, 147, 58, .09);
     }
 
-    .si-settings-toggle input:checked+.si-settings-toggle-track {
-        border-color: var(--sis-orange);
-        background: var(--sis-orange);
+    .sa-settings-toggle input:checked+.sa-settings-toggle-track {
+        border-color: var(--sas-orange);
+        background: var(--sas-orange);
         box-shadow: 0 0 0 3px rgba(235, 147, 58, .09);
     }
 
-    .si-settings-toggle input:checked+.si-settings-toggle-track::before {
+    .sa-settings-toggle input:checked+.sa-settings-toggle-track::before {
         transform: translateX(21px);
     }
 
-    .si-settings-toggle input:focus-visible+.si-settings-toggle-track {
+    .sa-settings-toggle input:focus-visible+.sa-settings-toggle-track {
         outline: 3px solid #eb933a55;
         outline-offset: 3px;
     }
 
     /* Account details */
 
-    .si-settings-account-details {
+    .sa-settings-account-details {
         display: flex;
         flex-wrap: wrap;
         gap: 12px;
         margin-bottom: 19px;
     }
 
-    .si-settings-detail {
+    .sa-settings-detail {
         position: relative;
         flex: 1 1 200px;
         min-width: 0;
         padding: 15px;
         overflow: hidden;
-        border: 1px solid var(--sis-border);
+        border: 1px solid var(--sas-border);
         border-radius: 11px;
         background: #fafbfd;
         transition:
-            border-color var(--sis-transition),
-            background var(--sis-transition),
-            transform var(--sis-transition),
-            box-shadow var(--sis-transition);
+            border-color var(--sas-transition),
+            background var(--sas-transition),
+            transform var(--sas-transition),
+            box-shadow var(--sas-transition);
     }
 
-    .si-settings-detail:hover {
+    .sa-settings-detail:hover {
         border-color: #edbd8b;
         background: #fffaf5;
         box-shadow: 0 5px 15px rgba(10, 37, 64, .04);
         transform: translateY(-3px);
     }
 
-    .si-settings-detail-label {
+    .sa-settings-detail-label {
         display: block;
         margin-bottom: 6px;
-        color: var(--sis-muted);
+        color: var(--sas-muted);
         font-size: 12px;
     }
 
-    .si-settings-detail-value {
+    .sa-settings-detail-value {
         display: block;
-        color: var(--sis-navy);
+        color: var(--sas-navy);
         font-size: 14px;
         font-weight: 700;
         line-height: 1.6;
@@ -446,7 +445,7 @@
 
     /* Warning */
 
-    .si-settings-warning {
+    .sa-settings-warning {
         display: flex;
         align-items: flex-start;
         gap: 10px;
@@ -458,26 +457,26 @@
         color: #805515;
         font-size: 13px;
         line-height: 1.75;
-        transition: background var(--sis-transition), border-color var(--sis-transition);
+        transition: background var(--sas-transition), border-color var(--sas-transition);
     }
 
-    .si-settings-warning:hover {
+    .sa-settings-warning:hover {
         border-color: #e6ca79;
         background: #fff6db;
     }
 
-    .si-settings-warning>i {
+    .sa-settings-warning>i {
         margin-top: 2px;
         font-size: 17px;
     }
 
-    .si-settings-danger-description {
+    .sa-settings-danger-description {
         color: #667085;
     }
 
     /* Buttons */
 
-    .si-settings-btn {
+    .sa-settings-btn {
         position: relative;
         isolation: isolate;
         display: inline-flex;
@@ -489,7 +488,7 @@
         padding: 11px 17px;
         border: 1px solid transparent;
         border-radius: 9px;
-        background: var(--sis-orange);
+        background: var(--sas-orange);
         color: #fff;
         font-family: inherit;
         font-size: 13px;
@@ -499,14 +498,14 @@
         text-decoration: none;
         cursor: pointer;
         transition:
-            transform var(--sis-transition),
-            box-shadow var(--sis-transition),
-            background var(--sis-transition),
-            border-color var(--sis-transition),
-            color var(--sis-transition);
+            transform var(--sas-transition),
+            box-shadow var(--sas-transition),
+            background var(--sas-transition),
+            border-color var(--sas-transition),
+            color var(--sas-transition);
     }
 
-    .si-settings-btn::before {
+    .sa-settings-btn::before {
         position: absolute;
         z-index: -1;
         top: 0;
@@ -519,95 +518,95 @@
         transition: left .55s ease;
     }
 
-    .si-settings-btn:hover::before {
+    .sa-settings-btn:hover::before {
         left: 140%;
     }
 
-    .si-settings-btn:hover {
+    .sa-settings-btn:hover {
         transform: translateY(-2px);
         box-shadow: 0 6px 15px rgba(10, 37, 64, .12);
-        background: var(--sis-orange-dark);
+        background: var(--sas-orange-dark);
         color: #fff;
     }
 
-    .si-settings-btn:active {
+    .sa-settings-btn:active {
         transform: translateY(0) scale(.98);
         box-shadow: none;
     }
 
-    .si-settings-btn i {
-        transition: transform var(--sis-transition);
+    .sa-settings-btn i {
+        transition: transform var(--sas-transition);
     }
 
-    .si-settings-btn:hover>i.bi-arrow-right,
-    .si-settings-btn:hover>i.bi-arrow-up-right {
+    .sa-settings-btn:hover>i.bi-arrow-right,
+    .sa-settings-btn:hover>i.bi-arrow-up-right {
         transform: translateX(3px);
     }
 
-    .si-settings-btn-neutral {
+    .sa-settings-btn-neutral {
         border-color: #dbe2ec;
         background: #fff;
-        color: var(--sis-navy);
+        color: var(--sas-navy);
     }
 
-    .si-settings-btn-neutral:hover {
-        border-color: var(--sis-orange);
+    .sa-settings-btn-neutral:hover {
+        border-color: var(--sas-orange);
         background: #fff8f0;
-        color: var(--sis-orange-dark);
+        color: var(--sas-orange-dark);
     }
 
-    .si-settings-btn-danger {
+    .sa-settings-btn-danger {
         border-color: #f1c5c1;
         background: #fff2f1;
-        color: var(--sis-danger);
+        color: var(--sas-danger);
     }
 
-    .si-settings-btn-danger:hover {
-        border-color: var(--sis-danger);
-        background: var(--sis-danger);
+    .sa-settings-btn-danger:hover {
+        border-color: var(--sas-danger);
+        background: var(--sas-danger);
         color: #fff;
     }
 
-    .si-settings-btn:focus-visible {
+    .sa-settings-btn:focus-visible {
         outline: 3px solid #eb933a70;
         outline-offset: 3px;
     }
 
-    .si-settings-actions {
+    .sa-settings-actions {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
     }
 
-    .si-settings-form-divider {
+    .sa-settings-form-divider {
         height: 1px;
         margin: 22px 0;
         border: 0;
-        background: var(--sis-border);
+        background: var(--sas-border);
     }
 
-    .si-settings-confirm {
+    .sa-settings-confirm {
         display: flex;
         align-items: flex-start;
         gap: 10px;
         margin: 0 0 17px;
-        color: var(--sis-text);
+        color: var(--sas-text);
         font-size: 13px;
         line-height: 1.7;
         cursor: pointer;
     }
 
-    .si-settings-confirm input {
+    .sa-settings-confirm input {
         flex: 0 0 16px;
         width: 16px;
         height: 16px;
         margin-top: 3px;
-        accent-color: var(--sis-danger);
+        accent-color: var(--sas-danger);
     }
 
     /* Security note */
 
-    .si-settings-security-note {
+    .sa-settings-security-note {
         display: flex;
         align-items: flex-start;
         gap: 10px;
@@ -619,31 +618,31 @@
         color: #49627c;
         font-size: 12px;
         line-height: 1.7;
-        animation: sisFadeIn .7s ease both;
+        animation: sasFadeIn .7s ease both;
         transition:
-            border-color var(--sis-transition),
-            box-shadow var(--sis-transition);
+            border-color var(--sas-transition),
+            box-shadow var(--sas-transition);
     }
 
-    .si-settings-security-note:hover {
+    .sa-settings-security-note:hover {
         border-color: #c2d6eb;
         box-shadow: 0 5px 15px rgba(10, 37, 64, .045);
     }
 
-    .si-settings-security-note i {
+    .sa-settings-security-note i {
         margin-top: 2px;
         color: #26734d;
         font-size: 17px;
-        transition: transform var(--sis-transition);
+        transition: transform var(--sas-transition);
     }
 
-    .si-settings-security-note:hover i {
+    .sa-settings-security-note:hover i {
         transform: scale(1.15);
     }
 
     /* Keyframes */
 
-    @keyframes sisFadeIn {
+    @keyframes sasFadeIn {
         from {
             opacity: 0;
         }
@@ -653,7 +652,7 @@
         }
     }
 
-    @keyframes sisSlideUp {
+    @keyframes sasSlideUp {
         from {
             opacity: 0;
             transform: translateY(14px);
@@ -665,7 +664,7 @@
         }
     }
 
-    @keyframes sisCardReveal {
+    @keyframes sasCardReveal {
         from {
             opacity: 0;
             transform: translateY(18px);
@@ -677,7 +676,7 @@
         }
     }
 
-    @keyframes sisAlertIn {
+    @keyframes sasAlertIn {
         from {
             opacity: 0;
             transform: translateX(-10px);
@@ -689,7 +688,7 @@
         }
     }
 
-    @keyframes sisSuccessPop {
+    @keyframes sasSuccessPop {
         0% {
             transform: scale(.7);
         }
@@ -706,16 +705,16 @@
     /* Responsive */
 
     @media (max-width: 650px) {
-        .si-settings-page {
+        .sa-settings-page {
             padding: 27px 14px 40px;
         }
 
-        .si-settings-header {
+        .sa-settings-header {
             align-items: flex-start;
             gap: 12px;
         }
 
-        .si-settings-title-icon {
+        .sa-settings-title-icon {
             flex-basis: 46px;
             width: 46px;
             height: 46px;
@@ -723,58 +722,58 @@
             font-size: 22px;
         }
 
-        .si-settings-title {
+        .sa-settings-title {
             font-size: 26px;
         }
 
-        .si-settings-intro {
+        .sa-settings-intro {
             margin: 0 0 22px;
         }
 
-        .si-settings-section-header {
+        .sa-settings-section-header {
             padding: 17px;
         }
 
-        .si-settings-section-body {
+        .sa-settings-section-body {
             padding: 18px;
         }
 
-        .si-settings-section-title {
+        .sa-settings-section-title {
             font-size: 17px;
         }
 
-        .si-settings-preference {
+        .sa-settings-preference {
             align-items: flex-start;
             padding: 13px;
         }
 
-        .si-settings-actions {
+        .sa-settings-actions {
             width: 100%;
         }
 
-        .si-settings-actions .si-settings-btn {
+        .sa-settings-actions .sa-settings-btn {
             width: 100%;
         }
 
-        .si-settings-section:hover {
+        .sa-settings-section:hover {
             transform: none;
         }
     }
 
     @media (max-width: 380px) {
-        .si-settings-title {
+        .sa-settings-title {
             font-size: 23px;
         }
 
-        .si-settings-preference {
+        .sa-settings-preference {
             gap: 10px;
         }
 
-        .si-settings-section-header {
+        .sa-settings-section-header {
             gap: 10px;
         }
 
-        .si-settings-icon {
+        .sa-settings-icon {
             flex-basis: 39px;
             width: 39px;
             height: 39px;
@@ -786,9 +785,9 @@
 
     @media (prefers-reduced-motion: reduce) {
 
-        .si-settings-page *,
-        .si-settings-page *::before,
-        .si-settings-page *::after {
+        .sa-settings-page *,
+        .sa-settings-page *::before,
+        .sa-settings-page *::after {
             animation: none !important;
             transition: none !important;
             scroll-behavior: auto !important;
@@ -802,10 +801,10 @@
 
     {{-- <x-study-india-header /> --}}
 
-    <main class="si-settings-page">
-        <div class="si-settings-container">
+    <main class="sa-settings-page">
+        <div class="sa-settings-container">
 
-            <nav class="si-settings-breadcrumb" aria-label="Breadcrumb">
+            <nav class="sa-settings-breadcrumb" aria-label="Breadcrumb">
                 <i class="bi bi-house-door" aria-hidden="true"></i>
                 <span>Study India</span>
                 <i class="bi bi-chevron-right" aria-hidden="true"></i>
@@ -814,32 +813,32 @@
                 <span>Settings</span>
             </nav>
 
-            <header class="si-settings-header">
-                <span class="si-settings-title-icon" aria-hidden="true">
+            <header class="sa-settings-header">
+                <span class="sa-settings-title-icon" aria-hidden="true">
                     <i class="bi bi-gear-wide-connected"></i>
                 </span>
 
                 <div>
-                    <h1 class="si-settings-title">Account Settings</h1>
-                    <p class="si-settings-muted">Manage your account and preferences</p>
+                    <h1 class="sa-settings-title">Account Settings</h1>
+                    <p class="sa-settings-muted">Manage your account and preferences</p>
                 </div>
             </header>
 
-            <p class="si-settings-muted si-settings-intro">
+            <p class="sa-settings-muted sa-settings-intro">
                 Control your email notifications, manage your profile, and choose
                 what happens to your Study India account.
             </p>
 
             @if (session('success'))
-                <div class="si-settings-alert" role="status">
+                <div class="sa-settings-alert" role="status">
                     <i class="bi bi-check-circle-fill" aria-hidden="true"></i>
                     <div>{{ session('success') }}</div>
                 </div>
             @endif
 
             @if (session('error'))
-                <div class="si-settings-error" role="alert">
-                    <div class="si-settings-error-title">
+                <div class="sa-settings-error" role="alert">
+                    <div class="sa-settings-error-title">
                         <i class="bi bi-exclamation-circle-fill" aria-hidden="true"></i>
                         Something went wrong
                     </div>
@@ -848,8 +847,8 @@
             @endif
 
             @if ($errors->any())
-                <div class="si-settings-error" role="alert">
-                    <div class="si-settings-error-title">
+                <div class="sa-settings-error" role="alert">
+                    <div class="sa-settings-error-title">
                         <i class="bi bi-exclamation-circle-fill" aria-hidden="true"></i>
                         Please check the following
                     </div>
@@ -861,51 +860,51 @@
 
             {{-- Email notification preferences --}}
 
-            <section class="si-settings-section">
-                <div class="si-settings-section-header">
-                    <span class="si-settings-icon" aria-hidden="true">
+            <section class="sa-settings-section">
+                <div class="sa-settings-section-header">
+                    <span class="sa-settings-icon" aria-hidden="true">
                         <i class="bi bi-bell"></i>
                     </span>
                     <div>
-                        <h2 class="si-settings-section-title">Email Notifications</h2>
-                        <p class="si-settings-section-subtitle">
+                        <h2 class="sa-settings-section-title">Email Notifications</h2>
+                        <p class="sa-settings-section-subtitle">
                             Choose how you receive optional updates.
                         </p>
                     </div>
                 </div>
 
-                <div class="si-settings-section-body">
-                    <p class="si-settings-description">
+                <div class="sa-settings-section-body">
+                    <p class="sa-settings-description">
                         Choose whether you want to receive optional Study India
                         updates at your registered email address.
                     </p>
 
-                    <form action="{{ route('study-india.settings.update') }}" method="POST">
+                    <form action="{{ route('study-abroad.settings.update') }}" method="POST">
                         @csrf
                         @method('PUT')
 
-                        <div class="si-settings-preference">
+                        <div class="sa-settings-preference">
                             <div>
-                                <span class="si-settings-preference-title">
+                                <span class="sa-settings-preference-title">
                                     Receive email notifications
                                 </span>
-                                <p class="si-settings-preference-description">
+                                <p class="sa-settings-preference-description">
                                     You can change this preference at any time.
                                 </p>
                             </div>
 
-                            <label class="si-settings-toggle">
+                            <label class="sa-settings-toggle">
                                 <input type="checkbox" name="email_notifications" value="1"
                                     aria-label="Receive email notifications"
                                     {{ (bool) old('email_notifications', $user->email_notifications) ? 'checked' : '' }}>
-                                <span class="si-settings-toggle-track"></span>
+                                <span class="sa-settings-toggle-track"></span>
                             </label>
                         </div>
 
-                        <hr class="si-settings-form-divider">
+                        <hr class="sa-settings-form-divider">
 
-                        <div class="si-settings-actions">
-                            <button type="submit" class="si-settings-btn">
+                        <div class="sa-settings-actions">
+                            <button type="submit" class="sa-settings-btn">
                                 <i class="bi bi-check-circle" aria-hidden="true"></i>
                                 Save Preferences
                             </button>
@@ -916,38 +915,38 @@
 
             {{-- Account information --}}
 
-            <section class="si-settings-section">
-                <div class="si-settings-section-header">
-                    <span class="si-settings-icon" aria-hidden="true">
+            <section class="sa-settings-section">
+                <div class="sa-settings-section-header">
+                    <span class="sa-settings-icon" aria-hidden="true">
                         <i class="bi bi-person-vcard"></i>
                     </span>
                     <div>
-                        <h2 class="si-settings-section-title">Account Information</h2>
-                        <p class="si-settings-section-subtitle">
+                        <h2 class="sa-settings-section-title">Account Information</h2>
+                        <p class="sa-settings-section-subtitle">
                             Review your registered details.
                         </p>
                     </div>
                 </div>
 
-                <div class="si-settings-section-body">
-                    <p class="si-settings-description">
+                <div class="sa-settings-section-body">
+                    <p class="sa-settings-description">
                         Your account is registered with the following information.
                         You can update your personal details from your profile.
                     </p>
 
-                    <div class="si-settings-account-details">
-                        <div class="si-settings-detail">
-                            <span class="si-settings-detail-label">Full Name</span>
-                            <span class="si-settings-detail-value">{{ $user->full_name }}</span>
+                    <div class="sa-settings-account-details">
+                        <div class="sa-settings-detail">
+                            <span class="sa-settings-detail-label">Full Name</span>
+                            <span class="sa-settings-detail-value">{{ $user->full_name }}</span>
                         </div>
 
-                        <div class="si-settings-detail">
-                            <span class="si-settings-detail-label">Registered Email</span>
-                            <span class="si-settings-detail-value">{{ $user->email }}</span>
+                        <div class="sa-settings-detail">
+                            <span class="sa-settings-detail-label">Registered Email</span>
+                            <span class="sa-settings-detail-value">{{ $user->email }}</span>
                         </div>
                     </div>
 
-                    <a href="{{ route('study-india.profile') }}" class="si-settings-btn si-settings-btn-neutral">
+                    <a href="{{ route('study-abroad.profile') }}" class="sa-settings-btn sa-settings-btn-neutral">
                         <i class="bi bi-person-gear" aria-hidden="true"></i>
                         Manage Your Profile
                         <i class="bi bi-arrow-right" aria-hidden="true"></i>
@@ -957,26 +956,26 @@
 
             {{-- Account deactivation --}}
 
-            <section class="si-settings-section">
-                <div class="si-settings-section-header">
-                    <span class="si-settings-icon si-settings-icon-danger" aria-hidden="true">
+            <section class="sa-settings-section">
+                <div class="sa-settings-section-header">
+                    <span class="sa-settings-icon sa-settings-icon-danger" aria-hidden="true">
                         <i class="bi bi-person-x"></i>
                     </span>
                     <div>
-                        <h2 class="si-settings-section-title">Deactivate Account</h2>
-                        <p class="si-settings-section-subtitle">
+                        <h2 class="sa-settings-section-title">Deactivate Account</h2>
+                        <p class="sa-settings-section-subtitle">
                             Temporarily disable access to your account.
                         </p>
                     </div>
                 </div>
 
-                <div class="si-settings-section-body">
-                    <p class="si-settings-description si-settings-danger-description">
+                <div class="sa-settings-section-body">
+                    <p class="sa-settings-description sa-settings-danger-description">
                         Deactivation disables access to your Study India account.
                         Your account record is retained rather than permanently deleted.
                     </p>
 
-                    <div class="si-settings-warning">
+                    <div class="sa-settings-warning">
                         <i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i>
                         <div>
                             <strong>Important:</strong> You will be signed out after
@@ -985,55 +984,53 @@
                         </div>
                     </div>
 
-                    <form action="{{ route('study-india.deactivate') }}" method="POST"
-                        onsubmit="return confirm('Are you sure you want to deactivate your Study India account? You will be signed out.');">
+                    <form action="{{ route('study-abroad.deactivate') }}" method="POST"
+                        onsubmit="return confirm('Are you sure you want to deactivate your Study Abroad account?');">
                         @csrf
 
-                        <label class="si-settings-confirm">
+                        <label>
                             <input type="checkbox" name="confirm_deactivation" value="1" required>
-                            <span>
-                                I understand that my Study India account will be
-                                deactivated and I will be signed out.
-                            </span>
+                            I confirm that I want to deactivate my account.
                         </label>
 
-                        <div class="si-settings-actions">
-                            <button type="submit" class="si-settings-btn si-settings-btn-danger">
-                                <i class="bi bi-person-x" aria-hidden="true"></i>
-                                Deactivate Account
-                            </button>
-                        </div>
+                        @error('confirm_deactivation')
+                            <p class="text-danger">{{ $message }}</p>
+                        @enderror
+
+                        <button type="submit">
+                            Deactivate Account
+                        </button>
                     </form>
                 </div>
             </section>
 
             {{-- Logout --}}
 
-            <section class="si-settings-section">
-                <div class="si-settings-section-header">
-                    <span class="si-settings-icon" aria-hidden="true">
+            <section class="sa-settings-section">
+                <div class="sa-settings-section-header">
+                    <span class="sa-settings-icon" aria-hidden="true">
                         <i class="bi bi-box-arrow-right"></i>
                     </span>
                     <div>
-                        <h2 class="si-settings-section-title">Logout</h2>
-                        <p class="si-settings-section-subtitle">
+                        <h2 class="sa-settings-section-title">Logout</h2>
+                        <p class="sa-settings-section-subtitle">
                             Securely end your current session.
                         </p>
                     </div>
                 </div>
 
-                <div class="si-settings-section-body">
-                    <p class="si-settings-description">
+                <div class="sa-settings-section-body">
+                    <p class="sa-settings-description">
                         Sign out of your Study India account on this session.
                         Logging out does not deactivate or delete your account.
                     </p>
 
-                    <form action="{{ route('study-india.logout') }}" method="POST"
+                    <form action="{{ route('study-abroad.logout') }}" method="POST"
                         onsubmit="return confirm('Are you sure you want to log out?');">
                         @csrf
 
-                        <div class="si-settings-actions">
-                            <button type="submit" class="si-settings-btn si-settings-btn-neutral">
+                        <div class="sa-settings-actions">
+                            <button type="submit" class="sa-settings-btn sa-settings-btn-neutral">
                                 <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
                                 Logout
                             </button>
@@ -1042,7 +1039,7 @@
                 </div>
             </section>
 
-            <div class="si-settings-security-note">
+            <div class="sa-settings-security-note">
                 <i class="bi bi-shield-check" aria-hidden="true"></i>
                 <div>
                     <strong>Your account, your control.</strong>

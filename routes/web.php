@@ -333,3 +333,57 @@ Route::prefix('study-india')->name('study-india.')->group(function () {
         'updateProfilePhoto'
     ])->name('profile.photo.update');
 });
+
+
+// For study abroad Menu Bar
+
+
+Route::post('/study-abroad/logout', [
+    StudyAbroadApplicationController::class,
+    'logout',
+])->name('study-abroad.logout');
+
+Route::post('/study-abroad/login/send-otp', [
+    StudyAbroadApplicationController::class,
+    'sendLoginOtp',
+])
+    ->middleware('throttle:5,1')
+    ->name('study-abroad.login.send-otp');
+
+
+    Route::post('/study-abroad/profile', [
+    StudyAbroadApplicationController::class,
+    'logout',
+]);
+
+Route::prefix('study-abroad')->name('study-abroad.')->group(function () {
+
+// Profile
+Route::get('/profile', [StudyAbroadApplicationController::class, 'profile'])
+    ->name('profile');
+
+Route::put('/profile/update', [StudyAbroadApplicationController::class, 'updateProfile'])
+    ->name('profile.update');
+
+Route::post('/profile/photo', [StudyAbroadApplicationController::class, 'updateProfilePhoto'])
+    ->name('profile.photo.update');
+
+// Account settings
+Route::get('/settings', [StudyAbroadApplicationController::class, 'settings'])
+    ->name('settings');
+
+Route::put('/settings', [StudyAbroadApplicationController::class, 'updateSettings'])
+    ->name('settings.update');
+
+Route::post('/deactivate', [StudyAbroadApplicationController::class, 'deactivateAccount'])
+    ->name('deactivate');
+
+// Logout
+Route::post('/logout', [StudyAbroadApplicationController::class, 'logout'])
+    ->name('logout');
+    
+});
+
+
+
+    
