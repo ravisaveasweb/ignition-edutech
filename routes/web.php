@@ -275,7 +275,7 @@ Route::get('/questions/{slug}', [QuestionController::class, 'show'])
 
 
 
-    // New Registration for Study india page
+// New Registration for Study india page
 
 
 Route::prefix('study-india')->name('study-india.')->group(function () {
@@ -304,6 +304,32 @@ Route::prefix('study-india')->name('study-india.')->group(function () {
         ->middleware('throttle:5,1')
         ->name('otp.resend');
 
+
+    // Profile
+    Route::get('/profile', [StudyIndiaAuthController::class, 'profile'])
+        ->name('profile');
+
+    Route::put('/profile', [StudyIndiaAuthController::class, 'updateProfile'])
+        ->name('profile.update');
+
+    // Account Settings
+    Route::get('/account-settings', [StudyIndiaAuthController::class, 'settings'])
+        ->name('settings');
+
+    Route::put('/account-settings', [StudyIndiaAuthController::class, 'updateSettings'])
+        ->name('settings.update');
+
+    // Deactivate Account
+    Route::post('/deactivate-account', [StudyIndiaAuthController::class, 'deactivateAccount'])
+        ->middleware('throttle:3,1')
+        ->name('deactivate');
+
+    // Logout
     Route::post('/logout', [StudyIndiaAuthController::class, 'logout'])
         ->name('logout');
+
+    Route::post('/profile/photo', [
+        StudyIndiaAuthController::class,
+        'updateProfilePhoto'
+    ])->name('profile.photo.update');
 });

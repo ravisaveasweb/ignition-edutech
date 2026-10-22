@@ -245,7 +245,7 @@ body {
             and contact you soon.
         </p>
 
-        <a href="/" class="home-button">
+        <a href="/study-abroad" class="home-button">
             Back to Home
         </a>
 

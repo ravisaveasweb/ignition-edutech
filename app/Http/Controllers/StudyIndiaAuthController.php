@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 use Throwable;
+use Illuminate\Support\Facades\Storage;
 
 class StudyIndiaAuthController extends Controller
 {
@@ -19,19 +20,108 @@ class StudyIndiaAuthController extends Controller
     private const PENDING_EMAIL = 'study_india_pending_email';
     private const FLOW = 'study_india_otp_flow';
 
-    public function showRegister()
-    {
-        return view('study-india.auth.register');
-    }
+ 
+    
+public function showRegister()
+{
+    $cities = [
+        'Agra',
+        'Ahmedabad',
+        'Ajmer',
+        'Amritsar',
+        'Bengaluru',
+        'Bhopal',
+        'Bhubaneswar',
+        'Chandigarh',
+        'Chennai',
+        'Coimbatore',
+        'Dehradun',
+        'Delhi',
+        'Faridabad',
+        'Ghaziabad',
+        'Gurugram',
+        'Guwahati',
+        'Gwalior',
+        'Hyderabad',
+        'Indore',
+        'Jaipur',
+        'Jalandhar',
+        'Jammu',
+        'Jodhpur',
+        'Kanpur',
+        'Kochi',
+        'Kolkata',
+        'Kota',
+        'Lucknow',
+        'Ludhiana',
+        'Madurai',
+        'Mangaluru',
+        'Meerut',
+        'Mumbai',
+        'Mysuru',
+        'Nagpur',
+        'Nashik',
+        'Navi Mumbai',
+        'Noida',
+        'Patna',
+        'Prayagraj',
+        'Pune',
+        'Raipur',
+        'Rajkot',
+        'Ranchi',
+        'Srinagar',
+        'Surat',
+        'Thane',
+        'Thiruvananthapuram',
+        'Tiruchirappalli',
+        'Udaipur',
+        'Vadodara',
+        'Varanasi',
+        'Vijayawada',
+        'Visakhapatnam',
+    ];
+
+    sort($cities);
+
+    return view('study-india.auth.register', compact('cities'));
+}
+
 
     public function register(Request $request)
     {
+
         $data = $request->validate([
-            'full_name' => ['required', 'string', 'min:2', 'max:100'],
-            'email' => ['required', 'email:rfc', 'max:255'],
-            'phone' => ['required', 'regex:/^[0-9]{10,15}$/'],
-            'city' => ['required', 'string', 'max:100'],
-            'course_interested' => ['required', 'string', 'max:150'],
+            'full_name' => [
+                'required',
+                'string',
+                'min:2',
+                'max:100',
+                'regex:/^[\pL\pM]+(?:[ \'-][\pL\pM]+)*$/u',
+            ],
+
+            'email' => [
+                'required',
+                'email:rfc, dns',
+                'max:255',
+                'regex:/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/',
+            ],
+
+            'phone' => [
+                'required',
+                'regex:/^(?!([0-9])\1{9}$)[1-9][0-9]{9}$/',
+            ],
+
+            'city' => [
+                'required',
+                'string',
+                'max:100',
+            ],
+
+            'course_interested' => [
+                'required',
+                'string',
+                'max:150',
+            ],
         ]);
 
         $data['email'] = Str::lower(trim($data['email']));
@@ -40,8 +130,12 @@ class StudyIndiaAuthController extends Controller
         $user = StudyIndiaUser::where('email', $data['email'])->first();
 
         if ($user && $user->is_verified) {
+            $message = $user->is_active
+                ? 'This email is already registered. Please log in.'
+                : 'This account is deactivated. Please contact support for reactivation.';
+
             throw ValidationException::withMessages([
-                'email' => 'This email is already registered. Please log in.',
+                'email' => $message,
             ]);
         }
 
@@ -77,7 +171,10 @@ class StudyIndiaAuthController extends Controller
     {
         $data = $request->validate([
             'email' => ['required', 'email:rfc', 'max:255'],
-            'phone' => ['required', 'regex:/^[0-9]{10,15}$/'],
+            'phone' => [
+                'required',
+                'regex:/^(?!([0-9])\1{9}$)[1-9][0-9]{9}$/',
+            ],
         ]);
 
         $email = Str::lower(trim($data['email']));
@@ -86,6 +183,7 @@ class StudyIndiaAuthController extends Controller
         $user = StudyIndiaUser::where('email', $email)
             ->where('phone', $phone)
             ->where('is_verified', true)
+            ->where('is_active', true)
             ->first();
 
         if (!$user) {
@@ -107,8 +205,10 @@ class StudyIndiaAuthController extends Controller
 
     private function sendOtp(Request $request, StudyIndiaUser $user)
     {
-        if ($user->otp_sent_at &&
-            $user->otp_sent_at->gt(now()->subSeconds(60))) {
+        if (
+            $user->otp_sent_at &&
+            $user->otp_sent_at->gt(now()->subSeconds(60))
+        ) {
             return redirect()->route('study-india.otp.show')
                 ->with('error', 'Please wait until the countdown finishes before requesting another OTP.');
         }
@@ -134,7 +234,7 @@ class StudyIndiaAuthController extends Controller
         try {
             Mail::raw(
                 "Your Ignition Edutech Study India verification code is {$otp}.\n\n"
-                . "This code expires in 5 minutes. Never share it with anyone.",
+                    . "This code expires in 5 minutes. Never share it with anyone.",
                 function ($message) use ($user) {
                     $message->to($user->email)
                         ->subject('Your Study India Verification Code');
@@ -293,9 +393,210 @@ class StudyIndiaAuthController extends Controller
             self::FLOW,
         ]);
 
+
+        $request->session()->invalidate();
         $request->session()->regenerateToken();
 
         return redirect()->route('study-india.login')
             ->with('success', 'You have logged out of Study India successfully.');
     }
+
+
+
+    /*
+|--------------------------------------------------------------------------
+| Get the logged-in Study India user
+|--------------------------------------------------------------------------
+*/
+
+    private function getStudyIndiaUser(): ?StudyIndiaUser
+    {
+        $userId = session(self::USER_ID);
+
+        if (!$userId) {
+            return null;
+        }
+
+        return StudyIndiaUser::where('id', $userId)
+            ->where('is_active', true)
+            ->where('is_verified', true)
+            ->first();
+    }
+
+    /*
+|--------------------------------------------------------------------------
+| Your Profile
+|--------------------------------------------------------------------------
+*/
+
+    public function profile()
+    {
+        $user = $this->getStudyIndiaUser();
+
+        if (!$user) {
+            session()->forget(self::USER_ID);
+
+            return redirect()->route('study-india.login')
+                ->with('error', 'Please log in to access your profile.');
+        }
+
+        return view('study-india.account.profile', compact('user'));
+    }
+
+    public function updateProfile(Request $request)
+    {
+        $user = $this->getStudyIndiaUser();
+
+        if (!$user) {
+            session()->forget(self::USER_ID);
+
+            return redirect()->route('study-india.login')
+                ->with('error', 'Please log in to update your profile.');
+        }
+
+        $data = $request->validate([
+            'full_name' => [
+                'required',
+                'string',
+                'min:2',
+                'max:100',
+                'regex:/^[\pL\pM]+(?:[ \'-][\pL\pM]+)*$/u',
+            ],
+            'phone' => [
+                'required',
+                'regex:/^(?!([0-9])\1{9}$)[1-9][0-9]{9}$/',
+            ],
+            'city' => [
+                'required',
+                'string',
+                'max:100',
+            ],
+
+            'course_interested' => [
+                'required',
+                'string',
+                'max:150',
+            ],
+        ]);
+
+        $user->update($data);
+
+        return redirect()->route('study-india.profile')
+            ->with('success', 'Your profile has been updated successfully.');
+    }
+
+    /*
+|--------------------------------------------------------------------------
+| Account Settings
+|--------------------------------------------------------------------------
+*/
+
+    public function settings()
+    {
+        $user = $this->getStudyIndiaUser();
+
+        if (!$user) {
+            session()->forget(self::USER_ID);
+
+            return redirect()->route('study-india.login')
+                ->with('error', 'Please log in to access account settings.');
+        }
+
+        return view('study-india.account.settings', compact('user'));
+    }
+
+    public function updateSettings(Request $request)
+    {
+        $user = $this->getStudyIndiaUser();
+
+        if (!$user) {
+            session()->forget(self::USER_ID);
+
+            return redirect()->route('study-india.login')
+                ->with('error', 'Please log in to update account settings.');
+        }
+
+        $data = $request->validate([
+            'email_notifications' => ['required', 'boolean'],
+        ]);
+
+        $user->update([
+            'email_notifications' =>
+            (bool) $data['email_notifications'],
+        ]);
+
+        return redirect()->route('study-india.settings')
+            ->with('success', 'Your account settings have been saved.');
+    }
+
+    /*
+|--------------------------------------------------------------------------
+| Deactivate Account
+|--------------------------------------------------------------------------
+*/
+
+    public function deactivateAccount(Request $request)
+    {
+        $user = $this->getStudyIndiaUser();
+
+        if (!$user) {
+            $request->session()->invalidate();
+            $request->session()->regenerateToken();
+
+            return redirect()->route('study-india.login')
+                ->with('error', 'Please log in before deactivating your account.');
+        }
+
+        $request->validate([
+            'confirm_deactivation' => ['required', 'accepted'],
+        ]);
+
+        // Keep the account and its existing data in the database.
+        $user->update([
+            'is_active' => false,
+        ]);
+
+        // End the current session.
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect()->route('study-india.login')
+            ->with('success', 'Your Study India account has been deactivated.');
+    }
+
+    
+public function updateProfilePhoto(Request $request)
+{
+    $user = $this->getStudyIndiaUser();
+
+    if (!$user) {
+        return redirect()
+            ->route('study-india.login')
+            ->withErrors([
+                'profile_photo' => 'Please log in to update your profile photo.',
+            ]);
+    }
+
+    $request->validate([
+        'profile_photo' => [
+            'required',
+            'image',
+            'mimes:jpg,jpeg,png,webp',
+            'max:2048',
+        ],
+    ]);
+
+    $path = $request->file('profile_photo')
+        ->store('study-india/profile-photos', 'public');
+
+    if ($user->profile_photo) {
+        Storage::disk('public')->delete($user->profile_photo);
+    }
+
+    $user->profile_photo = $path;
+    $user->save();
+
+    return back()->with('success', 'Profile photo updated successfully.');
+}
+
 }

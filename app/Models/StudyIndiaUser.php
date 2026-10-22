@@ -15,6 +15,9 @@ class StudyIndiaUser extends Model
         'city',
         'course_interested',
         'is_verified',
+        'is_active',
+        'deactivated_at',
+        'email_notifications',
         'otp_hash',
         'otp_expires_at',
         'otp_sent_at',
@@ -29,6 +32,9 @@ class StudyIndiaUser extends Model
     {
         return [
             'is_verified' => 'boolean',
+            'is_active' => 'boolean',
+            'email_notifications' => 'boolean',
+            'deactivated_at' => 'datetime',
             'otp_expires_at' => 'datetime',
             'otp_sent_at' => 'datetime',
             'otp_attempts' => 'integer',

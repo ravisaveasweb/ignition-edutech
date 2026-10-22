@@ -68,4 +68,51 @@ document.addEventListener('DOMContentLoaded', function () {
             if (event.target === backdrop) backdrop.remove();
         });
     });
+
+    // fOR ACCOUNT SETTINGS : 
+        // Confirm account deactivation
+    document.querySelectorAll('[data-si-confirm-deactivation]').forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            const checkbox = form.querySelector(
+                'input[name="confirm_deactivation"]'
+            );
+
+            if (!checkbox || !checkbox.checked) {
+                event.preventDefault();
+                alert('Please confirm that you want to deactivate your account.');
+                return;
+            }
+
+            if (!confirm(
+                'Are you sure you want to deactivate your Study India account? You will be signed out.'
+            )) {
+                event.preventDefault();
+                return;
+            }
+
+            const button = form.querySelector('button[type="submit"]');
+
+            if (button) {
+                button.disabled = true;
+                button.textContent = 'Deactivating account...';
+            }
+        });
+    });
+
+    // Confirm logout
+    document.querySelectorAll('[data-si-confirm-logout]').forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            if (!confirm('Are you sure you want to log out?')) {
+                event.preventDefault();
+                return;
+            }
+
+            const button = form.querySelector('button[type="submit"]');
+
+            if (button) {
+                button.disabled = true;
+                button.textContent = 'Logging out...';
+            }
+        });
+    });
 });
