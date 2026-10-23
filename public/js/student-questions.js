@@ -1,20 +1,21 @@
+
 document.addEventListener("DOMContentLoaded", function () {
     const searchForm = document.getElementById("iqSearchForm");
     const searchInput = document.getElementById("iqSearchInput");
     const questionList = document.getElementById("iqQuestionList");
     const resultsCount = document.getElementById("iqResultsCount");
-    const emptyState = document.getElementById("iqEmptyState");
-    const resetButton = document.getElementById("iqResetFilters");
-    const menuToggle = document.getElementById("iqMenuToggle");
-    const navigation = document.getElementById("iqNavigation");
     const categoryButtons = document.querySelectorAll(".iq-category-card");
     const sortButtons = document.querySelectorAll(".iq-sort-btn");
 
     if (!questionList) return;
 
     const currentUrl = new URL(window.location.href);
-    let selectedCategory = currentUrl.searchParams.get("category") || "all";
-    let selectedSort = currentUrl.searchParams.get("sort") || "latest";
+
+    let selectedCategory =
+        currentUrl.searchParams.get("category") || "all";
+
+    let selectedSort =
+        currentUrl.searchParams.get("sort") || "latest";
 
     function applyFilters() {
         const url = new URL(window.location.href);
@@ -26,20 +27,21 @@ document.addEventListener("DOMContentLoaded", function () {
             url.searchParams.delete("search");
         }
 
-        if (selectedCategory && selectedCategory !== "all") {
+        if (selectedCategory !== "all") {
             url.searchParams.set("category", selectedCategory);
         } else {
             url.searchParams.delete("category");
         }
 
-        if (selectedSort && selectedSort !== "latest") {
+        if (selectedSort !== "latest") {
             url.searchParams.set("sort", selectedSort);
         } else {
             url.searchParams.delete("sort");
         }
 
-        // Return to the first page when filters change.
+        // Reset pagination when filters change.
         url.searchParams.delete("page");
+
         window.location.href = url.toString();
     }
 
@@ -47,24 +49,28 @@ document.addEventListener("DOMContentLoaded", function () {
         categoryButtons.forEach(function (button) {
             button.classList.toggle(
                 "iq-category-active",
-                (button.dataset.category || "all") === selectedCategory,
+                (button.dataset.category || "all") === selectedCategory
             );
         });
 
         sortButtons.forEach(function (button) {
             button.classList.toggle(
                 "iq-sort-active",
-                (button.dataset.sort || "latest") === selectedSort,
+                (button.dataset.sort || "latest") === selectedSort
             );
         });
     }
 
+    // Restore the search value from the URL.
     if (searchInput) {
-        searchInput.value = currentUrl.searchParams.get("search") || "";
+        searchInput.value =
+            currentUrl.searchParams.get("search") || "";
     }
 
+    // Restore active category and sort buttons.
     updateActiveButtons();
 
+    // Search form.
     if (searchForm) {
         searchForm.addEventListener("submit", function (event) {
             event.preventDefault();
@@ -72,15 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    if (searchInput) {
-        searchInput.addEventListener("keydown", function (event) {
-            if (event.key === "Enter") {
-                event.preventDefault();
-                applyFilters();
-            }
-        });
-    }
-
+    // Category filters.
     categoryButtons.forEach(function (button) {
         button.addEventListener("click", function () {
             selectedCategory = button.dataset.category || "all";
@@ -88,53 +86,30 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    // Sort filters.
     sortButtons.forEach(function (button) {
         button.addEventListener("click", function () {
             selectedSort = button.dataset.sort || "latest";
-
-            // Match the controller's supported sort values.
-            if (selectedSort === "most-answered") {
-                selectedSort = "most-answered";
-            }
-
             applyFilters();
         });
     });
 
-    if (resetButton) {
-        resetButton.addEventListener("click", function () {
-            window.location.href = window.location.pathname;
-        });
-    }
-
-    if (menuToggle && navigation) {
-        menuToggle.addEventListener("click", function () {
-            const isOpen = navigation.classList.toggle("iq-menu-open");
-
-            menuToggle.setAttribute("aria-expanded", String(isOpen));
-            menuToggle.innerHTML = isOpen
-                ? '<i class="bi bi-x-lg"></i>'
-                : '<i class="bi bi-list"></i>';
-        });
-    }
-
-    // Keep the displayed result count aligned with Laravel pagination.
+    // Update the visible question count.
+    // The controller remains responsible for filtering and pagination.
     if (resultsCount) {
-        const pagination = document.querySelector(".iq-database-pagination");
-        const visibleCards =
-            questionList.querySelectorAll(".iq-question-card").length;
+        const questionCards =
+            questionList.querySelectorAll(".iq-question-card");
 
-        if (pagination) {
-            resultsCount.textContent = visibleCards + " questions on this page";
+        const totalFromServer = Number(
+            resultsCount.dataset.total || 0
+        );
+
+        if (totalFromServer > 0) {
+            resultsCount.textContent =
+                totalFromServer + " questions";
         } else {
-            resultsCount.textContent = visibleCards + " questions";
+            resultsCount.textContent =
+                questionCards.length + " questions on this page";
         }
-    }
-
-    if (
-        emptyState &&
-        questionList.querySelectorAll(".iq-question-card").length === 0
-    ) {
-        emptyState.hidden = false;
     }
 });

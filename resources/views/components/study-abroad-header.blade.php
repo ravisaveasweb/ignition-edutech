@@ -905,13 +905,16 @@
                     Abroad Exams
                 </a>
 
-                <a href="javascript:void(0);">
-                    <span>▣</span>
-                    News
+               <a href="{{ route('college-news.index') }}">
+                    <span>
+                        <i class="bi bi-newspaper"></i>
+                    </span>
+                    College News
                 </a>
-
-                <a href="javascript:void(0);">
-                    <span>▱</span>
+                 <a href="{{ route('questions.index') }}">
+                    <span>
+                        <i class="bi bi-question-circle"></i>
+                    </span>
                     Ask a Question
                 </a>
             </div>

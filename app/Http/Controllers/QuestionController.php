@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Question;
 use App\Models\Answer;
+use App\Models\Question;
+use App\Models\StudyAbroadUser;
+use App\Models\StudyIndiaUser;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 
@@ -20,16 +22,12 @@ class QuestionController extends Controller
         'Hostel & Accommodation',
     ];
 
-    /**
-     * Display questions fetched from the database.
-     */
     public function index(Request $request)
     {
-        $query = Question::with('user')
+        $query = Question::with(['author', 'user'])
             ->withCount('answers')
             ->where('status', 'open');
 
-        // Search questions by title, description, or college.
         if ($request->filled('search')) {
             $search = trim($request->input('search'));
 
@@ -40,7 +38,6 @@ class QuestionController extends Controller
             });
         }
 
-        // Filter questions by category.
         if (
             $request->filled('category') &&
             in_array($request->input('category'), self::CATEGORIES, true)
@@ -48,7 +45,6 @@ class QuestionController extends Controller
             $query->where('category', $request->input('category'));
         }
 
-        // Sort questions.
         switch ($request->input('sort', 'latest')) {
             case 'unanswered':
                 $query->has('answers', '=', 0)
@@ -66,7 +62,6 @@ class QuestionController extends Controller
                 break;
         }
 
-        // Paginate database results.
         $questions = $query->paginate(10)->withQueryString();
 
         return view('questions.index', [
@@ -78,9 +73,6 @@ class QuestionController extends Controller
         ]);
     }
 
-    /**
-     * Display the ask-question form.
-     */
     public function create()
     {
         return view('questions.create', [
@@ -88,9 +80,6 @@ class QuestionController extends Controller
         ]);
     }
 
-    /**
-     * Validate and store a question in the database.
-     */
     public function store(Request $request)
     {
         $validated = $request->validate([
@@ -99,6 +88,8 @@ class QuestionController extends Controller
             'category' => ['required', Rule::in(self::CATEGORIES)],
             'college_name' => ['nullable', 'string', 'max:255'],
         ]);
+
+        $author = $this->currentQuestionAuthor();
 
         $baseSlug = Str::slug($validated['title']);
 
@@ -111,7 +102,8 @@ class QuestionController extends Controller
         } while (Question::where('slug', $slug)->exists());
 
         $question = Question::create([
-            'user_id' => Auth::id(),
+            'author_type' => $author::class,
+            'author_id' => $author->getKey(),
             'title' => $validated['title'],
             'slug' => $slug,
             'description' => $validated['description'],
@@ -120,14 +112,15 @@ class QuestionController extends Controller
             'status' => 'open',
         ]);
 
+        // return redirect()
+        //     ->route('questions.show', $question->slug)
+        //     ->with('success', 'Your question has been posted successfully.');
+
         return redirect()
-            ->route('questions.show', $question->slug)
-            ->with('success', 'Your question has been posted successfully.');
+    ->route('questions.show', ['slug' => $question->slug])
+    ->with('success', 'Your question has been posted successfully.');
     }
 
-    /**
-     * Validate and store an answer in the database.
-     */
     public function storeAnswer(Request $request, string $slug)
     {
         $validated = $request->validate([
@@ -138,27 +131,52 @@ class QuestionController extends Controller
             ->where('status', 'open')
             ->firstOrFail();
 
+        $author = $this->currentQuestionAuthor();
+
         Answer::create([
             'question_id' => $question->id,
-            'user_id' => Auth::id(),
+            'author_type' => $author::class,
+            'author_id' => $author->getKey(),
             'body' => $validated['body'],
         ]);
 
+        // return redirect()
+        //     ->route('questions.show', $question->slug)
+        //     ->with('success', 'Your answer has been posted successfully.');
         return redirect()
-            ->route('questions.show', $question->slug)
-            ->with('success', 'Your answer has been posted successfully.');
+    ->route('questions.show', ['slug' => $question->slug])
+    ->with('success', 'Your answer has been posted successfully.');
     }
 
-    /**
-     * Display a question and its database answers.
-     */
     public function show(string $slug)
     {
-        $question = Question::with(['user', 'answers.user'])
+        $question = Question::with([
+            'author',
+            'user',
+            'answers.author',
+            'answers.user',
+        ])
             ->withCount('answers')
             ->where('slug', $slug)
             ->firstOrFail();
 
         return view('questions.show', compact('question'));
+    }
+
+    private function currentQuestionAuthor(): Model
+    {
+        $studyIndiaId = session('study_india_user_id');
+
+        if ($studyIndiaId) {
+            return StudyIndiaUser::findOrFail($studyIndiaId);
+        }
+
+        $studyAbroadId = session('study_abroad_user_id');
+
+        if ($studyAbroadId) {
+            return StudyAbroadUser::findOrFail($studyAbroadId);
+        }
+
+        abort(403, 'Please log in to continue.');
     }
 }

@@ -216,11 +216,11 @@
                 <i class="bi bi-list"></i>
                 <span>Menu</span>
             </button>
-            @foreach ($siStates as $state)
+            {{-- @foreach ($siStates as $state)
                 <button type="button" class="si-state-category-item" data-state="{{ $state }}">
                     {{ $state }}
                 </button>
-            @endforeach
+            @endforeach --}}
         </div>
 
         {{-- Study India Explore Stream Drawer --}}
@@ -636,9 +636,14 @@
             <a href="{{ route('study-india.settings') }}" class="si-login-btn">
                 <i class="bi bi-gear"></i> Account Settings
             </a>
-            <a href="{{ route('study-india.logout') }}" class="si-login-btn">
-                <i class="bi bi-box-arrow-in-right"></i> Logout
-            </a>
+
+            <form action="{{ route('study-india.logout') }}" method="POST" class="si-menu-logout-form">
+                @csrf
+                <button type="submit" class="si-login-btn">
+                    <i class="bi bi-box-arrow-right"></i>
+                    Logout
+                </button>
+            </form>
         @else
             <a href="{{ route('study-india.login') }}" class="si-login-btn">
                 <i class="bi bi-box-arrow-in-right"></i> Login

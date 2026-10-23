@@ -259,15 +259,15 @@ Route::get('/questions', [QuestionController::class, 'index'])
     ->name('questions.index');
 
 Route::get('/questions/ask', [QuestionController::class, 'create'])
-    ->middleware('auth')
+    ->middleware('question.auth')
     ->name('questions.create');
 
 Route::post('/questions', [QuestionController::class, 'store'])
-    ->middleware('auth')
+    ->middleware('question.auth')
     ->name('questions.store');
 
 Route::post('/questions/{slug}/answers', [QuestionController::class, 'storeAnswer'])
-    ->middleware('auth')
+    ->middleware('question.auth')
     ->name('questions.answers.store');
 
 Route::get('/questions/{slug}', [QuestionController::class, 'show'])
