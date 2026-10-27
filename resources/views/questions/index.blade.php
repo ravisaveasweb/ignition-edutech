@@ -11,6 +11,7 @@
 
 <link rel="stylesheet" href="{{ asset('css/student-questions.css') }}?v=3">
 
+
 <main class="iq-main">
 
     {{-- HERO SECTION --}}
@@ -102,7 +103,7 @@
             </div>
         </div>
 
-        <div class="iq-category-grid">
+        {{-- <div class="iq-category-grid">
 
             <button type="button" class="iq-category-card iq-category-active" data-category="all">
                 <span class="iq-category-icon iq-color-orange">
@@ -160,7 +161,76 @@
                 <i class="bi bi-arrow-up-right iq-category-arrow"></i>
             </button>
 
+        </div> --}}
+
+
+        <div class="iq-category-grid">
+
+            <a href="{{ route('questions.index', ['category' => 'all']) }}#iqQuestionList"
+                class="iq-category-card iq-category-active" data-category="all">
+                <span class="iq-category-icon iq-color-orange">
+                    <i class="bi bi-grid-fill"></i>
+                </span>
+                <span class="iq-category-name">All Questions</span>
+                <i class="bi bi-arrow-up-right iq-category-arrow"></i>
+            </a>
+
+            <a href="{{ route('questions.index', ['category' => 'Admissions']) }}#iqQuestionList"
+                class="iq-category-card" data-category="Admissions">
+                <span class="iq-category-icon iq-color-blue">
+                    <i class="bi bi-file-earmark-text-fill"></i>
+                </span>
+                <span class="iq-category-name">Admissions</span>
+                <i class="bi bi-arrow-up-right iq-category-arrow"></i>
+            </a>
+
+            <a href="{{ route('questions.index', ['category' => 'College Fees']) }}#iqQuestionList"
+                class="iq-category-card" data-category="College Fees">
+                <span class="iq-category-icon iq-color-green">
+                    <i class="bi bi-wallet2"></i>
+                </span>
+                <span class="iq-category-name">College Fees</span>
+                <i class="bi bi-arrow-up-right iq-category-arrow"></i>
+            </a>
+
+            <a href="{{ route('questions.index', ['category' => 'Placements']) }}#iqQuestionList"
+                class="iq-category-card" data-category="Placements">
+                <span class="iq-category-icon iq-color-purple">
+                    <i class="bi bi-briefcase-fill"></i>
+                </span>
+                <span class="iq-category-name">Placements</span>
+                <i class="bi bi-arrow-up-right iq-category-arrow"></i>
+            </a>
+
+            <a href="{{ route('questions.index', ['category' => 'Campus Life']) }}#iqQuestionList"
+                class="iq-category-card" data-category="Campus Life">
+                <span class="iq-category-icon iq-color-pink">
+                    <i class="bi bi-buildings-fill"></i>
+                </span>
+                <span class="iq-category-name">Campus Life</span>
+                <i class="bi bi-arrow-up-right iq-category-arrow"></i>
+            </a>
+
+            <a href="{{ route('questions.index', ['category' => 'Faculty']) }}#iqQuestionList" class="iq-category-card"
+                data-category="Faculty">
+                <span class="iq-category-icon iq-color-yellow">
+                    <i class="bi bi-person-workspace"></i>
+                </span>
+                <span class="iq-category-name">Faculty</span>
+                <i class="bi bi-arrow-up-right iq-category-arrow"></i>
+            </a>
+
+            <a href="{{ route('questions.index', ['category' => 'Hostel & Accommodation']) }}#iqQuestionList"
+                class="iq-category-card" data-category="Hostel & Accommodation">
+                <span class="iq-category-icon iq-color-teal">
+                    <i class="bi bi-house-door-fill"></i>
+                </span>
+                <span class="iq-category-name">Hostel &amp; Accommodation</span>
+                <i class="bi bi-arrow-up-right iq-category-arrow"></i>
+            </a>
+
         </div>
+
     </section>
 
     {{-- QUESTIONS AND SIDEBAR --}}
@@ -297,9 +367,84 @@
                 </div>
 
                 {{-- DATABASE PAGINATION --}}
-                <div class="iq-database-pagination">
+                {{-- <div class="iq-database-pagination">
                     {{ $questions->links() }}
-                </div>
+                </div> --}}
+
+
+                {{-- CUSTOM STUDENT Q&A PAGINATION --}}
+
+                @php
+                    $currentPage = $questions->currentPage();
+                    $lastPage = $questions->lastPage();
+                    $groupSize = 4;
+
+                    $groupStart = (int) (floor(($currentPage - 1) / $groupSize) * $groupSize) + 1;
+                    $groupEnd = min($groupStart + $groupSize - 1, $lastPage);
+                @endphp
+
+                @if ($lastPage > 1)
+                    <div class="iq-database-pagination">
+                        <nav role="navigation" aria-label="Student Questions Pagination">
+                            <div></div>
+
+                            <div class="iq-pagination-controls">
+                                {{-- Previous --}}
+                                @if ($currentPage > 1)
+                                    <a href="{{ $questions->appends(request()->query())->url($currentPage - 1) }}"
+                                        rel="prev">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2">
+                                            <path d="m15 18-6-6 6-6" />
+                                        </svg>
+                                        <span>Previous</span>
+                                    </a>
+                                @else
+                                    <span aria-disabled="true" class="iq-page-disabled">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2">
+                                            <path d="m15 18-6-6 6-6" />
+                                        </svg>
+                                        <span>Previous</span>
+                                    </span>
+                                @endif
+
+                                {{-- Page Numbers --}}
+                                @for ($page = $groupStart; $page <= $groupEnd; $page++)
+                                    @if ($page == $currentPage)
+                                        <span aria-current="page">{{ $page }}</span>
+                                    @else
+                                        <a href="{{ $questions->appends(request()->query())->url($page) }}">
+                                            {{ $page }}
+                                        </a>
+                                    @endif
+                                @endfor
+
+                                {{-- Next --}}
+                                @if ($currentPage < $lastPage)
+                                    <a href="{{ $questions->appends(request()->query())->url($currentPage + 1) }}"
+                                        rel="next">
+                                        <span>Next</span>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2">
+                                            <path d="m9 18 6-6-6-6" />
+                                        </svg>
+                                    </a>
+                                @else
+                                    <span aria-disabled="true" class="iq-page-disabled">
+                                        <span>Next</span>
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="2">
+                                            <path d="m9 18 6-6-6-6" />
+                                        </svg>
+                                    </span>
+                                @endif
+                            </div>
+                        </nav>
+                    </div>
+                @endif
+
+
 
             </div>
 
@@ -405,5 +550,7 @@
 </main>
 
 <script src="{{ asset('js/student-questions.js') }}?v=3"></script>
+
+
 
 <x-frontend-footer />

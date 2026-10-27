@@ -905,13 +905,20 @@
                     Abroad Exams
                 </a>
 
-               <a href="{{ route('college-news.index') }}">
+                {{-- <a href="{{ route('college-news.index') }}">
+                    <span>
+                        <i class="bi bi-newspaper"></i>
+                    </span>
+                    College News
+                </a> --}}
+
+                <a href="{{ route('college-news.index', ['section' => 'study-abroad']) }}">
                     <span>
                         <i class="bi bi-newspaper"></i>
                     </span>
                     College News
                 </a>
-                 <a href="{{ route('questions.index') }}">
+                <a href="{{ route('questions.index') }}">
                     <span>
                         <i class="bi bi-question-circle"></i>
                     </span>

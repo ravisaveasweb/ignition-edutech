@@ -1,6 +1,12 @@
 
-<x-frontend-header />
-<x-study-india-header/>
+@if (request()->query('section') === 'study-abroad')
+    <x-study-abroad-header />
+@elseif (request()->query('section') === 'study-india')
+    <x-study-india-header />
+@else
+    <x-frontend-header />
+@endif
+
 
 
 <link rel="stylesheet" href="{{ asset('css/college-news.css') }}?v=2">

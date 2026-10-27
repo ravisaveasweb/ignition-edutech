@@ -1,11 +1,19 @@
+/* =========================================================
+   RESET / BASE
+========================================================= */
 
+*,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
+/* =========================================================
+   HEADER SHELL
+========================================================= */
+
 .sa-header {
-    top :0;
+    top: 0;
     width: 100%;
     background: #fff;
     border-bottom: 1px solid #ddd;
@@ -21,7 +29,12 @@
     align-items: center;
     gap: 15px;
     padding: 0 25px;
+    flex-wrap: nowrap;
 }
+
+/* =========================================================
+   LOGO
+========================================================= */
 
 .sa-logo {
     width: 175px;
@@ -39,6 +52,10 @@
     display: block;
 }
 
+/* =========================================================
+   COUNTRY TRIGGER
+========================================================= */
+
 .sa-country-trigger {
     height: 40px;
     padding: 0 12px;
@@ -52,6 +69,8 @@
     align-items: center;
     gap: 6px;
     flex-shrink: 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
 .sa-country-trigger:hover {
@@ -61,6 +80,10 @@
 .sa-arrow {
     margin-left: 2px;
 }
+
+/* =========================================================
+   SEARCH BAR
+========================================================= */
 
 .sa-search {
     height: 40px;
@@ -76,7 +99,7 @@
     padding: 0 12px;
 }
 
-.sa-search>span {
+.sa-search > span {
     color: #777;
     font-size: 20px;
     flex-shrink: 0;
@@ -91,6 +114,10 @@
     padding-left: 8px;
     font-size: 13px;
 }
+
+/* =========================================================
+   HEADER ACTIONS
+========================================================= */
 
 .sa-header-actions {
     display: flex;
@@ -118,6 +145,9 @@
     background: transparent;
     cursor: pointer;
     padding: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .sa-counselling {
@@ -154,6 +184,10 @@
     color: #eb933a;
 }
 
+/* =========================================================
+   CATEGORY BAR
+========================================================= */
+
 .sa-category-bar {
     width: 100%;
     min-height: 35px;
@@ -183,7 +217,9 @@
     color: #eb933a;
 }
 
-/* OVERLAY */
+/* =========================================================
+   OVERLAYS
+========================================================= */
 
 .sa-overlay,
 .sa-menu-overlay {
@@ -201,7 +237,9 @@
     z-index: 1300;
 }
 
-/* COUNTRY POPUP */
+/* =========================================================
+   COUNTRY POPUP — IMPROVED UI
+========================================================= */
 
 .sa-country-popup {
     display: none;
@@ -209,76 +247,167 @@
     z-index: 1200;
     top: 65px;
     left: 27px;
-    width: 650px;
+    width: 660px;
     max-width: calc(100vw - 54px);
-    max-height: 75vh;
-    overflow-y: auto;
+    max-height: 78vh;
+    overflow: hidden;
     background: #fff;
-    border-radius: 9px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, .2);
-    padding: 20px;
+    border-radius: 14px;
+    box-shadow:
+        0 24px 60px rgba(10, 37, 64, .18),
+        0 4px 14px rgba(10, 37, 64, .08);
+    padding: 0;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
 }
+
+/* When JS shows it as flex/block, keep card layout */
+.sa-country-popup[style*="display: block"],
+.sa-country-popup[style*="display: flex"] {
+    display: flex !important;
+}
+
+.sa-country-popup.is-open {
+    display: flex;
+}
+
+/* ---------------- Header ---------------- */
 
 .sa-country-popup-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 15px;
-    margin-bottom: 20px;
-}
-
-.sa-country-popup-header strong {
-    font-size: 14px;
-}
-
-.sa-country-popup-header button {
-    border: 0;
-    background: transparent;
-    color: #0878c9;
-    cursor: pointer;
+    padding: 18px 20px 14px;
+    margin: 0;
+    background: linear-gradient(135deg, #fff8f1, #ffffff);
+    border-bottom: 1px solid #f1ece6;
     flex-shrink: 0;
 }
 
+.sa-country-popup-header strong {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0a2540;
+    letter-spacing: -.01em;
+}
+
+.sa-country-popup-header button {
+    border: 1px solid #eceff3;
+    background: #fff;
+    color: #4a5560;
+    cursor: pointer;
+    flex-shrink: 0;
+    padding: 7px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all .18s ease;
+}
+
+.sa-country-popup-header button:hover {
+    border-color: #eb933a;
+    color: #eb933a;
+    background: #fff8f1;
+}
+
+/* ---------------- Grid ---------------- */
+
 .sa-country-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px 15px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    padding: 18px 20px 20px;
+    overflow-y: auto;
+    flex: 1;
+    min-height: 0;
+    scrollbar-width: thin;
 }
+
+.sa-country-grid::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sa-country-grid::-webkit-scrollbar-thumb {
+    background: #e2e6ea;
+    border-radius: 10px;
+}
+
+.sa-country-grid::-webkit-scrollbar-thumb:hover {
+    background: #eb933a;
+}
+
+/* ---------------- Country tile ---------------- */
 
 .sa-country {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #555;
+    padding: 10px 12px;
+    color: #26384a;
     text-decoration: none;
     font-size: 13px;
+    font-weight: 500;
     cursor: pointer;
     min-width: 0;
+    border: 1px solid #eef1f4;
+    border-radius: 10px;
+    background: #fff;
+    transition:
+        border-color .16s ease,
+        background .16s ease,
+        transform .16s ease,
+        box-shadow .16s ease,
+        color .16s ease;
 }
 
-.sa-country:hover {
-    color: #0878c9;
+.sa-country:hover,
+.sa-country:focus-visible {
+    color: #b96a1c;
+    border-color: #eb933a;
+    background: #fff8f1;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(235, 147, 58, .12);
+    outline: none;
 }
+
+/* Country name truncation */
+.sa-country > span:last-child {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ---------------- Flag ---------------- */
 
 .sa-country-flag {
-    width: 24px;
-    min-width: 24px;
-    height: 18px;
+    width: 26px;
+    min-width: 26px;
+    height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #f1f3f5;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 1px rgba(10, 37, 64, .05);
 }
 
 .sa-country-flag .fi {
-    width: 24px;
-    height: 18px;
+    width: 26px;
+    height: 20px;
     display: inline-block;
     background-size: cover;
     background-position: center;
-    border-radius: 2px;
+    border-radius: 3px;
 }
 
-/* SEARCH RESULTS */
+/* =========================================================
+   SEARCH RESULTS
+========================================================= */
 
 .sa-search-results {
     display: none;
@@ -361,7 +490,9 @@
     font-size: 11px;
 }
 
-/* UNIVERSITY PANEL */
+/* =========================================================
+   UNIVERSITY PANEL
+========================================================= */
 
 .sa-university-panel {
     display: none;
@@ -389,7 +520,7 @@
     border-bottom: 1px solid #ececec;
 }
 
-.sa-university-header>div {
+.sa-university-header > div {
     min-width: 0;
 }
 
@@ -527,65 +658,211 @@
     line-height: 1;
 }
 
-/* EXPLORE PANEL */
+/* =========================================================
+   EXPLORE PANEL
+========================================================= */
 
 .sa-explore-panel {
     display: none;
     position: absolute;
-    top: 60px;
+    top: 64px;
     right: 70px;
-    width: 575px;
+    width: 620px;
     max-width: calc(100vw - 30px);
-    background: #fff;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, .2);
-    padding: 18px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow:
+        0 24px 60px rgba(10, 37, 64, .12),
+        0 4px 14px rgba(10, 37, 64, .05);
+    padding: 0;
     z-index: 1200;
+    overflow: hidden;
+    font-family: 'Inter', Arial, sans-serif;
 }
+
+.sa-explore-panel.is-open {
+    display: block;
+    animation: saExplorePop .2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes saExplorePop {
+    from { opacity: 0; transform: translateY(-8px) scale(.98); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ---------------- Title ---------------- */
 
 .sa-explore-title {
     font-size: 15px;
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-weight: 800;
+    color: #0a2540;
+    padding: 18px 22px 14px;
+    background: linear-gradient(180deg, #ffffff, #fcfcfc);
+    border-bottom: 1px solid #f1ece6;
+    letter-spacing: -0.01em;
 }
+
+/* ---------------- Columns ---------------- */
 
 .sa-explore-columns {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 25px;
+    gap: 12px;
+    padding: 16px;
+    background: #f8fafc;
 }
+
+.sa-explore-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+/* =========================================================
+   ITEMS
+========================================================= */
 
 .sa-explore-column a {
-    min-height: 34px;
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 12px;
-    color: #222;
+    gap: 14px;
+    min-height: 54px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    color: #26384a;
     text-decoration: none;
-    border-bottom: 1px solid #eee;
     font-size: 13px;
+    font-weight: 600;
+    line-height: 1.35;
+    isolation: isolate;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+    transition: all .22s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.sa-explore-column a:hover {
+/* Animated flowing border overlay */
+.sa-explore-column a::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1.5px;
+    background: linear-gradient(90deg, #eb933a, #f5b46b, #eb933a, #f5b46b);
+    background-size: 300% 100%;
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+    transition: opacity .2s ease;
+}
+
+/* Hover Effect */
+.sa-explore-column a:hover,
+.sa-explore-column a:focus-visible {
+    background: #fffbf5;
+    color: #b96a1c;
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(235, 147, 58, 0.15);
+    outline: none;
+}
+
+.sa-explore-column a:hover::before,
+.sa-explore-column a:focus-visible::before {
+    opacity: 1;
+    animation: saExploreBorderFlow 2s linear infinite;
+}
+
+@keyframes saExploreBorderFlow {
+    0%   { background-position:   0% 50%; }
+    100% { background-position: 300% 50%; }
+}
+
+/* Active / press state */
+.sa-explore-column a:active {
+    transform: translateY(0) scale(.99);
+}
+
+/* =========================================================
+   ICON TILE — Orange Theme (Handles both text & .bi icons)
+========================================================= */
+
+.sa-explore-column a > span {
+    width: 38px;
+    min-width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+    /* Soft warm orange background */
+    background: linear-gradient(135deg, #fff4e8, #ffe6cc);
+    border: 1px solid #f6dcc2;
+    /* Forces emoji/text characters to orange */
     color: #eb933a;
+    font-size: 17px;
+    line-height: 1;
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.8);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.sa-explore-column a span {
-    color: #1767bd;
-    font-size: 18px;
-    width: 20px;
-    min-width: 20px;
+/* Handle Bootstrap icons inside the tile */
+.sa-explore-column a > span .bi {
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+    transition: transform 0.3s ease;
 }
 
-.sa-explore-column a small {
+/* =========================================================
+   TEXT BLOCK & BADGE
+========================================================= */
+
+.sa-explore-column a > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+    flex: 1;
+    color: inherit;
+    line-height: 1.3;
+}
+
+/* The "Explore Study Abroad" Sub-badge */
+.sa-explore-column a > div small {
     display: inline-block;
-    margin-left: 7px;
-    background: #e8f7f0;
-    color: #35a477;
-    padding: 3px 5px;
-    font-size: 8px;
+    width: fit-content;
+    padding: 3px 8px;
+    border-radius: 5px;
+    background: #fff4e8;
+    color: #d97a1e;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border: 1px solid #ffe4cc;
+    transition: all .2s ease;
 }
 
-/* SIDE MENU */
+.sa-explore-column a:hover > div small {
+    background: #eb933a;
+    color: #ffffff;
+    border-color: #eb933a;
+}
+
+/* =========================================================
+   SIDE MENU DRAWER
+========================================================= */
 
 .sa-menu-drawer {
     position: fixed;
@@ -686,8 +963,7 @@
 }
 
 /* =========================================================
-   STUDY ABROAD CATEGORY MULTI LEVEL MENU
-   UNIQUE PREFIX: sa-navmenu-
+   NAVMENU (MULTI-LEVEL DRAWER)
 ========================================================= */
 
 .sa-navmenu-trigger {
@@ -854,12 +1130,12 @@
     cursor: pointer;
 }
 
-.sa-navmenu-back>span:first-child {
+.sa-navmenu-back > span:first-child {
     font-size: 26px;
     line-height: 1;
 }
 
-.sa-navmenu-back>span:last-child {
+.sa-navmenu-back > span:last-child {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -939,7 +1215,7 @@
     list-style: none;
 }
 
-.sa-navmenu-list>li {
+.sa-navmenu-list > li {
     margin: 0;
     padding: 0;
     border-bottom: 1px solid #edf0f3;
@@ -978,8 +1254,8 @@
     white-space: nowrap;
 }
 
-.sa-navmenu-page-link>span:first-child,
-.sa-navmenu-direct-link>span:first-child {
+.sa-navmenu-page-link > span:first-child,
+.sa-navmenu-direct-link > span:first-child {
     display: inline-flex;
     align-items: center;
     gap: 9px;
@@ -1124,9 +1400,18 @@
 .sa-navmenu-university-name {
     flex: 1;
     min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
     font-size: 12px;
     font-weight: 600;
     line-height: 1.4;
+}
+
+.sa-navmenu-university-score {
+    color: #8a949e;
+    font-size: 9px;
+    font-weight: 500;
 }
 
 .sa-navmenu-empty {
@@ -1174,9 +1459,8 @@
     text-align: center;
 }
 
-
 /* =========================================================
-   SCROLLBAR
+   SCROLLBARS
 ========================================================= */
 
 .sa-navmenu-list-wrapper::-webkit-scrollbar {
@@ -1196,91 +1480,17 @@
     background: #eb933a;
 }
 
-
 /* =========================================================
-   RESPONSIVE
+   BODY LOCK
 ========================================================= */
 
-@media (max-width: 768px) {
-
-    .sa-navmenu-drawer {
-        width: 350px;
-        max-width: 88vw;
-    }
-
-    .sa-navmenu-trigger {
-        height: 34px;
-        padding: 0 11px;
-        font-size: 12px;
-    }
-
-    .sa-navmenu-list {
-        padding-left: 9px;
-        padding-right: 9px;
-    }
-
+body.sa-navmenu-body-open {
+    overflow: hidden;
 }
 
-@media (max-width: 480px) {
-
-    .sa-navmenu-drawer {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .sa-navmenu-header {
-        min-height: 64px;
-        padding: 12px 15px;
-    }
-
-    .sa-navmenu-header-title strong {
-        font-size: 14px;
-    }
-
-    .sa-navmenu-header-title small {
-        font-size: 9px;
-    }
-
-    .sa-navmenu-search {
-        margin-left: 12px;
-        margin-right: 12px;
-    }
-
-    .sa-navmenu-page-link,
-    .sa-navmenu-direct-link {
-        min-height: 50px;
-        font-size: 12px;
-    }
-
-    .sa-navmenu-country-title {
-        margin-left: 12px;
-        margin-right: 12px;
-    }
-
-    .sa-navmenu-subtitle {
-        margin-left: 12px;
-        margin-right: 12px;
-    }
-
-}
-
-@media (max-width: 340px) {
-
-    .sa-navmenu-trigger {
-        padding: 0 8px;
-        gap: 4px;
-        font-size: 10px;
-    }
-
-    .sa-navmenu-trigger-icon {
-        font-size: 14px;
-    }
-
-}
-
-/* =========================
-   LAPTOP
-========================= */
+/* =========================================================
+   RESPONSIVE — LAPTOP 1200px
+========================================================= */
 
 @media (max-width: 1200px) {
     .sa-header-top {
@@ -1316,15 +1526,16 @@
     }
 }
 
-/* =========================
-   TABLET
-========================= */
+/* =========================================================
+   RESPONSIVE — TABLET 900px
+========================================================= */
 
 @media (max-width: 900px) {
     .sa-header-top {
         min-height: 58px;
         padding: 8px 15px;
         flex-wrap: wrap;
+        row-gap: 8px;
     }
 
     .sa-logo {
@@ -1334,6 +1545,11 @@
 
     .sa-logo img {
         width: 140px;
+    }
+
+    .sa-country-trigger {
+        border-left: 0;
+        padding-left: 0;
     }
 
     .sa-search {
@@ -1364,83 +1580,152 @@
 
     .sa-explore-panel {
         right: 20px;
-        width: 500px;
+        width: 540px;
         max-width: calc(100vw - 40px);
     }
 
     .sa-country-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    /* ---------- Country popup: improved shell ---------- */
+
+    .sa-country-popup {
+        left: 20px;
+        right: 20px;
+        width: auto;
+        max-width: none;
+    }
+
+    .sa-country-popup .sa-country-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* =========================================================
+   RESPONSIVE — MOBILE 650px
+   Row 1: logo + get counselling + explore + menu
+   Row 2: globe icon + "Select country" text + search bar
+========================================================= */
 
 @media (max-width: 650px) {
     .sa-header-top {
         min-height: 58px;
         padding: 8px 10px;
-        gap: 7px;
-        flex-wrap: nowrap;
+        gap: 6px;
+        flex-wrap: wrap;
+        row-gap: 8px;
+        align-items: center;
     }
+
+    /* ---------- ROW 1 ---------- */
 
     .sa-logo {
         width: 115px;
         flex: 0 0 115px;
+        order: 1;
     }
 
     .sa-logo img {
         width: 110px;
     }
 
-    .sa-country-trigger {
-        width: 38px;
-        min-width: 38px;
-        height: 38px;
-        padding: 0;
-        justify-content: center;
-        border-left: 0;
-    }
-
-    .sa-country-trigger .sa-country-text,
-    .sa-country-trigger .sa-arrow {
-        display: none;
-    }
-
-    .sa-country-trigger span:first-child {
-        font-size: 18px;
-    }
-
-    .sa-search {
-        display: none;
-    }
-
     .sa-header-actions {
         margin-left: auto;
         gap: 6px;
+        order: 2;
     }
 
-    .sa-header-actions .sa-explore-trigger {
-        width: 38px;
-        height: 38px;
-        padding: 0;
-        font-size: 0;
+    /* Hide "Write a review" on mobile (it lives in the menu) */
+    .sa-header-actions .sa-review {
+        display: none !important;
+    }
+
+    /* Get counselling: compact */
+    .sa-header-actions .sa-counselling {
         display: flex;
+        font-size: 11px;
+    }
+
+    /* Explore: keep text visible */
+    .sa-header-actions .sa-explore-trigger {
+        display: inline-flex;
         align-items: center;
         justify-content: center;
+        gap: 4px;
+        width: auto;
+        height: 38px;
+        padding: 0 8px;
+        font-size: 12px;
+        white-space: nowrap;
     }
 
     .sa-header-actions .sa-explore-trigger::before {
-        content: "▦";
-        font-size: 19px;
+        content: none;
     }
 
     .sa-menu-trigger {
         width: 38px;
         height: 38px;
         min-width: 38px;
+        order: 3;
     }
+
+    /* ---------- ROW 2: globe + "Select country" + search ---------- */
+
+    .sa-country-trigger {
+        order: 4;
+        flex: 0 0 auto;
+        width: auto;
+        min-width: 0;
+        height: 38px;
+        padding: 0 10px;
+        margin: 0;
+        justify-content: center;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background: #fff;
+        gap: 5px;
+    }
+
+    /* KEEP the "Select country" text visible */
+    .sa-country-trigger .sa-country-text {
+        display: inline-block;
+        font-size: 12px;
+        line-height: 1;
+        white-space: nowrap;
+    }
+
+    /* Hide only the dropdown arrow on mobile */
+    .sa-country-trigger .sa-arrow {
+        display: none;
+    }
+
+    .sa-country-trigger span:first-child {
+        font-size: 17px;
+        line-height: 1;
+    }
+
+    .sa-search {
+        display: flex;
+        order: 5;
+        flex: 1 1 0;
+        width: auto;
+        max-width: none;
+        min-width: 0;
+        height: 38px;
+        margin: 0;
+    }
+
+    .sa-search > span {
+        font-size: 18px;
+    }
+
+    .sa-search input {
+        font-size: 12px;
+    }
+
+    /* ---------- Category bar ---------- */
 
     .sa-category-bar {
         min-height: 36px;
@@ -1452,14 +1737,16 @@
         font-size: 11px;
     }
 
+    /* ---------- Popups (below the 2-row header) ---------- */
+
     .sa-country-popup,
     .sa-university-panel {
-        top: 60px;
+        top: 105px;
         left: 10px;
         right: 10px;
         width: auto;
         max-width: none;
-        max-height: calc(100vh - 75px);
+        max-height: calc(100vh - 120px);
         padding: 15px;
         border-radius: 8px;
     }
@@ -1491,16 +1778,16 @@
 
     .sa-search-results {
         position: fixed;
-        top: 60px;
+        top: 105px;
         left: 10px;
         right: 10px;
         width: auto;
         max-width: none;
-        max-height: calc(100vh - 75px);
+        max-height: calc(100vh - 120px);
     }
 
     .sa-search-results-list {
-        max-height: calc(100vh - 125px);
+        max-height: calc(100vh - 170px);
     }
 
     .sa-search-result {
@@ -1550,44 +1837,115 @@
         font-size: 9px;
     }
 
-    .sa-explore-panel {
-        position: fixed;
-        top: 60px;
-        left: 10px;
-        right: 10px;
-        width: auto;
-        max-width: none;
-        max-height: calc(100vh - 75px);
-        overflow-y: auto;
-        padding: 15px;
-        border-radius: 8px;
-    }
-
-    .sa-explore-columns {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
-    .sa-explore-column a {
-        min-height: 42px;
-        font-size: 12px;
-    }
-
     .sa-menu-drawer {
         width: 300px;
         max-width: 88vw;
         padding: 18px;
     }
+
+    /* ---------- Country popup: improved shell ---------- */
+
+    .sa-country-popup {
+        top: 105px;
+        left: 10px;
+        right: 10px;
+        width: auto;
+        max-width: none;
+        max-height: calc(100vh - 120px);
+        padding: 0;
+        border-radius: 12px;
+    }
+
+    .sa-country-popup-header {
+        padding: 14px 15px 12px;
+        margin-bottom: 0;
+    }
+
+    .sa-country-popup-header strong {
+        font-size: 13px;
+    }
+
+    .sa-country-popup-header button {
+        padding: 6px 11px;
+        font-size: 11px;
+    }
+
+    .sa-country-popup .sa-country-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        padding: 14px 15px 16px;
+    }
+
+    .sa-country-popup .sa-country {
+        padding: 9px 10px;
+        font-size: 12px;
+        gap: 8px;
+    }
+
+    .sa-country-popup .sa-country-flag,
+    .sa-country-popup .sa-country-flag .fi {
+        width: 23px;
+        min-width: 23px;
+        height: 17px;
+    }
+
+    /* ---------- Explore Panel: improved shell ---------- */
+
+    .sa-explore-panel {
+        position: fixed;
+        top: 105px;
+        left: 10px;
+        right: 10px;
+        width: auto;
+        max-width: none;
+        max-height: calc(100vh - 120px);
+        overflow-y: auto;
+        border-radius: 14px;
+    }
+
+    .sa-explore-title {
+        padding: 14px 16px 11px;
+        font-size: 14px;
+    }
+
+    .sa-explore-columns {
+        grid-template-columns: 1fr;
+        padding: 12px;
+        gap: 8px;
+    }
+
+    .sa-explore-column + .sa-explore-column {
+        border-top: 1px solid #e2e8f0;
+        margin-top: 4px;
+        padding-top: 12px;
+    }
+
+    .sa-explore-column a {
+        min-height: 48px;
+        padding: 10px 12px;
+    }
+
+    .sa-explore-column a > span {
+        width: 34px;
+        min-width: 34px;
+        height: 34px;
+        font-size: 16px;
+    }
+
+    .sa-explore-column a > span .bi {
+        font-size: 16px;
+    }
 }
 
-/* =========================
-   SMALL MOBILE
-========================= */
+/* =========================================================
+   RESPONSIVE — SMALL MOBILE 400px
+========================================================= */
 
 @media (max-width: 400px) {
     .sa-header-top {
         padding: 7px 8px;
-        gap: 5px;
+        gap: 4px;
+        row-gap: 7px;
     }
 
     .sa-logo {
@@ -1599,27 +1957,55 @@
         width: 98px;
     }
 
-    .sa-country-trigger,
-    .sa-header-actions .sa-explore-trigger,
+    .sa-header-actions .sa-counselling {
+        display: none;
+    }
+
+    .sa-header-actions .sa-explore-trigger {
+        height: 35px;
+        padding: 0 7px;
+        font-size: 11px;
+    }
+
+    /* Country trigger: keep text, just shrink */
+    .sa-country-trigger {
+        height: 35px;
+        padding: 0 8px;
+        gap: 4px;
+    }
+
+    .sa-country-trigger .sa-country-text {
+        font-size: 11px;
+    }
+
+    .sa-country-trigger span:first-child {
+        font-size: 15px;
+    }
+
     .sa-menu-trigger {
         width: 35px;
         height: 35px;
-    }
-
-    .sa-country-trigger {
         min-width: 35px;
     }
 
-    .sa-menu-trigger {
-        min-width: 35px;
+    .sa-search {
+        height: 35px;
     }
 
     .sa-country-popup,
-    .sa-university-panel,
-    .sa-explore-panel {
+    .sa-university-panel {
         left: 7px;
         right: 7px;
         padding: 12px;
+        top: 98px;
+        max-height: calc(100vh - 110px);
+    }
+
+    .sa-search-results {
+        top: 98px;
+        left: 7px;
+        right: 7px;
+        max-height: calc(100vh - 110px);
     }
 
     .sa-country-grid {
@@ -1660,15 +2046,78 @@
         width: 285px;
         max-width: 90vw;
     }
+
+    /* ---------- Country popup: improved shell ---------- */
+
+    .sa-country-popup {
+        top: 98px;
+        left: 7px;
+        right: 7px;
+        max-height: calc(100vh - 110px);
+        padding: 0;
+        border-radius: 10px;
+    }
+
+    .sa-country-popup-header {
+        padding: 12px 12px 10px;
+        margin-bottom: 0;
+    }
+
+    .sa-country-popup-header strong {
+        font-size: 13px;
+    }
+
+    .sa-country-popup .sa-country-grid {
+        grid-template-columns: 1fr;
+        gap: 7px;
+        padding: 12px;
+    }
+
+    .sa-country-popup .sa-country {
+        padding: 10px 11px;
+        font-size: 12px;
+    }
+
+    /* ---------- Explore Panel: improved shell ---------- */
+
+    .sa-explore-panel {
+        top: 98px;
+        left: 7px;
+        right: 7px;
+        max-height: calc(100vh - 110px);
+        border-radius: 12px;
+    }
+
+    .sa-explore-columns {
+        padding: 10px;
+    }
+
+    .sa-explore-column a {
+        padding: 9px;
+        gap: 10px;
+        font-size: 12px;
+    }
+
+    .sa-explore-column a > span {
+        width: 30px;
+        min-width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .sa-explore-column a > span .bi {
+        font-size: 14px;
+    }
 }
 
-/* =========================
-   VERY SMALL PHONES
-========================= */
+/* =========================================================
+   RESPONSIVE — VERY SMALL PHONES 340px
+========================================================= */
 
 @media (max-width: 340px) {
     .sa-header-top {
         gap: 3px;
+        row-gap: 6px;
         padding-left: 5px;
         padding-right: 5px;
     }
@@ -1682,19 +2131,35 @@
         width: 86px;
     }
 
-    .sa-country-trigger,
-    .sa-header-actions .sa-explore-trigger,
+    .sa-header-actions .sa-explore-trigger {
+        height: 32px;
+        padding: 0 6px;
+        font-size: 10px;
+    }
+
+    /* Country trigger: still keep text on tiny phones */
+    .sa-country-trigger {
+        height: 32px;
+        padding: 0 7px;
+        gap: 3px;
+    }
+
+    .sa-country-trigger .sa-country-text {
+        font-size: 10px;
+    }
+
+    .sa-country-trigger span:first-child {
+        font-size: 14px;
+    }
+
     .sa-menu-trigger {
         width: 32px;
         height: 32px;
-    }
-
-    .sa-country-trigger {
         min-width: 32px;
     }
 
-    .sa-menu-trigger {
-        min-width: 32px;
+    .sa-search {
+        height: 32px;
     }
 
     .sa-category-bar {
@@ -1707,24 +2172,92 @@
     }
 }
 
-body.sa-navmenu-body-open {
-    overflow: hidden;
+/* =========================================================
+   NAVMENU RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+    .sa-navmenu-drawer {
+        width: 350px;
+        max-width: 88vw;
+    }
+
+    .sa-navmenu-trigger {
+        height: 34px;
+        padding: 0 11px;
+        font-size: 12px;
+    }
+
+    .sa-navmenu-list {
+        padding-left: 9px;
+        padding-right: 9px;
+    }
 }
 
-.sa-navmenu-university-name {
-    flex: 1;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 1.4;
+@media (max-width: 480px) {
+    .sa-navmenu-drawer {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .sa-navmenu-header {
+        min-height: 64px;
+        padding: 12px 15px;
+    }
+
+    .sa-navmenu-header-title strong {
+        font-size: 14px;
+    }
+
+    .sa-navmenu-header-title small {
+        font-size: 9px;
+    }
+
+    .sa-navmenu-search {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+    .sa-navmenu-page-link,
+    .sa-navmenu-direct-link {
+        min-height: 50px;
+        font-size: 12px;
+    }
+
+    .sa-navmenu-country-title {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+    .sa-navmenu-subtitle {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
 }
 
-.sa-navmenu-university-score {
-    color: #8a949e;
-    font-size: 9px;
-    font-weight: 500;
+@media (max-width: 340px) {
+    .sa-navmenu-trigger {
+        padding: 0 8px;
+        gap: 4px;
+        font-size: 10px;
+    }
+
+    .sa-navmenu-trigger-icon {
+        font-size: 14px;
+    }
 }
 
+/* =========================================================
+   ACCESSIBILITY — REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .sa-explore-column a,
+    .sa-explore-column a::before,
+    .sa-explore-column a > span,
+    .sa-explore-column a > div small {
+        transition: none !important;
+        animation: none !important;
+        transform: none !important;
+    }
+}

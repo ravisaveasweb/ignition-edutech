@@ -522,7 +522,15 @@
                     </span>
                     Entrance Exams
                 </a>
-                <a href="{{ route('college-news.index') }}">
+
+                {{-- <a href="{{ route('college-news.index') }}">
+                    <span>
+                        <i class="bi bi-newspaper"></i>
+                    </span>
+                    College News
+                </a> --}}
+
+                <a href="{{ route('college-news.index', ['section' => 'study-india']) }}">
                     <span>
                         <i class="bi bi-newspaper"></i>
                     </span>

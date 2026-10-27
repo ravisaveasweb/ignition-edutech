@@ -211,15 +211,44 @@
                         $registerRoute = $isStudyAbroad ? 'study-abroad.register' : 'study-india.register';
                     @endphp
 
-                    <p>
+                    {{-- <p>
                         Please
                         <a href="{{ route($loginRoute) }}">log in</a>
                         or
                         <a href="{{ route($registerRoute) }}">register</a>
                         to post an answer.
-                    </p>
+                    </p> --}}
+
+                    <div class="iq-premium-auth-card">
+                        <div class="iq-premium-auth-heading">
+                            <div class="iq-premium-auth-icon">
+                                <i class="bi bi-chat-square-text-fill"></i>
+                            </div>
+
+                            <div class="iq-premium-auth-content">
+                                <h3>Join the conversation</h3>
+                                <p>Share your knowledge and help fellow students.</p>
+                            </div>
+                        </div>
+
+                        <div class="iq-premium-auth-bottom">
+                            <p>Please log in or register to post an answer.</p>
+
+                            <div class="iq-premium-auth-actions">
+                                <a href="{{ route($loginRoute) }}" class="iq-premium-login-btn">
+                                    Log in <i class="bi bi-arrow-right"></i>
+                                </a>
+
+                                <a href="{{ route($registerRoute) }}" class="iq-premium-register-btn">
+                                    Create account
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
 
                 @endif
+
 
             </section>
 

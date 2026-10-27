@@ -385,5 +385,11 @@ Route::post('/logout', [StudyAbroadApplicationController::class, 'logout'])
 });
 
 
+// Study India - Write a Review Page
+Route::view(
+    '/study-india/reviews/create',
+    'study-india.reviews.create'
+)->name('study-india.reviews.create');
+
 
     

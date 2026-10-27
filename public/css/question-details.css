@@ -870,3 +870,188 @@
     .iqd-sidebar-link:hover,
     .iq-answer-form button:hover { transform: none; }
 }
+
+
+
+/* Questions answer post login and registrations Start */
+
+
+.iq-premium-auth-card {
+    position: relative;
+    margin: 26px 0;
+    padding: 24px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ffffff 0%, #fff9f2 100%);
+    border: 1px solid #f0e3d5;
+    border-radius: 16px;
+    box-shadow: 0 8px 28px rgba(10, 37, 64, 0.06);
+    font-family: inherit;
+}
+
+.iq-premium-auth-card::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #eb933a, #f6c58f);
+    content: "";
+}
+
+.iq-premium-auth-heading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.iq-premium-auth-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 54px;
+    width: 54px;
+    height: 54px;
+    color: #c66c13;
+    background: #fff0df;
+    border: 1px solid #f6dfc4;
+    border-radius: 14px;
+    font-size: 23px;
+}
+
+.iq-premium-auth-content {
+    min-width: 0;
+}
+
+.iq-premium-auth-content h3 {
+    margin: 0 0 5px;
+    color: #0a2540;
+    font-size: 19px;
+    font-weight: 750;
+    line-height: 1.4;
+}
+
+.iq-premium-auth-content p {
+    margin: 0;
+    color: #647184;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.iq-premium-auth-bottom {
+    margin-top: 21px;
+    padding-top: 18px;
+    border-top: 1px solid #f0e6dc;
+}
+
+.iq-premium-auth-bottom > p {
+    margin: 0 0 15px;
+    color: #465467;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.iq-premium-auth-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 11px;
+}
+
+.iq-premium-auth-actions a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    min-height: 43px;
+    padding: 0 19px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease,
+                background 0.2s ease;
+}
+
+.iq-premium-login-btn {
+    color: #ffffff;
+    background: linear-gradient(135deg, #eb933a, #d7791f);
+    box-shadow: 0 4px 12px rgba(215, 121, 31, 0.19);
+}
+
+.iq-premium-login-btn:hover {
+    color: #ffffff;
+    box-shadow: 0 7px 17px rgba(215, 121, 31, 0.27);
+    transform: translateY(-2px);
+}
+
+.iq-premium-register-btn {
+    color: #0a2540;
+    background: #ffffff;
+    border-color: #dce3eb !important;
+}
+
+.iq-premium-register-btn:hover {
+    color: #b96816;
+    background: #fff8f0;
+    border-color: #eb933a !important;
+    transform: translateY(-2px);
+}
+
+.iq-premium-auth-actions a:focus-visible {
+    outline: 2px solid #eb933a;
+    outline-offset: 3px;
+}
+
+@media (max-width: 576px) {
+    .iq-premium-auth-card {
+        margin: 20px 0;
+        padding: 17px;
+        border-radius: 12px;
+    }
+
+    .iq-premium-auth-heading {
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .iq-premium-auth-icon {
+        flex-basis: 43px;
+        width: 43px;
+        height: 43px;
+        border-radius: 11px;
+        font-size: 19px;
+    }
+
+    .iq-premium-auth-content h3 {
+        font-size: 16px;
+    }
+
+    .iq-premium-auth-content p {
+        font-size: 12px;
+    }
+
+    .iq-premium-auth-bottom {
+        margin-top: 17px;
+        padding-top: 15px;
+    }
+
+    .iq-premium-auth-actions {
+        align-items: stretch;
+    }
+
+    .iq-premium-auth-actions a {
+        min-height: 41px;
+        padding: 0 13px;
+        font-size: 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .iq-premium-auth-actions a {
+        transition: none;
+    }
+}
+
+/* Questions answer post login and registrations End*/

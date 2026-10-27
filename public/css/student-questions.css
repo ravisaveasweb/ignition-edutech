@@ -1612,3 +1612,117 @@ a {
         width: 100%;
     }
 }
+
+
+
+
+   /* STUDENT Q&A — CUSTOM PAGINATION Start */
+
+.iq-database-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 28px 0 35px;
+    padding: 10px;
+}
+
+.iq-database-pagination nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.iq-database-pagination .iq-pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.iq-database-pagination .iq-pagination-controls a,
+.iq-database-pagination .iq-pagination-controls > span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    min-width: 42px;
+    height: 42px;
+    padding: 0 13px;
+    box-sizing: border-box;
+    border: 1px solid #dce4ed;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #0a2540;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    text-decoration: none;
+    transition: background 0.2s ease,
+                color 0.2s ease,
+                border-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.iq-database-pagination .iq-pagination-controls a:hover {
+    background: #fff4e8;
+    color: #d7791f;
+    border-color: #eb933a;
+    transform: translateY(-2px);
+}
+
+/* Active page */
+.iq-database-pagination .iq-pagination-controls [aria-current="page"] {
+    background: #eb933a;
+    border-color: #eb933a;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: default;
+}
+
+/* Disabled Previous / Next */
+.iq-database-pagination .iq-pagination-controls .iq-page-disabled {
+    background: #f8fafc;
+    border-color: #e2e8f0;
+    color: #a0aab7;
+    cursor: not-allowed;
+}
+
+/* Arrow icons */
+.iq-database-pagination .iq-pagination-controls svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    .iq-database-pagination {
+        margin: 20px 0 25px;
+        padding: 8px 2px;
+    }
+
+    .iq-database-pagination .iq-pagination-controls {
+        gap: 5px;
+    }
+
+    .iq-database-pagination .iq-pagination-controls a,
+    .iq-database-pagination .iq-pagination-controls > span {
+        min-width: 35px;
+        height: 36px;
+        padding: 0 9px;
+        gap: 5px;
+        border-radius: 7px;
+        font-size: 12px;
+    }
+
+    .iq-database-pagination .iq-pagination-controls svg {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+   /* STUDENT Q&A — CUSTOM PAGINATION End */
+

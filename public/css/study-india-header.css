@@ -1583,7 +1583,7 @@
 
     .si-logo {
         width: 115px;
-        flex: 0 0 115px;
+        flex: 0 0 42px
     }
 
     .si-logo img {
@@ -1818,8 +1818,8 @@
     }
 
     .si-logo {
-        width: 100px;
-        flex-basis: 100px;
+        width: 40px;
+        flex-basis: 40px;
     }
 
     .si-logo img {
@@ -3364,744 +3364,226 @@ body.si-preference-open {
 }
 
 
-/* today */
 
-/* Study India Header Responsive */
-.si-logo {
-    flex-shrink: 0;
-    min-width: 0;
-}
 
-.si-location-trigger {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-    min-width: 150px;
-    padding: 8px 12px;
-}
 
-.si-location-text-wrap {
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    text-align: left;
-}
+/* =========================================================
+   MOBILE LAYOUT (Fixed Row 1)
+   ========================================================= */
 
-.si-location-label,
-.si-location-text {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
+/* Hide Write a Review on ALL screen sizes */
+/* .si-header-actions .si-review-link {
+    display: none !important;
+    
 
-.si-study-preference-trigger,
-.si-explore-trigger,
-.si-menu-trigger {
-    flex-shrink: 0;
-}
+} */
 
-.si-search-box {
-    display: flex;
-    align-items: center;
-    flex: 1 1 240px;
-    min-width: 150px;
-    max-width: 420px;
-}
-
-.si-search-box input {
-    width: 100%;
-    min-width: 0;
-}
-
-.si-header-actions {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 12px;
-    flex-shrink: 0;
-}
-
-/* Tablets and small laptops */
-@media (max-width: 1024px) {
-    .si-header-actions {
-        gap: 8px;
-    }
-
-    .si-review-link,
-    .si-counselling-link {
-        font-size: 13px;
-    }
-
-    .si-location-trigger {
-        min-width: 130px;
-        padding: 8px;
-    }
-
-    .si-study-preference-trigger {
-        padding: 9px 10px;
-    }
-
-    .si-search-box {
-        flex-basis: 180px;
-    }
-}
-
-/* Mobile and tablet portrait */
-@media (max-width: 768px) {
-    .si-logo {
-        flex: 0 0 auto;
-    }
-
-    .si-location-trigger {
-        min-width: 0;
-        max-width: 180px;
-        gap: 7px;
-        padding: 7px;
-    }
-
-    .si-location-icon {
-        flex-shrink: 0;
-    }
-
-    .si-location-label {
-        font-size: 11px;
-    }
-
-    .si-location-text {
-        font-size: 12px;
-    }
-
-    .si-location-arrow {
-        flex-shrink: 0;
-    }
-
-    .si-study-preference-trigger {
-        min-width: 0;
-        padding: 9px;
-        gap: 6px;
-    }
-
-    .si-search-box {
-        flex: 1 1 100%;
-        order: 5;
-        max-width: none;
-        min-width: 0;
-    }
-
-    .si-header-actions {
-        gap: 8px;
-    }
-
-    .si-review-link,
-    .si-counselling-link {
-        display: none;
-    }
-}
-
-/* Small mobile screens */
-@media (max-width: 480px) {
-    .si-location-trigger {
-        max-width: 145px;
-    }
-
-    .si-location-label {
-        font-size: 10px;
-    }
-
-    .si-location-text {
-        font-size: 11px;
-    }
-
-    .si-study-preference-trigger {
-        padding: 8px;
-        font-size: 12px;
-    }
-
-    .si-study-preference-trigger i {
-        font-size: 16px;
-    }
-
-    .si-explore-trigger {
-        padding: 8px;
-        font-size: 12px;
-    }
-
-    .si-menu-trigger {
-        padding: 7px;
-    }
-
-    .si-header-actions {
-        gap: 5px;
-    }
-
-    .si-search-box {
-        flex-basis: 100%;
-    }
-}
-
-/* Extra-small mobile screens */
-@media (max-width: 360px) {
-    .si-location-trigger {
-        max-width: 125px;
-        gap: 5px;
-    }
-
-    .si-location-icon i {
-        font-size: 15px;
-    }
-
-    .si-location-arrow i {
-        font-size: 11px;
-    }
-
-    .si-study-preference-trigger span {
-        max-width: 80px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
-
-    .si-explore-trigger {
-        font-size: 0;
-    }
-
-    .si-explore-trigger i {
-        font-size: 18px;
-    }
-}
-
-/* =====================================================================
-   STUDY INDIA HEADER - TWO-ROW RESPONSIVE LAYER
-   Keep this block at the very END of the file.
-
-   Rules:
-   - Above 1200px: ONE row (original desktop layout).
-   - 1200px and below: EXACTLY TWO rows, on every screen size.
-   - Nothing is hidden or turned into an icon. Every item keeps its design.
-     On smaller screens the whole header is scaled down with --k.
-
-   Which item sits on which row
-   ----------------------------------------------------------------
-   1201px+      : State | Preferences | Search | Review | Counselling | Explore | Menu
-   961-1200px   : Row 1: State, Preferences, Review, Counselling, Explore, Menu
-                  Row 2: Search
-   701-960px    : Row 1: State, Preferences, Review, Counselling
-                  Row 2: Search, Explore, Menu
-   up to 700px  : Row 1: State, Preferences, Review
-                  Row 2: Search, Counselling, Explore, Menu
-===================================================================== */
-
-/* Moved here from the inline <style> above <!DOCTYPE> (you may delete that) */
-.si-menu-user .si-user-icon {
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
-}
-
-.si-menu-user .si-menu-profile-photo {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-/* ---------- Container ---------- */
-.si-header-top {
-    --k: 1;
-    /* scale factor */
-    --g: calc(10px * var(--k));
-    /* space between the 2 rows */
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    align-content: flex-start;
-    gap: 0 calc(12px * var(--k));
-    min-height: 62px;
-    padding: calc(8px * var(--k)) 25px;
-}
-
-/* invisible line-break that forces the 2nd row (also provides the row gap) */
-.si-header-top::after {
-    content: "";
-    display: none;
-    flex: 1 0 100%;
-    height: var(--g);
-    order: 7;
-}
-
-/* actions' children join the header row directly (so they can move rows) */
-.si-header-actions {
-    display: contents;
-}
-
-/* ---------- Order: desktop ---------- */
-.si-logo {
-    order: 1;
-    flex: 0 1 auto;
-    width: auto;
-    min-width: 0;
-    max-width: none;
-}
-
-.si-study-preference-trigger {
-    order: 2;
-}
-
-.si-search-box {
-    order: 3;
-}
-
-.si-header-actions .si-review-link {
-    order: 4;
-    margin-left: auto;
-}
-
-.si-header-actions .si-counselling-link {
-    order: 5;
-}
-
-.si-explore-trigger {
-    order: 6;
-}
-
-.si-menu-trigger {
-    order: 7;
-}
-
-/* ---------- State button ---------- */
-.si-location-trigger {
-    width: auto;
-    min-width: 0;
-    max-width: 100%;
-    height: calc(40px * var(--k));
-    padding: 0 calc(18px * var(--k));
-    gap: calc(7px * var(--k));
-    justify-content: flex-start;
-    border: 1px solid #e7e7e7;
-    border-radius: 7px;
-}
-
-.si-location-trigger:hover {
-    border-color: #eb933a;
-}
-
-.si-location-icon {
-    width: max(22px, calc(30px * var(--k)));
-    height: max(22px, calc(30px * var(--k)));
-    min-width: max(22px, calc(30px * var(--k)));
-    border-radius: 8px;
-    font-size: max(11px, calc(14px * var(--k)));
-}
-
-.si-location-text-wrap {
-    display: flex;
-    min-width: 0;
-    max-width: calc(150px * var(--k));
-    overflow: hidden;
-}
-
-.si-location-label {
-    display: block;
-    font-size: max(8px, calc(10px * var(--k)));
-}
-
-.si-location-text {
-    display: block;
-    font-size: max(10px, calc(14px * var(--k)));
-}
-
-.si-location-arrow {
-    display: inline-flex;
-    flex-shrink: 0;
-}
-
-/* ---------- Study Preferences ---------- */
-.si-study-preference-trigger {
-    flex: 0 1 auto;
-    min-width: 0;
-    overflow: hidden;
-    width: auto;
-    max-width: none;
-    height: calc(40px * var(--k));
-    padding: 0 calc(14px * var(--k));
-    gap: calc(8px * var(--k));
-    font-size: max(11px, calc(14px * var(--k)));
-    white-space: nowrap;
-}
-
-.si-study-preference-trigger i {
-    font-size: max(12px, calc(15px * var(--k)));
-    flex-shrink: 0;
-}
-
-.si-study-preference-trigger span {
-    display: block;
-    min-width: 0;
-    max-width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-/* ---------- Search ---------- */
-.si-search-box {
-    display: flex;
-    flex: 1 1 260px;
-    width: auto;
-    min-width: 200px;
-    max-width: 635px;
-    height: calc(40px * var(--k));
-    padding: 0 calc(12px * var(--k));
-}
-
-.si-search-icon {
-    width: max(22px, calc(30px * var(--k)));
-    height: max(22px, calc(30px * var(--k)));
-    min-width: max(22px, calc(30px * var(--k)));
-    font-size: max(11px, calc(14px * var(--k)));
-}
-
-.si-search-box input {
-    font-size: max(11px, calc(13px * var(--k)));
-}
-
-/* ---------- Review / Counselling / Explore / Menu ---------- */
-.si-header-actions .si-review-link,
-.si-header-actions .si-counselling-link {
-    display: inline-flex !important;
-}
-
-.si-header-actions a {
-    gap: calc(5px * var(--k));
-    font-size: max(10px, calc(12px * var(--k)));
-}
-
-.si-header-actions a i,
-.si-explore-trigger i {
-    width: max(22px, calc(27px * var(--k)));
-    height: max(22px, calc(27px * var(--k)));
-    font-size: max(11px, calc(13px * var(--k)));
-    background: #fff4e8;
-    color: #eb933a;
-    border-radius: 7px;
-}
-
-.si-header-actions a:hover i,
-.si-explore-trigger:hover i {
-    background: #eb933a;
-    color: #fff;
-}
-
-.si-explore-trigger {
-    width: auto;
-    height: auto;
-    min-width: 0;
-    padding: calc(5px * var(--k));
-    gap: calc(5px * var(--k));
-    justify-content: flex-start;
-    font-size: max(10px, calc(12px * var(--k)));
-    background: transparent;
-}
-
-.si-menu-trigger {
-    width: max(32px, calc(40px * var(--k)));
-    height: max(32px, calc(40px * var(--k)));
-    min-width: max(32px, calc(40px * var(--k)));
-    padding: 0;
-}
-
-.si-menu-trigger i {
-    font-size: max(15px, calc(19px * var(--k)));
-}
-
-/* ---------- Category bar keeps the same look ---------- */
-.si-category-bar {
-    gap: 20px;
-    min-height: 35px;
-}
-
-.si-category-menu,
-.si-state-category-item {
-    height: 38px;
-    font-size: 11px;
-}
-
-/* ---------- Drawers use the real visible height on phones ---------- */
-.si-menu-drawer,
-.si-stream-drawer {
-    height: 100vh;
-    height: 100dvh;
-}
-
-.si-menu-header {
-    align-items: flex-start;
-}
-
-.si-menu-user {
-    flex: 1;
-    min-width: 0;
-}
-
-.si-menu-user>div:last-child {
-    min-width: 0;
-    overflow-wrap: anywhere;
-}
-
-/* =====================================================================
-   1200px and below: TWO ROWS
-   Row 1: State, Preferences, Review, Counselling, Explore, Menu
-   Row 2: Search
-===================================================================== */
-@media (max-width: 1200px) {
-    .si-header-top {
-        min-height: 0;
-        padding: calc(8px * var(--k)) 18px;
-    }
-
-    .si-header-top::after {
-        display: block;
-        order: 7;
-    }
-
-    .si-header-actions .si-review-link {
-        order: 3;
-    }
-
-    .si-header-actions .si-counselling-link {
-        order: 4;
-        margin-left: 0;
-    }
-
-    .si-explore-trigger {
-        order: 5;
-    }
-
-    .si-menu-trigger {
-        order: 6;
-    }
-
-    .si-search-box {
-        order: 8;
-        flex: 1 1 100%;
-        width: 100%;
-        min-width: 0;
-        max-width: none;
-    }
-
-    .si-category-bar {
-        padding: 0 18px;
-    }
-
-    .si-search-results {
-        position: absolute;
-        top: 102px;
-        left: 18px;
-        right: 18px;
-        width: auto;
-        max-width: none;
-        max-height: 70vh;
-    }
-
-    .si-search-results-list {
-        max-height: calc(70vh - 56px);
-    }
-
-    .si-explore-panel {
-        top: 56px;
-        right: 18px;
-    }
-}
-
-/* =====================================================================
-   960px and below: scale 0.9
-   Row 1: State, Preferences, Review, Counselling
-   Row 2: Search, Explore, Menu
-===================================================================== */
 @media (max-width: 960px) {
+    /* Main Container */
     .si-header-top {
-        --k: .9;
-    }
-
-    .si-logo {
-        max-width: 30%;
-    }
-
-    .si-header-actions .si-review-link {
-        order: 3;
-        margin-left: auto;
-    }
-
-    .si-header-actions .si-counselling-link {
-        order: 4;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        justify-content: flex-start !important; /* CHANGED: Fixes the massive gaps */
+        gap: 10px !important;
+        padding: 12px 15px !important;
+        position: relative;
     }
 
     .si-header-top::after {
-        order: 5;
+        display: none !important;
     }
 
+    .si-header-actions {
+        display: contents !important;
+    }
+
+    /* ---------------------------------------------------
+       ROW 1: State + Search + Preferences (ALL IN ONE ROW)
+       --------------------------------------------------- */
+
+    /* 1. State Button */
+    .si-location-trigger {
+        order: 1 !important;
+        flex: 0 0 44px !important; 
+        width: 44px !important;
+        height: 44px !important;
+        padding: 0 !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 0 !important;
+        background: #fff3e5 !important; 
+        border: 1px solid #f5d9b8 !important; 
+        border-radius: 10px !important;
+    }
+    
+    .si-location-text-wrap,
+    .si-location-arrow {
+        display: none !important;
+    }
+    
+    .si-location-icon {
+        margin: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: transparent !important;
+        color: #b0cb1f !important; 
+        font-size: 18px !important;
+    }
+
+    /* 2. Search Bar (Shrinks perfectly to fit in the middle) */
     .si-search-box {
-        order: 6;
-        flex: 1 1 0;
-        width: auto;
-        min-width: 0;
-        max-width: none;
+        order: 2 !important;
+        flex: 1 1 0px !important; /* Forces it to shrink to fit */
+        width: 0 !important; /* Critical for flex shrinking */
+        min-width: 0 !important; /* Prevents text from pushing it wider */
+        margin: 0 !important;
+        display: flex !important; 
+        height: 44px !important;
+        border-radius: 10px !important;
     }
 
-    .si-explore-trigger {
-        order: 7;
-    }
-
-    .si-menu-trigger {
-        order: 8;
-    }
-
-    .si-search-results {
-        top: 92px;
-    }
-
-    .si-explore-panel {
-        top: 98px;
-        right: 18px;
-        width: 500px;
-        max-width: calc(100vw - 36px);
-    }
-
-    .si-state-popup,
-    .si-institute-panel {
-        left: 18px;
-        right: 18px;
-        width: auto;
-        max-width: none;
-    }
-
-    .si-state-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-}
-
-/* =====================================================================
-   700px and below (phones): scale 0.78
-   Row 1: State, Preferences, Review
-   Row 2: Search, Counselling, Explore, Menu
-===================================================================== */
-@media (max-width: 700px) {
-    .si-header-top {
-        --k: .78;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    .si-logo {
-        max-width: 32%;
-    }
-
+    /* 3. Study Preferences */
     .si-study-preference-trigger {
-        max-width: 36%;
+        order: 3 !important;
+        flex: 0 0 44px !important; 
+        width: 44px !important;
+        height: 44px !important;
+        padding: 0 !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 0 !important;
+        background: #f6f6f6 !important; 
+        border: 1px solid #e5e5e5 !important;
+        border-radius: 10px !important;
+    }
+    
+    .si-study-preference-trigger span {
+        display: none !important;
+    }
+    
+    .si-study-preference-trigger i {
+        margin: 0 !important;
+        font-size: 18px !important;
+        color: #222 !important; 
     }
 
-    .si-header-actions .si-review-link {
-        order: 3;
-        margin-left: auto;
-    }
-
-    .si-header-top::after {
+    /* ---------------------------------------------------
+       ROW 2: Counselling, Explore, Menu
+       --------------------------------------------------- */
+    .si-header-top::before {
+        content: "";
+        display: block;
+        width: 100%;
         order: 4;
+        height: 0;
+        pointer-events: none;
     }
 
-    .si-search-box {
-        order: 5;
-    }
-
+    /* Counselling */
     .si-header-actions .si-counselling-link {
-        order: 6;
-        margin-left: 0;
+        order: 5 !important;
+        display: inline-flex !important;
+        margin: 0 !important;
+        background: #fff8f0 !important;
+        padding: 0 14px !important;
+        height: 44px !important;
+        border-radius: 10px !important;
+        border: 1px solid #f5e3d1 !important;
+        color: #333 !important;
+        font-weight: 600 !important;
+        flex: 1 1 auto !important; 
+        justify-content: center !important;
     }
 
+    /* Explore */
     .si-explore-trigger {
-        order: 7;
+        order: 6 !important;
+        background: #fff8f0 !important;
+        height: 44px !important;
+        width: 60px !important; 
+        padding: 0 !important;
+        border-radius: 10px !important;
+        border: 1px solid #f5e3d1 !important;
+        color: #333 !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 0 !important;
+    }
+    
+    .si-explore-trigger span {
+        display: none !important; 
+    }
+    
+    .si-explore-trigger i {
+        font-size: 20px !important;
+        margin: 0 !important;
     }
 
+    /* Menu */
     .si-menu-trigger {
-        order: 8;
+        order: 7 !important;
+        border: 1px solid #e5e5e5 !important;
+        border-radius: 10px !important;
+        height: 44px !important;
+        width: 60px !important; 
+        min-width: 60px !important;
+        background: #f9f9f9 !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 0 !important;
+    }
+    
+    .si-menu-trigger i {
+        font-size: 20px !important;
     }
 
-    .si-category-bar {
-        padding: 0 10px;
-    }
-
-    .si-search-results {
-        position: absolute;
-        top: 80px;
-        left: 10px;
-        right: 10px;
-        max-height: calc(100vh - 95px);
-        max-height: calc(100dvh - 95px);
-    }
-
-    .si-search-results-list {
-        max-height: calc(100vh - 150px);
-        max-height: calc(100dvh - 150px);
-    }
-
-    .si-explore-panel {
-        position: absolute;
-        top: 80px;
-        left: 10px;
-        right: 10px;
-        width: auto;
-        max-height: calc(100vh - 95px);
-        max-height: calc(100dvh - 95px);
-    }
-
+    /* Popups */
     .si-state-popup,
     .si-institute-panel {
-        top: 60px;
-        left: 10px;
-        right: 10px;
-        max-height: calc(100vh - 75px);
-        max-height: calc(100dvh - 75px);
-    }
-
-    .si-state-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-/* ---------- Small phones ---------- */
-@media (max-width: 380px) {
-    .si-header-top {
-        --k: .7;
-        padding-left: 8px;
-        padding-right: 8px;
-    }
-
-    .si-logo {
-        max-width: 31%;
-    }
-
-    .si-study-preference-trigger {
-        max-width: 35%;
+        top: 130px !important;
     }
 
     .si-search-results,
     .si-explore-panel {
-        top: 74px;
-    }
-
-    .si-state-grid {
-        grid-template-columns: 1fr;
+        top: 130px !important;
+        max-height: calc(100vh - 145px) !important;
     }
 }
 
-@media (max-width: 340px) {
+/* Small Phone Adjustments (<= 400px) */
+@media (max-width: 400px) {
     .si-header-top {
-        --k: .62;
+        gap: 8px !important;
     }
 
-    .si-search-results,
-    .si-explore-panel {
-        top: 70px;
+    .si-location-trigger,
+    .si-study-preference-trigger {
+        flex: 0 0 40px !important;
+        width: 40px !important;
+        height: 40px !important;
+    }
+    
+    .si-search-box {
+        height: 40px !important;
+    }
+    
+    .si-header-actions .si-counselling-link {
+        font-size: 12px !important;
+        padding: 0 10px !important;
+        height: 40px !important;
+    }
+    
+    .si-explore-trigger {
+        height: 40px !important;
+        width: 50px !important;
+    }
+    
+    .si-menu-trigger {
+        width: 50px !important;
+        height: 40px !important;
+        min-width: 50px !important;
     }
 }
