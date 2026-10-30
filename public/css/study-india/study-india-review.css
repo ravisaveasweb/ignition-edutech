@@ -3584,3 +3584,1469 @@ td {
 /* Progress baar end */
 
 
+
+/* View all Reviews Start */
+
+
+.ign-sir-viewall-page {
+    --ign-sir-viewall-navy: #0a2540;
+    --ign-sir-viewall-orange: #eb933a;
+    --ign-sir-viewall-orange-dark: #d7791f;
+    --ign-sir-viewall-text: #1c2b3c;
+    --ign-sir-viewall-muted: #657588;
+    --ign-sir-viewall-border: #e2e8ee;
+
+    background: #fff;
+    color: var(--ign-sir-viewall-text);
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    width: 100%;
+    overflow-wrap: anywhere;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+.ign-sir-viewall-page *,
+.ign-sir-viewall-page *::before,
+.ign-sir-viewall-page *::after {
+    box-sizing: border-box;
+}
+
+.ign-sir-viewall-page button,
+.ign-sir-viewall-page input,
+.ign-sir-viewall-page select {
+    font: inherit;
+}
+
+.ign-sir-viewall-page button,
+.ign-sir-viewall-page a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.ign-sir-viewall-page a {
+    text-decoration: none;
+}
+
+.ign-sir-viewall-page button:focus-visible,
+.ign-sir-viewall-page a:focus-visible,
+.ign-sir-viewall-page input:focus-visible,
+.ign-sir-viewall-page select:focus-visible {
+    outline: 3px solid var(--ign-sir-viewall-orange);
+    outline-offset: 3px;
+}
+
+.ign-sir-viewall-page [hidden] {
+    display: none !important;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.ign-sir-viewall-hero {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    min-height: 300px;
+    color: #fff;
+    background: #071e34;
+}
+
+.ign-sir-viewall-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background:
+        url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1800&q=85")
+        center 43% / cover no-repeat;
+    transform: scale(1.02);
+}
+
+.ign-sir-viewall-hero-shade {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+        90deg,
+        #061c31f5,
+        #092746d9 58%,
+        #092746b8
+    );
+}
+
+.ign-sir-viewall-hero-inner {
+    position: relative;
+    width: min(1160px, calc(100% - 48px));
+    margin: auto;
+    padding: 42px 0 36px;
+}
+
+.ign-sir-viewall-eyebrow {
+    margin: 0 0 12px;
+    color: inherit;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    line-height: 1.5;
+}
+
+.ign-sir-viewall-eyebrow span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 7px;
+    border-radius: 50%;
+    background: var(--ign-sir-viewall-orange);
+}
+
+.ign-sir-viewall-hero h1 {
+    margin: 0;
+    color: #fff;
+    font: 800 clamp(34px, 3.8vw, 44px)/1.2 Manrope, Arial, sans-serif;
+    letter-spacing: -1px;
+}
+
+.ign-sir-viewall-hero h1 em {
+    color: #ffb35f;
+    font-style: normal;
+}
+
+.ign-sir-viewall-hero-inner > p {
+    max-width: 760px;
+    margin: 12px 0 22px;
+    color: #edf3f8;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.ign-sir-viewall-search {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 760px;
+    min-height: 58px;
+    padding: 6px 6px 6px 17px;
+    border: 1px solid #ffffff70;
+    border-radius: 7px;
+    background: #fff;
+    box-shadow: 0 5px 20px #00162c24;
+}
+
+.ign-sir-viewall-search-icon {
+    flex-shrink: 0;
+    color: #647689;
+    font-size: 25px;
+}
+
+.ign-sir-viewall-search input {
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+    min-height: 42px;
+    padding: 10px 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #1c2b3c;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.ign-sir-viewall-search input::placeholder {
+    color: #778697;
+    opacity: 1;
+}
+
+.ign-sir-viewall-search input:focus-visible {
+    outline: none;
+}
+
+.ign-sir-viewall-search button {
+    display: grid;
+    flex: 0 0 46px;
+    width: 46px;
+    height: 46px;
+    place-items: center;
+    padding: 0;
+    border: 0;
+    border-radius: 5px;
+    background: var(--ign-sir-viewall-orange);
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    transition: background .2s ease, transform .2s ease;
+}
+
+.ign-sir-viewall-search button:hover {
+    background: var(--ign-sir-viewall-orange-dark);
+}
+
+.ign-sir-viewall-search button:active {
+    transform: scale(.97);
+}
+
+.ign-sir-viewall-hero-subline {
+    margin-top: 13px;
+    color: #e0e9f1;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.ign-sir-viewall-hero-subline a {
+    margin-left: 5px;
+    color: #ffc078;
+    font-weight: 800;
+}
+
+.ign-sir-viewall-hero-subline a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================================
+   MAIN LAYOUT
+   ========================================================= */
+
+.ign-sir-viewall-main {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 290px;
+    gap: 30px;
+    width: min(1160px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 30px 0 60px;
+}
+
+.ign-sir-viewall-content {
+    min-width: 0;
+}
+
+/* =========================================================
+   FILTERS
+   ========================================================= */
+
+.ign-sir-viewall-toolbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #e8edf1;
+}
+
+.ign-sir-viewall-filter-label {
+    margin-right: 4px;
+    color: #405469;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.ign-sir-viewall-filter-select,
+.ign-sir-viewall-sort-select {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 42px;
+    border: 1px solid #dce4eb;
+    border-radius: 6px;
+    background: #fff;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+
+.ign-sir-viewall-filter-select:focus-within,
+.ign-sir-viewall-sort-select:focus-within {
+    border-color: var(--ign-sir-viewall-orange);
+    box-shadow: 0 0 0 3px #eb933a20;
+} 
+
+.ign-sir-viewall-filter-select select,
+.ign-sir-viewall-sort-select select {
+    max-width: 165px;
+    min-height: 40px;
+    padding: 8px 30px 8px 12px;
+    border: 0;
+    outline: 0;
+    appearance: none;
+    background: transparent;
+    color: #405469;
+    font: 600 14px/1.5 "DM Sans", Arial, sans-serif;
+    cursor: pointer;
+}
+
+/* .ign-sir-viewall-filter-select::after {
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    color: #68798a;
+    content: "⌄";
+    font-size: 16px;
+    pointer-events: none;
+} */
+
+.ign-sir-viewall-filter-select {
+    position: relative;
+    display: inline-block;
+}
+
+.ign-sir-viewall-filter-select select {
+    width: 100%;
+    padding-right: 35px !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    background-image: none !important;
+}
+
+.ign-sir-viewall-dropdown-icon {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    color: #0a2540;
+    font-size: 12px;
+    pointer-events: none;
+}
+
+.ign-sir-viewall-sort-select {
+    gap: 7px;
+    margin-left: auto;
+    padding-left: 11px;
+}
+
+.ign-sir-viewall-sort-select > span {
+    color: #405469;
+    font-size: 14px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.ign-sir-viewall-sort-select select {
+    max-width: 165px;
+}
+
+.ign-sir-viewall-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+}
+
+/* =========================================================
+   STREAM / CATEGORY CHIPS
+   ========================================================= */
+
+.ign-sir-viewall-category-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    padding: 17px 0 20px;
+    border-bottom: 1px solid #edf0f3;
+}
+
+.ign-sir-viewall-chip,
+.ign-sir-viewall-tag-list button {
+    min-height: 38px;
+    padding: 8px 13px;
+    border: 1px solid #dfe6ec;
+    border-radius: 22px;
+    background: #fff;
+    color: #526477;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    cursor: pointer;
+    transition:
+        background .15s ease,
+        color .15s ease,
+        border-color .15s ease,
+        transform .15s ease;
+}
+
+.ign-sir-viewall-chip:hover,
+.ign-sir-viewall-chip.ign-sir-viewall-active,
+.ign-sir-viewall-tag-list button:hover,
+.ign-sir-viewall-tag-list button.ign-sir-viewall-tag-active {
+    border-color: #f0a34f;
+    background: #fff7ed;
+    color: #9d5913;
+}
+
+.ign-sir-viewall-chip:active,
+.ign-sir-viewall-tag-list button:active {
+    transform: scale(.98);
+}
+
+/* =========================================================
+   POPULAR TAGS
+   ========================================================= */
+
+.ign-sir-viewall-popular-tags {
+    padding: 21px 0 23px;
+    border-bottom: 1px solid #edf0f3;
+}
+
+.ign-sir-viewall-popular-tags h2 {
+    margin: 0 0 12px;
+    color: #26394d;
+    font: 800 18px/1.45 Manrope, Arial, sans-serif;
+}
+
+.ign-sir-viewall-tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.ign-sir-viewall-tag-list button {
+    min-height: 36px;
+    padding: 7px 12px;
+}
+
+.ign-sir-viewall-tag-list button.ign-sir-viewall-tag-active {
+    border-color: #f09536;
+    background: #fff0df;
+}
+
+/* =========================================================
+   RESULTS HEADING
+   ========================================================= */
+
+.ign-sir-viewall-results-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 14px;
+    margin: 25px 0 8px;
+}
+
+.ign-sir-viewall-results-heading h2 {
+    margin: 0;
+    color: #1c2b3c;
+    font: 800 21px/1.4 Manrope, Arial, sans-serif;
+}
+
+.ign-sir-viewall-results-heading > span {
+    color: #657588;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: right;
+}
+
+/* =========================================================
+   REVIEW CARDS
+   ========================================================= */
+
+.ign-sir-viewall-review-list {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.ign-sir-viewall-review-card {
+    position: relative;
+    padding: 24px 0 21px;
+    border-bottom: 1px solid #e2e8ee;
+}
+
+.ign-sir-viewall-review-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.ign-sir-viewall-review-person,
+.ign-sir-viewall-side-person {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.ign-sir-viewall-review-person > div,
+.ign-sir-viewall-side-person > div {
+    min-width: 0;
+}
+
+.ign-sir-viewall-avatar {
+    display: grid;
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.ign-sir-viewall-avatar-purple { background: #8e6bc4; }
+.ign-sir-viewall-avatar-coral { background: #d9566b; }
+.ign-sir-viewall-avatar-blue { background: #2479ad; }
+.ign-sir-viewall-avatar-green { background: #458b6b; }
+
+.ign-sir-viewall-avatar-yellow {
+    background: #e4ba27;
+    color: #493c0d;
+}
+
+.ign-sir-viewall-review-person b,
+.ign-sir-viewall-side-person b {
+    display: block;
+    color: #26394d;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+.ign-sir-viewall-review-person small,
+.ign-sir-viewall-side-person small {
+    display: block;
+    margin-top: 3px;
+    color: #657588;
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.ign-sir-viewall-review-person small i {
+    margin: 0 4px;
+    color: #aab4bd;
+    font-style: normal;
+}
+
+.ign-sir-viewall-review-score {
+    flex-shrink: 0;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.ign-sir-viewall-review-score b {
+    display: block;
+    color: #26394d;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.ign-sir-viewall-review-score span {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 5px 9px;
+    border-radius: 4px;
+    background: #e4f4e9;
+    color: #176b3b;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.ign-sir-viewall-review-card > h3 {
+    margin: 15px 0 13px;
+    color: #216b9d;
+    font: 800 18px/1.5 Manrope, Arial, sans-serif;
+}
+
+.ign-sir-viewall-review-topic {
+    margin: 13px 0;
+}
+
+.ign-sir-viewall-review-topic > b {
+    display: block;
+    margin-bottom: 4px;
+    color: #2b3d50;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.6;
+}
+
+.ign-sir-viewall-review-topic p {
+    margin: 0;
+    color: #526477;
+    font-size: 15px;
+    line-height: 1.85;
+}
+
+/* =========================================================
+   REVIEW ACTIONS
+   ========================================================= */
+
+.ign-sir-viewall-review-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 17px;
+    padding-right: 170px;
+}
+
+.ign-sir-viewall-review-actions button,
+.ign-sir-viewall-review-actions a {
+    min-height: 30px;
+    padding: 3px 0;
+    border: 0;
+    background: transparent;
+    color: #5f7081;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.ign-sir-viewall-review-actions button:hover,
+.ign-sir-viewall-review-actions a:hover {
+    color: #b76516;
+}
+
+.ign-sir-viewall-review-actions .ign-sir-viewall-write-link {
+    margin-left: auto;
+    color: #a85c14;
+    font-weight: 800;
+}
+
+.ign-sir-viewall-review-actions .ign-sir-viewall-selected {
+    color: #a85c14;
+    font-weight: 800;
+}
+
+.ign-sir-viewall-expanded-review {
+    margin-top: 12px;
+    padding: 12px 15px;
+    border-left: 3px solid var(--ign-sir-viewall-orange);
+    border-radius: 0 5px 5px 0;
+    background: #f6f8fa;
+    color: #405469;
+    font-size: 15px;
+    line-height: 1.85;
+}
+
+.ign-sir-viewall-expand-button {
+    position: absolute;
+    right: 0;
+    bottom: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 42px;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 5px;
+    background: var(--ign-sir-viewall-orange);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.4;
+    cursor: pointer;
+    transition: background .2s ease, transform .2s ease;
+}
+
+.ign-sir-viewall-expand-button:hover {
+    background: var(--ign-sir-viewall-orange-dark);
+}
+
+.ign-sir-viewall-expand-button:active {
+    transform: scale(.98);
+}
+
+/* =========================================================
+   NO RESULTS / LOAD MORE
+   ========================================================= */
+
+.ign-sir-viewall-no-results {
+    margin: 24px 0;
+    padding: 45px 20px;
+    border: 1px dashed #d5dfe7;
+    border-radius: 9px;
+    text-align: center;
+}
+
+.ign-sir-viewall-no-results > b {
+    color: #26394d;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.ign-sir-viewall-no-results p {
+    margin: 9px 0 17px;
+    color: #657588;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.ign-sir-viewall-no-results button {
+    min-height: 42px;
+    padding: 10px 16px;
+    border: 0;
+    border-radius: 5px;
+    background: var(--ign-sir-viewall-orange);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.ign-sir-viewall-load-more-wrap {
+    padding: 28px 18px;
+    text-align: center;
+}
+
+.ign-sir-viewall-outline-button {
+    min-height: 44px;
+    padding: 11px 19px;
+    border: 1px solid #d5dfe7;
+    border-radius: 6px;
+    background: #fff;
+    color: #405469;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.5;
+    cursor: pointer;
+    transition: border-color .2s ease, color .2s ease, background .2s ease;
+}
+
+.ign-sir-viewall-outline-button:hover {
+    border-color: var(--ign-sir-viewall-orange);
+    background: #fffaf4;
+    color: #a85c14;
+}
+
+/* =========================================================
+   TOP REVIEWS SIDEBAR
+   ========================================================= */
+
+.ign-sir-viewall-top-reviews {
+    align-self: start;
+    padding: 0 17px;
+    border: 1px solid #e2e8ee;
+    border-radius: 9px;
+    background: #fff;
+    box-shadow: 0 3px 14px #0a254008;
+}
+
+.ign-sir-viewall-side-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 18px 0;
+    border-bottom: 1px solid #edf0f3;
+}
+
+.ign-sir-viewall-side-heading h2 {
+    margin: 0;
+    color: #25384c;
+    font: 800 15px/1.5 Manrope, Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .3px;
+}
+
+.ign-sir-viewall-side-heading > span {
+    color: #657588;
+    font-size: 12px;
+    line-height: 1.5;
+    white-space: nowrap;
+}
+
+.ign-sir-viewall-top-reviews > article {
+    padding: 17px 0;
+    border-bottom: 1px solid #edf0f3;
+}
+
+.ign-sir-viewall-side-person {
+    gap: 10px;
+}
+
+.ign-sir-viewall-side-person .ign-sir-viewall-avatar {
+    flex-basis: 36px;
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+}
+
+.ign-sir-viewall-top-reviews > article p {
+    margin: 11px 0 8px;
+    color: #526477;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.ign-sir-viewall-top-reviews > article > a {
+    display: inline-block;
+    padding: 3px 0;
+    color: #a85c14;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.5;
+}
+
+.ign-sir-viewall-top-reviews > article > a:hover {
+    text-decoration: underline;
+}
+
+.ign-sir-viewall-side-cta {
+    margin: 18px 0;
+    padding: 17px;
+    border: 1px solid #edf0f3;
+    border-radius: 8px;
+    background: #f7f9fb;
+}
+
+.ign-sir-viewall-side-cta > span {
+    color: #657588;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.ign-sir-viewall-side-cta h3 {
+    margin: 8px 0 15px;
+    color: var(--ign-sir-viewall-navy);
+    font: 800 17px/1.55 Manrope, Arial, sans-serif;
+}
+
+.ign-sir-viewall-orange-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 44px;
+    padding: 11px 15px;
+    border: 0;
+    border-radius: 5px;
+    background: var(--ign-sir-viewall-orange);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.5;
+    text-align: center;
+    cursor: pointer;
+    transition: background .2s ease, transform .2s ease;
+}
+
+.ign-sir-viewall-orange-button:hover {
+    background: var(--ign-sir-viewall-orange-dark);
+    color: #fff;
+}
+
+.ign-sir-viewall-orange-button:active {
+    transform: scale(.98);
+}
+
+.ign-sir-viewall-side-cta .ign-sir-viewall-orange-button {
+    width: 100%;
+}
+
+.ign-sir-viewall-side-note {
+    margin: 14px 0 16px;
+    color: #657588;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* =========================================================
+   BOTTOM CTA
+   ========================================================= */
+
+.ign-sir-viewall-faq-strip {
+    padding: 42px 24px;
+    border-top: 1px solid #e2e8ee;
+    background: #f5f8fa;
+}
+
+.ign-sir-viewall-faq-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    width: min(1160px, 100%);
+    margin: auto;
+}
+
+.ign-sir-viewall-faq-inner .ign-sir-viewall-eyebrow {
+    margin-bottom: 8px;
+    color: #536779;
+}
+
+.ign-sir-viewall-faq-inner h2 {
+    margin: 0;
+    color: var(--ign-sir-viewall-navy);
+    font: 800 clamp(23px, 2.5vw, 29px)/1.4 Manrope, Arial, sans-serif;
+}
+
+.ign-sir-viewall-faq-inner p {
+    max-width: 700px;
+    margin: 9px 0 0;
+    color: #526477;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* =========================================================
+   TOAST NOTIFICATION
+   ========================================================= */
+
+.ign-sir-viewall-toast {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 9999;
+    max-width: min(390px, calc(100vw - 40px));
+    padding: 15px 19px;
+    border: 1px solid #ffffff26;
+    border-radius: 8px;
+    background: #0a2540;
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.65;
+    box-shadow: 0 8px 28px #0a254026;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+}
+
+.ign-sir-viewall-toast.ign-sir-viewall-toast-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 980px) {
+    .ign-sir-viewall-main {
+        grid-template-columns: minmax(0, 1fr) 250px;
+        gap: 22px;
+    }
+
+    .ign-sir-viewall-top-reviews {
+        padding: 0 13px;
+    }
+
+    .ign-sir-viewall-toolbar {
+        gap: 8px;
+    }
+
+    .ign-sir-viewall-sort-select {
+        margin-left: 0;
+    }
+
+    .ign-sir-viewall-hero-inner {
+        padding-top: 36px;
+    }
+
+    .ign-sir-viewall-review-person small {
+        max-width: 400px;
+    }
+
+    .ign-sir-viewall-review-actions {
+        gap: 12px;
+    }
+}
+
+/* =========================================================
+   MOBILE AND SMALL TABLETS
+   ========================================================= */
+
+@media (max-width: 760px) {
+    .ign-sir-viewall-main {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+    }
+
+    .ign-sir-viewall-top-reviews {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0 18px;
+    }
+
+    .ign-sir-viewall-side-heading,
+    .ign-sir-viewall-side-cta,
+    .ign-sir-viewall-side-note {
+        grid-column: 1 / -1;
+    }
+
+    .ign-sir-viewall-top-reviews > article:nth-of-type(n + 3) {
+        display: none;
+    }
+
+    .ign-sir-viewall-faq-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .ign-sir-viewall-review-card > .ign-sir-viewall-expand-button {
+        position: static;
+        margin-top: 14px;
+    }
+
+    .ign-sir-viewall-review-actions {
+        padding-right: 0;
+    }
+
+    .ign-sir-viewall-results-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .ign-sir-viewall-results-heading > span {
+        text-align: left;
+    }
+
+    .ign-sir-viewall-hero-inner {
+        width: calc(100% - 36px);
+    }
+
+    .ign-sir-viewall-hero {
+        min-height: auto;
+    }
+
+    .ign-sir-viewall-hero-inner > p {
+        max-width: 100%;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+    .ign-sir-viewall-page {
+        font-size: 16px;
+    }
+
+    .ign-sir-viewall-main {
+        width: calc(100% - 30px);
+        padding-top: 23px;
+        padding-bottom: 40px;
+    }
+
+    .ign-sir-viewall-hero-inner {
+        width: calc(100% - 30px);
+        padding: 31px 0 29px;
+    }
+
+    .ign-sir-viewall-eyebrow {
+        font-size: 13px;
+    }
+
+    .ign-sir-viewall-hero h1 {
+        font-size: clamp(30px, 8vw, 36px);
+        line-height: 1.25;
+        letter-spacing: -.6px;
+    }
+
+    .ign-sir-viewall-hero-inner > p {
+        margin: 11px 0 18px;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .ign-sir-viewall-search {
+        gap: 8px;
+        min-height: 54px;
+        padding-left: 12px;
+    }
+
+    .ign-sir-viewall-search-icon {
+        font-size: 22px;
+    }
+
+    .ign-sir-viewall-search input {
+        min-height: 40px;
+        font-size: 15px;
+    }
+
+    .ign-sir-viewall-search button {
+        flex-basis: 42px;
+        width: 42px;
+        height: 42px;
+    }
+
+    .ign-sir-viewall-hero-subline {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .ign-sir-viewall-toolbar {
+        align-items: stretch;
+        gap: 9px;
+    }
+
+    .ign-sir-viewall-filter-label {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .ign-sir-viewall-filter-select {
+        flex: 1 1 calc(50% - 6px);
+        min-width: 0;
+        min-height: 44px;
+    }
+
+    .ign-sir-viewall-filter-select select {
+        width: 100%;
+        max-width: none;
+        min-height: 42px;
+        padding-left: 10px;
+        font-size: 14px;
+    }
+
+    .ign-sir-viewall-filter-select::after {
+        right: 8px;
+    }
+
+    .ign-sir-viewall-sort-select {
+        width: 100%;
+        min-height: 44px;
+        margin-top: 2px;
+    }
+
+    .ign-sir-viewall-sort-select > span {
+        font-size: 14px;
+    }
+
+    .ign-sir-viewall-sort-select select {
+        flex: 1;
+        max-width: none;
+        min-width: 0;
+        min-height: 42px;
+        font-size: 14px;
+    }
+
+    .ign-sir-viewall-category-chips {
+        gap: 8px;
+        padding: 15px 0 18px;
+    }
+
+    .ign-sir-viewall-chip {
+        min-height: 38px;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .ign-sir-viewall-popular-tags {
+        padding: 19px 0;
+    }
+
+    .ign-sir-viewall-popular-tags h2 {
+        font-size: 18px;
+    }
+
+    .ign-sir-viewall-tag-list {
+        gap: 8px;
+    }
+
+    .ign-sir-viewall-tag-list button {
+        min-height: 36px;
+        padding: 7px 11px;
+        font-size: 14px;
+    }
+
+    .ign-sir-viewall-results-heading {
+        margin-top: 23px;
+    }
+
+    .ign-sir-viewall-results-heading h2 {
+        font-size: 20px;
+    }
+
+    .ign-sir-viewall-results-heading > span {
+        font-size: 14px;
+    }
+
+    .ign-sir-viewall-review-card {
+        padding: 22px 0;
+    }
+
+    .ign-sir-viewall-review-top {
+        gap: 10px;
+    }
+
+    .ign-sir-viewall-review-person {
+        gap: 9px;
+    }
+
+    .ign-sir-viewall-avatar {
+        flex-basis: 38px;
+        width: 38px;
+        height: 38px;
+        font-size: 15px;
+    }
+
+    .ign-sir-viewall-review-person b,
+    .ign-sir-viewall-side-person b {
+        font-size: 14px;
+    }
+
+    .ign-sir-viewall-review-person small {
+        max-width: 230px;
+        font-size: 12px;
+        line-height: 1.65;
+    }
+
+    .ign-sir-viewall-review-score b {
+        font-size: 15px;
+    }
+
+    .ign-sir-viewall-review-score span {
+        padding: 4px 6px;
+        font-size: 11px;
+    }
+
+    .ign-sir-viewall-review-card > h3 {
+        margin-top: 14px;
+        font-size: 17px;
+        line-height: 1.55;
+    }
+
+    .ign-sir-viewall-review-topic {
+        margin: 12px 0;
+    }
+
+    .ign-sir-viewall-review-topic > b {
+        font-size: 15px;
+    }
+
+    .ign-sir-viewall-review-topic p {
+        font-size: 15px;
+        line-height: 1.85;
+    }
+
+    .ign-sir-viewall-review-actions {
+        gap: 12px 15px;
+        margin-top: 15px;
+    }
+
+    .ign-sir-viewall-review-actions button,
+    .ign-sir-viewall-review-actions a {
+        min-height: 32px;
+        font-size: 13px;
+    }
+
+    .ign-sir-viewall-review-actions .ign-sir-viewall-write-link {
+        margin-left: 0;
+    }
+
+    .ign-sir-viewall-expanded-review {
+        padding: 11px 12px;
+        font-size: 15px;
+    }
+
+    .ign-sir-viewall-expand-button {
+        min-height: 42px;
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+
+    .ign-sir-viewall-no-results {
+        padding: 35px 16px;
+    }
+
+    .ign-sir-viewall-no-results > b {
+        font-size: 17px;
+    }
+
+    .ign-sir-viewall-no-results p {
+        font-size: 15px;
+    }
+
+    .ign-sir-viewall-outline-button {
+        min-height: 44px;
+        font-size: 14px;
+    }
+
+    .ign-sir-viewall-top-reviews {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 0 15px;
+    }
+
+    .ign-sir-viewall-side-heading,
+    .ign-sir-viewall-side-cta,
+    .ign-sir-viewall-side-note {
+        grid-column: 1;
+    }
+
+    .ign-sir-viewall-side-heading h2 {
+        font-size: 15px;
+    }
+
+    .ign-sir-viewall-top-reviews > article p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .ign-sir-viewall-side-cta h3 {
+        font-size: 17px;
+    }
+
+    .ign-sir-viewall-side-note {
+        font-size: 13px;
+    }
+
+    .ign-sir-viewall-faq-strip {
+        padding: 32px 20px;
+    }
+
+    .ign-sir-viewall-faq-inner {
+        gap: 18px;
+    }
+
+    .ign-sir-viewall-faq-inner h2 {
+        font-size: 22px;
+        line-height: 1.45;
+    }
+
+    .ign-sir-viewall-faq-inner p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .ign-sir-viewall-orange-button {
+        min-height: 44px;
+        font-size: 14px;
+    }
+
+    .ign-sir-viewall-toast {
+        right: 15px;
+        bottom: 15px;
+        max-width: calc(100vw - 30px);
+        padding: 13px 15px;
+        font-size: 14px;
+    }
+}
+
+/* =========================================================
+   VERY SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 380px) {
+    .ign-sir-viewall-main {
+        width: calc(100% - 24px);
+    }
+
+    .ign-sir-viewall-hero-inner {
+        width: calc(100% - 24px);
+    }
+
+    .ign-sir-viewall-hero h1 {
+        font-size: 29px;
+    }
+
+    .ign-sir-viewall-review-top {
+        flex-wrap: wrap;
+    }
+
+    .ign-sir-viewall-review-score {
+        margin-left: 47px;
+        text-align: left;
+    }
+
+    .ign-sir-viewall-review-score span {
+        margin-top: 2px;
+    }
+
+    .ign-sir-viewall-review-person small {
+        max-width: 190px;
+    }
+
+    .ign-sir-viewall-filter-select select {
+        padding-right: 24px;
+        font-size: 13px;
+    }
+
+    .ign-sir-viewall-sort-select {
+        flex-wrap: wrap;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .ign-sir-viewall-sort-select select {
+        font-size: 13px;
+    }
+}
+
+/* =========================================================
+   ACCESSIBILITY: REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .ign-sir-viewall-page *,
+    .ign-sir-viewall-page *::before,
+    .ign-sir-viewall-page *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+}
+
+/* View all Reviews End */
+
+
+
+
+/* Homepage College and Course Search Suggestions */
+
+#courseSearch {
+    position: relative !important;
+}
+
+#searchSuggestions {
+    position: absolute !important;
+    top: calc(100% + 8px) !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1000 !important;
+    max-height: 300px !important;
+    overflow-y: auto !important;
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 10px !important;
+    box-shadow: 0 10px 30px rgba(10, 37, 64, 0.14) !important;
+}
+
+#searchSuggestions[hidden] {
+    display: none !important;
+}
+
+.search-suggestion-item {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 12px !important;
+    width: 100% !important;
+    padding: 13px 16px !important;
+    border: 0 !important;
+    border-bottom: 1px solid #edf0f4 !important;
+    background: #ffffff !important;
+    color: #0a2540 !important;
+    text-align: left !important;
+    cursor: pointer !important;
+}
+
+.search-suggestion-item:last-child {
+    border-bottom: 0 !important;
+}
+
+.search-suggestion-item:hover {
+    background: #fff7ed !important;
+}
+
+.search-suggestion-item span {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+}
+
+.search-suggestion-item small {
+    flex-shrink: 0 !important;
+    color: #d7791f !important;
+    font-size: 12px !important;
+}
+

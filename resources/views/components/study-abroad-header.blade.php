@@ -407,8 +407,9 @@
             </div>
 
             <div class="sa-header-actions">
-                <a href="javascript:void(0);" class="sa-review">✎ Write a Review</a>
-
+               <a href="{{ route('study-abroad.reviews.index') }}" class="sa-review">
+    ✎ Write a Review
+</a>
                 <a href="javascript:void(0);" class="sa-counselling">
                     <a href="{{ route('study-abroad.application') }}">
                         <span>♧ Get Counselling</span>

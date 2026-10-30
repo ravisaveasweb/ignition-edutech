@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="{{ asset('css/study-india/study-india-review.css') }}">
 <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/logo/favicon.png') }}" />
 
-
+<x-study-india-header/>
 <main class="form-main">
     <div class="form-topbar">
         <div>
@@ -48,7 +48,7 @@
             <label class="field">
                 College / University Name*
                 <input type="text" name="college" id="college" list="collegeOptions"
-                    placeholder="Search or type your college name" value="{{ old('college') }}" autocomplete="off"
+                    placeholder="Search or type your college name" value="{{ old('college', $selectedCollege ?? '') }}" autocomplete="off"
                     maxlength="255" pattern="[A-Za-zÀ-ÿ][A-Za-zÀ-ÿ .,'&()\-]*"
                     oninput="this.value = this.value.replace(/[^A-Za-zÀ-ÿ .,'&()\-]/g, '')"
                     title="Numbers are not allowed in the college name." required>
@@ -65,14 +65,14 @@
                 Select Course*
 
                 <input type="text" name="course" id="course" list="courseOptions" required
-                    placeholder="Search or type your course" value="{{ old('course') }}" autocomplete="off"
+                    placeholder="Search or type your course" value="{{ old('course', $selectedCourse ?? '') }}" autocomplete="off"
                     maxlength="255" pattern="[A-Za-zÀ-ÿ][A-Za-zÀ-ÿ .,'&()\-]*"
                     oninput="this.value = this.value.replace(/[^A-Za-zÀ-ÿ .,'&()\-]/g, '')"
                     title="Numbers are not allowed in the course name.">
 
                 <datalist id="courseOptions">
                     @foreach ($courses as $course)
-                        <option value="{{ $course['course'] }}"></option>
+                        <option value="{{ $course}}">{{ $course}}</option>
                     @endforeach
                 </datalist>
             </label>
@@ -310,7 +310,7 @@
 
                     <datalist id="courseOptions">
                         @foreach ($courses as $course)
-                            <option value="{{ $course['course'] }}"></option>
+                            <option value="{{ $course}}">{{ $course}}</option>
                         @endforeach
                     </datalist>
                 </label>
@@ -419,6 +419,7 @@
 
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
+<x-frontend-footer/>
 
 <script
     src="{{ asset('js/study-india/study-india-review.js') }}?v={{ filemtime(public_path('js/study-india/study-india-review.js')) }}">

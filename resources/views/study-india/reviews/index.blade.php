@@ -21,7 +21,11 @@
                     method="GET"><span class="search-symbol">⌕</span>
                     <input id="searchTerm" name="searchTerm" type="search"
                         placeholder="Search a course, college or program"
-                        aria-label="Search a course, college or program">
+                        aria-label="Search a course, college or program" autocomplete="off">
+
+                    <input type="hidden" id="collegeName" name="college">
+                    <input type="hidden" id="courseName" name="course">
+                    <div id="searchSuggestions" class="search-suggestions"></div>
 
                     <button type="submit" aria-label="Find course">→</button>
                 </form>
@@ -86,7 +90,7 @@
                     <h3>Give back to learners</h3>
                     <p>Turn your own journey into useful guidance for the next student.</p>
                 </article>
-                
+
             </div>
             <div class="story-banner">
                 <div class="banner-illustration">
@@ -101,7 +105,7 @@
                         <span>→</span></a>
                 </div>
                 <div class="banner-circle"></div>
-                
+
             </div>
         </div>
     </section>
@@ -118,22 +122,22 @@
 
 
             {{-- Review Action Buttons --}}
-<div class="sir-review-actions">
-    <a href="{{ route('study-india.reviews.create') }}"
-       class="sir-review-action-btn sir-review-action-primary">
-        <i class="bi bi-pencil-square"></i>
-        <span>Write a Review</span>
-        <i class="bi bi-arrow-right sir-review-action-arrow"></i>
-    </a>
+            <div class="sir-review-actions">
+                <a href="{{ route('study-india.reviews.create') }}"
+                    class="sir-review-action-btn sir-review-action-primary">
+                    <i class="bi bi-pencil-square"></i>
+                    <span>Write a Review</span>
+                    <i class="bi bi-arrow-right sir-review-action-arrow"></i>
+                </a>
 
-    <a href="{{ route('study-india.reviews.index') }}"
-       class="sir-review-action-btn sir-review-action-secondary">
-        <i class="bi bi-chat-square-text"></i>
-        <span>View All Reviews</span>
-        <i class="bi bi-arrow-right sir-review-action-arrow"></i>
-    </a>
-</div>
-            
+                <a href="{{ route('study-india.reviews.all') }}"
+                    class="sir-review-action-btn sir-review-action-secondary">
+                    <i class="bi bi-chat-square-text"></i>
+                    <span>View All Reviews</span>
+                    <i class="bi bi-arrow-right sir-review-action-arrow"></i>
+                </a>
+            </div>
+
             <div class="table-scroll">
                 <table>
                     <thead>
@@ -323,7 +327,8 @@
                 <h2>Ready to share <em>what you learned?</em></h2>
                 <p>Tell future students about your college and course experience.</p>
             </div>
-            <a class="orange-button" href="{{ route('study-india.reviews.create') }}"  style="position: relative; z-index: 10; pointer-events: auto;">Start Your Review
+            <a class="orange-button" href="{{ route('study-india.reviews.create') }}"
+                style="position: relative; z-index: 10; pointer-events: auto;">Start Your Review
                 <span>→</span></a>
         </div>
     </section>
@@ -338,12 +343,7 @@
 
 @if (session('review_success'))
     <div class="sir-success-backdrop" id="reviewSuccessModal">
-        <section
-            class="sir-success-modal"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="reviewSuccessTitle"
-        >
+        <section class="sir-success-modal" role="dialog" aria-modal="true" aria-labelledby="reviewSuccessTitle">
             <div class="sir-success-icon">
                 <i class="bi bi-check-lg"></i>
             </div>
@@ -359,11 +359,7 @@
                 It will be published after our team completes the approval process.
             </p>
 
-            <button
-                type="button"
-                class="sir-success-button"
-                id="closeReviewSuccess"
-            >
+            <button type="button" class="sir-success-button" id="closeReviewSuccess">
                 Continue
                 <i class="bi bi-arrow-right"></i>
             </button>
@@ -373,7 +369,12 @@
 
 
 
-<x-frontend-footer/>
+<x-frontend-footer />
 
-
+<script>
+    window.studyIndiaReviewSearchData = {
+        colleges: @json($colleges ?? []),
+        courses: @json($courses ?? [])
+    };
+</script>
 <script src="{{ asset('js/study-india/study-india-review.js') }}"></script>

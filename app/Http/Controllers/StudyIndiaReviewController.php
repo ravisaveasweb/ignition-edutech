@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
 use App\Models\NirfHistoricalRanking;
+use App\Models\ApplicationMasterData;
 
 class StudyIndiaReviewController extends Controller
 {
@@ -24,16 +25,85 @@ class StudyIndiaReviewController extends Controller
 
         $averageRating = StudyIndiaReview::where('status', 'approved')
             ->avg('overall_rating');
-            
+
+        $colleges = NirfHistoricalRanking::query()
+            ->whereNotNull('institute_name')
+            ->where('institute_name', '<>', '')
+            ->select('institute_name')
+            ->distinct()
+            ->orderBy('institute_name')
+            ->pluck('institute_name');
+
+        $courses = ApplicationMasterData::query()
+            ->where('type', 'course')
+            ->where('status', 1)
+            ->orderBy('name')
+            ->pluck('name');
+
 
         return view('study-india.reviews.index', compact(
             'reviews',
             'totalReviews',
-            'averageRating'
+            'averageRating',
+            'colleges',
+            'courses'
         ));
     }
 
-    
+
+
+    /**
+     * Display all approved Study India reviews.
+     */
+    public function viewAll()
+    {
+
+        // Fetch active streams from ApplicationMasterData
+        $streams = ApplicationMasterData::query()
+            ->where('type', 'stream')
+            ->where('status', 1)
+            ->orderBy('name')
+            ->pluck('name');
+
+        // Fetch active courses from ApplicationMasterData
+        $courses = ApplicationMasterData::query()
+            ->where('type', 'course')
+            ->where('status', 1)
+            ->orderBy('name')
+            ->pluck('name');
+
+
+        $reviews = StudyIndiaReview::query()
+            ->where('status', 'approved')
+            ->latest()
+            ->get();
+
+        $totalReviews = $reviews->count();
+
+        $averageRating = round(
+            (float) ($reviews->avg('overall_rating') ?? 0),
+            1
+        );
+
+        $topReviews = StudyIndiaReview::query()
+            ->where('status', 'approved')
+            ->orderByDesc('overall_rating')
+            ->latest()
+            ->take(3)
+            ->get();
+
+        return view('study-india.reviews.viewall-reviews', compact(
+            'reviews',
+            'totalReviews',
+            'averageRating',
+            'topReviews',
+            'streams',
+            'courses'
+        ));
+    }
+
+
+
 
     /**
      * Display the review form.
@@ -41,26 +111,35 @@ class StudyIndiaReviewController extends Controller
     public function create()
     {
 
-    $colleges = NirfHistoricalRanking::query()
-    ->whereNotNull('institute_name')
-      ->where('institute_name', '<>', '')
-      ->select('institute_name')
-      ->distinct()
-      ->orderBy('institute_name')
-      ->pluck('institute_name');
+        $colleges = NirfHistoricalRanking::query()
+            ->whereNotNull('institute_name')
+            ->where('institute_name', '<>', '')
+            ->select('institute_name')
+            ->distinct()
+            ->orderBy('institute_name')
+            ->pluck('institute_name');
 
-      
 
-       // Fetch courses from the data folder
 
-       $courseData = require app_path('Data/study_india_coursesData.php');
-       $courses = $courseData['courses'] ?? [] ;
+        // Fetch courses from the data folder
 
-        return view('study-india.reviews.write-review', [
-            'searchTerm' => request('searchTerm'),
-            'colleges' => $colleges,
-            'courses' => $courses,
-        ]);
+        // $courseData = require app_path('Data/study_india_coursesData.php');
+        // $courses = $courseData['courses'] ?? [];
+
+        $courses = ApplicationMasterData::query()
+            ->where('type', 'course')
+            ->where('status', 1)
+            ->orderBy('name')
+            ->pluck('name');
+
+
+     return view('study-india.reviews.write-review', [
+    'searchTerm' => request('searchTerm'),
+    'selectedCollege' => request('college'),
+    'selectedCourse' => request('course'),
+    'colleges' => $colleges,
+    'courses' => $courses,
+]);
     }
 
     /**
@@ -92,36 +171,36 @@ class StudyIndiaReviewController extends Controller
 
         // 3. Validate the field names used by your existing Blade form.
         $validated = $request->validate([
-           
-'college' => [
-    'required',
-    'string',
-    'max:255',
-    'regex:/^[\p{L}][\p{L}\s.,&()\'-]*$/u',
-],
 
-'course' => [
-    'required',
-    'string',
-    'max:255',
-    'regex:/^[\p{L}][\p{L}\s.,&()\'-]*$/u',
-],
+            'college' => [
+                'required',
+                'string',
+                'max:255',
+                'regex:/^[\p{L}][\p{L}\s.,&()\'-]*$/u',
+            ],
 
-'name' => [
-    'required',
-    'string',
-    'max:100',
-    'regex:/^[\p{L}][\p{L}\s.\'-]*$/u',
-],
+            'course' => [
+                'required',
+                'string',
+                'max:255',
+                'regex:/^[\p{L}][\p{L}\s.,&()\'-]*$/u',
+            ],
 
-'email' => ['required', 'email', 'max:255'],
+            'name' => [
+                'required',
+                'string',
+                'max:100',
+                'regex:/^[\p{L}][\p{L}\s.\'-]*$/u',
+            ],
 
-'countryCode' => ['required', 'string', 'max:8'],
+            'email' => ['required', 'email', 'max:255'],
 
-'mobile' => [
-    'required',
-    'regex:/^[0-9]{10}$/',
-],
+            'countryCode' => ['required', 'string', 'max:8'],
+
+            'mobile' => [
+                'required',
+                'regex:/^[0-9]{10}$/',
+            ],
 
             'gender' => [
                 'required',
@@ -303,9 +382,7 @@ class StudyIndiaReviewController extends Controller
         ]);
 
         return redirect()
-    ->route('study-india.reviews.index')
-    ->with('review_success', true);
+            ->route('study-india.reviews.index')
+            ->with('review_success', true);
     }
-
-  
 }

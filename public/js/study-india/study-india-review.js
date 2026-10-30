@@ -49,18 +49,179 @@ function initReviewHomepage() {
     }
 
     // Course Search
+    // const courseSearch = $("#courseSearch");
+
+    // if (courseSearch) {
+    //     courseSearch.addEventListener("submit", (event) => {
+    //         const searchInput = $("#searchTerm");
+
+    //         if (!searchInput || !searchInput.value.trim()) {
+    //             event.preventDefault();
+
+    //             showToast(
+    //                 "Enter a course, college or program to get started."
+    //             );
+    //         }
+    //     });
+    // }
+
+    // Course and College Search with Autocomplete
     const courseSearch = $("#courseSearch");
 
     if (courseSearch) {
-        courseSearch.addEventListener("submit", (event) => {
-            const searchInput = $("#searchTerm");
+        const searchInput = $("#searchTerm");
+        const collegeInput = $("#collegeName");
+        const courseInput = $("#courseName");
+        const suggestionsBox = $("#searchSuggestions");
 
-            if (!searchInput || !searchInput.value.trim()) {
+        const searchData = window.studyIndiaReviewSearchData || {};
+
+        const colleges = Array.isArray(searchData.colleges)
+            ? searchData.colleges
+            : [];
+
+        const courses = Array.isArray(searchData.courses)
+            ? searchData.courses
+            : [];
+
+        let selectedSuggestion = false;
+
+        function showSuggestions(value) {
+            if (!suggestionsBox || !searchInput) {
+                return;
+            }
+
+            suggestionsBox.replaceChildren();
+
+            const query = value.trim().toLowerCase();
+
+            if (!query) {
+                suggestionsBox.hidden = true;
+                return;
+            }
+
+            const collegeMatches = colleges
+                .filter((college) =>
+                    String(college).toLowerCase().includes(query)
+                )
+                .slice(0, 6)
+                .map((college) => ({
+                    value: college,
+                    type: "college"
+                }));
+
+            const courseMatches = courses
+                .filter((course) =>
+                    String(course).toLowerCase().includes(query)
+                )
+                .slice(0, 6)
+                .map((course) => ({
+                    value: course,
+                    type: "course"
+                }));
+
+            const matches = [...collegeMatches, ...courseMatches].slice(0, 8);
+
+            if (!matches.length) {
+                suggestionsBox.hidden = true;
+                return;
+            }
+
+            matches.forEach((item) => {
+                const option = document.createElement("button");
+
+                option.type = "button";
+                option.className = "search-suggestion-item";
+
+                const name = document.createElement("span");
+                name.textContent = item.value;
+
+                const category = document.createElement("small");
+                category.textContent =
+                    item.type === "college" ? "College" : "Course";
+
+                option.append(name, category);
+
+                option.addEventListener("click", () => {
+                    searchInput.value = item.value;
+
+                    collegeInput.value =
+                        item.type === "college" ? item.value : "";
+
+                    courseInput.value =
+                        item.type === "course" ? item.value : "";
+
+                    selectedSuggestion = true;
+                    suggestionsBox.hidden = true;
+                });
+
+                suggestionsBox.appendChild(option);
+            });
+
+            suggestionsBox.hidden = false;
+        }
+
+        if (searchInput) {
+            searchInput.addEventListener("input", () => {
+                selectedSuggestion = false;
+
+                if (collegeInput) collegeInput.value = "";
+                if (courseInput) courseInput.value = "";
+
+                showSuggestions(searchInput.value);
+            });
+
+            searchInput.addEventListener("focus", () => {
+                showSuggestions(searchInput.value);
+            });
+        }
+
+        document.addEventListener("click", (event) => {
+            if (!courseSearch.contains(event.target) && suggestionsBox) {
+                suggestionsBox.hidden = true;
+            }
+        });
+
+        courseSearch.addEventListener("submit", (event) => {
+            const searchValue = searchInput?.value.trim();
+
+            if (!searchValue) {
                 event.preventDefault();
 
                 showToast(
-                    "Enter a course, college or program to get started."
+                    "Enter a course or college to get started."
                 );
+
+                return;
+            }
+
+            // If a suggestion was selected, keep its selected value.
+            if (selectedSuggestion) {
+                return;
+            }
+
+            // Check whether manually typed text exactly matches a college.
+            const collegeMatch = colleges.find(
+                (college) =>
+                    String(college).toLowerCase() === searchValue.toLowerCase()
+            );
+
+            // Check whether manually typed text exactly matches a course.
+            const courseMatch = courses.find(
+                (course) =>
+                    String(course).toLowerCase() === searchValue.toLowerCase()
+            );
+
+            if (collegeMatch) {
+                collegeInput.value = searchValue;
+                courseInput.value = "";
+            } else if (courseMatch) {
+                courseInput.value = searchValue;
+                collegeInput.value = "";
+            } else {
+                // If no suggestion matches, pass the manually typed text as college.
+                collegeInput.value = searchValue;
+                courseInput.value = "";
             }
         });
     }
@@ -467,27 +628,27 @@ function initCollegeReviewForm() {
             });
         });
 
-       submitButton.addEventListener("click", () => {
-    if (!form.reportValidity()) {
-        return;
-    }
+        submitButton.addEventListener("click", () => {
+            if (!form.reportValidity()) {
+                return;
+            }
 
-    if (!overallRating) {
-        if (ratingLabel) {
-            ratingLabel.textContent = "Please select a star rating";
-            ratingLabel.style.color = "#c43d36";
-        }
+            if (!overallRating) {
+                if (ratingLabel) {
+                    ratingLabel.textContent = "Please select a star rating";
+                    ratingLabel.style.color = "#c43d36";
+                }
 
-        if (ratingButtons[0]) {
-            ratingButtons[0].focus();
-        }
+                if (ratingButtons[0]) {
+                    ratingButtons[0].focus();
+                }
 
-        return;
-    }
+                return;
+            }
 
-    reviewConfirmed = true;
-    form.requestSubmit();
-});
+            reviewConfirmed = true;
+            form.requestSubmit();
+        });
 
         return preview;
     }
@@ -495,16 +656,16 @@ function initCollegeReviewForm() {
     // Review Form Submission and Preview
     form.addEventListener("submit", (event) => {
         // Allow the confirmed review to submit to Laravel
-    if (reviewConfirmed) {
-        return;
-    }
+        if (reviewConfirmed) {
+            return;
+        }
 
-    // Otherwise, prevent submission and show the preview
-    event.preventDefault();
+        // Otherwise, prevent submission and show the preview
+        event.preventDefault();
 
-    if (!form.reportValidity()) {
-        return;
-    }
+        if (!form.reportValidity()) {
+            return;
+        }
 
         if (!overallRating) {
             if (ratingLabel) {
@@ -597,7 +758,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initCollegeReviewForm();
 
 
-    
+
     // Review Submission Success Popup
     const successModal = $("#reviewSuccessModal");
     const closeSuccessButton = $("#closeReviewSuccess");
@@ -783,6 +944,422 @@ document.addEventListener("DOMContentLoaded", () => {
     updateFormProgress();
     // progress bar end 
 });
+
+
+
+
+
+
+
+// All review page start from here
+
+
+(() => {
+    "use strict";
+
+    const ignSirViewallRoot = document.querySelector(".ign-sir-viewall-page");
+
+    if (!ignSirViewallRoot) {
+        return;
+    }
+
+    const ignSirViewallQuery = (selector, root = ignSirViewallRoot) =>
+        root.querySelector(selector);
+
+    const ignSirViewallQueryAll = (selector, root = ignSirViewallRoot) =>
+        Array.from(root.querySelectorAll(selector));
+
+    const ignSirViewallSearchForm = ignSirViewallQuery("#ign-sir-viewall-search-form");
+    const ignSirViewallSearchInput = ignSirViewallQuery("#ign-sir-viewall-search-input");
+    const ignSirViewallStreamFilter = ignSirViewallQuery("#ign-sir-viewall-stream-filter");
+    const ignSirViewallCourseFilter = ignSirViewallQuery("#ign-sir-viewall-course-filter");
+    const ignSirViewallBatchFilter = ignSirViewallQuery("#ign-sir-viewall-batch-filter");
+    const ignSirViewallSortFilter = ignSirViewallQuery("#ign-sir-viewall-sort-filter");
+    const ignSirViewallResultsCount = ignSirViewallQuery("#ign-sir-viewall-results-count");
+    const ignSirViewallReviewList = ignSirViewallQuery("#ign-sir-viewall-review-list");
+    const ignSirViewallNoResults = ignSirViewallQuery("#ign-sir-viewall-no-results");
+    const ignSirViewallClearFilters = ignSirViewallQuery("#ign-sir-viewall-clear-filters");
+    const ignSirViewallLoadMore = ignSirViewallQuery("#ign-sir-viewall-load-more");
+    const ignSirViewallToast = document.getElementById("ign-sir-viewall-toast");
+    const ignSirViewallCards = ignSirViewallQueryAll(".ign-sir-viewall-review-card");
+
+    const ignSirViewallPageSize = 4;
+    let ignSirViewallShownLimit = ignSirViewallPageSize;
+    let ignSirViewallActiveTag = "";
+    let ignSirViewallToastTimer = null;
+
+    // Toast notification.
+    function ignSirViewallShowToast(message) {
+        if (!ignSirViewallToast) {
+            return;
+        }
+
+        ignSirViewallToast.textContent = message;
+        ignSirViewallToast.classList.add("ign-sir-viewall-toast-visible");
+
+        window.clearTimeout(ignSirViewallToastTimer);
+
+        ignSirViewallToastTimer = window.setTimeout(() => {
+            ignSirViewallToast.classList.remove("ign-sir-viewall-toast-visible");
+        }, 2800);
+    }
+
+    // Synchronize the active stream chip with the stream dropdown.
+    function ignSirViewallSyncStreamChips() {
+        ignSirViewallQueryAll(".ign-sir-viewall-chip").forEach((button) => {
+            const ignSirViewallIsActive =
+                button.dataset.stream === ignSirViewallStreamFilter.value;
+
+            button.classList.toggle("ign-sir-viewall-active", ignSirViewallIsActive);
+            button.setAttribute("aria-pressed", String(ignSirViewallIsActive));
+        });
+    }
+
+    // Filter and sort the static review cards.
+    function ignSirViewallApplyFilters() {
+        const ignSirViewallSearchTerm =
+            ignSirViewallSearchInput.value.trim().toLowerCase();
+
+        const ignSirViewallSelectedStream = ignSirViewallStreamFilter.value;
+        const ignSirViewallSelectedCourse = ignSirViewallCourseFilter.value;
+        const ignSirViewallSelectedBatch = ignSirViewallBatchFilter.value;
+        const ignSirViewallSelectedSort = ignSirViewallSortFilter.value;
+
+        const ignSirViewallMatchingCards = ignSirViewallCards.filter((card) => {
+            const ignSirViewallCardText = card.innerText.toLowerCase();
+
+            const ignSirViewallMatchesSearch =
+                !ignSirViewallSearchTerm ||
+                ignSirViewallCardText.includes(ignSirViewallSearchTerm);
+
+            const ignSirViewallMatchesStream =
+                !ignSirViewallSelectedStream ||
+                card.dataset.stream === ignSirViewallSelectedStream;
+
+            const ignSirViewallMatchesCourse =
+                !ignSirViewallSelectedCourse ||
+                card.dataset.course === ignSirViewallSelectedCourse;
+
+            const ignSirViewallMatchesBatch =
+                !ignSirViewallSelectedBatch ||
+                card.dataset.batch === ignSirViewallSelectedBatch;
+
+            const ignSirViewallCardTags = (
+                card.dataset.tags || ""
+            ).toLowerCase();
+
+            const ignSirViewallMatchesTag =
+                !ignSirViewallActiveTag ||
+                ignSirViewallCardTags.includes(ignSirViewallActiveTag.toLowerCase());
+
+            return (
+                ignSirViewallMatchesSearch &&
+                ignSirViewallMatchesStream &&
+                ignSirViewallMatchesCourse &&
+                ignSirViewallMatchesBatch &&
+                ignSirViewallMatchesTag
+            );
+        });
+
+        // Sort the currently matching cards.
+        ignSirViewallMatchingCards.sort((first, second) => {
+            const ignSirViewallFirstRating = Number(first.dataset.rating || 0);
+            const ignSirViewallSecondRating = Number(second.dataset.rating || 0);
+            const ignSirViewallFirstHelpful = Number(first.dataset.helpful || 0);
+            const ignSirViewallSecondHelpful = Number(second.dataset.helpful || 0);
+            const ignSirViewallFirstDate =
+                new Date(first.dataset.date || 0).getTime();
+            const ignSirViewallSecondDate =
+                new Date(second.dataset.date || 0).getTime();
+
+            switch (ignSirViewallSelectedSort) {
+                case "highest":
+                    return ignSirViewallSecondRating - ignSirViewallFirstRating;
+                case "lowest":
+                    return ignSirViewallFirstRating - ignSirViewallSecondRating;
+                case "helpful":
+                    return ignSirViewallSecondHelpful - ignSirViewallFirstHelpful;
+                case "newest":
+                default:
+                    return ignSirViewallSecondDate - ignSirViewallFirstDate;
+            }
+        });
+
+        // Hide nonmatching cards and display only the current page size.
+        ignSirViewallCards.forEach((card) => {
+            card.hidden = true;
+            card.style.order = "";
+        });
+
+        ignSirViewallMatchingCards.forEach((card, index) => {
+            card.style.order = String(index);
+            card.hidden = index >= ignSirViewallShownLimit;
+        });
+
+        // Update the results count and empty state.
+        const ignSirViewallTotalMatches = ignSirViewallMatchingCards.length;
+        const ignSirViewallVisibleCount = Math.min(
+            ignSirViewallShownLimit,
+            ignSirViewallTotalMatches
+        );
+
+        if (ignSirViewallResultsCount) {
+            ignSirViewallResultsCount.textContent =
+                `${ignSirViewallTotalMatches} student review` +
+                (ignSirViewallTotalMatches === 1 ? "" : "s");
+        }
+
+        if (ignSirViewallNoResults) {
+            ignSirViewallNoResults.hidden = ignSirViewallTotalMatches !== 0;
+        }
+
+        // Update the Show More button.
+        if (ignSirViewallLoadMore) {
+            const ignSirViewallHasMore =
+                ignSirViewallTotalMatches > ignSirViewallShownLimit;
+
+            ignSirViewallLoadMore.hidden = !ignSirViewallHasMore;
+            ignSirViewallLoadMore.disabled = !ignSirViewallHasMore;
+            ignSirViewallLoadMore.textContent = ignSirViewallHasMore
+                ? "Show more reviews ↓"
+                : "All reviews shown";
+        }
+
+        return {
+            total: ignSirViewallTotalMatches,
+            visible: ignSirViewallVisibleCount
+        };
+    }
+
+    // Handle search form submission.
+    if (ignSirViewallSearchForm) {
+        ignSirViewallSearchForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            ignSirViewallShownLimit = ignSirViewallPageSize;
+            ignSirViewallApplyFilters();
+
+            ignSirViewallResultsCount?.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+        });
+    }
+
+    // Apply live search as the user types.
+    if (ignSirViewallSearchInput) {
+        ignSirViewallSearchInput.addEventListener("input", () => {
+            ignSirViewallShownLimit = ignSirViewallPageSize;
+            ignSirViewallApplyFilters();
+        });
+    }
+
+    // Handle dropdown filters.
+    [
+        ignSirViewallStreamFilter,
+        ignSirViewallCourseFilter,
+        ignSirViewallBatchFilter,
+        ignSirViewallSortFilter
+    ].forEach((select) => {
+        if (!select) {
+            return;
+        }
+
+        select.addEventListener("change", () => {
+            ignSirViewallShownLimit = ignSirViewallPageSize;
+
+            if (select === ignSirViewallStreamFilter) {
+                ignSirViewallSyncStreamChips();
+            }
+
+            ignSirViewallApplyFilters();
+        });
+    });
+
+    // Handle stream chips.
+    ignSirViewallQueryAll(".ign-sir-viewall-chip").forEach((button) => {
+        button.setAttribute(
+            "aria-pressed",
+            String(button.classList.contains("ign-sir-viewall-active"))
+        );
+
+        button.addEventListener("click", () => {
+            ignSirViewallStreamFilter.value = button.dataset.stream || "";
+            ignSirViewallShownLimit = ignSirViewallPageSize;
+
+            ignSirViewallSyncStreamChips();
+            ignSirViewallApplyFilters();
+        });
+    });
+
+    // Handle popular tag buttons.
+    ignSirViewallQueryAll(".ign-sir-viewall-tag-list button").forEach((button) => {
+        button.setAttribute("aria-pressed", "false");
+
+        button.addEventListener("click", () => {
+            const ignSirViewallClickedTag = button.dataset.tag || "";
+
+            ignSirViewallActiveTag =
+                ignSirViewallActiveTag === ignSirViewallClickedTag
+                    ? ""
+                    : ignSirViewallClickedTag;
+
+            ignSirViewallQueryAll(".ign-sir-viewall-tag-list button").forEach(
+                (tagButton) => {
+                    const ignSirViewallIsActive =
+                        tagButton.dataset.tag === ignSirViewallActiveTag &&
+                        ignSirViewallActiveTag !== "";
+
+                    tagButton.classList.toggle(
+                        "ign-sir-viewall-tag-active",
+                        ignSirViewallIsActive
+                    );
+
+                    tagButton.setAttribute(
+                        "aria-pressed",
+                        String(ignSirViewallIsActive)
+                    );
+                }
+            );
+
+            ignSirViewallShownLimit = ignSirViewallPageSize;
+            ignSirViewallApplyFilters();
+        });
+    });
+
+    // Load more reviews.
+    if (ignSirViewallLoadMore) {
+        ignSirViewallLoadMore.addEventListener("click", () => {
+            ignSirViewallShownLimit += ignSirViewallPageSize;
+            ignSirViewallApplyFilters();
+        });
+    }
+
+    // Reset all filters.
+    function ignSirViewallResetFilters() {
+        if (ignSirViewallSearchInput) {
+            ignSirViewallSearchInput.value = "";
+        }
+
+        if (ignSirViewallStreamFilter) {
+            ignSirViewallStreamFilter.value = "";
+        }
+
+        if (ignSirViewallCourseFilter) {
+            ignSirViewallCourseFilter.value = "";
+        }
+
+        if (ignSirViewallBatchFilter) {
+            ignSirViewallBatchFilter.value = "";
+        }
+
+        if (ignSirViewallSortFilter) {
+            ignSirViewallSortFilter.value = "newest";
+        }
+
+        ignSirViewallActiveTag = "";
+        ignSirViewallShownLimit = ignSirViewallPageSize;
+
+        ignSirViewallQueryAll(".ign-sir-viewall-tag-list button").forEach((button) => {
+            button.classList.remove("ign-sir-viewall-tag-active");
+            button.setAttribute("aria-pressed", "false");
+        });
+
+        ignSirViewallSyncStreamChips();
+        ignSirViewallApplyFilters();
+    }
+
+    if (ignSirViewallClearFilters) {
+        ignSirViewallClearFilters.addEventListener(
+            "click",
+            ignSirViewallResetFilters
+        );
+    }
+
+    // Expand and collapse review details.
+    ignSirViewallCards.forEach((card) => {
+        const ignSirViewallExpandButton = ignSirViewallQuery(
+            ".ign-sir-viewall-expand-button",
+            card
+        );
+
+        const ignSirViewallExpandedContent = ignSirViewallQuery(
+            ".ign-sir-viewall-expanded-review",
+            card
+        );
+
+        if (ignSirViewallExpandButton && ignSirViewallExpandedContent) {
+            ignSirViewallExpandButton.addEventListener("click", () => {
+                const ignSirViewallShouldExpand =
+                    ignSirViewallExpandedContent.hidden;
+
+                ignSirViewallExpandedContent.hidden = !ignSirViewallShouldExpand;
+
+                ignSirViewallExpandButton.setAttribute(
+                    "aria-expanded",
+                    String(ignSirViewallShouldExpand)
+                );
+
+                ignSirViewallExpandButton.innerHTML = ignSirViewallShouldExpand
+                    ? 'Show Less <span>−</span>'
+                    : 'Read More <span>＋</span>';
+            });
+        }
+
+        // Helpful and Not helpful are visual demo interactions only; votes are not saved to the database.
+        const ignSirViewallVoteButtons = ignSirViewallQueryAll(
+            ".ign-sir-viewall-helpful, .ign-sir-viewall-not-helpful",
+            card
+        );
+
+        ignSirViewallVoteButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const ignSirViewallWasSelected =
+                    button.classList.contains("ign-sir-viewall-selected");
+
+                ignSirViewallVoteButtons.forEach((voteButton) => {
+                    voteButton.classList.remove("ign-sir-viewall-selected");
+                    voteButton.setAttribute("aria-pressed", "false");
+                });
+
+                if (ignSirViewallWasSelected) {
+                    ignSirViewallShowToast(
+                        "Your demo selection has been cleared."
+                    );
+                    return;
+                }
+
+                button.classList.add("ign-sir-viewall-selected");
+                button.setAttribute("aria-pressed", "true");
+
+                ignSirViewallShowToast(
+                    "Demo only: your vote has not been saved."
+                );
+            });
+        });
+
+        // Reporting is not connected to a moderation backend yet.
+        const ignSirViewallReportButton = ignSirViewallQuery(
+            ".ign-sir-viewall-report",
+            card
+        );
+
+        if (ignSirViewallReportButton) {
+            ignSirViewallReportButton.addEventListener("click", () => {
+                ignSirViewallShowToast(
+                    "Review reporting will be available after moderation is connected."
+                );
+            });
+        }
+    });
+
+    // Initialize the page state.
+    ignSirViewallSyncStreamChips();
+    ignSirViewallApplyFilters();
+})();
+
+
+// All review page End here
+
 
 
 

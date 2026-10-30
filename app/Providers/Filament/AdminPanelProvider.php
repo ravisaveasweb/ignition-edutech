@@ -27,6 +27,7 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
+            ->favicon(asset('img/logo/favicon.png')) 
             ->login()
             ->authGuard('web')
             ->colors([

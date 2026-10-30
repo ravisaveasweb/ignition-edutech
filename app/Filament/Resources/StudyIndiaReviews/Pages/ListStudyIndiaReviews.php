@@ -5,6 +5,7 @@ namespace App\Filament\Resources\StudyIndiaReviews\Pages;
 use App\Filament\Resources\StudyIndiaReviews\StudyIndiaReviewResource;
 use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ListRecords;
+use App\Filament\Widgets\StudyIndiaReviewStats;
 
 class ListStudyIndiaReviews extends ListRecords
 {
@@ -16,4 +17,11 @@ class ListStudyIndiaReviews extends ListRecords
             CreateAction::make(),
         ];
     }
+
+    protected function getHeaderWidgets(): array
+{
+    return [
+        StudyIndiaReviewStats::class,
+    ];
+}
 }

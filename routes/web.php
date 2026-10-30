@@ -17,6 +17,9 @@ use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\StudyIndiaAuthController;
 use App\Http\Controllers\StudyIndiaReviewController;
 
+use App\Http\Controllers\StudyAbroadReviewController;
+use App\Http\Controllers\StudyIndiaController;
+
 
 
 
@@ -94,11 +97,8 @@ Route::get('/exams/{slug}', [ExamController::class, 'show'])
 
 
 
-/*
-|--------------------------------------------------------------------------
-| Study Abroad Application
-|--------------------------------------------------------------------------
-*/
+//  Study Abroad Application Register page start 
+
 
 
 Route::get('/study-abroad/application', [
@@ -146,6 +146,8 @@ Route::get('/study-abroad/application/completed', [
     StudyAbroadApplicationController::class,
     'completed'
 ])->name('study-abroad.completed');
+
+//  Study Abroad Application Register page start 
 
 
 
@@ -197,7 +199,9 @@ Route::post('study-abroad/login-otp/resend', [StudyAbroadApplicationController::
 // Register / Form Routes
 Route::get('study-abroad/application', [StudyAbroadApplicationController::class, 'create'])->name('study-abroad.application');
 
-// Visa Process
+
+
+// Visa Process Start 
 Route::get(
     'study-abroad/visa-process',
     [StudyAbroadVisaController::class, 'index']
@@ -208,11 +212,10 @@ Route::get(
     [StudyAbroadVisaController::class, 'show']
 )->name('study-abroad.visa-guide');
 
+// Visa Process End
 
-// Route::get('/study-abroad/global-scholarships', function () {
-//     return view('study-abroad.global-scholarship');
-// })->name('study-abroad.global-scholarships');
 
+// Global Scholarship Section Start here 
 
 Route::get('/study-abroad/global-scholarships', [StudyAbroadGlobalScholarshipController::class, 'index'])
     ->name('study-abroad.global-scholarships');
@@ -220,8 +223,10 @@ Route::get('/study-abroad/global-scholarships', [StudyAbroadGlobalScholarshipCon
 Route::get('/study-abroad/global-scholarships/{scholarship_id}', [StudyAbroadGlobalScholarshipController::class, 'show'])
     ->name('study-abroad.global-scholarship.show');
 
+// Global Scholarship Section end here 
 
 
+// India Entrance exam section start 
 
 Route::get('/entrance-exams', function () {
     $exams = collect(config('entrance_exam', []))->values()->all();
@@ -246,7 +251,10 @@ Route::get('/entrance-exams-details/{slug?}', function ($slug = 'jee-main') {
 })->name('entrance-exams-details.index');
 
 
+// India Entrance exam section end
 
+
+// News section start 
 
 Route::get('/education-news', [CollegeNewsController::class, 'index'])
     ->name('college-news.index');
@@ -254,7 +262,12 @@ Route::get('/education-news', [CollegeNewsController::class, 'index'])
 Route::get('/education-news/{slug}', [CollegeNewsController::class, 'show'])
     ->name('college-news.show');
 
+// News section End
 
+
+
+
+// Ask a questino sectiosn start 
 
 Route::get('/questions', [QuestionController::class, 'index'])
     ->name('questions.index');
@@ -274,9 +287,11 @@ Route::post('/questions/{slug}/answers', [QuestionController::class, 'storeAnswe
 Route::get('/questions/{slug}', [QuestionController::class, 'show'])
     ->name('questions.show');
 
+// Ask a questino sectiosn end 
 
 
-// New Registration for Study india page
+
+// New Registration for Study india page start
 
 
 Route::prefix('study-india')->name('study-india.')->group(function () {
@@ -336,7 +351,11 @@ Route::prefix('study-india')->name('study-india.')->group(function () {
 });
 
 
-// For study abroad Menu Bar
+// New Registration for Study india page End
+
+
+
+// For study abroad Menu Bar Login , register nad logout Start
 
 
 Route::post('/study-abroad/logout', [
@@ -352,38 +371,40 @@ Route::post('/study-abroad/login/send-otp', [
     ->name('study-abroad.login.send-otp');
 
 
-    Route::post('/study-abroad/profile', [
+Route::post('/study-abroad/profile', [
     StudyAbroadApplicationController::class,
     'logout',
 ]);
 
 Route::prefix('study-abroad')->name('study-abroad.')->group(function () {
 
-// Profile
-Route::get('/profile', [StudyAbroadApplicationController::class, 'profile'])
-    ->name('profile');
+    // Profile
+    Route::get('/profile', [StudyAbroadApplicationController::class, 'profile'])
+        ->name('profile');
 
-Route::put('/profile/update', [StudyAbroadApplicationController::class, 'updateProfile'])
-    ->name('profile.update');
+    Route::put('/profile/update', [StudyAbroadApplicationController::class, 'updateProfile'])
+        ->name('profile.update');
 
-Route::post('/profile/photo', [StudyAbroadApplicationController::class, 'updateProfilePhoto'])
-    ->name('profile.photo.update');
+    Route::post('/profile/photo', [StudyAbroadApplicationController::class, 'updateProfilePhoto'])
+        ->name('profile.photo.update');
 
-// Account settings
-Route::get('/settings', [StudyAbroadApplicationController::class, 'settings'])
-    ->name('settings');
+    // Account settings
+    Route::get('/settings', [StudyAbroadApplicationController::class, 'settings'])
+        ->name('settings');
 
-Route::put('/settings', [StudyAbroadApplicationController::class, 'updateSettings'])
-    ->name('settings.update');
+    Route::put('/settings', [StudyAbroadApplicationController::class, 'updateSettings'])
+        ->name('settings.update');
 
-Route::post('/deactivate', [StudyAbroadApplicationController::class, 'deactivateAccount'])
-    ->name('deactivate');
+    Route::post('/deactivate', [StudyAbroadApplicationController::class, 'deactivateAccount'])
+        ->name('deactivate');
 
-// Logout
-Route::post('/logout', [StudyAbroadApplicationController::class, 'logout'])
-    ->name('logout');
-    
+    // Logout
+    Route::post('/logout', [StudyAbroadApplicationController::class, 'logout'])
+        ->name('logout');
 });
+
+// For study abroad Menu Bar Login , register nad logout End
+
 
 
 // Study India - Write a Review Page
@@ -397,7 +418,43 @@ Route::prefix('study-india/reviews')
         Route::get('/write', 'create')->name('create');
 
         Route::post('/store', 'store')->name('store');
+
+        Route::get('/all', 'viewAll')->name('all');
     });
 
 
-    
+// Study India - Write a Review Page End
+
+
+//  Study Abroad Reviews Page start
+
+
+Route::prefix('study-abroad/reviews')
+    ->name('study-abroad.reviews.')
+    ->controller(StudyAbroadReviewController::class)
+    ->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('/write', 'create')->name('create');
+        Route::post('/store', 'store')
+            ->middleware('throttle:5,1')
+            ->name('store');
+    });
+
+Route::get(
+    '/study-abroad/write-review',
+    [StudyAbroadReviewController::class, 'create']
+)->name('study-abroad.reviews.write');
+
+
+//  Study Abroad Reviews Page End
+
+
+
+// This is for study prefrence city and states
+
+Route::get('/study-india/location/{type}/{slug}', [
+    StudyIndiaController::class,
+    'locationPage'
+])->name('study-india.location');
+
+// This is for study prefrence city and states end
