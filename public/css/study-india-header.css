@@ -797,81 +797,442 @@
     font-size: 11px;
 }
 
-/* Explore Panel */
+
+/* =========================================================
+   STUDY INDIA — EXPLORE PANEL
+   Premium UI | Navy + Orange Theme
+========================================================= */
+
+.si-explore-link:hover .bi{
+    transform: translateZ(0);
+    filter: none;
+}
 
 .si-explore-panel {
     display: none;
     position: absolute;
-    top: 62px;
+    top: 64px;
     right: 70px;
-    z-index: 1200;
-    width: 575px;
+    width: 620px;
     max-width: calc(100vw - 30px);
-    padding: 18px;
-    background: #fff;
-    border: 1px solid #eee;
-    border-radius: 7px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, .20);
+    padding: 0;
+    background: #ffffff;
+    border: 1px solid #eef1f5;
+    border-radius: 16px;
+    box-shadow:
+        0 24px 60px rgba(10, 37, 64, 0.12),
+        0 4px 14px rgba(10, 37, 64, 0.05);
+    z-index: 1200;
+    overflow: hidden;
+    font-family: 'Inter', Arial, sans-serif;
 }
 
-.si-explore-title {
-    margin-bottom: 10px;
-    color: #222;
-    font-size: 15px;
-    font-weight: 700;
+.si-explore-panel.is-open {
+    display: block;
+    animation: siExplorePop 0.15s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+/* =========================================================
+   OPEN ANIMATION
+========================================================= */
+
+@keyframes siExplorePop {
+    from {
+        opacity: 0;
+        transform: translateY(-8px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* =========================================================
+   PANEL TITLE
+========================================================= */
+
+.si-explore-title {
+    margin: 0;
+    padding: 18px 22px 14px;
+    background: linear-gradient(180deg, #ffffff, #fcfcfc);
+    border-bottom: 1px solid #f1ece6;
+    color: #0a2540;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    line-height: 1.5;
+}
+
+/* =========================================================
+   TWO-COLUMN LAYOUT
+========================================================= */
 
 .si-explore-columns {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 25px;
+    gap: 12px;
+    padding: 16px;
+    background: #f8fafc;
 }
+
+.si-explore-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+/* =========================================================
+   EXPLORE LINKS — PREMIUM CARDS
+========================================================= */
 
 .si-explore-column a {
-    min-height: 42px;
+    position: relative;
+    isolation: isolate;
     display: flex;
     align-items: center;
-    gap: 12px;
-    color: #222;
+    gap: 14px;
+    min-height: 54px;
+    padding: 10px 14px;
+
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+
+    color: #26384a;
     text-decoration: none;
-    border-bottom: 1px solid #eee;
     font-size: 13px;
-    transition: color .2s ease;
+    font-weight: 600;
+    line-height: 1.35;
+
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+
+    transition:
+        color 0.22s ease,
+        background 0.22s ease,
+        border-color 0.22s ease,
+        transform 0.22s ease,
+        box-shadow 0.22s ease;
 }
 
-.si-explore-column a:hover {
-    color: #eb933a;
+/* Animated Orange Border */
+
+.si-explore-column a::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    padding: 1.5px;
+    border-radius: inherit;
+
+    background: linear-gradient(
+        90deg,
+        #eb933a,
+        #f5b46b,
+        #eb933a,
+        #f5b46b
+    );
+
+    background-size: 300% 100%;
+
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+
+    transition: opacity 0.2s ease;
 }
 
-.si-explore-column a>span {
-    width: 32px;
-    min-width: 32px;
-    height: 32px;
+/* Hover and Keyboard Focus */
+
+.si-explore-column a:hover,
+.si-explore-column a:focus-visible {
+    background: #fffbf5;
+    color: #b96a1c;
+    border-color: transparent;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 25px rgba(235, 147, 58, 0.15);
+    outline: none;
+}
+
+.si-explore-column a:hover::before,
+.si-explore-column a:focus-visible::before {
+    opacity: 1;
+    animation: siExploreBorderFlow 2s linear infinite;
+}
+
+/* Border Animation */
+
+@keyframes siExploreBorderFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 300% 50%;
+    }
+}
+
+/* Click / Press Effect */
+
+.si-explore-column a:active {
+    transform: translateY(0) scale(0.99);
+}
+
+/* =========================================================
+   ICON TILE — ORANGE THEME
+   Supports Bootstrap Icons, emoji and text
+========================================================= */
+
+.si-explore-column a > span {
+    width: 38px;
+    min-width: 38px;
+    height: 38px;
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
-    background: #fff4e8;
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #fff4e8,
+        #ffe6cc
+    );
+
+    border: 1px solid #f6dcc2;
+
     color: #eb933a;
-    font-size: 15px;
-    transition: all .2s ease;
+    font-size: 17px;
+    line-height: 1;
+
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.8);
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.si-explore-column a:hover>span {
-    background: #eb933a;
-    color: #fff;
-    transform: translateX(2px);
+/* Bootstrap Icon Alignment */
+
+.si-explore-column a > span .bi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: inherit;
+    font-size: 17px;
+    line-height: 1;
+
+    transition: transform 0.3s ease;
 }
 
-.si-explore-column a small {
-    display: block;
+/* Icon Hover Animation */
+
+.si-explore-column a:hover > span,
+.si-explore-column a:focus-visible > span {
+    background: linear-gradient(135deg, #eb933a, #d7791f);
+    border-color: #eb933a;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.si-explore-column a:hover > span .bi,
+.si-explore-column a:focus-visible > span .bi {
+    transform: scale(1.08);
+}
+
+/* =========================================================
+   TEXT BLOCK
+   Supports links with nested div and small badge
+========================================================= */
+
+.si-explore-column a > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    min-width: 0;
+    flex: 1;
+
+    color: inherit;
+    line-height: 1.3;
+}
+
+/* =========================================================
+   EXPLORE BADGE
+========================================================= */
+
+.si-explore-column a > div small,
+.si-explore-column a > small {
+    display: inline-block;
     width: fit-content;
-    margin-top: 3px;
-    padding: 3px 5px;
-    background: #e8f7f0;
-    color: #35a477;
-    font-size: 8px;
+    max-width: 100%;
+
+    margin-top: 0;
+    padding: 3px 8px;
+
+    border-radius: 5px;
+
+    background: #fff4e8;
+    border: 1px solid #ffe4cc;
+
+    color: #d97a1e;
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+    text-transform: uppercase;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
 }
+
+/* Badge Hover */
+
+.si-explore-column a:hover > div small,
+.si-explore-column a:hover > small,
+.si-explore-column a:focus-visible > div small,
+.si-explore-column a:focus-visible > small {
+    background: #eb933a;
+    color: #ffffff;
+    border-color: #eb933a;
+}
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+    .si-explore-panel {
+        top: 62px;
+        right: 15px;
+        width: 575px;
+        max-width: calc(100vw - 30px);
+        border-radius: 14px;
+    }
+
+    .si-explore-title {
+        padding: 16px 18px 13px;
+    }
+
+    .si-explore-columns {
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .si-explore-column {
+        gap: 8px;
+    }
+
+    .si-explore-column a {
+        gap: 10px;
+        min-height: 50px;
+        padding: 9px 10px;
+        font-size: 12px;
+    }
+
+    .si-explore-column a > span {
+        width: 34px;
+        min-width: 34px;
+        height: 34px;
+        border-radius: 9px;
+        font-size: 16px;
+    }
+
+    .si-explore-column a > span .bi {
+        font-size: 16px;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+    .si-explore-panel {
+        top: 60px;
+        right: 10px;
+        width: calc(100vw - 20px);
+        max-width: none;
+        border-radius: 12px;
+    }
+
+    .si-explore-title {
+        padding: 14px 15px 12px;
+        font-size: 14px;
+    }
+
+    .si-explore-columns {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 10px;
+        max-height: 65vh;
+        overflow-y: auto;
+    }
+
+    .si-explore-column {
+        gap: 7px;
+    }
+
+    .si-explore-column a {
+        min-height: 48px;
+        gap: 12px;
+        padding: 9px 12px;
+        border-radius: 10px;
+        font-size: 12px;
+    }
+
+    .si-explore-column a > span {
+        width: 34px;
+        min-width: 34px;
+        height: 34px;
+    }
+
+    .si-explore-column a > div {
+        gap: 4px;
+    }
+
+    .si-explore-column a > div small,
+    .si-explore-column a > small {
+        font-size: 8px;
+        padding: 3px 7px;
+    }
+}
+
+/* =========================================================
+   ACCESSIBILITY — REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .si-explore-panel.is-open {
+        animation: none;
+    }
+
+    .si-explore-column a,
+    .si-explore-column a::before,
+    .si-explore-column a > span,
+    .si-explore-column a > span .bi {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
 
 /* Side Menu */
 

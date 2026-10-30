@@ -1,7 +1,6 @@
 /* =========================================================
    RESET / BASE
 ========================================================= */
-
 *,
 *::before,
 *::after {
@@ -11,34 +10,29 @@
 /* =========================================================
    HEADER SHELL
 ========================================================= */
-
 .sa-header {
+    position: sticky;
     top: 0;
+    z-index: 1000;
     width: 100%;
     background: #fff;
     border-bottom: 1px solid #ddd;
-    position: sticky;
-    z-index: 1000;
     font-family: Arial, sans-serif;
 }
 
 .sa-header-top {
-    min-height: 60px;
-    width: 100%;
     display: flex;
     align-items: center;
-    gap: 15px;
-    padding: 0 25px;
     flex-wrap: nowrap;
+    gap: 15px;
+    width: 100%;
+    min-height: 60px;
+    padding: 0 25px;
 }
 
-/* =========================================================
-   LOGO
-========================================================= */
-
 .sa-logo {
-    width: 175px;
     flex: 0 0 175px;
+    width: 175px;
 }
 
 .sa-logo a {
@@ -46,31 +40,28 @@
 }
 
 .sa-logo img {
+    display: block;
     width: 165px;
     max-width: 100%;
     height: auto;
-    display: block;
 }
 
 /* =========================================================
    COUNTRY TRIGGER
 ========================================================= */
-
 .sa-country-trigger {
-    height: 40px;
-    padding: 0 12px;
-    background: #fff;
-    border: 0;
-    border-left: 1px solid #ddd;
-    cursor: pointer;
-    white-space: nowrap;
-    color: #222;
     display: flex;
     align-items: center;
-    gap: 6px;
     flex-shrink: 0;
+    gap: 6px;
+    height: 40px;
+    padding: 0 12px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    background: #fff;
+    color: #222;
+    cursor: pointer;
+    white-space: nowrap;
 }
 
 .sa-country-trigger:hover {
@@ -84,54 +75,52 @@
 /* =========================================================
    SEARCH BAR
 ========================================================= */
-
 .sa-search {
-    height: 40px;
+    display: flex;
+    align-items: center;
     flex: 1 1 400px;
     width: 100%;
     max-width: 635px;
     min-width: 120px;
-    display: flex;
-    align-items: center;
-    background: #f5f5f5;
+    height: 40px;
+    padding: 0 12px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    padding: 0 12px;
+    background: #f5f5f5;
 }
 
 .sa-search > span {
+    flex-shrink: 0;
     color: #777;
     font-size: 20px;
-    flex-shrink: 0;
 }
 
 .sa-search input {
     width: 100%;
     min-width: 0;
+    padding-left: 8px;
     border: 0;
     outline: 0;
     background: transparent;
-    padding-left: 8px;
     font-size: 13px;
 }
 
 /* =========================================================
    HEADER ACTIONS
 ========================================================= */
-
 .sa-header-actions {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
     gap: 18px;
     margin-left: auto;
-    flex-shrink: 0;
 }
 
 .sa-header-actions a,
 .sa-explore-trigger {
     color: #222;
-    text-decoration: none;
     font-size: 13px;
+    text-decoration: none;
     white-space: nowrap;
 }
 
@@ -141,13 +130,13 @@
 }
 
 .sa-explore-trigger {
-    border: 0;
-    background: transparent;
-    cursor: pointer;
-    padding: 5px;
     display: inline-flex;
     align-items: center;
     gap: 5px;
+    padding: 5px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
 }
 
 .sa-counselling {
@@ -156,24 +145,24 @@
 }
 
 .sa-counselling small {
+    padding: 2px 5px;
     background: #eb933a;
     color: #fff;
     font-size: 8px;
-    padding: 2px 5px;
     text-align: center;
 }
 
 .sa-menu-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 40px;
     width: 40px;
     height: 40px;
-    min-width: 40px;
     border: 1px solid #ddd;
     border-radius: 50%;
     background: #fff;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .sa-menu-trigger:hover {
@@ -187,17 +176,16 @@
 /* =========================================================
    CATEGORY BAR
 ========================================================= */
-
 .sa-category-bar {
-    width: 100%;
-    min-height: 35px;
     display: flex;
     align-items: center;
     gap: 20px;
+    width: 100%;
+    min-height: 35px;
     padding: 0 35px;
-    border-top: 1px solid #eee;
     overflow-x: auto;
     overflow-y: hidden;
+    border-top: 1px solid #eee;
     white-space: nowrap;
     scrollbar-width: thin;
 }
@@ -207,10 +195,10 @@
 }
 
 .sa-category-bar a {
-    color: #111;
-    text-decoration: none;
-    font-size: 11px;
     flex-shrink: 0;
+    color: #111;
+    font-size: 11px;
+    text-decoration: none;
 }
 
 .sa-category-bar a:hover {
@@ -220,12 +208,11 @@
 /* =========================================================
    OVERLAYS
 ========================================================= */
-
 .sa-overlay,
 .sa-menu-overlay {
-    display: none;
     position: fixed;
     inset: 0;
+    display: none;
     background: rgba(0, 0, 0, .45);
 }
 
@@ -238,89 +225,79 @@
 }
 
 /* =========================================================
-   COUNTRY POPUP — IMPROVED UI
+   COUNTRY POPUP
 ========================================================= */
-
 .sa-country-popup {
-    display: none;
     position: fixed;
-    z-index: 1200;
     top: 65px;
     left: 27px;
+    z-index: 1200;
+    display: none;
+    flex-direction: column;
     width: 660px;
     max-width: calc(100vw - 54px);
     max-height: 78vh;
-    overflow: hidden;
-    background: #fff;
-    border-radius: 14px;
-    box-shadow:
-        0 24px 60px rgba(10, 37, 64, .18),
-        0 4px 14px rgba(10, 37, 64, .08);
     padding: 0;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 24px 60px rgba(10, 37, 64, .18),
+                0 4px 14px rgba(10, 37, 64, .08);
     font-family: Arial, sans-serif;
-    flex-direction: column;
 }
 
-/* When JS shows it as flex/block, keep card layout */
 .sa-country-popup[style*="display: block"],
-.sa-country-popup[style*="display: flex"] {
+.sa-country-popup[style*="display: flex"],
+.sa-country-popup.is-open {
     display: flex !important;
 }
 
-.sa-country-popup.is-open {
-    display: flex;
-}
-
-/* ---------------- Header ---------------- */
-
 .sa-country-popup-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 15px;
-    padding: 18px 20px 14px;
-    margin: 0;
-    background: linear-gradient(135deg, #fff8f1, #ffffff);
-    border-bottom: 1px solid #f1ece6;
+    justify-content: space-between;
     flex-shrink: 0;
+    gap: 15px;
+    margin: 0;
+    padding: 18px 20px 14px;
+    border-bottom: 1px solid #f1ece6;
+    background: linear-gradient(135deg, #fff8f1, #fff);
 }
 
 .sa-country-popup-header strong {
+    color: #0a2540;
     font-size: 15px;
     font-weight: 700;
-    color: #0a2540;
     letter-spacing: -.01em;
 }
 
 .sa-country-popup-header button {
-    border: 1px solid #eceff3;
-    background: #fff;
-    color: #4a5560;
-    cursor: pointer;
     flex-shrink: 0;
     padding: 7px 14px;
+    border: 1px solid #eceff3;
     border-radius: 8px;
+    background: #fff;
+    color: #4a5560;
     font-size: 12px;
     font-weight: 600;
+    cursor: pointer;
     transition: all .18s ease;
 }
 
 .sa-country-popup-header button:hover {
     border-color: #eb933a;
-    color: #eb933a;
     background: #fff8f1;
+    color: #eb933a;
 }
-
-/* ---------------- Grid ---------------- */
 
 .sa-country-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
+    flex: 1;
+    min-height: 0;
     gap: 10px;
     padding: 18px 20px 20px;
     overflow-y: auto;
-    flex: 1;
-    min-height: 0;
     scrollbar-width: thin;
 }
 
@@ -329,49 +306,42 @@
 }
 
 .sa-country-grid::-webkit-scrollbar-thumb {
-    background: #e2e6ea;
     border-radius: 10px;
+    background: #e2e6ea;
 }
 
 .sa-country-grid::-webkit-scrollbar-thumb:hover {
     background: #eb933a;
 }
 
-/* ---------------- Country tile ---------------- */
-
 .sa-country {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 10px 12px;
-    color: #26384a;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 500;
-    cursor: pointer;
     min-width: 0;
+    padding: 10px 12px;
     border: 1px solid #eef1f4;
     border-radius: 10px;
     background: #fff;
-    transition:
-        border-color .16s ease,
-        background .16s ease,
-        transform .16s ease,
-        box-shadow .16s ease,
-        color .16s ease;
+    color: #26384a;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: border-color .16s ease, background .16s ease,
+                transform .16s ease, box-shadow .16s ease, color .16s ease;
 }
 
 .sa-country:hover,
 .sa-country:focus-visible {
-    color: #b96a1c;
+    transform: translateY(-1px);
     border-color: #eb933a;
     background: #fff8f1;
-    transform: translateY(-1px);
+    color: #b96a1c;
     box-shadow: 0 6px 16px rgba(235, 147, 58, .12);
     outline: none;
 }
 
-/* Country name truncation */
 .sa-country > span:last-child {
     flex: 1;
     min-width: 0;
@@ -380,56 +350,53 @@
     white-space: nowrap;
 }
 
-/* ---------------- Flag ---------------- */
-
 .sa-country-flag {
-    width: 26px;
-    min-width: 26px;
-    height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 3px;
-    overflow: hidden;
-    background: #f1f3f5;
     flex-shrink: 0;
+    width: 26px;
+    min-width: 26px;
+    height: 20px;
+    overflow: hidden;
+    border-radius: 3px;
+    background: #f1f3f5;
     box-shadow: 0 0 0 1px rgba(10, 37, 64, .05);
 }
 
 .sa-country-flag .fi {
+    display: inline-block;
     width: 26px;
     height: 20px;
-    display: inline-block;
-    background-size: cover;
-    background-position: center;
     border-radius: 3px;
+    background-position: center;
+    background-size: cover;
 }
 
 /* =========================================================
    SEARCH RESULTS
 ========================================================= */
-
 .sa-search-results {
-    display: none;
     position: absolute;
     top: 60px;
     left: 380px;
+    z-index: 1250;
+    display: none;
     width: 635px;
     max-width: calc(100vw - 40px);
     max-height: 450px;
     overflow: hidden;
-    background: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
+    background: #fff;
     box-shadow: 0 5px 20px rgba(0, 0, 0, .15);
-    z-index: 1250;
 }
 
 .sa-search-results-header {
-    min-height: 42px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    min-height: 42px;
     padding: 0 15px;
     border-bottom: 1px solid #eee;
 }
@@ -441,8 +408,8 @@
 .sa-search-results-header button {
     border: 0;
     background: transparent;
-    font-size: 22px;
     color: #777;
+    font-size: 22px;
     cursor: pointer;
 }
 
@@ -456,9 +423,9 @@
     align-items: center;
     gap: 15px;
     padding: 12px 15px;
-    text-decoration: none;
     border-bottom: 1px solid #eee;
     color: #222;
+    text-decoration: none;
 }
 
 .sa-search-result:hover {
@@ -466,23 +433,24 @@
 }
 
 .sa-result-rank {
+    flex-shrink: 0;
     width: 40px;
     min-width: 40px;
     color: #eb933a;
-    font-weight: bold;
     font-size: 12px;
+    font-weight: 700;
 }
 
 .sa-result-content {
     display: flex;
     flex-direction: column;
-    gap: 3px;
     min-width: 0;
+    gap: 3px;
 }
 
 .sa-result-content strong {
-    font-size: 13px;
     overflow-wrap: anywhere;
+    font-size: 13px;
 }
 
 .sa-result-content span {
@@ -493,21 +461,20 @@
 /* =========================================================
    UNIVERSITY PANEL
 ========================================================= */
-
 .sa-university-panel {
-    display: none;
     position: fixed;
     top: 65px;
     left: 27px;
+    z-index: 1210;
+    display: none;
     width: 650px;
     max-width: calc(100vw - 54px);
     max-height: 75vh;
-    overflow-y: auto;
-    background: #fff;
-    border-radius: 9px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, .2);
-    z-index: 1210;
     padding: 20px;
+    overflow-y: auto;
+    border-radius: 9px;
+    background: #fff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .2);
 }
 
 .sa-university-header {
@@ -515,8 +482,8 @@
     align-items: center;
     justify-content: space-between;
     gap: 15px;
-    padding: 2px 2px 14px;
     margin-bottom: 12px;
+    padding: 2px 2px 14px;
     border-bottom: 1px solid #ececec;
 }
 
@@ -542,12 +509,13 @@
 }
 
 .sa-university-header button {
-    width: 34px;
-    height: 34px;
-    min-width: 34px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
+    width: 34px;
+    min-width: 34px;
+    height: 34px;
     border: 1px solid #e5e5e5;
     border-radius: 7px;
     background: #fff;
@@ -558,49 +526,50 @@
 }
 
 .sa-university-header button:hover {
-    color: #fff;
-    background: #eb933a;
     border-color: #eb933a;
+    background: #eb933a;
+    color: #fff;
 }
 
 .sa-university-list {
-    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 12px;
+    width: 100%;
 }
 
 .sa-university-item {
-    display: none;
     position: relative;
-    width: 100%;
-    min-height: 82px;
+    display: none;
     align-items: center;
     gap: 18px;
+    width: 100%;
+    min-height: 82px;
     padding: 14px 16px;
-    background: #fff;
     border: 1px solid #e6e8eb;
     border-radius: 12px;
+    background: #fff;
     transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
 }
 
 .sa-university-item:hover {
+    transform: translateY(-1px);
     border-color: #eb933a;
     box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
-    transform: translateY(-1px);
 }
 
 .sa-university-rank {
-    width: 58px;
-    min-width: 58px;
-    height: 58px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: linear-gradient(145deg, #fff7ed, #fff1df);
+    flex-shrink: 0;
+    width: 58px;
+    min-width: 58px;
+    height: 58px;
     border: 1px solid #f5d6b1;
     border-radius: 10px;
+    background: linear-gradient(145deg, #fff7ed, #fff1df);
     color: #eb933a;
     font-size: 10px;
     font-weight: 700;
@@ -608,11 +577,11 @@
 }
 
 .sa-university-info {
-    flex: 1;
-    min-width: 0;
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: center;
+    min-width: 0;
     gap: 6px;
 }
 
@@ -638,9 +607,9 @@
 }
 
 .sa-university-info span::before {
-    content: "🌍";
     display: inline-flex;
     margin-right: 6px;
+    content: "🌍";
     font-size: 11px;
 }
 
@@ -650,10 +619,10 @@
     width: fit-content;
     max-width: 100%;
     padding: 4px 8px;
-    color: #555e68;
-    background: #f7f8fa;
     border: 1px solid #eceef1;
     border-radius: 5px;
+    background: #f7f8fa;
+    color: #555e68;
     font-size: 10px;
     line-height: 1;
 }
@@ -661,48 +630,51 @@
 /* =========================================================
    EXPLORE PANEL
 ========================================================= */
-
 .sa-explore-panel {
-    display: none;
     position: absolute;
     top: 64px;
     right: 70px;
+    z-index: 1200;
+    display: none;
     width: 620px;
     max-width: calc(100vw - 30px);
-    background: #ffffff;
-    border-radius: 16px;
-    box-shadow:
-        0 24px 60px rgba(10, 37, 64, .12),
-        0 4px 14px rgba(10, 37, 64, .05);
     padding: 0;
-    z-index: 1200;
     overflow: hidden;
-    font-family: 'Inter', Arial, sans-serif;
+    border: 1px solid #eef1f5;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 24px 60px rgba(10, 37, 64, .12),
+                0 4px 14px rgba(10, 37, 64, .05);
+    font-family: Inter, Arial, sans-serif;
 }
 
 .sa-explore-panel.is-open {
     display: block;
-    animation: saExplorePop .2s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: saExplorePop .15s cubic-bezier(.16, 1, .3, 1);
 }
 
 @keyframes saExplorePop {
-    from { opacity: 0; transform: translateY(-8px) scale(.98); }
-    to   { opacity: 1; transform: translateY(0) scale(1); }
+    from {
+        opacity: 0;
+        transform: translateY(-8px) scale(.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
-
-/* ---------------- Title ---------------- */
 
 .sa-explore-title {
+    margin: 0;
+    padding: 18px 22px 14px;
+    border-bottom: 1px solid #f1ece6;
+    background: linear-gradient(180deg, #fff, #fcfcfc);
+    color: #0a2540;
     font-size: 15px;
     font-weight: 800;
-    color: #0a2540;
-    padding: 18px 22px 14px;
-    background: linear-gradient(180deg, #ffffff, #fcfcfc);
-    border-bottom: 1px solid #f1ece6;
-    letter-spacing: -0.01em;
+    letter-spacing: -.01em;
+    line-height: 1.5;
 }
-
-/* ---------------- Columns ---------------- */
 
 .sa-explore-columns {
     display: grid;
@@ -715,62 +687,55 @@
 .sa-explore-column {
     display: flex;
     flex-direction: column;
-    gap: 8px;
     min-width: 0;
+    gap: 8px;
 }
-
-/* =========================================================
-   ITEMS
-========================================================= */
 
 .sa-explore-column a {
     position: relative;
+    isolation: isolate;
     display: flex;
     align-items: center;
     gap: 14px;
     min-height: 54px;
     padding: 10px 14px;
+    border: 1px solid #e2e8f0;
     border-radius: 12px;
+    background: #fff;
     color: #26384a;
-    text-decoration: none;
     font-size: 13px;
     font-weight: 600;
     line-height: 1.35;
-    isolation: isolate;
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
-    transition: all .22s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .02);
+    transition: color .22s ease, background .22s ease, border-color .22s ease,
+                transform .22s ease, box-shadow .22s ease;
 }
 
-/* Animated flowing border overlay */
 .sa-explore-column a::before {
-    content: "";
     position: absolute;
     inset: -1px;
-    border-radius: inherit;
+    z-index: -1;
     padding: 1.5px;
+    border-radius: inherit;
     background: linear-gradient(90deg, #eb933a, #f5b46b, #eb933a, #f5b46b);
     background-size: 300% 100%;
-    -webkit-mask:
-        linear-gradient(#000 0 0) content-box,
-        linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor;
-            mask-composite: exclude;
+    content: "";
     opacity: 0;
     pointer-events: none;
-    z-index: -1;
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
     transition: opacity .2s ease;
 }
 
-/* Hover Effect */
 .sa-explore-column a:hover,
 .sa-explore-column a:focus-visible {
+    transform: translateY(-2px);
+    border-color: transparent;
     background: #fffbf5;
     color: #b96a1c;
-    border-color: transparent;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(235, 147, 58, 0.15);
+    box-shadow: 0 10px 25px rgba(235, 147, 58, .15);
     outline: none;
 }
 
@@ -781,102 +746,110 @@
 }
 
 @keyframes saExploreBorderFlow {
-    0%   { background-position:   0% 50%; }
-    100% { background-position: 300% 50%; }
+    from { background-position: 0% 50%; }
+    to { background-position: 300% 50%; }
 }
 
-/* Active / press state */
 .sa-explore-column a:active {
     transform: translateY(0) scale(.99);
 }
 
-/* =========================================================
-   ICON TILE — Orange Theme (Handles both text & .bi icons)
-========================================================= */
-
 .sa-explore-column a > span {
-    width: 38px;
-    min-width: 38px;
-    height: 38px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    border-radius: 10px;
-    /* Soft warm orange background */
-    background: linear-gradient(135deg, #fff4e8, #ffe6cc);
+    width: 38px;
+    min-width: 38px;
+    height: 38px;
     border: 1px solid #f6dcc2;
-    /* Forces emoji/text characters to orange */
+    border-radius: 10px;
+    background: linear-gradient(135deg, #fff4e8, #ffe6cc);
     color: #eb933a;
     font-size: 17px;
     line-height: 1;
-    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.8);
-    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, .8);
+    transition: background .3s ease, color .3s ease, border-color .3s ease,
+                transform .3s cubic-bezier(.34, 1.56, .64, 1);
 }
 
-/* Handle Bootstrap icons inside the tile */
 .sa-explore-column a > span .bi {
-    font-size: 17px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: inherit;
-    transition: transform 0.3s ease;
+    font-size: 17px;
+    line-height: 1;
+    transition: transform .3s ease;
 }
 
-/* =========================================================
-   TEXT BLOCK & BADGE
-========================================================= */
+.sa-explore-column a:hover > span,
+.sa-explore-column a:focus-visible > span {
+    transform: translateY(-1px);
+    border-color: #eb933a;
+    background: linear-gradient(135deg, #eb933a, #d7791f);
+    color: #fff;
+}
+
+.sa-explore-column a:hover > span .bi,
+.sa-explore-column a:focus-visible > span .bi {
+    transform: scale(1.08);
+}
 
 .sa-explore-column a > div {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
-    min-width: 0;
     flex: 1;
+    flex-direction: column;
+    min-width: 0;
+    gap: 5px;
     color: inherit;
     line-height: 1.3;
 }
 
-/* The "Explore Study Abroad" Sub-badge */
-.sa-explore-column a > div small {
+.sa-explore-column a > div small,
+.sa-explore-column a > small {
     display: inline-block;
     width: fit-content;
+    max-width: 100%;
+    margin-top: 0;
     padding: 3px 8px;
+    border: 1px solid #ffe4cc;
     border-radius: 5px;
     background: #fff4e8;
     color: #d97a1e;
     font-size: 9px;
     font-weight: 800;
-    letter-spacing: 0.05em;
+    letter-spacing: .05em;
+    line-height: 1.4;
     text-transform: uppercase;
-    border: 1px solid #ffe4cc;
-    transition: all .2s ease;
+    transition: background .2s ease, color .2s ease, border-color .2s ease;
 }
 
-.sa-explore-column a:hover > div small {
-    background: #eb933a;
-    color: #ffffff;
+.sa-explore-column a:hover > div small,
+.sa-explore-column a:hover > small,
+.sa-explore-column a:focus-visible > div small,
+.sa-explore-column a:focus-visible > small {
     border-color: #eb933a;
+    background: #eb933a;
+    color: #fff;
 }
 
 /* =========================================================
    SIDE MENU DRAWER
 ========================================================= */
-
 .sa-menu-drawer {
     position: fixed;
     top: 0;
     right: -350px;
+    z-index: 1400;
     width: 330px;
     max-width: 90vw;
     height: 100vh;
-    background: #fff;
-    z-index: 1400;
-    box-shadow: -5px 0 20px rgba(0, 0, 0, .2);
-    transition: right .3s ease;
     padding: 20px;
     overflow-y: auto;
+    background: #fff;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, .2);
+    transition: right .3s ease;
 }
 
 .sa-menu-header {
@@ -886,28 +859,28 @@
 }
 
 .sa-menu-header button {
+    flex-shrink: 0;
     border: 0;
     background: transparent;
     font-size: 25px;
     cursor: pointer;
-    flex-shrink: 0;
 }
 
 .sa-menu-user {
     display: flex;
-    gap: 10px;
     min-width: 0;
+    gap: 10px;
 }
 
 .sa-user-icon {
-    width: 42px;
-    height: 42px;
-    min-width: 42px;
-    background: #eee;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #eee;
 }
 
 .sa-menu-user strong {
@@ -915,12 +888,15 @@
 }
 
 .sa-menu-user p {
-    font-size: 11px;
-    color: #666;
     margin: 4px 0;
+    color: #666;
+    font-size: 11px;
 }
 
 .sa-login-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 38px;
     margin: 20px 0;
@@ -928,17 +904,14 @@
     border-radius: 4px;
     background: #eb933a;
     color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-weight: 700;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .sa-login-btn:hover {
-    color: #fff;
     background: #d9822f;
+    color: #fff;
 }
 
 .sa-menu-links a {
@@ -946,10 +919,10 @@
     align-items: center;
     gap: 12px;
     padding: 14px 5px;
-    color: #222;
-    text-decoration: none;
     border-bottom: 1px solid #eee;
+    color: #222;
     font-size: 14px;
+    text-decoration: none;
 }
 
 .sa-menu-links a:hover {
@@ -957,15 +930,15 @@
 }
 
 .sa-menu-links a span {
+    flex-shrink: 0;
     width: 25px;
     min-width: 25px;
     color: #1670bf;
 }
 
 /* =========================================================
-   NAVMENU (MULTI-LEVEL DRAWER)
+   NAVMENU — MULTI-LEVEL DRAWER
 ========================================================= */
-
 .sa-navmenu-trigger {
     display: inline-flex;
     align-items: center;
@@ -1015,16 +988,16 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 99990;
     width: 370px;
     max-width: 92vw;
     height: 100vh;
-    z-index: 99990;
+    overflow: hidden;
     background: #fff;
     box-shadow: 8px 0 30px rgba(10, 37, 64, .18);
     transform: translateX(-105%);
     visibility: hidden;
     transition: transform .28s ease, visibility .28s ease;
-    overflow: hidden;
 }
 
 .sa-navmenu-drawer.sa-navmenu-drawer-active {
@@ -1037,8 +1010,8 @@
     inset: 0;
     display: none;
     flex-direction: column;
-    background: #fff;
     overflow: hidden;
+    background: #fff;
 }
 
 .sa-navmenu-page.sa-navmenu-page-active {
@@ -1046,31 +1019,31 @@
 }
 
 .sa-navmenu-header {
-    min-height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-shrink: 0;
     gap: 12px;
+    min-height: 70px;
     padding: 14px 18px;
     background: linear-gradient(135deg, #f5820b, #eb933a);
     color: #fff;
-    flex-shrink: 0;
 }
 
 .sa-navmenu-header-title {
     display: flex;
     align-items: center;
-    gap: 11px;
     min-width: 0;
+    gap: 11px;
 }
 
 .sa-navmenu-header-icon {
-    width: 39px;
-    height: 39px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    width: 39px;
+    height: 39px;
     border-radius: 9px;
     background: rgba(255, 255, 255, .18);
     font-size: 20px;
@@ -1094,12 +1067,12 @@
 }
 
 .sa-navmenu-close {
-    width: 34px;
-    height: 34px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    width: 34px;
+    height: 34px;
     padding: 0;
     border: 1px solid rgba(255, 255, 255, .3);
     border-radius: 7px;
@@ -1159,10 +1132,10 @@
 }
 
 .sa-navmenu-search-icon {
-    width: 38px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    width: 38px;
     color: #7b8794;
     font-size: 22px;
 }
@@ -1185,11 +1158,11 @@
 .sa-navmenu-search-clear {
     position: absolute;
     right: 8px;
-    width: 25px;
-    height: 25px;
     display: none;
     align-items: center;
     justify-content: center;
+    width: 25px;
+    height: 25px;
     padding: 0;
     border: 0;
     background: transparent;
@@ -1205,8 +1178,8 @@
 .sa-navmenu-list-wrapper {
     flex: 1;
     min-height: 0;
-    overflow-y: auto;
     overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .sa-navmenu-list {
@@ -1223,20 +1196,20 @@
 
 .sa-navmenu-page-link,
 .sa-navmenu-direct-link {
-    width: 100%;
-    min-height: 53px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 12px;
+    width: 100%;
+    min-height: 53px;
     padding: 10px 9px;
     border: 0;
     background: transparent;
     color: #26384a;
-    text-decoration: none;
-    text-align: left;
     font-size: 13px;
     font-weight: 600;
+    text-align: left;
+    text-decoration: none;
     cursor: pointer;
     transition: all .18s ease;
 }
@@ -1258,8 +1231,8 @@
 .sa-navmenu-direct-link > span:first-child {
     display: inline-flex;
     align-items: center;
-    gap: 9px;
     min-width: 0;
+    gap: 9px;
 }
 
 .sa-navmenu-arrow {
@@ -1273,17 +1246,17 @@
 
 .sa-navmenu-page-link:hover .sa-navmenu-arrow,
 .sa-navmenu-direct-link:hover .sa-navmenu-arrow {
-    color: #eb933a;
     transform: translateX(2px);
+    color: #eb933a;
 }
 
 .sa-navmenu-item-icon {
-    width: 30px;
-    height: 30px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    width: 30px;
+    height: 30px;
     border-radius: 7px;
     background: #fff4e8;
     font-size: 14px;
@@ -1313,21 +1286,21 @@
 }
 
 .sa-navmenu-country-title-icon {
-    width: 38px;
-    height: 38px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    width: 38px;
+    height: 38px;
     border-radius: 8px;
     background: #fff0df;
     font-size: 18px;
 }
 
 .sa-navmenu-country-title div {
-    min-width: 0;
     display: flex;
     flex-direction: column;
+    min-width: 0;
 }
 
 .sa-navmenu-country-title strong {
@@ -1366,17 +1339,17 @@
 }
 
 .sa-navmenu-university-link {
-    width: 100%;
-    min-height: 57px;
     display: flex;
     align-items: center;
     gap: 9px;
+    width: 100%;
+    min-height: 57px;
     padding: 9px;
     border: 0;
     background: transparent;
     color: #26384a;
-    text-decoration: none;
     text-align: left;
+    text-decoration: none;
     transition: all .18s ease;
 }
 
@@ -1386,22 +1359,22 @@
 }
 
 .sa-navmenu-university-icon {
-    width: 31px;
-    height: 31px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    width: 31px;
+    height: 31px;
     border-radius: 7px;
     background: #f5f7f9;
     font-size: 14px;
 }
 
 .sa-navmenu-university-name {
-    flex: 1;
-    min-width: 0;
     display: flex;
+    flex: 1;
     flex-direction: column;
+    min-width: 0;
     gap: 3px;
     font-size: 12px;
     font-weight: 600;
@@ -1416,22 +1389,22 @@
 
 .sa-navmenu-empty {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     min-height: 220px;
     padding: 25px 20px;
     border: 0 !important;
-    text-align: center;
     color: #7f8b96;
+    text-align: center;
 }
 
 .sa-navmenu-empty-icon {
-    width: 50px;
-    height: 50px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    width: 50px;
+    height: 50px;
     margin-bottom: 10px;
     border-radius: 50%;
     background: #fff4e8;
@@ -1460,9 +1433,8 @@
 }
 
 /* =========================================================
-   SCROLLBARS
+   NAVMENU SCROLLBARS / BODY LOCK
 ========================================================= */
-
 .sa-navmenu-list-wrapper::-webkit-scrollbar {
     width: 5px;
 }
@@ -1480,18 +1452,13 @@
     background: #eb933a;
 }
 
-/* =========================================================
-   BODY LOCK
-========================================================= */
-
 body.sa-navmenu-body-open {
     overflow: hidden;
 }
 
 /* =========================================================
-   RESPONSIVE — LAPTOP 1200px
+   RESPONSIVE — LAPTOP
 ========================================================= */
-
 @media (max-width: 1200px) {
     .sa-header-top {
         gap: 10px;
@@ -1527,15 +1494,14 @@ body.sa-navmenu-body-open {
 }
 
 /* =========================================================
-   RESPONSIVE — TABLET 900px
+   RESPONSIVE — TABLET
 ========================================================= */
-
 @media (max-width: 900px) {
     .sa-header-top {
-        min-height: 58px;
-        padding: 8px 15px;
         flex-wrap: wrap;
         row-gap: 8px;
+        min-height: 58px;
+        padding: 8px 15px;
     }
 
     .sa-logo {
@@ -1565,15 +1531,15 @@ body.sa-navmenu-body-open {
 
     .sa-country-popup,
     .sa-university-panel {
-        left: 20px;
         right: 20px;
+        left: 20px;
         width: auto;
         max-width: none;
     }
 
     .sa-search-results {
-        left: 20px;
         right: 20px;
+        left: 20px;
         width: auto;
         max-width: none;
     }
@@ -1584,46 +1550,29 @@ body.sa-navmenu-body-open {
         max-width: calc(100vw - 40px);
     }
 
-    .sa-country-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    /* ---------- Country popup: improved shell ---------- */
-
-    .sa-country-popup {
-        left: 20px;
-        right: 20px;
-        width: auto;
-        max-width: none;
-    }
-
+    .sa-country-grid,
     .sa-country-popup .sa-country-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 
 /* =========================================================
-   RESPONSIVE — MOBILE 650px
-   Row 1: logo + get counselling + explore + menu
-   Row 2: globe icon + "Select country" text + search bar
+   RESPONSIVE — MOBILE
 ========================================================= */
-
 @media (max-width: 650px) {
     .sa-header-top {
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 6px;
+        row-gap: 8px;
         min-height: 58px;
         padding: 8px 10px;
-        gap: 6px;
-        flex-wrap: wrap;
-        row-gap: 8px;
-        align-items: center;
     }
 
-    /* ---------- ROW 1 ---------- */
-
     .sa-logo {
-        width: 115px;
-        flex: 0 0 115px;
         order: 1;
+        flex: 0 0 115px;
+        width: 115px;
     }
 
     .sa-logo img {
@@ -1631,23 +1580,20 @@ body.sa-navmenu-body-open {
     }
 
     .sa-header-actions {
-        margin-left: auto;
-        gap: 6px;
         order: 2;
+        gap: 6px;
+        margin-left: auto;
     }
 
-    /* Hide "Write a review" on mobile (it lives in the menu) */
     .sa-header-actions .sa-review {
         display: none !important;
     }
 
-    /* Get counselling: compact */
     .sa-header-actions .sa-counselling {
         display: flex;
         font-size: 11px;
     }
 
-    /* Explore: keep text visible */
     .sa-header-actions .sa-explore-trigger {
         display: inline-flex;
         align-items: center;
@@ -1665,13 +1611,11 @@ body.sa-navmenu-body-open {
     }
 
     .sa-menu-trigger {
+        order: 3;
+        flex-basis: 38px;
         width: 38px;
         height: 38px;
-        min-width: 38px;
-        order: 3;
     }
-
-    /* ---------- ROW 2: globe + "Select country" + search ---------- */
 
     .sa-country-trigger {
         order: 4;
@@ -1679,16 +1623,15 @@ body.sa-navmenu-body-open {
         width: auto;
         min-width: 0;
         height: 38px;
-        padding: 0 10px;
-        margin: 0;
         justify-content: center;
+        gap: 5px;
+        margin: 0;
+        padding: 0 10px;
         border: 1px solid #ddd;
         border-radius: 4px;
         background: #fff;
-        gap: 5px;
     }
 
-    /* KEEP the "Select country" text visible */
     .sa-country-trigger .sa-country-text {
         display: inline-block;
         font-size: 12px;
@@ -1696,7 +1639,6 @@ body.sa-navmenu-body-open {
         white-space: nowrap;
     }
 
-    /* Hide only the dropdown arrow on mobile */
     .sa-country-trigger .sa-arrow {
         display: none;
     }
@@ -1725,25 +1667,21 @@ body.sa-navmenu-body-open {
         font-size: 12px;
     }
 
-    /* ---------- Category bar ---------- */
-
     .sa-category-bar {
         min-height: 36px;
-        padding: 0 10px;
         gap: 15px;
+        padding: 0 10px;
     }
 
     .sa-category-bar a {
         font-size: 11px;
     }
 
-    /* ---------- Popups (below the 2-row header) ---------- */
-
     .sa-country-popup,
     .sa-university-panel {
         top: 105px;
-        left: 10px;
         right: 10px;
+        left: 10px;
         width: auto;
         max-width: none;
         max-height: calc(100vh - 120px);
@@ -1751,17 +1689,30 @@ body.sa-navmenu-body-open {
         border-radius: 8px;
     }
 
+    .sa-country-popup {
+        padding: 0;
+        border-radius: 12px;
+    }
+
     .sa-country-popup-header {
-        margin-bottom: 15px;
+        margin-bottom: 0;
+        padding: 14px 15px 12px;
     }
 
     .sa-country-popup-header strong {
         font-size: 13px;
     }
 
-    .sa-country-grid {
+    .sa-country-popup-header button {
+        padding: 6px 11px;
+        font-size: 11px;
+    }
+
+    .sa-country-grid,
+    .sa-country-popup .sa-country-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 18px 10px;
+        gap: 8px;
+        padding: 14px 15px 16px;
     }
 
     .sa-country {
@@ -1770,17 +1721,25 @@ body.sa-navmenu-body-open {
     }
 
     .sa-country-flag,
-    .sa-country-flag .fi {
+    .sa-country-flag .fi,
+    .sa-country-popup .sa-country-flag,
+    .sa-country-popup .sa-country-flag .fi {
         width: 23px;
         min-width: 23px;
         height: 17px;
     }
 
+    .sa-country-popup .sa-country {
+        gap: 8px;
+        padding: 9px 10px;
+        font-size: 12px;
+    }
+
     .sa-search-results {
         position: fixed;
         top: 105px;
-        left: 10px;
         right: 10px;
+        left: 10px;
         width: auto;
         max-width: none;
         max-height: calc(100vh - 120px);
@@ -1810,8 +1769,8 @@ body.sa-navmenu-body-open {
 
     .sa-university-item {
         gap: 10px;
-        padding: 12px 10px;
         min-height: 72px;
+        padding: 12px 10px;
     }
 
     .sa-university-rank {
@@ -1843,59 +1802,11 @@ body.sa-navmenu-body-open {
         padding: 18px;
     }
 
-    /* ---------- Country popup: improved shell ---------- */
-
-    .sa-country-popup {
-        top: 105px;
-        left: 10px;
-        right: 10px;
-        width: auto;
-        max-width: none;
-        max-height: calc(100vh - 120px);
-        padding: 0;
-        border-radius: 12px;
-    }
-
-    .sa-country-popup-header {
-        padding: 14px 15px 12px;
-        margin-bottom: 0;
-    }
-
-    .sa-country-popup-header strong {
-        font-size: 13px;
-    }
-
-    .sa-country-popup-header button {
-        padding: 6px 11px;
-        font-size: 11px;
-    }
-
-    .sa-country-popup .sa-country-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 8px;
-        padding: 14px 15px 16px;
-    }
-
-    .sa-country-popup .sa-country {
-        padding: 9px 10px;
-        font-size: 12px;
-        gap: 8px;
-    }
-
-    .sa-country-popup .sa-country-flag,
-    .sa-country-popup .sa-country-flag .fi {
-        width: 23px;
-        min-width: 23px;
-        height: 17px;
-    }
-
-    /* ---------- Explore Panel: improved shell ---------- */
-
     .sa-explore-panel {
         position: fixed;
         top: 105px;
-        left: 10px;
         right: 10px;
+        left: 10px;
         width: auto;
         max-width: none;
         max-height: calc(100vh - 120px);
@@ -1910,14 +1821,14 @@ body.sa-navmenu-body-open {
 
     .sa-explore-columns {
         grid-template-columns: 1fr;
-        padding: 12px;
         gap: 8px;
+        padding: 12px;
     }
 
     .sa-explore-column + .sa-explore-column {
-        border-top: 1px solid #e2e8f0;
         margin-top: 4px;
         padding-top: 12px;
+        border-top: 1px solid #e2e8f0;
     }
 
     .sa-explore-column a {
@@ -1925,32 +1836,31 @@ body.sa-navmenu-body-open {
         padding: 10px 12px;
     }
 
+    .sa-explore-column a > span,
+    .sa-explore-column a > span .bi {
+        font-size: 16px;
+    }
+
     .sa-explore-column a > span {
         width: 34px;
         min-width: 34px;
         height: 34px;
-        font-size: 16px;
-    }
-
-    .sa-explore-column a > span .bi {
-        font-size: 16px;
     }
 }
 
 /* =========================================================
-   RESPONSIVE — SMALL MOBILE 400px
+   SMALL MOBILE
 ========================================================= */
-
 @media (max-width: 400px) {
     .sa-header-top {
-        padding: 7px 8px;
         gap: 4px;
         row-gap: 7px;
+        padding: 7px 8px;
     }
 
     .sa-logo {
-        width: 100px;
         flex-basis: 100px;
+        width: 100px;
     }
 
     .sa-logo img {
@@ -1967,11 +1877,10 @@ body.sa-navmenu-body-open {
         font-size: 11px;
     }
 
-    /* Country trigger: keep text, just shrink */
     .sa-country-trigger {
         height: 35px;
-        padding: 0 8px;
         gap: 4px;
+        padding: 0 8px;
     }
 
     .sa-country-trigger .sa-country-text {
@@ -1983,9 +1892,9 @@ body.sa-navmenu-body-open {
     }
 
     .sa-menu-trigger {
+        flex-basis: 35px;
         width: 35px;
         height: 35px;
-        min-width: 35px;
     }
 
     .sa-search {
@@ -1994,17 +1903,40 @@ body.sa-navmenu-body-open {
 
     .sa-country-popup,
     .sa-university-panel {
-        left: 7px;
-        right: 7px;
-        padding: 12px;
         top: 98px;
+        right: 7px;
+        left: 7px;
         max-height: calc(100vh - 110px);
+    }
+
+    .sa-country-popup {
+        padding: 0;
+        border-radius: 10px;
+    }
+
+    .sa-country-popup-header {
+        padding: 12px 12px 10px;
+    }
+
+    .sa-country-popup-header strong {
+        font-size: 13px;
+    }
+
+    .sa-country-popup .sa-country-grid {
+        grid-template-columns: 1fr;
+        gap: 7px;
+        padding: 12px;
+    }
+
+    .sa-country-popup .sa-country {
+        padding: 10px 11px;
+        font-size: 12px;
     }
 
     .sa-search-results {
         top: 98px;
-        left: 7px;
         right: 7px;
+        left: 7px;
         max-height: calc(100vh - 110px);
     }
 
@@ -2038,93 +1970,30 @@ body.sa-navmenu-body-open {
     }
 
     .sa-university-info small {
-        font-size: 8px;
         padding: 3px 6px;
+        font-size: 8px;
     }
 
     .sa-menu-drawer {
         width: 285px;
         max-width: 90vw;
     }
-
-    /* ---------- Country popup: improved shell ---------- */
-
-    .sa-country-popup {
-        top: 98px;
-        left: 7px;
-        right: 7px;
-        max-height: calc(100vh - 110px);
-        padding: 0;
-        border-radius: 10px;
-    }
-
-    .sa-country-popup-header {
-        padding: 12px 12px 10px;
-        margin-bottom: 0;
-    }
-
-    .sa-country-popup-header strong {
-        font-size: 13px;
-    }
-
-    .sa-country-popup .sa-country-grid {
-        grid-template-columns: 1fr;
-        gap: 7px;
-        padding: 12px;
-    }
-
-    .sa-country-popup .sa-country {
-        padding: 10px 11px;
-        font-size: 12px;
-    }
-
-    /* ---------- Explore Panel: improved shell ---------- */
-
-    .sa-explore-panel {
-        top: 98px;
-        left: 7px;
-        right: 7px;
-        max-height: calc(100vh - 110px);
-        border-radius: 12px;
-    }
-
-    .sa-explore-columns {
-        padding: 10px;
-    }
-
-    .sa-explore-column a {
-        padding: 9px;
-        gap: 10px;
-        font-size: 12px;
-    }
-
-    .sa-explore-column a > span {
-        width: 30px;
-        min-width: 30px;
-        height: 30px;
-        font-size: 14px;
-    }
-
-    .sa-explore-column a > span .bi {
-        font-size: 14px;
-    }
 }
 
 /* =========================================================
-   RESPONSIVE — VERY SMALL PHONES 340px
+   VERY SMALL PHONES
 ========================================================= */
-
 @media (max-width: 340px) {
     .sa-header-top {
         gap: 3px;
         row-gap: 6px;
-        padding-left: 5px;
         padding-right: 5px;
+        padding-left: 5px;
     }
 
     .sa-logo {
-        width: 88px;
         flex-basis: 88px;
+        width: 88px;
     }
 
     .sa-logo img {
@@ -2137,11 +2006,10 @@ body.sa-navmenu-body-open {
         font-size: 10px;
     }
 
-    /* Country trigger: still keep text on tiny phones */
     .sa-country-trigger {
         height: 32px;
-        padding: 0 7px;
         gap: 3px;
+        padding: 0 7px;
     }
 
     .sa-country-trigger .sa-country-text {
@@ -2153,9 +2021,9 @@ body.sa-navmenu-body-open {
     }
 
     .sa-menu-trigger {
+        flex-basis: 32px;
         width: 32px;
         height: 32px;
-        min-width: 32px;
     }
 
     .sa-search {
@@ -2175,7 +2043,6 @@ body.sa-navmenu-body-open {
 /* =========================================================
    NAVMENU RESPONSIVE
 ========================================================= */
-
 @media (max-width: 768px) {
     .sa-navmenu-drawer {
         width: 350px;
@@ -2189,8 +2056,8 @@ body.sa-navmenu-body-open {
     }
 
     .sa-navmenu-list {
-        padding-left: 9px;
         padding-right: 9px;
+        padding-left: 9px;
     }
 }
 
@@ -2214,8 +2081,8 @@ body.sa-navmenu-body-open {
     }
 
     .sa-navmenu-search {
-        margin-left: 12px;
         margin-right: 12px;
+        margin-left: 12px;
     }
 
     .sa-navmenu-page-link,
@@ -2225,20 +2092,20 @@ body.sa-navmenu-body-open {
     }
 
     .sa-navmenu-country-title {
-        margin-left: 12px;
         margin-right: 12px;
+        margin-left: 12px;
     }
 
     .sa-navmenu-subtitle {
-        margin-left: 12px;
         margin-right: 12px;
+        margin-left: 12px;
     }
 }
 
 @media (max-width: 340px) {
     .sa-navmenu-trigger {
-        padding: 0 8px;
         gap: 4px;
+        padding: 0 8px;
         font-size: 10px;
     }
 
@@ -2250,14 +2117,15 @@ body.sa-navmenu-body-open {
 /* =========================================================
    ACCESSIBILITY — REDUCED MOTION
 ========================================================= */
-
 @media (prefers-reduced-motion: reduce) {
+    .sa-explore-panel.is-open,
     .sa-explore-column a,
     .sa-explore-column a::before,
     .sa-explore-column a > span,
+    .sa-explore-column a > span .bi,
     .sa-explore-column a > div small {
-        transition: none !important;
         animation: none !important;
+        transition: none !important;
         transform: none !important;
     }
 }

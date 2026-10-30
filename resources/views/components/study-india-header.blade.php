@@ -192,7 +192,7 @@
 
             {{-- Header Actions --}}
             <div class="si-header-actions">
-                <a href="javascript:void(0);" class="si-review-link">
+                <a  href="{{ route('study-india.reviews.index') }}" class="si-review-link">
                     <i class="bi bi-pencil-square"></i>
                     Write a Review
                 </a>
@@ -507,13 +507,13 @@
         <div class="si-explore-title">Explore More</div>
         <div class="si-explore-columns">
             <div class="si-explore-column">
-                <a href="{{ url('/study-india') }}">
+                <a href="{{ url('/') }}">
                     <span>
                         <i class="bi bi-mortarboard-fill"></i>
                     </span>
                     <div>
                         Study India
-                        <small>Explore Indian Colleges</small>
+                        <small>Explore Study India</small>
                     </div>
                 </a>
                 <a href="{{ url('/entrance-exams') }}">

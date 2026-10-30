@@ -893,7 +893,7 @@
         <div class="sa-explore-columns">
             <div class="sa-explore-column">
                 <a href="{{ url('/study-abroad') }}">
-                    <span>🌐</span>
+                    <span>  <i class="bi bi-globe"></i></span>
                     <div>
                         Study Abroad
                         <small>Explore Study Abroad</small>
@@ -901,7 +901,7 @@
                 </a>
 
                 <a href="{{ url('exams/gre') }}">
-                    <span>▣</span>
+                    <span> <i class="bi bi-journal-text"></i></span>
                     Abroad Exams
                 </a>
 
@@ -928,22 +928,22 @@
 
             <div class="sa-explore-column">
                 <a href="javascript:void(0);">
-                    <span>▱</span>
+                    <span>  <i class="bi bi-book"></i></span>
                     Top Courses
                 </a>
 
                 <a href="javascript:void(0);">
-                    <span>♙</span>
+                    <span>    <i class="bi bi-bell"></i></span>
                     Admission Alerts 2026
                 </a>
 
                 <a href="javascript:void(0);">
-                    <span>▥</span>
+                    <span><i class="bi bi-building"></i></span>
                     Institute
                 </a>
 
                 <a href="javascript:void(0);">
-                    <span>♙</span>
+                    <span>  <i class="bi bi-award"></i></span>
                     Scholarship
                 </a>
             </div>

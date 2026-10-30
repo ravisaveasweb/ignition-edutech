@@ -15,6 +15,7 @@ use Illuminate\Support\Str;
 use App\Http\Controllers\CollegeNewsController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\StudyIndiaAuthController;
+use App\Http\Controllers\StudyIndiaReviewController;
 
 
 
@@ -386,10 +387,17 @@ Route::post('/logout', [StudyAbroadApplicationController::class, 'logout'])
 
 
 // Study India - Write a Review Page
-Route::view(
-    '/study-india/reviews/create',
-    'study-india.reviews.create'
-)->name('study-india.reviews.create');
+
+Route::prefix('study-india/reviews')
+    ->name('study-india.reviews.')
+    ->controller(StudyIndiaReviewController::class)
+    ->group(function () {
+        Route::get('/', 'index')->name('index');
+
+        Route::get('/write', 'create')->name('create');
+
+        Route::post('/store', 'store')->name('store');
+    });
 
 
     

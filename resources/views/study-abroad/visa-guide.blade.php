@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ $visaCountry->visaGuide->page_title }} | Ignition Edutech</title>
-<meta name="description" content="{{ $visaCountry->visaGuide->overview }}">
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 <style>
 :root {
@@ -842,8 +836,6 @@ a {
     }
 }
 </style>
-</head>
-<body>
 
 <x-study-abroad-header />
 
@@ -1030,5 +1022,3 @@ a {
 
 <x-frontend-footer />
 
-</body>
-</html>

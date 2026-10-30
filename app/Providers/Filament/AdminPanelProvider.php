@@ -37,6 +37,7 @@ class AdminPanelProvider extends PanelProvider
                 'HR',
                 'Projects',
                 'Blog',
+                 'Admissions',
             ])
             ->sidebarCollapsibleOnDesktop() // Enables icon-only collapsible sidebar
             // ->databaseNotifications()
