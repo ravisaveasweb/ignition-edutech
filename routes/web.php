@@ -458,3 +458,14 @@ Route::get('/study-india/location/{type}/{slug}', [
 ])->name('study-india.location');
 
 // This is for study prefrence city and states end
+
+
+
+// Universities courses page start
+
+Route::get('/study-india/universities-courses', function(){
+    return view('study-india.universities-courses.index');
+
+})->name('study-india.universities-courses');
+
+// Universities courses page end

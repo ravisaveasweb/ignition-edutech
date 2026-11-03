@@ -419,7 +419,7 @@
 
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
-<x-frontend-footer/>
+
 
 <script
     src="{{ asset('js/study-india/study-india-review.js') }}?v={{ filemtime(public_path('js/study-india/study-india-review.js')) }}">

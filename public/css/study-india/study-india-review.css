@@ -2218,7 +2218,7 @@ td {
 .field>textarea:focus,
 .phone-field:focus-within,
 .referral-field:focus-within {
-    border-color: var(--orange);
+    border-color: var(--orange) !important;
     box-shadow: 0 0 0 3px #f0953618
 }
 
@@ -3627,14 +3627,14 @@ td {
 .ign-sir-viewall-page a {
     text-decoration: none;
 }
-
+/* 
 .ign-sir-viewall-page button:focus-visible,
 .ign-sir-viewall-page a:focus-visible,
 .ign-sir-viewall-page input:focus-visible,
 .ign-sir-viewall-page select:focus-visible {
     outline: 3px solid var(--ign-sir-viewall-orange);
     outline-offset: 3px;
-}
+} */
 
 .ign-sir-viewall-page [hidden] {
     display: none !important;

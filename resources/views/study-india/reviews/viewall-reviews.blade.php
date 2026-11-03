@@ -529,6 +529,4 @@
 
 
 
-{{-- <x-frontend-footer /> --}}
-
 <script src="{{ asset('js/study-india/study-india-review.js') }}"></script>

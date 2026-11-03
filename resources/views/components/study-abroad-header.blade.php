@@ -407,9 +407,9 @@
             </div>
 
             <div class="sa-header-actions">
-               <a href="{{ route('study-abroad.reviews.index') }}" class="sa-review">
-    ✎ Write a Review
-</a>
+                <a href="{{ route('study-abroad.reviews.index') }}" class="sa-review">
+                    ✎ Write a Review
+                </a>
                 <a href="javascript:void(0);" class="sa-counselling">
                     <a href="{{ route('study-abroad.application') }}">
                         <span>♧ Get Counselling</span>
@@ -893,8 +893,55 @@
 
         <div class="sa-explore-columns">
             <div class="sa-explore-column">
+                <a href="{{ url('/') }}">
+                    <span>
+                        <i class="bi bi-mortarboard-fill"></i>
+                    </span>
+                    <div>
+                        Study India
+                        <small>Explore Study India</small>
+                    </div>
+                </a>
+
+                <a href="{{ url('/entrance-exams') }}">
+                    <span>
+                        <i class="bi bi-journal-text"></i>
+                    </span>
+                    Entrance Exams
+                </a>
+
+                <a href="{{ route('college-news.index', ['section' => 'study-india']) }}">
+                    <span>
+                        <i class="bi bi-newspaper"></i>
+                    </span>
+                    College News
+                </a>
+
+                <a href="{{ route('study-india.reviews.all') }}">
+                    <span>
+                        <i class="bi bi-question-circle"></i>
+                    </span>
+                    Read College Reviews
+                </a>
+                <a href="{{ route('questions.index') }}">
+                    <span>
+                        <i class="bi bi-question-circle"></i>
+                    </span>
+                    Ask a Question
+                </a>
+
+                <a href="javascript:void(0);">
+                    <span>
+                        <i class="bi bi-book"></i>
+                    </span>
+                    Top Courses
+                </a>
+            </div>
+
+            <div class="sa-explore-column">
+
                 <a href="{{ url('/study-abroad') }}">
-                    <span>  <i class="bi bi-globe"></i></span>
+                    <span> <i class="bi bi-globe"></i></span>
                     <div>
                         Study Abroad
                         <small>Explore Study Abroad</small>
@@ -906,12 +953,6 @@
                     Abroad Exams
                 </a>
 
-                {{-- <a href="{{ route('college-news.index') }}">
-                    <span>
-                        <i class="bi bi-newspaper"></i>
-                    </span>
-                    College News
-                </a> --}}
 
                 <a href="{{ route('college-news.index', ['section' => 'study-abroad']) }}">
                     <span>
@@ -919,34 +960,26 @@
                     </span>
                     College News
                 </a>
+
+                <a href="{{ route('study-abroad.reviews.index') }}">
+                    <span>
+                        <i class="bi bi-newspaper"></i>
+                    </span>
+                    Read College Reviews
+                </a>
+
                 <a href="{{ route('questions.index') }}">
                     <span>
                         <i class="bi bi-question-circle"></i>
                     </span>
                     Ask a Question
                 </a>
-            </div>
 
-            <div class="sa-explore-column">
                 <a href="javascript:void(0);">
-                    <span>  <i class="bi bi-book"></i></span>
+                    <span> <i class="bi bi-book"></i></span>
                     Top Courses
                 </a>
 
-                <a href="javascript:void(0);">
-                    <span>    <i class="bi bi-bell"></i></span>
-                    Admission Alerts 2026
-                </a>
-
-                <a href="javascript:void(0);">
-                    <span><i class="bi bi-building"></i></span>
-                    Institute
-                </a>
-
-                <a href="javascript:void(0);">
-                    <span>  <i class="bi bi-award"></i></span>
-                    Scholarship
-                </a>
             </div>
         </div>
     </div>

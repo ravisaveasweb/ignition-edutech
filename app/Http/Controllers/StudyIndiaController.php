@@ -10,7 +10,7 @@ class StudyIndiaController extends Controller
     {
         // Allow only city and state
         if (!in_array($type, ['city', 'state'])) {
-            return redirect('/');
+            return redirect()->route('/home');
         }
 
         // Available city and state pages

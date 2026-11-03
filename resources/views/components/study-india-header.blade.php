@@ -524,12 +524,6 @@
                     Entrance Exams
                 </a>
 
-                {{-- <a href="{{ route('college-news.index') }}">
-                    <span>
-                        <i class="bi bi-newspaper"></i>
-                    </span>
-                    College News
-                </a> --}}
 
                 <a href="{{ route('college-news.index', ['section' => 'study-india']) }}">
                     <span>
@@ -537,38 +531,75 @@
                     </span>
                     College News
                 </a>
+
+
+                 <a href="{{ route('study-india.reviews.all') }}">
+                    <span>
+                        <i class="bi bi-question-circle"></i>
+                    </span>
+                    Read College Reviews
+                </a>
+            
+
                 <a href="{{ route('questions.index') }}">
                     <span>
                         <i class="bi bi-question-circle"></i>
                     </span>
                     Ask a Question
                 </a>
-            </div>
-            <div class="si-explore-column">
-                <a href="javascript:void(0);">
+
+
+                  <a href="javascript:void(0);">
                     <span>
                         <i class="bi bi-book"></i>
                     </span>
                     Top Courses
                 </a>
-                <a href="javascript:void(0);">
-                    <span>
-                        <i class="bi bi-bell"></i>
-                    </span>
-                    Admission Alerts 2026
+
+            </div>
+            <div class="si-explore-column">
+               <a href="{{ url('/study-abroad') }}">
+                    <span>  <i class="bi bi-globe"></i></span>
+                    <div>
+                        Study Abroad
+                        <small>Explore Study Abroad</small>
+                    </div>
                 </a>
-                <a href="javascript:void(0);">
-                    <span>
-                        <i class="bi bi-building"></i>
-                    </span>
-                    Institutes
+
+                
+                <a href="{{ url('exams/gre') }}">
+                    <span> <i class="bi bi-journal-text"></i></span>
+                    Abroad Exams
                 </a>
-                <a href="javascript:void(0);">
+
+               
+                     <a href="{{ route('college-news.index', ['section' => 'study-abroad']) }}">
                     <span>
-                        <i class="bi bi-award"></i>
+                        <i class="bi bi-newspaper"></i>
                     </span>
-                    Scholarships
+                    College News
                 </a>
+
+                 <a href="{{ route('study-abroad.reviews.index') }}">
+                    <span>
+                        <i class="bi bi-newspaper"></i>
+                    </span>
+                    Read College Reviews
+                </a>
+
+                <a href="{{ route('questions.index') }}">
+                    <span>
+                        <i class="bi bi-question-circle"></i>
+                    </span>
+                    Ask a Question
+                </a>
+
+                  <a href="javascript:void(0);">
+                    <span>  <i class="bi bi-book"></i></span>
+                    Top Courses
+                </a>
+
+                
             </div>
         </div>
     </div>

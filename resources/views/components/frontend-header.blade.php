@@ -184,7 +184,7 @@
                                         </ul>
                                     </li>
                                     <li class="has-dropdown">
-                                        <a href="#">Universities</a>
+                                        <a href="{{ route('study-india.universities-courses') }}">Universities</a>
                                         <ul class="tp-submenu">
                                             <li><a
                                                     href="{{ route('nmims-distance-education-online-degree-programs') }}">NMIMS
