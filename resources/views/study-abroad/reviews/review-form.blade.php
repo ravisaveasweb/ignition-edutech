@@ -1,9 +1,9 @@
 {{-- resources/views/study-abroad/reviews/review-form.blade.php --}}
 <link rel="stylesheet" href="{{ asset('css/study-abroad/study-abroad-review.css') }}?v=2">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/logo/favicon.png') }}" />
+<link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/logo/favicon.png') }}" />
 
-    <x-study-abroad-header/>
+<x-study-abroad-header />
 
 <div class="sa-review-form-page">
 
@@ -101,10 +101,32 @@
                     </label>
 
 
-                    <label>Year You Started Studying*<select name="enrollmentYear" id="sa-review-form-enrollment-year"
+                    {{-- <label>Year You Started Studying*<select name="enrollmentYear" id="sa-review-form-enrollment-year"
                             required>
                             <option value="">Select year</option>
-                        </select><small class="sa-review-form-error"></small></label>
+                        </select><small class="sa-review-form-error"></small></label> --}}
+
+                    <label>
+                        Year You Started Studying*
+                        <select name="enrollmentYear" id="sa-review-form-enrollment-year" required>
+                            <option value="">Select year</option>
+
+                            @for ($year = now()->year; $year >= now()->year - 35; $year--)
+                                <option value="{{ $year }}"
+                                    {{ (string) old('enrollmentYear') === (string) $year ? 'selected' : '' }}>
+                                    {{ $year }}
+                                </option>
+                            @endfor
+                        </select>
+
+                        <small class="sa-review-form-error">
+                            @error('enrollmentYear')
+                                {{ $message }}
+                            @enderror
+                        </small>
+                    </label>
+
+
                     <label>Annual Tuition Fees <span class="sa-review-form-optional">Optional</span><input
                             name="fees" type="number" min="0" step="0.01" value="{{ old('fees') }}"
                             placeholder="Approximate annual fees"><small class="sa-review-form-error"></small></label>
@@ -214,6 +236,18 @@
             </div>
         </form>
     </main>
+    {{-- 
+    @if ($errors->any())
+    <div style="background:#fff0f0; padding:15px; margin:15px 0; color:#b00020;">
+        <strong>Laravel validation errors:</strong>
+
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif --}}
 
     <div class="sa-review-form-modal-backdrop" id="sa-review-form-preview-modal" hidden>
         <section class="sa-review-form-preview-modal" role="dialog" aria-modal="true"

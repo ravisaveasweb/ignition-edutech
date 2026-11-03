@@ -17,6 +17,7 @@ class StudyIndiaController extends Controller
         $availableLocations = [
             'city' => [
                 // Add city pages here when they are created
+                
             ],
 
             'state' => [

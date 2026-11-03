@@ -1,4 +1,3 @@
-/* public/js/study-abroad/study-abroad-review-form.js */
 (() => {
     "use strict";
 
@@ -7,21 +6,21 @@
     const form = $("#sa-review-form");
     if (!form) return;
 
-    const currentYear = new Date().getFullYear();
+    // const currentYear = new Date().getFullYear();
     const ratings = { academics: 0, overall: 0 };
     let toastTimer = null;
     let previewConfirmed = false;
     let previousFocus = null;
 
-    const enrollmentYear = $("#sa-review-form-enrollment-year", form);
-    if (enrollmentYear && enrollmentYear.options.length <= 1) {
-        for (let year = currentYear; year >= currentYear - 35; year--) {
-            const option = document.createElement("option");
-            option.value = String(year);
-            option.textContent = String(year);
-            enrollmentYear.append(option);
-        }
-    }
+    // const enrollmentYear = $("#sa-review-form-enrollment-year", form);
+    // if (enrollmentYear && enrollmentYear.options.length <= 1) {
+    //     for (let year = currentYear; year >= currentYear - 35; year--) {
+    //         const option = document.createElement("option");
+    //         option.value = String(year);
+    //         option.textContent = String(year);
+    //         enrollmentYear.append(option);
+    //     }
+    // }
 
     // Restore old input values after server-side validation redirects.
     ["academics", "overall"].forEach(key => {
@@ -253,29 +252,41 @@
         (previousFocus && previousFocus.isConnected ? previousFocus : $('button[type="submit"]', form))?.focus();
     }
 
-    form.addEventListener("submit", event => {
-        if (previewConfirmed) {
-            previewConfirmed = false;
-            return; // Submit normally to Laravel after confirmation.
-        }
-        event.preventDefault();
-        if (!validateAll()) {
-            showToast("Please complete the highlighted required fields.");
-            return;
-        }
-        openPreview();
-    });
+   form.addEventListener("submit", event => {
+
+    console.log("Form submit event triggered");
+
+    if (previewConfirmed) {
+        console.log("Preview confirmed. Sending form to Laravel.");
+        return;
+    }
+
+    event.preventDefault();
+
+    if (!validateAll()) {
+        console.log("Form validation failed.");
+        showToast("Please complete the highlighted required fields.");
+        return;
+    }
+
+    console.log("Validation successful. Opening preview.");
+    openPreview();
+});
 
     $("#sa-review-form-close-modal")?.addEventListener("click", closeModal);
- $("#sa-review-form-done-button")?.addEventListener("click", () => {
-    // Validate all required fields before submitting.
+$("#sa-review-form-done-button")?.addEventListener("click", () => {
+
+    console.log("Done button clicked.");
+
     if (!validateAll()) {
+        console.log("Validation failed.");
         closeModal();
         showToast("Please correct the highlighted fields before submitting.");
         return;
     }
 
-    // Close the preview modal.
+    console.log("Validation passed.");
+
     const modal = $("#sa-review-form-preview-modal");
 
     if (modal) {
@@ -284,7 +295,13 @@
 
     document.body.style.overflow = "";
 
-    // Submit directly to Laravel after custom validation succeeds.
+    console.log("Form action:", form.action);
+    console.log("Form method:", form.method);
+    console.log("Enrollment year:", new FormData(form).get("enrollmentYear"));
+    console.log("Improvements:", new FormData(form).get("improvements"));
+
+    // Submit directly to Laravel.
+    // This bypasses the JavaScript submit listener.
     HTMLFormElement.prototype.submit.call(form);
 });
 

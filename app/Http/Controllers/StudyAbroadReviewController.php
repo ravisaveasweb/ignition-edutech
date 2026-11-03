@@ -137,21 +137,13 @@ class StudyAbroadReviewController extends Controller
 
             'country' => [
                 'required',
-                Rule::in([
-                    'Australia',
-                    'Canada',
-                    'France',
-                    'Germany',
-                    'Ireland',
-                    'Italy',
-                    'Malaysia',
-                    'Netherlands',
-                    'New Zealand',
-                    'Singapore',
-                    'United Kingdom',
-                    'United States',
-                    'Other',
-                ]),
+                'string',
+                Rule::in(
+                    ApplicationMasterData::where('type', 'ignitionCountry')
+                        ->where('status', 1)
+                        ->pluck('name')
+                        ->toArray()
+                ),
             ],
 
             'course' => [

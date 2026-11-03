@@ -83,7 +83,8 @@
             @if (($totalReviews ?? 0) > 0)
                 <div class="sa-review-summary">
                     <div class="sa-review-summary-score">
-                        <strong>{{ number_format((float) ($averageRating ?? 0), 1) }}</strong><span>/ 5</span></div>
+                        <strong>{{ number_format((float) ($averageRating ?? 0), 1) }}</strong><span>/ 5</span>
+                    </div>
                     <div>
                         <div class="sa-review-summary-stars"
                             aria-label="{{ number_format((float) ($averageRating ?? 0), 1) }} out of 5 stars">
@@ -141,10 +142,13 @@
                     @foreach ($reviews as $review)
                         <article class="sa-review-public-card">
                             <div class="sa-review-public-card-top">
-                                <span
-                                    class="sa-review-public-avatar">{{ mb_strtoupper(mb_substr($review->full_name ?? 'S', 0, 1)) }}</span>
+                                <span class="sa-review-public-avatar">
+                                    {{ mb_strtoupper(mb_substr($review->student_name ?? 'S', 0, 1)) }}
+                                </span>
+
                                 <div class="sa-review-public-person">
-                                    <strong>{{ $review->full_name ?? 'Student' }}</strong><span>{{ $review->university ?? 'International university' }}</span>
+                                    <strong>{{ $review->student_name ?? 'Student' }}</strong>
+                                    <span>{{ $review->university_name ?? 'International university' }}</span>
                                 </div>
                             </div>
                             <div class="sa-review-public-stars"
@@ -155,13 +159,25 @@
                                 @endfor
                                 <b>{{ (int) ($review->overall_rating ?? 0) }}/5</b>
                             </div>
-                            <h3>{{ $review->headline ?? 'Student experience' }}</h3>
+                            <h3>{{ $review->review_headline ?? 'Student experience' }}</h3>
+
                             <p class="sa-review-public-excerpt">
-                                {{ \Illuminate\Support\Str::limit($review->reason ?? ($review->likes ?? 'A student shared their international education experience.'), 210) }}
+                                {{ \Illuminate\Support\Str::limit(
+                                    $review->reason_for_choice ?? ($review->likes ?? 'A student shared their international education experience.'),
+                                    210,
+                                ) }}
                             </p>
-                            <div class="sa-review-public-meta"><span><i class="bi bi-geo-alt"></i>
-                                    {{ $review->country ?? 'Study abroad' }}</span><span><i
-                                        class="bi bi-mortarboard"></i> {{ $review->course ?? 'Student' }}</span></div>
+                            <div class="sa-review-public-meta">
+                                <span>
+                                    <i class="bi bi-geo-alt"></i>
+                                    {{ $review->country ?? 'Study abroad' }}
+                                </span>
+
+                                <span>
+                                    <i class="bi bi-mortarboard"></i>
+                                    {{ $review->course_name ?? 'Student' }}
+                                </span>
+                            </div>
                         </article>
                     @endforeach
                 </div>
