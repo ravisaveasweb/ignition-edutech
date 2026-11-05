@@ -1430,7 +1430,7 @@ table.ie-table tbody tr:nth-child(even) {
 
 /* Section & Container Layout */
 .ie-intro-section {
-  padding: 80px 20px;
+  /* padding: 80px 20px; */
   background-color: #ffffff; /* Clean white canvas */
   font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
@@ -1505,7 +1505,7 @@ table.ie-table tbody tr:nth-child(even) {
 }
 /* Section Container Styles */
 .ir-hero-section {
-  padding: 80px 20px;
+  /* padding: 80px 20px; */
   background-color: #f8fafc; /* Subtle, clean off-white canvas */
   font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,

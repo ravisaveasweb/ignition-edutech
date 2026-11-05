@@ -6,6 +6,8 @@
     rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('css/study-india/universities-courses.css') }}?v=1">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+
 
 @php
     $ignUnivDirectoryOnline = [
@@ -147,24 +149,16 @@
                 </div>
             </div>
 
-            <div class="ign-univ-directory-hero-visual">
-                <div class="ign-univ-directory-hero-image-card">
-                    <div class="ign-univ-directory-hero-image-icon">
-                        <i class="bi bi-mortarboard"></i>
-                    </div>
-                    <span class="ign-univ-directory-hero-image-label">BUILD YOUR FUTURE</span>
-                    <h2>Learn Today.<br>Lead Tomorrow.</h2>
-                    <div class="ign-univ-directory-hero-image-decoration">
-                        <i class="bi bi-book-half"></i>
-                        <i class="bi bi-award"></i>
-                        <i class="bi bi-globe2"></i>
-                    </div>
+
+             <div class="amt-hero-card">
+                    <h3>Get Free Career Counselling</h3>
+                    <p class="amt-muted">
+                        Talk to our experts and choose the right degree for your career.
+                    </p>
+
+                    @includeIf('forms.courses.amity.amity-ba-course-form')
+
                 </div>
-                <div class="ign-univ-directory-hero-floating">
-                    <i class="bi bi-check-circle-fill"></i>
-                    Explore Your Options
-                </div>
-            </div>
         </div>
 
         <div class="ign-univ-directory-hero-bottom"></div>
@@ -383,6 +377,25 @@
                     <h3>Plan Your Future</h3>
                     <p>Take an informed step towards your academic and career goals.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+
+    {{-- ---------- CTA  ---------- --}}
+
+    <section class="ign-psy-cta" id="psy-book">
+        <div class="container">
+            <div class="ign-psy-cta-box">
+                <div class="ign-psy-cta-content">
+                    <h3>Find the Right University. Build Your Future.</h3>
+                    <p>Explore online and offline universities, compare courses, and discover the right learning path to
+                        match your career goals. Take the next step toward your future with Ignition Edutech.</p>
+                </div>
+
+                <a href="{{ route('contact') }}" class="ign-psy-cta-btn">
+                    Get Course Guidance
+                </a>
             </div>
         </div>
     </section>

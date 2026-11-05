@@ -140,7 +140,7 @@
             @if (isset($reviews) && $reviews->count())
                 <div class="sa-review-public-grid">
                     @foreach ($reviews as $review)
-                        <article class="sa-review-public-card">
+                        <article class="sa-review-public-card" id="viewReviewForAbroad">
                             <div class="sa-review-public-card-top">
                                 <span class="sa-review-public-avatar">
                                     {{ mb_strtoupper(mb_substr($review->student_name ?? 'S', 0, 1)) }}

@@ -1,5 +1,258 @@
 <x-frontend-header :study-abroad-universities="$studyAbroadUniversities" />
-<x-study-india-header/>
+<x-study-india-header />
+
+
+@php
+
+    $yjJourneyFeatures = [
+        ['icon' => 'bi bi-check-lg', 'title' => 'School Admissions'],
+        ['icon' => 'bi bi-check-lg', 'title' => 'Career Guidance & Counselling'],
+        ['icon' => 'bi bi-check-lg', 'title' => 'Undergraduate & Postgraduate Admissions'],
+        ['icon' => 'bi bi-check-lg', 'title' => 'Online & Distance Learning'],
+        ['icon' => 'bi bi-check-lg', 'title' => 'Professional Certifications & Skill Development'],
+        ['icon' => 'bi bi-check-lg', 'title' => 'Corporate Learning Solutions'],
+    ];
+
+    $programCourses = [
+        [
+            'image' => 'img/icon/master-of-business-administration.png',
+            'title' => 'MBA',
+            'description' => 'Master of Business Administration',
+            'duration' => '2 Years',
+        ],
+        [
+            'image' => 'img/icon/bachelor-of-business-administration.png',
+            'title' => 'BBA',
+            'description' => 'Bachelor of Business Administration',
+            'duration' => '3 Years',
+        ],
+        [
+            'image' => 'img/icon/master-of-computer-applications.png',
+            'title' => 'MCA',
+            'description' => 'Master of Computer Applications',
+            'duration' => '2 Years',
+        ],
+        [
+            'image' => 'img/icon/bachelor-of-computer-applications.png',
+            'title' => 'BCA',
+            'description' => 'Bachelor of Computer Applications',
+            'duration' => '3 Years',
+        ],
+        [
+            'image' => 'img/icon/diploma.png',
+            'title' => 'PG Diploma',
+            'description' => 'Various Specialized Programs',
+            'duration' => '1 Year',
+        ],
+    ];
+
+    $whyChooseFeatures = [
+        [
+            'image' => 'img/icon/career.png',
+            'title' => 'Career Counselling',
+            'description' => 'Personalized guidance to help you choose the right course and career path.',
+        ],
+        [
+            'image' => 'img/icon/admission-process.png',
+            'title' => 'Easy Admission',
+            'description' => 'Hassle-free admission process with complete end-to-end support.',
+        ],
+        [
+            'image' => 'img/icon/top-university.png',
+            'title' => 'Top Universities',
+            'description' => 'Partnered with UGC-approved and NAAC-accredited universities.',
+        ],
+        [
+            'image' => 'img/icon/online-learning.png',
+            'title' => 'Flexible Learning',
+            'description' => 'Learn anytime, anywhere with online classes and recorded sessions.',
+        ],
+        [
+            'image' => 'img/icon/EMI-options.png',
+            'title' => 'EMI Options',
+            'description' => 'Affordable fee structure with easy EMI plans to suit your budget.',
+        ],
+        [
+            'image' => 'img/icon/placement-support.png',
+            'title' => 'Placement Support',
+            'description' => 'Resume building, mock interviews, and career assistance.',
+        ],
+    ];
+
+    $statsServiceData = [
+        [
+            'image' => 'img/icon/students-enrolled.png',
+            'number' => '10,000+',
+            'title' => 'Students Enrolled',
+        ],
+        [
+            'image' => 'img/icon/university.png',
+            'number' => '50+',
+            'title' => 'Top Universities',
+        ],
+        [
+            'image' => 'img/icon/programs-offered.png',
+            'number' => '100+',
+            'title' => 'Programs Offered',
+        ],
+        [
+            'image' => 'img/icon/student-satisfaction.png',
+            'number' => '95%',
+            'title' => 'Student Satisfaction',
+        ],
+        [
+            'image' => 'img/icon/average-rating.png',
+            'number' => '4.8/5',
+            'title' => 'Average Rating',
+        ],
+    ];
+
+    $successStories = [
+        [
+            'image' => 'img/course/success-stories-01.jpg',
+            'title' => 'From Marketing Executive to MBA Graduate',
+            'description' => 'With the right support, I got into a top university.',
+            'name' => 'Neha Sharma',
+            'course' => 'MBA, Chandigarh University',
+        ],
+        [
+            'image' => 'img/course/success-stories-02.jpg',
+            'title' => 'Switching Career with MCA',
+            'description' => 'The MCA program helped me transition into tech.',
+            'name' => 'Saurabh Tiwari',
+            'course' => 'MCA, Manipal University',
+        ],
+        [
+            'image' => 'img/course/success-stories-03.jpg',
+            'title' => 'Career Growth with BBA',
+            'description' => 'The knowledge and skills I gained helped me get promoted.',
+            'name' => 'Pooja Verma',
+            'course' => 'BBA, Amity University',
+        ],
+        [
+            'image' => 'img/course/success-stories-04.jpg',
+            'title' => 'Learning Without Limits',
+            'description' => 'Flexible learning made it possible to balance work and studies.',
+            'name' => 'Vikram Joshi',
+            'course' => 'PG Diploma, NMIMS',
+        ],
+    ];
+
+    $approvedServices = [
+        [
+            'image' => 'img/icon/UGC-approved.png',
+            'title' => 'UGC Approved',
+            'description' => 'Recognized by UGC',
+            'card_class' => 'stat-approved',
+            'content_class' => 'approved-content',
+        ],
+        [
+            'image' => 'img/icon/NAAC-A-grade.png',
+            'title' => 'NAAC A+ Grade',
+            'description' => 'Top Accredited Universities',
+            'card_class' => 'stat-approved',
+            'content_class' => 'approved-content',
+        ],
+        [
+            'image' => 'img/icon/AICTE-approved.png',
+            'title' => 'AICTE Approved',
+            'description' => 'Industry Recognized',
+            'card_class' => 'stat-approved',
+            'content_class' => 'approved-content',
+        ],
+        [
+            'image' => 'img/icon/AIU-member.png',
+            'title' => 'AIU Member',
+            'description' => 'Association of Indian Universities',
+            'card_class' => 'stat-approved',
+            'content_class' => 'approved-content',
+        ],
+        [
+            'image' => 'img/icon/secure.png',
+            'title' => '100% Secure Process',
+            'description' => 'Your data is safer with us',
+            'card_class' => 'stat-approved-two',
+            'content_class' => 'approved-content-two',
+        ],
+    ];
+
+    $featureStripData = [
+        [
+            'image' => 'img/icon/approved-degrees.png',
+            'title' => 'UGC Entitled',
+            'subtitle' => 'Approved Degrees',
+        ],
+        [
+            'image' => 'img/icon/grade-universities.png',
+            'title' => 'NAAC A+ Grade',
+            'subtitle' => 'Universities',
+        ],
+        [
+            'image' => 'img/icon/happy-students.png',
+            'title' => '10,000+',
+            'subtitle' => 'Happy Students',
+        ],
+        [
+            'image' => 'img/icon/secure.png',
+            'title' => '100% Secure',
+            'subtitle' => '& Easy Process',
+        ],
+    ];
+
+    $testimonialData = [
+        [
+            'review_image' => 'img/icon/left.png',
+            'stars' => '★★★★★',
+            'review' =>
+                '“Ignition Edutech made my admission process seamless. I got enrolled in NMIMS and it truly boosted my career growth.”',
+            'student_image' => 'img/live/review-01.jpg',
+            'name' => 'Rohit Sharma',
+            'course' => 'MBA, NMIMS University',
+        ],
+        [
+            'review_image' => 'img/icon/left.png',
+            'stars' => '★★★★★',
+            'review' =>
+                '“The counselors were very supportive and helped me choose the right program. Highly recommended for online education.”',
+            'student_image' => 'img/live/review-03.jpg',
+            'name' => 'Priya Mehta',
+            'course' => 'BCA, Manipal University',
+        ],
+        [
+            'review_image' => 'img/icon/left.png',
+            'stars' => '★★★★★',
+            'review' =>
+                '“I was confused about university selection. Their guidance helped me pick the best course for my future.”',
+            'student_image' => 'img/live/review-02.jpg',
+            'name' => 'Ankit Verma',
+            'course' => 'MCA, Amity University',
+        ],
+    ];
+
+    $iconRowData = [
+        [
+            'image' => 'img/icon/flexibility.png',
+            'title' => '100% Online',
+            'subtitle' => 'Flexible',
+        ],
+        [
+            'image' => 'img/icon/approved.png',
+            'title' => 'UGC & NAAC',
+            'subtitle' => 'Approved',
+        ],
+        [
+            'image' => 'img/icon/support-career.png',
+            'title' => 'Career',
+            'subtitle' => 'Support',
+        ],
+        [
+            'image' => 'img/icon/icon-emi.png',
+            'title' => 'Easy EMI',
+            'subtitle' => 'Options',
+        ],
+    ];
+
+@endphp
 
 <section class="hero">
 
@@ -16,43 +269,17 @@
             </p>
 
             <div class="icon-row">
-                <div class="icon-box">
-                    <div class="icon">
-                        <img src="{{ asset('img/icon/flexibility.png') }}" alt="">
+                @foreach ($iconRowData as $item)
+                    <div class="icon-box">
+                        <div class="icon">
+                            <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}">
+                        </div>
+                        <div class="text">
+                            <strong>{{ $item['title'] }}</strong>
+                            <span>{{ $item['subtitle'] }}</span>
+                        </div>
                     </div>
-                    <div class="text">
-                        <strong>100% Online</strong>
-                        <span>Flexible</span>
-                    </div>
-                </div>
-                <div class="icon-box">
-                    <div class="icon">
-                        <img src="{{ asset('img/icon/approved.png') }}" alt="">
-                    </div>
-                    <div class="text">
-                        <strong>UGC & NAAC</strong>
-                        <span>Approved</span>
-                    </div>
-                </div>
-                <div class="icon-box">
-                    <div class="icon">
-                        <img src="{{ asset('img/icon/support-career.png') }}" alt="">
-                    </div>
-                    <div class="text">
-                        <strong>Career</strong>
-                        <span>Support</span>
-                    </div>
-                </div>
-
-                <div class="icon-box">
-                    <div class="icon">
-                        <img src="{{ asset('img/icon/icon-emi.png') }}" alt="">
-                    </div>
-                    <div class="text">
-                        <strong>Easy EMI</strong>
-                        <span>Options</span>
-                    </div>
-                </div>
+                @endforeach
 
             </div>
             <p class="review-text">
@@ -85,45 +312,18 @@
 
 <section class="feature-strip">
     <div class="container feature-grid">
-        <div class="feature-item">
-            <div class="icons">
-                <img src="{{ asset('img/icon/approved-degrees.png') }}" alt="">
+        @foreach ($featureStripData as $feature)
+            <div class="feature-item">
+                <div class="icons">
+                    <img src="{{ $feature['image'] }}" alt="">
+                </div>
+                <div class="text">
+                    <strong>{{ $feature['title'] }}</strong>
+                    <span>{{ $feature['subtitle'] }}</span>
+                </div>
             </div>
-            <div class="text">
-                <strong>UGC Entitled</strong>
-                <span>Approved Degrees</span>
-            </div>
-        </div>
+        @endforeach
 
-        <div class="feature-item">
-            <div class="icons">
-                <img src="{{ asset('img/icon/grade-universities.png') }}" alt="">
-            </div>
-            <div class="text">
-                <strong>NAAC A+ Grade</strong>
-                <span>Universities</span>
-            </div>
-        </div>
-
-        <div class="feature-item">
-            <div class="icons">
-                <img src="{{ asset('img/icon/happy-students.png') }}" alt="">
-            </div>
-            <div class="text">
-                <strong>10,000+</strong>
-                <span>Happy Students</span>
-            </div>
-        </div>
-
-        <div class="feature-item">
-            <div class="icons">
-                <img src="{{ asset('img/icon/secure.png') }}" alt="">
-            </div>
-            <div class="text">
-                <strong>100% Secure</strong>
-                <span>& Easy Process</span>
-            </div>
-        </div>
     </div>
 </section>
 
@@ -174,32 +374,13 @@
 <section class="yj-journey-section">
     <div class="yj-container">
         <h2 class="yj-heading">Your Journey Begins Here</h2>
-
         <ul class="yj-feature-list">
-            <li class="yj-feature-item">
-                <span class="yj-icon-check">✔</span>
-                <span class="yj-feature-text">School Admissions</span>
-            </li>
-            <li class="yj-feature-item">
-                <span class="yj-icon-check">✔</span>
-                <span class="yj-feature-text">Career Guidance &amp; Counselling</span>
-            </li>
-            <li class="yj-feature-item">
-                <span class="yj-icon-check">✔</span>
-                <span class="yj-feature-text">Undergraduate &amp; Postgraduate Admissions</span>
-            </li>
-            <li class="yj-feature-item">
-                <span class="yj-icon-check">✔</span>
-                <span class="yj-feature-text">Online &amp; Distance Learning</span>
-            </li>
-            <li class="yj-feature-item">
-                <span class="yj-icon-check">✔</span>
-                <span class="yj-feature-text">Professional Certifications &amp; Skill Development</span>
-            </li>
-            <li class="yj-feature-item">
-                <span class="yj-icon-check">✔</span>
-                <span class="yj-feature-text">Corporate Learning Solutions</span>
-            </li>
+            @foreach ($yjJourneyFeatures as $yjFeature)
+                <li class="yj-feature-item">
+                    <span class="yj-icon-check"><i class="{{ $yjFeature['icon'] }}"></i></span>
+                    <span class="yj-feature-text">{{ $yjFeature['title'] }}</span>
+                </li>
+            @endforeach
         </ul>
     </div>
 </section>
@@ -212,7 +393,7 @@
             <h2 class="ir-main-heading">Lifelong Success Begins Here.</h2>
 
             <div class="ir-btn-wrapper">
-                <a href="#book-session" class="ir-btn-primary">Book a Free Counselling Session</a>
+                <a href="/contact" class="ir-btn-primary">Book a Free Counselling Session</a>
             </div>
         </div>
 
@@ -234,58 +415,18 @@
         </p>
         <div class="program-grid">
             <!-- Card 1 -->
-            <div class="program-card">
-                <div class="icon-online">
-                    <img src="{{ asset('img/icon/master-of-business-administration.png') }}" alt="">
+            @foreach ($programCourses as $program)
+                <div class="program-card">
+                    <div class="icon-online">
+                        <img src="{{ $program['image'] }}" alt="">
+                    </div>
+                    <h3>{{ $program['title'] }}</h3>
+                    <p>{{ $program['description'] }}</p>
+                    <span class="duration">{{ $program['duration'] }}</span>
+                    <button>Check Eligibility</button>
                 </div>
-                <h3>MBA</h3>
-                <p>Master of Business Administration</p>
-                <span class="duration">2 Years</span>
-                <button>Check Eligibility</button>
-            </div>
-            <!-- Card 2 -->
-            <div class="program-card">
-                <div class="icon-online">
-                    <img src="{{ asset('img/icon/bachelor-of-business-administration.png') }}" alt="">
-                </div>
-                <h3>BBA</h3>
-                <p>Bachelor of Business Administration</p>
-                <span class="duration">3 Years</span>
-                <button>Check Eligibility</button>
-            </div>
+            @endforeach
 
-            <!-- Card 3 -->
-            <div class="program-card">
-                <div class="icon-online">
-                    <img src="{{ asset('img/icon/master-of-computer-applications.png') }}" alt="">
-                </div>
-                <h3>MCA</h3>
-                <p>Master of Computer Applications</p>
-                <span class="duration">2 Years</span>
-                <button>Check Eligibility</button>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="program-card">
-                <div class="icon-online">
-                    <img src="{{ asset('img/icon/bachelor-of-computer-applications.png') }}" alt="">
-                </div>
-                <h3>BCA</h3>
-                <p>Bachelor of Computer Applications</p>
-                <span class="duration">3 Years</span>
-                <button>Check Eligibility</button>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="program-card">
-                <div class="icon-online">
-                    <img src="{{ asset('img/icon/diploma.png') }}" alt="">
-                </div>
-                <h3>PG Diploma</h3>
-                <p>Various Specialized Programs</p>
-                <span class="duration">1 Year</span>
-                <button>Check Eligibility</button>
-            </div>
         </div>
         <div class="view-all">
             <a href="#">View All Programs →</a>
@@ -301,49 +442,17 @@
             We make higher education simple, accessible, and career-focused.
         </p>
         <div class="features-grid">
-            <div class="feature-box">
-                <div class="icon-why">
-                    <img src="{{ asset('img/icon/career.png') }}" alt="">
-                </div>
-                <h4>Career Counselling</h4>
-                <p>Personalized guidance to help you choose the right course and career path.</p>
-            </div>
 
-            <div class="feature-box">
-                <div class="icon-why">
-                    <img src="{{ asset('img/icon/admission-process.png') }}" alt="">
+            @foreach ($whyChooseFeatures as $feature)
+                <div class="feature-box">
+                    <div class="icon-why">
+                        <img src="{{ $feature['image'] }}" alt="">
+                    </div>
+                    <h4>{{ $feature['title'] }}</h4>
+                    <p>{{ $feature['description'] }}</p>
                 </div>
-                <h4>Easy Admission</h4>
-                <p>Hassle-free admission process with complete end-to-end support.</p>
-            </div>
-            <div class="feature-box">
-                <div class="icon-why">
-                    <img src="{{ asset('img/icon/top-university.png') }}" alt="">
-                </div>
-                <h4>Top Universities</h4>
-                <p>Partnered with UGC-approved and NAAC-accredited universities.</p>
-            </div>
-            <div class="feature-box">
-                <div class="icon-why">
-                    <img src="{{ asset('img/icon/online-learning.png') }}" alt="">
-                </div>
-                <h4>Flexible Learning</h4>
-                <p>Learn anytime, anywhere with online classes and recorded sessions.</p>
-            </div>
-            <div class="feature-box">
-                <div class="icon-why">
-                    <img src="{{ asset('img/icon/EMI-options.png') }}" alt="">
-                </div>
-                <h4>EMI Options</h4>
-                <p>Affordable fee structure with easy EMI plans to suit your budget.</p>
-            </div>
-            <div class="feature-box">
-                <div class="icon-why">
-                    <img src="{{ asset('img/icon/placement-support.png') }}" alt="">
-                </div>
-                <h4>Placement Support</h4>
-                <p>Resume building, mock interviews, and career assistance.</p>
-            </div>
+            @endforeach
+
         </div>
     </div>
 </section>
@@ -367,7 +476,7 @@
                         <li>✔ Get support with university selection</li>
                     </ul>
                     <div class="help-actions">
-                        <a href="#" class="btn-primary">Book Free Counselling Call</a>
+                        <a href="/contact" class="btn-primary">Book Free Counselling Call</a>
                     </div>
                 </div>
                 <div class="col-lg-5">
@@ -404,63 +513,27 @@
         <h2 class="section-title">What Our Students Say</h2>
         <p class="section-subtitle">Real students. Real stories. Real success.</p>
         <div class="testimonial-grid">
-            <div class="testimonial-card">
-                <div class="students-review">
-                    <div class="icon-review">
-                        <img src="{{ asset('img/icon/left.png') }}" alt="">
+
+            @foreach ($testimonialData as $testimonial)
+                <div class="testimonial-card">
+                    <div class="students-review">
+                        <div class="icon-review">
+                            <img src="{{ $testimonial['review_image'] }}" alt="">
+                        </div>
+                        <div class="stars">{{ $testimonial['stars'] }}</div>
                     </div>
-                    <div class="stars">★★★★★</div>
-                </div>
-                <p class="review">
-                    “Ignition Edutech made my admission process seamless. I got enrolled in NMIMS and it truly boosted
-                    my career growth.”
-                </p>
-                <div class="student">
-                    <img src="{{ asset('img/live/review-01.jpg') }}" alt="">
-                    <div>
-                        <h4>Rohit Sharma</h4>
-                        <span>MBA, NMIMS University</span>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="students-review">
-                    <div class="icon-review">
-                        <img src="{{ asset('img/icon/left.png') }}" alt="">
-                    </div>
-                    <div class="stars">★★★★★</div>
-                </div>
-                <p class="review">
-                    “The counselors were very supportive and helped me choose the right program. Highly recommended for
-                    online education.”
-                </p>
-                <div class="student">
-                    <img src="{{ asset('img/live/review-03.jpg') }}" alt="">
-                    <div>
-                        <h4>Priya Mehta</h4>
-                        <span>BCA, Manipal University</span>
+                    <p class="review">
+                        {{ $testimonial['review'] }}
+                    </p>
+                    <div class="student">
+                        <img src="{{ $testimonial['student_image'] }}" alt="">
+                        <div>
+                            <h4>{{ $testimonial['name'] }}</h4>
+                            <span>{{ $testimonial['course'] }}</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="students-review">
-                    <div class="icon-review">
-                        <img src="{{ asset('img/icon/left.png') }}" alt="">
-                    </div>
-                    <div class="stars">★★★★★</div>
-                </div>
-                <p class="review">
-                    “I was confused about university selection. Their guidance helped me pick the best course for my
-                    future.”
-                </p>
-                <div class="student">
-                    <img src="{{ asset('img/live/review-02.jpg') }}" alt="">
-                    <div>
-                        <h4>Ankit Verma</h4>
-                        <span>MCA, Amity University</span>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
         <div class="container ratings-width">
             <div class="ratings">
@@ -486,225 +559,107 @@
 
 <section class="how-it-works">
     <div class="container">
-
         <h2>How It Works?</h2>
-
-        <p class="subtitle">
-            Your journey from inquiry to admission in 3 simple steps
-        </p>
+        <p class="subtitle">Your journey from inquiry to admission in 3 simple steps</p>
 
         <div class="steps">
-
             <div class="step">
-
                 <div class="icon-works orange">
                     <i class="fa-solid fa-xl fa-file-signature"></i>
                 </div>
-
                 <div class="works-content">
                     <h4>Fill the Enquiry Form</h4>
-
-                    <p>
-                        Share your details and our counselor will connect
-                        with you within 30 minutes.
-                    </p>
+                    <p>Share your details and our counselor will connect with you within 30 minutes.</p>
                 </div>
-
             </div>
 
             <div class="connector"></div>
 
             <div class="step">
-
                 <div class="icon-works purple">
                     <i class="fa-solid fa-xl fa-user-graduate"></i>
                 </div>
-
                 <div class="works-content">
-
                     <h4>Get Expert Counselling</h4>
-
-                    <p>
-                        Understand your options, fees, and career
-                        opportunities with expert guidance.
-                    </p>
-
+                    <p>Understand your options, fees, and career opportunities with expert guidance.</p>
                 </div>
-
             </div>
 
             <div class="connector"></div>
 
             <div class="step">
-
                 <div class="icon-works blue">
                     <i class="fa-solid fa-xl fa-circle-check"></i>
                 </div>
-
                 <div class="works-content">
-
                     <h4>Confirm Admission</h4>
-
-                    <p>
-                        We assist you in the complete admission process—
-                        simple, fast, and transparent.
-                    </p>
-
+                    <p>We assist you in the complete admission process—simple, fast, and transparent.</p>
                 </div>
-
             </div>
-
         </div>
-
     </div>
 </section>
+
 <section class="stats-service-section">
     <div class="container">
         <div class="stats-service">
-            <div class="stat">
-                <div class="icon-stat">
-                    <img src="{{ asset('img/icon/students-enrolled.png') }}" alt="">
+            @foreach ($statsServiceData as $stat)
+                <div class="stat">
+                    <div class="icon-stat">
+                        <img src="{{ $stat['image'] }}" alt="">
+                    </div>
+                    <div class="stat-content">
+                        <h3>{{ $stat['number'] }}</h3>
+                        <p>{{ $stat['title'] }}</p>
+                    </div>
                 </div>
-                <div class="stat-content">
-                    <h3>10,000+</h3>
-                    <p>Students Enrolled</p>
-                </div>
-            </div>
-            <div class="stat">
-                <div class="icon-stat">
-                    <img src="{{ asset('img/icon/university.png') }}" alt="">
-                </div>
-                <div class="stat-content">
-                    <h3>50+</h3>
-                    <p>Top Universities</p>
-                </div>
-            </div>
-            <div class="stat">
-                <div class="icon-stat">
-                    <img src="{{ asset('img/icon/programs-offered.png') }}" alt="">
-                </div>
-                <div class="stat-content">
-                    <h3>100+</h3>
-                    <p>Programs Offered</p>
-                </div>
-            </div>
-            <div class="stat">
-                <div class="icon-stat">
-                    <img src="{{ asset('img/icon/student-satisfaction.png') }}" alt="">
-                </div>
-                <div class="stat-content">
-                    <h3>95%</h3>
-                    <p>Student Satisfaction</p>
-                </div>
-            </div>
-            <div class="stat">
-                <div class="icon-stat">
-                    <img src="{{ asset('img/icon/average-rating.png') }}" alt="">
-                </div>
-                <div class="stat-content">
-                    <h3>4.8/5</h3>
-                    <p>Average Rating</p>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
+
 
 <section class="success-section">
     <div class="container">
         <h2>Success Stories That Inspire</h2>
         <p class="subtitle">Students who transformed their careers with us</p>
         <div class="cards">
-            <div class="card">
-                <img src="{{ asset('img/course/success-stories-01.jpg') }}" alt="">
-                <div class="card-content-area">
-                    <h3>From Marketing Executive to MBA Graduate</h3>
-                    <p>With the right support, I got into a top university.</p>
-                    <span>- Neha Sharma</span>
-                    <small>MBA, Chandigarh University</small>
+
+            @foreach ($successStories as $story)
+                <div class="card">
+                    <img src="{{ $story['image'] }}" alt="">
+                    <div class="card-content-area">
+                        <h3>{{ $story['title'] }}</h3>
+                        <p>{{ $story['description'] }}</p>
+                        <span>- {{ $story['name'] }}</span>
+                        <small>{{ $story['course'] }}</small>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img src="{{ asset('img/course/success-stories-02.jpg') }}" alt="">
-                <div class="card-content-area">
-                    <h3>Switching Career<br> with MCA</h3>
-                    <p>The MCA program helped me transition into tech.</p>
-                    <span>- Saurabh Tiwari</span>
-                    <small>MCA, Manipal University</small>
-                </div>
-            </div>
-            <div class="card">
-                <img src="{{ asset('img/course/success-stories-03.jpg') }}" alt="">
-                <div class="card-content-area">
-                    <h3>Career Growth<br> with BBA</h3>
-                    <p>The knowledge and skills I gained helped me get promoted.</p>
-                    <span>- Pooja Verma</span>
-                    <small>BBA, Amity University</small>
-                </div>
-            </div>
-            <div class="card">
-                <img src="{{ asset('img/course/success-stories-04.jpg') }}" alt="">
-                <div class="card-content-area">
-                    <h3>Learning<br> Without Limits</h3>
-                    <p>Flexible learning made it possible to balance work and studies.</p>
-                    <span>- Vikram Joshi</span>
-                    <small>PG Diploma, NMIMS</small>
-                </div>
-            </div>
+            @endforeach
+
         </div>
         <a href="#" class="view-more">View More Success Stories →</a>
     </div>
 </section>
 
+
+
 <section class="approved-service">
     <div class="container">
         <h2>Approved. Accredited. Trusted.</h2>
         <div class="approved-trusted">
-            <div class="stat-approved">
-                <div class="approved">
-                    <img src="{{ asset('img/icon/UGC-approved.png') }}" alt="">
+            @foreach ($approvedServices as $service)
+                <div class="{{ $service['card_class'] }}">
+                    <div class="approved">
+                        <img src="{{ $service['image'] }}" alt="">
+                    </div>
+                    <div class="approved-content">
+                        <h3>{{ $service['title'] }}</h3>
+                        <p>{{ $service['description'] }}</p>
+                    </div>
                 </div>
-                <div class="approved-content">
-                    <h3>UGC Approved</h3>
-                    <p>Recognized by UGC</p>
-                </div>
-            </div>
-            <div class="stat-approved">
-                <div class="approved">
-                    <img src="{{ asset('img/icon/NAAC-A-grade.png') }}" alt="">
-                </div>
-                <div class="approved-content">
-                    <h3>NAAC A+ Grade</h3>
-                    <p>Top Accredited Universities</p>
-                </div>
-            </div>
-            <div class="stat-approved">
-                <div class="approved">
-                    <img src="{{ asset('img/icon/AICTE-approved.png') }}" alt="">
-                </div>
-                <div class="approved-content">
-                    <h3>AICTE Approved</h3>
-                    <p>Industry Recognized</p>
-                </div>
-            </div>
-            <div class="stat-approved">
-                <div class="approved">
-                    <img src="{{ asset('img/icon/AIU-member.png') }}" alt="">
-                </div>
-                <div class="approved-content">
-                    <h3>AIU Member</h3>
-                    <p>Association of Indian Universities</p>
-                </div>
-            </div>
-            <div class="stat-approved-two">
-                <div class="approved">
-                    <img src="{{ asset('img/icon/secure.png') }}" alt="">
-                </div>
-                <div class="approved-content-two">
-                    <h3>100% Secure Process</h3>
-                    <p>Your data is safer with us</p>
-                </div>
-            </div>
+            @endforeach
+
         </div>
     </div>
 </section>
@@ -818,55 +773,27 @@
             <!-- Right CTA -->
 
             <div class="col-lg-6">
-
                 <div class="cta-card-right">
-
                     <div class="cta-card">
-
                         <div class="row align-items-center">
-
                             <div class="col-md-8">
-
                                 <div class="cta-card-content">
-
-                                    <h3>
-                                        Ready to Start Your Journey?
-                                    </h3>
-
-                                    <p>
-                                        Take the first step towards a successful
-                                        career.
-                                    </p>
-
-                                    <a href="{{ route('university-application-form') }}" class="btn primary-btn">
-                                        Apply Now
-                                    </a>
-
-                                    <span class="or">
-                                        or
-                                    </span>
-
-                                    <a href="{{ route('contact') }}" class="btn outline-btn">
-                                        Talk to Counselor
-                                    </a>
-
+                                    <h3>Ready to Start Your Journey?</h3>
+                                    <p>Take the first step towards a successful career.</p>
+                                    <a href="{{ route('university-application-form') }}"
+                                        class="btn primary-btn">Apply
+                                        Now</a>
+                                    <span class="or">or</span>
+                                    <a href="{{ route('contact') }}" class="btn outline-btn">Talk to Counselor</a>
                                 </div>
-
                             </div>
-
                             <div class="col-md-4 text-center">
-
                                 <img src="{{ asset('img/about/frequently-img.png') }}" class="img-fluid frequently"
                                     alt="Graduation">
-
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
 
         </div>
@@ -875,35 +802,92 @@
 </section>
 
 
-<div class="hs-form-frame" data-region="na2" data-form-id="a7c9f6e6-c812-409c-8110-288692f5e36e" data-portal-id="247564101"></div>
+{{-- <div class="hs-form-frame" data-region="na2" data-form-id="a7c9f6e6-c812-409c-8110-288692f5e36e"
+    data-portal-id="247564101"></div> --}}
 
 
 <x-frontend-footer />
 
 
-
 <!-- footer-area-start -->
+
 <script>
     const track = document.getElementById("logoTrack");
-    const nextBtn = document.querySelector(".next");
-    const prevBtn = document.querySelector(".prev");
+    const nextBtn = document.querySelector(".logo-section .next");
+    const prevBtn = document.querySelector(".logo-section .prev");
 
     let scrollAmount = 200;
+    let autoScrollSpeed = 2;
+    let autoScroll;
+    let isPaused = false;
 
+    // Duplicate logos for infinite loop
+    const originalItems = Array.from(track.children);
+
+    originalItems.forEach((item) => {
+        track.appendChild(item.cloneNode(true));
+    });
+
+    const halfWidth = track.scrollWidth / 2;
+
+    // Automatic Infinite Horizontal Scrolling
+    function startAutoScroll() {
+        clearInterval(autoScroll);
+
+        autoScroll = setInterval(() => {
+            if (isPaused) return;
+
+            track.scrollLeft += autoScrollSpeed;
+
+            // Loop continuously without jumping to the beginning
+            if (track.scrollLeft >= halfWidth) {
+                track.scrollLeft -= halfWidth;
+            }
+
+        }, 15);
+    }
+
+    // Next Button
     nextBtn.addEventListener("click", () => {
+        isPaused = true;
+
         track.scrollBy({
             left: scrollAmount,
             behavior: "smooth"
         });
+
+        setTimeout(() => {
+            isPaused = false;
+        }, 700);
     });
 
+    // Previous Button
     prevBtn.addEventListener("click", () => {
+        isPaused = true;
+
         track.scrollBy({
             left: -scrollAmount,
             behavior: "smooth"
         });
+
+        setTimeout(() => {
+            isPaused = false;
+        }, 700);
     });
+
+    // Pause on Hover
+    track.addEventListener("mouseenter", () => {
+        isPaused = true;
+    });
+
+    track.addEventListener("mouseleave", () => {
+        isPaused = false;
+    });
+
+    // Start Auto Scroll
+    startAutoScroll();
 </script>
+
 <script>
     document.querySelectorAll(".faq-question").forEach((question) => {
 
@@ -933,6 +917,3 @@
 
     });
 </script>
-
-
-
