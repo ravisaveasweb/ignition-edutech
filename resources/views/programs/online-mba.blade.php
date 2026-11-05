@@ -25,7 +25,9 @@
                     <span class="oe-mba-eyebrow">{{ data_get($hero, 'eyebrow', '') }}</span>
                     <h1 class="oe-mba-title">{{ data_get($hero, 'title', '') }}</h1>
                     <p class="oe-mba-subtitle">{{ data_get($hero, 'subtitle', '') }}</p>
-                    <a href="{{ $applicationHref }}" class="oe-mba-btn-primary">Apply Now</a>
+                    {{-- <a href="{{ $applicationHref }}" class="oe-mba-btn-primary">Apply Now</a> --}}
+                                        <a href="{{ Route('study-india.register') }}" class="oe-mba-btn-primary">Apply Now</a>
+
                     <a href="#oe-mba-faqs" class="oe-mba-btn-secondary">See Eligibility &amp; FAQs</a>
                 </div>
             </div>

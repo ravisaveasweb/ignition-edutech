@@ -353,7 +353,7 @@ document.addEventListener("DOMContentLoaded", function () {
             btn.innerHTML = `
     <span class="si-city-icon">
         <img
-            src="/img/study-india/cities/${city.icon}"
+            src="${window.siCityImageBase}/${city.icon}"
             alt="${city.name} map"
             loading="lazy"
         >
@@ -389,7 +389,7 @@ document.addEventListener("DOMContentLoaded", function () {
             btn.innerHTML = `
     <span class="si-city-icon">
         <img
-            src="/img/study-india/states/${state.icon}"
+             src="${window.siStateImageBase}/${state.icon}"
             alt="${state.name} map"
             loading="lazy"
         >
@@ -454,41 +454,81 @@ document.addEventListener("DOMContentLoaded", function () {
     //     setTimeout(siClosePreferenceModal, 280);
     // }
 
-    function selectLocation(type, value){
-        if( type =='city'){
+    // function selectLocation(type, value) {
+    //     if (type == 'city') {
+    //         siSelectedCity = value;
+    //         selectLocation = null;
+    //     }
+    //     else {
+    //         siSelectedState = value;
+    //         siSelectedCity = null;
+    //     }
+
+    //     const preferences = {
+    //         courses: siSelectedCourses,
+    //         city: siSelectedCity,
+    //         state: siSelectedState
+    //     };
+
+    //     sessionStorage.setItem(
+    //         'siStudyPreferences',
+    //         JSON.stringify(preferences)
+    //     );
+
+    //     window.dispatchEvent(new CustomEvent('si:study-preferences-updated', {
+    //         detail: preferences
+    //     }));
+
+
+
+    //     // Redirect to the selected city or state page
+    //     const slug = value
+    //         .toLowerCase()
+    //         .trim()
+    //         .replace(/\s+/g, '-');
+
+    //     window.location.href = `/study-india/location/${type}/${slug}`;
+    // }
+
+    function selectLocation(type, value) {
+
+        if (type === "city") {
             siSelectedCity = value;
-            selectLocation = null;
+            siSelectedState = null;
+        } else {
+            siSelectedState = value;
+            siSelectedCity = null;
         }
-         else {
-        siSelectedState = value;
-        siSelectedCity = null;
+
+        // Save selected preferences
+        const preferences = {
+            courses: siSelectedCourses,
+            city: siSelectedCity,
+            state: siSelectedState
+        };
+
+        sessionStorage.setItem(
+            "siStudyPreferences",
+            JSON.stringify(preferences)
+        );
+
+        // Dispatch preference update event
+        window.dispatchEvent(
+            new CustomEvent("si:study-preferences-updated", {
+                detail: preferences
+            })
+        );
+
+        // Generate location slug
+        const slug = value
+            .toLowerCase()
+            .trim()
+            .replace(/\s+/g, "-");
+
+        // Redirect to location route
+        window.location.href =
+            `${window.siLocationRouteBase}/${type}/${encodeURIComponent(slug)}`;
     }
-
-    const preferences = {
-        courses: siSelectedCourses,
-        city: siSelectedCity,
-        state: siSelectedState
-    };
-
-       sessionStorage.setItem(
-        'siStudyPreferences',
-        JSON.stringify(preferences)
-    );
-    
-     window.dispatchEvent(new CustomEvent('si:study-preferences-updated', {
-        detail: preferences
-    }));
-
-
-
-   // Redirect to the selected city or state page
-    const slug = value
-        .toLowerCase()
-        .trim()
-        .replace(/\s+/g, '-');
-
-    window.location.href = `/study-india/location/${type}/${slug}`;
-}
 
     function showCityStep(courseName) {
         siPrefStepCourse.hidden = true;
@@ -802,8 +842,18 @@ document.addEventListener("DOMContentLoaded", function () {
         if (searchResults) searchResults.style.display = "none";
     }
 
+    // function closeExplore() {
+    //     if (explorePanel) explorePanel.style.display = "none";
+    // }
+
+    let siExploreCloseTimer = null;
+
     function closeExplore() {
-        if (explorePanel) explorePanel.style.display = "none";
+        clearTimeout(siExploreCloseTimer);
+
+        if (explorePanel) {
+            explorePanel.classList.remove("is-open");
+        }
     }
 
     function closeMenu() {
@@ -1135,20 +1185,59 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Explore Panel
+    // if (exploreTrigger && explorePanel) {
+    //     exploreTrigger.addEventListener("click", function (event) {
+    //         event.preventDefault();
+    //         event.stopPropagation();
+
+    //         const isOpen = explorePanel.style.display === "block";
+
+    //         closeStatePopup();
+    //         closeInstitutePanel();
+    //         closeSearch();
+    //         closeMenu();
+
+    //         explorePanel.style.display = isOpen ? "none" : "block";
+    //     });
+    // }
+
+    // STUDY INDIA - EXPLORE HOVER FUNCTIONALITY
+
+
     if (exploreTrigger && explorePanel) {
-        exploreTrigger.addEventListener("click", function (event) {
-            event.preventDefault();
-            event.stopPropagation();
 
-            const isOpen = explorePanel.style.display === "block";
+        function siOpenExplore() {
+            clearTimeout(siExploreCloseTimer);
 
+            // Close other header panels
             closeStatePopup();
             closeInstitutePanel();
             closeSearch();
             closeMenu();
 
-            explorePanel.style.display = isOpen ? "none" : "block";
-        });
+            // Open Explore panel
+            explorePanel.classList.add("is-open");
+        }
+
+        function siScheduleExploreClose() {
+            clearTimeout(siExploreCloseTimer);
+
+            siExploreCloseTimer = setTimeout(function () {
+                explorePanel.classList.remove("is-open");
+            }, 250);
+        }
+
+        // Hover over Explore button
+        exploreTrigger.addEventListener("mouseenter", siOpenExplore);
+
+        // Leave Explore button
+        exploreTrigger.addEventListener("mouseleave", siScheduleExploreClose);
+
+        // Enter Explore panel
+        explorePanel.addEventListener("mouseenter", siOpenExplore);
+
+        // Leave Explore panel
+        explorePanel.addEventListener("mouseleave", siScheduleExploreClose);
     }
 
     // Menu

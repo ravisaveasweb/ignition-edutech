@@ -8,6 +8,7 @@
 
 
 <x-frontend-header />
+<x-study-india-header/>
 <main>
     <section class="hero">
         <div class="hero-overlay"></div>

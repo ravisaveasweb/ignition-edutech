@@ -4,6 +4,7 @@
 @if (session('study_abroad_user_id'))
     <x-study-abroad-header />
 @elseif (session('study_india_user_id'))
+<x-frontend-header />
     <x-study-india-header />
 @else
     <x-frontend-header />

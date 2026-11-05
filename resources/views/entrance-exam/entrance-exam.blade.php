@@ -1,5 +1,6 @@
 
 <x-frontend-header />
+<x-study-india-header/>
 <link rel="stylesheet" href="{{ asset('css/entrance-exam.css') }}?v=5">
 
 @php

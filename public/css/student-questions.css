@@ -10,7 +10,7 @@
     --iq-shadow: 0 10px 32px rgba(10, 37, 64, .07);
 }
 
-button,
+/* button,
 input {
     font: inherit;
 }
@@ -26,7 +26,7 @@ button {
 
 a {
     text-decoration: none;
-}
+} */
 
 .iq-main {
     width: 100%;

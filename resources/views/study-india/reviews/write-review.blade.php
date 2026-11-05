@@ -5,6 +5,8 @@
 <link rel="stylesheet" href="{{ asset('css/study-india/study-india-review.css') }}">
 <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/logo/favicon.png') }}" />
 
+
+<x-frontend-header />
 <x-study-india-header/>
 <main class="form-main">
     <div class="form-topbar">

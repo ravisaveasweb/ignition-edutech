@@ -263,4 +263,6 @@
     </div>
     <div class="sa-review-form-toast" id="sa-review-form-toast" role="status" aria-live="polite"></div>
 </div>
+
+
 <script src="{{ asset('js/study-abroad/study-abroad-review.js') }}?v=2" defer></script>

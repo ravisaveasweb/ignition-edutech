@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
         console.error('Entrance exam page: Required HTML elements are missing.');
         return;
     }
-   
+
 
     if (!exams.length) {
         console.error('Entrance exam data is empty. Check window.entranceExamData.');
@@ -44,42 +44,42 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     function matchesCategory(exam, selected) {
-    if (!selected) return true;
+        if (!selected) return true;
 
-    const category = normalize(exam.category);
-    const filter = normalize(selected);
+        const category = normalize(exam.category);
+        const filter = normalize(selected);
 
-    const aliases = {
-        engineering: ['engineering'],
-        medical: ['medical', 'medicine'],
-        management: ['management', 'mba'],
-        law: ['law'],
-        design: ['design', 'design & fashion', 'fashion'],
-        architecture: ['architecture'],
-        university: ['university', 'university entrance', 'university admissions'],
-        'university entrance': ['university', 'university entrance', 'university admissions'],
-        government: ['government', 'government & defence', 'government & defense', 'defence', 'defense']
-    };
+        const aliases = {
+            engineering: ['engineering'],
+            medical: ['medical', 'medicine'],
+            management: ['management', 'mba'],
+            law: ['law'],
+            design: ['design', 'design & fashion', 'fashion'],
+            architecture: ['architecture'],
+            university: ['university', 'university entrance', 'university admissions'],
+            'university entrance': ['university', 'university entrance', 'university admissions'],
+            government: ['government', 'government & defence', 'government & defense', 'defence', 'defense']
+        };
 
-    return (aliases[filter] || [filter]).includes(category);
-}
+        return (aliases[filter] || [filter]).includes(category);
+    }
 
-  function matchesQualification(exam, selected) {
-    if (!selected) return true;
+    function matchesQualification(exam, selected) {
+        if (!selected) return true;
 
-    const qualification = normalize(exam.qualification);
-    const filter = normalize(selected);
+        const qualification = normalize(exam.qualification);
+        const filter = normalize(selected);
 
-    const aliases = {
-        'after 12th': ['after 12th', 'after class 12', 'class 12', '12th', '10+2'],
-        graduation: ['graduation', 'after graduation', 'graduate', 'graduated'],
-        postgraduation: ['postgraduation', 'post-graduation', 'post graduation', 'postgraduate', 'after postgraduation']
-    };
+        const aliases = {
+            'after 12th': ['after 12th', 'after class 12', 'class 12', '12th', '10+2'],
+            graduation: ['graduation', 'after graduation', 'graduate', 'graduated'],
+            postgraduation: ['postgraduation', 'post-graduation', 'post graduation', 'postgraduate', 'after postgraduation']
+        };
 
-    const allowedValues = aliases[filter] || [filter];
+        const allowedValues = aliases[filter] || [filter];
 
-    return allowedValues.includes(qualification);
-}
+        return allowedValues.includes(qualification);
+    }
 
     function createExamCard(exam) {
         const card = document.createElement('article');
@@ -241,15 +241,90 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function resetFilters() {
         directorySearch.value = '';
-        if (heroSearch) heroSearch.value = '';
+
+        if (heroSearch) {
+            heroSearch.value = '';
+        }
+
         categoryFilter.value = '';
         qualificationFilter.value = '';
+
+        // Reset visible Nice Select labels
+        [categoryFilter, qualificationFilter].forEach(selectElement => {
+            const niceSelect = selectElement.nextElementSibling;
+
+            if (!niceSelect || !niceSelect.classList.contains('nice-select')) {
+                return;
+            }
+
+            const currentText = niceSelect.querySelector('.current');
+            const selectedOption = selectElement.options[0];
+
+            if (currentText && selectedOption) {
+                currentText.textContent = selectedOption.textContent.trim();
+            }
+
+            niceSelect.querySelectorAll('.option').forEach(option => {
+                option.classList.toggle(
+                    'selected',
+                    option.getAttribute('data-value') === ''
+                );
+            });
+        });
+
         renderExams();
     }
 
+
+    // Entrance Exam filter event listeners
     directorySearch.addEventListener('input', renderExams);
+
     categoryFilter.addEventListener('change', renderExams);
     qualificationFilter.addEventListener('change', renderExams);
+
+    // Synchronize Nice Select with original select elements
+    function ignEeSyncNiceSelect(selectElement) {
+        if (!selectElement) return;
+
+        const niceSelect = selectElement.nextElementSibling;
+
+        if (!niceSelect || !niceSelect.classList.contains('nice-select')) {
+            console.warn('Nice Select element not found:', selectElement.id);
+            return;
+        }
+
+        niceSelect.addEventListener('click', function (event) {
+            const option = event.target.closest('.option');
+
+            if (!option) return;
+
+            const selectedValue = option.getAttribute('data-value');
+
+            if (selectedValue === null) return;
+
+            selectElement.value = selectedValue;
+
+            // Update the visible selected option
+            niceSelect.querySelectorAll('.option').forEach(item => {
+                item.classList.toggle('selected', item === option);
+            });
+
+            const currentText = niceSelect.querySelector('.current');
+
+            if (currentText) {
+                currentText.textContent = option.textContent.trim();
+            }
+
+            // Run existing exam filtering
+            selectElement.dispatchEvent(
+                new Event('change', { bubbles: true })
+            );
+        });
+    }
+
+    ignEeSyncNiceSelect(categoryFilter);
+    ignEeSyncNiceSelect(qualificationFilter);
+
 
     if (resetButton) {
         resetButton.addEventListener('click', resetFilters);

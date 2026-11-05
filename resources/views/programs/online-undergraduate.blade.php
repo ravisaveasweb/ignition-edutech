@@ -25,7 +25,7 @@
                     <span class="oe-ug-eyebrow">{{ data_get($hero, 'eyebrow', '') }}</span>
                     <h1 class="oe-ug-title">{{ data_get($hero, 'title', '') }}</h1>
                     <p class="oe-ug-subtitle">{{ data_get($hero, 'subtitle', '') }}</p>
-                    <a href="{{ $applicationHref }}" class="oe-ug-btn-primary">Apply Now</a>
+                    <a href="{{ Route('study-india.register') }}" class="oe-ug-btn-primary">Apply Now</a>
                     <a href="#oe-ug-faqs" class="oe-ug-btn-secondary">See Eligibility &amp; FAQs</a>
                 </div>
             </div>

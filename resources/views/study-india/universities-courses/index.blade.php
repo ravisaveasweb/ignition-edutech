@@ -1,3 +1,4 @@
+<x-frontend-header/>
 <x-study-india-header />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">

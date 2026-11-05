@@ -1,6 +1,16 @@
 <link rel="stylesheet" href="{{ asset('css/question-details.css') }}?v=1">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+@if (session('study_abroad_user_id'))
+    <x-study-abroad-header />
+@elseif (session('study_india_user_id'))
+<x-frontend-header />
+    <x-study-india-header />
+@else
+    <x-frontend-header />
+@endif
+
+
 <main class="iqd-page">
     <div class="iqd-container">
 
@@ -329,4 +339,6 @@
     </div>
 </main>
 
+
+<x-frontend-footer />
 <script src="{{ asset('js/question-details.js') }}?v=1" defer></script>

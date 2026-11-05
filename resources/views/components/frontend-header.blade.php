@@ -67,8 +67,8 @@
     <link rel="stylesheet" href="{{ asset('css/index-page.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/courses.css') }}" />
-        <link rel="stylesheet" href="{{ asset('css/entrance-exam-details.css') }}"> 
-               <link rel="stylesheet" href="{{ asset('css/entrance-exam.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/entrance-exam-details.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/entrance-exam.css') }}" />
 
 
 
@@ -83,7 +83,7 @@
 </head>
 
 <body>
-    
+
     <!-- back to top start -->
     <div class="back-to-top-wrapper">
         <button id="back_to_top" type="button" class="back-to-top-btn">
@@ -255,7 +255,7 @@
                     <div class="col-xxl-2 col-xl-3 col-lg-6 col-md-6 col-6">
                         <div class="tp-header-contact d-flex align-items-center justify-content-end">
                             <div class="tp-header-btn d-none d-md-block ml-30">
-                                <a href="{{ route('university-application-form') }}">Apply Now </a>
+                                <a href="{{ route('study-india.register') }}">Apply Now </a>
                             </div>
                             <div class="tp-header-bar d-xl-none ml-30">
                                 <button class="offcanvas-open-btn"><i class="fa-solid fa-bars"></i></button>
@@ -292,7 +292,7 @@
                 <div class="offcanvas-main">
                     <div class="tp-main-menu-mobile d-xl-none"></div>
                     <div class="tp-header-btn pb-50">
-                        <a href="{{ route('university-application-form') }}">Apply Now </a>
+                        <a href="{{ route('study-india.register') }}">Apply Now </a>
                     </div>
 
                     <div class="offcanvas-contact">

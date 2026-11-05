@@ -128,6 +128,7 @@
     ];
 @endphp
 <x-frontend-header />
+<x-study-india-header />
 
 <section class="page-hero">
     <div class="container">

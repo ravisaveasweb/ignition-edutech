@@ -1,8 +1,7 @@
-
-
 @if (request()->query('section') === 'study-abroad')
     <x-study-abroad-header />
 @elseif (request()->query('section') === 'study-india')
+    <x-frontend-header />
     <x-study-india-header />
 @else
     <x-frontend-header />
