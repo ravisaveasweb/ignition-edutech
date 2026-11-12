@@ -832,6 +832,40 @@
     z-index: 99999 !important;
 }
 
+
+/* ==========================================
+   DESKTOP ONLY - EXPLORE PANEL SCROLL
+========================================== */
+
+@media (min-width: 769px) {
+
+    .si-explore-panel {
+        max-height: 450px !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+
+        scrollbar-width: thin !important;
+        scrollbar-color: #aab6c5 transparent !important;
+    }
+
+    .si-explore-panel::-webkit-scrollbar {
+        width: 5px !important;
+    }
+
+    .si-explore-panel::-webkit-scrollbar-track {
+        background: transparent !important;
+    }
+
+    .si-explore-panel::-webkit-scrollbar-thumb {
+        background: #aab6c5 !important;
+        border-radius: 20px !important;
+    }
+
+    .si-explore-panel::-webkit-scrollbar-thumb:hover {
+        background: #eb933a !important;
+    }
+}
+
 .si-explore-panel.is-open {
     display: block;
     animation: siExplorePop 0.15s cubic-bezier(0.16, 1, 0.3, 1);
@@ -899,7 +933,8 @@
     align-items: center;
     gap: 14px;
     min-height: 54px;
-    padding: 10px 14px;
+    /* padding: 10px 14px; */
+    padding: 4px 39px 5px 7px;
 
     background: #ffffff;
     border: 1px solid #e2e8f0;
@@ -1857,11 +1892,112 @@
 
 /* Laptop */
 
+
+
+   /* 1200px  — Default Desktop Design */
+   
+@media (min-width: 1201px) {
+
+    .si-header-top {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        gap: 15px !important;
+        padding: 8px 25px !important;
+        min-height: 62px !important;
+    }
+
+    .si-logo {
+        width: 175px !important;
+        flex: 0 0 175px !important;
+    }
+
+    .si-logo img {
+        width: 165px !important;
+    }
+
+    /* State Selector - full text visible */
+    .si-location-trigger {
+        height: 40px !important;
+        padding: 0 18px !important;
+        max-width: 185px !important;
+        background: #fff !important;
+        border: 1px solid #e7e7e7 !important;
+        border-radius: 7px !important;
+        gap: 7px !important;
+    }
+
+    .si-location-text-wrap,
+    .si-location-arrow {
+        display: flex !important;
+    }
+
+    .si-location-icon {
+        width: 30px !important;
+        height: 30px !important;
+        background: #fff3e5 !important;
+        color: #b0cb1f !important;
+        font-size: 14px !important;
+        border-radius: 8px !important;
+    }
+
+    /* Study Preferences - full text visible */
+    .si-study-preference-trigger {
+        height: 40px !important;
+        padding: 0 14px !important;
+        background: #fff !important;
+        border: 1px solid #e7e7e7 !important;
+        border-radius: 7px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        white-space: nowrap !important;
+    }
+
+    .si-study-preference-trigger span {
+        display: inline !important;
+        font-size: 13px !important;
+    }
+
+    /* Search */
+    .si-search-box {
+        flex: 1 1 400px !important;
+        max-width: 635px !important;
+        height: 40px !important;
+        margin: 0 !important;
+    }
+
+    /* Header Actions */
+    .si-header-actions {
+        display: flex !important;
+        align-items: center !important;
+        gap: 16px !important;
+        margin-left: auto !important;
+    }
+
+    /* Show Write a Review + Get Counselling */
+    .si-header-actions .si-review-link,
+    .si-header-actions .si-counselling-link {
+        display: inline-flex !important;
+    }
+
+    .si-explore-trigger,
+    .si-menu-trigger {
+        height: 40px !important;
+    }
+}
+
 @media (max-width: 1200px) {
     .si-header-top {
         gap: 10px;
         padding: 8px 18px;
     }
+
+
+    .si-study-preference-trigger {
+        margin-left: 30px;
+    }
+
 
     .si-logo {
         width: 145px;
@@ -1932,6 +2068,7 @@
         max-width: calc(100vw - 40px);
     }
 }
+
 
 
 

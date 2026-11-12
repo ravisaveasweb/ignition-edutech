@@ -272,7 +272,7 @@
                 @foreach ($iconRowData as $item)
                     <div class="icon-box">
                         <div class="icon">
-                            <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}">
+                            <img src="{{ asset($item['image']) }}" alt="{{ $item['title'] }}">
                         </div>
                         <div class="text">
                             <strong>{{ $item['title'] }}</strong>
@@ -315,7 +315,7 @@
         @foreach ($featureStripData as $feature)
             <div class="feature-item">
                 <div class="icons">
-                    <img src="{{ $feature['image'] }}" alt="">
+                    <img src="{{ asset($feature['image']) }}" alt="">
                 </div>
                 <div class="text">
                     <strong>{{ $feature['title'] }}</strong>
@@ -335,16 +335,36 @@
             <button class="slider-btn prev">&#10094;</button>
             <!-- Slider Track -->
             <div class="logo-track" id="logoTrack">
-                <div class="logo-item"><img src="{{ asset('img/brand/university-01.png') }}" alt=""></div>
-                <div class="logo-item"><img src="{{ asset('img/brand/university-02.png') }}" alt=""></div>
-                <div class="logo-item"><img src="{{ asset('img/brand/university-03.png') }}" alt=""></div>
-                <div class="logo-item"><img src="{{ asset('img/brand/university-04.png') }}" alt=""></div>
-                <div class="logo-item"><img src="{{ asset('img/brand/university-05.png') }}" alt=""></div>
-                <div class="logo-item"><img src="{{ asset('img/brand/university-06.png') }}" alt=""></div>
-                <div class="logo-item"><img src="{{ asset('img/brand/university-07.png') }}" alt=""></div>
-                <div class="logo-item"><img src="{{ asset('img/brand/university-08.png') }}" alt=""></div>
-                <div class="logo-item"><img src="{{ asset('img/brand/university-09.png') }}" alt=""></div>
-                <div class="logo-item"><img src="{{ asset('img/brand/university-10.png') }}" alt=""></div>
+                <div class="logo-item">
+                    <a href="{{ route('nmims-distance-education-online-degree-programs') }}"><img src="{{ asset('img/brand/university-01.png') }}" alt=""></a>
+                </div>
+                <div class="logo-item">
+                    <a href="{{ route('amity-university-online-ug-pg-courses') }}"><img src="{{ asset('img/brand/university-02.png') }}" alt=""></a>
+                </div>
+                <div class="logo-item">
+                    <a href="{{ route('dr-d-y-patil-pune') }}"><img src="{{ asset('img/brand/university-03.png') }}" alt=""></a>
+                </div>
+                <div class="logo-item">
+                    <a href="{{route('manipal-online') }}"><img src="{{ asset('img/brand/university-04.png') }}" alt=""></a>
+                </div>
+                {{-- <div class="logo-item">
+                    <a href=""><img src="{{ asset('img/brand/university-05.png') }}" alt=""></a>
+                </div> --}}
+                {{-- <div class="logo-item">
+                    <a href=""><img src="{{ asset('img/brand/university-06.png') }}" alt=""></a>
+                </div> --}}
+                <div class="logo-item">
+                    <a href="{{ route('vellore-institute-of-technology') }}"><img src="{{ asset('img/brand/university-07.png') }}" alt=""></a>
+                </div>
+                <div class="logo-item">
+                    <a href="{{ route('jain-online') }}"><img src="{{ asset('img/brand/university-08.png') }}" alt=""></a>
+                </div>
+                {{-- <div class="logo-item">
+                    <a href=""><img src="{{ asset('img/brand/university-09.png') }}" alt=""></a>
+                </div> --}}
+                <div class="logo-item">
+                    <a href="{{ route('vivekananda-global-university-online') }}"><img src="{{ asset('img/brand/university-10.png') }}" alt=""></a>
+                </div>
             </div>
             <!-- Right Arrow -->
             <button class="slider-btn next">&#10095;</button>
@@ -392,9 +412,12 @@
             <span class="ir-tagline">Education Reimagined.</span>
             <h2 class="ir-main-heading">Lifelong Success Begins Here.</h2>
 
-            <div class="ir-btn-wrapper">
+            {{-- <div class="ir-btn-wrapper">
                 <a href="/contact" class="ir-btn-primary">Book a Free Counselling Session</a>
-            </div>
+            </div> --}}
+            <a href="{{ route('contact') }}#contact-form-section" class="ir-btn-primary">
+    Book a Free Counselling Session
+</a>
         </div>
 
         <hr class="ir-divider" />
@@ -418,7 +441,7 @@
             @foreach ($programCourses as $program)
                 <div class="program-card">
                     <div class="icon-online">
-                        <img src="{{ $program['image'] }}" alt="">
+                        <img src="{{ asset($program['image']) }}" alt="">
                     </div>
                     <h3>{{ $program['title'] }}</h3>
                     <p>{{ $program['description'] }}</p>
@@ -429,7 +452,7 @@
 
         </div>
         <div class="view-all">
-            <a href="#">View All Programs →</a>
+            <a href="{{ route('study-india.universities-courses') }}">View All Programs →</a>
         </div>
     </div>
 </section>
@@ -446,7 +469,7 @@
             @foreach ($whyChooseFeatures as $feature)
                 <div class="feature-box">
                     <div class="icon-why">
-                        <img src="{{ $feature['image'] }}" alt="">
+                        <img src="{{ asset($feature['image']) }}" alt="">
                     </div>
                     <h4>{{ $feature['title'] }}</h4>
                     <p>{{ $feature['description'] }}</p>
@@ -518,7 +541,7 @@
                 <div class="testimonial-card">
                     <div class="students-review">
                         <div class="icon-review">
-                            <img src="{{ $testimonial['review_image'] }}" alt="">
+                            <img src="{{ asset($testimonial['review_image']) }}" alt="">
                         </div>
                         <div class="stars">{{ $testimonial['stars'] }}</div>
                     </div>
@@ -526,7 +549,7 @@
                         {{ $testimonial['review'] }}
                     </p>
                     <div class="student">
-                        <img src="{{ $testimonial['student_image'] }}" alt="">
+                        <img src="{{ asset($testimonial['student_image']) }}" alt="">
                         <div>
                             <h4>{{ $testimonial['name'] }}</h4>
                             <span>{{ $testimonial['course'] }}</span>
@@ -606,7 +629,7 @@
             @foreach ($statsServiceData as $stat)
                 <div class="stat">
                     <div class="icon-stat">
-                        <img src="{{ $stat['image'] }}" alt="">
+                        <img src="{{ asset($stat['image']) }}" alt="">
                     </div>
                     <div class="stat-content">
                         <h3>{{ $stat['number'] }}</h3>
@@ -627,7 +650,7 @@
 
             @foreach ($successStories as $story)
                 <div class="card">
-                    <img src="{{ $story['image'] }}" alt="">
+                    <img src="{{ asset($story['image']) }}" alt="">
                     <div class="card-content-area">
                         <h3>{{ $story['title'] }}</h3>
                         <p>{{ $story['description'] }}</p>
@@ -651,7 +674,7 @@
             @foreach ($approvedServices as $service)
                 <div class="{{ $service['card_class'] }}">
                     <div class="approved">
-                        <img src="{{ $service['image'] }}" alt="">
+                        <img src="{{ asset($service['image']) }}" alt="">
                     </div>
                     <div class="approved-content">
                         <h3>{{ $service['title'] }}</h3>

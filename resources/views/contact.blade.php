@@ -51,7 +51,7 @@
     </section>
     <!-- become instructor contact area end -->
 
-    <section class="tp-contact-info-area tp-contact-p pb-30">
+    <section class="tp-contact-info-area tp-contact-p pb-30" id="contact-form-section">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10">

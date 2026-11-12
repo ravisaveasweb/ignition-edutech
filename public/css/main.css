@@ -34130,6 +34130,7 @@ ul.why-collect {
     gap: 12px;
     padding: 10px 20px;
     position: relative;
+    width: 187px;
 }
 .feature-box:not(:last-child)::after {
     content: "";
