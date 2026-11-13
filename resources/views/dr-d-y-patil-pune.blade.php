@@ -16,7 +16,7 @@
                         <a href="{{ route('university-application-form') }}" class="dpu-btn dpu-btn-primary">Explore
                             DPU-COL
                             Programs</a>
-                        <a href="{{ route('contact') }}" class="dpu-btn dpu-btn-secondary">Speak With A Counsellor</a>
+                        <a href="#" class="dpu-btn dpu-btn-secondary ign-enquiry-popup-trigger" data-source="Dr D.Y Patil Pune University - Hero Banner">Speak With A Counsellor</a>
                     </div>
 
                     <div class="dpu-feature-strip">
@@ -294,5 +294,8 @@
         </section>
     </section>
 </main>
+
+<x-university-enquiry-popup :courses="$courses ?? []" />
+
 
 <x-frontend-footer />

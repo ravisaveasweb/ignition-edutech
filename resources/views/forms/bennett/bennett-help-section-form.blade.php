@@ -24,13 +24,44 @@
 
         <!-- Academic Program Interface Element -->
         <div class="col-12">
-            <select class="w-100 text-muted bu-input-field" name="course_name" required>
-                <option value="" disabled selected hidden>Select Program of Interest</option>
-                <option value="MBA" class="text-dark">MBA</option>
-                <option value="MCA" class="text-dark">MCA</option>
-                <option value="BBA" class="text-dark">BBA</option>
-                <option value="M.Com" class="text-dark">M.Com</option>
-            </select>
+            <div class="bennett-course-dropdown">
+
+    <button type="button" class="bennett-course-trigger" aria-expanded="false">
+        <span class="bennett-course-selected">Select Program of Interest</span>
+        <i class="bi bi-chevron-down"></i>
+    </button>
+
+    <input type="hidden" name="course_name" class="bennett-course-value" required>
+
+    <div class="bennett-course-menu">
+
+        <input
+            type="text"
+            class="bennett-course-search"
+            placeholder="Search course..."
+            autocomplete="off"
+        >
+
+        <div class="bennett-course-options">
+
+            @forelse($courses ?? [] as $course)
+                <div class="bennett-course-option" data-value="{{ $course }}">
+                    {{ $course }}
+                </div>
+            @empty
+                <div class="bennett-course-empty">
+                    No courses available
+                </div>
+            @endforelse
+
+            <div class="bennett-course-empty" hidden>
+                No matching courses found
+            </div>
+
+        </div>
+    </div>
+
+</div>
         </div>
 
         <!-- Interactive Control Mechanism Layer -->

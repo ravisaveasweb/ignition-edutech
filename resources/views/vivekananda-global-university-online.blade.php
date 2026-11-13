@@ -232,7 +232,7 @@
                     style="background-color: var(--io-accent);">
                     <span class="material-symbols-outlined text-dark fs-1 mb-3">help_center</span>
                     <h4 class="h6 fw-bold text-dark mb-3">Let us help you compare</h4>
-                    <button class="io-btn-accent py-2 px-3">call Expert</button>
+                    <button class="io-btn-accent py-2 px-3 ign-enquiry-popup-trigger" data-source="VG University - Hero Banner">call Expert</button>
                 </div>
             </div>
         </div>
@@ -410,5 +410,9 @@
         </div>
     </div>
 </section>
+
+
+
+<x-university-enquiry-popup :courses="$courses ?? []" />
 
 <x-frontend-footer />

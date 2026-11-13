@@ -628,3 +628,260 @@
     border-radius: 24px;
   }
 }
+
+
+
+/* Dropdown start here */
+
+
+.dypatil-course-dropdown {
+  --dypatil-orange: #eb933a;
+  --dypatil-navy: #0a2540;
+  --dypatil-border: #e2e8f0;
+
+  position: relative;
+  z-index: 30;
+  width: 100%;
+  margin-bottom: 16px;
+  font-family: inherit;
+}
+
+/* Dropdown Trigger */
+
+.dypatil-course-dropdown .dypatil-course-trigger {
+  width: 100%;
+  height: 52px;
+  min-height: 52px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+
+  background: #fff;
+  border: 1px solid var(--dypatil-border);
+  border-radius: 8px;
+
+  color: #64748b;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: left;
+
+  cursor: pointer;
+  outline: none;
+  box-shadow: none;
+  transition: all 0.25s ease;
+}
+
+.dypatil-course-dropdown .dypatil-course-trigger:hover,
+.dypatil-course-dropdown.dypatil-course-active .dypatil-course-trigger {
+  border-color: var(--dypatil-orange);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(235, 147, 58, 0.10);
+}
+
+/* Selected Text */
+
+.dypatil-course-dropdown .dypatil-course-selected {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #64748b;
+}
+
+.dypatil-course-dropdown .dypatil-course-selected.dypatil-course-has-value {
+  color: var(--dypatil-navy);
+}
+
+/* Chevron */
+
+.dypatil-course-dropdown .dypatil-course-trigger i {
+  flex-shrink: 0;
+  color: var(--dypatil-navy);
+  font-size: 13px;
+  transition: transform 0.25s ease;
+}
+
+.dypatil-course-dropdown.dypatil-course-active .dypatil-course-trigger i {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menu */
+
+.dypatil-course-dropdown .dypatil-course-menu {
+  position: absolute;
+  top: calc(100% + 7px);
+  left: 0;
+  right: 0;
+  z-index: 9999;
+
+  display: none;
+  width: 100%;
+  padding: 12px;
+
+  background: #fff;
+  border: 1px solid #e8edf3;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(10, 37, 64, 0.14);
+}
+
+.dypatil-course-dropdown.dypatil-course-active .dypatil-course-menu {
+  display: block;
+  animation: dypatilCourseMenuShow 0.2s ease;
+}
+
+@keyframes dypatilCourseMenuShow {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Search Input */
+
+.dypatil-course-dropdown .dypatil-course-search {
+  display: block;
+  width: 100%;
+  height: 42px;
+  min-height: 42px;
+  margin: 0 0 9px;
+  padding: 0 12px;
+
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 7px;
+
+  color: var(--dypatil-navy);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 400;
+
+  outline: none;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+.dypatil-course-dropdown .dypatil-course-search:focus {
+  border-color: var(--dypatil-orange);
+  box-shadow: 0 0 0 2px rgba(235, 147, 58, 0.10);
+}
+
+.dypatil-course-dropdown .dypatil-course-search::placeholder {
+  color: #94a3b8;
+  opacity: 1;
+}
+
+/* Options List */
+
+.dypatil-course-dropdown .dypatil-course-options {
+  width: 100%;
+  max-height: 220px;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f8fafc;
+}
+
+.dypatil-course-dropdown .dypatil-course-options::-webkit-scrollbar {
+  width: 5px;
+}
+
+.dypatil-course-dropdown .dypatil-course-options::-webkit-scrollbar-track {
+  background: #f8fafc;
+  border-radius: 10px;
+}
+
+.dypatil-course-dropdown .dypatil-course-options::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+/* Individual Option */
+
+.dypatil-course-dropdown .dypatil-course-option {
+  width: 100%;
+  min-height: 42px;
+  margin: 0 0 3px;
+  padding: 10px 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: transparent;
+  border: none;
+  border-radius: 7px;
+
+  color: #475569;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: left;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dypatil-course-dropdown .dypatil-course-option:hover,
+.dypatil-course-dropdown .dypatil-course-option.dypatil-course-option-selected {
+  background: #fff4e8;
+  color: #b96c1c;
+}
+
+.dypatil-course-dropdown .dypatil-course-option.dypatil-course-option-selected {
+  font-weight: 600;
+}
+
+.dypatil-course-dropdown .dypatil-course-option.dypatil-course-option-selected::after {
+  content: "✓";
+  margin-left: 10px;
+  color: var(--dypatil-orange);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Empty Messages */
+
+.dypatil-course-dropdown .dypatil-course-empty {
+  padding: 16px 10px;
+  color: #94a3b8;
+  font-size: 13px;
+  text-align: center;
+}
+
+.dypatil-course-dropdown .dypatil-course-option[hidden],
+.dypatil-course-dropdown .dypatil-course-empty[hidden] {
+  display: none !important;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 576px) {
+  .dypatil-course-dropdown .dypatil-course-trigger {
+    height: 49px;
+    min-height: 49px;
+    padding: 0 13px;
+    font-size: 13px;
+  }
+
+  .dypatil-course-dropdown .dypatil-course-menu {
+    padding: 10px;
+  }
+
+  .dypatil-course-dropdown .dypatil-course-options {
+    max-height: 190px;
+  }
+}
+
+/* Drop down end here */

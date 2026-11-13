@@ -1323,3 +1323,341 @@
         padding: 20px;
     }
 }
+
+
+
+
+/* =========================================
+   NMIMS CDOE – PREMIUM COURSE DROPDOWN
+   Optimized & Independent Styling
+========================================= */
+
+.nmims-course-dropdown {
+    --nmims-course-navy: #0a2540;
+    --nmims-course-orange: #eb933a;
+    --nmims-course-dark-orange: #c66b18;
+    --nmims-course-border: #e2e8f0;
+
+    position: relative;
+    z-index: 30;
+    width: 100%;
+    margin: 0 0 16px;
+    font-family: inherit;
+}
+
+/* =========================================
+   1. DROPDOWN TRIGGER
+========================================= */
+
+.nmims-course-trigger {
+    width: 100%;
+    min-height: 52px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    background: #f8fafc;
+    border: 1px solid var(--nmims-course-border);
+    border-radius: 10px;
+
+    color: #64748b;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+
+    cursor: pointer;
+    outline: none;
+
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.nmims-course-trigger:hover {
+    background: #fff;
+    border-color: #cbd5e1;
+}
+
+.nmims-course-trigger:focus-visible,
+.nmims-course-dropdown.nmims-course-active .nmims-course-trigger {
+    background: #fff;
+    border-color: var(--nmims-course-orange);
+    box-shadow: 0 0 0 3px rgba(235, 147, 58, 0.12);
+}
+
+.nmims-course-selected {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+
+    color: #64748b;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.nmims-course-selected.nmims-course-has-value {
+    color: var(--nmims-course-navy);
+    font-weight: 600;
+}
+
+/* Chevron */
+
+.nmims-course-trigger i {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff;
+    border: 1px solid #e9edf2;
+    border-radius: 7px;
+
+    color: var(--nmims-course-navy);
+    font-size: 12px;
+
+    transition: transform 0.2s ease,
+                background-color 0.2s ease,
+                color 0.2s ease;
+}
+
+.nmims-course-dropdown.nmims-course-active .nmims-course-trigger i {
+    transform: rotate(180deg);
+    background: #fff7ed;
+    color: #d7791f;
+    border-color: #fed7aa;
+}
+
+/* =========================================
+   2. DROPDOWN PANEL
+========================================= */
+
+.nmims-course-menu {
+    position: absolute;
+    top: calc(100% + 9px);
+    left: 0;
+    right: 0;
+    z-index: 9999;
+
+    display: none;
+    padding: 12px;
+
+    background: #fff;
+    border: 1px solid #e8edf3;
+    border-radius: 13px;
+
+    box-shadow: 0 14px 35px rgba(10, 37, 64, 0.12),
+                0 3px 8px rgba(10, 37, 64, 0.04);
+}
+
+.nmims-course-dropdown.nmims-course-active .nmims-course-menu {
+    display: block;
+    animation: nmimsCourseMenuOpen 0.2s ease both;
+}
+
+@keyframes nmimsCourseMenuOpen {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================
+   3. SEARCH FIELD
+========================================= */
+
+.nmims-course-search {
+    display: block;
+    width: 100%;
+    height: 44px;
+    margin: 0 0 10px;
+    padding: 0 13px;
+
+    background: #f8fafc;
+    border: 1px solid #e8edf3;
+    border-radius: 9px;
+
+    color: var(--nmims-course-navy);
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 400;
+
+    outline: none;
+    box-sizing: border-box;
+
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.nmims-course-search::placeholder {
+    color: #94a3b8;
+    opacity: 1;
+}
+
+.nmims-course-search:hover {
+    border-color: #cbd5e1;
+}
+
+.nmims-course-search:focus {
+    background: #fff;
+    border-color: var(--nmims-course-orange);
+    box-shadow: 0 0 0 3px rgba(235, 147, 58, 0.10);
+}
+
+/* =========================================
+   4. COURSE OPTIONS LIST
+========================================= */
+
+.nmims-course-options {
+    max-height: 225px;
+    padding-right: 4px;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 #f8fafc;
+}
+
+.nmims-course-options::-webkit-scrollbar {
+    width: 5px;
+}
+
+.nmims-course-options::-webkit-scrollbar-track {
+    background: #f8fafc;
+    border-radius: 10px;
+}
+
+.nmims-course-options::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+.nmims-course-options::-webkit-scrollbar-thumb:hover {
+    background: var(--nmims-course-orange);
+}
+
+/* =========================================
+   5. COURSE OPTION
+========================================= */
+
+.nmims-course-option {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    min-height: 43px;
+    margin-bottom: 3px;
+    padding: 10px 13px;
+
+    border-radius: 8px;
+
+    color: #475569;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease,
+                color 0.2s ease,
+                padding 0.2s ease;
+}
+
+.nmims-course-option:last-child {
+    margin-bottom: 0;
+}
+
+.nmims-course-option:hover {
+    padding-left: 17px;
+    background: #fff7ed;
+    color: var(--nmims-course-dark-orange);
+}
+
+.nmims-course-option.nmims-course-option-selected {
+    background: #fff7ed;
+    color: var(--nmims-course-dark-orange);
+    font-weight: 700;
+}
+
+.nmims-course-option.nmims-course-option-selected::after {
+    content: "✓";
+
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--nmims-course-orange);
+    border-radius: 50%;
+
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.nmims-course-option[hidden],
+.nmims-course-empty[hidden] {
+    display: none !important;
+}
+
+/* =========================================
+   6. EMPTY SEARCH RESULT
+========================================= */
+
+.nmims-course-empty {
+    padding: 18px 10px;
+
+    color: #94a3b8;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* =========================================
+   7. RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 576px) {
+    .nmims-course-trigger {
+        min-height: 49px;
+        padding: 0 13px;
+        font-size: 13px;
+    }
+
+    .nmims-course-menu {
+        top: calc(100% + 7px);
+        padding: 10px;
+        border-radius: 11px;
+    }
+
+    .nmims-course-search {
+        height: 42px;
+    }
+
+    .nmims-course-options {
+        max-height: 190px;
+    }
+
+    .nmims-course-option {
+        min-height: 42px;
+        font-size: 13px;
+    }
+}

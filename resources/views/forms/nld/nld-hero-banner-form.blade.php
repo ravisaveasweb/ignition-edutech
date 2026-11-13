@@ -19,13 +19,39 @@
     </div>
     <div class="mb-4">
         <label class="nld-form-label mb-2">Program of Interest</label>
-        <select name="course_name" class="nld-form-input mb-4" required>
-            <option value="" disabled selected hidden>Select Program of Interest</option>
-            <option value="MCA">MCA</option>
-            <option value="MBA">MBA</option>
-            <option value="BCA">BCA</option>
-            <option value="BBA">BBA</option>
-        </select>
+        <div class="nldalmia-course-dropdown">
+
+            <button type="button" class="nldalmia-course-trigger" aria-expanded="false">
+                <span class="nldalmia-course-selected">Select Program of Interest</span>
+                <i class="bi bi-chevron-down"></i>
+            </button>
+
+            <input type="hidden" name="course_name" class="nldalmia-course-value" required>
+
+            <div class="nldalmia-course-menu">
+
+                <input type="text" class="nldalmia-course-search" placeholder="Search course..." autocomplete="off">
+
+                <div class="nldalmia-course-options">
+
+                    @forelse($courses ?? [] as $course)
+                        <div class="nldalmia-course-option" data-value="{{ $course }}">
+                            {{ $course }}
+                        </div>
+                    @empty
+                        <div class="nldalmia-course-empty">
+                            No courses available
+                        </div>
+                    @endforelse
+
+                    <div class="nldalmia-course-empty" hidden>
+                        No matching courses found
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
     </div>
 
     <button class="nld-btn-submit w-100 py-3" type="submit">Enquiry Now</button>

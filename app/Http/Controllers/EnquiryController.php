@@ -18,7 +18,7 @@ class EnquiryController extends Controller
             'name'    => $request->name,
             'email'   => $request->email,
             'mobile'  => $request->mobile,
-            'program' => $request->course_name,
+            'program' => $request->input('program') ?: $request->input('course_name'),
             'source'  => $request->source,
         ]);
 

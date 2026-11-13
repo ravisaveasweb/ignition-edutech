@@ -34772,6 +34772,9 @@ ul.why-collect {
     font-weight: 700;
     margin-bottom: 20px;
     color: #0b2a4a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .approved-trusted {
     display: flex;

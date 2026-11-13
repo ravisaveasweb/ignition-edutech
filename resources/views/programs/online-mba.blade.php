@@ -14,6 +14,7 @@
     $applicationHref = \Illuminate\Support\Facades\Route::has('university-application-form')
         ? route('university-application-form')
         : '/university-application-form';
+
 @endphp
 
 <x-frontend-header />
@@ -26,7 +27,7 @@
                     <h1 class="oe-mba-title">{{ data_get($hero, 'title', '') }}</h1>
                     <p class="oe-mba-subtitle">{{ data_get($hero, 'subtitle', '') }}</p>
                     {{-- <a href="{{ $applicationHref }}" class="oe-mba-btn-primary">Apply Now</a> --}}
-                                        <a href="{{ Route('study-india.register') }}" class="oe-mba-btn-primary">Apply Now</a>
+                    <a href="{{ Route('study-india.register') }}" class="oe-mba-btn-primary">Apply Now</a>
 
                     <a href="#oe-mba-faqs" class="oe-mba-btn-secondary">See Eligibility &amp; FAQs</a>
                 </div>
@@ -52,7 +53,7 @@
                 @foreach ($highlights as $item)
                     <div class="col-md-6 col-lg-3">
                         <div class="corp-recruit-card">
-                            <i class="bi {{ data_get($item, 'icon' , 'bi-lightbulb-fill') }}"> </i>
+                            <i class="bi {{ data_get($item, 'icon', 'bi-lightbulb-fill') }}"> </i>
                             <h3 class="corp-recruit-card-title">{{ data_get($item, 'title', '') }}</h3>
                             <p class="corp-recruit-card-text">{{ data_get($item, 'text', '') }}</p>
                         </div>
@@ -117,7 +118,7 @@
                 @foreach ($industryRelevance as $item)
                     <div class="col-md-6">
                         <div class="corp-recruit-card">
-                            <i class="bi {{ data_get($item, 'icon' , 'bi-lightbulb-fill') }}"> </i>
+                            <i class="bi {{ data_get($item, 'icon', 'bi-lightbulb-fill') }}"> </i>
                             <h3 class="corp-recruit-card-title">{{ data_get($item, 'title', '') }}</h3>
                             <p class="corp-recruit-card-text">{{ data_get($item, 'text', '') }}</p>
                         </div>
@@ -143,8 +144,8 @@
                     <div class="oe-mba-cta-box">
                         <h3>{{ data_get($cta, 'title', '') }}</h3>
                         <p>{{ data_get($cta, 'text', '') }}</p>
-                        <a href="{{ $applicationHref }}"
-                            class="oe-mba-btn-primary">{{ data_get($cta, 'button', '') }}</a>
+                        <a href="#" class="oe-mba-btn-primary ign-enquiry-popup-trigger"
+                            data-source="Online MBA Program - Hero Banner">{{ data_get($cta, 'button', '') }}</a>
                     </div>
                 </div>
             </div>
@@ -159,7 +160,7 @@
                 @foreach ($careerOutcomes as $item)
                     <div class="col-md-6 col-lg-3">
                         <div class="corp-recruit-card">
-                              <i class="bi {{ data_get($item, 'icon' , 'bi-lightbulb-fill') }}"> </i>
+                            <i class="bi {{ data_get($item, 'icon', 'bi-lightbulb-fill') }}"> </i>
                             <h3 class="corp-recruit-card-title">{{ data_get($item, 'role', '') }}</h3>
                             <p class="corp-recruit-card-text">{{ data_get($item, 'text', '') }}</p>
                         </div>
@@ -217,9 +218,13 @@
         <div class="container text-center">
             <h2>{{ data_get($cta, 'title', '') }}</h2>
             <p>{{ data_get($cta, 'text', '') }}</p>
-            <a href="{{ $applicationHref }}" class="oe-mba-btn-primary">{{ data_get($cta, 'button', '') }}</a>
+            <a href="#" class="oe-mba-btn-primary ign-enquiry-popup-trigger"
+                data-source="Online MBA Program - Hero Banner">{{ data_get($cta, 'button', '') }}</a>
         </div>
     </section>
 </div>
+
+<x-university-enquiry-popup :courses="$courses ?? []" />
+
 
 <x-frontend-footer />

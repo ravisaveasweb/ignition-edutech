@@ -537,13 +537,15 @@
                         </p>
                     </div>
 
-                    <button class="btn btn-dark w-100 py-3 rounded-pill fw-bold">
+                    <button class="btn btn-dark w-100 py-3 rounded-pill fw-bold ign-enquiry-popup-trigger" data-source="Amity University - Hero Banner">
                         Talk To An Advisor
                     </button>
+                    
                 </div>
             </div>
         </div>
     </section>
+
 
     <section class="container section-gap">
 
@@ -1520,5 +1522,9 @@
     </section>
 
 </main>
+
+
+<x-university-enquiry-popup :courses="$courses ?? []" />
+
 
 <x-frontend-footer />

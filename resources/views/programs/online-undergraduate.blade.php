@@ -14,6 +14,7 @@
     $applicationHref = \Illuminate\Support\Facades\Route::has('university-application-form')
         ? route('university-application-form')
         : '/university-application-form';
+       
 @endphp
 
 <x-frontend-header />
@@ -145,8 +146,8 @@
                     <div class="oe-ug-cta-box">
                         <h3>{{ data_get($cta, 'title', '') }}</h3>
                         <p>{{ data_get($cta, 'text', '') }}</p>
-                        <a href="{{ $applicationHref }}"
-                            class="oe-ug-btn-primary">{{ data_get($cta, 'button', '') }}</a>
+                        <a href="#"
+                            class="oe-ug-btn-primary ign-enquiry-popup-trigger" data-source="Online Undergraduate Program - Hero Banner">{{ data_get($cta, 'button', '') }}</a>
                     </div>
                 </div>
             </div>
@@ -219,8 +220,12 @@
         <div class="container text-center">
             <h2>{{ data_get($cta, 'title', '') }}</h2>
             <p>{{ data_get($cta, 'text', '') }}</p>
-            <a href="{{ $applicationHref }}" class="oe-ug-btn-primary">{{ data_get($cta, 'button', '') }}</a>
+            <a href="#" class="oe-ug-btn-primary ign-enquiry-popup-trigger" data-source="Online Undergraduate Program - Hero Banner">{{ data_get($cta, 'button', '') }}</a>
         </div>
     </section>
 </div>
+
+
+<x-university-enquiry-popup :courses="$courses ?? []" />
+
 <x-frontend-footer />

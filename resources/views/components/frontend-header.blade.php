@@ -69,7 +69,8 @@
     <link rel="stylesheet" href="{{ asset('css/courses.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/entrance-exam-details.css') }}">
     <link rel="stylesheet" href="{{ asset('css/entrance-exam.css') }}" />
-
+<link rel="stylesheet"
+      href="{{ asset('css/ign-university-enquiry-popup.css') }}?v=1">
 
 
 
@@ -159,6 +160,11 @@
                         <div class="main-menu text-center">
                             <nav class="tp-main-menu-content">
                                 <ul>
+
+                                     <li>
+                                        <a href="{{ route('home') }}">Home</a>
+                                    </li>
+
                                     <li>
                                         <a href="{{ route('about') }}">About</a>
                                     </li>

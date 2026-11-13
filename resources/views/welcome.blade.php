@@ -336,35 +336,60 @@
             <!-- Slider Track -->
             <div class="logo-track" id="logoTrack">
                 <div class="logo-item">
-                    <a href="{{ route('nmims-distance-education-online-degree-programs') }}"><img src="{{ asset('img/brand/university-01.png') }}" alt=""></a>
+                    <a href="{{ route('nmims-distance-education-online-degree-programs') }}"><img
+                            src="{{ asset('img/brand/university-01.png') }}" alt=""></a>
+                </div>
+
+                <div class="logo-item">
+                    <a href="{{ route('vellore-institute-of-technology') }}"><img
+                            src="{{ asset('img/brand/university-07.png') }}" alt=""></a>
+                </div>
+
+                <div class="logo-item">
+                    <a href="{{ route('amity-university-online-ug-pg-courses') }}"><img
+                            src="{{ asset('img/brand/university-02.png') }}" alt=""></a>
+                </div>
+
+                <div class="logo-item">
+                    <a href="{{ route('dr-d-y-patil-pune') }}"><img src="{{ asset('img/brand/university-03.png') }}"
+                            alt=""></a>
                 </div>
                 <div class="logo-item">
-                    <a href="{{ route('amity-university-online-ug-pg-courses') }}"><img src="{{ asset('img/brand/university-02.png') }}" alt=""></a>
+                    <a href="{{ route('manipal-online') }}"><img src="{{ asset('img/brand/university-04.png') }}"
+                            alt=""></a>
                 </div>
+
                 <div class="logo-item">
-                    <a href="{{ route('dr-d-y-patil-pune') }}"><img src="{{ asset('img/brand/university-03.png') }}" alt=""></a>
+                    <a href="{{ route('jain-online') }}"><img src="{{ asset('img/brand/university-08.png') }}"
+                            alt=""></a>
                 </div>
+
                 <div class="logo-item">
-                    <a href="{{route('manipal-online') }}"><img src="{{ asset('img/brand/university-04.png') }}" alt=""></a>
+                    <a href="{{ route('nldalmia-online') }}"><img src="{{ asset('img/brand/nl-dalmia.png') }}"
+                            alt=""></a>
                 </div>
-                {{-- <div class="logo-item">
-                    <a href=""><img src="{{ asset('img/brand/university-05.png') }}" alt=""></a>
-                </div> --}}
-                {{-- <div class="logo-item">
-                    <a href=""><img src="{{ asset('img/brand/university-06.png') }}" alt=""></a>
-                </div> --}}
+
                 <div class="logo-item">
-                    <a href="{{ route('vellore-institute-of-technology') }}"><img src="{{ asset('img/brand/university-07.png') }}" alt=""></a>
+                    <a href="{{ route('vivekananda-global-university-online') }}"><img
+                            src="{{ asset('img/brand/university-10.png') }}" alt=""></a>
                 </div>
+
                 <div class="logo-item">
-                    <a href="{{ route('jain-online') }}"><img src="{{ asset('img/brand/university-08.png') }}" alt=""></a>
+                    <a href="{{ route('gla-university-online') }}"><img
+                            src="{{ asset('img/brand/gla-university_logo.png') }}" alt=""></a>
                 </div>
-                {{-- <div class="logo-item">
-                    <a href=""><img src="{{ asset('img/brand/university-09.png') }}" alt=""></a>
-                </div> --}}
+
+
                 <div class="logo-item">
-                    <a href="{{ route('vivekananda-global-university-online') }}"><img src="{{ asset('img/brand/university-10.png') }}" alt=""></a>
+                    <a href="{{ route('university-of-massachusetts-global-online') }}"><img
+                            src="{{ asset('img/brand/university-of-massachusetts.png') }}" alt=""></a>
                 </div>
+
+                <div class="logo-item">
+                    <a href="{{ route('bennett-university') }}"><img
+                            src="{{ asset('img/brand/bennett-university.png') }}" alt=""></a>
+                </div>
+
             </div>
             <!-- Right Arrow -->
             <button class="slider-btn next">&#10095;</button>
@@ -415,18 +440,12 @@
             {{-- <div class="ir-btn-wrapper">
                 <a href="/contact" class="ir-btn-primary">Book a Free Counselling Session</a>
             </div> --}}
-            <a href="{{ route('contact') }}#contact-form-section" class="ir-btn-primary">
-    Book a Free Counselling Session
-</a>
+            <a href="{{ route('home') }}#contact-form-section" class="ir-btn-primary">
+                Book a Free Counselling Session
+            </a>
         </div>
 
         <hr class="ir-divider" />
-
-        <!-- Bottom Trust / University Block -->
-        <div class="ir-trust-block">
-            <h3 class="ir-trust-heading">Learn From India's Top Universities</h3>
-            <p class="ir-trust-subtext">UGC-approved online degrees from India's best universities.</p>
-        </div>
     </div>
 </section>
 
@@ -499,7 +518,7 @@
                         <li>✔ Get support with university selection</li>
                     </ul>
                     <div class="help-actions">
-                        <a href="/contact" class="btn-primary">Book Free Counselling Call</a>
+                        <a href="{{ route('home') }}#contact-form-section" class="btn-primary">Book Free Counselling Call</a>
                     </div>
                 </div>
                 <div class="col-lg-5">
@@ -803,11 +822,11 @@
                                 <div class="cta-card-content">
                                     <h3>Ready to Start Your Journey?</h3>
                                     <p>Take the first step towards a successful career.</p>
-                                    <a href="{{ route('university-application-form') }}"
+                                    <a href="{{ route('study-india.register') }}"
                                         class="btn primary-btn">Apply
                                         Now</a>
                                     <span class="or">or</span>
-                                    <a href="{{ route('contact') }}" class="btn outline-btn">Talk to Counselor</a>
+                                    <a href="{{ route('home') }}#contact-form-section" class="btn outline-btn">Talk to Counselor</a>
                                 </div>
                             </div>
                             <div class="col-md-4 text-center">

@@ -14,15 +14,40 @@
         <input type="email" name="email" placeholder="Email Address" required>
     </div>
 
-    <div class="input-group">
-        <select class="mb-1 text-black" name="course_name" required>
-            <option value="" disabled selected hidden>Select Program of Interest</option>
-            <option value="MCA">MCA</option>
-            <option value="MBA">MBA</option>
-            <option value="BCA">BCA</option>
-            <option value="BBA">BBA</option>
-        </select>
+    <div class="nldalmia-course-dropdown">
+
+        <button type="button" class="nldalmia-course-trigger" aria-expanded="false">
+            <span class="nldalmia-course-selected">Select Program of Interest</span>
+            <i class="bi bi-chevron-down"></i>
+        </button>
+
+        <input type="hidden" name="course_name" class="nldalmia-course-value" required>
+
+        <div class="nldalmia-course-menu">
+
+            <input type="text" class="nldalmia-course-search" placeholder="Search course..." autocomplete="off">
+
+            <div class="nldalmia-course-options">
+
+                @forelse($courses ?? [] as $course)
+                    <div class="nldalmia-course-option" data-value="{{ $course }}">
+                        {{ $course }}
+                    </div>
+                @empty
+                    <div class="nldalmia-course-empty">
+                        No courses available
+                    </div>
+                @endforelse
+
+                <div class="nldalmia-course-empty" hidden>
+                    No matching courses found
+                </div>
+
+            </div>
+        </div>
+
     </div>
+
 
     <button class="btn btn-white btn-rounded w-100 bg-white text-dark fw-bold" type="submit">Book Free
         Counselling</button>

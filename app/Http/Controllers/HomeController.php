@@ -1,24 +1,28 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\StudyAbroadUniversity;
 use App\Data\CounsellingData;
+use App\Models\ApplicationMasterData;
 
 
 class HomeController extends Controller
 {
     public function index()
-    
-    {
- $studyAbroadUniversities = StudyAbroadUniversity::where('status', 1)
-        ->get()
-        ->groupBy('country');
 
+    {
+        $studyAbroadUniversities = StudyAbroadUniversity::where('status', 1)
+            ->get()
+            ->groupBy('country');
+        $courses = $this->getActiveCourses();
         $siAllCourseData = config('study_india_coursesData.courses', []);
 
-    return view('welcome', compact('studyAbroadUniversities', 'siAllCourseData'));
+        return view('welcome', compact('studyAbroadUniversities', 'siAllCourseData', 'courses'));
     }
-    
+
+
+
     public function about()
     {
         return view('about');
@@ -45,51 +49,67 @@ class HomeController extends Controller
     }
     public function nmims_distance_education_online_degree_programs()
     {
-        return view('nmims-distance-education-online-degree-programs');
+        $courses = $this->getActiveCourses();
+
+        return view('nmims-distance-education-online-degree-programs', compact('courses'));
     }
     public function amity_university_online_ug_pg_courses()
     {
-        return view('amity-university-online-ug-pg-courses');
+        $courses = $this->getActiveCourses();
+        return view('amity-university-online-ug-pg-courses', compact('courses'));
     }
     public function manipal_online()
     {
-        return view('manipal-online');
+        $courses = $this->getActiveCourses();
+        return view('manipal-online', compact('courses'));
     }
     public function smu()
     {
-        return view('smu');
+        $courses = $this->getActiveCourses();
+        return view('smu', compact('courses'));
     }
     public function dr_d_y_patil_pune()
     {
-        return view('dr-d-y-patil-pune');
+        $courses = $this->getActiveCourses();
+
+        return view('dr-d-y-patil-pune', compact('courses'));
     }
     public function vellore_institute_of_technology()
     {
-        return view('vellore-institute-of-technology');
+        $courses = $this->getActiveCourses();
+
+        return view('vellore-institute-of-technology', compact('courses'));
     }
     public function jain_online()
     {
-        return view('jain-online');
+        $courses = $this->getActiveCourses();
+        return view('jain-online',compact('courses'));
     }
     public function nldalmia_online()
     {
-        return view('nldalmia-online');
+        $courses = $this->getActiveCourses();
+
+        return view('nldalmia-online' , compact('courses'));
     }
     public function vivekananda_global_university_online()
     {
-        return view('vivekananda-global-university-online');
+          $courses = $this->getActiveCourses();
+        return view('vivekananda-global-university-online' ,compact('courses'));
     }
     public function gla_university_online()
     {
-        return view('gla-university-online');
+        $courses = $this->getActiveCourses();
+        return view('gla-university-online' ,compact('courses'));
     }
     public function university_of_massachusetts_global_online()
     {
-        return view('university-of-massachusetts-global-online');
+        $courses = $this->getActiveCourses();
+        return view('university-of-massachusetts-global-online' ,compact('courses'));
     }
     public function bennett_university()
     {
-        return view('bennett-university');
+                $courses = $this->getActiveCourses();
+        return view('bennett-university' , compact('courses'));
     }
     public function bloglist()
     {
@@ -137,7 +157,8 @@ class HomeController extends Controller
     }
     public function vit_online_degree_courses()
     {
-        return view('vit-online-degree-courses');
+        $courses = $this->getActiveCourses();
+        return view('vit-online-degree-courses', compact('courses'));
     }
     public function vit_online_mba_admission()
     {
@@ -149,7 +170,7 @@ class HomeController extends Controller
     }
     public function d_mit_test()
     {
-        return view('dmit-test'); 
+        return view('dmit-test');
     }
     public function career_counseling()
     {
@@ -167,6 +188,18 @@ class HomeController extends Controller
     {
         return view('study_abroad');
     }
+
+    private function getActiveCourses()
+    {
+        return ApplicationMasterData::where('type', 'course')
+            ->where('status', 1)
+            ->orderBy('name')
+            ->pluck('name');
+    }
+    public function welcome()
+    {
+        $courses = $this->getActiveCourses();
+
+        return view('welcome', compact('courses'));
+    }
 }
-
-

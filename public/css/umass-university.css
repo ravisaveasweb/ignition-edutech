@@ -468,3 +468,259 @@
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* shadow-sm */
   display: inline-block;                   /* Standard badge alignment */
 }
+
+
+
+/* UMass Global Online Course Dropdown Start */
+
+.umass-global-online-course-dropdown {
+    --umass-global-online-orange: #eb933a;
+    --umass-global-online-navy: #0a2540;
+    --umass-global-online-border: #e2e8f0;
+
+    position: relative;
+    z-index: 30;
+    width: 100%;
+    margin-bottom: 16px;
+    font-family: inherit;
+}
+
+/* Dropdown Trigger */
+
+.umass-global-online-course-dropdown .umass-global-online-course-trigger {
+    width: 100%;
+    height: 52px;
+    min-height: 52px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    background: #fff;
+    border: 1px solid var(--umass-global-online-border);
+    border-radius: 8px;
+
+    color: #64748b;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: left;
+
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+    transition: all 0.25s ease;
+}
+
+.umass-global-online-course-dropdown .umass-global-online-course-trigger:hover,
+.umass-global-online-course-dropdown.umass-global-online-course-active .umass-global-online-course-trigger {
+    border-color: var(--umass-global-online-orange);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(235, 147, 58, 0.10);
+}
+
+/* Selected Text */
+
+.umass-global-online-course-dropdown .umass-global-online-course-selected {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #64748b;
+}
+
+.umass-global-online-course-dropdown .umass-global-online-course-selected.umass-global-online-course-has-value {
+    color: var(--umass-global-online-navy);
+}
+
+/* Chevron */
+
+.umass-global-online-course-dropdown .umass-global-online-course-trigger i {
+    flex-shrink: 0;
+    color: var(--umass-global-online-navy);
+    font-size: 13px;
+    transition: transform 0.25s ease;
+}
+
+.umass-global-online-course-dropdown.umass-global-online-course-active .umass-global-online-course-trigger i {
+    transform: rotate(180deg);
+}
+
+/* Dropdown Menu */
+
+.umass-global-online-course-dropdown .umass-global-online-course-menu {
+    position: absolute;
+    top: calc(100% + 7px);
+    left: 0;
+    right: 0;
+    z-index: 9999;
+
+    display: none;
+    width: 100%;
+    padding: 12px;
+
+    background: #fff;
+    border: 1px solid #e8edf3;
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(10, 37, 64, 0.14);
+}
+
+.umass-global-online-course-dropdown.umass-global-online-course-active .umass-global-online-course-menu {
+    display: block;
+    animation: umassGlobalOnlineCourseMenuShow 0.2s ease;
+}
+
+@keyframes umassGlobalOnlineCourseMenuShow {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Search Input */
+
+.umass-global-online-course-dropdown .umass-global-online-course-search {
+    display: block;
+    width: 100%;
+    height: 42px;
+    min-height: 42px;
+    margin: 0 0 9px;
+    padding: 0 12px;
+
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 7px;
+
+    color: var(--umass-global-online-navy);
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 400;
+
+    outline: none;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+
+.umass-global-online-course-dropdown .umass-global-online-course-search:focus {
+    border-color: var(--umass-global-online-orange);
+    box-shadow: 0 0 0 2px rgba(235, 147, 58, 0.10);
+}
+
+.umass-global-online-course-dropdown .umass-global-online-course-search::placeholder {
+    color: #94a3b8;
+    opacity: 1;
+}
+
+/* Options List */
+
+.umass-global-online-course-dropdown .umass-global-online-course-options {
+    width: 100%;
+    max-height: 220px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 #f8fafc;
+}
+
+.umass-global-online-course-dropdown .umass-global-online-course-options::-webkit-scrollbar {
+    width: 5px;
+}
+
+.umass-global-online-course-dropdown .umass-global-online-course-options::-webkit-scrollbar-track {
+    background: #f8fafc;
+    border-radius: 10px;
+}
+
+.umass-global-online-course-dropdown .umass-global-online-course-options::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+/* Individual Option */
+
+.umass-global-online-course-dropdown .umass-global-online-course-option {
+    width: 100%;
+    min-height: 42px;
+    margin: 0 0 3px;
+    padding: 10px 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: transparent;
+    border: none;
+    border-radius: 7px;
+
+    color: #475569;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: left;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.umass-global-online-course-dropdown .umass-global-online-course-option:hover,
+.umass-global-online-course-dropdown .umass-global-online-course-option.umass-global-online-course-option-selected {
+    background: #fff4e8;
+    color: #b96c1c;
+}
+
+.umass-global-online-course-dropdown .umass-global-online-course-option.umass-global-online-course-option-selected {
+    font-weight: 600;
+}
+
+.umass-global-online-course-dropdown .umass-global-online-course-option.umass-global-online-course-option-selected::after {
+    content: "✓";
+    margin-left: 10px;
+    color: var(--umass-global-online-orange);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* Empty Messages */
+
+.umass-global-online-course-dropdown .umass-global-online-course-empty {
+    padding: 16px 10px;
+    color: #94a3b8;
+    font-size: 13px;
+    text-align: center;
+}
+
+.umass-global-online-course-dropdown .umass-global-online-course-option[hidden],
+.umass-global-online-course-dropdown .umass-global-online-course-empty[hidden] {
+    display: none !important;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 576px) {
+    .umass-global-online-course-dropdown .umass-global-online-course-trigger {
+        height: 49px;
+        min-height: 49px;
+        padding: 0 13px;
+        font-size: 13px;
+    }
+
+    .umass-global-online-course-dropdown .umass-global-online-course-menu {
+        padding: 10px;
+    }
+
+    .umass-global-online-course-dropdown .umass-global-online-course-options {
+        max-height: 190px;
+    }
+}
+
+/* UMass Global Online Course Dropdown End */

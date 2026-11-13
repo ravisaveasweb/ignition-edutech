@@ -24,13 +24,39 @@
 
         <!-- Program Select Field -->
         <div class="col-12">
-            <select class=" w-100 text-muted jo-form-field" name="course_name" required>
-                <option value="" disabled selected hidden>Select Program of Interest</option>
-                <option value="MBA" class="text-dark">MBA (Global)</option>
-                <option value="MCA" class="text-dark">MCA (Computer Science)</option>
-                <option value="BBA" class="text-dark">BBA (Marketing)</option>
-                <option value="M.Com" class="text-dark">M.Com (Accounting)</option>
-            </select>
+           <div class="gla-online-course-dropdown">
+
+    <button type="button" class="gla-online-course-trigger" aria-expanded="false">
+        <span class="gla-online-course-selected">Select Program of Interest</span>
+        <i class="bi bi-chevron-down"></i>
+    </button>
+
+    <input type="hidden" name="course_name" class="gla-online-course-value" required>
+
+    <div class="gla-online-course-menu">
+
+        <input type="text" class="gla-online-course-search" placeholder="Search course..." autocomplete="off">
+
+        <div class="gla-online-course-options">
+
+            @forelse($courses ?? [] as $course)
+                <div class="gla-online-course-option" data-value="{{ $course }}">
+                    {{ $course }}
+                </div>
+            @empty
+                <div class="gla-online-course-empty">
+                    No courses available
+                </div>
+            @endforelse
+
+            <div class="gla-online-course-empty" hidden>
+                No matching courses found
+            </div>
+
+        </div>
+    </div>
+
+</div>
         </div>
 
         <!-- Submit Button -->

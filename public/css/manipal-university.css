@@ -842,3 +842,238 @@
 .manipal-trust-intro p {
   margin-top: 20px;
 }
+
+/* Dropdwon start */
+
+.manipal-online-page .manipal-course-dropdown {
+    --manipal-course-gold: #d38c18;
+    --manipal-course-light: #fff6e5;
+
+    position: relative;
+    z-index: 50;
+    width: 100%;
+    margin-bottom: 16px;
+    font-family: inherit;
+}
+
+/* Dropdown trigger */
+
+.manipal-online-page .manipal-course-dropdown .manipal-course-trigger {
+    width: 100%;
+    min-height: 52px;
+    padding: 0 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+
+    color: #64748b;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+    transition: background .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.manipal-online-page .manipal-course-dropdown .manipal-course-trigger:hover,
+.manipal-online-page .manipal-course-dropdown.manipal-course-active .manipal-course-trigger {
+    background: #ffffff;
+    border-color: var(--manipal-course-gold);
+    box-shadow: 0 0 0 3px rgba(211, 140, 24, .12);
+}
+
+/* Selected course text */
+
+.manipal-online-page .manipal-course-dropdown .manipal-course-selected {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #64748b;
+}
+
+.manipal-online-page .manipal-course-dropdown .manipal-course-selected.manipal-course-has-value {
+    color: #10233f;
+}
+
+/* Arrow */
+
+.manipal-online-page .manipal-course-dropdown .manipal-course-trigger i {
+    flex-shrink: 0;
+    font-size: 13px;
+    transition: transform .2s ease;
+}
+
+.manipal-online-page .manipal-course-dropdown.manipal-course-active .manipal-course-trigger i {
+    transform: rotate(180deg);
+}
+
+/* Dropdown menu */
+
+.manipal-online-page .manipal-course-dropdown .manipal-course-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    z-index: 9999;
+
+    display: none;
+    padding: 12px;
+
+    background: #ffffff;
+    border: 1px solid #e8edf3;
+    border-radius: 12px;
+    box-shadow: 0 14px 35px rgba(4, 15, 27, .14);
+}
+
+.manipal-online-page .manipal-course-dropdown.manipal-course-active .manipal-course-menu {
+    display: block;
+    animation: manipalCourseDropdownOpen .2s ease;
+}
+
+@keyframes manipalCourseDropdownOpen {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Search input */
+
+.manipal-online-page .manipal-course-dropdown .manipal-course-search {
+    display: block;
+    width: 100%;
+    height: 44px;
+    min-height: 44px;
+    margin: 0 0 10px;
+    padding: 0 13px;
+
+    background: #ffffff;
+    border: 1px solid #e8edf3;
+    border-radius: 8px;
+
+    color: #10233f;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 400;
+
+    outline: none;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+
+.manipal-online-page .manipal-course-dropdown .manipal-course-search:focus {
+    border-color: var(--manipal-course-gold);
+    box-shadow: 0 0 0 3px rgba(211, 140, 24, .10);
+}
+
+/* Options container */
+
+.manipal-online-page .manipal-course-dropdown .manipal-course-options {
+    width: 100%;
+    max-height: 225px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 #f8fafc;
+}
+
+/* Individual options */
+
+.manipal-online-page .manipal-course-dropdown .manipal-course-option {
+    width: 100%;
+    min-height: 43px;
+    margin: 0 0 3px;
+    padding: 10px 13px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+
+    color: #475569;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: left;
+
+    cursor: pointer;
+    transition: background .2s ease, color .2s ease;
+}
+
+.manipal-online-page .manipal-course-dropdown .manipal-course-option:hover,
+.manipal-online-page .manipal-course-dropdown .manipal-course-option.manipal-course-option-selected {
+    background: var(--manipal-course-light);
+    color: #a96b08;
+}
+
+/* Selected option */
+
+.manipal-online-page .manipal-course-dropdown .manipal-course-option.manipal-course-option-selected {
+    font-weight: 700;
+}
+
+.manipal-online-page .manipal-course-dropdown .manipal-course-option.manipal-course-option-selected::after {
+    content: "✓";
+    flex-shrink: 0;
+    color: var(--manipal-course-gold);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* Empty message */
+
+.manipal-online-page .manipal-course-dropdown .manipal-course-empty {
+    padding: 18px 10px;
+    color: #94a3b8;
+    font-size: 13px;
+    text-align: center;
+}
+
+.manipal-online-page .manipal-course-dropdown .manipal-course-option[hidden],
+.manipal-online-page .manipal-course-dropdown .manipal-course-empty[hidden] {
+    display: none !important;
+}
+
+/* Mobile */
+
+@media (max-width: 576px) {
+    .manipal-online-page .manipal-course-dropdown .manipal-course-trigger {
+        min-height: 49px;
+        padding: 0 13px;
+        font-size: 13px;
+    }
+
+    .manipal-online-page .manipal-course-dropdown .manipal-course-menu {
+        padding: 10px;
+    }
+
+    .manipal-online-page .manipal-course-dropdown .manipal-course-options {
+        max-height: 190px;
+    }
+}
+
+
+/* dropdown end */

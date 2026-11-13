@@ -19,13 +19,47 @@
         </div>
 
         <div class="col-12">
-            <select class="w-100 text-dark umass-minimal-input" name="course_name" required>
-                <option value="" disabled selected hidden>Select Program of Interest</option>
-                <option value="MBA">MBA (Global)</option>
-                <option value="MCA">MCA (Computer Science)</option>
-                <option value="BBA">BBA (Marketing)</option>
-                <option value="M.Com">M.Com (Accounting)</option>
-            </select>
+            <div class="umass-global-online-course-dropdown">
+
+    <button type="button" class="umass-global-online-course-trigger" aria-expanded="false">
+        <span class="umass-global-online-course-selected">Select Program of Interest</span>
+        <i class="bi bi-chevron-down"></i>
+    </button>
+
+    <input type="hidden" name="course_name" class="umass-global-online-course-value" required>
+
+    <div class="umass-global-online-course-menu">
+
+        <input
+            type="text"
+            class="umass-global-online-course-search"
+            placeholder="Search course..."
+            autocomplete="off"
+        >
+
+        <div class="umass-global-online-course-options">
+
+            @forelse($courses ?? [] as $course)
+                <div
+                    class="umass-global-online-course-option"
+                    data-value="{{ $course }}"
+                >
+                    {{ $course }}
+                </div>
+            @empty
+                <div class="umass-global-online-course-empty">
+                    No courses available
+                </div>
+            @endforelse
+
+            <div class="umass-global-online-course-empty" hidden>
+                No matching courses found
+            </div>
+
+        </div>
+    </div>
+
+</div>
         </div>
 
         <div class="col-12 mt-4">

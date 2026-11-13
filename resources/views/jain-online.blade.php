@@ -16,7 +16,7 @@
                         <a href="{{ route('university-application-form') }}" class="jain-btn jain-btn-primary">Explore
                             JAIN
                             Programs</a>
-                        <a href="{{ route('contact') }}" class="jain-btn jain-btn-secondary">Talk To A Counsellor</a>
+                        <a href="#" class="jain-btn jain-btn-secondary ign-enquiry-popup-trigger" data-source="Jain Online University - Hero Banner">Talk To A Counsellor</a>
                     </div>
 
                     <div class="jain-hero-grid-cards">
@@ -183,7 +183,7 @@
                         <h3>Let us help you compare options</h3>
                         <p>Use counselling guidance to understand workload, eligibility, and which program is the
                             strongest next step.</p>
-                        <a class="mt-3" href="{{ route('university-application-form') }}">Request program support</a>
+                        <a class="mt-3 ign-enquiry-popup-trigger" href="#" data-source="Jain Online University - Hero Banner">Request program support</a>
                     </article>
                 </div>
             </div>
@@ -296,5 +296,8 @@
         </section>
     </section>
 </main>
+
+<x-university-enquiry-popup :courses="$courses ?? []" />
+
 
 <x-frontend-footer />

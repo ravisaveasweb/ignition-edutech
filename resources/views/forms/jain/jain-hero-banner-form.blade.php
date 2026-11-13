@@ -8,13 +8,40 @@
 
     <input type="email" name="email" placeholder="Email Address" required>
 
-    <select name="course_name" required>
-        <option value="" disabled selected hidden>Select Program of Interest</option>
-        <option value="MCA">MCA</option>
-        <option value="MBA">MBA</option>
-        <option value="BCA">BCA</option>
-        <option value="BBA">BBA</option>
-    </select>
+    <div class="jain-course-dropdown">
+
+        <button type="button" class="jain-course-trigger" aria-expanded="false">
+            <span class="jain-course-selected">Select Program of Interest</span>
+            <i class="bi bi-chevron-down"></i>
+        </button>
+
+        <input type="hidden" name="course_name" class="jain-course-value" required>
+
+        <div class="jain-course-menu">
+
+            <input type="text" class="jain-course-search" placeholder="Search course..." autocomplete="off">
+
+            <div class="jain-course-options">
+
+                @forelse($courses ?? [] as $course)
+                    <div class="jain-course-option" data-value="{{ $course }}">
+                        {{ $course }}
+                    </div>
+                @empty
+                    <div class="jain-course-empty">
+                        No courses available
+                    </div>
+                @endforelse
+
+                <div class="jain-course-empty" hidden>
+                    No matching courses found
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    
     <button class="btn-primary full" type="submit">
         Book Free Counselling
     </button>

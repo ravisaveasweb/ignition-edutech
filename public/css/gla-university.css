@@ -398,3 +398,259 @@
   background: #b2e655 !important;
   transform: scale(1.02);
 }
+
+
+
+/* GLA Online Course Dropdown Start */
+
+.gla-online-course-dropdown {
+    --gla-online-orange: #eb933a;
+    --gla-online-navy: #0a2540;
+    --gla-online-border: #e2e8f0;
+
+    position: relative;
+    z-index: 30;
+    width: 100%;
+    margin-bottom: 16px;
+    font-family: inherit;
+}
+
+/* Dropdown Trigger */
+
+.gla-online-course-dropdown .gla-online-course-trigger {
+    width: 100%;
+    height: 52px;
+    min-height: 52px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    background: #fff;
+    border: 1px solid var(--gla-online-border);
+    border-radius: 8px;
+
+    color: #64748b;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: left;
+
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+    transition: all 0.25s ease;
+}
+
+.gla-online-course-dropdown .gla-online-course-trigger:hover,
+.gla-online-course-dropdown.gla-online-course-active .gla-online-course-trigger {
+    border-color: var(--gla-online-orange);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(235, 147, 58, 0.10);
+}
+
+/* Selected Text */
+
+.gla-online-course-dropdown .gla-online-course-selected {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #64748b;
+}
+
+.gla-online-course-dropdown .gla-online-course-selected.gla-online-course-has-value {
+    color: var(--gla-online-navy);
+}
+
+/* Chevron */
+
+.gla-online-course-dropdown .gla-online-course-trigger i {
+    flex-shrink: 0;
+    color: var(--gla-online-navy);
+    font-size: 13px;
+    transition: transform 0.25s ease;
+}
+
+.gla-online-course-dropdown.gla-online-course-active .gla-online-course-trigger i {
+    transform: rotate(180deg);
+}
+
+/* Dropdown Menu */
+
+.gla-online-course-dropdown .gla-online-course-menu {
+    position: absolute;
+    top: calc(100% + 7px);
+    left: 0;
+    right: 0;
+    z-index: 9999;
+
+    display: none;
+    width: 100%;
+    padding: 12px;
+
+    background: #fff;
+    border: 1px solid #e8edf3;
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(10, 37, 64, 0.14);
+}
+
+.gla-online-course-dropdown.gla-online-course-active .gla-online-course-menu {
+    display: block;
+    animation: glaOnlineCourseMenuShow 0.2s ease;
+}
+
+@keyframes glaOnlineCourseMenuShow {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Search Input */
+
+.gla-online-course-dropdown .gla-online-course-search {
+    display: block;
+    width: 100%;
+    height: 42px;
+    min-height: 42px;
+    margin: 0 0 9px;
+    padding: 0 12px;
+
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 7px;
+
+    color: var(--gla-online-navy);
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 400;
+
+    outline: none;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+
+.gla-online-course-dropdown .gla-online-course-search:focus {
+    border-color: var(--gla-online-orange);
+    box-shadow: 0 0 0 2px rgba(235, 147, 58, 0.10);
+}
+
+.gla-online-course-dropdown .gla-online-course-search::placeholder {
+    color: #94a3b8;
+    opacity: 1;
+}
+
+/* Options List */
+
+.gla-online-course-dropdown .gla-online-course-options {
+    width: 100%;
+    max-height: 220px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 #f8fafc;
+}
+
+.gla-online-course-dropdown .gla-online-course-options::-webkit-scrollbar {
+    width: 5px;
+}
+
+.gla-online-course-dropdown .gla-online-course-options::-webkit-scrollbar-track {
+    background: #f8fafc;
+    border-radius: 10px;
+}
+
+.gla-online-course-dropdown .gla-online-course-options::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+/* Individual Option */
+
+.gla-online-course-dropdown .gla-online-course-option {
+    width: 100%;
+    min-height: 42px;
+    margin: 0 0 3px;
+    padding: 10px 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: transparent;
+    border: none;
+    border-radius: 7px;
+
+    color: #475569;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: left;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.gla-online-course-dropdown .gla-online-course-option:hover,
+.gla-online-course-dropdown .gla-online-course-option.gla-online-course-option-selected {
+    background: #fff4e8;
+    color: #b96c1c;
+}
+
+.gla-online-course-dropdown .gla-online-course-option.gla-online-course-option-selected {
+    font-weight: 600;
+}
+
+.gla-online-course-dropdown .gla-online-course-option.gla-online-course-option-selected::after {
+    content: "✓";
+    margin-left: 10px;
+    color: var(--gla-online-orange);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* Empty Messages */
+
+.gla-online-course-dropdown .gla-online-course-empty {
+    padding: 16px 10px;
+    color: #94a3b8;
+    font-size: 13px;
+    text-align: center;
+}
+
+.gla-online-course-dropdown .gla-online-course-option[hidden],
+.gla-online-course-dropdown .gla-online-course-empty[hidden] {
+    display: none !important;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 576px) {
+    .gla-online-course-dropdown .gla-online-course-trigger {
+        height: 49px;
+        min-height: 49px;
+        padding: 0 13px;
+        font-size: 13px;
+    }
+
+    .gla-online-course-dropdown .gla-online-course-menu {
+        padding: 10px;
+    }
+
+    .gla-online-course-dropdown .gla-online-course-options {
+        max-height: 190px;
+    }
+}
+
+/* GLA Online Course Dropdown End */

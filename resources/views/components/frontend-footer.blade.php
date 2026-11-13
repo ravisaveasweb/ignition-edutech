@@ -180,6 +180,39 @@
 <script src="{{ asset('js/script.js') }}"></script>
 <script src="https://js-na2.hsforms.net/forms/embed/247564101.js" defer></script>
 
+<script src="{{ asset('js/form-dropdown/ign-university-counselling.js') }}?v=1"></script>
+
+<script src="{{ asset('js/form-dropdown/nmims-course-dropdown.js') }}?v=1"></script>
+<script src="{{ asset('js/form-dropdown/vit-course-dropdown.js') }}?v=1"></script>
+<script src="{{ asset('js/form-dropdown/amity-university-dropdown.js') }}?v=1"></script>
+<script src="{{ asset('js/form-dropdown/manipal-university-dropdown.js') }}?v=1"></script>
+<script src="{{ asset('js/form-dropdown/sikkim-manipa-university-dropdown.js') }}?v=1"></script>
+
+<script src="{{ asset('js/form-dropdown/dy-patil-university-dropdown.js') }}?v=1"></script>
+<script src="{{ asset('js/form-dropdown/jain-online-university.js') }}?v=1"></script>
+
+<script src="{{ asset('js/form-dropdown/nldalmia-online-university.js') }}?v=1"></script>
+<script src="{{ asset('js/form-dropdown/vivekanand-o-university.js') }}?v=1"></script>
+
+<script src="{{ asset('js/form-dropdown/gla-university.js') }}?v=1"></script>
+
+<script src="{{ asset('js/form-dropdown/university-of-massachusetts.js') }}?v=1"></script>
+<script src="{{ asset('js/form-dropdown/bennett-university.js') }}?v=1"></script>
+
+<script src="{{ asset('js/ign-university-enquiry-popup.js') }}?v=1"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </body>

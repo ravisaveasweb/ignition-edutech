@@ -16,14 +16,39 @@
     </div>
 
     <div class="col-12">
-        <select name="course_name" class="io-hero-input px-3 text-secondary"
-            style="font-size: 1rem; min-height: calc(3.5rem + 2px);" required>
-            <option value="" disabled selected hidden>Select Your Program</option>
-            <option value="MBA" class="text-dark">MBA (Global)</option>
-            <option value="MCA" class="text-dark">MCA (Computer Science)</option>
-            <option value="BBA" class="text-dark">BBA (Marketing)</option>
-            <option value="M.Com" class="text-dark">M.Com (Accounting)</option>
-        </select>
+        <div class="vgu-online-course-dropdown">
+
+    <button type="button" class="vgu-online-course-trigger" aria-expanded="false">
+        <span class="vgu-online-course-selected">Select Program of Interest</span>
+        <i class="bi bi-chevron-down"></i>
+    </button>
+
+    <input type="hidden" name="course_name" class="vgu-online-course-value" required>
+
+    <div class="vgu-online-course-menu">
+
+        <input type="text" class="vgu-online-course-search" placeholder="Search course..." autocomplete="off">
+
+        <div class="vgu-online-course-options">
+
+            @forelse($courses ?? [] as $course)
+                <div class="vgu-online-course-option" data-value="{{ $course }}">
+                    {{ $course }}
+                </div>
+            @empty
+                <div class="vgu-online-course-empty">
+                    No courses available
+                </div>
+            @endforelse
+
+            <div class="vgu-online-course-empty" hidden>
+                No matching courses found
+            </div>
+
+        </div>
+    </div>
+
+</div>
     </div>
     <div class="col-12 pt-2">
         <button type="submit" class="io-btn-accent shadow-sm w-100 py-3 text-uppercase fw-bold tracking-wider">

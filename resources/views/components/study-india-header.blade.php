@@ -199,7 +199,8 @@
                     <i class="bi bi-pencil-square"></i>
                     Write a Review
                 </a>
-                <a href="{{ route('study-abroad.application') }}" class="si-counselling-link">
+                
+                <a href="{{ route('home') }}#contact-form-section" class="si-counselling-link">
                     <i class="bi bi-chat-dots"></i>
                     Get Counselling
                 </a>

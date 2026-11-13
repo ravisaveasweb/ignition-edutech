@@ -15,10 +15,10 @@
                     <div class="smu-hero-actions">
                         <a href="{{ route('university-application-form') }}" class="smu-btn smu-btn-primary">Explore SMU
                             Programs</a>
-                        <a href="{{ route('contact') }}" class="smu-btn smu-btn-secondary">Talk To An Advisor</a>
+                        <a href="{{ route('contact') }}" class="smu-btn smu-btn-secondary  ign-enquiry-popup-trigger" data-source="Sikkim Manipal University - Hero Banner">Talk To An Advisor</a>
                     </div>
 
-                    <div class="smu-hero-highlights">
+                    <div class="smu-hero-highlights">   
                         <div class="smu-highlight-card">
                             <i class="fa-solid fa-shield-check"></i>
                             <div>
@@ -291,5 +291,9 @@
         </section>
     </section>
 </main>
+
+
+<x-university-enquiry-popup :courses="$courses ?? []" />
+
 
 <x-frontend-footer />

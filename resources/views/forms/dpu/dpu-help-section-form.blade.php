@@ -15,13 +15,40 @@
     </div>
 
     <div>
-        <select class="mb-1" name="course_name" required>
-            <option value="" disabled selected hidden>Select Program of Interest</option>
-            <option value="MCA">MCA</option>
-            <option value="MBA">MBA</option>
-            <option value="BCA">BCA</option>
-            <option value="BBA">BBA</option>
-        </select>
+
+        <div class="dypatil-course-dropdown">
+
+            <button type="button" class="dypatil-course-trigger" aria-expanded="false">
+                <span class="dypatil-course-selected">Select Program of Interest</span>
+                <i class="bi bi-chevron-down"></i>
+            </button>
+
+            <input type="hidden" name="course_name" class="dypatil-course-value" required>
+
+            <div class="dypatil-course-menu">
+
+                <input type="text" class="dypatil-course-search" placeholder="Search course..." autocomplete="off">
+
+                <div class="dypatil-course-options">
+
+                    @forelse($courses ?? [] as $course)
+                        <div class="dypatil-course-option" data-value="{{ $course }}">
+                            {{ $course }}
+                        </div>
+                    @empty
+                        <div class="dypatil-course-empty">
+                            No courses available
+                        </div>
+                    @endforelse
+
+                    <div class="dypatil-course-empty" hidden>
+                        No matching courses found
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
     </div>
 
     <button type="submit" class="btn-book">Book Free Counselling</button>

@@ -23,7 +23,7 @@
                         <div class="d-flex flex-wrap gap-3 pt-3">
                             <button class="bennett-btn-large border-0 main-color-used">Explore Bennett University
                                 Programs</button>
-                            <button class="bennett-btn-large border-2 main-color-used">Speak with an Admissions
+                            <button class="bennett-btn-large border-2 main-color-used ign-enquiry-popup-trigger" data-source="Bennett University - Hero Banner">Speak with an Admissions
                                 Counselor</button>
                         </div>
                         <!-- Hero Feature Grid -->
@@ -304,8 +304,8 @@
                             <p class="text-white opacity-75 small mb-4">Let our academic experts help map your unique
                                 professional goals into the ideal track.</p>
                         </div>
-                        <button class="btn rounded-pill py-3 w-100 fw-bold border-0 shadow-lg"
-                            style="background: var(--primary-container); color: var(--on-primary-container);">Request
+                        <button class="btn rounded-pill py-3 w-100 fw-bold border-0 shadow-lg ign-enquiry-popup-trigger"
+                            style="background: var(--primary-container); color: var(--on-primary-container);"  data-source="Bennett University - Hero Banner">Request
                             Callback</button>
                     </div>
                 </div>
@@ -579,5 +579,9 @@
         });
     });
 </script>
+
+
+<x-university-enquiry-popup :courses="$courses ?? []" />
+
 
 <x-frontend-footer />

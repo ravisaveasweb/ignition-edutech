@@ -16,7 +16,7 @@
                         <a href="{{ route('university-application-form') }}"
                             class="manipal-btn manipal-btn-primary">Explore
                             Programs</a>
-                        <a href="{{ route('contact') }}" class="manipal-btn manipal-btn-secondary">Talk to a
+                        <a href="#" class="manipal-btn manipal-btn-secondary ign-enquiry-popup-trigger" data-source="Manipal Online University - Hero Banner" >Talk to a
                             Counsellor</a>
                     </div>
 
@@ -223,7 +223,7 @@
                         <h3>Compare before you commit</h3>
                         <p>Our counsellors can help you narrow options using your experience level, career goals, and
                             available study time.</p>
-                        <a href="{{ route('university-application-form') }}">Request program comparison</a>
+                        <a href="#" class="ign-enquiry-popup-trigger"  data-source="Manipal Online University - Hero Banner">Request program comparison</a>
                     </article>
                 </div>
             </div>
@@ -418,5 +418,7 @@
         </section>
     </section>
 </main>
+
+<x-university-enquiry-popup :courses="$courses ?? []" />
 
 <x-frontend-footer />

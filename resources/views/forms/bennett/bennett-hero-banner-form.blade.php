@@ -13,14 +13,44 @@
         <input class="form-control form-control-custom" name="email" placeholder="Enter Email" type="email" />
     </div>
     <div class="col-12">
-        <select class="mb-3 w-100 rounded border-0" name="course_name">
-            <option value="" selected disabled hidden>Select Program of Intrest</option>
-            <option value="MBA">MBA</option>
-            <option value="MCA">MCA</option>
-            <option value="BCA">BCA</option>
-            <option value="BBA">BBA</option>
-            <option value="Data Science">Data Science</option>
-        </select>
+        <div class="bennett-course-dropdown">
+
+    <button type="button" class="bennett-course-trigger" aria-expanded="false">
+        <span class="bennett-course-selected">Select Program of Interest</span>
+        <i class="bi bi-chevron-down"></i>
+    </button>
+
+    <input type="hidden" name="course_name" class="bennett-course-value" required>
+
+    <div class="bennett-course-menu">
+
+        <input
+            type="text"
+            class="bennett-course-search"
+            placeholder="Search course..."
+            autocomplete="off"
+        >
+
+        <div class="bennett-course-options">
+
+            @forelse($courses ?? [] as $course)
+                <div class="bennett-course-option" data-value="{{ $course }}">
+                    {{ $course }}
+                </div>
+            @empty
+                <div class="bennett-course-empty">
+                    No courses available
+                </div>
+            @endforelse
+
+            <div class="bennett-course-empty" hidden>
+                No matching courses found
+            </div>
+
+        </div>
+    </div>
+
+</div>
     </div>
     <div class="col-12 pt-2">
         <button type="submit" class="btn w-100 font-headline border-0 rounded-pill bennett-get-started-btn">Get Started

@@ -16,13 +16,40 @@
 
             <input type="email" name="email" placeholder="Email Address" required>
 
-            <select name="course_name" required>
-                <option value="" disabled selected hidden>Select Program of Interest</option>
-                <option value="MCA">MCA</option>
-                <option value="MBA">MBA</option>
-                <option value="BCA">BCA</option>
-                <option value="BBA">BBA</option>
-            </select>
+            <div class="manipal-course-dropdown">
+
+                <button type="button" class="manipal-course-trigger" aria-expanded="false">
+                    <span class="manipal-course-selected">Select Program of Interest</span>
+                    <i class="bi bi-chevron-down"></i>
+                </button>
+
+                <input type="hidden" name="course_name" class="manipal-course-value" required>
+
+                <div class="manipal-course-menu">
+
+                    <input type="text" class="manipal-course-search" placeholder="Search course..."
+                        autocomplete="off">
+
+                    <div class="manipal-course-options">
+
+                        @forelse($courses ?? [] as $course)
+                            <div class="manipal-course-option" data-value="{{ $course }}">
+                                {{ $course }}
+                            </div>
+                        @empty
+                            <div class="manipal-course-empty">
+                                No courses available
+                            </div>
+                        @endforelse
+
+                        <div class="manipal-course-empty" hidden>
+                            No matching courses found
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
             <button class="btn-primary full" type="submit">
                 Book Free Counselling
             </button>

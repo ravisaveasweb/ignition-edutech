@@ -412,10 +412,9 @@
                 <a href="{{ route('study-abroad.reviews.index') }}" class="sa-review">
                     ✎ Write a Review
                 </a>
-                <a href="javascript:void(0);" class="sa-counselling">
-                    <a href="{{ route('study-abroad.application') }}">
-                        <span>♧ Get Counselling</span>
-                    </a>
+                <a href="{{ route('home') }}#contact-form-section" class="si-counselling-link">
+                    <i class="bi bi-chat-dots"></i>
+                    Get Counselling
                 </a>
 
                 <button type="button" class="sa-explore-trigger" id="saExploreTrigger">

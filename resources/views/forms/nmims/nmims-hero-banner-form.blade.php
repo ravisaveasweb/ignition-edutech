@@ -6,19 +6,46 @@
         <p>Talk to our experts & choose the right program for your future.</p>
         <input type="hidden" name="source" value="NMIMS Hero Form">
 
-        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="text" name="name" id="nmimsHomeName" placeholder="Full Name" minlength="2" maxlength="60"
+            pattern="[A-Za-z ]+" title="Please enter a valid name using letters only." autocomplete="name" required>
 
-        <input type="text" name="mobile" placeholder="Mobile Number" required>
+        <input type="tel" name="mobile" id="nmimsHomeMobile" placeholder="Mobile Number" maxlength="10"
+            pattern="[6-9][0-9]{9}" title="Enter a valid 10-digit Indian mobile number." inputmode="numeric"
+            autocomplete="tel" required>
 
-        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="email" name="email" id="nmimsHomeEmail" placeholder="Email Address" maxlength="100"
+            autocomplete="email" title="Please enter a valid email address." required>
 
-        <select class="mb-4" name="course_name" required>
-            <option value="" disabled selected hidden>Select Program of Interest</option>
-            <option value="MCA">MCA</option>
-            <option value="MBA">MBA</option>
-            <option value="BCA">BCA</option>
-            <option value="BBA">BBA</option>
-        </select>
+        <div class="nmims-course-dropdown">
+
+            <button type="button" class="nmims-course-trigger">
+                <span class="nmims-course-selected">Select Program of Interest</span>
+                <i class="bi bi-chevron-down"></i>
+            </button>
+
+            <input type="hidden" name="course_name" class="nmims-course-value" required>
+
+            <div class="nmims-course-menu">
+
+                <input type="text" class="nmims-course-search" placeholder="Search course...">
+
+                <div class="nmims-course-options">
+
+                    @forelse($courses ?? [] as $course)
+                        <div class="nmims-course-option" data-value="{{ $course }}">
+                            {{ $course }}
+                        </div>
+                    @empty
+                        <div class="nmims-course-empty">
+                            No courses available
+                        </div>
+                    @endforelse
+
+                </div>
+
+            </div>
+
+        </div>
 
         <button class="btn-primary full" type="submit">
             Book Free Counselling
