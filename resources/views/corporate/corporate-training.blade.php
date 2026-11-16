@@ -12,6 +12,9 @@
 @endphp
 
 <x-frontend-header />
+<x-study-india-header/>
+
+
 <div class="corp-train">
     <section class="corp-train-hero">
         <div class="container">
@@ -20,7 +23,8 @@
                     <span class="corp-train-eyebrow">{{ data_get($hero, 'eyebrow', '') }}</span>
                     <h1 class="corp-train-title">{{ data_get($hero, 'title', '') }}</h1>
                     <p class="corp-train-subtitle">{{ data_get($hero, 'subtitle', '') }}</p>
-                    <a href="#corp-train-cta" class="corp-train-btn-primary">Discuss Your Training Requirements</a>
+                    <a href="#" class="corp-train-btn-primary ign-enquiry-popup-trigger"
+                data-source="Corporate Training- Hero Banner">Discuss Your Training Requirements</a>
                 </div>
             </div>
         </div>
@@ -87,8 +91,12 @@
         <div class="container text-center">
             <h2>{{ data_get($cta, 'title', '') }}</h2>
             <p>{{ data_get($cta, 'text', '') }}</p>
-            <a href="{{ $contactHref }}" class="corp-train-btn-primary">{{ data_get($cta, 'button', '') }}</a>
+            <a href="#" class="corp-train-btn-primary ign-enquiry-popup-trigger"
+                data-source="Corporate Training - Hero Banner">{{ data_get($cta, 'button', '') }}</a>
         </div>
     </section>
 </div>
+
+<x-university-enquiry-popup :courses="$courses ?? []" />
+
 <x-frontend-footer />

@@ -17,6 +17,9 @@
 @endphp
 
 <x-frontend-header />
+<x-study-india-header/>
+
+
 <div class="oe-exec">
     <section class="oe-exec-hero">
         <div class="container">
@@ -51,7 +54,7 @@
                 @foreach ($highlights as $item)
                     <div class="col-md-6 col-lg-3">
                         <div class="corp-recruit-card">
-                            <i class="bi {{data_get($item, 'icon', 'bi-lightbulb-fill') }}"></i>
+                            <i class="bi {{ data_get($item, 'icon', 'bi-lightbulb-fill') }}"></i>
                             <h3 class="corp-recruit-card-title">{{ data_get($item, 'title', '') }}</h3>
                             <p class="corp-recruit-card-text">{{ data_get($item, 'text', '') }}</p>
                         </div>
@@ -116,7 +119,7 @@
                 @foreach ($leadershipBenefits as $item)
                     <div class="col-md-4">
                         <div class="corp-recruit-card">
-                             <i class="bi {{data_get($item, 'icon', 'bi-lightbulb-fill') }}"></i>
+                            <i class="bi {{ data_get($item, 'icon', 'bi-lightbulb-fill') }}"></i>
                             <h3 class="corp-recruit-card-title">{{ data_get($item, 'title', '') }}</h3>
                             <p class="corp-recruit-card-text">{{ data_get($item, 'text', '') }}</p>
                         </div>
@@ -142,8 +145,8 @@
                     <div class="oe-exec-cta-box">
                         <h3>{{ data_get($cta, 'title', '') }}</h3>
                         <p>{{ data_get($cta, 'text', '') }}</p>
-                        <a href="{{ $applicationHref }}"
-                            class="oe-exec-btn-primary">{{ data_get($cta, 'button', '') }}</a>
+                        <a href="#" class="oe-exec-btn-primary ign-enquiry-popup-trigger"
+                            data-source="Executive Program - Hero Banner">{{ data_get($cta, 'button', '') }}</a>
                     </div>
                 </div>
             </div>
@@ -158,7 +161,7 @@
                 @foreach ($careerOutcomes as $item)
                     <div class="col-md-4">
                         <div class="corp-recruit-card">
-                             <i class="bi {{data_get($item, 'icon', 'bi-lightbulb-fill') }}"></i>
+                            <i class="bi {{ data_get($item, 'icon', 'bi-lightbulb-fill') }}"></i>
                             <h3 class="corp-recruit-card-title">{{ data_get($item, 'role', '') }}</h3>
                             <p class="corp-recruit-card-text">{{ data_get($item, 'text', '') }}</p>
                         </div>
@@ -217,9 +220,13 @@
         <div class="container text-center">
             <h2>{{ data_get($cta, 'title', '') }}</h2>
             <p>{{ data_get($cta, 'text', '') }}</p>
-            <a href="{{ $applicationHref }}" class="oe-exec-btn-primary">{{ data_get($cta, 'button', '') }}</a>
+            <a href="#" class="oe-exec-btn-primary  ign-enquiry-popup-trigger"
+                data-source="Executive Program - Hero Banner">{{ data_get($cta, 'button', '') }}</a>
         </div>
     </section>
 </div>
+
+<x-university-enquiry-popup :courses="$courses ?? []" />
+
 
 <x-frontend-footer />

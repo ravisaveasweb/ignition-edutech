@@ -1,4 +1,6 @@
 <x-frontend-header />
+<x-study-india-header/>
+
 
 <main>
     <!-- about banner area start -->
@@ -20,12 +22,12 @@
                     and academics.</p>
 
                 <div class="nmims-hero-banner-area">
-                    <button class="nmims-hero-button" type="submit">Apply Now <span><svg
+                    <a href="{{ route('study-india.register') }}" class="nmims-hero-button" type="submit">Apply Now <span><svg
                                 xmlns="http://www.w3.org/2000/svg" width="7" height="12" viewBox="0 0 7 12"
                                 fill="none">
                                 <path d="M1 11L6 6L1 1" stroke="#FEFEFE" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round"></path>
-                            </svg></span></button>
+                            </svg></span></a>
                 </div>
 
                 <!-- <p>Empower your career with NMIMS CDOE’s flexible and industry-aligned online programs, designed to fit seamlessly into your professional life.</p> -->
@@ -754,7 +756,7 @@
                         <h2>Admissions Open for the Current Session</h2>
                         <h5>July 2026 Session</h5>
                         <p class="text-danger fw-bold">Apply Before Seats Fill !!!</p>
-                        <a href="#" class="apply-now-btn">Apply now &nbsp; <i
+                        <a href="{{ route('study-india.register') }}" class="apply-now-btn">Apply now &nbsp; <i
                                 class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>

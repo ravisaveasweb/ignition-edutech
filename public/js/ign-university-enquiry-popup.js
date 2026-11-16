@@ -12,6 +12,7 @@
         const popupCard = popup.querySelector('.ign-enquiry-popup');
         const closeButton = popup.querySelector('.ign-enquiry-popup-close');
         const sourceInput = popup.querySelector('#ignEnquirySource');
+        const enquiryTypeInput = popup.querySelector('#ignEnquiryType');
         const enquiryForm = popup.querySelector('#ignUniversityEnquiryForm');
 
         if (!popupCard || !closeButton || !enquiryForm) return;
@@ -19,9 +20,15 @@
         popup.dataset.ignEnquiryInitialized = 'true';
 
         /* OPEN POPUP */
-        function openIgnEnquiryPopup(source) {
-            if (sourceInput) sourceInput.value = source || 'University Popup';
+        function openIgnEnquiryPopup(source, enquiryType) {
 
+            if (sourceInput) {
+                sourceInput.value = source || 'University Popup';
+            }
+
+            if (enquiryTypeInput) {
+                enquiryTypeInput.value = enquiryType || 'Counselling';
+            }
             popup.classList.add('ign-enquiry-popup-active');
             popup.setAttribute('aria-hidden', 'false');
             document.body.classList.add('ign-enquiry-popup-open');
@@ -50,7 +57,10 @@
             if (!trigger) return;
 
             event.preventDefault();
-            openIgnEnquiryPopup(trigger.dataset.source || 'University Popup');
+            openIgnEnquiryPopup(
+                trigger.dataset.source || 'University Popup',
+                trigger.dataset.enquiryType || 'Counselling'
+            );
         });
 
         /* CLOSE BUTTON */
@@ -67,6 +77,14 @@
                 closeIgnEnquiryPopup();
             }
         });
+        /* FULL NAME - PREVENT NUMBERS */
+        const nameInput = enquiryForm.querySelector('input[name="name"]');
+
+        if (nameInput) {
+            nameInput.addEventListener('input', function () {
+                this.value = this.value.replace(/[^\p{L}\p{M} .'-]/gu, '');
+            });
+        }
 
         /* MOBILE NUMBER - DIGITS ONLY */
         const mobileInput = enquiryForm.querySelector('input[name="mobile"]');

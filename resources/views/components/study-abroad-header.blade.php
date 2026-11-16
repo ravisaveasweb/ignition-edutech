@@ -69,6 +69,7 @@
     <link rel="stylesheet" href="{{ asset('css/courses.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/study-abroad-header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/study-india-header.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/ign-university-enquiry-popup.css') }}?v=1">
 
 
 
@@ -384,6 +385,13 @@
         ];
         // Display only these destinations in the country popup.
         $worldCountries = collect(array_keys($countryCodes));
+
+        // Load active courses for the enquiry popup
+        $courses = \App\Models\ApplicationMasterData::where('type', 'course')
+            ->where('status', 1)
+            ->orderBy('name')
+            ->pluck('name')
+            ->toArray();
     @endphp
 
 
@@ -412,10 +420,12 @@
                 <a href="{{ route('study-abroad.reviews.index') }}" class="sa-review">
                     ✎ Write a Review
                 </a>
-                <a href="{{ route('home') }}#contact-form-section" class="si-counselling-link">
+                <a href="#" class="si-counselling-link ign-enquiry-popup-trigger"
+                    data-source="Study Abroad Page" data-enquiry-type="Study Abroad">
                     <i class="bi bi-chat-dots"></i>
                     Get Counselling
                 </a>
+
 
                 <button type="button" class="sa-explore-trigger" id="saExploreTrigger">
                     ▦ Explore
@@ -1127,6 +1137,12 @@
         </div>
     @endif
 
+
+    <x-university-enquiry-popup :courses="$courses ?? []" />
+
+
+
+
     <script>
         document.addEventListener('click', function(event) {
             const closeButton = event.target.closest('[data-sa-auth-modal-close]');
@@ -1147,7 +1163,4 @@
 
 
 
-<script src="{{ asset('js/study-abroad-header.js') }}"></script>
-
-
-
+    <script src="{{ asset('js/study-abroad-header.js') }}"></script>

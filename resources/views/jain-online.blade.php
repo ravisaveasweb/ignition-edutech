@@ -1,4 +1,7 @@
 <x-frontend-header />
+<x-study-india-header/>
+
+
 
 <main class="jain-online-page">
     <section class="jain-shell">

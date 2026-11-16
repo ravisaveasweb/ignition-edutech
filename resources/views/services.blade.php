@@ -88,6 +88,8 @@
 @endphp
 
 <x-frontend-header />
+<x-study-india-header/>
+
 
 <section class="page-hero services-page-image">
     <div class="container">
@@ -96,7 +98,8 @@
         <p class="lede">End-to-end education and career consulting services designed to support learners, parents,
             institutions, and organisations at every stage of their journey.</p>
         <div class="hero-actions">
-            <a href="{{ route('contact') }}" class="btn btn-orange">Get Free Counselling &rarr;</a>
+            <a href="#" class="btn btn-orange  ign-enquiry-popup-trigger" data-source="Services - Hero Banner">Get
+                Free Counselling &rarr;</a>
         </div>
     </div>
 </section>
@@ -183,11 +186,15 @@
             </div>
         </div>
         <div class="cta-actions">
-            <a href="{{ route('contact') }}" class="btn btn-orange">Get Free Counselling &rarr;</a>
+            <a href="#" class="btn btn-orange  ign-enquiry-popup-trigger" data-source="Services - Hero Banner">Get
+                Free Counselling &rarr;</a>
             <a href="https://wa.me/918655055150" class="btn btn-outline"
                 style="border-color:rgba(255,255,255,.3); color:#fff;">WhatsApp Us</a>
         </div>
     </div>
 </div>
+
+<x-university-enquiry-popup :courses="$courses ?? []" />
+
 
 <x-frontend-footer />

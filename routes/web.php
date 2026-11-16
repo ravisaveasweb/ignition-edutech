@@ -69,7 +69,8 @@ Route::post('/contact-form', [ContactFormController::class, 'store'])->name('con
 
 Route::get('/counselling/dmit-test', [HomeController::class, 'd_mit_test'])->name('dmit-test');
 Route::get('/counselling/career-counselling', [HomeController::class, 'career_counseling'])->name('career-counselling');
-Route::get('/study-abroad', [HomeController::class, 'study_abroad'])->name('study-abroad');
+
+// Route::get('/study-abroad', [HomeController::class, 'study_abroad'])->name('study-abroad');
 
 // --- Online Education ---------------------------------------------------
 Route::get('/online-undergraduate-program', [ProgramsController::class, 'undergraduate'])
@@ -175,9 +176,9 @@ Route::get(
 )->name('study-abroad.completed');
 
 
-Route::get('/study-abroad', function () {
-    return view('study_abroad');
-})->name('study-abroad');
+// Route::get('/study-abroad', function () {
+//     return view('study_abroad');
+// })->name('study-abroad');
 
 Route::get('/study-abroad', [StudyAbroadApplicationController::class, 'studyAbroad'])
     ->name('study-abroad');
@@ -463,10 +464,15 @@ Route::get('/study-india/location/{type}/{slug}', [
 
 // Universities courses page start
 
-Route::get('/study-india/universities-courses', function(){
-    return view('study-india.universities-courses.index');
+// Route::get('/study-india/universities-courses', function(){
+//     return view('study-india.universities-courses.index');
 
-})->name('study-india.universities-courses');
+// })->name('study-india.universities-courses');
+
+Route::get(
+    '/study-india/universities-courses',
+    [StudyIndiaController::class, 'universitiesCourses']
+)->name('study-india.universities-courses');
 
 // Universities courses page end
 

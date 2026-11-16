@@ -44,7 +44,8 @@
                             and every country, so your choice is guided by what fits you, not by what we happen to
                             sell.</p>
                         <div class="hero-cta">
-                            <a href="#sa-book" class="btn-sa">Book Free Counselling Call</a>
+                            <a href="#" class="btn-sa ign-enquiry-popup-trigger"
+                data-source="Study Abroad - Hero Banner">Book Free Counselling Call</a>
                             <a href="#sa-process" class="btn-outline-sa">See The 10-Step Process</a>
                         </div>
                         <div class="stat-strip">
@@ -517,7 +518,8 @@
                         </p>
                     </div>
                 </div>
-                <a href="{{ route('study-abroad.application') }}" class="ign-footer-button">
+                <a href="#" class="ign-footer-button ign-enquiry-popup-trigger"
+                data-source="Study Abroad - Hero Banner">
                     Get Free Counselling
                     <i class="bi bi-arrow-right"></i>
                 </a>
@@ -889,12 +891,17 @@
                     <h3>Ready to start your global education journey?</h3>
                     <p>Book a free session to explore top universities, visa assistance, and global career pathways.</p>
                 </div>
-                <a href="{{ route('contact') }}" class="btn-overseas">Book Free Counselling</a>
+                <a href="#" class="btn-overseas ign-enquiry-popup-trigger"
+                data-source="Study Abroad - Hero Banner">Book Free Counselling</a>
             </div>
         </div>
     </section>
 
 </div>
+
+
+
+<x-university-enquiry-popup :courses="$courses ?? []" />
 
 <x-frontend-footer />
 

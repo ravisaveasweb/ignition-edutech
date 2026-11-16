@@ -251,6 +251,7 @@
             'subtitle' => 'Options',
         ],
     ];
+    
 
 @endphp
 
@@ -440,7 +441,7 @@
             {{-- <div class="ir-btn-wrapper">
                 <a href="/contact" class="ir-btn-primary">Book a Free Counselling Session</a>
             </div> --}}
-            <a href="{{ route('home') }}#contact-form-section" class="ir-btn-primary">
+            <a href="#" class="ir-btn-primary  ign-enquiry-popup-trigger" data-source="Home - Hero Banner">
                 Book a Free Counselling Session
             </a>
         </div>
@@ -518,7 +519,9 @@
                         <li>✔ Get support with university selection</li>
                     </ul>
                     <div class="help-actions">
-                        <a href="{{ route('home') }}#contact-form-section" class="btn-primary">Book Free Counselling Call</a>
+                        <a href="#" class="btn-primary  ign-enquiry-popup-trigger"
+                            data-source="Home - Hero Banner">Book Free Counselling
+                            Call</a>
                     </div>
                 </div>
                 <div class="col-lg-5">
@@ -822,11 +825,11 @@
                                 <div class="cta-card-content">
                                     <h3>Ready to Start Your Journey?</h3>
                                     <p>Take the first step towards a successful career.</p>
-                                    <a href="{{ route('study-india.register') }}"
-                                        class="btn primary-btn">Apply
+                                    <a href="{{ route('study-india.register') }}" class="btn primary-btn">Apply
                                         Now</a>
                                     <span class="or">or</span>
-                                    <a href="{{ route('home') }}#contact-form-section" class="btn outline-btn">Talk to Counselor</a>
+                                    <a href="#" class="btn outline-btn ign-enquiry-popup-trigger"
+                                        data-source="Home - Hero Banner">Talk to Counselor</a>
                                 </div>
                             </div>
                             <div class="col-md-4 text-center">
@@ -847,6 +850,8 @@
 {{-- <div class="hs-form-frame" data-region="na2" data-form-id="a7c9f6e6-c812-409c-8110-288692f5e36e"
     data-portal-id="247564101"></div> --}}
 
+
+<x-university-enquiry-popup :courses="$courses ?? []" />
 
 <x-frontend-footer />
 

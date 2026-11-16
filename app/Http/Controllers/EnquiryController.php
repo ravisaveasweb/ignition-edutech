@@ -20,6 +20,7 @@ class EnquiryController extends Controller
             'mobile'  => $request->mobile,
             'program' => $request->input('program') ?: $request->input('course_name'),
             'source'  => $request->source,
+            'enquiry_type' => $request->input('enquiry_type'),
         ]);
 
         Mail::to(config('mail.admin_email'))

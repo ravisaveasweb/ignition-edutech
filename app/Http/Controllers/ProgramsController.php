@@ -30,8 +30,11 @@ class ProgramsController extends Controller
 
     public function executive(): View
     {
+                  $courses = $this->getActiveCourses();
         return view('programs.executive-program', [
             'page' => ProgramsData::executive(),
+             'courses' => $courses,
+
         ]);
     }
 

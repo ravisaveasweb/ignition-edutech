@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\View\View;
+use App\Models\ApplicationMasterData;
+
 
 class StudyIndiaController extends Controller
 {
@@ -24,5 +27,20 @@ class StudyIndiaController extends Controller
 
         // If the page does not exist, go to homepage
         return redirect()->route('home');
+    }
+
+
+    public function universitiesCourses(): View
+    {
+        $courses = $this->getActiveCourses();
+        return view('study-india.universities-courses.index', compact('courses'));
+    }
+
+    private function getActiveCourses()
+    {
+        return ApplicationMasterData::where('type', 'course')
+            ->where('status', 1)
+            ->orderBy('name')
+            ->pluck('name');
     }
 }

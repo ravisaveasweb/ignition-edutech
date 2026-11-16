@@ -1,4 +1,6 @@
 <x-frontend-header />
+<x-study-india-header/>
+
 
 {{-- @section('title', 'Career Counselling & DMIT Test | Ignition Edutech')
 
@@ -39,7 +41,8 @@
                     <p class="lede">Guiding you to Uplift your Career Paths, enabling you to reach the Summit of
                         SUCCESS — through an AI-powered assessment across five dimensions of you.</p>
                     <div class="hero-cta">
-                       <a href="{{ route('contact') }}" class="btn-psy">Take the Assessment</a>
+                        <a href="#" class="btn-psy ign-enquiry-popup-trigger"
+                            data-source="Career Counselling - Hero Banner">Take the Assessment</a>
                         <a href="#psy-pillars" class="btn-outline-psy">Explore the 5 pillars</a>
                     </div>
                     <div class="stat-strip">
@@ -59,98 +62,123 @@
                         <div class="hero-corner bl"></div>
                         <div class="hero-corner br"></div>
 
-                        <svg class="hero-framework-svg" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="careerFrameworkTitle">
+                        <svg class="hero-framework-svg" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid meet"
+                            role="img" aria-labelledby="careerFrameworkTitle">
                             <title id="careerFrameworkTitle">Career discovery framework</title>
                             <defs>
                                 <filter id="psyGlow" x="-50%" y="-50%" width="200%" height="200%">
-                                    <feGaussianBlur stdDeviation="8" result="blur"/>
+                                    <feGaussianBlur stdDeviation="8" result="blur" />
                                     <feMerge>
-                                        <feMergeNode in="blur"/>
-                                        <feMergeNode in="SourceGraphic"/>
+                                        <feMergeNode in="blur" />
+                                        <feMergeNode in="SourceGraphic" />
                                     </feMerge>
                                 </filter>
                                 <filter id="psyIconGlow" x="-50%" y="-50%" width="200%" height="200%">
-                                    <feGaussianBlur stdDeviation="3" result="blur"/>
+                                    <feGaussianBlur stdDeviation="3" result="blur" />
                                     <feMerge>
-                                        <feMergeNode in="blur"/>
-                                        <feMergeNode in="SourceGraphic"/>
+                                        <feMergeNode in="blur" />
+                                        <feMergeNode in="SourceGraphic" />
                                     </feMerge>
                                 </filter>
 
                                 <radialGradient id="psyCenterGlow" cx="50%" cy="50%" r="50%">
-                                    <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.35"/>
-                                    <stop offset="50%" stop-color="#1e40af" stop-opacity="0.15"/>
-                                    <stop offset="100%" stop-color="#020817" stop-opacity="0"/>
+                                    <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.35" />
+                                    <stop offset="50%" stop-color="#1e40af" stop-opacity="0.15" />
+                                    <stop offset="100%" stop-color="#020817" stop-opacity="0" />
                                 </radialGradient>
 
-                                <linearGradient id="professionalGreen" x1="15%" y1="10%" x2="85%" y2="90%">
-                                    <stop offset="0%" stop-color="#34d399"/>
-                                    <stop offset="100%" stop-color="#047857"/>
+                                <linearGradient id="professionalGreen" x1="15%" y1="10%" x2="85%"
+                                    y2="90%">
+                                    <stop offset="0%" stop-color="#34d399" />
+                                    <stop offset="100%" stop-color="#047857" />
                                 </linearGradient>
-                                <linearGradient id="professionalOrange" x1="15%" y1="10%" x2="85%" y2="90%">
-                                    <stop offset="0%" stop-color="#fb923c"/>
-                                    <stop offset="100%" stop-color="#c2410c"/>
+                                <linearGradient id="professionalOrange" x1="15%" y1="10%" x2="85%"
+                                    y2="90%">
+                                    <stop offset="0%" stop-color="#fb923c" />
+                                    <stop offset="100%" stop-color="#c2410c" />
                                 </linearGradient>
-                                <linearGradient id="professionalRose" x1="15%" y1="10%" x2="85%" y2="90%">
-                                    <stop offset="0%" stop-color="#fb7185"/>
-                                    <stop offset="100%" stop-color="#be123c"/>
+                                <linearGradient id="professionalRose" x1="15%" y1="10%" x2="85%"
+                                    y2="90%">
+                                    <stop offset="0%" stop-color="#fb7185" />
+                                    <stop offset="100%" stop-color="#be123c" />
                                 </linearGradient>
-                                <linearGradient id="professionalCyan" x1="15%" y1="10%" x2="85%" y2="90%">
-                                    <stop offset="0%" stop-color="#22d3ee"/>
-                                    <stop offset="100%" stop-color="#0e7490"/>
+                                <linearGradient id="professionalCyan" x1="15%" y1="10%" x2="85%"
+                                    y2="90%">
+                                    <stop offset="0%" stop-color="#22d3ee" />
+                                    <stop offset="100%" stop-color="#0e7490" />
                                 </linearGradient>
-                                <linearGradient id="professionalPurple" x1="15%" y1="10%" x2="85%" y2="90%">
-                                    <stop offset="0%" stop-color="#a78bfa"/>
-                                    <stop offset="100%" stop-color="#6d28d9"/>
+                                <linearGradient id="professionalPurple" x1="15%" y1="10%" x2="85%"
+                                    y2="90%">
+                                    <stop offset="0%" stop-color="#a78bfa" />
+                                    <stop offset="100%" stop-color="#6d28d9" />
                                 </linearGradient>
-                                <linearGradient id="professionalTeal" x1="15%" y1="10%" x2="85%" y2="90%">
-                                    <stop offset="0%" stop-color="#2dd4bf"/>
-                                    <stop offset="100%" stop-color="#0f766e"/>
+                                <linearGradient id="professionalTeal" x1="15%" y1="10%" x2="85%"
+                                    y2="90%">
+                                    <stop offset="0%" stop-color="#2dd4bf" />
+                                    <stop offset="100%" stop-color="#0f766e" />
                                 </linearGradient>
-                                <linearGradient id="professionalGold" x1="15%" y1="10%" x2="85%" y2="90%">
-                                    <stop offset="0%" stop-color="#facc15"/>
-                                    <stop offset="100%" stop-color="#a16207"/>
+                                <linearGradient id="professionalGold" x1="15%" y1="10%" x2="85%"
+                                    y2="90%">
+                                    <stop offset="0%" stop-color="#facc15" />
+                                    <stop offset="100%" stop-color="#a16207" />
                                 </linearGradient>
-                                <linearGradient id="professionalViolet" x1="15%" y1="10%" x2="85%" y2="90%">
-                                    <stop offset="0%" stop-color="#c084fc"/>
-                                    <stop offset="100%" stop-color="#7e22ce"/>
+                                <linearGradient id="professionalViolet" x1="15%" y1="10%" x2="85%"
+                                    y2="90%">
+                                    <stop offset="0%" stop-color="#c084fc" />
+                                    <stop offset="100%" stop-color="#7e22ce" />
                                 </linearGradient>
-                                <linearGradient id="professionalBlue" x1="15%" y1="10%" x2="85%" y2="90%">
-                                    <stop offset="0%" stop-color="#60a5fa"/>
-                                    <stop offset="100%" stop-color="#1d4ed8"/>
+                                <linearGradient id="professionalBlue" x1="15%" y1="10%" x2="85%"
+                                    y2="90%">
+                                    <stop offset="0%" stop-color="#60a5fa" />
+                                    <stop offset="100%" stop-color="#1d4ed8" />
                                 </linearGradient>
                             </defs>
 
-                            <circle cx="400" cy="400" r="380" fill="url(#psyCenterGlow)"/>
+                            <circle cx="400" cy="400" r="380" fill="url(#psyCenterGlow)" />
 
                             <g fill="#60a5fa" opacity="0.5">
-                                <circle cx="80" cy="120" r="1"/><circle cx="720" cy="100" r="1.5"/>
-                                <circle cx="150" cy="680" r="1"/><circle cx="680" cy="720" r="1.5"/>
-                                <circle cx="50" cy="400" r="1"/><circle cx="750" cy="400" r="1"/>
-                                <circle cx="400" cy="40" r="1.5"/><circle cx="400" cy="760" r="1"/>
+                                <circle cx="80" cy="120" r="1" />
+                                <circle cx="720" cy="100" r="1.5" />
+                                <circle cx="150" cy="680" r="1" />
+                                <circle cx="680" cy="720" r="1.5" />
+                                <circle cx="50" cy="400" r="1" />
+                                <circle cx="750" cy="400" r="1" />
+                                <circle cx="400" cy="40" r="1.5" />
+                                <circle cx="400" cy="760" r="1" />
                             </g>
 
-                            <circle cx="400" cy="400" r="340" fill="none" stroke="#1e3a8a" stroke-width="0.5" opacity="0.3" stroke-dasharray="2,12"/>
-                            <circle cx="400" cy="400" r="295" fill="none" stroke="#1e3a8a" stroke-width="1" opacity="0.4"/>
-                            <circle cx="400" cy="400" r="295" fill="none" stroke="#3b82f6" stroke-width="6" opacity="0.25" stroke-dasharray="2 28.5"/>
-                            <circle cx="400" cy="400" r="170" fill="none" stroke="#1e3a8a" stroke-width="0.5" opacity="0.4" stroke-dasharray="4,4"/>
-                            <circle cx="400" cy="400" r="105" fill="none" stroke="#1e3a8a" stroke-width="0.5" opacity="0.3"/>
+                            <circle cx="400" cy="400" r="340" fill="none" stroke="#1e3a8a"
+                                stroke-width="0.5" opacity="0.3" stroke-dasharray="2,12" />
+                            <circle cx="400" cy="400" r="295" fill="none" stroke="#1e3a8a"
+                                stroke-width="1" opacity="0.4" />
+                            <circle cx="400" cy="400" r="295" fill="none" stroke="#3b82f6"
+                                stroke-width="6" opacity="0.25" stroke-dasharray="2 28.5" />
+                            <circle cx="400" cy="400" r="170" fill="none" stroke="#1e3a8a"
+                                stroke-width="0.5" opacity="0.4" stroke-dasharray="4,4" />
+                            <circle cx="400" cy="400" r="105" fill="none" stroke="#1e3a8a"
+                                stroke-width="0.5" opacity="0.3" />
 
                             <g opacity="0.3">
-                                <animateTransform attributeName="transform" type="rotate" from="360 400 400" to="0 400 400" dur="80s" repeatCount="indefinite"/>
-                                <circle cx="400" cy="400" r="340" fill="none" stroke="#3b82f6" stroke-width="0.5" stroke-dasharray="20,15"/>
+                                <animateTransform attributeName="transform" type="rotate" from="360 400 400"
+                                    to="0 400 400" dur="80s" repeatCount="indefinite" />
+                                <circle cx="400" cy="400" r="340" fill="none" stroke="#3b82f6"
+                                    stroke-width="0.5" stroke-dasharray="20,15" />
                             </g>
 
                             <g id="psyRing">
-                                <animateTransform attributeName="transform" type="rotate" from="0 400 400" to="360 400 400" dur="45s" repeatCount="indefinite"/>
+                                <animateTransform attributeName="transform" type="rotate" from="0 400 400"
+                                    to="360 400 400" dur="45s" repeatCount="indefinite" />
 
                                 <g transform="translate(400, 105)">
                                     <g>
-                                        <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="-360 0 0" dur="45s" repeatCount="indefinite"/>
-                                        <circle r="48" fill="url(#professionalGreen)" filter="url(#psyIconGlow)"/>
-                                        <circle r="48" fill="none" stroke="#ffffff" stroke-width="2" opacity=".9"/>
+                                        <animateTransform attributeName="transform" type="rotate" from="0 0 0"
+                                            to="-360 0 0" dur="45s" repeatCount="indefinite" />
+                                        <circle r="48" fill="url(#professionalGreen)" filter="url(#psyIconGlow)" />
+                                        <circle r="48" fill="none" stroke="#ffffff" stroke-width="2"
+                                            opacity=".9" />
                                         <foreignObject x="-32" y="-34" width="64" height="58">
-                                            <div xmlns="http://www.w3.org/1999/xhtml" class="psy-fa-icon"><i class="fa-solid fa-user-gear"></i></div>
+                                            <div xmlns="http://www.w3.org/1999/xhtml" class="psy-fa-icon"><i
+                                                    class="fa-solid fa-user-gear"></i></div>
                                         </foreignObject>
                                         <text class="psy-component-label" y="76">Self-Assessment</text>
                                         <text class="psy-component-label" y="96">&amp; Profiling</text>
@@ -159,11 +187,14 @@
 
                                 <g transform="translate(585, 160)">
                                     <g>
-                                        <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="-360 0 0" dur="45s" repeatCount="indefinite"/>
-                                        <circle r="48" fill="url(#professionalOrange)" filter="url(#psyIconGlow)"/>
-                                        <circle r="48" fill="none" stroke="#ffffff" stroke-width="2" opacity=".9"/>
+                                        <animateTransform attributeName="transform" type="rotate" from="0 0 0"
+                                            to="-360 0 0" dur="45s" repeatCount="indefinite" />
+                                        <circle r="48" fill="url(#professionalOrange)" filter="url(#psyIconGlow)" />
+                                        <circle r="48" fill="none" stroke="#ffffff" stroke-width="2"
+                                            opacity=".9" />
                                         <foreignObject x="-32" y="-34" width="64" height="58">
-                                            <div xmlns="http://www.w3.org/1999/xhtml" class="psy-fa-icon"><i class="fa-solid fa-cubes"></i></div>
+                                            <div xmlns="http://www.w3.org/1999/xhtml" class="psy-fa-icon"><i
+                                                    class="fa-solid fa-cubes"></i></div>
                                         </foreignObject>
                                         <text class="psy-component-label" y="76">Skill &amp; Talent</text>
                                         <text class="psy-component-label" y="96">Mapping</text>
@@ -172,11 +203,14 @@
 
                                 <g transform="translate(675, 315)">
                                     <g>
-                                        <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="-360 0 0" dur="45s" repeatCount="indefinite"/>
-                                        <circle r="48" fill="url(#professionalRose)" filter="url(#psyIconGlow)"/>
-                                        <circle r="48" fill="none" stroke="#ffffff" stroke-width="2" opacity=".9"/>
+                                        <animateTransform attributeName="transform" type="rotate" from="0 0 0"
+                                            to="-360 0 0" dur="45s" repeatCount="indefinite" />
+                                        <circle r="48" fill="url(#professionalRose)" filter="url(#psyIconGlow)" />
+                                        <circle r="48" fill="none" stroke="#ffffff" stroke-width="2"
+                                            opacity=".9" />
                                         <foreignObject x="-32" y="-34" width="64" height="58">
-                                            <div xmlns="http://www.w3.org/1999/xhtml" class="psy-fa-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                                            <div xmlns="http://www.w3.org/1999/xhtml" class="psy-fa-icon"><i
+                                                    class="fa-solid fa-graduation-cap"></i></div>
                                         </foreignObject>
                                         <text class="psy-component-label" y="76">Stream &amp; Academic</text>
                                         <text class="psy-component-label" y="96">Selection</text>
@@ -185,11 +219,14 @@
 
                                 <g transform="translate(645, 500)">
                                     <g>
-                                        <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="-360 0 0" dur="45s" repeatCount="indefinite"/>
-                                        <circle r="48" fill="url(#professionalCyan)" filter="url(#psyIconGlow)"/>
-                                        <circle r="48" fill="none" stroke="#ffffff" stroke-width="2" opacity=".9"/>
+                                        <animateTransform attributeName="transform" type="rotate" from="0 0 0"
+                                            to="-360 0 0" dur="45s" repeatCount="indefinite" />
+                                        <circle r="48" fill="url(#professionalCyan)" filter="url(#psyIconGlow)" />
+                                        <circle r="48" fill="none" stroke="#ffffff" stroke-width="2"
+                                            opacity=".9" />
                                         <foreignObject x="-32" y="-34" width="64" height="58">
-                                            <div xmlns="http://www.w3.org/1999/xhtml" class="psy-fa-icon"><i class="fa-solid fa-chart-line"></i></div>
+                                            <div xmlns="http://www.w3.org/1999/xhtml" class="psy-fa-icon"><i
+                                                    class="fa-solid fa-chart-line"></i></div>
                                         </foreignObject>
                                         <text class="psy-component-label" y="76">Industry &amp; Market</text>
                                         <text class="psy-component-label" y="96">Exploration</text>
@@ -198,11 +235,14 @@
 
                                 <g transform="translate(515, 650)">
                                     <g>
-                                        <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="-360 0 0" dur="45s" repeatCount="indefinite"/>
-                                        <circle r="48" fill="url(#professionalPurple)" filter="url(#psyIconGlow)"/>
-                                        <circle r="48" fill="none" stroke="#ffffff" stroke-width="2" opacity=".9"/>
+                                        <animateTransform attributeName="transform" type="rotate" from="0 0 0"
+                                            to="-360 0 0" dur="45s" repeatCount="indefinite" />
+                                        <circle r="48" fill="url(#professionalPurple)" filter="url(#psyIconGlow)" />
+                                        <circle r="48" fill="none" stroke="#ffffff" stroke-width="2"
+                                            opacity=".9" />
                                         <foreignObject x="-32" y="-34" width="64" height="58">
-                                            <div xmlns="http://www.w3.org/1999/xhtml" class="psy-fa-icon"><i class="fa-solid fa-bullseye"></i></div>
+                                            <div xmlns="http://www.w3.org/1999/xhtml" class="psy-fa-icon"><i
+                                                    class="fa-solid fa-bullseye"></i></div>
                                         </foreignObject>
                                         <text class="psy-component-label" y="76">Career Goal</text>
                                         <text class="psy-component-label" y="96">Setting</text>
@@ -211,11 +251,14 @@
 
                                 <g transform="translate(285, 650)">
                                     <g>
-                                        <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="-360 0 0" dur="45s" repeatCount="indefinite"/>
-                                        <circle r="48" fill="url(#professionalTeal)" filter="url(#psyIconGlow)"/>
-                                        <circle r="48" fill="none" stroke="#ffffff" stroke-width="2" opacity=".9"/>
+                                        <animateTransform attributeName="transform" type="rotate" from="0 0 0"
+                                            to="-360 0 0" dur="45s" repeatCount="indefinite" />
+                                        <circle r="48" fill="url(#professionalTeal)" filter="url(#psyIconGlow)" />
+                                        <circle r="48" fill="none" stroke="#ffffff" stroke-width="2"
+                                            opacity=".9" />
                                         <foreignObject x="-32" y="-34" width="64" height="58">
-                                            <div xmlns="http://www.w3.org/1999/xhtml" class="psy-fa-icon"><i class="fa-solid fa-route"></i></div>
+                                            <div xmlns="http://www.w3.org/1999/xhtml" class="psy-fa-icon"><i
+                                                    class="fa-solid fa-route"></i></div>
                                         </foreignObject>
                                         <text class="psy-component-label" y="76">Personalized</text>
                                         <text class="psy-component-label" y="96">Career Roadmap</text>
@@ -224,11 +267,14 @@
 
                                 <g transform="translate(155, 500)">
                                     <g>
-                                        <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="-360 0 0" dur="45s" repeatCount="indefinite"/>
-                                        <circle r="48" fill="url(#professionalGold)" filter="url(#psyIconGlow)"/>
-                                        <circle r="48" fill="none" stroke="#ffffff" stroke-width="2" opacity=".9"/>
+                                        <animateTransform attributeName="transform" type="rotate" from="0 0 0"
+                                            to="-360 0 0" dur="45s" repeatCount="indefinite" />
+                                        <circle r="48" fill="url(#professionalGold)" filter="url(#psyIconGlow)" />
+                                        <circle r="48" fill="none" stroke="#ffffff" stroke-width="2"
+                                            opacity=".9" />
                                         <foreignObject x="-32" y="-34" width="64" height="58">
-                                            <div xmlns="http://www.w3.org/1999/xhtml" class="psy-fa-icon"><i class="fa-solid fa-id-card"></i></div>
+                                            <div xmlns="http://www.w3.org/1999/xhtml" class="psy-fa-icon"><i
+                                                    class="fa-solid fa-id-card"></i></div>
                                         </foreignObject>
                                         <text class="psy-component-label" y="76">Resume &amp; Profile</text>
                                         <text class="psy-component-label" y="96">Building</text>
@@ -237,11 +283,14 @@
 
                                 <g transform="translate(125, 315)">
                                     <g>
-                                        <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="-360 0 0" dur="45s" repeatCount="indefinite"/>
-                                        <circle r="48" fill="url(#professionalViolet)" filter="url(#psyIconGlow)"/>
-                                        <circle r="48" fill="none" stroke="#ffffff" stroke-width="2" opacity=".9"/>
+                                        <animateTransform attributeName="transform" type="rotate" from="0 0 0"
+                                            to="-360 0 0" dur="45s" repeatCount="indefinite" />
+                                        <circle r="48" fill="url(#professionalViolet)" filter="url(#psyIconGlow)" />
+                                        <circle r="48" fill="none" stroke="#ffffff" stroke-width="2"
+                                            opacity=".9" />
                                         <foreignObject x="-32" y="-34" width="64" height="58">
-                                            <div xmlns="http://www.w3.org/1999/xhtml" class="psy-fa-icon"><i class="fa-solid fa-user-check"></i></div>
+                                            <div xmlns="http://www.w3.org/1999/xhtml" class="psy-fa-icon"><i
+                                                    class="fa-solid fa-user-check"></i></div>
                                         </foreignObject>
                                         <text class="psy-component-label" y="76">Interview &amp; Skill</text>
                                         <text class="psy-component-label" y="96">Preparation</text>
@@ -250,11 +299,14 @@
 
                                 <g transform="translate(215, 160)">
                                     <g>
-                                        <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="-360 0 0" dur="45s" repeatCount="indefinite"/>
-                                        <circle r="48" fill="url(#professionalBlue)" filter="url(#psyIconGlow)"/>
-                                        <circle r="48" fill="none" stroke="#ffffff" stroke-width="2" opacity=".9"/>
+                                        <animateTransform attributeName="transform" type="rotate" from="0 0 0"
+                                            to="-360 0 0" dur="45s" repeatCount="indefinite" />
+                                        <circle r="48" fill="url(#professionalBlue)" filter="url(#psyIconGlow)" />
+                                        <circle r="48" fill="none" stroke="#ffffff" stroke-width="2"
+                                            opacity=".9" />
                                         <foreignObject x="-32" y="-34" width="64" height="58">
-                                            <div xmlns="http://www.w3.org/1999/xhtml" class="psy-fa-icon"><i class="fa-solid fa-rocket"></i></div>
+                                            <div xmlns="http://www.w3.org/1999/xhtml" class="psy-fa-icon"><i
+                                                    class="fa-solid fa-rocket"></i></div>
                                         </foreignObject>
                                         <text class="psy-component-label" y="76">Action Plan &amp;</text>
                                         <text class="psy-component-label" y="96">Execution</text>
@@ -264,14 +316,16 @@
 
                             <g transform="translate(400,400)">
                                 <foreignObject x="-70" y="-70" width="140" height="140">
-                                    <div xmlns="http://www.w3.org/1999/xhtml" style="width:140px;height:140px;display:flex;align-items:center;justify-content:center;color:#dff7ff;font-size:110px;line-height:1;filter:drop-shadow(0 0 12px rgba(56,217,255,.55));">
+                                    <div xmlns="http://www.w3.org/1999/xhtml"
+                                        style="width:140px;height:140px;display:flex;align-items:center;justify-content:center;color:#dff7ff;font-size:110px;line-height:1;filter:drop-shadow(0 0 12px rgba(56,217,255,.55));">
                                         <i class="fa-solid fa-compass"></i>
                                     </div>
                                 </foreignObject>
-                                <circle r="2" fill="#bfdbfe"/>
-                                <circle r="0.8" fill="#ffffff"/>
-                                <circle r="72" fill="none" stroke="#3b82f6" stroke-width="0.5" opacity="0.3" stroke-dasharray="3,3"/>
-                                <circle r="78" fill="none" stroke="#3b82f6" stroke-width="0.3" opacity="0.2"/>
+                                <circle r="2" fill="#bfdbfe" />
+                                <circle r="0.8" fill="#ffffff" />
+                                <circle r="72" fill="none" stroke="#3b82f6" stroke-width="0.5" opacity="0.3"
+                                    stroke-dasharray="3,3" />
+                                <circle r="78" fill="none" stroke="#3b82f6" stroke-width="0.3" opacity="0.2" />
                             </g>
                         </svg>
                     </div>
@@ -387,7 +441,8 @@
                         <div class="ai-step-indicator"></div>
                     </div>
                     <h3 class="ai-step-heading">Test - DMIT / Psychometric</h3>
-                    <p class="ai-step-body">Tailored to the interests of both students and parents, a choice between the
+                    <p class="ai-step-body">Tailored to the interests of both students and parents, a choice between
+                        the
                         DMIT or Psychometric test will be offered to unearth strengths, passions, and aspirations.</p>
                 </article>
 
@@ -407,7 +462,8 @@
                         <div class="ai-step-indicator"></div>
                     </div>
                     <h3 class="ai-step-heading">Education Road-Mapping</h3>
-                    <p class="ai-step-body">Counselors review the assessment results with the student, discuss potential
+                    <p class="ai-step-body">Counselors review the assessment results with the student, discuss
+                        potential
                         career paths, and co-create a personalized career plan. This plan outlines short-term and
                         long-term goals, recommended activities, and resources.</p>
                 </article>
@@ -428,7 +484,8 @@
                         <div class="ai-step-indicator"></div>
                     </div>
                     <h3 class="ai-step-heading">Ongoing Support &amp; Monitoring</h3>
-                    <p class="ai-step-body">Scheduled check-ins with career counselors provide ongoing support, allowing
+                    <p class="ai-step-body">Scheduled check-ins with career counselors provide ongoing support,
+                        allowing
                         students to discuss progress, challenges, and any changes in their career interests or goals.
                     </p>
                 </article>
@@ -470,12 +527,16 @@
                     <h3>Ready to see your full career profile?</h3>
                     <p>Book a session and get a personalized plan across 20+ career clusters.</p>
                 </div>
-                <a href="{{ route('contact') }}" class="btn-psy">Book Free Counselling</a>
+                <a href="#" class="btn-psy ign-enquiry-popup-trigger"
+                    data-source="Career Counselling - Hero Banner">Book Free Counselling</a>
             </div>
         </div>
     </section>
 
 </div>
+
+
+<x-university-enquiry-popup :courses="$courses ?? []" />
 
 <x-frontend-footer />
 

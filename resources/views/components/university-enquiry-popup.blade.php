@@ -1,21 +1,12 @@
-
 @props(['courses' => []])
 
-<div id="ignUniversityEnquiryPopup"
-     class="ign-enquiry-popup-overlay"
-     aria-hidden="true">
+<div id="ignUniversityEnquiryPopup" class="ign-enquiry-popup-overlay" aria-hidden="true">
 
-    <div class="ign-enquiry-popup"
-         role="dialog"
-         aria-modal="true"
-         aria-labelledby="ignEnquiryPopupTitle"
-         aria-describedby="ignEnquiryPopupDescription"
-         tabindex="-1">
+    <div class="ign-enquiry-popup" role="dialog" aria-modal="true" aria-labelledby="ignEnquiryPopupTitle"
+        aria-describedby="ignEnquiryPopupDescription" tabindex="-1">
 
         {{-- Close Button --}}
-        <button type="button"
-                class="ign-enquiry-popup-close"
-                aria-label="Close enquiry popup">
+        <button type="button" class="ign-enquiry-popup-close" aria-label="Close enquiry popup">
             <i class="bi bi-x-lg"></i>
         </button>
 
@@ -28,61 +19,39 @@
         </div>
 
         {{-- Enquiry Form --}}
-        <form id="ignUniversityEnquiryForm"
-              action="{{ route('enquiry.store') }}"
-              method="POST">
+        <form id="ignUniversityEnquiryForm" action="{{ route('enquiry.store') }}" method="POST">
 
             @csrf
+            <input type="hidden" name="enquiry_type" id="ignEnquiryType" value="Counselling">
 
-            <input type="hidden"
-                   name="source"
-                   id="ignEnquirySource"
-                   value="University Popup">
+            <input type="hidden" name="source" id="ignEnquirySource" value="University Popup">
 
             {{-- Full Name --}}
             <div class="ign-enquiry-popup-field">
-                <input type="text"
-                       name="name"
-                       placeholder="Full Name"
-                       aria-label="Full Name"
-                       maxlength="255"
-                       autocomplete="name"
-                       required>
+                <input type="text" name="name" placeholder="Full Name" aria-label="Full Name" maxlength="255"
+                    autocomplete="name" pattern="[\p{L}\p{M}]+(?:[ .'-][\p{L}\p{M}]+)*"
+                    title="Please enter a valid name without numbers." required>
             </div>
 
             {{-- Mobile Number --}}
             <div class="ign-enquiry-popup-field">
-                <input type="tel"
-                       name="mobile"
-                       placeholder="Mobile Number"
-                       aria-label="Mobile Number"
-                       inputmode="numeric"
-                       pattern="[0-9]{10}"
-                       maxlength="10"
-                       autocomplete="tel"
-                       title="Please enter a valid 10-digit mobile number"
-                       required>
+                <input type="tel" name="mobile" placeholder="Mobile Number" aria-label="Mobile Number"
+                    inputmode="numeric" pattern="[0-9]{10}" maxlength="10" autocomplete="tel"
+                    title="Please enter a valid 10-digit mobile number" required>
             </div>
 
             {{-- Email Address --}}
             <div class="ign-enquiry-popup-field">
-                <input type="email"
-                       name="email"
-                       placeholder="Email Address"
-                       aria-label="Email Address"
-                       maxlength="255"
-                       autocomplete="email"
-                       required>
+                <input type="email" name="email" placeholder="Email Address" aria-label="Email Address"
+                    maxlength="255" autocomplete="email" required>
             </div>
 
             {{-- Searchable Program Dropdown --}}
             <div class="ign-enquiry-popup-field">
                 <div class="ign-enquiry-program-dropdown">
 
-                    <button type="button"
-                            class="ign-enquiry-program-trigger"
-                            aria-expanded="false"
-                            aria-controls="ignEnquiryProgramMenu">
+                    <button type="button" class="ign-enquiry-program-trigger" aria-expanded="false"
+                        aria-controls="ignEnquiryProgramMenu">
 
                         <span class="ign-enquiry-program-selected">
                             Select Program of Interest
@@ -91,25 +60,18 @@
                         <i class="bi bi-chevron-down" aria-hidden="true"></i>
                     </button>
 
-                    <input type="hidden"
-                           name="program"
-                           class="ign-enquiry-program-value">
+                    <input type="hidden" name="program" class="ign-enquiry-program-value">
 
-                    <div class="ign-enquiry-program-menu"
-                         id="ignEnquiryProgramMenu">
+                    <div class="ign-enquiry-program-menu" id="ignEnquiryProgramMenu">
 
-                        <input type="text"
-                               class="ign-enquiry-program-search"
-                               placeholder="Search program..."
-                               aria-label="Search available programs"
-                               autocomplete="off">
+                        <input type="text" class="ign-enquiry-program-search" placeholder="Search program..."
+                            aria-label="Search available programs" autocomplete="off">
 
                         <div class="ign-enquiry-program-options">
 
                             @forelse($courses as $course)
-                                <button type="button"
-                                        class="ign-enquiry-program-option"
-                                        data-value="{{ $course }}">
+                                <button type="button" class="ign-enquiry-program-option"
+                                    data-value="{{ $course }}">
                                     {{ $course }}
                                 </button>
                             @empty
@@ -126,16 +88,13 @@
                     </div>
                 </div>
 
-                <p class="ign-enquiry-program-error"
-                   role="alert"
-                   hidden>
+                <p class="ign-enquiry-program-error" role="alert" hidden>
                     Please select a program.
                 </p>
             </div>
 
             {{-- Submit Button --}}
-            <button type="submit"
-                    class="ign-enquiry-popup-submit">
+            <button type="submit" class="ign-enquiry-popup-submit">
                 Book Free Counselling
             </button>
 
@@ -148,10 +107,7 @@
         </form>
 
         {{-- Success Message --}}
-        <div class="ign-enquiry-popup-success"
-             role="status"
-             aria-live="polite"
-             hidden>
+        <div class="ign-enquiry-popup-success" role="status" aria-live="polite" hidden>
 
             <div class="ign-enquiry-popup-success-icon">
                 <i class="bi bi-check-lg" aria-hidden="true"></i>

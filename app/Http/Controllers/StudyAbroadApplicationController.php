@@ -971,6 +971,7 @@ class StudyAbroadApplicationController extends Controller
     // Show the Study Abroad homepage and university rankings.
     public function studyAbroad()
     {
+        
         $worldUniversities = WorldUniversityRanking::orderBy('rank_2026')
             ->orderByRaw('CAST(rank_2026 AS UNSIGNED)')
             ->get();
@@ -986,6 +987,14 @@ class StudyAbroadApplicationController extends Controller
             'worldUniversities',
             'worldCountries'
         ));
+    }
+
+     private function getActiveCourses()
+    {
+        return ApplicationMasterData::where('type', 'course')
+            ->where('status', 1)
+            ->orderBy('name')
+            ->pluck('name');
     }
 
     // Show the paginated list of world universities.

@@ -1,4 +1,7 @@
 <x-frontend-header />
+<x-study-india-header/>
+
+
 
 <main class="manipal-online-page">
     <section class="manipal-shell">

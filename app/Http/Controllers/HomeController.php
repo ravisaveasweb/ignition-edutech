@@ -25,11 +25,13 @@ class HomeController extends Controller
 
     public function about()
     {
-        return view('about');
+          $courses = $this->getActiveCourses();
+        return view('about',  compact('courses'));
     }
     public function services()
     {
-        return view('services');
+         $courses = $this->getActiveCourses();
+        return view('services',   compact('courses'));
     }
     public function our_process()
     {
@@ -83,33 +85,33 @@ class HomeController extends Controller
     public function jain_online()
     {
         $courses = $this->getActiveCourses();
-        return view('jain-online',compact('courses'));
+        return view('jain-online', compact('courses'));
     }
     public function nldalmia_online()
     {
         $courses = $this->getActiveCourses();
 
-        return view('nldalmia-online' , compact('courses'));
+        return view('nldalmia-online', compact('courses'));
     }
     public function vivekananda_global_university_online()
     {
-          $courses = $this->getActiveCourses();
-        return view('vivekananda-global-university-online' ,compact('courses'));
+        $courses = $this->getActiveCourses();
+        return view('vivekananda-global-university-online', compact('courses'));
     }
     public function gla_university_online()
     {
         $courses = $this->getActiveCourses();
-        return view('gla-university-online' ,compact('courses'));
+        return view('gla-university-online', compact('courses'));
     }
     public function university_of_massachusetts_global_online()
     {
         $courses = $this->getActiveCourses();
-        return view('university-of-massachusetts-global-online' ,compact('courses'));
+        return view('university-of-massachusetts-global-online', compact('courses'));
     }
     public function bennett_university()
     {
-                $courses = $this->getActiveCourses();
-        return view('bennett-university' , compact('courses'));
+        $courses = $this->getActiveCourses();
+        return view('bennett-university', compact('courses'));
     }
     public function bloglist()
     {
@@ -170,24 +172,32 @@ class HomeController extends Controller
     }
     public function d_mit_test()
     {
-        return view('dmit-test');
+        $courses = $this->getActiveCourses();
+        return view('dmit-test', compact('courses'));
     }
     public function career_counseling()
     {
-        return view('career-counselling');
+        $courses = $this->getActiveCourses();
+
+        return view('career-counselling', compact('courses'));
     }
 
 
     public function psychometric_assessment()
     {
+
+        $courses = $this->getActiveCourses();
         return view('psychometric_assessment', [
             'page' => CounsellingData::psychometric_assessment(),
+            'courses' => $courses,
+
         ]);
     }
-    public function study_abroad()
-    {
-        return view('study_abroad');
-    }
+    // public function study_abroad()
+    // {
+        
+    //     return view('study_abroad');
+    // }
 
     private function getActiveCourses()
     {

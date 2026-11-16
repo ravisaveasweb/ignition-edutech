@@ -137,7 +137,8 @@
         <p class="lede">Education is the foundation of opportunity, growth, and lifelong success. We help learners at
             every stage make confident, informed decisions.</p>
         <div class="hero-actions">
-            <a href="{{ route('contact') }}" class="btn btn-orange">Get Free Counselling &rarr;</a>
+            <a href="#" class="btn btn-orange  ign-enquiry-popup-trigger"
+                data-source="About- Hero Banner">Get Free Counselling &rarr;</a>
             <a href="{{ route('services') }}" class="btn btn-outline"
                 style="border-color:rgba(255,255,255,.35); color:#fff;">Explore
                 Our Services</a>
@@ -355,7 +356,8 @@
                 <h4 style="color:#fff; margin-bottom:4px;">Talk to a Counsellor</h4>
                 <p>Zero pressure, honest guidance — free of cost.</p>
                 <a href="tel:+918655055150" class="phone">+91 8655 055 150</a>
-                <a href="{{ route('contact') }}" class="btn btn-orange btn-block" style="margin-top:14px;">Book Free
+                <a href="#" class="btn btn-orange btn-block ign-enquiry-popup-trigger"
+                data-source="About- Hero Banner" style="margin-top:14px;">Book Free
                     Counselling</a>
             </div>
         </aside>
@@ -378,11 +380,15 @@
             <li>End-to-End Admission & Career Support</li>
         </ul>
         <div class="cta-actions">
-            <a href="{{ route('contact') }}" class="btn btn-orange">Get Free Counselling &rarr;</a>
+            <a href="#" class="btn btn-orange ign-enquiry-popup-trigger"
+                data-source="About- Hero Banner">Get Free Counselling &rarr;</a>
             <a href="https://wa.me/918655055150" class="btn btn-outline"
                 style="border-color:rgba(255,255,255,.3); color:#fff;">WhatsApp Us</a>
         </div>
     </div>
 </div>
+
+
+<x-university-enquiry-popup :courses="$courses ?? []" />
 
 <x-frontend-footer />

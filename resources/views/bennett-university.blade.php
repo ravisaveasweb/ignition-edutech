@@ -1,4 +1,8 @@
 <x-frontend-header />
+
+<x-study-india-header/>
+
+
 <main class="kinetic-gradient">
     <!-- Hero Section -->
     <section class="bennett-hero-section">

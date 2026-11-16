@@ -1,5 +1,8 @@
 <x-frontend-header />
 
+<x-study-india-header/>
+
+
 <main class="dpu-online-page">
     <section class="dpu-shell">
         <section class="dpu-hero">

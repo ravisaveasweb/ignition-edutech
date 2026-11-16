@@ -394,7 +394,8 @@
                         match your career goals. Take the next step toward your future with Ignition Edutech.</p>
                 </div>
 
-                <a href="{{ route('contact') }}" class="ign-psy-cta-btn">
+                <a href="#" class="ign-psy-cta-btn  ign-enquiry-popup-trigger"
+                data-source="University Courses- Hero Banner">
                     Get Course Guidance
                 </a>
             </div>
@@ -404,5 +405,8 @@
 </main>
 
 <script src="{{ asset('js/study-india/universities-courses.js') }}?v=1"></script>
+
+
+<x-university-enquiry-popup :courses="$courses ?? []" />
 
 <x-frontend-footer />

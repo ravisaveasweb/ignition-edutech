@@ -1,4 +1,6 @@
 <x-frontend-header />
+<x-study-india-header/>
+
 
 {{-- @section('title', 'DMIT Test – Dermatoglyphics Multiple Intelligence Test | Ignition Edutech')
 
@@ -45,7 +47,8 @@
                         evidence, not guesswork.</p>
                     <div class="age-pill">Suitable for <strong>all ages, 3 years and above</strong></div>
                     <div class="hero-cta">
-                        <a href="#dmit-book" class="btn-dmit">Book a DMIT Session</a>
+                        <a href="#" class="btn-dmit ign-enquiry-popup-trigger"
+                    data-source="DMIT - Hero Banner">Book a DMIT Session</a>
                         <a href="#dmit-params" class="btn-outline-dmit">See what it measures</a>
                     </div>
                 </div>
@@ -842,7 +845,8 @@
                     </p>
                 </div>
 
-                <a href="#contact" class="dmit-cta-btn">
+                <a href="#" class="dmit-cta-btn ign-enquiry-popup-trigger"
+                    data-source="DMIT - Hero Banner">
                     Understand Your Child
                     <span>→</span>
                 </a>
@@ -1039,11 +1043,15 @@
                         abilities — covering all 10 abilities, brain dominance, multiple quotients, learning styles,
                         personality, multiple intelligences, extra-curricular guidance and career options.</p>
                 </div>
-                <a href="{{ route('contact') }}" class="btn-dmit">Book Free Counselling</a>
+                <a href="#" class="btn-dmit ign-enquiry-popup-trigger"
+                    data-source="DMIT - Hero Banner">Book Free Counselling</a>
             </div>
         </div>
     </section>
 </div>
+
+<x-university-enquiry-popup :courses="$courses ?? []" />
+
 
 <x-frontend-footer />
 

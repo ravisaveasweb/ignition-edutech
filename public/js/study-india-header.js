@@ -1303,6 +1303,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Show All Institutes Initially
     renderInstituteList(getFilteredData());
+
+
+    // Close popups on scroll
+    let siScrollCloseTimer = null;
+    function closePanelsOnScroll() {
+        if (statePopup && statePopup.style.display === "block") closeStatePopup();
+        if (institutePanel && institutePanel.style.display === "block") closeInstitutePanel();
+        if (searchResults && searchResults.style.display === "block") closeSearch();
+        if (explorePanel && explorePanel.classList.contains("is-open")) closeExplore();
+    }
+    window.addEventListener("scroll", function () {
+        clearTimeout(siScrollCloseTimer);
+        siScrollCloseTimer = setTimeout(closePanelsOnScroll, 50);
+    }, { passive: true });
+
 });
 
 //  NIRF Data

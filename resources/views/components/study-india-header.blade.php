@@ -199,8 +199,9 @@
                     <i class="bi bi-pencil-square"></i>
                     Write a Review
                 </a>
-                
-                <a href="{{ route('home') }}#contact-form-section" class="si-counselling-link">
+
+                <a href="#" class="si-counselling-link  ign-enquiry-popup-trigger"
+                    data-source="Study India Page" data-enquiry-type="Study India">
                     <i class="bi bi-chat-dots"></i>
                     Get Counselling
                 </a>
@@ -511,7 +512,7 @@
     <div class="si-explore-panel" id="siExplorePanel">
         <div class="si-explore-title">Explore More</div>
         <div class="si-explore-columns">
-            <div class="si-explore-column" >
+            <div class="si-explore-column">
                 <a href="{{ url('/') }}">
                     <span>
                         <i class="bi bi-mortarboard-fill"></i>
@@ -722,7 +723,6 @@
 
 
 
-
     <script src="{{ asset('js/study-india-auth.js') }}?v=2" defer></script>
 
 
@@ -734,10 +734,10 @@
     </script>
 
     <script>
-    window.siCityImageBase = @json(asset('img/study-india/cities'));
-    window.siStateImageBase = @json(asset('img/study-india/states'));
-    window.siLocationRouteBase = @json(url('/study-india/location'));
-</script>
+        window.siCityImageBase = @json(asset('img/study-india/cities'));
+        window.siStateImageBase = @json(asset('img/study-india/states'));
+        window.siLocationRouteBase = @json(url('/study-india/location'));
+    </script>
 
     <script src="{{ asset('js/study-india-header.js') }}" defer></script>
 

@@ -9,6 +9,9 @@
 
 @endphp
 <x-frontend-header />
+<x-study-india-header/>
+
+
 <main class="manipal-online-page">
     <!-- Hero Section -->
     <section class="amity-hero-section">

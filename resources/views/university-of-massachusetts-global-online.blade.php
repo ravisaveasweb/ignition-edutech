@@ -1,5 +1,9 @@
 <x-frontend-header />
 
+<x-study-india-header/>
+
+
+
 <main class="mt-5 pt-5 umass-page">
     <!-- hero.php -->
     <!-- Removed overflow-hidden to fix dropdown cutting/clipping bugs -->

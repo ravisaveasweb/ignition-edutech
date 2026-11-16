@@ -1,4 +1,7 @@
 <x-frontend-header />
+<x-study-india-header/>
+
+
 
 <main class="smu-online-page">
     <section class="smu-shell">

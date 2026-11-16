@@ -18,6 +18,8 @@
 @endphp
 
 <x-frontend-header />
+<x-study-india-header/>
+
 <div class="oe-ug">
     <section class="oe-ug-hero">
         <div class="container">

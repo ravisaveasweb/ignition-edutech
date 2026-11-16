@@ -1,4 +1,6 @@
 <x-frontend-header />
+<x-study-india-header/>
+
 
 <!-- Hero Section -->
 <header class="io-hero position-relative overflow-hidden">
@@ -17,7 +19,7 @@
                 </p>
 
                 <div class="d-flex flex-wrap gap-3 mb-4">
-                    <button class="io-btn-accent shadow-sm">Enroll Now</button>
+                    <a href="{{ route('study-india.register') }}"class="io-btn-accent shadow-sm">Enroll Now</a>
                     <button class="io-btn-accent shadow-sm">Download Brochure</button>
                 </div>
 

@@ -1,4 +1,6 @@
 <x-frontend-header />
+<x-study-india-header/>
+
 
 <main class="vit-online-page">
     <section class="vit-page-shell">

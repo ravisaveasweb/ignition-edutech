@@ -12,5 +12,6 @@ class Enquiry extends Model
         'mobile',
         'program',
         'source',
+         'enquiry_type',
     ];
 }

@@ -178,9 +178,9 @@
                                         </a>
                                     </li>
 
-                                    <li class="has-dropdown">
+                                    <li class="has-dropdown ign-header-horizontal-dropdown">
                                         <a href="#">Corporate</a>
-                                        <ul class="tp-submenu">
+                                        <ul class="tp-submenu ign-header-horizontal-menu">
                                             <li><a href="{{ route('corporate.education') }}">Corporate Education
                                                     Partnerships</a></li>
                                             <li><a href="{{ route('corporate.training') }}">Corporate Training</a>
@@ -190,9 +190,9 @@
 
                                         </ul>
                                     </li>
-                                    <li class="has-dropdown">
+                                    <li class="has-dropdown ign-header-horizontal-dropdown">
                                         <a href="{{ route('study-india.universities-courses') }}">Universities</a>
-                                        <ul class="tp-submenu">
+                                        <ul class="tp-submenu ign-header-horizontal-menu">
                                             <li><a
                                                     href="{{ route('nmims-distance-education-online-degree-programs') }}">NMIMS
                                                     CDOE</a>
@@ -228,9 +228,9 @@
 
                                     {{-- Courses --}}
 
-                                    <li class="has-dropdown">
+                                    <li class="has-dropdown ign-header-horizontal-dropdown">
                                         <a href="#">Online Education</a>
-                                        <ul class="tp-submenu">
+                                        <ul class="tp-submenu ign-header-horizontal-menu">
                                             <li><a href="{{ route('programs.undergraduate') }}">Online Undergraduate
                                                     Programs</a></li>
                                             <li><a href="{{ route('programs.mba') }}">Online MBA Programs</a></li>
@@ -241,9 +241,9 @@
 
 
 
-                                    <li class="has-dropdown">
+                                    <li class="has-dropdown ign-header-horizontal-dropdown">
                                         <a href="#">Student Potential</a>
-                                        <ul class="tp-submenu">
+                                        <ul class="tp-submenu ign-header-horizontal-menu">
                                             <li><a href="{{ route('career-counselling') }}">Career Discovery</a>
                                             </li>
                                             <li><a href="{{ route('dmit-test') }}">DMIT Assessment</a>

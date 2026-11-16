@@ -1,4 +1,8 @@
 <x-frontend-header />
+
+<x-study-india-header/>
+
+
 <div class="psy-assess">
 
     {{-- ---------- HERO ---------- --}}
@@ -13,7 +17,8 @@
                     <p class="lede">{{ $page['hero']['subtitle'] }}</p>
 
                     <div class="ign-psy-hero-cta">
-                        <a href="{{ $page['hero']['cta_primary']['href'] }}" class="ign-psy-assessment-btn">
+                        <a href="#" class="ign-psy-assessment-btn ign-enquiry-popup-trigger"
+                    data-source="Psychometric Assessment - Hero Banner">
                             {{ $page['hero']['cta_primary']['label'] }}
                         </a>
 
@@ -491,7 +496,8 @@
                         clarity.</p>
                 </div>
 
-                <a href="{{ route('contact') }}" class="ign-psy-cta-btn">
+                <a href="#" class="ign-psy-cta-btn ign-enquiry-popup-trigger"
+                    data-source="Psychometric Assessment - Hero Banner">
                     Take the Assessment
                 </a>
             </div>
@@ -501,5 +507,8 @@
 
 
 </div>
+
+<x-university-enquiry-popup :courses="$courses ?? []" />
+
 
 <x-frontend-footer />
