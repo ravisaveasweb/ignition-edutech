@@ -226,7 +226,49 @@
                     {{ $state }}
                 </button>
             @endforeach --}}
+
+
+            <!-- University Auto Scroll -->
+            <div class="si-uni-scroll-wrapper">
+                <div class="si-uni-scroll-track">
+
+                    <a href="{{ route('nmims-distance-education-online-degree-programs') }}"
+                        class="si-uni-item">NMIMS CDOE</a>
+                    <a href="{{ route('vit-online-degree-courses') }}" class="si-uni-item">VIT Online</a>
+                    <a href="{{ route('amity-university-online-ug-pg-courses') }}" class="si-uni-item">Amity
+                        University Online</a>
+                    <a href="{{ route('manipal-online') }}" class="si-uni-item">Manipal Online</a>
+                    <a href="{{ route('smu') }}" class="si-uni-item">Sikkim Manipal University</a>
+                    <a href="{{ route('dr-d-y-patil-pune') }}" class="si-uni-item">DY Patil Pune</a>
+                    <a href="{{ route('jain-online') }}" class="si-uni-item">Jain Online</a>
+                    <a href="{{ route('nldalmia-online') }}" class="si-uni-item">N.L Dalmia Online</a>
+                    <a href="{{ route('vivekananda-global-university-online') }}" class="si-uni-item">VGU Online</a>
+                    <a href="{{ route('gla-university-online') }}" class="si-uni-item">GLA University Online</a>
+                    <a href="{{ route('university-of-massachusetts-global-online') }}" class="si-uni-item">UMass
+                        Global Online</a>
+                    <a href="{{ route('bennett-university') }}" class="si-uni-item">Bennett University</a>
+
+                    <!-- Duplicate for seamless loop -->
+                    <a href="{{ route('nmims-distance-education-online-degree-programs') }}"
+                        class="si-uni-item">NMIMS CDOE</a>
+                    <a href="{{ route('vit-online-degree-courses') }}" class="si-uni-item">VIT Online</a>
+                    <a href="{{ route('amity-university-online-ug-pg-courses') }}" class="si-uni-item">Amity
+                        University Online</a>
+                    <a href="{{ route('manipal-online') }}" class="si-uni-item">Manipal Online</a>
+                    <a href="{{ route('smu') }}" class="si-uni-item">Sikkim Manipal University</a>
+                    <a href="{{ route('dr-d-y-patil-pune') }}" class="si-uni-item">DY Patil Pune</a>
+                    <a href="{{ route('jain-online') }}" class="si-uni-item">Jain Online</a>
+                    <a href="{{ route('nldalmia-online') }}" class="si-uni-item">N.L Dalmia Online</a>
+                    <a href="{{ route('vivekananda-global-university-online') }}" class="si-uni-item">VGU Online</a>
+                    <a href="{{ route('gla-university-online') }}" class="si-uni-item">GLA University Online</a>
+                    <a href="{{ route('university-of-massachusetts-global-online') }}" class="si-uni-item">UMass
+                        Global Online</a>
+                    <a href="{{ route('bennett-university') }}" class="si-uni-item">Bennett University</a>
+
+                </div>
+            </div>
         </div>
+
 
         {{-- Study India Explore Stream Drawer --}}
         <div class="si-stream-overlay" id="siStreamOverlay"></div>

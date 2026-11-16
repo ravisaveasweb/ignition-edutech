@@ -36048,15 +36048,7 @@ ul.why-collect {
 
 
 
-
-
-
-
-
-
 /* New Drop down Start*/
-
-/* IGNITION HEADER - PROFESSIONAL HORIZONTAL DROPDOWN (Fixed + Colored Cards) */
 
 .tp-header-1 .main-menu > nav > ul > li.ign-header-horizontal-dropdown > ul.ign-header-horizontal-menu {
     display: none !important;
@@ -36071,26 +36063,15 @@ ul.why-collect {
     border-radius: 12px !important;
     box-shadow: 0 16px 40px rgba(10, 37, 64, 0.13), 0 4px 12px rgba(10, 37, 64, 0.05) !important;
     box-sizing: border-box !important;
-    left: 0 !important;
+    left: 50% !important;
     right: auto !important;
+    transform: translateX(-50%) !important;
 }
 
 /* Open dropdown */
 .tp-header-1 .main-menu > nav > ul > li.ign-header-horizontal-dropdown:hover > ul.ign-header-horizontal-menu,
 .tp-header-1 .main-menu > nav > ul > li.ign-header-horizontal-dropdown:focus-within > ul.ign-header-horizontal-menu {
     display: grid !important;
-}
-
-
-/* FIX: Prevent right-side dropdown from getting cut */
-
-.tp-header-1 .main-menu > nav > ul > li.ign-header-horizontal-dropdown:last-child > ul.ign-header-horizontal-menu,
-.tp-header-1 .main-menu > nav > ul > li.ign-header-horizontal-dropdown:nth-last-child(2) > ul.ign-header-horizontal-menu {
-    left: auto !important;
-    right: 0 !important;
-    transform: none !important;
-    width: 580px !important;
-    min-width: 580px !important;
 }
 
 /* Dropdown items - Colored Cards */
@@ -36203,9 +36184,5 @@ ul.why-collect {
         min-width: 560px !important;
     }
 }
-/* New Drop down End*/
 
-
-
-
-
+/* New Drop down End */
