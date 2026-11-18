@@ -4,6 +4,8 @@
         <form id="nmimsHelpForm" method="POST" action="{{ route('enquiry.store') }}" class="enquiry-form">
             @csrf
             <input type="hidden" name="source" value="NMIMS Help Form">
+            <input type="hidden" name="enquiry_type" value="Counselling">
+
 
 
             <div class="input-group">

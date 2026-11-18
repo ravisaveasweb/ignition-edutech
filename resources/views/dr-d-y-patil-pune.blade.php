@@ -16,7 +16,7 @@
                         degree options.</p>
 
                     <div class="dpu-hero-actions">
-                        <a href="{{ route('university-application-form') }}" class="dpu-btn dpu-btn-primary">Explore
+                        <a href="{{ route('study-india.universities-courses') }} " class="dpu-btn dpu-btn-primary">Explore
                             DPU-COL
                             Programs</a>
                         <a href="#" class="dpu-btn dpu-btn-secondary ign-enquiry-popup-trigger" data-source="Dr D.Y Patil Pune University - Hero Banner">Speak With A Counsellor</a>

@@ -28,7 +28,10 @@ class PostsTable
             ->columns([
                 SpatieMediaLibraryImageColumn::make('image')
                     ->collection('post-images')
-                    ->conversion('thumb'),
+                    ->conversion('thumb')
+                      ->extraCellAttributes([
+                        'class' => 'ign-blog-posts-table-scope',
+                    ]),
 
                 TextColumn::make('title')
                     ->searchable()

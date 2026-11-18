@@ -1,6 +1,8 @@
 <form id="nldHelpForm" class="nld-cta-form enquiry-form" method="POST" action="{{ route('enquiry.store') }}">
     @csrf
     <input type="hidden" name="source" value="NLD Help Form">
+    <input type="hidden" name="enquiry_type" value="Counselling">
+
 
     <div class="input-group">
         <input type="text" name="name" placeholder="Full Name" required>

@@ -9,6 +9,9 @@
         <form id="vitolHelpForm" class="vit-cta-form enquiry-form" method="POST" action="{{ route('enquiry.store') }}">
             @csrf
             <input type="hidden" name="source" value="Bennett Hero Form">
+            <input type="hidden" name="enquiry_type" value="Counselling">
+
+
             <input type="text" name="name" placeholder="Full Name" minlength="2" maxlength="60"
                 pattern="[A-Za-z ]{2,60}" title="Please enter a valid full name (2–60 letters)." autocomplete="name"
                 required>

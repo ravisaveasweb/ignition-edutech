@@ -16,7 +16,7 @@
                         flexible virtual campus designed to fit the schedule of ambitious working professionals.</p>
 
                     <div class="jain-hero-actions">
-                        <a href="{{ route('university-application-form') }}" class="jain-btn jain-btn-primary">Explore
+                        <a href="{{ route('study-india.universities-courses') }} " class="jain-btn jain-btn-primary">Explore
                             JAIN
                             Programs</a>
                         <a href="#" class="jain-btn jain-btn-secondary ign-enquiry-popup-trigger" data-source="Jain Online University - Hero Banner">Talk To A Counsellor</a>

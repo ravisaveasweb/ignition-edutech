@@ -16,7 +16,11 @@ class UsersTable
         return $table
             ->columns([
                 TextColumn::make('name')
-                    ->searchable(),
+                    ->searchable()
+                      ->extraCellAttributes([
+                        'class' => 'ign-users-grid-scope ign-users-grid-name',
+                    ]),
+                    
                 TextColumn::make('email')
                     ->label('Email address')
                     ->searchable(),

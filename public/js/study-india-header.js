@@ -73,6 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const siCityClose = document.getElementById("siCityClose");
     const siModifyGoal = document.getElementById("siModifyGoal");
     const siGoalCourseName = document.getElementById("siGoalCourseName");
+    const instituteBack = document.getElementById("siInstituteBack");
 
     let siSelectedCourses = [];
     let siSelectedCity = null;
@@ -870,6 +871,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (statePopup) statePopup.style.display = "block";
         if (commonOverlay) commonOverlay.style.display = "block";
+        // Back to State Selection
+if (instituteBack) {
+    instituteBack.addEventListener("click", function (event) {
+        event.stopPropagation();
+        closeInstitutePanel();
+        openStatePopup();
+    });
+}
     }
 
     // Filter Data
@@ -1259,27 +1268,39 @@ document.addEventListener("DOMContentLoaded", function () {
     // Category menu is handled by the Study India Stream Drawer.
 
     // Outside Click
-    document.addEventListener("click", function (event) {
-        // Close Explore
-        if (
-            explorePanel &&
-            exploreTrigger &&
-            !explorePanel.contains(event.target) &&
-            !exploreTrigger.contains(event.target)
-        ) {
-            closeExplore();
-        }
+  document.addEventListener("click", function (event) {
 
-        // Close Search
-        if (
-            searchResults &&
-            searchInput &&
-            !searchResults.contains(event.target) &&
-            !searchInput.contains(event.target)
-        ) {
-            closeSearch();
-        }
-    });
+    // Close State Popup and Institute Panel
+    const clickedInsideState = statePopup?.contains(event.target);
+    const clickedInsideInstitute = institutePanel?.contains(event.target);
+    const clickedLocationTrigger = locationTrigger?.contains(event.target);
+
+    if (!clickedInsideState && !clickedInsideInstitute && !clickedLocationTrigger) {
+        closeStatePopup();
+        closeInstitutePanel();
+    }
+
+    // Close Explore
+    if (
+        explorePanel &&
+        exploreTrigger &&
+        !explorePanel.contains(event.target) &&
+        !exploreTrigger.contains(event.target)
+    ) {
+        closeExplore();
+    }
+
+    // Close Search
+    if (
+        searchResults &&
+        searchInput &&
+        !searchResults.contains(event.target) &&
+        !searchInput.contains(event.target)
+    ) {
+        closeSearch();
+    }
+
+});
 
     // Escape Key
     document.addEventListener("keydown", function (event) {

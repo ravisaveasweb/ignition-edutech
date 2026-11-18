@@ -1,6 +1,8 @@
 <form id="nldHomeBannerForm" class="enquiry-form" method="POST" action="{{ route('enquiry.store') }}">
     @csrf
     <input type="hidden" name="source" value="NLD Hero Form">
+    <input type="hidden" name="enquiry_type" value="Counselling">
+
 
 
     <div class="mb-3">

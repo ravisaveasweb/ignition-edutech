@@ -5,6 +5,8 @@
         <h3>Get Free Counselling</h3>
         <p>Talk to our experts & choose the right program for your future.</p>
         <input type="hidden" name="source" value="NMIMS Hero Form">
+        <input type="hidden" name="enquiry_type" value="Counselling">
+
 
         <input type="text" name="name" id="nmimsHomeName" placeholder="Full Name" minlength="2" maxlength="60"
             pattern="[A-Za-z ]+" title="Please enter a valid name using letters only." autocomplete="name" required>

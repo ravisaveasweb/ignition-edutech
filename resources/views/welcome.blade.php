@@ -858,7 +858,7 @@
 
 <!-- footer-area-start -->
 
-<script>
+{{-- <script>
     const track = document.getElementById("logoTrack");
     const nextBtn = document.querySelector(".logo-section .next");
     const prevBtn = document.querySelector(".logo-section .prev");
@@ -875,7 +875,6 @@
         track.appendChild(item.cloneNode(true));
     });
 
-    const halfWidth = track.scrollWidth / 2;
 
     // Automatic Infinite Horizontal Scrolling
     function startAutoScroll() {
@@ -933,7 +932,151 @@
 
     // Start Auto Scroll
     startAutoScroll();
+</script> --}}
+
+
+
+{{-- Auto scroll bar start  --}}
+<script>
+(() => {
+    "use strict";
+
+    const track = document.getElementById("logoTrack");
+    const nextBtn = document.querySelector(".logo-section .next");
+    const prevBtn = document.querySelector(".logo-section .prev");
+
+    if (!track || track.dataset.infiniteInitialized) return;
+    track.dataset.infiniteInitialized = "true";
+
+    const scrollAmount = 200;
+    const autoScrollSpeed = 2;
+    const originalItems = Array.from(track.children);
+
+    let loopWidth = 0, position = 0, isPaused = false;
+    let animationFrame = null, lastFrameTime = 0, buttonAnimation = null;
+
+    // Disable native smooth scrolling
+    track.style.scrollBehavior = "auto";
+
+    // Duplicate original university logos
+    originalItems.forEach(item => {
+        const clone = item.cloneNode(true);
+        clone.setAttribute("aria-hidden", "true");
+        track.appendChild(clone);
+    });
+
+    const clonedFirstItem = track.children[originalItems.length];
+
+    // Calculate exact loop width
+    function calculateLoopWidth() {
+        if (!originalItems.length || !clonedFirstItem) return;
+
+        loopWidth = clonedFirstItem.getBoundingClientRect().left -
+                    originalItems[0].getBoundingClientRect().left;
+
+        position = ((position % loopWidth) + loopWidth) % loopWidth;
+        track.scrollLeft = position;
+    }
+
+    // Smooth button animation
+    function moveSlider(distance) {
+        buttonAnimation = {
+            distance,
+            startTime: null,
+            previousEase: 0,
+            duration: 450
+        };
+    }
+
+    // Next and previous buttons
+    if (nextBtn) nextBtn.addEventListener("click", event => {
+        event.preventDefault();
+        moveSlider(scrollAmount);
+    });
+
+    if (prevBtn) prevBtn.addEventListener("click", event => {
+        event.preventDefault();
+        moveSlider(-scrollAmount);
+    });
+
+    // Pause on hover
+    track.addEventListener("mouseenter", () => isPaused = true);
+    track.addEventListener("mouseleave", () => isPaused = false);
+
+    // Continuous infinite scrolling
+    function animate(currentTime) {
+        if (!lastFrameTime) lastFrameTime = currentTime;
+
+        const deltaTime = Math.min(currentTime - lastFrameTime, 40);
+        lastFrameTime = currentTime;
+
+        if (!isPaused && loopWidth > 0) {
+            position += autoScrollSpeed * (deltaTime / 15);
+        }
+
+        // Smooth arrow movement without stopping auto-scroll
+        if (buttonAnimation) {
+            const animation = buttonAnimation;
+
+            if (animation.startTime === null) animation.startTime = currentTime;
+
+            const progress = Math.min(
+                (currentTime - animation.startTime) / animation.duration, 1
+            );
+
+            const eased = progress < 0.5
+                ? 2 * progress * progress
+                : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+
+            position += animation.distance * (eased - animation.previousEase);
+            animation.previousEase = eased;
+
+            if (progress >= 1) buttonAnimation = null;
+        }
+
+        // Normalize position for seamless infinite looping
+        if (loopWidth > 0) {
+            position = ((position % loopWidth) + loopWidth) % loopWidth;
+            track.scrollLeft = position;
+        }
+
+        animationFrame = requestAnimationFrame(animate);
+    }
+
+    // Initialize after images load
+    function init() {
+        calculateLoopWidth();
+
+        position = 0;
+        track.scrollLeft = 0;
+
+        if (animationFrame) cancelAnimationFrame(animationFrame);
+
+        lastFrameTime = 0;
+        animationFrame = requestAnimationFrame(animate);
+    }
+
+    if (document.readyState === "complete") {
+        init();
+    } else {
+        window.addEventListener("load", init, { once: true });
+    }
+
+    // Recalculate on window resize
+    let resizeTimer;
+
+    window.addEventListener("resize", () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(calculateLoopWidth, 200);
+    });
+
+})();
 </script>
+
+{{-- Auto scroll Bar End  --}}
+
+
+
 
 <script>
     document.querySelectorAll(".faq-question").forEach((question) => {

@@ -25,10 +25,10 @@
                             placement-focused support help working professionals grow fast.
                         </p>
                         <div class="d-flex flex-wrap gap-3 pt-3">
-                            <button class="bennett-btn-large border-0 main-color-used">Explore Bennett University
-                                Programs</button>
-                            <button class="bennett-btn-large border-2 main-color-used ign-enquiry-popup-trigger" data-source="Bennett University - Hero Banner">Speak with an Admissions
-                                Counselor</button>
+                            <a href="{{ route('study-india.universities-courses') }} "class="bennett-btn-large border-0 main-color-used">Explore Bennett University
+                                Programs</a>
+                            <a class="bennett-btn-large border-2 main-color-used ign-enquiry-popup-trigger" data-source="Bennett University - Hero Banner">Speak with an Admissions
+                                Counselor</a>
                         </div>
                         <!-- Hero Feature Grid -->
                         <div class="row g-3 mt-4">

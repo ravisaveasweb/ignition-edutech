@@ -16,7 +16,7 @@
                         professionals, graduates, and ambitious career switchers.</p>
 
                     <div class="manipal-hero-actions">
-                        <a href="{{ route('university-application-form') }}"
+                        <a href="{{ route('study-india.universities-courses') }} "
                             class="manipal-btn manipal-btn-primary">Explore
                             Programs</a>
                         <a href="#" class="manipal-btn manipal-btn-secondary ign-enquiry-popup-trigger" data-source="Manipal Online University - Hero Banner" >Talk to a

@@ -3,6 +3,8 @@
     <div class="row g-3">
 
         <input type="hidden" name="source" value="Bennett Help Form">
+        <input type="hidden" name="enquiry_type" value="Counselling">
+
 
         <!-- Full Name Element -->
         <div class="col-12">
@@ -26,42 +28,38 @@
         <div class="col-12">
             <div class="bennett-course-dropdown">
 
-    <button type="button" class="bennett-course-trigger" aria-expanded="false">
-        <span class="bennett-course-selected">Select Program of Interest</span>
-        <i class="bi bi-chevron-down"></i>
-    </button>
+                <button type="button" class="bennett-course-trigger" aria-expanded="false">
+                    <span class="bennett-course-selected">Select Program of Interest</span>
+                    <i class="bi bi-chevron-down"></i>
+                </button>
 
-    <input type="hidden" name="course_name" class="bennett-course-value" required>
+                <input type="hidden" name="course_name" class="bennett-course-value" required>
 
-    <div class="bennett-course-menu">
+                <div class="bennett-course-menu">
 
-        <input
-            type="text"
-            class="bennett-course-search"
-            placeholder="Search course..."
-            autocomplete="off"
-        >
+                    <input type="text" class="bennett-course-search" placeholder="Search course..."
+                        autocomplete="off">
 
-        <div class="bennett-course-options">
+                    <div class="bennett-course-options">
 
-            @forelse($courses ?? [] as $course)
-                <div class="bennett-course-option" data-value="{{ $course }}">
-                    {{ $course }}
+                        @forelse($courses ?? [] as $course)
+                            <div class="bennett-course-option" data-value="{{ $course }}">
+                                {{ $course }}
+                            </div>
+                        @empty
+                            <div class="bennett-course-empty">
+                                No courses available
+                            </div>
+                        @endforelse
+
+                        <div class="bennett-course-empty" hidden>
+                            No matching courses found
+                        </div>
+
+                    </div>
                 </div>
-            @empty
-                <div class="bennett-course-empty">
-                    No courses available
-                </div>
-            @endforelse
 
-            <div class="bennett-course-empty" hidden>
-                No matching courses found
             </div>
-
-        </div>
-    </div>
-
-</div>
         </div>
 
         <!-- Interactive Control Mechanism Layer -->

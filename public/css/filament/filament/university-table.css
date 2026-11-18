@@ -1,0 +1,129 @@
+
+/* =========================================
+   UNIVERSITIES TABLE - HORIZONTAL & VERTICAL GRID
+========================================= */
+
+:root {
+    --ign-university-grid-border: #e5edf5;
+    --ign-university-grid-heading: #f0f4f9;
+    --ign-university-grid-navy: #0a2540;
+}
+
+/* Table wrapper */
+.fi-ta:has(.ign-university-grid-scope) {
+    overflow: hidden;
+    border: 1px solid var(--ign-university-grid-border) !important;
+    border-radius: 12px !important;
+    background: #ffffff;
+}
+
+/* Horizontal scrolling */
+.fi-ta:has(.ign-university-grid-scope) .fi-ta-content {
+    overflow-x: auto !important;
+}
+
+/* Table structure */
+.fi-ta:has(.ign-university-grid-scope) .fi-ta-table {
+    width: 100% !important;
+    min-width: 1250px !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+}
+
+/* Table headings - vertical and horizontal borders */
+.fi-ta:has(.ign-university-grid-scope) .fi-ta-table thead th {
+    background: var(--ign-university-grid-heading) !important;
+    color: var(--ign-university-grid-navy) !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    padding: 16px 14px !important;
+    white-space: nowrap;
+
+    border-right: 1px solid var(--ign-university-grid-border) !important;
+    border-bottom: 1px solid #d9e2ed !important;
+}
+
+/* Table body cells - vertical and horizontal borders */
+.fi-ta:has(.ign-university-grid-scope) .fi-ta-table tbody td {
+    background: #ffffff !important;
+    color: #26384a;
+    font-size: 12px !important;
+    /* padding: 19px 14px !important; */
+    vertical-align: middle !important;
+
+    border-right: 1px solid var(--ign-university-grid-border) !important;
+    border-bottom: 1px solid var(--ign-university-grid-border) !important;
+}
+
+/* Checkbox column borders */
+.fi-ta:has(.ign-university-grid-scope) .fi-ta-table th:first-child,
+.fi-ta:has(.ign-university-grid-scope) .fi-ta-table td:first-child {
+    border-right: 1px solid var(--ign-university-grid-border) !important;
+}
+
+/* Remove right border from last column */
+.fi-ta:has(.ign-university-grid-scope) .fi-ta-table th:last-child,
+.fi-ta:has(.ign-university-grid-scope) .fi-ta-table td:last-child {
+    border-right: none !important;
+}
+
+/* Remove bottom border from last row */
+.fi-ta:has(.ign-university-grid-scope) .fi-ta-table tbody tr:last-child td {
+    border-bottom: none !important;
+}
+
+/* Row hover */
+.fi-ta:has(.ign-university-grid-scope) .fi-ta-table tbody tr:hover td {
+    background: #fff9f1 !important;
+}
+
+/* University name */
+.fi-ta:has(.ign-university-grid-scope) .fi-ta-table tbody td:first-child .fi-ta-text-item {
+    color: var(--ign-university-grid-navy);
+    font-weight: 700;
+}
+
+/* Badges */
+.fi-ta:has(.ign-university-grid-scope) .fi-badge {
+    border-radius: 7px !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    padding: 5px 9px !important;
+}
+
+/* Action buttons */
+.fi-ta:has(.ign-university-grid-scope) .fi-icon-btn {
+    border-radius: 8px !important;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .fi-ta:has(.ign-university-grid-scope) .fi-ta-table {
+        min-width: 1150px !important;
+    }
+
+    .fi-ta:has(.ign-university-grid-scope) .fi-ta-table thead th {
+        padding: 13px 11px !important;
+    }
+
+    .fi-ta:has(.ign-university-grid-scope) .fi-ta-table tbody td {
+        padding: 15px 11px !important;
+    }
+}
+
+/* Dark mode */
+.dark .fi-ta:has(.ign-university-grid-scope) .fi-ta-table thead th {
+    background: #1e293b !important;
+    color: #e2e8f0 !important;
+    border-color: #334155 !important;
+}
+
+.dark .fi-ta:has(.ign-university-grid-scope) .fi-ta-table tbody td {
+    background: #111c2c !important;
+    color: #e2e8f0 !important;
+    border-color: #334155 !important;
+}
+
+.dark .fi-ta:has(.ign-university-grid-scope) .fi-ta-table tbody tr:hover td {
+    background: #263447 !important;
+}

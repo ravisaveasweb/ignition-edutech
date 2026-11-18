@@ -16,7 +16,7 @@
                         professional growth, and structured academic progression.</p>
 
                     <div class="smu-hero-actions">
-                        <a href="{{ route('university-application-form') }}" class="smu-btn smu-btn-primary">Explore SMU
+                        <a href="{{ route('study-india.universities-courses') }} " class="smu-btn smu-btn-primary">Explore SMU
                             Programs</a>
                         <a href="{{ route('contact') }}" class="smu-btn smu-btn-secondary  ign-enquiry-popup-trigger" data-source="Sikkim Manipal University - Hero Banner">Talk To An Advisor</a>
                     </div>

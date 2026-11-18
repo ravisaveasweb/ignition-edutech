@@ -25,7 +25,10 @@ class StudyIndiaReviewsTable
                     ->weight('medium')
 
                     ->iconColor('gray')
-                    ->toggleable(),
+                    ->toggleable()
+                    ->extraCellAttributes([
+                        'class' => 'ign-counselling-table-scope',
+                    ]),
 
                 TextColumn::make('student_name')
                     ->label('Student Details')

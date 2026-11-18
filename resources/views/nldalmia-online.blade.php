@@ -30,9 +30,9 @@
                         analytical toolsets defining the global corporate workforce.</p>
 
                     <div class="d-flex flex-wrap gap-3 pt-2">
-                        <button class="nld-btn nld-btn-dark d-flex align-items-center gap-2">
+                        <a href="{{ route('study-india.universities-courses') }} "class="nld-btn nld-btn-dark d-flex align-items-center gap-2">
                             Explore Programs <span class="material-symbols-outlined fs-5">arrow_forward</span>
-                        </button>
+                        </a>
                         <button class="nld-btn nld-btn-outline">Download Brochure</button>
                     </div>
                 </div>

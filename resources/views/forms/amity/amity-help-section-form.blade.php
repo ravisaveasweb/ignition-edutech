@@ -2,6 +2,8 @@
     <form id="amityHelpForm" action="{{ route('enquiry.store') }}" class="row g-3 enquiry-form" method="POST">
         @csrf
         <input type="hidden" name="source" value="Amity Help Form">
+               <input type="hidden" name="enquiry_type" value="Counselling">
+
 
         <div class="col-12">
             <input type="text" name="name" placeholder="Full Name" required>

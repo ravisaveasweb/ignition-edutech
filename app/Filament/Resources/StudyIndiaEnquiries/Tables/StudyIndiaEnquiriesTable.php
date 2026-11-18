@@ -28,7 +28,10 @@ class StudyIndiaEnquiriesTable
                 TextColumn::make('id')
                     ->label('ID')
                     ->sortable()
-                    ->toggleable(),
+                    ->toggleable()
+                     ->extraCellAttributes([
+                        'class' => 'ign-counselling-table-scope',
+                    ]),
 
                 TextColumn::make('name')
                     ->label('Student Details')

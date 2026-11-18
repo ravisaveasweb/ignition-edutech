@@ -18,6 +18,7 @@ use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use Filament\Support\Assets\Css;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -27,18 +28,51 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
-            ->favicon(asset('img/logo/favicon.png')) 
+            ->favicon(asset('img/logo/favicon.png'))
             ->login()
             ->authGuard('web')
             ->colors([
                 'primary' => Color::Blue,
             ])
+
+            ->assets([
+                Css::make(
+                    'counselling-enquiry-view',
+                    asset('css/filament/filament/counselling-enquiry-view.css')
+                ),
+                Css::make(
+                    'counselling-enquiries-table',
+                    asset('css/filament/filament/counselling-enquiries-table.css')
+                ),
+
+                Css::make(
+                    'study-india-reviews-table',
+                    asset('css/filament/study-india-reviews-table.css')
+                ),
+                Css::make(
+                    'ign-university-table',
+                    asset('css/filament/filament/university-table.css')
+                ),
+
+                 Css::make(
+                    'users-table',
+                    asset('css/filament/filament/users-table.css')
+                ),
+
+                   Css::make(
+                    'users-table',
+                    asset('css/filament/filament/blog-posts-table.css')
+                ),
+            ])
+
+
+
             ->navigationGroups([
                 'Shop',
                 'HR',
                 'Projects',
                 'Blog',
-                 'Admissions',
+                'Admissions',
             ])
             ->sidebarCollapsibleOnDesktop() // Enables icon-only collapsible sidebar
             // ->databaseNotifications()

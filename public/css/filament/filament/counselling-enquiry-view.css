@@ -1,0 +1,360 @@
+
+/* Ignition Counselling Enquiry View - Premium Filament CRM Design */
+
+:root {
+    --ign-counselling-navy: #0a2540;
+    --ign-counselling-navy-light: #174b6d;
+    --ign-counselling-orange: #eb933a;
+    --ign-counselling-text: #172b40;
+    --ign-counselling-muted: #64748b;
+    --ign-counselling-border: rgba(10, 37, 64, 0.10);
+    --ign-counselling-surface: #ffffff;
+    --ign-counselling-soft: #f7f9fc;
+}
+
+/* Main Section Cards */
+
+.ign-counselling-profile-section,
+.ign-counselling-contact-section,
+.ign-counselling-enquiry-section,
+.ign-counselling-activity-section {
+    overflow: hidden;
+    margin-bottom: 24px;
+    border: 1px solid var(--ign-counselling-border);
+    border-radius: 16px;
+    background: var(--ign-counselling-surface);
+    box-shadow: 0 3px 14px rgba(10, 37, 64, 0.045);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ign-counselling-profile-section:hover,
+.ign-counselling-contact-section:hover,
+.ign-counselling-enquiry-section:hover,
+.ign-counselling-activity-section:hover {
+    border-color: rgba(235, 147, 58, 0.35);
+    box-shadow: 0 8px 24px rgba(10, 37, 64, 0.075);
+}
+
+/* Section Headers */
+
+.ign-counselling-profile-section .fi-section-header,
+.ign-counselling-contact-section .fi-section-header,
+.ign-counselling-enquiry-section .fi-section-header,
+.ign-counselling-activity-section .fi-section-header {
+    position: relative;
+    display: flex;
+    min-height: 112px;
+    align-items: center;
+    justify-content: center;
+    padding: 22px 24px;
+    text-align: center;
+    border: 0;
+    border-bottom: 3px solid var(--ign-counselling-orange);
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(235, 147, 58, 0.15),
+            transparent 34%
+        ),
+        linear-gradient(
+            125deg,
+            var(--ign-counselling-navy) 0%,
+            #123b5d 58%,
+            var(--ign-counselling-navy-light) 100%
+        );
+}
+
+/* Header Decorative Accent */
+
+.ign-counselling-profile-section .fi-section-header::before,
+.ign-counselling-contact-section .fi-section-header::before,
+.ign-counselling-enquiry-section .fi-section-header::before,
+.ign-counselling-activity-section .fi-section-header::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 54px;
+    height: 3px;
+    border-radius: 0 0 5px 5px;
+    background: var(--ign-counselling-orange);
+    content: "";
+    transform: translateX(-50%);
+}
+
+/* Header Content */
+
+.ign-counselling-profile-section .fi-section-header-content,
+.ign-counselling-contact-section .fi-section-header-content,
+.ign-counselling-enquiry-section .fi-section-header-content,
+.ign-counselling-activity-section .fi-section-header-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+/* Header Icons */
+
+.ign-counselling-profile-section .fi-section-header-icon,
+.ign-counselling-contact-section .fi-section-header-icon,
+.ign-counselling-enquiry-section .fi-section-header-icon,
+.ign-counselling-activity-section .fi-section-header-icon {
+    display: flex;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 7px;
+    border: 1px solid rgba(235, 147, 58, 0.30);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.09);
+    color: var(--ign-counselling-orange);
+    filter: drop-shadow(0 2px 5px rgba(235, 147, 58, 0.15));
+}
+
+/* Header Titles */
+
+.ign-counselling-profile-section .fi-section-header-heading,
+.ign-counselling-contact-section .fi-section-header-heading,
+.ign-counselling-enquiry-section .fi-section-header-heading,
+.ign-counselling-activity-section .fi-section-header-heading {
+    margin: 0;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 750;
+    letter-spacing: 0.01em;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* Header Descriptions */
+
+.ign-counselling-profile-section .fi-section-header-description,
+.ign-counselling-contact-section .fi-section-header-description,
+.ign-counselling-enquiry-section .fi-section-header-description,
+.ign-counselling-activity-section .fi-section-header-description {
+    margin-top: 3px;
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Section Content */
+
+.ign-counselling-profile-section .fi-section-content,
+.ign-counselling-contact-section .fi-section-content,
+.ign-counselling-enquiry-section .fi-section-content,
+.ign-counselling-activity-section .fi-section-content {
+    padding: 24px;
+    background: var(--ign-counselling-surface);
+}
+
+/* Field Information Cards */
+
+.ign-counselling-profile-section .fi-in-entry,
+.ign-counselling-contact-section .fi-in-entry,
+.ign-counselling-enquiry-section .fi-in-entry,
+.ign-counselling-activity-section .fi-in-entry {
+    position: relative;
+    min-height: 76px;
+    padding: 15px 17px;
+    border: 1px solid var(--ign-counselling-border);
+    border-radius: 11px;
+    background: var(--ign-counselling-soft);
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* Field Card Hover */
+
+.ign-counselling-profile-section .fi-in-entry:hover,
+.ign-counselling-contact-section .fi-in-entry:hover,
+.ign-counselling-enquiry-section .fi-in-entry:hover,
+.ign-counselling-activity-section .fi-in-entry:hover {
+    border-color: rgba(235, 147, 58, 0.48);
+    background: #fffaf5;
+    box-shadow: 0 4px 14px rgba(10, 37, 64, 0.055);
+}
+
+/* Field Labels */
+
+.ign-counselling-profile-section .fi-in-entry-label,
+.ign-counselling-contact-section .fi-in-entry-label,
+.ign-counselling-enquiry-section .fi-in-entry-label,
+.ign-counselling-activity-section .fi-in-entry-label {
+    color: var(--ign-counselling-muted);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.075em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+/* Field Values */
+
+.ign-counselling-profile-section .fi-in-entry-content,
+.ign-counselling-contact-section .fi-in-entry-content,
+.ign-counselling-enquiry-section .fi-in-entry-content,
+.ign-counselling-activity-section .fi-in-entry-content {
+    margin-top: 7px;
+    color: var(--ign-counselling-text);
+    font-size: 14px;
+    font-weight: 650;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+/* Field Icons */
+
+.ign-counselling-profile-section .fi-in-entry-icon,
+.ign-counselling-contact-section .fi-in-entry-icon,
+.ign-counselling-enquiry-section .fi-in-entry-icon,
+.ign-counselling-activity-section .fi-in-entry-icon {
+    color: var(--ign-counselling-orange);
+}
+
+/* Student Name - Featured Field */
+
+.ign-counselling-profile-section .ign-counselling-primary-field {
+    border-color: rgba(10, 37, 64, 0.16);
+    background: linear-gradient(
+        125deg,
+        rgba(10, 37, 64, 0.055),
+        rgba(235, 147, 58, 0.09)
+    );
+}
+
+.ign-counselling-profile-section .ign-counselling-primary-field .fi-in-entry-content {
+    color: var(--ign-counselling-navy);
+    font-size: 16px;
+    font-weight: 800;
+}
+
+/* Program - Featured Field */
+
+.ign-counselling-profile-section .ign-counselling-program-field,
+.ign-counselling-enquiry-section .ign-counselling-program-field {
+    border-left: 4px solid var(--ign-counselling-orange);
+    background: linear-gradient(
+        120deg,
+        rgba(10, 37, 64, 0.035),
+        rgba(235, 147, 58, 0.075)
+    );
+}
+
+/* Email Field */
+
+.ign-counselling-email-field {
+    border-left: 4px solid #3b82f6;
+    background: #eff6ff;
+}
+
+/* Mobile Responsiveness */
+
+@media (max-width: 767px) {
+    .ign-counselling-profile-section,
+    .ign-counselling-contact-section,
+    .ign-counselling-enquiry-section,
+    .ign-counselling-activity-section {
+        margin-bottom: 17px;
+        border-radius: 12px;
+    }
+
+    .ign-counselling-profile-section .fi-section-header,
+    .ign-counselling-contact-section .fi-section-header,
+    .ign-counselling-enquiry-section .fi-section-header,
+    .ign-counselling-activity-section .fi-section-header {
+        min-height: 98px;
+        padding: 18px 15px;
+    }
+
+    .ign-counselling-profile-section .fi-section-header-heading,
+    .ign-counselling-contact-section .fi-section-header-heading,
+    .ign-counselling-enquiry-section .fi-section-header-heading,
+    .ign-counselling-activity-section .fi-section-header-heading {
+        font-size: 16px;
+    }
+
+    .ign-counselling-profile-section .fi-section-header-description,
+    .ign-counselling-contact-section .fi-section-header-description,
+    .ign-counselling-enquiry-section .fi-section-header-description,
+    .ign-counselling-activity-section .fi-section-header-description {
+        font-size: 11px;
+    }
+
+    .ign-counselling-profile-section .fi-section-content,
+    .ign-counselling-contact-section .fi-section-content,
+    .ign-counselling-enquiry-section .fi-section-content,
+    .ign-counselling-activity-section .fi-section-content {
+        padding: 15px;
+    }
+
+    .ign-counselling-profile-section .fi-in-entry,
+    .ign-counselling-contact-section .fi-in-entry,
+    .ign-counselling-enquiry-section .fi-in-entry,
+    .ign-counselling-activity-section .fi-in-entry {
+        min-height: 66px;
+        padding: 12px 13px;
+    }
+
+    .ign-counselling-profile-section .fi-in-entry-content,
+    .ign-counselling-contact-section .fi-in-entry-content,
+    .ign-counselling-enquiry-section .fi-in-entry-content,
+    .ign-counselling-activity-section .fi-in-entry-content {
+        font-size: 13px;
+    }
+}
+
+/* Dark Mode */
+
+.dark .ign-counselling-profile-section,
+.dark .ign-counselling-contact-section,
+.dark .ign-counselling-enquiry-section,
+.dark .ign-counselling-activity-section {
+    border-color: rgba(255, 255, 255, 0.10);
+    background: #111c2b;
+}
+
+.dark .ign-counselling-profile-section .fi-section-content,
+.dark .ign-counselling-contact-section .fi-section-content,
+.dark .ign-counselling-enquiry-section .fi-section-content,
+.dark .ign-counselling-activity-section .fi-section-content {
+    background: #111c2b;
+}
+
+.dark .ign-counselling-profile-section .fi-in-entry,
+.dark .ign-counselling-contact-section .fi-in-entry,
+.dark .ign-counselling-enquiry-section .fi-in-entry,
+.dark .ign-counselling-activity-section .fi-in-entry {
+    border-color: rgba(255, 255, 255, 0.09);
+    background: #1a293b;
+}
+
+.dark .ign-counselling-profile-section .fi-in-entry-content,
+.dark .ign-counselling-contact-section .fi-in-entry-content,
+.dark .ign-counselling-enquiry-section .fi-in-entry-content,
+.dark .ign-counselling-activity-section .fi-in-entry-content {
+    color: #e2e8f0;
+}
+
+.dark .ign-counselling-profile-section .fi-in-entry-label,
+.dark .ign-counselling-contact-section .fi-in-entry-label,
+.dark .ign-counselling-enquiry-section .fi-in-entry-label,
+.dark .ign-counselling-activity-section .fi-in-entry-label {
+    color: #94a3b8;
+}
+
+.dark .ign-counselling-profile-section .fi-in-entry:hover,
+.dark .ign-counselling-contact-section .fi-in-entry:hover,
+.dark .ign-counselling-enquiry-section .fi-in-entry:hover,
+.dark .ign-counselling-activity-section .fi-in-entry:hover {
+    background: #24354a;
+}

@@ -422,7 +422,7 @@
                 </button>
             @endforeach
         </div>
-        <div class="si-state-empty" id="siStateEmpty" hidden>No states found. Try another search.</div>
+
     </div>
 
     {{-- Study Preference Modal --}}
@@ -538,6 +538,9 @@
     {{-- Institute Panel --}}
     <div class="si-institute-panel" id="siInstitutePanel">
         <div class="si-institute-header">
+            <button type="button" id="siInstituteBack" class="si-institute-back" aria-label="Back to states">
+                <i class="bi bi-arrow-left"></i>
+            </button>
             <div>
                 <small>NIRF Ranked Institutes</small>
                 <h3 id="siSelectedState">All States</h3>
@@ -575,14 +578,14 @@
                     <span>
                         <i class="bi bi-mortarboard"></i>
                     </span>
-                    Top Courses
+                    Top university
                 </a>
 
                 <a href="{{ route('study-india.universities-courses') }}#ign-univ-directory-online ">
                     <span>
                         <i class="bi bi-laptop"></i>
                     </span>
-                    Online Courses
+                    Online university
                 </a>
 
                 <a href="{{ route('college-news.index', ['section' => 'study-india']) }}">

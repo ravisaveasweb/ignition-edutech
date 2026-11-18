@@ -5,6 +5,9 @@
         <h3>Get Free Counselling</h3>
         <p>Talk to our experts & choose the right program for your future.</p>
         <input type="hidden" name="source" value="Vitol Hero Form">
+        <input type="hidden" name="enquiry_type" value="Counselling">
+
+        
 
         <input type="text" name="name" placeholder="Full Name" required minlength="2" maxlength="60"
             autocomplete="name" class="vitol-name-input">

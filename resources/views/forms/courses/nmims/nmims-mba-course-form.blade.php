@@ -3,6 +3,8 @@
     @csrf
 
     <input type="hidden" name="source" value="NMIMS Online MBA Hero Section">
+    <input type="hidden" name="enquiry_type" value="Counselling">
+
 
     {{-- <input type="hidden" name="university" value="NMIMS Online"> --}}
 

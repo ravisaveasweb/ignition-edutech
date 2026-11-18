@@ -27,14 +27,18 @@ class CounsellingEnquiriesTable
                 TextColumn::make('id')
                     ->label('ID')
                     ->sortable()
-                    ->toggleable(),
+                    ->toggleable()
+                    ->extraCellAttributes([
+                        'class' => 'ign-counselling-table-scope',
+                    ]),
 
                 TextColumn::make('name')
                     ->label('Student Details')
                     ->searchable()
                     ->sortable()
                     ->weight('semibold')
-                    ->description(fn (Enquiry $record): string =>
+                    ->description(
+                        fn(Enquiry $record): string =>
                         filled($record->email)
                             ? $record->email
                             : 'Email not provided'
@@ -48,7 +52,8 @@ class CounsellingEnquiriesTable
                     ->searchable()
                     ->copyable()
                     ->copyMessage('Email copied successfully')
-                    ->url(fn (Enquiry $record): ?string =>
+                    ->url(
+                        fn(Enquiry $record): ?string =>
                         filled($record->email)
                             ? 'mailto:' . $record->email
                             : null
@@ -62,7 +67,8 @@ class CounsellingEnquiriesTable
                     ->searchable()
                     ->copyable()
                     ->copyMessage('Mobile number copied successfully')
-                    ->url(fn (Enquiry $record): ?string =>
+                    ->url(
+                        fn(Enquiry $record): ?string =>
                         filled($record->mobile)
                             ? 'tel:' . $record->mobile
                             : null
@@ -83,16 +89,17 @@ class CounsellingEnquiriesTable
                 TextColumn::make('enquiry_type')
                     ->label('Enquiry Category')
                     ->badge()
-                    ->formatStateUsing(fn (?string $state): string =>
+                    ->formatStateUsing(
+                        fn(?string $state): string =>
                         $state ?: 'Not classified'
                     )
-                    ->color(fn (?string $state): string => match ($state) {
+                    ->color(fn(?string $state): string => match ($state) {
                         'Counselling' => 'warning',
                         'Study India' => 'success',
                         'Study Abroad' => 'info',
                         default => 'gray',
                     })
-                    ->icon(fn (?string $state): string => match ($state) {
+                    ->icon(fn(?string $state): string => match ($state) {
                         'Counselling' => 'heroicon-m-chat-bubble-left-right',
                         'Study India' => 'heroicon-m-academic-cap',
                         'Study Abroad' => 'heroicon-m-globe-asia-australia',
@@ -110,11 +117,12 @@ class CounsellingEnquiriesTable
                 TextColumn::make('created_at')
                     ->label('Submission Details')
                     ->dateTime('d M Y')
-                    ->description(fn (Enquiry $record): string =>
+                    ->description(
+                        fn(Enquiry $record): string =>
                         $record->created_at
                             ? $record->created_at->format('h:i A') .
-                                ' · ' .
-                                $record->created_at->diffForHumans()
+                            ' · ' .
+                            $record->created_at->diffForHumans()
                             : 'Date unavailable'
                     )
                     ->sortable()
@@ -123,7 +131,7 @@ class CounsellingEnquiriesTable
 
             ])
 
-          
+
 
             ->filters([
 
@@ -131,7 +139,7 @@ class CounsellingEnquiriesTable
                     ->label('Program')
                     ->placeholder('All Programs')
                     ->searchable()
-                    ->options(fn (): array => Enquiry::query()
+                    ->options(fn(): array => Enquiry::query()
                         ->whereNotNull('program')
                         ->where('program', '!=', '')
                         ->distinct()
@@ -152,7 +160,7 @@ class CounsellingEnquiriesTable
                     ->label('Enquiry Source')
                     ->placeholder('All Sources')
                     ->searchable()
-                    ->options(fn (): array => Enquiry::query()
+                    ->options(fn(): array => Enquiry::query()
                         ->whereNotNull('source')
                         ->where('source', '!=', '')
                         ->distinct()
@@ -184,27 +192,27 @@ class CounsellingEnquiriesTable
                         return $query
                             ->when(
                                 $data['from'] ?? null,
-                                fn (Builder $query, $date) =>
-                                    $query->whereDate(
-                                        'created_at',
-                                        '>=',
-                                        $date
-                                    )
+                                fn(Builder $query, $date) =>
+                                $query->whereDate(
+                                    'created_at',
+                                    '>=',
+                                    $date
+                                )
                             )
                             ->when(
                                 $data['until'] ?? null,
-                                fn (Builder $query, $date) =>
-                                    $query->whereDate(
-                                        'created_at',
-                                        '<=',
-                                        $date
-                                    )
+                                fn(Builder $query, $date) =>
+                                $query->whereDate(
+                                    'created_at',
+                                    '<=',
+                                    $date
+                                )
                             );
                     }),
 
             ])
 
-          
+
 
             ->recordActions([
 
@@ -225,7 +233,7 @@ class CounsellingEnquiriesTable
 
             ])
 
-           
+
 
             ->toolbarActions([
 
@@ -239,7 +247,7 @@ class CounsellingEnquiriesTable
 
             ])
 
-        
+
 
             ->striped()
 
@@ -249,7 +257,7 @@ class CounsellingEnquiriesTable
             )
             ->emptyStateIcon('heroicon-o-inbox')
 
-            ->defaultSort('created_at', 'asc')
+            ->defaultSort('created_at', 'desc')
 
             ->paginated([10, 25, 50, 100])
 

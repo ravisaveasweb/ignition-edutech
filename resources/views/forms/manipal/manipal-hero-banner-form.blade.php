@@ -9,6 +9,8 @@
             method="POST">
             @csrf
             <input type="hidden" name="store" value="Manipal Hero Form">
+            <input type="hidden" name="enquiry_type" value="Counselling">
+
 
             <input type="text" name="name" placeholder="Full Name" required>
 

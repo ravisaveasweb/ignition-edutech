@@ -1,6 +1,8 @@
 <form id="smuHelpForm" class="smu-cta-form enquiry-form" method="POST" action="{{ route('enquiry.store') }}">
     @csrf
     <input type="hidden" name="source" value="SMU Help Form">
+    <input type="hidden" name="enquiry_type" value="Counselling">
+
 
 
     <div class="input-group">
@@ -16,40 +18,39 @@
     </div>
 
     <div>
-         <div class="smu-course-dropdown">
+        <div class="smu-course-dropdown">
 
-    <button type="button" class="smu-course-trigger" aria-expanded="false">
-        <span class="smu-course-selected">Select Program of Interest</span>
-        <i class="bi bi-chevron-down"></i>
-    </button>
+            <button type="button" class="smu-course-trigger" aria-expanded="false">
+                <span class="smu-course-selected">Select Program of Interest</span>
+                <i class="bi bi-chevron-down"></i>
+            </button>
 
-    <input type="hidden" name="course_name" class="smu-course-value" required>
+            <input type="hidden" name="course_name" class="smu-course-value" required>
 
-    <div class="smu-course-menu">
+            <div class="smu-course-menu">
 
-        <input type="text" class="smu-course-search"
-            placeholder="Search course..." autocomplete="off">
+                <input type="text" class="smu-course-search" placeholder="Search course..." autocomplete="off">
 
-        <div class="smu-course-options">
+                <div class="smu-course-options">
 
-            @forelse($courses ?? [] as $course)
-                <div class="smu-course-option" data-value="{{ $course }}">
-                    {{ $course }}
+                    @forelse($courses ?? [] as $course)
+                        <div class="smu-course-option" data-value="{{ $course }}">
+                            {{ $course }}
+                        </div>
+                    @empty
+                        <div class="smu-course-empty">
+                            No courses available
+                        </div>
+                    @endforelse
+
+                    <div class="smu-course-empty" hidden>
+                        No matching courses found
+                    </div>
+
                 </div>
-            @empty
-                <div class="smu-course-empty">
-                    No courses available
-                </div>
-            @endforelse
-
-            <div class="smu-course-empty" hidden>
-                No matching courses found
             </div>
 
         </div>
-    </div>
-
-</div>
     </div>
 
     <button class="btn-book" type="submit">Book Free Counselling</button>

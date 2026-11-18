@@ -35,14 +35,14 @@
                     </p>
 
                     <div class="d-flex gap-3 mb-4">
-                        <button class="amity-btn-primary-custom px-4 py-3 d-flex align-items-center gap-2">
+                        <a  href="{{ route('study-india.universities-courses') }} "class="amity-btn-primary-custom px-4 py-3 d-flex align-items-center gap-2">
                             Explore Online Programs
                             <span class="material-symbols-outlined">arrow_forward</span>
-                        </button>
+                        </a>
 
-                        <button class="amity-btn-primary-custom px-4 py-3 d-flex align-items-center gap-2">
+                        <a class="amity-btn-primary-custom px-4 py-3 d-flex align-items-center gap-2 ign-enquiry-popup-trigger" data-source="Amity University - Hero Banner">
                             Speak With an Academic Advisor
-                        </button>
+                        </a>
                     </div>
 
                     <div class="row g-3">

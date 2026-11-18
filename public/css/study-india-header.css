@@ -4180,7 +4180,7 @@ body.si-preference-open {
     border-radius: 4px;
     font-size: 13px;
     font-weight: 500;
-    color: #eb933a;
+    color: #000000;
     text-decoration: none;
     white-space: nowrap;
     /* backdrop-filter: blur(8px); */
@@ -4202,3 +4202,38 @@ body.si-preference-open {
 }
 
 /* auto scrolling university  End*/
+
+
+
+
+/* Institute Panel Header Arrow Actions start*/
+.si-institute-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.si-institute-back {
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dce2e8;
+    border-radius: 7px;
+    background: #fff;
+    color: #0a2540;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.si-institute-back:hover {
+    background: #0a2540;
+    color: #fff;
+    border-color: #0a2540;
+}
+
+/* Institute Panel Header Arrow Actions End*/
+
+
+

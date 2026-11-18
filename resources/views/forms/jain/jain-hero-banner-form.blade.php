@@ -1,6 +1,8 @@
 <form class="jain-lead-form enquiry-form" id="jainHomeBannerForm" method="POST" action="{{ route('enquiry.store') }}">
     @csrf
     <input type="hidden" name="source" value="Jain Hero Form">
+    <input type="hidden" name="enquiry_type" value="Counselling">
+
 
     <input type="text" name="name" placeholder="Full Name" required>
 
@@ -41,7 +43,7 @@
         </div>
 
     </div>
-    
+
     <button class="btn-primary full" type="submit">
         Book Free Counselling
     </button>

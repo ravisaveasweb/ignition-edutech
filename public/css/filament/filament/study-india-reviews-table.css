@@ -1,0 +1,80 @@
+
+
+/* Outer Table Border */
+.fi-ta:has(.sir-reviews-table-scope) .fi-ta-content {
+    border: 1px solid #e2e8f0 !important;
+    background: #ffffff;
+}
+
+/* Table Structure */
+.fi-ta:has(.sir-reviews-table-scope) .fi-ta-table {
+    width: 100%;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    border: none !important;
+}
+
+/* All Header Cells */
+.fi-ta:has(.sir-reviews-table-scope) .fi-ta-table thead th {
+    box-shadow:
+        inset -1px 0 0 #dce4ee,
+        inset 0 -1px 0 #dce4ee !important;
+    background: #f0f4f9 !important;
+}
+
+/* All Body Cells */
+.fi-ta:has(.sir-reviews-table-scope) .fi-ta-table tbody td {
+    box-shadow:
+        inset -1px 0 0 #e2e8f0,
+        inset 0 -1px 0 #e2e8f0 !important;
+    background: #ffffff;
+}
+
+/* Last Column */
+.fi-ta:has(.sir-reviews-table-scope) .fi-ta-table th:last-child,
+.fi-ta:has(.sir-reviews-table-scope) .fi-ta-table td:last-child {
+    box-shadow:
+        inset 0 -1px 0 #e2e8f0 !important;
+}
+
+/* Last Row */
+.fi-ta:has(.sir-reviews-table-scope)
+.fi-ta-table tbody tr:last-child td {
+    box-shadow: inset -1px 0 0 #e2e8f0 !important;
+}
+
+/* Last Cell */
+.fi-ta:has(.sir-reviews-table-scope)
+.fi-ta-table tbody tr:last-child td:last-child {
+    box-shadow: none !important;
+}
+
+/* Row Hover */
+.fi-ta:has(.sir-reviews-table-scope)
+.fi-ta-table tbody tr:hover td {
+    background-color: #fff9f1 !important;
+}
+
+/* Dark Mode */
+.dark .fi-ta:has(.sir-reviews-table-scope) .fi-ta-content {
+    border-color: #334155 !important;
+    background: #111c2c;
+}
+
+.dark .fi-ta:has(.sir-reviews-table-scope) .fi-ta-table thead th {
+    box-shadow:
+        inset -1px 0 0 #334155,
+        inset 0 -1px 0 #334155 !important;
+}
+
+.dark .fi-ta:has(.sir-reviews-table-scope) .fi-ta-table tbody td {
+    box-shadow:
+        inset -1px 0 0 #334155,
+        inset 0 -1px 0 #334155 !important;
+    background: #111c2c;
+}
+
+.dark .fi-ta:has(.sir-reviews-table-scope)
+.fi-ta-table tbody tr:hover td {
+    background: #263447 !important;
+}

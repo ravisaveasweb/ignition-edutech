@@ -269,7 +269,7 @@
                             </div>
                         </div>
 
-                        <a href="{{ route('university-application-form') }}" class="vit-sidebar-cta">Explore All
+                        <a href="{{ route('study-india.universities-courses') }} " class="vit-sidebar-cta">Explore All
                             Programs</a>
                     </aside>
                 </div>
@@ -331,7 +331,7 @@
                             <li>Experienced Faculty</li>
                             <li>Holistic Student Support</li>
                         </ul>
-                        <a href="about.php">Know More About VIT</a>
+                        <a href="#">Know More About VIT</a>
                     </div>
 
                     <div class="vit-advantage-card">
@@ -360,7 +360,7 @@
                             <div><strong>Top 20</strong><span>Engineering Institutes</span></div>
                             <div><strong>Top 3</strong><span>In Innovation</span></div>
                         </div>
-                        <a href="{{ route('university-application-form') }}">About VIT</a>
+                        <a href="#">About VIT</a>
                     </div>
                 </div>
             </div>

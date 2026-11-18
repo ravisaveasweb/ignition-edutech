@@ -1,6 +1,8 @@
 <form class="dpu-cta-form enquiry-form" id="dpuHomeBannerForm" action="{{ route('enquiry.store') }}" method="POST">
     @csrf
     <input type="hidden" name="source" value="DPU Hero Form">
+    <input type="hidden" name="enquiry_type" value="Counselling">
+
 
     <input type="text" name="name" placeholder="Full Name" required>
 

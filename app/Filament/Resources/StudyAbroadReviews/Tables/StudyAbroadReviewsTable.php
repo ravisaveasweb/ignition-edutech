@@ -27,7 +27,10 @@ class StudyAbroadReviewsTable
                 TextColumn::make('id')
                     ->label('ID')
                     ->sortable()
-                    ->toggleable(),
+                    ->toggleable()
+                     ->extraCellAttributes([
+                        'class' => 'ign-counselling-table-scope',
+                    ]),
 
                 // STUDENT DETAILS
                 TextColumn::make('student_name')

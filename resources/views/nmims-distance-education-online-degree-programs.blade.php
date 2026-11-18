@@ -277,7 +277,7 @@
 
                     <div class="row mt-2">
                         <div class="col-12 text-center">
-                            <a href="#" class="btn-primary offering-btn">View All Programs</a>
+                            <a href="{{ route('study-india.universities-courses') }}" class="btn-primary offering-btn">View All Programs</a>
                         </div>
                     </div>
                 </div>
@@ -385,7 +385,7 @@
 
             <div class="row mt-50">
                 <div class="col-12 text-center">
-                    <button class="btn-primary offering-btn">Explore All Programs</button>
+                    <a href="{{ route('study-india.universities-courses') }}" class="btn-primary offering-btn">Explore All Programs</a>
                 </div>
             </div>
         </div>

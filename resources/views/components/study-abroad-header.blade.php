@@ -925,14 +925,14 @@
                     <span>
                         <i class="bi bi-mortarboard"></i>
                     </span>
-                    Top Courses
+                    Top university
                 </a>
 
                 <a href="{{ route('study-india.universities-courses') }}#ign-univ-directory-online ">
                     <span>
                         <i class="bi bi-laptop"></i>
                     </span>
-                    Online Courses
+                    Online university
                 </a>
 
                 <a href="{{ route('college-news.index', ['section' => 'study-india']) }}">
