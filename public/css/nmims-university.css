@@ -398,7 +398,7 @@
     display: block;
     font-size: 20px;
     line-height: 1.2;
-    color: #fff;
+    color: #000000;
     font-family: var(--tp-ff-heading);
     margin-bottom: 3px;
 }
@@ -406,7 +406,7 @@
 .nmims-feature-strip .text span {
     font-size: 14px;
     line-height: 1.4;
-    color: #fff;
+    color: #000000;
     display: block;
 }
 
@@ -417,6 +417,8 @@
 }
 
 .nmims-approved-service h2 {
+    text-align: center;
+
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 20px;
