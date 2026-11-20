@@ -71,6 +71,7 @@
     <link rel="stylesheet" href="{{ asset('css/entrance-exam.css') }}" />
 <link rel="stylesheet"
       href="{{ asset('css/ign-university-enquiry-popup.css') }}?v=1">
+      <link rel="stylesheet" href="{{ asset('css/success-stories.css') }}?v=1">
 
 
 

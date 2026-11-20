@@ -536,7 +536,7 @@
     </div>
 
     {{-- Institute Panel --}}
-    <div class="si-institute-panel" id="siInstitutePanel">
+    <div class="si-institute-panel " id="siInstitutePanel">
         <div class="si-institute-header">
             <button type="button" id="siInstituteBack" class="si-institute-back" aria-label="Back to states">
                 <i class="bi bi-arrow-left"></i>

@@ -80,25 +80,80 @@ document.addEventListener("DOMContentLoaded", function () {
     let siSelectedState = null;
 
     // Search State List
-    const siStateSearch = document.getElementById("siStateSearch");
-    const siStateEmpty = document.getElementById("siStateEmpty");
+    // const siStateSearch = document.getElementById("siStateSearch");
+    // const siStateEmpty = document.getElementById("siStateEmpty");
 
-    if (siStateSearch) {
-        siStateSearch.addEventListener("input", function () {
-            const term = this.value.trim().toLowerCase();
-            let visible = 0;
-            document
-                .querySelectorAll("#siStateGrid .si-state-item")
-                .forEach(function (item) {
-                    const matches = item.textContent
-                        .toLowerCase()
-                        .includes(term);
-                    item.style.display = matches ? "" : "none";
-                    if (matches) visible++;
-                });
-            if (siStateEmpty) siStateEmpty.hidden = visible > 0;
+    // if (siStateSearch) {
+    //     siStateSearch.addEventListener("input", function () {
+    //         const term = this.value.trim().toLowerCase();
+    //         let visible = 0;
+    //         document
+    //             .querySelectorAll("#siStateGrid .si-state-item")
+    //             .forEach(function (item) {
+    //                 const matches = item.textContent
+    //                     .toLowerCase()
+    //                     .includes(term);
+    //                 item.style.display = matches ? "" : "none";
+    //                 if (matches) visible++;
+    //             });
+    //         if (siStateEmpty) siStateEmpty.hidden = visible > 0;
+    //     });
+    // }
+
+
+    // Search State List
+const siStateSearch = document.getElementById("siStateSearch");
+const siStateEmpty = document.getElementById("siStateEmpty");
+const siStateGrid = document.getElementById("siStateGrid");
+
+if (siStateSearch && siStateGrid) {
+    siStateSearch.addEventListener("input", function () {
+        const term = this.value.trim().toLowerCase();
+
+        const items = Array.from(
+            siStateGrid.querySelectorAll(".si-state-item")
+        );
+
+        items.sort(function (a, b) {
+            const nameA = a.textContent.trim().toLowerCase();
+            const nameB = b.textContent.trim().toLowerCase();
+
+            const getPriority = function (name) {
+                if (!term) return 0;
+                if (name === term) return 1;
+                if (name.startsWith(term)) return 2;
+                if (name.includes(term)) return 3;
+                return 4;
+            };
+
+            const priorityA = getPriority(nameA);
+            const priorityB = getPriority(nameB);
+
+            if (priorityA !== priorityB) {
+                return priorityA - priorityB;
+            }
+
+            return nameA.localeCompare(nameB);
         });
-    }
+
+        let visible = 0;
+
+        items.forEach(function (item) {
+            const name = item.textContent.trim().toLowerCase();
+            const matches = !term || name.includes(term);
+
+            item.style.display = matches ? "flex" : "none";
+
+            if (matches) visible++;
+
+            siStateGrid.appendChild(item);
+        });
+
+        if (siStateEmpty) {
+            siStateEmpty.hidden = visible > 0;
+        }
+    });
+}
 
     // Popular cities with Bootstrap-icon style landmarks (CollegeDunia style)
     // const siPopularCities = [{

@@ -200,7 +200,7 @@
 <script src="{{ asset('js/form-dropdown/bennett-university.js') }}?v=1"></script>
 
 <script src="{{ asset('js/ign-university-enquiry-popup.js') }}?v=1"></script>
-
+<script src="{{ asset('js/success-stories.js') }}?v=1" defer></script>
 
 
 

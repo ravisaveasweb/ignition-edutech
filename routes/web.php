@@ -19,12 +19,12 @@ use App\Http\Controllers\StudyIndiaReviewController;
 
 use App\Http\Controllers\StudyAbroadReviewController;
 use App\Http\Controllers\StudyIndiaController;
+use App\Http\Controllers\SuccessStoryController;
 
 
 
 
-
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class , 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/our-process', [HomeController::class, 'our_process'])->name('our-process');
@@ -477,3 +477,11 @@ Route::get(
 // Universities courses page end
 
 
+
+
+// success-stories Start
+Route::get('/success-stories', [SuccessStoryController::class, 'index'])
+    ->name('success-stories.index');
+
+
+// success-stories End
