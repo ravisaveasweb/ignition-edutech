@@ -345,7 +345,9 @@
         visa rules with the respective university and embassy before applying.</p>
 </div>
 
-<x-frontend-footer />
+{{-- <x-frontend-footer /> --}}
+
+<x-new-footer />
 
 
 <script>

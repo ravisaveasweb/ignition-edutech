@@ -683,7 +683,7 @@
             @endforeach
 
         </div>
-        <a href="#" class="view-more">View More Success Stories →</a>
+        <a href="{{route('success-stories.index') }}" class="view-more">View More Success Stories →</a>
     </div>
 </section>
 
@@ -853,7 +853,8 @@
 
 <x-university-enquiry-popup :courses="$courses ?? []" />
 
-<x-frontend-footer />
+{{-- <x-frontend-footer /> --}}
+<x-new-footer />
 
 
 <!-- footer-area-start -->

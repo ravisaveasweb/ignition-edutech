@@ -70,6 +70,7 @@
     <link rel="stylesheet" href="{{ asset('css/study-abroad-header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/study-india-header.css') }}">
     <link rel="stylesheet" href="{{ asset('css/ign-university-enquiry-popup.css') }}?v=1">
+     <link rel="stylesheet" href="{{ asset('css/new-footer.css') }}?v=1">
 
 
 
@@ -935,6 +936,13 @@
                     Online university
                 </a>
 
+                <a href="{{ route('success-stories.index') }}">
+                    <span>
+                        <i class="bi bi-trophy"></i>
+                    </span>
+                    Success Stories
+                </a>
+
                 <a href="{{ route('college-news.index', ['section' => 'study-india']) }}">
                     <span>
                         <i class="bi bi-newspaper"></i>
@@ -967,7 +975,7 @@
                     </div>
                 </a>
 
-                <a href="{{ url('exams/gre') }}">
+                <a href="{{ route('exams.index') }}">
                     <span> <i class="bi bi-journal-text"></i></span>
                     Abroad Exams
                 </a>

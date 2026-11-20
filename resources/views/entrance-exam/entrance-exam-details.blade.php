@@ -198,4 +198,6 @@
 
 
 <script src="{{ asset('js/entrance-exam-details.js') }}"></script>
-<x-frontend-footer />
+
+{{-- <x-frontend-footer /> --}}
+<x-new-footer />

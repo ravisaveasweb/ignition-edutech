@@ -1,0 +1,1311 @@
+
+/* Base */
+:root {
+    --ign-exam-directory-navy: #0a2540;
+    --ign-exam-directory-orange: #eb933a;
+    --ign-exam-directory-dark-orange: #d7791f;
+    --ign-exam-directory-white: #fff;
+    --ign-exam-directory-text: #26364a;
+    --ign-exam-directory-muted: #6c7a89;
+    --ign-exam-directory-border: #e7ebf0;
+    --ign-exam-directory-light: #f6f8fb;
+    --ign-exam-directory-soft-orange: #fff5e9;
+    --ign-exam-directory-radius: 18px;
+    --ign-exam-directory-shadow: 0 14px 40px rgba(10, 37, 64, .08);
+    --ign-exam-directory-transition: .3s ease;
+}
+
+.ign-exam-directory-page {
+    width: 100%;
+    overflow: hidden;
+    background: var(--ign-exam-directory-white);
+    color: var(--ign-exam-directory-text);
+}
+
+.ign-exam-directory-page *,
+.ign-exam-directory-page *::before,
+.ign-exam-directory-page *::after {
+    box-sizing: border-box;
+}
+
+.ign-exam-directory-container {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+/* Breadcrumb */
+.ign-exam-directory-breadcrumb-section {
+    background: #fff;
+    border-bottom: 1px solid #f0f2f5;
+}
+
+.ign-exam-directory-breadcrumb {
+    min-height: 58px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+}
+
+.ign-exam-directory-breadcrumb a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--ign-exam-directory-dark-orange);
+    text-decoration: none;
+    transition: var(--ign-exam-directory-transition);
+}
+
+.ign-exam-directory-breadcrumb a:hover {
+    color: var(--ign-exam-directory-orange);
+}
+
+.ign-exam-directory-breadcrumb>i {
+    color: #aeb8c3;
+    font-size: 11px;
+}
+
+.ign-exam-directory-breadcrumb>span {
+    color: var( --ign-exam-directory-muted);
+    font-weight: 600;
+}
+
+/* Hero */
+.ign-exam-directory-hero {
+    position: relative;
+    isolation: isolate;
+    min-height: 475px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f7f9fc 0%, #eef4f9 55%, #fff8ef 100%);
+}
+
+.ign-exam-directory-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.ign-exam-directory-hero-bg::before,
+.ign-exam-directory-hero-bg::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.ign-exam-directory-hero-bg::before {
+    width: 420px;
+    height: 420px;
+    top: -220px;
+    right: -120px;
+    background: rgba(235, 147, 58, .1);
+}
+
+.ign-exam-directory-hero-bg::after {
+    width: 300px;
+    height: 300px;
+    bottom: -190px;
+    left: -120px;
+    background: rgba(10, 37, 64, .06);
+}
+
+.ign-exam-directory-hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 58px 0 68px;
+    text-align: center;
+}
+
+.ign-exam-directory-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 17px;
+    color: var(--ign-exam-directory-dark-orange);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.ign-exam-directory-eyebrow::before,
+.ign-exam-directory-eyebrow::after {
+    content: "";
+    width: 26px;
+    height: 2px;
+    background: var(--ign-exam-directory-orange);
+}
+
+.ign-exam-directory-title {
+    max-width: 820px;
+    margin: 0 auto;
+    color: var(--ign-exam-directory-navy);
+    font-size: clamp(36px, 4vw, 42px);
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -1.2px;
+}
+
+.ign-exam-directory-title span {
+    display: block;
+    color: var(--ign-exam-directory-orange);
+}
+
+.ign-exam-directory-description {
+    max-width: 720px;
+    margin: 20px auto 30px;
+    color: var(--ign-exam-directory-muted);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Search */
+.ign-exam-directory-search-wrap {
+    position: relative;
+    max-width: 720px;
+    height: 64px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid rgba(10, 37, 64, .1);
+    border-radius: 14px;
+    box-shadow: 0 12px 35px rgba(10, 37, 64, .1);
+    transition: var(--ign-exam-directory-transition);
+}
+
+.ign-exam-directory-search-wrap:focus-within {
+    border-color: rgba(235, 147, 58, .7);
+    box-shadow: 0 12px 35px rgba(10, 37, 64, .1), 0 0 0 4px rgba(235, 147, 58, .1);
+}
+
+.ign-exam-directory-search-icon {
+    position: absolute;
+    left: 22px;
+    color: var(--ign-exam-directory-orange);
+    font-size: 20px;
+}
+
+/* .ign-exam-directory-search {
+    width: 100%;
+    height: 100%;
+    padding: 0 55px 0 56px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--ign-exam-directory-navy);
+    font-size: 15px;
+} */
+
+.ign-exam-directory-search {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    padding: 0 12px 0 56px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--ign-exam-directory-navy);
+    font-size: 15px;
+}
+
+.ign-exam-directory-search::placeholder {
+    color: #98a4b1;
+}
+
+/* .ign-exam-directory-search-clear {
+    position: absolute;
+    right: 17px;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #f0f3f6;
+    color: #6d7885;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--ign-exam-directory-transition);
+} */
+
+
+.ign-exam-directory-search-clear {
+    position: static;
+    flex: 0 0 32px;
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #f0f3f6;
+    color: #6d7885;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--ign-exam-directory-transition);
+}
+
+.ign-exam-directory-search-clear:hover {
+    background: var(--ign-exam-directory-soft-orange);
+    color: var(--ign-exam-directory-dark-orange);
+    transform: rotate(90deg);
+}
+
+.ign-exam-directory-search-button {
+    flex: 0 0 auto;
+    height: 44px;
+    margin-right: 10px;
+    padding: 0 25px;
+    border: 0;
+    border-radius: 9px;
+    background: var(--ign-exam-directory-navy);
+    color: var(--ign-exam-directory-white);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--ign-exam-directory-transition);
+}
+
+.ign-exam-directory-search-button:hover {
+    background: var(--ign-exam-directory-orange);
+    transform: translateY(-2px);
+}
+
+/* Filters */
+.ign-exam-directory-filters {
+    margin-top: 22px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.ign-exam-directory-filter-button {
+    min-height: 42px;
+    padding: 0 19px;
+    border: 1px solid #dce2e8;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .85);
+    color: var(--ign-exam-directory-navy);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: color .3s ease, background .3s ease, border-color .3s ease, transform .3s ease, box-shadow .3s ease;
+}
+
+.ign-exam-directory-filter-button:hover {
+    border-color: var(--ign-exam-directory-orange);
+    color: var(--ign-exam-directory-dark-orange);
+    transform: translateY(-2px);
+}
+
+.ign-exam-directory-filter-button.is-active {
+    border-color: var(--ign-exam-directory-orange);
+    background: var(--ign-exam-directory-orange);
+    color: #fff;
+    box-shadow: 0 7px 20px rgba(235, 147, 58, .22);
+}
+
+/* Sections */
+.ign-exam-directory-listing,
+.ign-exam-directory-choice {
+    padding: 82px 0 88px;
+    background: #fff;
+}
+
+.ign-exam-directory-section-heading {
+    margin-bottom: 38px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.ign-exam-directory-section-heading.is-centered {
+    max-width: 760px;
+    margin: 0 auto 42px;
+    display: block;
+    text-align: center;
+}
+
+.ign-exam-directory-section-label {
+    display: block;
+    margin-bottom: 9px;
+    color: var(--ign-exam-directory-dark-orange);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.ign-exam-directory-section-title {
+    margin: 0;
+    color: var(--ign-exam-directory-navy);
+    font-size: clamp(28px, 3vw, 32px);
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.ign-exam-directory-section-description {
+    max-width: 680px;
+    margin: 13px 0 0;
+    color: var(--ign-exam-directory-muted);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.ign-exam-directory-section-heading.is-centered .ign-exam-directory-section-description {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ign-exam-directory-count-wrap {
+    min-width: 118px;
+    padding: 13px 17px;
+    border: 1px solid var(--ign-exam-directory-border);
+    border-radius: 12px;
+    background: #fbfcfd;
+    text-align: center;
+}
+
+.ign-exam-directory-count-wrap strong {
+    display: block;
+    color: var(--ign-exam-directory-orange);
+    font-size: 23px;
+    line-height: 1;
+}
+
+.ign-exam-directory-count-wrap span {
+    display: block;
+    margin-top: 5px;
+    color: var(--ign-exam-directory-muted);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Exam Cards */
+.ign-exam-directory-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.ign-exam-directory-card {
+    position: relative;
+    min-height: 455px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    border: 1px solid var(--ign-exam-directory-border);
+    border-radius: var(--ign-exam-directory-radius);
+    background: #fff;
+    box-shadow: 0 8px 28px rgba(10, 37, 64, .045);
+    overflow: hidden;
+    transition: transform .35s cubic-bezier(.2, .8, .2, 1), box-shadow .35s ease, border-color .35s ease;
+}
+
+.ign-exam-directory-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--ign-exam-directory-orange), var(--ign-exam-directory-dark-orange));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .4s ease;
+}
+
+.ign-exam-directory-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(235, 147, 58, .38);
+    box-shadow: 0 18px 42px rgba(10, 37, 64, .12);
+}
+
+.ign-exam-directory-card:hover::before {
+    transform: scaleX(1);
+}
+
+.ign-exam-directory-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.ign-exam-directory-card-icon {
+    width: 54px;
+    height: 54px;
+    flex: 0 0 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: var(--ign-exam-directory-soft-orange);
+    color: var(--ign-exam-directory-dark-orange);
+    transition: transform .35s ease, background .35s ease, color .35s ease;
+}
+
+.ign-exam-directory-card:hover .ign-exam-directory-card-icon {
+    background: var(--ign-exam-directory-orange);
+    color: #fff;
+    transform: rotate(-6deg) scale(1.08);
+}
+
+.ign-exam-directory-card-icon i {
+    font-size: 23px;
+}
+
+.ign-exam-directory-card-badge {
+    max-width: 70%;
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: #f3f6f9;
+    color: #687685;
+    font-size: 11px;
+    font-weight: 800;
+    text-align: right;
+}
+
+.ign-exam-directory-card-content {
+    padding-top: 23px;
+}
+
+.ign-exam-directory-card-title {
+    margin: 0;
+    color: var(--ign-exam-directory-navy);
+    font-size: 24px;
+    font-weight: 800;
+    transition: color .3s ease;
+}
+
+.ign-exam-directory-card:hover .ign-exam-directory-card-title {
+    color: var(--ign-exam-directory-dark-orange);
+}
+
+.ign-exam-directory-card-full-name {
+    min-height: 45px;
+    margin: 10px 0 0;
+    color: #4f6072;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+.ign-exam-directory-card-description {
+    margin: 17px 0 0;
+    color: var(--ign-exam-directory-muted);
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+.ign-exam-directory-card-explore {
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid #edf0f3;
+}
+
+.ign-exam-directory-card-explore-label {
+    display: block;
+    margin-bottom: 9px;
+    color: var(--ign-exam-directory-navy);
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.ign-exam-directory-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.ign-exam-directory-card-tags span {
+    padding: 5px 8px;
+    border: 1px solid #e8edf1;
+    border-radius: 6px;
+    background: #fbfcfd;
+    color: #697887;
+    font-size: 12px;
+}
+
+.ign-exam-directory-card-footer {
+    margin-top: auto;
+    padding-top: 21px;
+}
+
+.ign-exam-directory-card-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--ign-exam-directory-navy);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.ign-exam-directory-card-link i {
+    color: var(--ign-exam-directory-orange);
+    transition: transform .3s ease;
+}
+
+.ign-exam-directory-card-link:hover {
+    color: var(--ign-exam-directory-dark-orange);
+}
+
+.ign-exam-directory-card-link:hover i {
+    transform: translateX(5px);
+}
+
+/* No Results */
+.ign-exam-directory-no-results {
+    max-width: 520px;
+    margin: 42px auto 0;
+    padding: 42px 25px;
+    border: 1px dashed #d9e0e7;
+    border-radius: 18px;
+    background: #fbfcfd;
+    text-align: center;
+}
+
+.ign-exam-directory-no-results[hidden] {
+    display: none;
+}
+
+.ign-exam-directory-no-results-icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    background: var(--ign-exam-directory-soft-orange);
+    color: var(--ign-exam-directory-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ign-exam-directory-no-results h3 {
+    margin: 0;
+    color: var(--ign-exam-directory-navy);
+    font-size: 20px;
+}
+
+.ign-exam-directory-no-results p {
+    margin: 9px 0 19px;
+    color: var(--ign-exam-directory-muted);
+    font-size: 15px;
+}
+
+.ign-exam-directory-reset-button {
+    min-height: 40px;
+    padding: 0 16px;
+    border: 1px solid var(--ign-exam-directory-border);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--ign-exam-directory-navy);
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: var(--ign-exam-directory-transition);
+}
+
+.ign-exam-directory-reset-button:hover {
+    border-color: var(--ign-exam-directory-orange);
+    color: var(--ign-exam-directory-dark-orange);
+    transform: translateY(-2px);
+}
+
+/* Comparison */
+.ign-exam-directory-comparison,
+.ign-exam-directory-process {
+    padding: 88px 0;
+    background: var(--ign-exam-directory-light);
+}
+
+.ign-exam-directory-table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--ign-exam-directory-border);
+    border-radius: 17px;
+    background: #fff;
+    box-shadow: 0 10px 35px rgba(10, 37, 64, .055);
+}
+
+.ign-exam-directory-table {
+    width: 100%;
+    min-width: 760px;
+    border-collapse: collapse;
+}
+
+.ign-exam-directory-table th,
+.ign-exam-directory-table td {
+    padding: 18px 20px;
+    text-align: left;
+    border-bottom: 1px solid #edf0f3;
+}
+
+.ign-exam-directory-table th {
+    background: var(--ign-exam-directory-navy);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.ign-exam-directory-table td {
+    color: #617081;
+    font-size: 14px;
+}
+
+.ign-exam-directory-table tbody tr {
+    transition: background .25s ease;
+}
+
+.ign-exam-directory-table tbody tr:hover {
+    background: #fffaf5;
+}
+
+.ign-exam-directory-table-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--ign-exam-directory-dark-orange);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 800;
+    white-space: nowrap;
+    transition: color .25s ease, gap .25s ease;
+}
+
+.ign-exam-directory-table-link:hover {
+    color: var(--ign-exam-directory-navy);
+    gap: 10px;
+}
+
+/* Choice */
+.ign-exam-directory-choice-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.ign-exam-directory-choice-card {
+    position: relative;
+    padding: 34px;
+    min-height: 340px;
+    border: 1px solid var(--ign-exam-directory-border);
+    border-radius: 22px;
+    background: linear-gradient(145deg, #fff 0%, #fbfcfd 100%);
+    overflow: hidden;
+    transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+}
+
+.ign-exam-directory-choice-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(235, 147, 58, .35);
+    box-shadow: var(--ign-exam-directory-shadow);
+}
+
+.ign-exam-directory-choice-icon {
+    width: 58px;
+    height: 58px;
+    margin-bottom: 21px;
+    border-radius: 16px;
+    background: var(--ign-exam-directory-navy);
+    color: var(--ign-exam-directory-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .35s ease, background .35s ease, color .35s ease;
+}
+
+.ign-exam-directory-choice-card:hover .ign-exam-directory-choice-icon {
+    transform: rotate(5deg) scale(1.07);
+    background: var(--ign-exam-directory-orange);
+    color: #fff;
+}
+
+.ign-exam-directory-choice-icon i {
+    font-size: 24px;
+}
+
+.ign-exam-directory-choice-label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--ign-exam-directory-dark-orange);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.ign-exam-directory-choice-card h3 {
+    margin: 0;
+    color: var(--ign-exam-directory-navy);
+    font-size: 22px;
+}
+
+.ign-exam-directory-choice-card p {
+    max-width: 500px;
+    margin: 13px 0 18px;
+    color: var(--ign-exam-directory-muted);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.ign-exam-directory-choice-exams {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.ign-exam-directory-choice-exams span {
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: var(--ign-exam-directory-soft-orange);
+    color: var(--ign-exam-directory-dark-orange);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.ign-exam-directory-choice-link {
+    margin-top: 24px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--ign-exam-directory-navy);
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: color .3s ease;
+}
+
+.ign-exam-directory-choice-link i {
+    display: inline-block;
+    margin-left: 5px;
+    color: var(--ign-exam-directory-orange);
+    transition: transform .3s ease;
+}
+
+.ign-exam-directory-choice-link:hover {
+    color: var(--ign-exam-directory-dark-orange);
+}
+
+.ign-exam-directory-choice-link:hover i {
+    transform: translateX(5px);
+}
+
+/* Process */
+.ign-exam-directory-process-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.ign-exam-directory-process-grid::before {
+    content: "";
+    position: absolute;
+    top: 42px;
+    left: 11%;
+    right: 11%;
+    height: 1px;
+    background: #dce3e9;
+}
+
+.ign-exam-directory-process-card {
+    position: relative;
+    z-index: 1;
+    padding: 20px 18px 10px;
+    text-align: center;
+    transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+}
+
+.ign-exam-directory-process-card:hover {
+    transform: translateY(-6px);
+}
+
+.ign-exam-directory-process-number {
+    position: absolute;
+    top: 0;
+    right: 12px;
+    color: rgba(10, 37, 64, .07);
+    font-size: 42px;
+    font-weight: 900;
+}
+
+.ign-exam-directory-process-icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 20px;
+    border: 5px solid var(--ign-exam-directory-light);
+    border-radius: 50%;
+    background: #fff;
+    color: var(--ign-exam-directory-orange);
+    box-shadow: 0 0 0 1px #dce3e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .35s ease, background .35s ease, color .35s ease;
+}
+
+.ign-exam-directory-process-card:hover .ign-exam-directory-process-icon {
+    transform: scale(1.1);
+    background: var(--ign-exam-directory-orange);
+    color: #fff;
+}
+
+.ign-exam-directory-process-card h3 {
+    margin: 0;
+    color: var(--ign-exam-directory-navy);
+    font-size: 16px;
+}
+
+.ign-exam-directory-process-card p {
+    max-width: 220px;
+    margin: 10px auto 0;
+    color: var(--ign-exam-directory-muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* CTA */
+.ign-exam-directory-cta-section {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.ign-exam-directory-cta {
+    position: relative;
+    min-height: 250px;
+    padding: 40px 48px;
+    border-radius: 24px;
+    background: linear-gradient(120deg, var(--ign-exam-directory-navy), #123b5f);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    overflow: hidden;
+    transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.ign-exam-directory-cta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(10, 37, 64, .16);
+}
+
+.ign-exam-directory-cta-content {
+    max-width: 650px;
+}
+
+.ign-exam-directory-cta-label {
+    display: block;
+    margin-bottom: 9px;
+    color: #f5b56f;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+.ign-exam-directory-cta h2 {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(28px, 3vw, 32px);
+}
+
+.ign-exam-directory-cta p {
+    max-width: 610px;
+    margin: 13px 0 0;
+    color: rgba(255, 255, 255, .72);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.ign-exam-directory-cta-button {
+    min-height: 50px;
+    padding: 0 21px;
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    border-radius: 9px;
+    background: var(--ign-exam-directory-orange);
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 800;
+    white-space: nowrap;
+    transition: transform .3s ease, background .3s ease, box-shadow .3s ease;
+}
+
+.ign-exam-directory-cta-button:hover {
+    background: var(--ign-exam-directory-dark-orange);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 9px 22px rgba(235, 147, 58, .3);
+}
+
+/* Entrance Animations */
+@keyframes ignExamDirectoryFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ignExamDirectoryFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes ignExamDirectorySoftScale {
+    from {
+        opacity: 0;
+        transform: scale(.96);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes ignExamDirectoryCtaGlow {
+    0%, 100% {
+        box-shadow: 0 12px 30px rgba(10, 37, 64, .12);
+    }
+    50% {
+        box-shadow: 0 16px 38px rgba(235, 147, 58, .18);
+    }
+}
+
+/* Hero Entrance */
+.ign-exam-directory-hero-content {
+    animation: ignExamDirectoryFadeUp .8s ease both;
+}
+
+.ign-exam-directory-eyebrow {
+    animation: ignExamDirectoryFadeIn .7s ease both;
+}
+
+.ign-exam-directory-title {
+    animation: ignExamDirectoryFadeUp .8s ease .1s both;
+}
+
+.ign-exam-directory-description {
+    animation: ignExamDirectoryFadeUp .8s ease .2s both;
+}
+
+.ign-exam-directory-search-wrap {
+    animation: ignExamDirectoryFadeUp .8s ease .3s both;
+}
+
+.ign-exam-directory-filters {
+    animation: ignExamDirectoryFadeUp .8s ease .4s both;
+}
+
+/* Section Entrance */
+.ign-exam-directory-section-heading {
+    animation: ignExamDirectoryFadeUp .7s ease both;
+}
+
+/* Staggered Card Entrance */
+.ign-exam-directory-card {
+    animation: ignExamDirectoryFadeUp .65s ease both;
+}
+
+.ign-exam-directory-card:nth-child(1) {
+    animation-delay: .05s;
+}
+
+.ign-exam-directory-card:nth-child(2) {
+    animation-delay: .12s;
+}
+
+.ign-exam-directory-card:nth-child(3) {
+    animation-delay: .19s;
+}
+
+.ign-exam-directory-card:nth-child(4) {
+    animation-delay: .26s;
+}
+
+.ign-exam-directory-card:nth-child(5) {
+    animation-delay: .33s;
+}
+
+/* Choice and Process Entrance */
+.ign-exam-directory-choice-card {
+    animation: ignExamDirectoryFadeUp .7s ease both;
+}
+
+.ign-exam-directory-choice-card:nth-child(2) {
+    animation-delay: .15s;
+}
+
+.ign-exam-directory-process-card {
+    animation: ignExamDirectoryFadeUp .7s ease both;
+}
+
+.ign-exam-directory-process-card:nth-child(2) {
+    animation-delay: .1s;
+}
+
+.ign-exam-directory-process-card:nth-child(3) {
+    animation-delay: .2s;
+}
+
+.ign-exam-directory-process-card:nth-child(4) {
+    animation-delay: .3s;
+}
+
+/* No Results Animation */
+.ign-exam-directory-no-results {
+    animation: ignExamDirectorySoftScale .4s ease both;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .ign-exam-directory-container {
+        width: min(100% - 32px, 760px);
+    }
+
+    .ign-exam-directory-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .ign-exam-directory-choice-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ign-exam-directory-process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .ign-exam-directory-process-grid::before {
+        display: none;
+    }
+
+    .ign-exam-directory-process-card {
+        padding: 23px 20px;
+        border: 1px solid var(--ign-exam-directory-border);
+        border-radius: 16px;
+        background: #fff;
+    }
+
+    .ign-exam-directory-cta {
+        padding: 35px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .ign-exam-directory-container {
+        width: calc(100% - 28px);
+    }
+
+    .ign-exam-directory-breadcrumb {
+        min-height: 50px;
+        font-size: 12px;
+    }
+
+    .ign-exam-directory-hero {
+        min-height: auto;
+    }
+
+    .ign-exam-directory-hero-content {
+        padding: 48px 0 52px;
+    }
+
+    .ign-exam-directory-title {
+        font-size: 32px;
+    }
+
+    .ign-exam-directory-description {
+        margin-top: 17px;
+        font-size: 14px;
+    }
+
+    .ign-exam-directory-search-wrap {
+        height: 58px;
+    }
+
+    .ign-exam-directory-search-button {
+    height: 40px;
+    margin-right: 7px;
+    padding: 0 15px;
+    font-size: 12px;
+}
+    .ign-exam-directory-search {
+        font-size: 14px;
+        padding-left: 49px;
+    }
+
+    .ign-exam-directory-filters {
+        margin-top: 17px;
+        gap: 7px;
+    }
+
+    .ign-exam-directory-filter-button {
+        min-height: 38px;
+        padding: 0 13px;
+        font-size: 12px;
+    }
+
+    .ign-exam-directory-listing,
+    .ign-exam-directory-comparison,
+    .ign-exam-directory-choice,
+    .ign-exam-directory-process {
+        padding: 64px 0;
+    }
+
+    .ign-exam-directory-section-heading {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    .ign-exam-directory-section-title {
+        font-size: 26px;
+    }
+
+    .ign-exam-directory-section-description {
+        font-size: 14px;
+    }
+
+    .ign-exam-directory-count-wrap {
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .ign-exam-directory-count-wrap strong {
+        display: inline;
+        font-size: 21px;
+    }
+
+    .ign-exam-directory-count-wrap span {
+        display: inline;
+        margin-top: 0;
+    }
+
+    .ign-exam-directory-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .ign-exam-directory-card {
+        min-height: 0;
+        padding: 22px;
+    }
+
+    .ign-exam-directory-card-title {
+        font-size: 23px;
+    }
+
+    .ign-exam-directory-card-full-name {
+        min-height: 0;
+    }
+
+    .ign-exam-directory-choice-card {
+        min-height: 0;
+        padding: 27px 24px;
+    }
+
+    .ign-exam-directory-choice-card h3 {
+        font-size: 21px;
+    }
+
+    .ign-exam-directory-choice-card p {
+        font-size: 14px;
+    }
+
+    .ign-exam-directory-process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ign-exam-directory-process-card h3 {
+        font-size: 15px;
+    }
+
+    .ign-exam-directory-process-card p {
+        font-size: 13px;
+    }
+
+    .ign-exam-directory-cta-section {
+        padding: 60px 0;
+    }
+
+    .ign-exam-directory-cta {
+        min-height: 0;
+        padding: 31px 24px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ign-exam-directory-cta h2 {
+        font-size: 27px;
+    }
+
+    .ign-exam-directory-cta p {
+        font-size: 14px;
+    }
+
+    .ign-exam-directory-cta-action {
+        width: 100%;
+    }
+
+    .ign-exam-directory-cta-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 420px) {
+    .ign-exam-directory-container {
+        width: calc(100% - 22px);
+    }
+
+    .ign-exam-directory-title {
+        font-size: 29px;
+    }
+
+    .ign-exam-directory-filter-button {
+        flex: 1 1 auto;
+    }
+
+    .ign-exam-directory-card {
+        padding: 19px;
+    }
+
+    .ign-exam-directory-choice-card {
+        padding: 23px 20px;
+    }
+
+    .ign-exam-directory-cta {
+        padding: 27px 20px;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .ign-exam-directory-page *,
+    .ign-exam-directory-page *::before,
+    .ign-exam-directory-page *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
+

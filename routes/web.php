@@ -24,7 +24,7 @@ use App\Http\Controllers\SuccessStoryController;
 
 
 
-Route::get('/', [HomeController::class , 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/services', [HomeController::class, 'services'])->name('services');
 Route::get('/our-process', [HomeController::class, 'our_process'])->name('our-process');
@@ -92,9 +92,17 @@ Route::get('/corporate-training', [CorporateController::class, 'training'])
 Route::get('/corporate-recruitment-training', [CorporateController::class, 'recruitment'])
     ->name('corporate.recruitment');
 
+
+
+// Study Abroad Exams Page Start
+
+Route::get('/exams', [ExamController::class, 'index'])
+    ->name('exams.index');
+
 Route::get('/exams/{slug}', [ExamController::class, 'show'])
     ->name('exams.show');
 
+// Study Abroad Exams Page End
 
 
 

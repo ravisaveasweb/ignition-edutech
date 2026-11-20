@@ -198,5 +198,6 @@
     </section>
 </div>
 
-<x-frontend-footer />
+{{-- <x-frontend-footer /> --}}
+<x-new-footer />
 <script src="{{ asset('js/study-abroad/study-abroad-review.js') }}?v=2" defer></script>

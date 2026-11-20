@@ -1098,7 +1098,8 @@
 
     </main>
 
-    <x-frontend-footer />
+    {{-- <x-frontend-footer /> --}}
+    <x-new-footer />
 
     <script src="{{ asset('js/study-abroad-global-scholarship.js') }}"></script>
 

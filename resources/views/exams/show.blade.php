@@ -4,21 +4,32 @@
 {{-- Header --}}
 {{-- <x-frontend-header /> --}}
 <x-study-abroad-header/>
+
+
+
 {{-- Breadcrumb --}}
 <div class="exam-breadcrumb">
     <div class="exam-container">
         <div class="breadcrumb-inner">
-            <a href="/">Home</a>
-            <span>/</span>
-            <span>Exams</span>
-            <span>/</span>
-            <strong>{{ $exam->name }}</strong>
+              <a href="{{ route('home') }}">
+                <i class="bi bi-house-door"></i>
+                <span>Home</span>
+            </a>
+           
+            <i class="bi bi-chevron-right"></i>
+            <a href="{{ route('exams.index') }}">
+                <span>Study Abroad Exams</span>
+            </a>
+           <i class="bi bi-chevron-right"></i>
+
+           <span>{{ $exam->name }}</span>
+
         </div>
     </div>
 </div>
 
 {{-- Exam Hero --}}
-<section class="exam-hero">
+{{-- <section class="exam-hero">
     <div class="exam-container">
         <div class="exam-hero-content">
             <div class="exam-hero-left">
@@ -41,6 +52,44 @@
                     </a>
                 </div>
             @endif
+        </div>
+    </div>
+</section> --}}
+
+
+{{-- Exam Hero --}}
+<section class="exam-hero">
+    <div class="exam-container">
+        <div class="exam-hero-content">
+            <div class="exam-hero-left">
+                <h1 class="exam-title">{{ $exam->name }} 2026</h1>
+
+                @if ($exam->full_name)
+                    <p class="exam-full-name">{{ $exam->full_name }}</p>
+                @endif
+
+                @if ($exam->exam_type)
+                    <span class="exam-type">{{ $exam->exam_type }}</span>
+                @endif
+            </div>
+
+            <div class="exam-hero-actions">
+                <div class="exam-capsules">
+                    @foreach ($allExams as $allExam)
+                        <a href="{{ route('exams.show', $allExam->slug) }}"
+                            class="exam-capsule {{ $exam->id == $allExam->id ? 'active' : '' }}">
+                            {{ $allExam->name }}
+                        </a>
+                    @endforeach
+                </div>
+
+                <a href="#" class="exam-counselling-button ign-enquiry-popup-trigger"
+                                        data-source="Study Abroad Exam  {{ $exam->name }}- Hero Banner">
+                    <i class="bi bi-chat-dots-fill"></i>
+                    Get Free Counselling
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
         </div>
     </div>
 </section>
@@ -179,5 +228,8 @@
     </div>
 </main>
 
+
+<x-university-enquiry-popup :courses="$courses ?? []" />
 {{-- Footer --}}
-@include('components.frontend-footer')
+{{-- @include('components.frontend-footer') --}}
+<x-new-footer />

@@ -69,10 +69,9 @@
     <link rel="stylesheet" href="{{ asset('css/courses.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/entrance-exam-details.css') }}">
     <link rel="stylesheet" href="{{ asset('css/entrance-exam.css') }}" />
-<link rel="stylesheet"
-      href="{{ asset('css/ign-university-enquiry-popup.css') }}?v=1">
-      <link rel="stylesheet" href="{{ asset('css/success-stories.css') }}?v=1">
-
+    <link rel="stylesheet" href="{{ asset('css/ign-university-enquiry-popup.css') }}?v=1">
+    <link rel="stylesheet" href="{{ asset('css/success-stories.css') }}?v=1">
+    <link rel="stylesheet" href="{{ asset('css/new-footer.css') }}?v=1">
 
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css" />
@@ -162,7 +161,7 @@
                             <nav class="tp-main-menu-content">
                                 <ul>
 
-                                     <li>
+                                    <li>
                                         <a href="{{ route('home') }}">Home</a>
                                     </li>
 

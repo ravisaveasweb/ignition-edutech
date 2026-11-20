@@ -1,23 +1,4 @@
-/* * {
-    box-sizing: border-box;
-}
 
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 85px;
-}
-
-body {
-    margin: 0;
-    font-family: Inter, Arial, Helvetica, sans-serif;
-    background: #f6f8fb;
-    color: #1f2937;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-} */
 
 .exam-container {
     max-width: 1240px;
@@ -590,7 +571,7 @@ a {
 }
 
 .cta-button:hover {
-    background: #fff;
+    /* background: #fff; */
     color: #d57921;
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0,0,0,.15);
@@ -809,10 +790,117 @@ a {
 }
 
 
+/* STUDY APPLICATION FORM End */
 
 
-/* =====================================================
-   STUDY APPLICATION FORM
-===================================================== */
+
+/* Exam Hero Layout for Pericular Exam Start */
+.exam-hero-content {
+    display: grid;
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.4fr);
+    align-items: center;
+    gap: 24px;
+}
+
+.exam-hero-left {
+    min-width: 0;
+}
+
+.exam-hero-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: 10px;
+    min-width: 0;
+}
+
+.exam-capsules {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 13px;
+}
+
+.exam-capsule {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 9px 13px;
+    background: #fff;
+    color: #0a2540;
+    border: 1px solid #e5e7eb;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: all .25s ease;
+}
+
+.exam-capsule:hover,
+.exam-capsule.active {
+    background: #eb933a;
+    border-color: #fff;
+    color: #fff;
+}
+
+.exam-counselling-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    gap: 7px;
+    padding: 8px 8px;
+    background: #eb933a;
+    color: #fff;
+    border: 1px solid #eb933a;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 800;
+    white-space: nowrap;
+    transition: all .25s ease;
+}
+
+.exam-counselling-button:hover {
+    background: #d7791f;
+    border-color: #d7791f;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+    .exam-hero-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .exam-hero-actions {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .exam-capsules {
+        flex-wrap: wrap;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .exam-hero-actions {
+        gap: 15px;
+    }
+
+    .exam-capsule {
+        padding: 8px 13px;
+        font-size: 12px;
+    }
+
+    .exam-counselling-button {
+        width: 100%;
+    }
+}
 
 
+/* Exam Hero Layout for Pericular Exam End */

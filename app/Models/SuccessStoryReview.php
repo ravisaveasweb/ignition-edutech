@@ -25,5 +25,6 @@ class SuccessStoryReview extends Model
         'rating' => 'decimal:1',
         'is_approved' => 'boolean',
         'status' => 'boolean',
+        'sort_order' => 'integer',
     ];
 }

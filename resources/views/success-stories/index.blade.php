@@ -1,4 +1,5 @@
 <x-frontend-header />
+<x-study-india-header/>
 
 <main class="ign-ss-page">
 
@@ -33,8 +34,8 @@
                                 <i class="bi bi-arrow-right"></i>
                             </a>
 
-                            <a href="#ign-ss-journey" class="ign-ss-secondary-btn">
-                                Discover Our Journey
+                            <a href="{{ route('study-india.universities-courses') }}" class="ign-ss-secondary-btn">
+                               Explore Education Options
                             </a>
                         </div>
 
@@ -511,11 +512,11 @@
             </p>
 
             <div class="ign-ss-cta-actions">
-                <a href="{{ url('/contact') }}" class="ign-ss-primary-btn">
+                <a href="#" class="ign-ss-primary-btn ign-enquiry-popup-trigger" data-source="Success Story - Hero Banner">
                     Get Free Counselling <i class="bi bi-arrow-right"></i>
                 </a>
 
-                <a href="{{ url('/study-india') }}" class="ign-ss-secondary-btn">
+                <a href="{{route('study-india.universities-courses') }}" class="ign-ss-secondary-btn">
                     Explore Education Options
                 </a>
             </div>
@@ -524,4 +525,7 @@
 
 </main>
 
-<x-frontend-footer />
+<x-university-enquiry-popup :courses="$courses ?? []" />
+
+{{-- <x-frontend-footer /> --}}
+<x-new-footer />

@@ -296,7 +296,8 @@
 </div>
 
 
-<x-frontend-footer />
+{{-- <x-frontend-footer /> --}}
+<x-new-footer />
 
 <script>
     document.querySelectorAll(".accordion").forEach(acc => {

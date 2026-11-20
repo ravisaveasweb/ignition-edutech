@@ -319,7 +319,9 @@
 
 <!-- footer.php -->
 
-<x-frontend-footer />
+{{-- <x-frontend-footer /> --}}
+
+<x-new-footer />
 
 <script>
     // Smooth appearance on scroll 

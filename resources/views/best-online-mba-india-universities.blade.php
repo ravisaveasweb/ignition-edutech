@@ -562,4 +562,6 @@
     </aside>
 </div>
 
-<x-frontend-footer />
+{{-- <x-frontend-footer /> --}}
+
+<x-new-footer />

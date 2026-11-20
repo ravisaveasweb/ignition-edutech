@@ -307,4 +307,5 @@ $exams = collect(config('entrance_exam', []))->values()->all();
 </script>
 <script src="{{ asset('js/entrance-exam.js') }}?v=5"></script>
 
-<x-frontend-footer />
+{{-- <x-frontend-footer /> --}}
+<x-new-footer />

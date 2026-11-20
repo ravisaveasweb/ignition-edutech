@@ -212,7 +212,7 @@
 .ign-ss-page .ign-ss-testimonials,
 .ign-ss-page .ign-ss-reviews,
 .ign-ss-page .ign-ss-why-ignition {
-    padding: 75px 0;
+    padding: 35px 0;
 }
 
 .ign-ss-page .ign-ss-stories,
@@ -843,6 +843,7 @@
     overflow: hidden;
     background: linear-gradient(110deg,#06192d,var(--ign-ss-navy) 65%,#164366);
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .ign-ss-page .ign-ss-cta::before {

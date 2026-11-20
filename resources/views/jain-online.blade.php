@@ -303,4 +303,5 @@
 <x-university-enquiry-popup :courses="$courses ?? []" />
 
 
-<x-frontend-footer />
+{{-- <x-frontend-footer /> --}}
+<x-new-footer />

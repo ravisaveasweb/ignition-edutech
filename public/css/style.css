@@ -7747,6 +7747,7 @@ table.ie-table tbody tr:nth-child(even) {
 
     color: #fff;
     padding: 56px 0;
+    margin-bottom: 50px;
 }
 
 .oe-ug-banner h2 {
@@ -8458,6 +8459,7 @@ table.ie-table tbody tr:nth-child(even) {
     background: linear-gradient(135deg, #0a1c38 0%, #12305f 50%, #1e3a8a 100%);
     color: #fff;
     padding: 56px 0;
+     margin-bottom: 50px;
 }
 
 .corp-train-banner h2 {
@@ -8633,6 +8635,7 @@ table.ie-table tbody tr:nth-child(even) {
     background: linear-gradient(135deg, #0a1c38 0%, #12305f 50%, #1e3a8a 100%);
     color: #fff;
     padding: 56px 0;
+     margin-bottom: 50px;
 }
 
 .corp-recruit-banner h2 {
@@ -8822,6 +8825,7 @@ table.ie-table tbody tr:nth-child(even) {
     background: linear-gradient(120deg, var(--navy) 0%, var(--navy-mid) 100%);
     color: #fff;
     padding: 56px 0;
+    margin-bottom: 50px;
 }
 
 

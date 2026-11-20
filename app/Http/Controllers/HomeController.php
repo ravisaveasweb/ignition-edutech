@@ -199,6 +199,15 @@ class HomeController extends Controller
     //     return view('study_abroad');
     // }
 
+ public function new_footer()
+    {
+
+         $courses = $this->getActiveCourses();
+        return view('new-footer', compact('courses'));
+
+    }
+
+
     private function getActiveCourses()
     {
         return ApplicationMasterData::where('type', 'course')
