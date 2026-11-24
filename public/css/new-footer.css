@@ -1,0 +1,2204 @@
+/* body {
+    margin: 0;
+    background: #fff;
+    font-family: Figtree, system-ui, sans-serif
+} */
+
+/* ===== Ignition Edutech footer: every class below is used by exactly one element ===== */
+.ignft-root {
+    box-sizing: border-box;
+    --ign-ink: #17212e;
+    --ign-ink-soft: #4d5968;
+    --ign-paper: #f3f4f8;
+    --ign-line: #dde0e8;
+    --ign-lime: #b4cc1c;
+    --ign-orange: #ee8a2b;
+    --ign-white: #fff;
+    font-family: Figtree, system-ui, -apple-system, 'Segoe UI', sans-serif;
+    color: var(--ign-ink);
+    background: var(--ign-paper);
+    line-height: 1.55;
+}
+
+.ignft-cta-band {
+    box-sizing: border-box;
+    background: var(--ign-ink);
+    color: var(--ign-white);
+}
+
+.ignft-cta-wrap {
+    box-sizing: border-box;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 28px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px 32px;
+}
+
+.ignft-cta-text-block {
+    box-sizing: border-box;
+    display: block;
+}
+
+.ignft-cta-title {
+    box-sizing: border-box;
+    margin: 0 0 4px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.ignft-cta-subtitle {
+    box-sizing: border-box;
+    margin: 0;
+    color: #c3cad5;
+    font-size: .97rem;
+}
+
+.ignft-cta-actions {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.ignft-cta-btn-counselling {
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: .97rem;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: background .2s, color .2s, border-color .2s;
+    background: var(--ign-lime);
+    color: var(--ign-ink);
+}
+
+.ignft-cta-btn-call {
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: .97rem;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: background .2s, color .2s, border-color .2s;
+    border-color: #42505f;
+    color: var(--ign-white);
+}
+
+.ignft-cta-btn-call-icon {
+    box-sizing: border-box;
+    width: 18px;
+    height: 18px;
+    flex: none;
+}
+
+.ignft-cta-btn-call-label {
+    box-sizing: border-box;
+    display: inline;
+}
+
+.ignft-cta-btn-whatsapp {
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: .97rem;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: background .2s, color .2s, border-color .2s;
+    border-color: #42505f;
+    color: var(--ign-white);
+}
+
+.ignft-cta-btn-whatsapp-icon {
+    box-sizing: border-box;
+    width: 18px;
+    height: 18px;
+    flex: none;
+}
+
+.ignft-cta-btn-whatsapp-label {
+    box-sizing: border-box;
+    display: inline;
+}
+
+.ignft-main-grid {
+    box-sizing: border-box;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 56px 24px 44px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) repeat(3, minmax(0, 1fr));
+    gap: 40px 48px;
+}
+
+.ignft-brand-block {
+    box-sizing: border-box;
+    display: block;
+}
+
+.ignft-brand-logo-link {
+    box-sizing: border-box;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.ignft-brand-logo-img {
+    box-sizing: border-box;
+    display: block;
+    width: 158px;
+    height: auto;
+    margin-bottom: 16px;
+}
+
+.ignft-brand-text {
+    box-sizing: border-box;
+    margin: 0 0 20px;
+    color: var(--ign-ink-soft);
+    font-size: .95rem;
+    max-width: 34ch;
+}
+
+.ignft-contact-list {
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 12px;
+    font-size: .95rem;
+}
+
+.ignft-contact-item-address {
+    box-sizing: border-box;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    color: var(--ign-ink-soft);
+}
+
+.ignft-contact-icon-address {
+    box-sizing: border-box;
+    width: 18px;
+    height: 18px;
+    flex: none;
+    margin-top: 3px;
+    color: var(--ign-orange);
+}
+
+.ignft-contact-address-text {
+    box-sizing: border-box;
+    display: inline;
+}
+
+.ignft-contact-item-phone {
+    box-sizing: border-box;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    color: var(--ign-ink-soft);
+}
+
+.ignft-contact-icon-phone {
+    box-sizing: border-box;
+    width: 18px;
+    height: 18px;
+    flex: none;
+    margin-top: 3px;
+    color: var(--ign-orange);
+}
+
+.ignft-contact-phone-link {
+    box-sizing: border-box;
+    color: inherit;
+    text-decoration: none;
+}
+
+.ignft-contact-item-email {
+    box-sizing: border-box;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    color: var(--ign-ink-soft);
+}
+
+.ignft-contact-icon-email {
+    box-sizing: border-box;
+    width: 18px;
+    height: 18px;
+    flex: none;
+    margin-top: 3px;
+    color: var(--ign-orange);
+}
+
+.ignft-contact-email-link {
+    box-sizing: border-box;
+    color: inherit;
+    text-decoration: none;
+}
+
+.ignft-column-a {
+    box-sizing: border-box;
+    display: grid;
+    gap: 28px;
+    align-content: start;
+}
+
+.ignft-group-about {
+    box-sizing: border-box;
+    display: block;
+}
+
+.ignft-group-about-summary {
+    box-sizing: border-box;
+    list-style: none;
+    cursor: default;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+}
+
+.ignft-group-about-summary::after {
+    content: '';
+    display: none;
+    width: 9px;
+    height: 9px;
+    border-right: 2px solid var(--ign-ink-soft);
+    border-bottom: 2px solid var(--ign-ink-soft);
+    transform: rotate(45deg);
+    transition: transform .2s;
+}
+
+.ignft-group-about-heading {
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.ignft-group-about-list {
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-about-item-about {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-about-link-about {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 3px 0;
+    color: var(--ign-ink-soft);
+    font-size: .95rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+
+.ignft-about-item-process {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-about-link-process {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 3px 0;
+    color: var(--ign-ink-soft);
+    font-size: .95rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+
+.ignft-about-item-services {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-about-link-services {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 3px 0;
+    color: var(--ign-ink-soft);
+    font-size: .95rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+
+.ignft-about-item-blog {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-about-link-blog {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 3px 0;
+    color: var(--ign-ink-soft);
+    font-size: .95rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+
+.ignft-about-item-contact {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-about-link-contact {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 3px 0;
+    color: var(--ign-ink-soft);
+    font-size: .95rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+
+.ignft-group-organisations {
+    box-sizing: border-box;
+    display: block;
+}
+
+.ignft-group-organisations-summary {
+    box-sizing: border-box;
+    list-style: none;
+    cursor: default;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+}
+
+.ignft-group-organisations-summary::after {
+    content: '';
+    display: none;
+    width: 9px;
+    height: 9px;
+    border-right: 2px solid var(--ign-ink-soft);
+    border-bottom: 2px solid var(--ign-ink-soft);
+    transform: rotate(45deg);
+    transition: transform .2s;
+}
+
+.ignft-group-organisations-heading {
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.ignft-group-organisations-list {
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-organisations-item-partnerships {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-organisations-link-partnerships {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 3px 0;
+    color: var(--ign-ink-soft);
+    font-size: .95rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+
+.ignft-organisations-item-training {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-organisations-link-training {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 3px 0;
+    color: var(--ign-ink-soft);
+    font-size: .95rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+
+.ignft-organisations-item-recruitment {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-organisations-link-recruitment {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 3px 0;
+    color: var(--ign-ink-soft);
+    font-size: .95rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+
+.ignft-column-b {
+    box-sizing: border-box;
+    display: grid;
+    gap: 28px;
+    align-content: start;
+}
+
+.ignft-group-study-india {
+    box-sizing: border-box;
+    display: block;
+}
+
+.ignft-group-study-india-summary {
+    box-sizing: border-box;
+    list-style: none;
+    cursor: default;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+}
+
+.ignft-group-study-india-summary::after {
+    content: '';
+    display: none;
+    width: 9px;
+    height: 9px;
+    border-right: 2px solid var(--ign-ink-soft);
+    border-bottom: 2px solid var(--ign-ink-soft);
+    transform: rotate(45deg);
+    transition: transform .2s;
+}
+
+.ignft-group-study-india-heading {
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.ignft-group-study-india-list {
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-study-india-item-universities {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-study-india-link-universities {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 3px 0;
+    color: var(--ign-ink-soft);
+    font-size: .95rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+
+.ignft-study-india-item-entrance-exams {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-study-india-link-entrance-exams {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 3px 0;
+    color: var(--ign-ink-soft);
+    font-size: .95rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+
+.ignft-study-india-item-college-news {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-study-india-link-college-news {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 3px 0;
+    color: var(--ign-ink-soft);
+    font-size: .95rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+
+.ignft-study-india-item-college-reviews {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-study-india-link-college-reviews {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 3px 0;
+    color: var(--ign-ink-soft);
+    font-size: .95rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+
+.ignft-study-india-item-ask-question {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-study-india-link-ask-question {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 3px 0;
+    color: var(--ign-ink-soft);
+    font-size: .95rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+
+.ignft-group-online-education {
+    box-sizing: border-box;
+    display: block;
+}
+
+.ignft-group-online-education-summary {
+    box-sizing: border-box;
+    list-style: none;
+    cursor: default;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+}
+
+.ignft-group-online-education-summary::after {
+    content: '';
+    display: none;
+    width: 9px;
+    height: 9px;
+    border-right: 2px solid var(--ign-ink-soft);
+    border-bottom: 2px solid var(--ign-ink-soft);
+    transform: rotate(45deg);
+    transition: transform .2s;
+}
+
+.ignft-group-online-education-heading {
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.ignft-group-online-education-list {
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-online-education-item-undergraduate {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-online-education-link-undergraduate {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 3px 0;
+    color: var(--ign-ink-soft);
+    font-size: .95rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+
+.ignft-online-education-item-mba {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-online-education-link-mba {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 3px 0;
+    color: var(--ign-ink-soft);
+    font-size: .95rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+
+.ignft-online-education-item-executive {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-online-education-link-executive {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 3px 0;
+    color: var(--ign-ink-soft);
+    font-size: .95rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+
+.ignft-online-education-item-how-it-works {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-online-education-link-how-it-works {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 3px 0;
+    color: var(--ign-ink-soft);
+    font-size: .95rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+
+.ignft-column-c {
+    box-sizing: border-box;
+    display: grid;
+    gap: 28px;
+    align-content: start;
+}
+
+.ignft-group-study-abroad {
+    box-sizing: border-box;
+    display: block;
+}
+
+.ignft-group-study-abroad-summary {
+    box-sizing: border-box;
+    list-style: none;
+    cursor: default;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+}
+
+.ignft-group-study-abroad-summary::after {
+    content: '';
+    display: none;
+    width: 9px;
+    height: 9px;
+    border-right: 2px solid var(--ign-ink-soft);
+    border-bottom: 2px solid var(--ign-ink-soft);
+    transform: rotate(45deg);
+    transition: transform .2s;
+}
+
+.ignft-group-study-abroad-heading {
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.ignft-group-study-abroad-list {
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-study-abroad-item-countries {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-study-abroad-link-countries {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 3px 0;
+    color: var(--ign-ink-soft);
+    font-size: .95rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+
+.ignft-study-abroad-item-scholarships {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-study-abroad-link-scholarships {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 3px 0;
+    color: var(--ign-ink-soft);
+    font-size: .95rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+
+.ignft-study-abroad-item-visa {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-study-abroad-link-visa {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 3px 0;
+    color: var(--ign-ink-soft);
+    font-size: .95rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+
+.ignft-study-abroad-item-apply {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-study-abroad-link-apply {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 3px 0;
+    color: var(--ign-ink-soft);
+    font-size: .95rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+
+.ignft-study-abroad-item-ielts {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-study-abroad-link-ielts {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 3px 0;
+    color: var(--ign-ink-soft);
+    font-size: .95rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+
+.ignft-study-abroad-item-pte {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-study-abroad-link-pte {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 3px 0;
+    color: var(--ign-ink-soft);
+    font-size: .95rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+
+.ignft-study-abroad-item-toefl {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-study-abroad-link-toefl {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 3px 0;
+    color: var(--ign-ink-soft);
+    font-size: .95rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+
+.ignft-study-abroad-item-gre {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-study-abroad-link-gre {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 3px 0;
+    color: var(--ign-ink-soft);
+    font-size: .95rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+
+.ignft-study-abroad-item-gmat {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-study-abroad-link-gmat {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 3px 0;
+    color: var(--ign-ink-soft);
+    font-size: .95rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+
+.ignft-group-career-guidance {
+    box-sizing: border-box;
+    display: block;
+}
+
+.ignft-group-career-guidance-summary {
+    box-sizing: border-box;
+    list-style: none;
+    cursor: default;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+}
+
+.ignft-group-career-guidance-summary::after {
+    content: '';
+    display: none;
+    width: 9px;
+    height: 9px;
+    border-right: 2px solid var(--ign-ink-soft);
+    border-bottom: 2px solid var(--ign-ink-soft);
+    transform: rotate(45deg);
+    transition: transform .2s;
+}
+
+.ignft-group-career-guidance-heading {
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.ignft-group-career-guidance-list {
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-career-guidance-item-career-discovery {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-career-guidance-link-career-discovery {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 3px 0;
+    color: var(--ign-ink-soft);
+    font-size: .95rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+
+.ignft-career-guidance-item-dmit {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-career-guidance-link-dmit {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 3px 0;
+    color: var(--ign-ink-soft);
+    font-size: .95rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+
+.ignft-career-guidance-item-psychometric {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.ignft-career-guidance-link-psychometric {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 3px 0;
+    color: var(--ign-ink-soft);
+    font-size: .95rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color .15s, border-color .15s;
+}
+
+.ignft-partners-wrap {
+    box-sizing: border-box;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 28px 24px 32px;
+    border-top: 1px solid var(--ign-line);
+}
+
+.ignft-partners-title {
+    box-sizing: border-box;
+    margin: 0 0 14px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.ignft-partners-chips {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.ignft-partner-chip-nmims {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 7px 14px;
+    border: 1px solid var(--ign-line);
+    border-radius: 999px;
+    background: var(--ign-white);
+    font-size: .9rem;
+    color: var(--ign-ink-soft);
+    text-decoration: none;
+    transition: border-color .15s, color .15s;
+}
+
+.ignft-partner-chip-vit {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 7px 14px;
+    border: 1px solid var(--ign-line);
+    border-radius: 999px;
+    background: var(--ign-white);
+    font-size: .9rem;
+    color: var(--ign-ink-soft);
+    text-decoration: none;
+    transition: border-color .15s, color .15s;
+}
+
+.ignft-partner-chip-amity {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 7px 14px;
+    border: 1px solid var(--ign-line);
+    border-radius: 999px;
+    background: var(--ign-white);
+    font-size: .9rem;
+    color: var(--ign-ink-soft);
+    text-decoration: none;
+    transition: border-color .15s, color .15s;
+}
+
+.ignft-partner-chip-manipal {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 7px 14px;
+    border: 1px solid var(--ign-line);
+    border-radius: 999px;
+    background: var(--ign-white);
+    font-size: .9rem;
+    color: var(--ign-ink-soft);
+    text-decoration: none;
+    transition: border-color .15s, color .15s;
+}
+
+.ignft-partner-chip-smu {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 7px 14px;
+    border: 1px solid var(--ign-line);
+    border-radius: 999px;
+    background: var(--ign-white);
+    font-size: .9rem;
+    color: var(--ign-ink-soft);
+    text-decoration: none;
+    transition: border-color .15s, color .15s;
+}
+
+.ignft-partner-chip-dypatil {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 7px 14px;
+    border: 1px solid var(--ign-line);
+    border-radius: 999px;
+    background: var(--ign-white);
+    font-size: .9rem;
+    color: var(--ign-ink-soft);
+    text-decoration: none;
+    transition: border-color .15s, color .15s;
+}
+
+.ignft-partner-chip-jain {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 7px 14px;
+    border: 1px solid var(--ign-line);
+    border-radius: 999px;
+    background: var(--ign-white);
+    font-size: .9rem;
+    color: var(--ign-ink-soft);
+    text-decoration: none;
+    transition: border-color .15s, color .15s;
+}
+
+.ignft-partner-chip-nldalmia {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 7px 14px;
+    border: 1px solid var(--ign-line);
+    border-radius: 999px;
+    background: var(--ign-white);
+    font-size: .9rem;
+    color: var(--ign-ink-soft);
+    text-decoration: none;
+    transition: border-color .15s, color .15s;
+}
+
+.ignft-partner-chip-vgu {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 7px 14px;
+    border: 1px solid var(--ign-line);
+    border-radius: 999px;
+    background: var(--ign-white);
+    font-size: .9rem;
+    color: var(--ign-ink-soft);
+    text-decoration: none;
+    transition: border-color .15s, color .15s;
+}
+
+.ignft-partner-chip-gla {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 7px 14px;
+    border: 1px solid var(--ign-line);
+    border-radius: 999px;
+    background: var(--ign-white);
+    font-size: .9rem;
+    color: var(--ign-ink-soft);
+    text-decoration: none;
+    transition: border-color .15s, color .15s;
+}
+
+.ignft-partner-chip-umass {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 7px 14px;
+    border: 1px solid var(--ign-line);
+    border-radius: 999px;
+    background: var(--ign-white);
+    font-size: .9rem;
+    color: var(--ign-ink-soft);
+    text-decoration: none;
+    transition: border-color .15s, color .15s;
+}
+
+.ignft-partner-chip-bennett {
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 7px 14px;
+    border: 1px solid var(--ign-line);
+    border-radius: 999px;
+    background: var(--ign-white);
+    font-size: .9rem;
+    color: var(--ign-ink-soft);
+    text-decoration: none;
+    transition: border-color .15s, color .15s;
+}
+
+.ignft-bottom-bar {
+    box-sizing: border-box;
+    border-top: 1px solid var(--ign-line);
+    background: #eaecf2;
+}
+
+.ignft-bottom-wrap {
+    box-sizing: border-box;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 18px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px 24px;
+    font-size: .88rem;
+    color: var(--ign-ink-soft);
+}
+
+.ignft-bottom-copyright {
+    box-sizing: border-box;
+    display: inline;
+}
+
+.ignft-bottom-nav {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 20px;
+}
+
+.ignft-bottom-privacy-link {
+    box-sizing: border-box;
+    color: inherit;
+    text-decoration: none;
+}
+
+.ignft-bottom-credit-link {
+    box-sizing: border-box;
+    color: inherit;
+    text-decoration: none;
+}
+
+.ignft-bottom-disclaimer {
+    box-sizing: border-box;
+    flex-basis: 100%;
+    margin: 0;
+    font-size: .82rem;
+    color: #667282;
+}
+
+.ignft-preview-spacer {
+    box-sizing: border-box;
+    height: 260px;
+    display: grid;
+    place-items: center;
+    color: #7a8594;
+    font: 500 15px Figtree, sans-serif;
+}
+
+/* hover */
+.ignft-cta-btn-counselling:hover {
+    background: #c5dc2c;
+}
+
+.ignft-cta-btn-call:hover {
+    border-color: var(--ign-lime);
+    color: var(--ign-lime);
+}
+
+.ignft-cta-btn-whatsapp:hover {
+    border-color: var(--ign-lime);
+    color: var(--ign-lime);
+}
+
+.ignft-contact-phone-link:hover {
+    color: var(--ign-ink);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.ignft-contact-email-link:hover {
+    color: var(--ign-ink);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.ignft-about-link-about:hover {
+    color: var(--ign-ink);
+    border-bottom-color: var(--ign-orange);
+}
+
+.ignft-about-link-process:hover {
+    color: var(--ign-ink);
+    border-bottom-color: var(--ign-orange);
+}
+
+.ignft-about-link-services:hover {
+    color: var(--ign-ink);
+    border-bottom-color: var(--ign-orange);
+}
+
+.ignft-about-link-blog:hover {
+    color: var(--ign-ink);
+    border-bottom-color: var(--ign-orange);
+}
+
+.ignft-about-link-contact:hover {
+    color: var(--ign-ink);
+    border-bottom-color: var(--ign-orange);
+}
+
+.ignft-organisations-link-partnerships:hover {
+    color: var(--ign-ink);
+    border-bottom-color: var(--ign-orange);
+}
+
+.ignft-organisations-link-training:hover {
+    color: var(--ign-ink);
+    border-bottom-color: var(--ign-orange);
+}
+
+.ignft-organisations-link-recruitment:hover {
+    color: var(--ign-ink);
+    border-bottom-color: var(--ign-orange);
+}
+
+.ignft-study-india-link-universities:hover {
+    color: var(--ign-ink);
+    border-bottom-color: var(--ign-orange);
+}
+
+.ignft-study-india-link-entrance-exams:hover {
+    color: var(--ign-ink);
+    border-bottom-color: var(--ign-orange);
+}
+
+.ignft-study-india-link-college-news:hover {
+    color: var(--ign-ink);
+    border-bottom-color: var(--ign-orange);
+}
+
+.ignft-study-india-link-college-reviews:hover {
+    color: var(--ign-ink);
+    border-bottom-color: var(--ign-orange);
+}
+
+.ignft-study-india-link-ask-question:hover {
+    color: var(--ign-ink);
+    border-bottom-color: var(--ign-orange);
+}
+
+.ignft-online-education-link-undergraduate:hover {
+    color: var(--ign-ink);
+    border-bottom-color: var(--ign-orange);
+}
+
+.ignft-online-education-link-mba:hover {
+    color: var(--ign-ink);
+    border-bottom-color: var(--ign-orange);
+}
+
+.ignft-online-education-link-executive:hover {
+    color: var(--ign-ink);
+    border-bottom-color: var(--ign-orange);
+}
+
+.ignft-online-education-link-how-it-works:hover {
+    color: var(--ign-ink);
+    border-bottom-color: var(--ign-orange);
+}
+
+.ignft-study-abroad-link-countries:hover {
+    color: var(--ign-ink);
+    border-bottom-color: var(--ign-orange);
+}
+
+.ignft-study-abroad-link-scholarships:hover {
+    color: var(--ign-ink);
+    border-bottom-color: var(--ign-orange);
+}
+
+.ignft-study-abroad-link-visa:hover {
+    color: var(--ign-ink);
+    border-bottom-color: var(--ign-orange);
+}
+
+.ignft-study-abroad-link-apply:hover {
+    color: var(--ign-ink);
+    border-bottom-color: var(--ign-orange);
+}
+
+.ignft-study-abroad-link-ielts:hover {
+    color: var(--ign-ink);
+    border-bottom-color: var(--ign-orange);
+}
+
+.ignft-study-abroad-link-pte:hover {
+    color: var(--ign-ink);
+    border-bottom-color: var(--ign-orange);
+}
+
+.ignft-study-abroad-link-toefl:hover {
+    color: var(--ign-ink);
+    border-bottom-color: var(--ign-orange);
+}
+
+.ignft-study-abroad-link-gre:hover {
+    color: var(--ign-ink);
+    border-bottom-color: var(--ign-orange);
+}
+
+.ignft-study-abroad-link-gmat:hover {
+    color: var(--ign-ink);
+    border-bottom-color: var(--ign-orange);
+}
+
+.ignft-career-guidance-link-career-discovery:hover {
+    color: var(--ign-ink);
+    border-bottom-color: var(--ign-orange);
+}
+
+.ignft-career-guidance-link-dmit:hover {
+    color: var(--ign-ink);
+    border-bottom-color: var(--ign-orange);
+}
+
+.ignft-career-guidance-link-psychometric:hover {
+    color: var(--ign-ink);
+    border-bottom-color: var(--ign-orange);
+}
+
+.ignft-partner-chip-nmims:hover {
+    border-color: var(--ign-orange);
+    color: var(--ign-ink);
+}
+
+.ignft-partner-chip-vit:hover {
+    border-color: var(--ign-orange);
+    color: var(--ign-ink);
+}
+
+.ignft-partner-chip-amity:hover {
+    border-color: var(--ign-orange);
+    color: var(--ign-ink);
+}
+
+.ignft-partner-chip-manipal:hover {
+    border-color: var(--ign-orange);
+    color: var(--ign-ink);
+}
+
+.ignft-partner-chip-smu:hover {
+    border-color: var(--ign-orange);
+    color: var(--ign-ink);
+}
+
+.ignft-partner-chip-dypatil:hover {
+    border-color: var(--ign-orange);
+    color: var(--ign-ink);
+}
+
+.ignft-partner-chip-jain:hover {
+    border-color: var(--ign-orange);
+    color: var(--ign-ink);
+}
+
+.ignft-partner-chip-nldalmia:hover {
+    border-color: var(--ign-orange);
+    color: var(--ign-ink);
+}
+
+.ignft-partner-chip-vgu:hover {
+    border-color: var(--ign-orange);
+    color: var(--ign-ink);
+}
+
+.ignft-partner-chip-gla:hover {
+    border-color: var(--ign-orange);
+    color: var(--ign-ink);
+}
+
+.ignft-partner-chip-umass:hover {
+    border-color: var(--ign-orange);
+    color: var(--ign-ink);
+}
+
+.ignft-partner-chip-bennett:hover {
+    border-color: var(--ign-orange);
+    color: var(--ign-ink);
+}
+
+.ignft-bottom-privacy-link:hover {
+    color: var(--ign-ink);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.ignft-bottom-credit-link:hover {
+    color: var(--ign-ink);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* keyboard focus */
+.ignft-about-link-about:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-about-link-blog:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-about-link-contact:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-about-link-process:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-about-link-services:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-bottom-credit-link:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-bottom-privacy-link:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-brand-logo-link:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-career-guidance-link-career-discovery:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-career-guidance-link-dmit:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-career-guidance-link-psychometric:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-contact-email-link:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-contact-phone-link:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-cta-btn-call:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-cta-btn-counselling:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-cta-btn-whatsapp:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-group-about-summary:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-group-career-guidance-summary:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-group-online-education-summary:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-group-organisations-summary:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-group-study-abroad-summary:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-group-study-india-summary:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-online-education-link-executive:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-online-education-link-how-it-works:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-online-education-link-mba:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-online-education-link-undergraduate:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-organisations-link-partnerships:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-organisations-link-recruitment:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-organisations-link-training:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-partner-chip-amity:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-partner-chip-bennett:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-partner-chip-dypatil:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-partner-chip-gla:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-partner-chip-jain:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-partner-chip-manipal:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-partner-chip-nldalmia:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-partner-chip-nmims:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-partner-chip-smu:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-partner-chip-umass:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-partner-chip-vgu:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-partner-chip-vit:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-study-abroad-link-apply:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-study-abroad-link-countries:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-study-abroad-link-gmat:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-study-abroad-link-gre:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-study-abroad-link-ielts:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-study-abroad-link-pte:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-study-abroad-link-scholarships:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-study-abroad-link-toefl:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-study-abroad-link-visa:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-study-india-link-ask-question:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-study-india-link-college-news:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-study-india-link-college-reviews:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-study-india-link-entrance-exams:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.ignft-study-india-link-universities:focus-visible {
+    outline: 3px solid var(--ign-orange);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* accordion arrow rotates when open */
+.ignft-group-about[open] .ignft-group-about-summary::after {
+    transform: rotate(-135deg);
+}
+
+.ignft-group-organisations[open] .ignft-group-organisations-summary::after {
+    transform: rotate(-135deg);
+}
+
+.ignft-group-study-india[open] .ignft-group-study-india-summary::after {
+    transform: rotate(-135deg);
+}
+
+.ignft-group-online-education[open] .ignft-group-online-education-summary::after {
+    transform: rotate(-135deg);
+}
+
+.ignft-group-study-abroad[open] .ignft-group-study-abroad-summary::after {
+    transform: rotate(-135deg);
+}
+
+.ignft-group-career-guidance[open] .ignft-group-career-guidance-summary::after {
+    transform: rotate(-135deg);
+}
+
+/* tablet */
+@media (max-width:1024px) {
+    .ignft-main-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .ignft-brand-block {
+        grid-column: 1/-1;
+    }
+
+    .ignft-brand-text {
+        max-width: 60ch;
+    }
+}
+
+/* mobile */
+@media (max-width:720px) {
+    .ignft-cta-wrap {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .ignft-cta-title {
+        font-size: 1.3rem;
+    }
+
+    .ignft-cta-actions {
+        width: 100%;
+    }
+
+    .ignft-cta-btn-counselling {
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+
+    .ignft-cta-btn-call {
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+
+    .ignft-cta-btn-whatsapp {
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+
+    .ignft-main-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 36px 18px 28px;
+    }
+
+    .ignft-brand-block {
+        margin-bottom: 28px;
+    }
+
+    .ignft-column-a {
+        gap: 0;
+    }
+
+    .ignft-group-about {
+        border-top: 1px solid var(--ign-line);
+    }
+
+    .ignft-group-about-summary {
+        cursor: pointer;
+        padding: 16px 0;
+    }
+
+    .ignft-group-about-list {
+        padding-bottom: 14px;
+    }
+
+    .ignft-group-organisations {
+        border-top: 1px solid var(--ign-line);
+    }
+
+    .ignft-group-organisations-summary {
+        cursor: pointer;
+        padding: 16px 0;
+    }
+
+    .ignft-group-organisations-list {
+        padding-bottom: 14px;
+    }
+
+    .ignft-column-b {
+        gap: 0;
+    }
+
+    .ignft-group-study-india {
+        border-top: 1px solid var(--ign-line);
+    }
+
+    .ignft-group-study-india-summary {
+        cursor: pointer;
+        padding: 16px 0;
+    }
+
+    .ignft-group-study-india-list {
+        padding-bottom: 14px;
+    }
+
+    .ignft-group-online-education {
+        border-top: 1px solid var(--ign-line);
+    }
+
+    .ignft-group-online-education-summary {
+        cursor: pointer;
+        padding: 16px 0;
+    }
+
+    .ignft-group-online-education-list {
+        padding-bottom: 14px;
+    }
+
+    .ignft-column-c {
+        gap: 0;
+    }
+
+    .ignft-group-study-abroad {
+        border-top: 1px solid var(--ign-line);
+    }
+
+    .ignft-group-study-abroad-summary {
+        cursor: pointer;
+        padding: 16px 0;
+    }
+
+    .ignft-group-study-abroad-list {
+        padding-bottom: 14px;
+    }
+
+    .ignft-group-career-guidance {
+        border-top: 1px solid var(--ign-line);
+        border-bottom: 1px solid var(--ign-line);
+    }
+
+    .ignft-group-career-guidance-summary {
+        cursor: pointer;
+        padding: 16px 0;
+    }
+
+    .ignft-group-career-guidance-list {
+        padding-bottom: 14px;
+    }
+
+    .ignft-partners-wrap {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .ignft-bottom-wrap {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .ignft-group-about-summary::after {
+        display: block;
+    }
+
+    .ignft-group-organisations-summary::after {
+        display: block;
+    }
+
+    .ignft-group-study-india-summary::after {
+        display: block;
+    }
+
+    .ignft-group-online-education-summary::after {
+        display: block;
+    }
+
+    .ignft-group-study-abroad-summary::after {
+        display: block;
+    }
+
+    .ignft-group-career-guidance-summary::after {
+        display: block;
+    }
+}
+
+@media (prefers-reduced-motion:reduce) {
+    .ignft-cta-btn-counselling {
+        transition: none !important
+    }
+
+    .ignft-cta-btn-call {
+        transition: none !important
+    }
+
+    .ignft-cta-btn-whatsapp {
+        transition: none !important
+    }
+
+    .ignft-about-link-about {
+        transition: none !important
+    }
+
+    .ignft-about-link-process {
+        transition: none !important
+    }
+
+    .ignft-about-link-services {
+        transition: none !important
+    }
+
+    .ignft-about-link-blog {
+        transition: none !important
+    }
+
+    .ignft-about-link-contact {
+        transition: none !important
+    }
+
+    .ignft-organisations-link-partnerships {
+        transition: none !important
+    }
+
+    .ignft-organisations-link-training {
+        transition: none !important
+    }
+
+    .ignft-organisations-link-recruitment {
+        transition: none !important
+    }
+
+    .ignft-study-india-link-universities {
+        transition: none !important
+    }
+
+    .ignft-study-india-link-entrance-exams {
+        transition: none !important
+    }
+
+    .ignft-study-india-link-college-news {
+        transition: none !important
+    }
+
+    .ignft-study-india-link-college-reviews {
+        transition: none !important
+    }
+
+    .ignft-study-india-link-ask-question {
+        transition: none !important
+    }
+
+    .ignft-online-education-link-undergraduate {
+        transition: none !important
+    }
+
+    .ignft-online-education-link-mba {
+        transition: none !important
+    }
+
+    .ignft-online-education-link-executive {
+        transition: none !important
+    }
+
+    .ignft-online-education-link-how-it-works {
+        transition: none !important
+    }
+
+    .ignft-study-abroad-link-countries {
+        transition: none !important
+    }
+
+    .ignft-study-abroad-link-scholarships {
+        transition: none !important
+    }
+
+    .ignft-study-abroad-link-visa {
+        transition: none !important
+    }
+
+    .ignft-study-abroad-link-apply {
+        transition: none !important
+    }
+
+    .ignft-study-abroad-link-ielts {
+        transition: none !important
+    }
+
+    .ignft-study-abroad-link-pte {
+        transition: none !important
+    }
+
+    .ignft-study-abroad-link-toefl {
+        transition: none !important
+    }
+
+    .ignft-study-abroad-link-gre {
+        transition: none !important
+    }
+
+    .ignft-study-abroad-link-gmat {
+        transition: none !important
+    }
+
+    .ignft-career-guidance-link-career-discovery {
+        transition: none !important
+    }
+
+    .ignft-career-guidance-link-dmit {
+        transition: none !important
+    }
+
+    .ignft-career-guidance-link-psychometric {
+        transition: none !important
+    }
+
+    .ignft-partner-chip-nmims {
+        transition: none !important
+    }
+
+    .ignft-partner-chip-vit {
+        transition: none !important
+    }
+
+    .ignft-partner-chip-amity {
+        transition: none !important
+    }
+
+    .ignft-partner-chip-manipal {
+        transition: none !important
+    }
+
+    .ignft-partner-chip-smu {
+        transition: none !important
+    }
+
+    .ignft-partner-chip-dypatil {
+        transition: none !important
+    }
+
+    .ignft-partner-chip-jain {
+        transition: none !important
+    }
+
+    .ignft-partner-chip-nldalmia {
+        transition: none !important
+    }
+
+    .ignft-partner-chip-vgu {
+        transition: none !important
+    }
+
+    .ignft-partner-chip-gla {
+        transition: none !important
+    }
+
+    .ignft-partner-chip-umass {
+        transition: none !important
+    }
+
+    .ignft-partner-chip-bennett {
+        transition: none !important
+    }
+}

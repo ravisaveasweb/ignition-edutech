@@ -1,0 +1,201 @@
+
+:root {
+    --ign-users-grid-navy: #0a2540;
+    --ign-users-grid-orange: #eb933a;
+    --ign-users-grid-border: #e5edf5;
+    --ign-users-grid-heading: #f0f4f9;
+}
+
+/* Main Table Wrapper */
+.fi-ta:has(.ign-users-grid-scope) {
+    overflow: hidden;
+    border: 1px solid var(--ign-users-grid-border) !important;
+    border-radius: 14px !important;
+    background: #ffffff;
+    box-shadow: 0 5px 24px rgba(10, 37, 64, 0.07);
+    transition: box-shadow 0.25s ease;
+}
+
+.fi-ta:has(.ign-users-grid-scope):hover {
+    box-shadow: 0 8px 28px rgba(10, 37, 64, 0.10);
+}
+
+/* Toolbar */
+.fi-ta:has(.ign-users-grid-scope) .fi-ta-header {
+    padding: 17px 20px !important;
+    background: #ffffff;
+    border-bottom: 1px solid var(--ign-users-grid-border);
+}
+
+/* Search Input */
+.fi-ta:has(.ign-users-grid-scope) .fi-input-wrp {
+    border: 1px solid #dce4ee !important;
+    border-radius: 9px !important;
+    background: #ffffff;
+    box-shadow: none !important;
+}
+
+.fi-ta:has(.ign-users-grid-scope) .fi-input-wrp:focus-within {
+    border-color: var(--ign-users-grid-orange) !important;
+    box-shadow: 0 0 0 3px rgba(235, 147, 58, 0.13) !important;
+}
+
+/* Horizontal Scrolling */
+.fi-ta:has(.ign-users-grid-scope) .fi-ta-content {
+    overflow-x: auto !important;
+}
+
+/* Table Structure */
+.fi-ta:has(.ign-users-grid-scope) .fi-ta-table {
+    width: 100% !important;
+    min-width: 1100px !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+}
+
+/* Table Headings */
+.fi-ta:has(.ign-users-grid-scope) .fi-ta-table thead th {
+    padding: 16px 14px !important;
+    background: var(--ign-users-grid-heading) !important;
+    color: var(--ign-users-grid-navy) !important;
+    font-size: 11px !important;
+    font-weight: 750 !important;
+    letter-spacing: 0.35px;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    border-right: 1px solid var(--ign-users-grid-border) !important;
+    border-bottom: 1px solid #d9e2ed !important;
+}
+
+/* Table Body Cells */
+.fi-ta:has(.ign-users-grid-scope) .fi-ta-table tbody td {
+    /* padding: 19px 14px !important; */
+    color: #26384a;
+    font-size: 12px !important;
+    vertical-align: middle !important;
+    background: #ffffff !important;
+
+    border-right: 1px solid var(--ign-users-grid-border) !important;
+    border-bottom: 1px solid var(--ign-users-grid-border) !important;
+
+    transition: background-color 0.2s ease;
+}
+
+/* Checkbox Column */
+.fi-ta:has(.ign-users-grid-scope) .fi-ta-table th:first-child,
+.fi-ta:has(.ign-users-grid-scope) .fi-ta-table td:first-child {
+    border-right: 1px solid var(--ign-users-grid-border) !important;
+}
+
+/* Last Column */
+.fi-ta:has(.ign-users-grid-scope) .fi-ta-table th:last-child,
+.fi-ta:has(.ign-users-grid-scope) .fi-ta-table td:last-child {
+    border-right: none !important;
+}
+
+/* Last Row */
+.fi-ta:has(.ign-users-grid-scope) .fi-ta-table tbody tr:last-child td {
+    border-bottom: none !important;
+}
+
+/* Row Hover */
+.fi-ta:has(.ign-users-grid-scope) .fi-ta-table tbody tr:hover td {
+    background: #fff9f1 !important;
+}
+
+/* User Name */
+.fi-ta:has(.ign-users-grid-scope) .ign-users-grid-name .fi-ta-text-item {
+    color: var(--ign-users-grid-navy);
+    /* font-weight: 750; */
+}
+
+/* Badges */
+.fi-ta:has(.ign-users-grid-scope) .fi-badge {
+    padding: 5px 9px !important;
+    border-radius: 7px !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    border: 1px solid rgba(10, 37, 64, 0.08);
+}
+
+/* Action Buttons */
+.fi-ta:has(.ign-users-grid-scope) .fi-icon-btn {
+    border-radius: 8px !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fi-ta:has(.ign-users-grid-scope) .fi-icon-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 9px rgba(10, 37, 64, 0.12);
+}
+
+/* Pagination */
+.fi-ta:has(.ign-users-grid-scope) .fi-ta-pagination {
+    padding: 15px 20px !important;
+    background: #f9fbfd;
+    border-top: 1px solid var(--ign-users-grid-border);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .fi-ta:has(.ign-users-grid-scope) {
+        border-radius: 11px !important;
+    }
+
+    .fi-ta:has(.ign-users-grid-scope) .fi-ta-header {
+        padding: 12px !important;
+    }
+
+    .fi-ta:has(.ign-users-grid-scope) .fi-ta-table {
+        min-width: 1000px !important;
+    }
+
+    .fi-ta:has(.ign-users-grid-scope) .fi-ta-table thead th {
+        padding: 13px 11px !important;
+    }
+
+    .fi-ta:has(.ign-users-grid-scope) .fi-ta-table tbody td {
+        padding: 15px 11px !important;
+    }
+}
+
+/* Dark Mode */
+.dark .fi-ta:has(.ign-users-grid-scope) {
+    background: #111c2c;
+    border-color: #334155 !important;
+}
+
+.dark .fi-ta:has(.ign-users-grid-scope) .fi-ta-header {
+    background: #111c2c;
+}
+
+.dark .fi-ta:has(.ign-users-grid-scope) .fi-ta-table thead th {
+    color: #e2e8f0 !important;
+    background: #1e293b !important;
+    border-color: #334155 !important;
+}
+
+.dark .fi-ta:has(.ign-users-grid-scope) .fi-ta-table tbody td {
+    color: #e2e8f0;
+    background: #111c2c !important;
+    border-color: #334155 !important;
+}
+
+.dark .fi-ta:has(.ign-users-grid-scope) .fi-ta-table tbody tr:hover td {
+    background: #263447 !important;
+}
+
+.dark .fi-ta:has(.ign-users-grid-scope) .fi-ta-pagination {
+    background: #172437;
+    border-color: #334155;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .fi-ta:has(.ign-users-grid-scope),
+    .fi-ta:has(.ign-users-grid-scope) * {
+        animation: none !important;
+        transition: none !important;
+    }
+}

@@ -1,0 +1,2857 @@
+.ign-news-page {
+
+    --ign-orange: #eb933a;
+
+    --ign-orange-dark: #d87920;
+
+    --ign-navy: #0a2540;
+
+    --ign-text: #26364a;
+
+    --ign-muted: #738094;
+
+    --ign-border: #e6eaf0;
+
+    --ign-soft: #f7f9fc;
+
+    background: #fff;
+
+    color: var(--ign-text);
+
+    font-family: inherit
+}
+
+.ign-news-page * {
+
+    box-sizing: border-box
+}
+
+.ign-news-container {
+
+    width: min(1200px, calc(100% - 40px));
+
+    margin: 0 auto
+}
+
+.ign-news-hero {
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: linear-gradient(115deg, #f8f2e8 0%, #fffaf4 55%, #f1f5fa 100%);
+
+    border-bottom: 1px solid #f0e7da
+}
+
+.ign-news-hero:after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+
+    height: 420px;
+
+    border: 1px solid rgba(235, 147, 58, .17);
+
+    border-radius: 50%;
+
+    right: -100px;
+
+    top: -210px;
+
+    box-shadow: 0 0 0 35px rgba(235, 147, 58, .035), 0 0 0 75px rgba(235, 147, 58, .025)
+}
+
+.ign-news-hero>.ign-news-container {
+
+    position: relative;
+
+    z-index: 1;
+
+    display: grid;
+
+    grid-template-columns: 1.4fr .8fr;
+
+    align-items: center;
+
+    gap: 60px;
+
+    padding-top: 62px;
+
+    padding-bottom: 64px
+}
+
+.ign-news-eyebrow {
+
+    display: inline-block;
+
+    color: #bd6d20;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    line-height: 1.6
+}
+
+.ign-news-hero h1 {
+
+    max-width: 700px;
+
+    margin: 14px 0 15px;
+
+    color: var(--ign-navy);
+
+    font-size: clamp(34px, 4.4vw, 54px);
+
+    line-height: 1.12;
+
+    letter-spacing: -1.8px;
+
+    font-weight: 800
+}
+
+.ign-news-hero-content>p {
+
+    max-width: 610px;
+
+    margin: 0;
+
+    color: #627083;
+
+    font-size: 17px;
+
+    line-height: 1.9
+}
+
+.ign-news-search {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    max-width: 640px;
+
+    margin-top: 28px;
+
+    padding: 6px 6px 6px 16px;
+
+    background: #fff;
+
+    border: 1px solid #e6e5e2;
+
+    border-radius: 8px;
+
+    box-shadow: 0 8px 28px rgba(10, 37, 64, .06)
+}
+
+.ign-news-search-icon {
+
+    color: var(--ign-orange);
+
+    font-size: 25px
+}
+
+.ign-news-search input {
+
+    flex: 1;
+
+    min-width: 0;
+
+    height: 42px;
+
+    border: 0;
+
+    outline: 0;
+
+    background: transparent;
+
+    color: var(--ign-text);
+
+    font-size: 14px
+}
+
+.ign-news-search button,
+
+.ign-news-empty button {
+
+    min-height: 42px;
+
+    padding: 0 19px;
+
+    border: 0;
+
+    border-radius: 6px;
+
+    background: var(--ign-orange);
+
+    color: #fff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: background .2s
+}
+
+.ign-news-search button:hover,
+
+.ign-news-empty button:hover {
+
+    background: var(--ign-orange-dark)
+}
+
+.ign-news-hero-stats {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    margin-top: 20px
+}
+
+.ign-news-hero-stats span {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #637084;
+
+    font-size: 12px;
+
+    font-weight: 600
+}
+
+.ign-news-hero-stats i,
+
+.ign-news-live-dot {
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--ign-orange)
+}
+
+.ign-news-hero-visual {
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 280px
+}
+
+.ign-news-visual-card {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 335px;
+
+    min-height: 260px;
+
+    padding: 25px;
+
+    background: #fff;
+
+    border: 1px solid #f0e8de;
+
+    border-radius: 13px;
+
+    box-shadow: 0 20px 60px rgba(10, 37, 64, .09);
+
+    transform: rotate(1deg)
+}
+
+.ign-news-visual-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-bottom: 16px;
+
+    border-bottom: 1px solid #edf0f4;
+
+    color: #7b8796;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px
+}
+
+.ign-news-visual-icon {
+
+    display: grid;
+
+    place-items: center;
+
+    width: 65px;
+
+    height: 65px;
+
+    margin-top: 25px;
+
+    border-radius: 12px;
+
+    background: #fff1df;
+
+    color: #c97523;
+
+    font-size: 18px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px
+}
+
+.ign-news-visual-card h3 {
+
+    max-width: 245px;
+
+    margin: 19px 0 8px;
+
+    color: var(--ign-navy);
+
+    font-size: 21px;
+
+    line-height: 1.35
+}
+
+.ign-news-visual-card p {
+
+    margin: 0;
+
+    color: var(--ign-muted);
+
+    font-size: 13px;
+
+    line-height: 1.8
+}
+
+.ign-news-visual-lines {
+
+    display: flex;
+
+    gap: 5px;
+
+    margin-top: 18px
+}
+
+.ign-news-visual-lines span {
+
+    height: 4px;
+
+    width: 35px;
+
+    border-radius: 5px;
+
+    background: #f2c18e
+}
+
+.ign-news-visual-lines span:nth-child(2) {
+
+    width: 22px;
+
+    background: #e7eaf0
+}
+
+.ign-news-visual-lines span:nth-child(3) {
+
+    width: 14px;
+
+    background: #e7eaf0
+}
+
+.ign-news-floating-tag {
+
+    position: absolute;
+
+    right: -5px;
+
+    bottom: 10px;
+
+    padding: 12px 16px;
+
+    border: 1px solid #f1e7da;
+
+    border-radius: 7px;
+
+    background: #fff;
+
+    color: var(--ign-navy);
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    box-shadow: 0 8px 25px #0a254012
+}
+
+.ign-news-quicklinks {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 15px;
+
+    padding-top: 26px;
+
+    padding-bottom: 26px;
+
+    border-bottom: 1px solid var(--ign-border)
+}
+
+.ign-news-quicklink {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    min-width: 0;
+
+    padding: 15px;
+
+    border: 1px solid var(--ign-border);
+
+    border-radius: 8px;
+
+    color: inherit;
+
+    text-decoration: none;
+
+    transition: border-color .2s, transform .2s
+}
+
+.ign-news-quicklink:hover {
+
+    border-color: #eab477;
+
+    transform: translateY(-2px)
+}
+
+.ign-news-quick-icon {
+
+    display: grid;
+
+    place-items: center;
+
+    flex-shrink: 0;
+
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 8px;
+
+    background: #fff2e3;
+
+    color: #c97523;
+
+    font-size: 17px;
+
+    font-weight: 900
+}
+
+.ign-news-quicklink>span:nth-child(2) {
+
+    display: flex;
+
+    flex: 1;
+
+    flex-direction: column;
+
+    gap: 4px
+}
+
+.ign-news-quicklink strong {
+
+    color: var(--ign-navy);
+
+    font-size: 14px
+}
+
+.ign-news-quicklink small {
+
+    color: var(--ign-muted);
+
+    font-size: 12px
+}
+
+.ign-news-quicklink>b {
+
+    color: var(--ign-orange);
+
+    font-size: 19px
+}
+
+.ign-news-main {
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) 285px;
+
+    align-items: start;
+
+    gap: 32px;
+
+    padding-top: 38px;
+
+    padding-bottom: 60px
+}
+
+.ign-news-main-column {
+
+    min-width: 0
+}
+
+.ign-news-heading {
+
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 20px
+}
+
+.ign-news-heading h2 {
+
+    margin: 7px 0 0;
+
+    color: var(--ign-navy);
+
+    font-size: 25px;
+
+    line-height: 1.3;
+
+    font-weight: 800;
+
+    letter-spacing: -.5px
+}
+
+.ign-news-heading p {
+
+    margin: 7px 0 0;
+
+    color: var(--ign-muted);
+
+    font-size: 14px;
+
+    line-height: 1.7
+}
+
+.ign-news-categories {
+
+    display: flex;
+
+    gap: 8px;
+
+    overflow-x: auto;
+
+    padding: 0 0 13px;
+
+    border-bottom: 1px solid var(--ign-border);
+
+    scrollbar-width: thin
+}
+
+.ign-news-categories button {
+
+    flex-shrink: 0;
+
+    padding: 10px 13px;
+
+    border: 1px solid #e9edf2;
+
+    border-radius: 5px;
+
+    background: #fff;
+
+    color: #5d6a7c;
+
+    font: inherit;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all .2s
+}
+
+.ign-news-categories button:hover,
+
+.ign-news-categories button.active {
+
+    border-color: var(--ign-orange);
+
+    background: #fff5e9;
+
+    color: #b9651b
+}
+
+.ign-news-featured {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    overflow: hidden;
+
+    margin-top: 25px;
+
+    border: 1px solid var(--ign-border);
+
+    border-radius: 10px;
+
+    background: #fff
+}
+
+.ign-news-featured-image {
+
+    position: relative;
+
+    min-height: 290px;
+
+    background: #f1f5f9
+}
+
+.ign-news-featured-image img,
+
+.ign-news-card-image img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .4s
+}
+
+.ign-news-featured-image img {
+
+    position: absolute;
+
+    inset: 0
+}
+
+.ign-news-image-tag {
+
+    position: absolute;
+
+    left: 15px;
+
+    top: 15px;
+
+    padding: 8px 10px;
+
+    border-radius: 4px;
+
+    background: var(--ign-orange);
+
+    color: #fff;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: .8px
+}
+
+.ign-news-featured-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    padding: 25px
+}
+
+.ign-news-category-label {
+
+    color: #bf6d21;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px
+}
+
+.ign-news-featured-content h2 {
+
+    margin: 13px 0 10px;
+
+    color: var(--ign-navy);
+
+    font-size: 23px;
+
+    line-height: 1.38;
+
+    letter-spacing: -.5px
+}
+
+.ign-news-featured-content>p {
+
+    margin: 0;
+
+    color: var(--ign-muted);
+
+    font-size: 14px;
+
+    line-height: 1.9
+}
+
+.ign-news-card-meta {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 9px;
+
+    width: 100%;
+
+    margin-top: 17px;
+
+    padding-top: 13px;
+
+    border-top: 1px solid #edf0f4;
+
+    color: #7d8897;
+
+    font-size: 12px
+}
+
+.ign-news-text-link,
+
+.ign-news-card-read {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 17px;
+
+    color: #bd6d20;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    text-decoration: none
+}
+
+.ign-news-text-link span,
+
+.ign-news-card-read span {
+
+    font-size: 19px;
+
+    transition: transform .2s
+}
+
+.ign-news-text-link:hover span,
+
+.ign-news-card-read:hover span {
+
+    transform: translateX(4px)
+}
+
+.ign-news-list-section {
+
+    padding-top: 38px
+}
+
+.ign-news-count {
+
+    flex-shrink: 0;
+
+    padding: 7px 10px;
+
+    border-radius: 5px;
+
+    background: #f5f7fa;
+
+    color: #748094;
+
+    font-size: 12px;
+
+    font-weight: 700
+}
+
+.ign-news-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px
+}
+
+.ign-news-card {
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    border: 1px solid var(--ign-border);
+
+    border-radius: 9px;
+
+    background: #fff;
+
+    transition: transform .2s, box-shadow .2s
+}
+
+.ign-news-card:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 12px 28px rgba(10, 37, 64, .07)
+}
+
+.ign-news-card[hidden] {
+
+    display: none !important
+}
+
+.ign-news-card-image {
+
+    position: relative;
+
+    display: block;
+
+    overflow: hidden;
+
+    height: 175px;
+
+    background: #f1f5f9;
+
+    text-decoration: none
+}
+
+.ign-news-card:hover .ign-news-card-image img {
+
+    transform: scale(1.04)
+}
+
+.ign-news-card-image>span {
+
+    position: absolute;
+
+    bottom: 12px;
+
+    left: 12px;
+
+    padding: 7px 10px;
+
+    border-radius: 4px;
+
+    background: #fff;
+
+    color: #a85f1c;
+
+    font-size: 12px;
+
+    font-weight: 800
+}
+
+.ign-news-card-body {
+
+    padding: 17px
+}
+
+.ign-news-card-kicker {
+
+    color: #bd6d20;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px
+}
+
+.ign-news-card-body h3 {
+
+    margin: 9px 0;
+
+    color: var(--ign-navy);
+
+    font-size: 18px;
+
+    line-height: 1.55
+}
+
+.ign-news-card-body h3 a {
+
+    color: inherit;
+
+    text-decoration: none
+}
+
+.ign-news-card-body h3 a:hover {
+
+    color: #bd6d20
+}
+
+.ign-news-card-body>p {
+
+    min-height: 57px;
+
+    margin: 0;
+
+    color: var(--ign-muted);
+
+    font-size: 13px;
+
+    line-height: 1.8
+}
+
+.ign-news-card-body .ign-news-card-meta {
+
+    margin-top: 12px;
+
+    font-size: 12px
+}
+
+.ign-news-card-read {
+
+    margin-top: 13px
+}
+
+.ign-news-sidebar {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    min-width: 0
+}
+
+.ign-news-sidebar-card {
+
+    padding: 22px;
+
+    border: 1px solid var(--ign-border);
+
+    border-radius: 9px;
+
+    background: #fff
+}
+
+.ign-news-sidebar-highlight {
+
+    background: linear-gradient(145deg, #fffaf3, #fff);
+
+    border-color: #f0e1cf
+}
+
+.ign-news-sidebar-icon {
+
+    display: grid;
+
+    place-items: center;
+
+    width: 38px;
+
+    height: 38px;
+
+    margin-bottom: 17px;
+
+    border-radius: 8px;
+
+    background: #ffeedb;
+
+    color: #bc6d23;
+
+    font-size: 14px;
+
+    font-weight: 900
+}
+
+.ign-news-sidebar-card h3 {
+
+    margin: 8px 0 10px;
+
+    color: var(--ign-navy);
+
+    font-size: 19px;
+
+    line-height: 1.45
+}
+
+.ign-news-sidebar-card>p {
+
+    margin: 0 0 15px;
+
+    color: var(--ign-muted);
+
+    font-size: 13px;
+
+    line-height: 1.9
+}
+
+.ign-news-sidebar-highlight>a {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding: 13px 0;
+
+    border-top: 1px solid #f0e6da;
+
+    color: #455469;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    text-decoration: none
+}
+
+.ign-news-sidebar-highlight>a span {
+
+    color: var(--ign-orange);
+
+    font-size: 18px
+}
+
+.ign-news-sidebar-highlight>a:hover {
+
+    color: #bd6d20
+}
+
+.ign-news-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px
+}
+
+.ign-news-tags button {
+
+    padding: 8px 10px;
+
+    border: 1px solid #e8edf3;
+
+    border-radius: 5px;
+
+    background: #f9fafc;
+
+    color: #5c687a;
+
+    font: inherit;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition: all .2s
+}
+
+.ign-news-tags button:hover {
+
+    border-color: #e7b47f;
+
+    background: #fff5e9;
+
+    color: #b9651b
+}
+
+.ign-news-source-note {
+
+    background: #f9fafc
+}
+
+.ign-news-source-note .ign-news-demo-note {
+
+    margin: 12px 0 0;
+
+    padding-top: 12px;
+
+    border-top: 1px solid #e8edf3;
+
+    color: #9a6b3d;
+
+    font-size: 12px
+}
+
+.ign-news-empty {
+
+    padding: 45px 15px;
+
+    text-align: center;
+
+    border: 1px dashed #d9e0e8;
+
+    border-radius: 9px
+}
+
+.ign-news-empty[hidden] {
+
+    display: none !important
+}
+
+.ign-news-empty>span {
+
+    color: var(--ign-orange);
+
+    font-size: 35px
+}
+
+.ign-news-empty h3 {
+
+    margin: 12px 0 6px;
+
+    color: var(--ign-navy);
+
+    font-size: 18px
+}
+
+.ign-news-empty p {
+
+    margin: 0 0 17px;
+
+    color: var(--ign-muted);
+
+    font-size: 14px
+}
+
+.ign-news-bottom-cta {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    margin-top: 38px;
+
+    padding: 26px;
+
+    border-radius: 9px;
+
+    background: var(--ign-navy)
+}
+
+.ign-news-bottom-cta h2 {
+
+    margin: 7px 0;
+
+    color: #fff;
+
+    font-size: 21px;
+
+    line-height: 1.4
+}
+
+.ign-news-bottom-cta p {
+
+    margin: 0;
+
+    color: #c6d0dd;
+
+    font-size: 13px;
+
+    line-height: 1.8
+}
+
+.ign-news-bottom-cta>a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+
+    padding: 13px 16px;
+
+    border-radius: 5px;
+
+    background: var(--ign-orange);
+
+    color: #fff;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    text-decoration: none
+}
+
+.ign-news-bottom-cta>a:hover {
+
+    background: var(--ign-orange-dark)
+}
+
+.ign-news-bottom-cta>a span {
+
+    font-size: 18px
+}
+
+@media(min-width:1200px) {
+
+    .ign-news-main {
+
+        grid-template-columns: minmax(0, 1fr) 285px
+    }
+
+}
+
+@media(max-width:1000px) {
+
+    .ign-news-hero>.ign-news-container {
+
+        gap: 25px
+    }
+
+    .ign-news-main {
+
+        grid-template-columns: minmax(0, 1fr) 245px;
+
+        gap: 22px
+    }
+
+    .ign-news-quicklinks {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+
+    .ign-news-featured {
+
+        grid-template-columns: 1fr
+    }
+
+    .ign-news-featured-image {
+
+        min-height: 250px
+    }
+
+    .ign-news-featured-content {
+
+        padding: 22px
+    }
+
+}
+
+@media(max-width:760px) {
+
+    .ign-news-container {
+
+        width: min(100% - 28px, 600px)
+    }
+
+    .ign-news-hero>.ign-news-container {
+
+        grid-template-columns: 1fr;
+
+        padding-top: 42px;
+
+        padding-bottom: 42px
+    }
+
+    .ign-news-hero h1 {
+
+        font-size: 36px;
+
+        letter-spacing: -1px
+    }
+
+    .ign-news-hero-content>p {
+
+        font-size: 15px
+    }
+
+    .ign-news-hero-visual {
+
+        display: none
+    }
+
+    .ign-news-search {
+
+        gap: 6px;
+
+        padding-left: 11px
+    }
+
+    .ign-news-search input {
+
+        font-size: 13px
+    }
+
+    .ign-news-search button {
+
+        padding: 0 11px;
+
+        font-size: 12px
+    }
+
+    .ign-news-hero-stats {
+
+        gap: 12px
+    }
+
+    .ign-news-hero-stats span {
+
+        font-size: 12px
+    }
+
+    .ign-news-quicklinks {
+
+        gap: 9px;
+
+        padding-top: 17px;
+
+        padding-bottom: 17px
+    }
+
+    .ign-news-quicklink {
+
+        gap: 9px;
+
+        padding: 11px
+    }
+
+    .ign-news-quick-icon {
+
+        width: 33px;
+
+        height: 33px
+    }
+
+    .ign-news-quicklink strong {
+
+        font-size: 13px
+    }
+
+    .ign-news-quicklink small {
+
+        font-size: 12px
+    }
+
+    .ign-news-quicklink>b {
+
+        font-size: 16px
+    }
+
+    .ign-news-main {
+
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+
+        padding-top: 28px;
+
+        padding-bottom: 38px
+    }
+
+    .ign-news-sidebar {
+
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 12px
+    }
+
+    .ign-news-source-note {
+
+        grid-column: 1/-1
+    }
+
+    .ign-news-heading h2 {
+
+        font-size: 22px
+    }
+
+    .ign-news-categories button {
+
+        padding: 9px 11px;
+
+        font-size: 12px
+    }
+
+    .ign-news-featured-image {
+
+        min-height: 220px
+    }
+
+    .ign-news-featured-content h2 {
+
+        font-size: 21px
+    }
+
+    .ign-news-card-image {
+
+        height: 150px
+    }
+
+    .ign-news-card-body {
+
+        padding: 13px
+    }
+
+    .ign-news-card-body h3 {
+
+        font-size: 16px
+    }
+
+    .ign-news-card-body>p {
+
+        font-size: 12px
+    }
+
+    .ign-news-card-meta {
+
+        font-size: 12px
+    }
+
+    .ign-news-bottom-cta {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        padding: 22px
+    }
+
+    .ign-news-bottom-cta h2 {
+
+        font-size: 20px
+    }
+
+}
+
+@media(max-width:420px) {
+
+    .ign-news-quicklink {
+
+        align-items: flex-start;
+
+        flex-wrap: wrap
+    }
+
+    .ign-news-quicklink>b {
+
+        margin-left: auto
+    }
+
+    .ign-news-grid {
+
+        grid-template-columns: 1fr
+    }
+
+    .ign-news-card-image {
+
+        height: 200px
+    }
+
+    .ign-news-sidebar {
+
+        grid-template-columns: 1fr
+    }
+
+    .ign-news-source-note {
+
+        grid-column: auto
+    }
+
+    .ign-news-heading h2 {
+
+        font-size: 20px
+    }
+
+    .ign-news-count {
+
+        font-size: 12px
+    }
+
+    .ign-news-hero h1 {
+
+        font-size: 32px
+    }
+
+    .ign-news-search button {
+
+        padding: 0 9px
+    }
+
+}
+
+
+/* =========================================================
+   IGNITION EDUCATION NEWS - VISUAL POLISH & MICRO-INTERACTIONS
+   ========================================================= */
+.ign-news-page {
+    --ign-radius-sm: 10px;
+    --ign-radius-md: 16px;
+    --ign-radius-lg: 22px;
+    --ign-shadow-sm: 0 5px 18px rgba(10, 37, 64, .055);
+    --ign-shadow-md: 0 16px 38px rgba(10, 37, 64, .10);
+    --ign-shadow-lg: 0 24px 65px rgba(10, 37, 64, .13);
+    overflow: clip;
+}
+
+.ign-news-page a,
+.ign-news-page button,
+.ign-news-page input {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.ign-news-page a:focus-visible,
+.ign-news-page button:focus-visible,
+.ign-news-page input:focus-visible {
+    outline: 3px solid rgba(235, 147, 58, .42);
+    outline-offset: 3px;
+}
+
+.ign-news-container {
+    width: min(1240px, calc(100% - 48px));
+}
+
+.ign-news-hero {
+    isolation: isolate;
+    background:
+        radial-gradient(circle at 88% 18%, rgba(235, 147, 58, .13), transparent 24%),
+        linear-gradient(120deg, #fbf4e9 0%, #fffaf5 48%, #f2f6fb 100%);
+}
+
+.ign-news-hero::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 310px;
+    height: 310px;
+    left: -170px;
+    bottom: -210px;
+    border: 1px solid rgba(10, 37, 64, .08);
+    border-radius: 50%;
+    box-shadow: 0 0 0 28px rgba(10, 37, 64, .025), 0 0 0 58px rgba(10, 37, 64, .02);
+    pointer-events: none;
+}
+
+.ign-news-hero>.ign-news-container {
+    gap: clamp(28px, 5vw, 72px);
+    padding-top: clamp(48px, 6vw, 78px);
+    padding-bottom: clamp(48px, 6vw, 78px);
+}
+
+.ign-news-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    letter-spacing: 1.65px;
+}
+
+.ign-news-eyebrow::before {
+    content: "";
+    width: 22px;
+    height: 2px;
+    border-radius: 5px;
+    background: var(--ign-orange);
+}
+
+.ign-news-hero h1 {
+    font-size: clamp(38px, 4.6vw, 50px);
+    letter-spacing: -2.1px;
+    line-height: 1.08;
+    text-wrap: balance;
+    animation: ignNewsRise .65s ease both;
+}
+
+.ign-news-hero-content>p {
+    font-size: 17px;
+    max-width: 580px;
+}
+
+.ign-news-search {
+    border-radius: 12px;
+    padding: 7px 7px 7px 17px;
+    border-color: rgba(10, 37, 64, .10);
+    box-shadow: 0 12px 34px rgba(10, 37, 64, .09);
+    transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+}
+
+.ign-news-search:focus-within {
+    border-color: rgba(235, 147, 58, .85);
+    box-shadow: 0 0 0 4px rgba(235, 147, 58, .12), 0 15px 38px rgba(10, 37, 64, .10);
+    transform: translateY(-1px);
+}
+
+.ign-news-search input {
+    font-size: 15px;
+}
+
+.ign-news-search button,
+.ign-news-empty button {
+    border-radius: 9px;
+    background: linear-gradient(135deg, #f3a34e, #df8126);
+    box-shadow: 0 5px 12px rgba(216, 121, 32, .18);
+    transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+
+.ign-news-search button:hover,
+.ign-news-empty button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(216, 121, 32, .26);
+    filter: saturate(1.08);
+}
+
+.ign-news-hero-stats {
+    gap: 18px 22px;
+}
+
+.ign-news-hero-stats span {
+    font-size: 13px;
+}
+
+.ign-news-hero-stats i,
+.ign-news-live-dot {
+    flex: 0 0 7px;
+    box-shadow: 0 0 0 4px rgba(235, 147, 58, .12);
+}
+
+.ign-news-live-dot {
+    animation: ignNewsPulse 1.8s ease-in-out infinite;
+}
+
+.ign-news-visual-card {
+    border-radius: 18px;
+    box-shadow: var(--ign-shadow-lg);
+    transform: rotate(1deg);
+    animation: ignNewsFloat 5s ease-in-out infinite;
+}
+
+.ign-news-floating-tag {
+    border-radius: 11px;
+    animation: ignNewsFloat 4.4s ease-in-out infinite reverse;
+}
+
+.ign-news-quicklinks {
+    gap: 14px;
+    padding-top: 24px;
+    padding-bottom: 28px;
+}
+
+.ign-news-quicklink {
+    position: relative;
+    min-height: 78px;
+    padding: 16px;
+    border-radius: 13px;
+    background: #fff;
+    box-shadow: 0 3px 12px rgba(10, 37, 64, .025);
+    transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease, background .25s ease;
+}
+
+.ign-news-quicklink::after {
+    content: "";
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+    left: 15px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--ign-orange);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .25s ease;
+}
+
+.ign-news-quicklink:hover {
+    transform: translateY(-4px);
+    border-color: rgba(235, 147, 58, .65);
+    background: #fffdf9;
+    box-shadow: var(--ign-shadow-md);
+}
+
+.ign-news-quicklink:hover::after {
+    transform: scaleX(1);
+}
+
+.ign-news-quick-icon {
+    border-radius: 12px;
+    transition: transform .25s ease, background .25s ease;
+}
+
+.ign-news-quicklink:hover .ign-news-quick-icon {
+    transform: rotate(-5deg) scale(1.06);
+    background: #ffe6c8;
+}
+
+.ign-news-main {
+    gap: clamp(24px, 3vw, 38px);
+    padding-top: 42px;
+}
+
+.ign-news-heading {
+    margin-bottom: 22px;
+}
+
+.ign-news-heading h2 {
+    font-size: clamp(23px, 2.4vw, 29px);
+    letter-spacing: -.7px;
+}
+
+.ign-news-heading p {
+    font-size: 15px;
+}
+
+.ign-news-categories {
+    gap: 9px;
+    padding-bottom: 15px;
+    scrollbar-width: thin;
+}
+
+.ign-news-categories a {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    min-height: 39px;
+    padding: 9px 15px;
+    border: 1px solid #e6eaf0;
+    border-radius: 999px;
+    background: #fff;
+    color: #5d6a7c;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color .2s ease, background .2s ease, border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+
+.ign-news-categories a:hover,
+.ign-news-categories a.active {
+    border-color: var(--ign-orange);
+    background: #fff3e4;
+    color: #a95712;
+    box-shadow: 0 4px 12px rgba(235, 147, 58, .10);
+}
+
+.ign-news-categories a:hover {
+    transform: translateY(0px);
+}
+
+.ign-news-featured {
+    margin-top: 27px;
+    border-radius: 17px;
+    border-color: #e5eaf0;
+    box-shadow: var(--ign-shadow-sm);
+    transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+}
+
+.ign-news-featured:hover {
+    border-color: #eac39a;
+    box-shadow: var(--ign-shadow-md);
+    transform: translateY(-2px);
+}
+
+.ign-news-featured-image {
+    min-height: 320px;
+    overflow: hidden;
+}
+
+.ign-news-featured-image img {
+    transition: transform .65s cubic-bezier(.2, .7, .2, 1), filter .4s ease;
+}
+
+.ign-news-featured:hover .ign-news-featured-image img {
+    transform: scale(1.045);
+    filter: saturate(1.06);
+}
+
+.ign-news-image-tag {
+    border-radius: 999px;
+    box-shadow: 0 5px 15px rgba(10, 37, 64, .12);
+}
+
+.ign-news-featured-content {
+    padding: clamp(22px, 3vw, 32px);
+}
+
+.ign-news-featured-content h2 {
+    font-size: clamp(21px, 2.2vw, 27px);
+    line-height: 1.3;
+    letter-spacing: -.65px;
+    text-wrap: pretty;
+}
+
+.ign-news-featured-content h2 a {
+    color: inherit;
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+.ign-news-featured-content h2 a:hover {
+    color: #b9651b;
+}
+
+.ign-news-featured-content>p {
+    font-size: 15px;
+}
+
+.ign-news-list-section {
+    padding-top: 43px;
+}
+
+.ign-news-count {
+    border: 1px solid #e8edf3;
+    border-radius: 999px;
+    padding: 8px 12px;
+    white-space: nowrap;
+}
+
+.ign-news-active-filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 0 18px;
+    padding: 12px 15px;
+    border: 1px solid #f2dfc9;
+    border-radius: 11px;
+    background: #fffaf4;
+    color: #596779;
+    font-size: 14px;
+}
+
+.ign-news-active-filter a {
+    color: #a95712;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.ign-news-active-filter a:hover {
+    text-decoration: underline;
+}
+
+.ign-news-grid {
+    gap: 22px;
+}
+
+.ign-news-card {
+    border-radius: 15px;
+    border-color: #e6eaf0;
+    box-shadow: 0 3px 12px rgba(10, 37, 64, .025);
+    transition: transform .28s ease, border-color .28s ease, box-shadow .28s ease;
+    animation: ignNewsRise .55s ease both;
+    animation-delay: calc(var(--ign-news-card-index, 0) * 45ms);
+}
+
+.ign-news-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(235, 147, 58, .55);
+    box-shadow: var(--ign-shadow-md);
+}
+
+.ign-news-card-image {
+    height: 205px;
+    background: linear-gradient(135deg, #f8f2e8, #eef3f8);
+}
+
+.ign-news-card-image img {
+    transition: transform .65s cubic-bezier(.2, .7, .2, 1), filter .35s ease;
+}
+
+.ign-news-card:hover .ign-news-card-image img {
+    transform: scale(1.07);
+    filter: saturate(1.08);
+}
+
+.ign-news-card-image>span {
+    border: 1px solid rgba(255, 255, 255, .65);
+    border-radius: 999px;
+    box-shadow: 0 4px 12px rgba(10, 37, 64, .09);
+}
+
+.ign-news-card-body {
+    padding: 20px;
+}
+
+.ign-news-card-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.ign-news-card-kicker::before {
+    content: "";
+    width: 16px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--ign-orange);
+}
+
+.ign-news-card-body h3 {
+    font-size: 19px;
+    line-height: 1.45;
+    letter-spacing: -.2px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.ign-news-card-body h3 a {
+    transition: color .2s ease;
+}
+
+.ign-news-card-body>p {
+    min-height: 60px;
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.ign-news-card-meta {
+    gap: 8px 12px;
+    color: #7b8796;
+}
+
+.ign-news-card-read {
+    margin-top: 16px;
+    transition: color .2s ease;
+}
+
+.ign-news-card-read:hover {
+    color: #8f4c0f;
+}
+
+.ign-news-sidebar {
+    gap: 18px;
+}
+
+.ign-news-sidebar-card {
+    border-radius: 15px;
+    padding: 24px;
+    box-shadow: 0 3px 14px rgba(10, 37, 64, .025);
+    transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+}
+
+.ign-news-sidebar-card:hover {
+    border-color: #e9c59f;
+    box-shadow: var(--ign-shadow-sm);
+}
+
+.ign-news-sidebar-highlight {
+    position: relative;
+    overflow: hidden;
+}
+
+.ign-news-sidebar-highlight::before {
+    content: "";
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    top: -56px;
+    right: -52px;
+    border: 1px solid rgba(235, 147, 58, .22);
+    border-radius: 50%;
+    box-shadow: 0 0 0 14px rgba(235, 147, 58, .045);
+    pointer-events: none;
+}
+
+.ign-news-sidebar-icon {
+    border-radius: 12px;
+}
+
+.ign-news-sidebar-card h3 {
+    font-size: 18px;
+}
+
+.ign-news-sidebar-highlight>a {
+    transition: padding .2s ease, color .2s ease;
+}
+
+.ign-news-sidebar-highlight>a:hover {
+    padding-left: 5px;
+}
+
+.ign-news-tags {
+    gap: 8px;
+}
+
+.ign-news-tags a {
+    display: inline-flex;
+    align-items: center;
+    padding: 9px 11px;
+    border: 1px solid #e8edf3;
+    border-radius: 999px;
+    background: #f9fafc;
+    color: #5c687a;
+    font-size: 13px;
+    text-decoration: none;
+    transition: border-color .2s ease, background .2s ease, color .2s ease, transform .2s ease;
+}
+
+.ign-news-tags a:hover {
+    transform: translateY(-2px);
+    border-color: #e7b47f;
+    background: #fff5e9;
+    color: #a95712;
+}
+
+.ign-news-source-note {
+    background: linear-gradient(145deg, #f9fafc, #fff);
+}
+
+.ign-news-empty {
+    grid-column: 1 / -1;
+    padding: 55px 20px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #fffaf4, #fff);
+}
+
+.ign-news-empty>span {
+    display: inline-grid;
+    place-items: center;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #fff0de;
+}
+
+.ign-news-bottom-cta {
+    position: relative;
+    overflow: hidden;
+    border-radius: 17px;
+    padding: clamp(24px, 4vw, 36px);
+    background:
+        radial-gradient(circle at 90% 0%, rgba(235, 147, 58, .22), transparent 30%),
+        linear-gradient(115deg, #0a2540, #123958);
+    box-shadow: 0 14px 32px rgba(10, 37, 64, .14);
+}
+
+.ign-news-bottom-cta h2 {
+    font-size: clamp(21px, 2.4vw, 27px);
+    letter-spacing: -.45px;
+}
+
+.ign-news-bottom-cta>a {
+    border-radius: 9px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, .12);
+    transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.ign-news-bottom-cta>a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .18);
+}
+
+.ign-news-image-placeholder {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+    padding: 20px;
+    background:
+        radial-gradient(circle at 80% 20%, rgba(235, 147, 58, .2), transparent 35%),
+        linear-gradient(135deg, #edf2f7, #fff7ed);
+    color: #6a7a8d;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: .4px;
+    text-align: center;
+}
+
+@keyframes ignNewsRise {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ignNewsFloat {
+
+    0%,
+    100% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 -8px;
+    }
+}
+
+@keyframes ignNewsPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 4px rgba(235, 147, 58, .12);
+    }
+
+    50% {
+        box-shadow: 0 0 0 7px rgba(235, 147, 58, .06);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .ign-news-page *,
+    .ign-news-page *::before,
+    .ign-news-page *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+    }
+}
+
+@media (max-width: 1000px) {
+    .ign-news-featured-image {
+        min-height: 280px;
+    }
+
+    .ign-news-card-image {
+        height: 185px;
+    }
+}
+
+@media (max-width: 760px) {
+    .ign-news-container {
+        width: min(100% - 30px, 640px);
+    }
+
+    .ign-news-hero>.ign-news-container {
+        padding-top: 44px;
+        padding-bottom: 44px;
+    }
+
+    .ign-news-hero h1 {
+        font-size: clamp(34px, 8vw, 44px);
+        letter-spacing: -1.2px;
+    }
+
+    .ign-news-search {
+        gap: 7px;
+    }
+
+    .ign-news-search input {
+        font-size: 14px;
+    }
+
+    .ign-news-quicklink {
+        min-height: 72px;
+    }
+
+    .ign-news-main {
+        padding-top: 30px;
+    }
+
+    .ign-news-featured {
+        border-radius: 15px;
+    }
+
+    .ign-news-featured-image {
+        min-height: 230px;
+    }
+
+    .ign-news-card-image {
+        height: 175px;
+    }
+
+    .ign-news-card-body {
+        padding: 16px;
+    }
+
+    .ign-news-sidebar-card {
+        padding: 19px;
+    }
+
+    .ign-news-bottom-cta {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 420px) {
+    .ign-news-container {
+        width: calc(100% - 24px);
+    }
+
+    .ign-news-quicklinks {
+        gap: 8px;
+    }
+
+    .ign-news-quicklink {
+        padding: 10px;
+        border-radius: 11px;
+    }
+
+    .ign-news-quick-icon {
+        width: 31px;
+        height: 31px;
+    }
+
+    .ign-news-quicklink small {
+        line-height: 1.4;
+    }
+
+    .ign-news-search {
+        padding-left: 10px;
+    }
+
+    .ign-news-search-icon {
+        font-size: 21px;
+    }
+
+    .ign-news-search button {
+        min-height: 39px;
+        padding: 0 9px;
+    }
+
+    .ign-news-featured-content {
+        padding: 19px;
+    }
+
+    .ign-news-card-image {
+        height: 195px;
+    }
+
+    .ign-news-heading {
+        align-items: flex-start;
+    }
+}
+
+/* Readability improvements: slightly larger article text and paragraphs */
+.ign-news-page .ign-news-hero>.ign-news-container>p,
+.ign-news-page .ign-news-hero p {
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+.ign-news-page .ign-news-featured-content>p,
+.ign-news-page .ign-news-card-body>p,
+.ign-news-page .ign-news-sidebar-card>p,
+.ign-news-page .ign-news-bottom-cta p {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.ign-news-page .ign-news-featured-content h2 {
+    font-size: clamp(25px, 2.3vw, 30px);
+    line-height: 1.35;
+}
+
+.ign-news-page .ign-news-card-body h3,
+.ign-news-page .ign-news-sidebar-card h3 {
+    font-size: 19px;
+    line-height: 1.45;
+}
+
+.ign-news-page .ign-news-card-meta,
+.ign-news-page .ign-news-card-body .ign-news-card-meta,
+.ign-news-page .ign-news-featured-meta,
+.ign-news-page .ign-news-sidebar-highlight>a {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.ign-news-page .ign-news-category-nav a,
+.ign-news-page .ign-news-quicklink {
+    font-size: 16px;
+}
+
+/* College News pagination */
+.ign-news-page .ign-news-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 32px 0 24px;
+    padding: 10px 0;
+    overflow-x: auto;
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+
+.ign-news-page .ign-news-pagination::-webkit-scrollbar {
+    display: none;
+}
+
+.ign-news-page .ign-news-pagination nav,
+.ign-news-page .ign-news-pagination nav>div:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-width: 0;
+}
+
+.ign-news-page .ign-news-pagination nav>div:first-child {
+    display: none;
+}
+
+.ign-news-page .ign-news-pagination nav>div:last-child {
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.ign-news-page .ign-news-pagination nav>div:last-child>a,
+.ign-news-page .ign-news-pagination nav>div:last-child>span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    min-width: 44px;
+    height: 44px;
+    margin: 0;
+    padding: 0 13px;
+    border: 1px solid #e1e6ed;
+    border-radius: 9px;
+    background: #fff;
+    color: #344054;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    box-sizing: border-box;
+    transition: background .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+
+.ign-news-page .ign-news-pagination nav>div:last-child>a:hover {
+    color: #bd6d20;
+    background: #fff5e9;
+    border-color: #eb933a;
+    box-shadow: 0 4px 12px rgba(235, 147, 58, .15);
+    transform: translateY(-2px);
+}
+
+.ign-news-page .ign-news-pagination nav>div:last-child>a:focus-visible {
+    outline: 3px solid rgba(235, 147, 58, .35);
+    outline-offset: 3px;
+}
+
+.ign-news-page .ign-news-pagination nav>div:last-child>span[aria-current="page"] {
+    color: #fff;
+    background: linear-gradient(135deg, #f3a34f, #eb933a);
+    border-color: #eb933a;
+    box-shadow: 0 4px 10px rgba(235, 147, 58, .22);
+    font-weight: 700;
+}
+
+.ign-news-page .ign-news-pagination nav>div:last-child>span[aria-disabled="true"] {
+    color: #929cac;
+    background: #f5f6f8;
+    border-color: #e6e9ee;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.ign-news-page .ign-news-pagination nav>div:last-child>a[rel="prev"],
+.ign-news-page .ign-news-pagination nav>div:last-child>a[rel="next"] {
+    gap: 8px;
+    min-width: 116px;
+    padding: 0 15px;
+    color: #bd6d20;
+    background: #fff;
+    border-color: #eb933a;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.ign-news-page .ign-news-pagination nav>div:last-child>a[rel="prev"]:hover,
+.ign-news-page .ign-news-pagination nav>div:last-child>a[rel="next"]:hover {
+    color: #fff;
+    background: #eb933a;
+    border-color: #eb933a;
+}
+
+.ign-news-page .ign-news-pagination nav>div:last-child>a[rel="prev"] svg,
+.ign-news-page .ign-news-pagination nav>div:last-child>a[rel="next"] svg,
+.ign-news-page .ign-news-pagination nav>div:last-child>span[aria-disabled="true"] svg {
+    display: block;
+    flex: 0 0 17px;
+    width: 17px;
+    height: 17px;
+}
+
+@media (max-width: 768px) {
+    .ign-news-page .ign-news-pagination {
+        margin: 28px 0 20px;
+    }
+
+    .ign-news-page .ign-news-pagination nav>div:last-child {
+        gap: 8px;
+    }
+
+    .ign-news-page .ign-news-pagination nav>div:last-child>a,
+    .ign-news-page .ign-news-pagination nav>div:last-child>span {
+        min-width: 40px;
+        height: 42px;
+        padding: 0 11px;
+        font-size: 16px;
+    }
+
+    .ign-news-page .ign-news-pagination nav>div:last-child>a[rel="prev"],
+    .ign-news-page .ign-news-pagination nav>div:last-child>a[rel="next"] {
+        min-width: 104px;
+        padding: 0 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ign-news-page .ign-news-pagination {
+        margin: 24px 0 16px;
+        padding: 8px 0;
+    }
+
+    .ign-news-page .ign-news-pagination nav>div:last-child {
+        flex-wrap: nowrap;
+        gap: 6px;
+    }
+
+    .ign-news-page .ign-news-pagination nav>div:last-child>a,
+    .ign-news-page .ign-news-pagination nav>div:last-child>span {
+        min-width: 36px;
+        height: 40px;
+        padding: 0 9px;
+        border-radius: 8px;
+        font-size: 15px;
+    }
+
+    .ign-news-page .ign-news-pagination nav>div:last-child>a[rel="prev"],
+    .ign-news-page .ign-news-pagination nav>div:last-child>a[rel="next"] {
+        min-width: 92px;
+        padding: 0 9px;
+        gap: 5px;
+        font-size: 15px;
+    }
+
+    .ign-news-page .ign-news-pagination nav>div:last-child>a[rel="prev"] svg,
+    .ign-news-page .ign-news-pagination nav>div:last-child>a[rel="next"] svg {
+        flex-basis: 15px;
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (max-width: 360px) {
+    .ign-news-page .ign-news-pagination nav>div:last-child {
+        gap: 4px;
+    }
+
+    .ign-news-page .ign-news-pagination nav>div:last-child>a,
+    .ign-news-page .ign-news-pagination nav>div:last-child>span {
+        min-width: 32px;
+        height: 38px;
+        padding: 0 7px;
+        font-size: 14px;
+    }
+
+    .ign-news-page .ign-news-pagination nav>div:last-child>a[rel="prev"],
+    .ign-news-page .ign-news-pagination nav>div:last-child>a[rel="next"] {
+        min-width: 80px;
+        padding: 0 6px;
+        gap: 4px;
+        font-size: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ign-news-page .ign-news-pagination nav>div:last-child>a {
+        transition: none;
+    }
+
+    .ign-news-page .ign-news-pagination nav>div:last-child>a:hover {
+        transform: none;
+    }
+}
+
+
+/* Main news section end  */
+
+
+
+/* SHOW BLADE - ARTICLE PAGE */
+
+.ign-article-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    padding: 22px 0;
+    color: #8993a2;
+    font-size: 13px;
+}
+
+.ign-article-breadcrumb a {
+    color: #64748b;
+    text-decoration: none;
+}
+
+.ign-article-breadcrumb a:hover {
+    color: #d87920;
+}
+
+.ign-article-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 285px;
+    align-items: start;
+    gap: 36px;
+    padding: 12px 0 60px;
+}
+
+.ign-article-main {
+    min-width: 0;
+}
+
+.ign-article-main>.ign-news-category-label {
+    display: inline-block;
+    padding: 7px 10px;
+    border-radius: 4px;
+    background: #fff2e3;
+    color: #bd6d20;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+}
+
+.ign-article-main>h1 {
+    margin: 17px 0 13px;
+    color: #0a2540;
+    font-size: clamp(29px, 4vw, 42px);
+    line-height: 1.25;
+    letter-spacing: -1px;
+}
+
+.ign-article-intro {
+    margin: 0;
+    color: #69778a;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.ign-article-byline {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 23px 0;
+    padding: 16px 0;
+    border-top: 1px solid #e6eaf0;
+    border-bottom: 1px solid #e6eaf0;
+}
+
+.ign-article-author-icon {
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #fff0df;
+    color: #bd6d20;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.ign-article-byline>div:nth-child(2) {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.ign-article-byline strong {
+    color: #0a2540;
+    font-size: 13px;
+}
+
+.ign-article-byline span {
+    color: #8590a0;
+    font-size: 12px;
+}
+
+.ign-article-share {
+    padding: 9px 11px;
+    border: 1px solid #e6eaf0;
+    border-radius: 5px;
+    background: #fff;
+    color: #536176;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.ign-article-share:hover {
+    border-color: #eb933a;
+    color: #bd6d20;
+}
+
+.ign-article-cover {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 9px;
+    background: #f1f5f9;
+}
+
+.ign-article-cover img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ign-article-content {
+    padding-top: 20px;
+    color: #445267;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.ign-article-content p {
+    margin: 0 0 20px;
+}
+
+.ign-article-content .ign-article-lead {
+    color: #34465b;
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+.ign-article-content h2 {
+    margin: 29px 0 11px;
+    color: #0a2540;
+    font-size: 23px;
+    line-height: 1.4;
+}
+
+.ign-article-content ul {
+    margin: 0 0 22px;
+    padding-left: 23px;
+}
+
+.ign-article-content li {
+    padding: 4px 0 4px 3px;
+}
+
+.ign-article-disclaimer {
+    margin: 28px 0;
+    padding: 18px;
+    border-left: 3px solid #eb933a;
+    border-radius: 0 6px 6px 0;
+    background: #fff8ef;
+}
+
+.ign-article-disclaimer strong {
+    color: #0a2540;
+    font-size: 14px;
+}
+
+.ign-article-disclaimer p {
+    margin: 7px 0 0;
+    color: #786b5e;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.ign-article-source {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-top: 30px;
+    padding: 22px;
+    border: 1px solid #e6eaf0;
+    border-radius: 8px;
+    background: #f9fafc;
+}
+
+.ign-article-source h3 {
+    margin: 7px 0;
+    color: #0a2540;
+    font-size: 18px;
+}
+
+.ign-article-source p {
+    margin: 0;
+    color: #738094;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.ign-article-source-button {
+    flex-shrink: 0;
+    padding: 11px 13px;
+    border-radius: 5px;
+    background: #eb933a;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.ign-article-source-button:hover {
+    background: #d87920;
+}
+
+.ign-article-back {
+    display: inline-block;
+    margin-top: 25px;
+    color: #bd6d20;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.ign-article-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ign-article-sidebar-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 13px 0;
+    border-top: 1px solid #edf0f4;
+    color: #536176;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.ign-article-sidebar-link span {
+    color: #eb933a;
+    font-size: 18px;
+}
+
+.ign-article-sidebar-link:hover {
+    color: #bd6d20;
+}
+
+.ign-article-sidebar-note {
+    background: #fffaf3;
+    border-color: #f0e1cf;
+}
+
+/* RESPONSIVE STYLES */
+
+@media (max-width: 760px) {
+    .ign-article-layout {
+        grid-template-columns: 1fr;
+        gap: 26px;
+        padding-top: 5px;
+    }
+
+    .ign-article-sidebar {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .ign-article-main>h1 {
+        font-size: 30px;
+    }
+
+    .ign-article-intro,
+    .ign-article-content {
+        font-size: 15px;
+    }
+
+    .ign-article-content h2 {
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ign-article-sidebar {
+        grid-template-columns: 1fr;
+    }
+
+    .ign-article-byline {
+        flex-wrap: wrap;
+    }
+
+    .ign-article-share {
+        margin-left: auto;
+    }
+
+    .ign-article-source {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .ign-article-main>h1 {
+        font-size: 27px;
+    }
+}
+
+
+   /* SHOW BLADE - ARTICLE PAGE END */

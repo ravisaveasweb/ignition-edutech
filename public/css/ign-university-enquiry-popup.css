@@ -1,0 +1,661 @@
+/* IGNITION UNIVERSITY ENQUIRY POPUP */
+
+#ignUniversityEnquiryPopup {
+    --ign-enquiry-navy: #0a2540;
+    --ign-enquiry-orange: #eb933a;
+    --ign-enquiry-dark-orange: #d7791f;
+    --ign-enquiry-text: #26384b;
+    --ign-enquiry-muted: #718096;
+    --ign-enquiry-border: #e2e8f0;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: rgba(5, 25, 46, 0.75);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+#ignUniversityEnquiryPopup::-webkit-scrollbar {
+    display: none;
+}
+
+#ignUniversityEnquiryPopup.ign-enquiry-popup-active {
+    display: flex;
+}
+
+/* MAIN POPUP CARD */
+
+#ignUniversityEnquiryPopup .ign-enquiry-popup {
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 470px;
+    margin: auto;
+    padding: 36px 31px 29px;
+    background: linear-gradient(145deg, #ffffff, #fbfcfe);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 17px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.22), 0 8px 24px rgba(10, 37, 64, 0.08);
+    animation: ignEnquiryPopupAnimation 0.35s ease both;
+}
+
+@keyframes ignEnquiryPopupAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* CLOSE BUTTON */
+
+#ignUniversityEnquiryPopup .ign-enquiry-popup-close {
+    position: absolute;
+    top: 13px;
+    right: 14px;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: #f1f4f8;
+    color: #52647a;
+    font-family: inherit;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+#ignUniversityEnquiryPopup .ign-enquiry-popup-close:hover {
+    background: #fff0e1;
+    color: var(--ign-enquiry-dark-orange);
+    transform: rotate(90deg);
+}
+
+/* POPUP HEADER */
+
+#ignUniversityEnquiryPopup .ign-enquiry-popup-header {
+    margin-bottom: 27px;
+    padding: 0 8px;
+    text-align: center;
+}
+
+#ignUniversityEnquiryPopup .ign-enquiry-popup-header h3 {
+    margin: 0 0 8px;
+    color: var(--ign-enquiry-navy);
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+}
+
+#ignUniversityEnquiryPopup .ign-enquiry-popup-header p {
+    max-width: 365px;
+    margin: 0 auto;
+    color: #52647a;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* FORM FIELDS */
+
+#ignUniversityEnquiryPopup .ign-enquiry-popup-field {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#ignUniversityEnquiryPopup .ign-enquiry-popup-field>input {
+    display: block;
+    width: 100%;
+    height: 52px;
+    margin: 0;
+    padding: 0 14px;
+    border: 1px solid #dce3ec;
+    border-radius: 9px;
+    outline: none;
+    background: #ffffff;
+    color: var(--ign-enquiry-text);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 400;
+    box-shadow: 0 2px 5px rgba(10, 37, 64, 0.025);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+#ignUniversityEnquiryPopup .ign-enquiry-popup-field>input::placeholder {
+    color: #929eac;
+    opacity: 1;
+}
+
+#ignUniversityEnquiryPopup .ign-enquiry-popup-field>input:hover {
+    border-color: #b8c8d9;
+    background: #fcfdff;
+}
+
+#ignUniversityEnquiryPopup .ign-enquiry-popup-field>input:focus {
+    border-color: var(--ign-enquiry-orange);
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(235, 147, 58, 0.12), 0 3px 10px rgba(10, 37, 64, 0.04);
+}
+
+/* SEARCHABLE PROGRAM DROPDOWN */
+
+#ignUniversityEnquiryPopup .ign-enquiry-program-dropdown {
+    --ign-program-orange: #eb933a;
+    --ign-program-navy: #0a2540;
+    --ign-program-border: #e2e8f0;
+    position: relative;
+    z-index: 35;
+    width: 100%;
+    font-family: inherit;
+}
+
+/* DROPDOWN TRIGGER */
+
+#ignUniversityEnquiryPopup .ign-enquiry-program-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    height: 53px;
+    min-height: 53px;
+    margin: 0;
+    padding: 0 16px;
+    border: 1px solid var(--ign-program-border);
+    border-radius: 9px;
+    background: #f7f9fc;
+    color: #64748b;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+    transition: all 0.25s ease;
+}
+
+#ignUniversityEnquiryPopup .ign-enquiry-program-trigger:hover,
+#ignUniversityEnquiryPopup .ign-enquiry-program-dropdown.ign-enquiry-program-active .ign-enquiry-program-trigger {
+    border-color: var(--ign-program-orange);
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(235, 147, 58, 0.10);
+}
+
+/* SELECTED PROGRAM */
+
+#ignUniversityEnquiryPopup .ign-enquiry-program-selected {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #64748b;
+}
+
+#ignUniversityEnquiryPopup .ign-enquiry-program-selected.ign-enquiry-program-has-value {
+    color: var(--ign-program-navy);
+    font-weight: 500;
+}
+
+/* DROPDOWN CHEVRON */
+
+#ignUniversityEnquiryPopup .ign-enquiry-program-trigger i {
+    flex-shrink: 0;
+    color: var(--ign-program-navy);
+    font-size: 13px;
+    transition: transform 0.25s ease;
+}
+
+#ignUniversityEnquiryPopup .ign-enquiry-program-dropdown.ign-enquiry-program-active .ign-enquiry-program-trigger i {
+    transform: rotate(180deg);
+}
+
+/* DROPDOWN MENU */
+
+#ignUniversityEnquiryPopup .ign-enquiry-program-menu {
+    position: absolute;
+    top: calc(100% + 7px);
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    display: none;
+    width: 100%;
+    padding: 11px;
+    background: #ffffff;
+    border: 1px solid #e8edf3;
+    border-radius: 11px;
+    box-shadow: 0 14px 35px rgba(10, 37, 64, 0.14), 0 3px 8px rgba(10, 37, 64, 0.04);
+}
+
+#ignUniversityEnquiryPopup .ign-enquiry-program-dropdown.ign-enquiry-program-active .ign-enquiry-program-menu {
+    display: block;
+    animation: ignEnquiryProgramMenuShow 0.2s ease both;
+}
+
+@keyframes ignEnquiryProgramMenuShow {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* DROPDOWN SEARCH */
+
+#ignUniversityEnquiryPopup .ign-enquiry-program-search {
+    display: block;
+    width: 100%;
+    height: 42px;
+    min-height: 42px;
+    margin: 0 0 9px;
+    padding: 0 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 7px;
+    background: #ffffff;
+    color: var(--ign-enquiry-navy);
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 400;
+    outline: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+#ignUniversityEnquiryPopup .ign-enquiry-program-search::placeholder {
+    color: #94a3b8;
+    opacity: 1;
+}
+
+#ignUniversityEnquiryPopup .ign-enquiry-program-search:focus {
+    border-color: var(--ign-enquiry-orange);
+    box-shadow: 0 0 0 2px rgba(235, 147, 58, 0.10);
+}
+
+/* DROPDOWN OPTIONS */
+
+#ignUniversityEnquiryPopup .ign-enquiry-program-options {
+    width: 100%;
+    max-height: 210px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+#ignUniversityEnquiryPopup .ign-enquiry-program-options::-webkit-scrollbar {
+    display: none;
+}
+
+#ignUniversityEnquiryPopup .ign-enquiry-program-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    min-height: 42px;
+    margin: 0 0 3px;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 7px;
+    background: transparent;
+    color: #475569;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.45;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#ignUniversityEnquiryPopup .ign-enquiry-program-option:hover,
+#ignUniversityEnquiryPopup .ign-enquiry-program-option.ign-enquiry-program-option-selected {
+    background: #fff4e8;
+    color: #b96c1c;
+}
+
+#ignUniversityEnquiryPopup .ign-enquiry-program-option.ign-enquiry-program-option-selected {
+    font-weight: 600;
+}
+
+#ignUniversityEnquiryPopup .ign-enquiry-program-option.ign-enquiry-program-option-selected::after {
+    content: "✓";
+    flex-shrink: 0;
+    margin-left: 10px;
+    color: var(--ign-enquiry-orange);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* DROPDOWN EMPTY STATES */
+
+#ignUniversityEnquiryPopup .ign-enquiry-program-empty,
+#ignUniversityEnquiryPopup .ign-enquiry-program-no-results {
+    padding: 15px 10px;
+    color: #94a3b8;
+    font-size: 13px;
+    text-align: center;
+}
+
+/* PROGRAM VALIDATION */
+
+#ignUniversityEnquiryPopup .ign-enquiry-program-error {
+    margin: 6px 0 0;
+    padding-left: 2px;
+    color: #dc3545;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+#ignUniversityEnquiryPopup .ign-enquiry-program-dropdown.ign-enquiry-program-invalid .ign-enquiry-program-trigger {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.08);
+}
+
+/* SUBMIT BUTTON */
+
+#ignUniversityEnquiryPopup .ign-enquiry-popup-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 55px;
+    margin: 25px 0 0;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #f09b43, #eb8d2e);
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.35px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(235, 147, 58, 0.20);
+    transition: all 0.3s ease;
+}
+
+#ignUniversityEnquiryPopup .ign-enquiry-popup-submit:hover {
+    background: linear-gradient(135deg, #e98c2d, #d7791f);
+    box-shadow: 0 9px 22px rgba(215, 121, 31, 0.28);
+    transform: translateY(-2px);
+}
+
+#ignUniversityEnquiryPopup .ign-enquiry-popup-submit:active {
+    transform: translateY(0);
+}
+
+#ignUniversityEnquiryPopup .ign-enquiry-popup-submit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* PRIVACY NOTE */
+
+#ignUniversityEnquiryPopup .ign-enquiry-popup-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin: 17px 0 0;
+    color: #718096;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+}
+
+#ignUniversityEnquiryPopup .ign-enquiry-popup-note i {
+    color: #6b987d;
+    font-size: 13px;
+}
+
+/* PREMIUM SUCCESS SCREEN */
+
+#ignUniversityEnquiryPopup .ign-enquiry-popup-success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 340px;
+    padding: 42px 25px 35px;
+    text-align: center;
+    animation: ignEnquirySuccessFade 0.55s ease both;
+}
+
+#ignUniversityEnquiryPopup .ign-enquiry-popup-success-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 82px;
+    height: 82px;
+    margin: 0 auto 23px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #e8f8ef, #d4f3e1);
+    color: #198754;
+    font-size: 39px;
+    box-shadow: 0 0 0 9px rgba(25, 135, 84, 0.06), 0 10px 25px rgba(25, 135, 84, 0.10);
+    animation: ignEnquirySuccessPulse 2s ease-in-out infinite;
+}
+
+#ignUniversityEnquiryPopup .ign-enquiry-popup-success-icon i {
+    line-height: 1;
+}
+
+#ignUniversityEnquiryPopup .ign-enquiry-popup-success h3 {
+    margin: 0 0 12px;
+    color: var(--ign-enquiry-navy);
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+}
+
+#ignUniversityEnquiryPopup .ign-enquiry-popup-success p {
+    max-width: 340px;
+    margin: 0 auto 20px;
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+#ignUniversityEnquiryPopup .ign-enquiry-popup-success span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 2px;
+    padding: 10px 17px;
+    border: 1px solid #d9f0e2;
+    border-radius: 30px;
+    background: #f0faf4;
+    color: #198754;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+#ignUniversityEnquiryPopup .ign-enquiry-popup-success span::before {
+    content: "\f26a";
+    font-family: "bootstrap-icons";
+    font-size: 14px;
+}
+
+@keyframes ignEnquirySuccessFade {
+    from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes ignEnquirySuccessPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 9px rgba(25, 135, 84, 0.06), 0 10px 25px rgba(25, 135, 84, 0.10);
+    }
+
+    50% {
+        box-shadow: 0 0 0 14px rgba(25, 135, 84, 0.025), 0 12px 30px rgba(25, 135, 84, 0.14);
+    }
+}
+
+/* BODY SCROLL LOCK */
+
+body.ign-enquiry-popup-open {
+    overflow: hidden;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 575px) {
+    #ignUniversityEnquiryPopup {
+        padding: 14px;
+    }
+
+    #ignUniversityEnquiryPopup .ign-enquiry-popup {
+        max-width: 100%;
+        padding: 32px 21px 25px;
+        border-radius: 15px;
+    }
+
+    #ignUniversityEnquiryPopup .ign-enquiry-popup-header {
+        margin-bottom: 23px;
+        padding: 0 5px;
+    }
+
+    #ignUniversityEnquiryPopup .ign-enquiry-popup-header h3 {
+        font-size: 22px;
+    }
+
+    #ignUniversityEnquiryPopup .ign-enquiry-popup-header p {
+        font-size: 13px;
+    }
+
+    #ignUniversityEnquiryPopup .ign-enquiry-popup-field>input {
+        height: 50px;
+        font-size: 14px;
+    }
+
+    #ignUniversityEnquiryPopup .ign-enquiry-program-trigger {
+        height: 51px;
+        min-height: 51px;
+        padding: 0 13px;
+        font-size: 13px;
+    }
+
+    #ignUniversityEnquiryPopup .ign-enquiry-program-menu {
+        padding: 10px;
+    }
+
+    #ignUniversityEnquiryPopup .ign-enquiry-program-options {
+        max-height: 180px;
+    }
+
+    #ignUniversityEnquiryPopup .ign-enquiry-program-option {
+        min-height: 41px;
+        font-size: 13px;
+    }
+
+    #ignUniversityEnquiryPopup .ign-enquiry-popup-submit {
+        min-height: 53px;
+        margin-top: 21px;
+    }
+
+    #ignUniversityEnquiryPopup .ign-enquiry-popup-success {
+        min-height: 310px;
+        padding: 35px 16px 28px;
+    }
+
+    #ignUniversityEnquiryPopup .ign-enquiry-popup-success-icon {
+        width: 72px;
+        height: 72px;
+        margin-bottom: 21px;
+        font-size: 34px;
+    }
+
+    #ignUniversityEnquiryPopup .ign-enquiry-popup-success h3 {
+        font-size: 24px;
+    }
+
+    #ignUniversityEnquiryPopup .ign-enquiry-popup-success p {
+        font-size: 13px;
+    }
+
+    #ignUniversityEnquiryPopup .ign-enquiry-popup-success span {
+        padding: 9px 14px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 360px) {
+    #ignUniversityEnquiryPopup .ign-enquiry-popup {
+        padding: 29px 17px 22px;
+    }
+
+    #ignUniversityEnquiryPopup .ign-enquiry-popup-header h3 {
+        font-size: 20px;
+    }
+}
+
+/* HIDDEN ELEMENTS */
+
+#ignUniversityEnquiryPopup .ign-enquiry-popup-success[hidden],
+#ignUniversityEnquiryPopup .ign-enquiry-program-error[hidden],
+#ignUniversityEnquiryPopup .ign-enquiry-program-no-results[hidden],
+#ignUniversityEnquiryPopup .ign-enquiry-program-empty[hidden],
+#ignUniversityEnquiryPopup .ign-enquiry-program-option[hidden] {
+    display: none !important;
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+    #ignUniversityEnquiryPopup .ign-enquiry-popup,
+    #ignUniversityEnquiryPopup .ign-enquiry-popup-close,
+    #ignUniversityEnquiryPopup .ign-enquiry-popup-submit,
+    #ignUniversityEnquiryPopup .ign-enquiry-program-trigger,
+    #ignUniversityEnquiryPopup .ign-enquiry-program-option,
+    #ignUniversityEnquiryPopup .ign-enquiry-popup-success,
+    #ignUniversityEnquiryPopup .ign-enquiry-popup-success-icon {
+        animation: none;
+        transition: none;
+    }
+}
