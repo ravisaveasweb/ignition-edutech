@@ -15245,7 +15245,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '526',
-                'previous_rank' => '631-640',
+                'previous_rank' => '634',
                 'institution_name' => 'Boston College',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -15535,7 +15535,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '535',
-                'previous_rank' => '701-710',
+                'previous_rank' => '706',
                 'institution_name' => 'Lebanese American University',
                 'country' => 'Lebanon',
                 'region' => 'Asia',
@@ -15564,7 +15564,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '535',
-                'previous_rank' => '681-690',
+                'previous_rank' => '689',
                 'institution_name' => 'Prince Sultan University',
                 'country' => 'Saudi Arabia',
                 'region' => 'Asia',
@@ -15999,7 +15999,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '551',
-                'previous_rank' => '641-650',
+                'previous_rank' => '649',
                 'institution_name' => 'Universiti Tenaga Nasional (UNITEN)',
                 'country' => 'Malaysia',
                 'region' => 'Asia',
@@ -16318,7 +16318,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '563',
-                'previous_rank' => '631-640',
+                'previous_rank' => '634',
                 'institution_name' => 'Ajou University',
                 'country' => 'Republic of Korea',
                 'region' => 'Asia',
@@ -16463,7 +16463,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '566',
-                'previous_rank' => '621-630',
+                'previous_rank' => '629',
                 'institution_name' => 'Renmin (People’s) University of China',
                 'country' => 'China (Mainland)',
                 'region' => 'Asia',
@@ -16492,7 +16492,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '566',
-                'previous_rank' => '631-640',
+                'previous_rank' => '634',
                 'institution_name' => 'Savitribai Phule Pune University',
                 'country' => 'India',
                 'region' => 'Asia',
@@ -16579,7 +16579,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '571',
-                'previous_rank' => '641-650',
+                'previous_rank' => '649',
                 'institution_name' => 'Hacettepe University',
                 'country' => 'Türkiye',
                 'region' => 'Asia',
@@ -16927,7 +16927,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '584',
-                'previous_rank' => '621-630',
+                'previous_rank' => '629',
                 'institution_name' => 'Charles Darwin University',
                 'country' => 'Australia',
                 'region' => 'Oceania',
@@ -17014,7 +17014,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '587',
-                'previous_rank' => '711-720',
+                'previous_rank' => '721',
                 'institution_name' => 'American University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -17043,7 +17043,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '587',
-                'previous_rank' => '641-650',
+                'previous_rank' => '649',
                 'institution_name' => 'National Central University',
                 'country' => 'Taiwan',
                 'region' => 'Asia',
@@ -17246,7 +17246,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '595',
-                'previous_rank' => '671-680',
+                'previous_rank' => '670',
                 'institution_name' => 'Universidade Federal de Minas Gerais',
                 'country' => 'Brazil',
                 'region' => 'Americas',
@@ -17275,7 +17275,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '595',
-                'previous_rank' => '621-630',
+                'previous_rank' => '629',
                 'institution_name' => 'Zayed University',
                 'country' => 'United Arab Emirates',
                 'region' => 'Asia',
@@ -17420,7 +17420,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '597',
-                'previous_rank' => '631-640',
+                'previous_rank' => '634',
                 'institution_name' => 'Tulane University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -17855,7 +17855,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '613',
-                'previous_rank' => '631-640',
+                'previous_rank' => '634',
                 'institution_name' => 'Universidad de Concepción',
                 'country' => 'Chile',
                 'region' => 'Americas',
@@ -17942,7 +17942,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '618',
-                'previous_rank' => '701-710',
+                'previous_rank' => '706',
                 'institution_name' => 'Dongguk University',
                 'country' => 'Republic of Korea',
                 'region' => 'Asia',
@@ -17971,7 +17971,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '618',
-                'previous_rank' => '711-720',
+                'previous_rank' => '721',
                 'institution_name' => 'Saint Joseph University of Beirut (USJ)',
                 'country' => 'Lebanon',
                 'region' => 'Asia',
@@ -18058,7 +18058,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '622',
-                'previous_rank' => '681-690',
+                'previous_rank' => '689',
                 'institution_name' => 'University of New Brunswick',
                 'country' => 'Canada',
                 'region' => 'Americas',
@@ -18087,7 +18087,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '624',
-                'previous_rank' => '721-730',
+                'previous_rank' => '722',
                 'institution_name' => 'Diponegoro University',
                 'country' => 'Indonesia',
                 'region' => 'Asia',
@@ -18116,7 +18116,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '624',
-                'previous_rank' => '641-650',
+                'previous_rank' => '649',
                 'institution_name' => 'Oregon State University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -18145,7 +18145,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '624',
-                'previous_rank' => '641-650',
+                'previous_rank' => '649',
                 'institution_name' => 'Universidad del Pais Vasco',
                 'country' => 'Spain',
                 'region' => 'Europe',
@@ -18203,7 +18203,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '628',
-                'previous_rank' => '621-630',
+                'previous_rank' => '629',
                 'institution_name' => 'Istanbul University',
                 'country' => 'Türkiye',
                 'region' => 'Asia',
@@ -18232,7 +18232,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '628',
-                'previous_rank' => '671-680',
+                'previous_rank' => '670',
                 'institution_name' => 'Kazakh National Pedagogical University Abai',
                 'country' => 'Kazakhstan',
                 'region' => 'Asia',
@@ -18406,7 +18406,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '635',
-                'previous_rank' => '621-630',
+                'previous_rank' => '629',
                 'institution_name' => 'Tallinn University of Technology',
                 'country' => 'Estonia',
                 'region' => 'Europe',
@@ -18464,7 +18464,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '635',
-                'previous_rank' => '631-640',
+                'previous_rank' => '634',
                 'institution_name' => 'University of Portsmouth',
                 'country' => 'United Kingdom',
                 'region' => 'Europe',
@@ -18638,7 +18638,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '643',
-                'previous_rank' => '621-630',
+                'previous_rank' => '629',
                 'institution_name' => 'Abo Akademi University',
                 'country' => 'Finland',
                 'region' => 'Europe',
@@ -18667,7 +18667,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '643',
-                'previous_rank' => '631-640',
+                'previous_rank' => '634',
                 'institution_name' => 'Inha University',
                 'country' => 'Republic of Korea',
                 'region' => 'Asia',
@@ -18783,7 +18783,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '648',
-                'previous_rank' => '761-770',
+                'previous_rank' => '759',
                 'institution_name' => 'King Faisal University',
                 'country' => 'Saudi Arabia',
                 'region' => 'Asia',
@@ -18812,7 +18812,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '648',
-                'previous_rank' => '621-630',
+                'previous_rank' => '629',
                 'institution_name' => 'University of Tromso, The Arctic University of Norway',
                 'country' => 'Norway',
                 'region' => 'Europe',
@@ -18957,7 +18957,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '654',
-                'previous_rank' => '681-690',
+                'previous_rank' => '689',
                 'institution_name' => 'China University of Mining and Technology',
                 'country' => 'China (Mainland)',
                 'region' => 'Asia',
@@ -18986,7 +18986,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '654',
-                'previous_rank' => '641-650',
+                'previous_rank' => '649',
                 'institution_name' => 'De La Salle University',
                 'country' => 'Philippines',
                 'region' => 'Asia',
@@ -19015,7 +19015,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '654',
-                'previous_rank' => '721-730',
+                'previous_rank' => '722',
                 'institution_name' => 'Konkuk University',
                 'country' => 'Republic of Korea',
                 'region' => 'Asia',
@@ -19044,7 +19044,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '654',
-                'previous_rank' => '721-730',
+                'previous_rank' => '722',
                 'institution_name' => 'Université de Lille',
                 'country' => 'France',
                 'region' => 'Europe',
@@ -19073,7 +19073,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '654',
-                'previous_rank' => '681-690',
+                'previous_rank' => '689',
                 'institution_name' => 'University of Agriculture, Faisalabad',
                 'country' => 'Pakistan',
                 'region' => 'Asia',
@@ -19102,7 +19102,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '654',
-                'previous_rank' => '621-630',
+                'previous_rank' => '629',
                 'institution_name' => 'University of South Florida',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -19131,7 +19131,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '660',
-                'previous_rank' => '671-680',
+                'previous_rank' => '670',
                 'institution_name' => 'Bar-Ilan University',
                 'country' => 'Israel',
                 'region' => 'Asia',
@@ -19247,7 +19247,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '664',
-                'previous_rank' => '711-720',
+                'previous_rank' => '721',
                 'institution_name' => 'COMSATS University Islamabad',
                 'country' => 'Pakistan',
                 'region' => 'Asia',
@@ -19276,7 +19276,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '664',
-                'previous_rank' => '681-690',
+                'previous_rank' => '689',
                 'institution_name' => 'Indian Institute of Technology Hyderabad (IITH)',
                 'country' => 'India',
                 'region' => 'Asia',
@@ -19305,7 +19305,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '664',
-                'previous_rank' => '711-720',
+                'previous_rank' => '721',
                 'institution_name' => 'University of Mumbai',
                 'country' => 'India',
                 'region' => 'Asia',
@@ -19334,7 +19334,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '664',
-                'previous_rank' => '701-710',
+                'previous_rank' => '706',
                 'institution_name' => 'University of Oklahoma',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -19363,7 +19363,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '668',
-                'previous_rank' => '801-850',
+                'previous_rank' => '843',
                 'institution_name' => 'Birla Institute of Technology and Science',
                 'country' => 'India',
                 'region' => 'Asia',
@@ -19392,7 +19392,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '668',
-                'previous_rank' => '631-640',
+                'previous_rank' => '634',
                 'institution_name' => 'Chang Gung University',
                 'country' => 'Taiwan',
                 'region' => 'Asia',
@@ -19421,7 +19421,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '668',
-                'previous_rank' => '671-680',
+                'previous_rank' => '670',
                 'institution_name' => 'Karl-Franzens-Universität Graz',
                 'country' => 'Austria',
                 'region' => 'Europe',
@@ -19450,7 +19450,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '668',
-                'previous_rank' => '641-650',
+                'previous_rank' => '649',
                 'institution_name' => 'Lehigh University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -19508,7 +19508,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '673',
-                'previous_rank' => '641-650',
+                'previous_rank' => '649',
                 'institution_name' => 'East China University of Science and Technology',
                 'country' => 'China (Mainland)',
                 'region' => 'Asia',
@@ -19537,7 +19537,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '673',
-                'previous_rank' => '701-710',
+                'previous_rank' => '706',
                 'institution_name' => 'Stevens Institute of Technology',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -19566,7 +19566,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '673',
-                'previous_rank' => '801-850',
+                'previous_rank' => '843',
                 'institution_name' => 'Technische Universität Dortmund',
                 'country' => 'Germany',
                 'region' => 'Europe',
@@ -19595,7 +19595,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '676',
-                'previous_rank' => '641-650',
+                'previous_rank' => '649',
                 'institution_name' => 'Beirut Arab University',
                 'country' => 'Lebanon',
                 'region' => 'Asia',
@@ -19624,7 +19624,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '676',
-                'previous_rank' => '721-730',
+                'previous_rank' => '722',
                 'institution_name' => 'Jadavpur University',
                 'country' => 'India',
                 'region' => 'Asia',
@@ -19653,7 +19653,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '678',
-                'previous_rank' => '621-630',
+                'previous_rank' => '629',
                 'institution_name' => 'American University in Dubai',
                 'country' => 'United Arab Emirates',
                 'region' => 'Asia',
@@ -19682,7 +19682,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '678',
-                'previous_rank' => '671-680',
+                'previous_rank' => '670',
                 'institution_name' => 'University of Haifa',
                 'country' => 'Israel',
                 'region' => 'Asia',
@@ -19740,7 +19740,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '680',
-                'previous_rank' => '761-770',
+                'previous_rank' => '759',
                 'institution_name' => 'Nanjing University of Aeronautics and Astronautics',
                 'country' => 'China (Mainland)',
                 'region' => 'Asia',
@@ -19769,7 +19769,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '680',
-                'previous_rank' => '641-650',
+                'previous_rank' => '649',
                 'institution_name' => 'Ritsumeikan University',
                 'country' => 'Japan',
                 'region' => 'Asia',
@@ -19798,7 +19798,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '680',
-                'previous_rank' => '801-850',
+                'previous_rank' => '843',
                 'institution_name' => 'University of Brawijaya',
                 'country' => 'Indonesia',
                 'region' => 'Asia',
@@ -19856,7 +19856,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '684',
-                'previous_rank' => '711-720',
+                'previous_rank' => '721',
                 'institution_name' => 'Ton Duc Thang University',
                 'country' => 'Viet Nam',
                 'region' => 'Asia',
@@ -19885,7 +19885,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '686',
-                'previous_rank' => '631-640',
+                'previous_rank' => '634',
                 'institution_name' => 'China University of Petroleum',
                 'country' => 'China (Mainland)',
                 'region' => 'Asia',
@@ -19943,7 +19943,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '688',
-                'previous_rank' => '951-1000',
+                'previous_rank' => '960',
                 'institution_name' => 'Baku State University',
                 'country' => 'Azerbaijan',
                 'region' => 'Asia',
@@ -20175,7 +20175,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '696',
-                'previous_rank' => '641-650',
+                'previous_rank' => '649',
                 'institution_name' => 'Symbiosis International (Deemed University)',
                 'country' => 'India',
                 'region' => 'Asia',
@@ -20204,7 +20204,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '697',
-                'previous_rank' => '801-850',
+                'previous_rank' => '843',
                 'institution_name' => 'Ankara Üniversitesi',
                 'country' => 'Türkiye',
                 'region' => 'Asia',
@@ -20233,7 +20233,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '697',
-                'previous_rank' => '701-710',
+                'previous_rank' => '706',
                 'institution_name' => 'Beijing University of Chemical Technology',
                 'country' => 'China (Mainland)',
                 'region' => 'Asia',
@@ -20262,7 +20262,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '697',
-                'previous_rank' => '671-680',
+                'previous_rank' => '670',
                 'institution_name' => 'Kazakh National Agrarian University',
                 'country' => 'Kazakhstan',
                 'region' => 'Asia',
@@ -20320,7 +20320,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '697',
-                'previous_rank' => '621-630',
+                'previous_rank' => '629',
                 'institution_name' => 'Universidad de Alcalá',
                 'country' => 'Spain',
                 'region' => 'Europe',
@@ -20378,7 +20378,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '697',
-                'previous_rank' => '641-650',
+                'previous_rank' => '649',
                 'institution_name' => 'University of Missouri, Columbia',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -20406,8 +20406,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => '25.1'
         ],
             [
-                'rank_2026' => '701-710',
-                'previous_rank' => '681-690',
+                'rank_2026' => '706',
+                'previous_rank' => '689',
                 'institution_name' => 'Jeonbuk National University (formerly known as Chonbuk National University)',
                 'country' => 'Republic of Korea',
                 'region' => 'Asia',
@@ -20435,8 +20435,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '701-710',
-                'previous_rank' => '781-790',
+                'rank_2026' => '706',
+                'previous_rank' => '785',
                 'institution_name' => 'Kasetsart University',
                 'country' => 'Thailand',
                 'region' => 'Asia',
@@ -20464,8 +20464,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '701-710',
-                'previous_rank' => '711-720',
+                'rank_2026' => '706',
+                'previous_rank' => '721',
                 'institution_name' => 'Lingnan University, Hong Kong',
                 'country' => 'Hong Kong SAR, China',
                 'region' => 'Asia',
@@ -20493,7 +20493,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '701-710',
+                'rank_2026' => '706',
                 'previous_rank' => '565',
                 'institution_name' => 'Nanjing University of Science and Technology',
                 'country' => 'China (Mainland)',
@@ -20522,7 +20522,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '701-710',
+                'rank_2026' => '706',
                 'previous_rank' => '691-700',
                 'institution_name' => 'Shiraz University',
                 'country' => 'Iran (Islamic Republic of)',
@@ -20551,7 +20551,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '701-710',
+                'rank_2026' => '706',
                 'previous_rank' => '691-700',
                 'institution_name' => 'Universidad Panamericana (UP)',
                 'country' => 'Mexico',
@@ -20580,7 +20580,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '701-710',
+                'rank_2026' => '706',
                 'previous_rank' => '741-750',
                 'institution_name' => 'University of Central Florida',
                 'country' => 'United States of America',
@@ -20609,7 +20609,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '701-710',
+                'rank_2026' => '706',
                 'previous_rank' => '651-660',
                 'institution_name' => 'University of Zagreb',
                 'country' => 'Croatia',
@@ -20638,8 +20638,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '711-720',
-                'previous_rank' => '801-850',
+                'rank_2026' => '721',
+                'previous_rank' => '843',
                 'institution_name' => 'Asia University Taiwan',
                 'country' => 'Taiwan',
                 'region' => 'Asia',
@@ -20667,8 +20667,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '711-720',
-                'previous_rank' => '721-730',
+                'rank_2026' => '721',
+                'previous_rank' => '722',
                 'institution_name' => 'Budapest University of Technology and Economics',
                 'country' => 'Hungary',
                 'region' => 'Europe',
@@ -20696,8 +20696,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '711-720',
-                'previous_rank' => '721-730',
+                'rank_2026' => '721',
+                'previous_rank' => '722',
                 'institution_name' => 'Drexel University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -20725,8 +20725,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '711-720',
-                'previous_rank' => '681-690',
+                'rank_2026' => '721',
+                'previous_rank' => '689',
                 'institution_name' => 'Goldsmiths, University of London',
                 'country' => 'United Kingdom',
                 'region' => 'Europe',
@@ -20754,7 +20754,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '711-720',
+                'rank_2026' => '721',
                 'previous_rank' => '661-670',
                 'institution_name' => 'ISCTE - Instituto Universitario de Lisboa',
                 'country' => 'Portugal',
@@ -20783,7 +20783,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '711-720',
+                'rank_2026' => '721',
                 'previous_rank' => '595',
                 'institution_name' => 'ITMO University',
                 'country' => 'Russian Federation',
@@ -20812,7 +20812,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '711-720',
+                'rank_2026' => '721',
                 'previous_rank' => '751-760',
                 'institution_name' => 'Technische Universität Braunschweig',
                 'country' => 'Germany',
@@ -20841,8 +20841,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '711-720',
-                'previous_rank' => '801-850',
+                'rank_2026' => '721',
+                'previous_rank' => '843',
                 'institution_name' => 'Toronto Metropolitan University (formerly Ryerson University)',
                 'country' => 'Canada',
                 'region' => 'Americas',
@@ -20870,7 +20870,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '711-720',
+                'rank_2026' => '721',
                 'previous_rank' => '601-610',
                 'institution_name' => 'Universität Hohenheim',
                 'country' => 'Germany',
@@ -20899,8 +20899,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '711-720',
-                'previous_rank' => '721-730',
+                'rank_2026' => '721',
+                'previous_rank' => '722',
                 'institution_name' => 'Université de Rennes 1',
                 'country' => 'France',
                 'region' => 'Europe',
@@ -20928,8 +20928,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '711-720',
-                'previous_rank' => '701-710',
+                'rank_2026' => '721',
+                'previous_rank' => '706',
                 'institution_name' => 'University of Nebraska - Lincoln',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -20957,8 +20957,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '721-730',
-                'previous_rank' => '711-720',
+                'rank_2026' => '722',
+                'previous_rank' => '721',
                 'institution_name' => 'National University of Science and Technology MISiS',
                 'country' => 'Russian Federation',
                 'region' => 'Europe',
@@ -20986,8 +20986,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '721-730',
-                'previous_rank' => '781-790',
+                'rank_2026' => '722',
+                'previous_rank' => '785',
                 'institution_name' => 'National University of Uzbekistan',
                 'country' => 'Uzbekistan',
                 'region' => 'Asia',
@@ -21015,7 +21015,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '721-730',
+                'rank_2026' => '722',
                 'previous_rank' => '691-700',
                 'institution_name' => 'Pakistan Institute of Engineering and Applied Sciences (PIEAS)',
                 'country' => 'Pakistan',
@@ -21044,7 +21044,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '721-730',
+                'rank_2026' => '722',
                 'previous_rank' => null,
                 'institution_name' => 'Prince Sattam Bin Abdulaziz University',
                 'country' => 'Saudi Arabia',
@@ -21073,8 +21073,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '721-730',
-                'previous_rank' => '701-710',
+                'rank_2026' => '722',
+                'previous_rank' => '706',
                 'institution_name' => 'Taras Shevchenko National University of Kyiv',
                 'country' => 'Ukraine',
                 'region' => 'Europe',
@@ -21102,8 +21102,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '721-730',
-                'previous_rank' => '681-690',
+                'rank_2026' => '722',
+                'previous_rank' => '689',
                 'institution_name' => 'Temple University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -21131,8 +21131,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '721-730',
-                'previous_rank' => '761-770',
+                'rank_2026' => '722',
+                'previous_rank' => '759',
                 'institution_name' => 'University of Cincinnati',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -21160,8 +21160,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '721-730',
-                'previous_rank' => '761-770',
+                'rank_2026' => '722',
+                'previous_rank' => '759',
                 'institution_name' => 'University of Patras',
                 'country' => 'Greece',
                 'region' => 'Europe',
@@ -21189,7 +21189,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '721-730',
+                'rank_2026' => '722',
                 'previous_rank' => '741-750',
                 'institution_name' => 'UWE Bristol (University of the West of England)',
                 'country' => 'United Kingdom',
@@ -21219,7 +21219,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '731-740',
-                'previous_rank' => '621-630',
+                'previous_rank' => '629',
                 'institution_name' => 'Auezov South Kazakhstan State University (SKSU)',
                 'country' => 'Kazakhstan',
                 'region' => 'Asia',
@@ -21248,7 +21248,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '731-740',
-                'previous_rank' => '631-640',
+                'previous_rank' => '634',
                 'institution_name' => 'Far Eastern Federal University',
                 'country' => 'Russian Federation',
                 'region' => 'Europe',
@@ -21277,7 +21277,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '731-740',
-                'previous_rank' => '701-710',
+                'previous_rank' => '706',
                 'institution_name' => 'National Institute of Technology Tiruchirappalli',
                 'country' => 'India',
                 'region' => 'Asia',
@@ -21306,7 +21306,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '731-740',
-                'previous_rank' => '681-690',
+                'previous_rank' => '689',
                 'institution_name' => 'Princess Nourah bint Abdulrahman University',
                 'country' => 'Saudi Arabia',
                 'region' => 'Asia',
@@ -21393,7 +21393,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '731-740',
-                'previous_rank' => '781-790',
+                'previous_rank' => '785',
                 'institution_name' => 'Texas Tech University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -21480,7 +21480,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '731-740',
-                'previous_rank' => '851-900',
+                'previous_rank' => '867',
                 'institution_name' => 'Yildiz Technical University',
                 'country' => 'Türkiye',
                 'region' => 'Asia',
@@ -21538,7 +21538,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '741-750',
-                'previous_rank' => '761-770',
+                'previous_rank' => '759',
                 'institution_name' => 'Adam Mickiewicz University',
                 'country' => 'Poland',
                 'region' => 'Europe',
@@ -21567,7 +21567,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '741-750',
-                'previous_rank' => '721-730',
+                'previous_rank' => '722',
                 'institution_name' => 'Brandeis University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -21625,7 +21625,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '741-750',
-                'previous_rank' => '711-720',
+                'previous_rank' => '721',
                 'institution_name' => 'Plekhanov Russian University of Economics',
                 'country' => 'Russian Federation',
                 'region' => 'Europe',
@@ -21654,7 +21654,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '741-750',
-                'previous_rank' => '851-900',
+                'previous_rank' => '867',
                 'institution_name' => 'Shahid Beheshti University (SBU)',
                 'country' => 'Iran (Islamic Republic of)',
                 'region' => 'Asia',
@@ -21683,7 +21683,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '741-750',
-                'previous_rank' => '801-850',
+                'previous_rank' => '843',
                 'institution_name' => 'Syracuse University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -21712,7 +21712,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '741-750',
-                'previous_rank' => '801-850',
+                'previous_rank' => '843',
                 'institution_name' => 'The Catholic University of Korea',
                 'country' => 'Republic of Korea',
                 'region' => 'Asia',
@@ -21741,7 +21741,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '741-750',
-                'previous_rank' => '801-850',
+                'previous_rank' => '843',
                 'institution_name' => 'University of Baghdad',
                 'country' => 'Iraq',
                 'region' => 'Asia',
@@ -21918,7 +21918,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '751-760',
-                'previous_rank' => '671-680',
+                'previous_rank' => '670',
                 'institution_name' => 'Martin-Luther-Universität Halle-Wittenberg',
                 'country' => 'Germany',
                 'region' => 'Europe',
@@ -21947,7 +21947,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '751-760',
-                'previous_rank' => '801-850',
+                'previous_rank' => '843',
                 'institution_name' => 'Université de Lorraine',
                 'country' => 'France',
                 'region' => 'Europe',
@@ -22005,7 +22005,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '751-760',
-                'previous_rank' => '801-850',
+                'previous_rank' => '843',
                 'institution_name' => 'University of Oregon',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -22034,7 +22034,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '751-760',
-                'previous_rank' => '721-730',
+                'previous_rank' => '722',
                 'institution_name' => 'University of Trieste',
                 'country' => 'Italy',
                 'region' => 'Europe',
@@ -22062,8 +22062,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '761-770',
-                'previous_rank' => '801-850',
+                'rank_2026' => '759',
+                'previous_rank' => '843',
                 'institution_name' => 'Al-Ahliyya Amman University',
                 'country' => 'Jordan',
                 'region' => 'Asia',
@@ -22091,8 +22091,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '761-770',
-                'previous_rank' => '781-790',
+                'rank_2026' => '759',
+                'previous_rank' => '785',
                 'institution_name' => 'Babes-Bolyai University',
                 'country' => 'Romania',
                 'region' => 'Europe',
@@ -22120,8 +22120,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '761-770',
-                'previous_rank' => '761-770',
+                'rank_2026' => '759',
+                'previous_rank' => '759',
                 'institution_name' => 'Bangladesh University of Engineering and Technology',
                 'country' => 'Bangladesh',
                 'region' => 'Asia',
@@ -22149,8 +22149,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '761-770',
-                'previous_rank' => '711-720',
+                'rank_2026' => '759',
+                'previous_rank' => '721',
                 'institution_name' => 'Czech University of Life Sciences in Prague',
                 'country' => 'Czechia',
                 'region' => 'Europe',
@@ -22178,7 +22178,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '761-770',
+                'rank_2026' => '759',
                 'previous_rank' => null,
                 'institution_name' => 'Government College University, Faisalabad',
                 'country' => 'Pakistan',
@@ -22207,8 +22207,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '761-770',
-                'previous_rank' => '851-900',
+                'rank_2026' => '759',
+                'previous_rank' => '867',
                 'institution_name' => 'Jamia Millia Islamia, New Delhi',
                 'country' => 'India',
                 'region' => 'Asia',
@@ -22236,8 +22236,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '761-770',
-                'previous_rank' => '801-850',
+                'rank_2026' => '759',
+                'previous_rank' => '843',
                 'institution_name' => 'Khoja Akhmet Yassawi International Kazakh-Turkish University',
                 'country' => 'Kazakhstan',
                 'region' => 'Asia',
@@ -22265,7 +22265,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '761-770',
+                'rank_2026' => '759',
                 'previous_rank' => '791-800',
                 'institution_name' => 'New Jersey Institute of Technology (NJIT)',
                 'country' => 'United States of America',
@@ -22294,8 +22294,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '761-770',
-                'previous_rank' => '721-730',
+                'rank_2026' => '759',
+                'previous_rank' => '722',
                 'institution_name' => 'Riga Technical University',
                 'country' => 'Latvia',
                 'region' => 'Europe',
@@ -22323,7 +22323,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '761-770',
+                'rank_2026' => '759',
                 'previous_rank' => '731-740',
                 'institution_name' => 'University of Belgrade',
                 'country' => 'Serbia',
@@ -22352,8 +22352,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '761-770',
-                'previous_rank' => '801-850',
+                'rank_2026' => '759',
+                'previous_rank' => '843',
                 'institution_name' => 'University of Bucharest',
                 'country' => 'Romania',
                 'region' => 'Europe',
@@ -22381,7 +22381,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '761-770',
+                'rank_2026' => '759',
                 'previous_rank' => null,
                 'institution_name' => 'University of Nizwa',
                 'country' => 'Oman',
@@ -22410,8 +22410,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '761-770',
-                'previous_rank' => '851-900',
+                'rank_2026' => '759',
+                'previous_rank' => '867',
                 'institution_name' => 'Vietnam National University, Hanoi',
                 'country' => 'Viet Nam',
                 'region' => 'Asia',
@@ -22469,7 +22469,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '771-780',
-                'previous_rank' => '801-850',
+                'previous_rank' => '843',
                 'institution_name' => 'Philipps-Universität Marburg',
                 'country' => 'Germany',
                 'region' => 'Europe',
@@ -22527,7 +22527,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '771-780',
-                'previous_rank' => '801-850',
+                'previous_rank' => '843',
                 'institution_name' => 'Rutgers University - Newark',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -22556,7 +22556,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '771-780',
-                'previous_rank' => '851-900',
+                'previous_rank' => '867',
                 'institution_name' => 'Thapar Institute of Engineering & Technology',
                 'country' => 'India',
                 'region' => 'Asia',
@@ -22585,7 +22585,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '771-780',
-                'previous_rank' => '621-630',
+                'previous_rank' => '629',
                 'institution_name' => 'Universidad de Palermo',
                 'country' => 'Argentina',
                 'region' => 'Americas',
@@ -22643,7 +22643,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '771-780',
-                'previous_rank' => '801-850',
+                'previous_rank' => '843',
                 'institution_name' => 'University of Maynooth',
                 'country' => 'Ireland',
                 'region' => 'Europe',
@@ -22671,8 +22671,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '781-790',
-                'previous_rank' => '801-850',
+                'rank_2026' => '785',
+                'previous_rank' => '843',
                 'institution_name' => 'Alexandria University',
                 'country' => 'Egypt',
                 'region' => 'Africa',
@@ -22700,7 +22700,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '781-790',
+                'rank_2026' => '785',
                 'previous_rank' => '741-750',
                 'institution_name' => 'Carleton University',
                 'country' => 'Canada',
@@ -22729,8 +22729,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '781-790',
-                'previous_rank' => '851-900',
+                'rank_2026' => '785',
+                'previous_rank' => '867',
                 'institution_name' => 'Georgia State University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -22758,7 +22758,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '781-790',
+                'rank_2026' => '785',
                 'previous_rank' => null,
                 'institution_name' => 'Hong Kong Metropolitan University',
                 'country' => 'Hong Kong SAR, China',
@@ -22787,8 +22787,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '781-790',
-                'previous_rank' => '801-850',
+                'rank_2026' => '785',
+                'previous_rank' => '843',
                 'institution_name' => 'Kuwait University',
                 'country' => 'Kuwait',
                 'region' => 'Asia',
@@ -22816,8 +22816,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '781-790',
-                'previous_rank' => '851-900',
+                'rank_2026' => '785',
+                'previous_rank' => '867',
                 'institution_name' => 'Technological University of Dublin',
                 'country' => 'Ireland',
                 'region' => 'Europe',
@@ -22845,8 +22845,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '781-790',
-                'previous_rank' => '801-850',
+                'rank_2026' => '785',
+                'previous_rank' => '843',
                 'institution_name' => 'Universidad de Alicante',
                 'country' => 'Spain',
                 'region' => 'Europe',
@@ -22874,7 +22874,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '781-790',
+                'rank_2026' => '785',
                 'previous_rank' => '791-800',
                 'institution_name' => 'Universidad de Antioquia',
                 'country' => 'Colombia',
@@ -22903,7 +22903,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '781-790',
+                'rank_2026' => '785',
                 'previous_rank' => '771-780',
                 'institution_name' => 'Universidad del Rosario',
                 'country' => 'Colombia',
@@ -22932,8 +22932,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '781-790',
-                'previous_rank' => '901-950',
+                'rank_2026' => '785',
+                'previous_rank' => '906',
                 'institution_name' => 'Universidade Católica Portuguesa, UCP',
                 'country' => 'Portugal',
                 'region' => 'Europe',
@@ -22961,7 +22961,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '781-790',
+                'rank_2026' => '785',
                 'previous_rank' => '791-800',
                 'institution_name' => 'University of Kentucky',
                 'country' => 'United States of America',
@@ -22990,8 +22990,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '781-790',
-                'previous_rank' => '781-790',
+                'rank_2026' => '785',
+                'previous_rank' => '785',
                 'institution_name' => 'University of Mons',
                 'country' => 'Belgium',
                 'region' => 'Europe',
@@ -23019,7 +23019,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '781-790',
+                'rank_2026' => '785',
                 'previous_rank' => '741-750',
                 'institution_name' => 'V.N. Karazin Kharkiv National University',
                 'country' => 'Ukraine',
@@ -23048,7 +23048,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '781-790',
+                'rank_2026' => '785',
                 'previous_rank' => '791-800',
                 'institution_name' => 'Wayne State University',
                 'country' => 'United States of America',
@@ -23078,7 +23078,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '791-800',
-                'previous_rank' => '851-900',
+                'previous_rank' => '867',
                 'institution_name' => 'Applied Science Private University - Jordan',
                 'country' => 'Jordan',
                 'region' => 'Asia',
@@ -23107,7 +23107,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '791-800',
-                'previous_rank' => '801-850',
+                'previous_rank' => '843',
                 'institution_name' => 'Beijing University of Technology',
                 'country' => 'China (Mainland)',
                 'region' => 'Asia',
@@ -23165,7 +23165,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '791-800',
-                'previous_rank' => '721-730',
+                'previous_rank' => '722',
                 'institution_name' => 'Lanzhou University',
                 'country' => 'China (Mainland)',
                 'region' => 'Asia',
@@ -23223,7 +23223,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '791-800',
-                'previous_rank' => '801-850',
+                'previous_rank' => '843',
                 'institution_name' => 'Pontificia Universidad Católica de Valparaíso',
                 'country' => 'Chile',
                 'region' => 'Americas',
@@ -23252,7 +23252,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '791-800',
-                'previous_rank' => '801-850',
+                'previous_rank' => '843',
                 'institution_name' => 'Universiti Tunku Abdul Rahman (UTAR)',
                 'country' => 'Malaysia',
                 'region' => 'Asia',
@@ -23309,8 +23309,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
-                'previous_rank' => '851-900',
+                'rank_2026' => '843',
+                'previous_rank' => '867',
                 'institution_name' => 'AGH University of Krakow',
                 'country' => 'Poland',
                 'region' => 'Europe',
@@ -23338,8 +23338,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
-                'previous_rank' => '711-720',
+                'rank_2026' => '843',
+                'previous_rank' => '721',
                 'institution_name' => 'Ahlia University',
                 'country' => 'Bahrain',
                 'region' => 'Asia',
@@ -23367,7 +23367,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
+                'rank_2026' => '843',
                 'previous_rank' => '791-800',
                 'institution_name' => 'Alfaisal University',
                 'country' => 'Saudi Arabia',
@@ -23396,8 +23396,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '843',
+                'previous_rank' => '1003',
                 'institution_name' => 'Azerbaijan State University of Economics',
                 'country' => 'Azerbaijan',
                 'region' => 'Asia',
@@ -23425,7 +23425,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
+                'rank_2026' => '843',
                 'previous_rank' => '771-780',
                 'institution_name' => 'Bournemouth University',
                 'country' => 'United Kingdom',
@@ -23454,8 +23454,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
-                'previous_rank' => '711-720',
+                'rank_2026' => '843',
+                'previous_rank' => '721',
                 'institution_name' => 'De Montfort University',
                 'country' => 'United Kingdom',
                 'region' => 'Europe',
@@ -23483,8 +23483,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
-                'previous_rank' => '851-900',
+                'rank_2026' => '843',
+                'previous_rank' => '867',
                 'institution_name' => 'Donghua University',
                 'country' => 'China (Mainland)',
                 'region' => 'Asia',
@@ -23512,8 +23512,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
-                'previous_rank' => '801-850',
+                'rank_2026' => '843',
+                'previous_rank' => '843',
                 'institution_name' => 'Gdansk University of Technology',
                 'country' => 'Poland',
                 'region' => 'Europe',
@@ -23541,8 +23541,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
-                'previous_rank' => '901-950',
+                'rank_2026' => '843',
+                'previous_rank' => '906',
                 'institution_name' => 'German Jordanian University',
                 'country' => 'Jordan',
                 'region' => 'Asia',
@@ -23570,7 +23570,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
+                'rank_2026' => '843',
                 'previous_rank' => null,
                 'institution_name' => 'IIT Gandhinagar',
                 'country' => 'India',
@@ -23599,7 +23599,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
+                'rank_2026' => '843',
                 'previous_rank' => '751-760',
                 'institution_name' => 'Instituto Tecnológico Autonomo de México (ITAM)',
                 'country' => 'Mexico',
@@ -23628,7 +23628,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
+                'rank_2026' => '843',
                 'previous_rank' => '791-800',
                 'institution_name' => 'Keele University',
                 'country' => 'United Kingdom',
@@ -23657,8 +23657,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
-                'previous_rank' => '721-730',
+                'rank_2026' => '843',
+                'previous_rank' => '722',
                 'institution_name' => 'Middlesex University',
                 'country' => 'United Kingdom',
                 'region' => 'Europe',
@@ -23686,8 +23686,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
-                'previous_rank' => '801-850',
+                'rank_2026' => '843',
+                'previous_rank' => '843',
                 'institution_name' => 'National Technical University of Ukraine "Igor Sikorsky Kyiv Polytechnic Institute"',
                 'country' => 'Ukraine',
                 'region' => 'Europe',
@@ -23715,8 +23715,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
-                'previous_rank' => '851-900',
+                'rank_2026' => '843',
+                'previous_rank' => '867',
                 'institution_name' => 'Northwest Agriculture and Forestry University',
                 'country' => 'China (Mainland)',
                 'region' => 'Asia',
@@ -23744,8 +23744,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
-                'previous_rank' => '801-850',
+                'rank_2026' => '843',
+                'previous_rank' => '843',
                 'institution_name' => 'Ocean University of China',
                 'country' => 'China (Mainland)',
                 'region' => 'Asia',
@@ -23773,8 +23773,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
-                'previous_rank' => '801-850',
+                'rank_2026' => '843',
+                'previous_rank' => '843',
                 'institution_name' => 'Perugia University',
                 'country' => 'Italy',
                 'region' => 'Europe',
@@ -23802,7 +23802,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
+                'rank_2026' => '843',
                 'previous_rank' => '580',
                 'institution_name' => 'Politecnico di Bari',
                 'country' => 'Italy',
@@ -23831,8 +23831,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
-                'previous_rank' => '781-790',
+                'rank_2026' => '843',
+                'previous_rank' => '785',
                 'institution_name' => 'Qassim University',
                 'country' => 'Saudi Arabia',
                 'region' => 'Asia',
@@ -23860,8 +23860,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
-                'previous_rank' => '641-650',
+                'rank_2026' => '843',
+                'previous_rank' => '649',
                 'institution_name' => 'Soochow University',
                 'country' => 'China (Mainland)',
                 'region' => 'Asia',
@@ -23889,8 +23889,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
-                'previous_rank' => '781-790',
+                'rank_2026' => '843',
+                'previous_rank' => '785',
                 'institution_name' => 'The New School, New York City and Paris',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -23918,7 +23918,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
+                'rank_2026' => '843',
                 'previous_rank' => '751-760',
                 'institution_name' => 'Tokyo University of Science (RIKADAI)',
                 'country' => 'Japan',
@@ -23947,7 +23947,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
+                'rank_2026' => '843',
                 'previous_rank' => '691-700',
                 'institution_name' => 'Universidad de la Habana',
                 'country' => 'Cuba',
@@ -23976,7 +23976,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
+                'rank_2026' => '843',
                 'previous_rank' => '741-750',
                 'institution_name' => 'Universidad de Montevideo',
                 'country' => 'Uruguay',
@@ -24005,8 +24005,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
-                'previous_rank' => '801-850',
+                'rank_2026' => '843',
+                'previous_rank' => '843',
                 'institution_name' => 'Universidad de San Francisco de Quito',
                 'country' => 'Ecuador',
                 'region' => 'Americas',
@@ -24034,7 +24034,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
+                'rank_2026' => '843',
                 'previous_rank' => '751-760',
                 'institution_name' => 'Universidade de Brasilia (UnB)',
                 'country' => 'Brazil',
@@ -24063,8 +24063,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
-                'previous_rank' => '781-790',
+                'rank_2026' => '843',
+                'previous_rank' => '785',
                 'institution_name' => 'Universidade Federal de Santa Catarina',
                 'country' => 'Brazil',
                 'region' => 'Americas',
@@ -24092,7 +24092,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
+                'rank_2026' => '843',
                 'previous_rank' => '691-700',
                 'institution_name' => 'Universidade Federal de São Paulo (UNIFESP)',
                 'country' => 'Brazil',
@@ -24121,8 +24121,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
-                'previous_rank' => '801-850',
+                'rank_2026' => '843',
+                'previous_rank' => '843',
                 'institution_name' => 'Universita\' degli studi di Salerno',
                 'country' => 'Italy',
                 'region' => 'Europe',
@@ -24150,7 +24150,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
+                'rank_2026' => '843',
                 'previous_rank' => '751-760',
                 'institution_name' => 'Universita\' Politecnica delle Marche - UNIVPM',
                 'country' => 'Italy',
@@ -24179,8 +24179,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
-                'previous_rank' => '851-900',
+                'rank_2026' => '843',
+                'previous_rank' => '867',
                 'institution_name' => 'Università  degli Studi di Palermo',
                 'country' => 'Italy',
                 'region' => 'Europe',
@@ -24208,8 +24208,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
-                'previous_rank' => '801-850',
+                'rank_2026' => '843',
+                'previous_rank' => '843',
                 'institution_name' => 'Universität Duisburg-Essen',
                 'country' => 'Germany',
                 'region' => 'Europe',
@@ -24237,8 +24237,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '843',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universiti Malaysia Terengganu (UMT)',
                 'country' => 'Malaysia',
                 'region' => 'Asia',
@@ -24266,8 +24266,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
-                'previous_rank' => '801-850',
+                'rank_2026' => '843',
+                'previous_rank' => '843',
                 'institution_name' => 'University of Bari',
                 'country' => 'Italy',
                 'region' => 'Europe',
@@ -24295,8 +24295,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
-                'previous_rank' => '801-850',
+                'rank_2026' => '843',
+                'previous_rank' => '843',
                 'institution_name' => 'University of Brighton',
                 'country' => 'United Kingdom',
                 'region' => 'Europe',
@@ -24324,7 +24324,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
+                'rank_2026' => '843',
                 'previous_rank' => '751-760',
                 'institution_name' => 'University of Engineering & Technology (UET) Lahore',
                 'country' => 'Pakistan',
@@ -24353,7 +24353,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
+                'rank_2026' => '843',
                 'previous_rank' => '691-700',
                 'institution_name' => 'University of Greenwich',
                 'country' => 'United Kingdom',
@@ -24382,8 +24382,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
-                'previous_rank' => '801-850',
+                'rank_2026' => '843',
+                'previous_rank' => '843',
                 'institution_name' => 'University of Hyderabad',
                 'country' => 'India',
                 'region' => 'Asia',
@@ -24411,8 +24411,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
-                'previous_rank' => '781-790',
+                'rank_2026' => '843',
+                'previous_rank' => '785',
                 'institution_name' => 'University of Latvia',
                 'country' => 'Latvia',
                 'region' => 'Europe',
@@ -24440,8 +24440,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
-                'previous_rank' => '851-900',
+                'rank_2026' => '843',
+                'previous_rank' => '867',
                 'institution_name' => 'University of Lincoln',
                 'country' => 'United Kingdom',
                 'region' => 'Europe',
@@ -24469,7 +24469,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
+                'rank_2026' => '843',
                 'previous_rank' => null,
                 'institution_name' => 'University of Maryland, Baltimore',
                 'country' => 'United States of America',
@@ -24498,7 +24498,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
+                'rank_2026' => '843',
                 'previous_rank' => '771-780',
                 'institution_name' => 'University of Maryland, Baltimore County',
                 'country' => 'United States of America',
@@ -24527,8 +24527,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
-                'previous_rank' => '721-730',
+                'rank_2026' => '843',
+                'previous_rank' => '722',
                 'institution_name' => 'University of Modena and Reggio Emilia',
                 'country' => 'Italy',
                 'region' => 'Europe',
@@ -24556,7 +24556,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
+                'rank_2026' => '843',
                 'previous_rank' => null,
                 'institution_name' => 'University of Namur',
                 'country' => 'Belgium',
@@ -24585,8 +24585,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
-                'previous_rank' => '801-850',
+                'rank_2026' => '843',
+                'previous_rank' => '843',
                 'institution_name' => 'University of Ulsan',
                 'country' => 'Republic of Korea',
                 'region' => 'Asia',
@@ -24614,7 +24614,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
+                'rank_2026' => '843',
                 'previous_rank' => '741-750',
                 'institution_name' => 'University of Westminster',
                 'country' => 'United Kingdom',
@@ -24643,8 +24643,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
-                'previous_rank' => '851-900',
+                'rank_2026' => '843',
+                'previous_rank' => '867',
                 'institution_name' => 'University of Wroclaw',
                 'country' => 'Poland',
                 'region' => 'Europe',
@@ -24672,8 +24672,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
-                'previous_rank' => '901-950',
+                'rank_2026' => '843',
+                'previous_rank' => '906',
                 'institution_name' => 'Vietnam National University - Ho Chi Minh City (VNU-HCM)',
                 'country' => 'Viet Nam',
                 'region' => 'Asia',
@@ -24701,8 +24701,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '801-850',
-                'previous_rank' => '781-790',
+                'rank_2026' => '843',
+                'previous_rank' => '785',
                 'institution_name' => 'Zurich University of Applied Sciences (ZHAW)',
                 'country' => 'Switzerland',
                 'region' => 'Europe',
@@ -24730,7 +24730,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
+                'rank_2026' => '867',
                 'previous_rank' => '771-780',
                 'institution_name' => 'Addis Ababa University',
                 'country' => 'Ethiopia',
@@ -24759,7 +24759,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
+                'rank_2026' => '867',
                 'previous_rank' => '741-750',
                 'institution_name' => 'Altai State University',
                 'country' => 'Russian Federation',
@@ -24788,8 +24788,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '867',
+                'previous_rank' => '960',
                 'institution_name' => 'Auburn University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -24817,8 +24817,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '901-950',
+                'rank_2026' => '867',
+                'previous_rank' => '906',
                 'institution_name' => 'Australian Catholic University',
                 'country' => 'Australia',
                 'region' => 'Oceania',
@@ -24846,8 +24846,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '867',
+                'previous_rank' => '1003',
                 'institution_name' => 'Azerbaijan State Oil and Industry University',
                 'country' => 'Azerbaijan',
                 'region' => 'Asia',
@@ -24875,7 +24875,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
+                'rank_2026' => '867',
                 'previous_rank' => null,
                 'institution_name' => 'Azerbaijan Technical University',
                 'country' => 'Azerbaijan',
@@ -24904,8 +24904,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '901-950',
+                'rank_2026' => '867',
+                'previous_rank' => '906',
                 'institution_name' => 'Beijing Jiaotong University',
                 'country' => 'China (Mainland)',
                 'region' => 'Asia',
@@ -24933,8 +24933,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '801-850',
+                'rank_2026' => '867',
+                'previous_rank' => '843',
                 'institution_name' => 'Belarusian National Technical University',
                 'country' => 'Belarus',
                 'region' => 'Europe',
@@ -24962,8 +24962,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '867',
+                'previous_rank' => '960',
                 'institution_name' => 'BINUS UNIVERSITY (Bina Nusantara University)',
                 'country' => 'Indonesia',
                 'region' => 'Asia',
@@ -24991,8 +24991,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '901-950',
+                'rank_2026' => '867',
+                'previous_rank' => '906',
                 'institution_name' => 'Catania University',
                 'country' => 'Italy',
                 'region' => 'Europe',
@@ -25020,7 +25020,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
+                'rank_2026' => '867',
                 'previous_rank' => '771-780',
                 'institution_name' => 'China University of Geosciences',
                 'country' => 'China (Mainland)',
@@ -25049,8 +25049,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '851-900',
+                'rank_2026' => '867',
+                'previous_rank' => '867',
                 'institution_name' => 'Chungnam National University',
                 'country' => 'Republic of Korea',
                 'region' => 'Asia',
@@ -25078,7 +25078,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
+                'rank_2026' => '867',
                 'previous_rank' => null,
                 'institution_name' => 'Dhofar University',
                 'country' => 'Oman',
@@ -25107,8 +25107,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '801-850',
+                'rank_2026' => '867',
+                'previous_rank' => '843',
                 'institution_name' => 'Edinburgh Napier University',
                 'country' => 'United Kingdom',
                 'region' => 'Europe',
@@ -25136,8 +25136,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '721-730',
+                'rank_2026' => '867',
+                'previous_rank' => '722',
                 'institution_name' => 'Effat University',
                 'country' => 'Saudi Arabia',
                 'region' => 'Asia',
@@ -25165,7 +25165,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
+                'rank_2026' => '867',
                 'previous_rank' => null,
                 'institution_name' => 'European University of Lefke (EUL)',
                 'country' => 'Northern Cyprus',
@@ -25194,7 +25194,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
+                'rank_2026' => '867',
                 'previous_rank' => '791-800',
                 'institution_name' => 'I.M. Sechenov First Moscow State Medical University',
                 'country' => 'Russian Federation',
@@ -25223,8 +25223,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '901-950',
+                'rank_2026' => '867',
+                'previous_rank' => '906',
                 'institution_name' => 'Imam Muhammad Ibn Saud Islamic University - IMSIU',
                 'country' => 'Saudi Arabia',
                 'region' => 'Asia',
@@ -25252,8 +25252,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '801-850',
+                'rank_2026' => '867',
+                'previous_rank' => '843',
                 'institution_name' => 'Instituto Politécnico Nacional (IPN)',
                 'country' => 'Mexico',
                 'region' => 'Americas',
@@ -25281,8 +25281,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '867',
+                'previous_rank' => '1003',
                 'institution_name' => 'Jiangnan University',
                 'country' => 'China (Mainland)',
                 'region' => 'Asia',
@@ -25310,8 +25310,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '801-850',
+                'rank_2026' => '867',
+                'previous_rank' => '843',
                 'institution_name' => 'Liverpool John Moores University',
                 'country' => 'United Kingdom',
                 'region' => 'Europe',
@@ -25339,8 +25339,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '901-950',
+                'rank_2026' => '867',
+                'previous_rank' => '906',
                 'institution_name' => 'Louisiana State University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -25368,8 +25368,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '901-950',
+                'rank_2026' => '867',
+                'previous_rank' => '906',
                 'institution_name' => 'Manipal Academy of Higher Education - Manipal University (MAHE)',
                 'country' => 'India',
                 'region' => 'Asia',
@@ -25397,8 +25397,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '851-900',
+                'rank_2026' => '867',
+                'previous_rank' => '867',
                 'institution_name' => 'Mendel University in Brno',
                 'country' => 'Czechia',
                 'region' => 'Europe',
@@ -25426,8 +25426,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '867',
+                'previous_rank' => '1003',
                 'institution_name' => 'Multimedia University (MMU)',
                 'country' => 'Malaysia',
                 'region' => 'Asia',
@@ -25455,8 +25455,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '851-900',
+                'rank_2026' => '867',
+                'previous_rank' => '867',
                 'institution_name' => 'Nantes University',
                 'country' => 'France',
                 'region' => 'Europe',
@@ -25484,8 +25484,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '867',
+                'previous_rank' => '1003',
                 'institution_name' => 'O. P. Jindal Global University (JGU)',
                 'country' => 'India',
                 'region' => 'Asia',
@@ -25513,8 +25513,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '851-900',
+                'rank_2026' => '867',
+                'previous_rank' => '867',
                 'institution_name' => 'Oklahoma State University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -25542,8 +25542,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '867',
+                'previous_rank' => '960',
                 'institution_name' => 'Prince of Songkla University',
                 'country' => 'Thailand',
                 'region' => 'Asia',
@@ -25571,8 +25571,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '851-900',
+                'rank_2026' => '867',
+                'previous_rank' => '867',
                 'institution_name' => 'Tokyo University of Agriculture and Technology',
                 'country' => 'Japan',
                 'region' => 'Asia',
@@ -25600,8 +25600,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '801-850',
+                'rank_2026' => '867',
+                'previous_rank' => '843',
                 'institution_name' => 'Universidad Anahuac',
                 'country' => 'Mexico',
                 'region' => 'Americas',
@@ -25629,8 +25629,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '901-950',
+                'rank_2026' => '867',
+                'previous_rank' => '906',
                 'institution_name' => 'Universidad Nacional de Córdoba',
                 'country' => 'Argentina',
                 'region' => 'Americas',
@@ -25658,8 +25658,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '901-950',
+                'rank_2026' => '867',
+                'previous_rank' => '906',
                 'institution_name' => 'Universidade de Vigo',
                 'country' => 'Spain',
                 'region' => 'Europe',
@@ -25687,8 +25687,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '901-950',
+                'rank_2026' => '867',
+                'previous_rank' => '906',
                 'institution_name' => 'Universita\' degli Studi della Tuscia',
                 'country' => 'Italy',
                 'region' => 'Europe',
@@ -25716,8 +25716,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '851-900',
+                'rank_2026' => '867',
+                'previous_rank' => '867',
                 'institution_name' => 'Universität Düsseldorf',
                 'country' => 'Germany',
                 'region' => 'Europe',
@@ -25745,8 +25745,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '801-850',
+                'rank_2026' => '867',
+                'previous_rank' => '843',
                 'institution_name' => 'Universität Rostock',
                 'country' => 'Germany',
                 'region' => 'Europe',
@@ -25774,8 +25774,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '711-720',
+                'rank_2026' => '867',
+                'previous_rank' => '721',
                 'institution_name' => 'Université de Franche-Comté',
                 'country' => 'France',
                 'region' => 'Europe',
@@ -25803,8 +25803,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '851-900',
+                'rank_2026' => '867',
+                'previous_rank' => '867',
                 'institution_name' => 'Université du Québec',
                 'country' => 'Canada',
                 'region' => 'Americas',
@@ -25832,8 +25832,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '867',
+                'previous_rank' => '960',
                 'institution_name' => 'Universiti Pendidikan Sultan Idris (UPSI)',
                 'country' => 'Malaysia',
                 'region' => 'Asia',
@@ -25861,8 +25861,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '761-770',
+                'rank_2026' => '867',
+                'previous_rank' => '759',
                 'institution_name' => 'University of Colorado, Denver',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -25890,8 +25890,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '851-900',
+                'rank_2026' => '867',
+                'previous_rank' => '867',
                 'institution_name' => 'University of Dubai',
                 'country' => 'United Arab Emirates',
                 'region' => 'Asia',
@@ -25919,8 +25919,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '851-900',
+                'rank_2026' => '867',
+                'previous_rank' => '867',
                 'institution_name' => 'University of Gdansk',
                 'country' => 'Poland',
                 'region' => 'Europe',
@@ -25948,8 +25948,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '851-900',
+                'rank_2026' => '867',
+                'previous_rank' => '867',
                 'institution_name' => 'University of Ghana',
                 'country' => 'Ghana',
                 'region' => 'Africa',
@@ -25977,8 +25977,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '851-900',
+                'rank_2026' => '867',
+                'previous_rank' => '867',
                 'institution_name' => 'University of Santo Tomas',
                 'country' => 'Philippines',
                 'region' => 'Asia',
@@ -26006,8 +26006,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '867',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of Seoul',
                 'country' => 'Republic of Korea',
                 'region' => 'Asia',
@@ -26035,8 +26035,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '801-850',
+                'rank_2026' => '867',
+                'previous_rank' => '843',
                 'institution_name' => 'University of Stavanger',
                 'country' => 'Norway',
                 'region' => 'Europe',
@@ -26064,7 +26064,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
+                'rank_2026' => '867',
                 'previous_rank' => '771-780',
                 'institution_name' => 'Verona University',
                 'country' => 'Italy',
@@ -26093,8 +26093,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '851-900',
+                'rank_2026' => '867',
+                'previous_rank' => '867',
                 'institution_name' => 'Vilnius Gediminas Technical University',
                 'country' => 'Lithuania',
                 'region' => 'Europe',
@@ -26122,8 +26122,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '901-950',
+                'rank_2026' => '867',
+                'previous_rank' => '906',
                 'institution_name' => 'Worcester Polytechnic Institute',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -26151,8 +26151,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '901-950',
+                'rank_2026' => '867',
+                'previous_rank' => '906',
                 'institution_name' => 'Wroclaw University of Science and Technology (WUST)',
                 'country' => 'Poland',
                 'region' => 'Europe',
@@ -26180,8 +26180,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '851-900',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '867',
+                'previous_rank' => '960',
                 'institution_name' => 'Yarmouk University',
                 'country' => 'Jordan',
                 'region' => 'Asia',
@@ -26209,8 +26209,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '801-850',
+                'rank_2026' => '906',
+                'previous_rank' => '843',
                 'institution_name' => 'Al Jouf University',
                 'country' => 'Saudi Arabia',
                 'region' => 'Asia',
@@ -26238,7 +26238,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
+                'rank_2026' => '906',
                 'previous_rank' => null,
                 'institution_name' => 'American University of Central Asia',
                 'country' => 'Kyrgyzstan',
@@ -26267,7 +26267,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
+                'rank_2026' => '906',
                 'previous_rank' => null,
                 'institution_name' => 'Baku Engineering University',
                 'country' => 'Azerbaijan',
@@ -26296,8 +26296,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '851-900',
+                'rank_2026' => '906',
+                'previous_rank' => '867',
                 'institution_name' => 'Chonnam National University',
                 'country' => 'Republic of Korea',
                 'region' => 'Asia',
@@ -26325,7 +26325,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
+                'rank_2026' => '906',
                 'previous_rank' => '771-780',
                 'institution_name' => 'Colegio de México',
                 'country' => 'Mexico',
@@ -26354,8 +26354,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '901-950',
+                'rank_2026' => '906',
+                'previous_rank' => '906',
                 'institution_name' => 'Future University in Egypt',
                 'country' => 'Egypt',
                 'region' => 'Africa',
@@ -26383,8 +26383,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '901-950',
+                'rank_2026' => '906',
+                'previous_rank' => '906',
                 'institution_name' => 'Gazi Üniversitesi',
                 'country' => 'Türkiye',
                 'region' => 'Asia',
@@ -26412,8 +26412,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '851-900',
+                'rank_2026' => '906',
+                'previous_rank' => '867',
                 'institution_name' => 'Gulf University for Science and Technology (GUST)',
                 'country' => 'Kuwait',
                 'region' => 'Asia',
@@ -26441,8 +26441,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '801-850',
+                'rank_2026' => '906',
+                'previous_rank' => '843',
                 'institution_name' => 'Huazhong Agricultural University',
                 'country' => 'China (Mainland)',
                 'region' => 'Asia',
@@ -26470,8 +26470,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '901-950',
+                'rank_2026' => '906',
+                'previous_rank' => '906',
                 'institution_name' => 'Kanazawa University',
                 'country' => 'Japan',
                 'region' => 'Asia',
@@ -26499,8 +26499,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '851-900',
+                'rank_2026' => '906',
+                'previous_rank' => '867',
                 'institution_name' => 'Kansas State University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -26528,8 +26528,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '901-950',
+                'rank_2026' => '906',
+                'previous_rank' => '906',
                 'institution_name' => 'Karaganda Buketov University',
                 'country' => 'Kazakhstan',
                 'region' => 'Asia',
@@ -26557,8 +26557,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '906',
+                'previous_rank' => '960',
                 'institution_name' => 'Khon Kaen University',
                 'country' => 'Thailand',
                 'region' => 'Asia',
@@ -26586,8 +26586,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '906',
+                'previous_rank' => '960',
                 'institution_name' => 'King Mongkut\'s University of Technology Thonburi',
                 'country' => 'Thailand',
                 'region' => 'Asia',
@@ -26615,8 +26615,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '801-850',
+                'rank_2026' => '906',
+                'previous_rank' => '843',
                 'institution_name' => 'London South Bank University',
                 'country' => 'United Kingdom',
                 'region' => 'Europe',
@@ -26644,7 +26644,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
+                'rank_2026' => '906',
                 'previous_rank' => null,
                 'institution_name' => 'Lovely Professional University (LPU)',
                 'country' => 'India',
@@ -26673,7 +26673,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
+                'rank_2026' => '906',
                 'previous_rank' => null,
                 'institution_name' => 'Macao Polytechnic University',
                 'country' => 'Macao SAR, China',
@@ -26702,8 +26702,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '901-950',
+                'rank_2026' => '906',
+                'previous_rank' => '906',
                 'institution_name' => 'Michigan Technological University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -26731,8 +26731,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '851-900',
+                'rank_2026' => '906',
+                'previous_rank' => '867',
                 'institution_name' => 'Nagasaki University',
                 'country' => 'Japan',
                 'region' => 'Asia',
@@ -26760,8 +26760,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '901-950',
+                'rank_2026' => '906',
+                'previous_rank' => '906',
                 'institution_name' => 'Osaka Metropolitan University',
                 'country' => 'Japan',
                 'region' => 'Asia',
@@ -26789,8 +26789,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '906',
+                'previous_rank' => '1003',
                 'institution_name' => 'Panjab University',
                 'country' => 'India',
                 'region' => 'Asia',
@@ -26818,8 +26818,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '901-950',
+                'rank_2026' => '906',
+                'previous_rank' => '906',
                 'institution_name' => 'Princess Sumaya University for Technology',
                 'country' => 'Jordan',
                 'region' => 'Asia',
@@ -26847,8 +26847,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '906',
+                'previous_rank' => '960',
                 'institution_name' => 'Saveetha Institute of Medical And Technical Sciences (SIMATS)',
                 'country' => 'India',
                 'region' => 'Asia',
@@ -26876,7 +26876,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
+                'rank_2026' => '906',
                 'previous_rank' => null,
                 'institution_name' => 'Taif University',
                 'country' => 'Saudi Arabia',
@@ -26905,8 +26905,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '906',
+                'previous_rank' => '1003',
                 'institution_name' => 'Tallinn University',
                 'country' => 'Estonia',
                 'region' => 'Europe',
@@ -26934,7 +26934,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
+                'rank_2026' => '906',
                 'previous_rank' => null,
                 'institution_name' => 'Tashkent State Technical University',
                 'country' => 'Uzbekistan',
@@ -26963,7 +26963,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
+                'rank_2026' => '906',
                 'previous_rank' => '741-750',
                 'institution_name' => 'Universidad Católica Andrés Bello - UCAB',
                 'country' => 'Venezuela (Bolivarian Republic of)',
@@ -26992,8 +26992,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '901-950',
+                'rank_2026' => '906',
+                'previous_rank' => '906',
                 'institution_name' => 'Universidad Católica del Uruguay (UCU)',
                 'country' => 'Uruguay',
                 'region' => 'Americas',
@@ -27021,8 +27021,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '906',
+                'previous_rank' => '960',
                 'institution_name' => 'Universidad de los Andes Chile',
                 'country' => 'Chile',
                 'region' => 'Americas',
@@ -27050,8 +27050,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '906',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidad de Oviedo',
                 'country' => 'Spain',
                 'region' => 'Europe',
@@ -27079,8 +27079,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '851-900',
+                'rank_2026' => '906',
+                'previous_rank' => '867',
                 'institution_name' => 'Universidad de Valladolid',
                 'country' => 'Spain',
                 'region' => 'Europe',
@@ -27108,7 +27108,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
+                'rank_2026' => '906',
                 'previous_rank' => null,
                 'institution_name' => 'Universidad Europea de Madrid',
                 'country' => 'Spain',
@@ -27137,8 +27137,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '801-850',
+                'rank_2026' => '906',
+                'previous_rank' => '843',
                 'institution_name' => 'Universidad Iberoamericana (UIA)',
                 'country' => 'Mexico',
                 'region' => 'Americas',
@@ -27166,8 +27166,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '901-950',
+                'rank_2026' => '906',
+                'previous_rank' => '906',
                 'institution_name' => 'Università degli Studi Roma Tre',
                 'country' => 'Italy',
                 'region' => 'Europe',
@@ -27195,8 +27195,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '851-900',
+                'rank_2026' => '906',
+                'previous_rank' => '867',
                 'institution_name' => 'Université de Sherbrooke',
                 'country' => 'Canada',
                 'region' => 'Americas',
@@ -27224,8 +27224,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '851-900',
+                'rank_2026' => '906',
+                'previous_rank' => '867',
                 'institution_name' => 'University at Albany SUNY',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -27253,8 +27253,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '906',
+                'previous_rank' => '960',
                 'institution_name' => 'University of Alabama',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -27282,8 +27282,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '801-850',
+                'rank_2026' => '906',
+                'previous_rank' => '843',
                 'institution_name' => 'University of Alaska Fairbanks',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -27311,8 +27311,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '851-900',
+                'rank_2026' => '906',
+                'previous_rank' => '867',
                 'institution_name' => 'University of Hertfordshire',
                 'country' => 'United Kingdom',
                 'region' => 'Europe',
@@ -27340,8 +27340,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '901-950',
+                'rank_2026' => '906',
+                'previous_rank' => '906',
                 'institution_name' => 'University of Maribor',
                 'country' => 'Slovenia',
                 'region' => 'Europe',
@@ -27369,8 +27369,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '906',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of North Texas',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -27398,8 +27398,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '901-950',
+                'rank_2026' => '906',
+                'previous_rank' => '906',
                 'institution_name' => 'University of Peshawar',
                 'country' => 'Pakistan',
                 'region' => 'Asia',
@@ -27427,8 +27427,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '801-850',
+                'rank_2026' => '906',
+                'previous_rank' => '843',
                 'institution_name' => 'University of Petroleum and Energy Studies (UPES)',
                 'country' => 'India',
                 'region' => 'Asia',
@@ -27456,8 +27456,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '901-950',
+                'rank_2026' => '906',
+                'previous_rank' => '906',
                 'institution_name' => 'University of Salford',
                 'country' => 'United Kingdom',
                 'region' => 'Europe',
@@ -27485,8 +27485,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '851-900',
+                'rank_2026' => '906',
+                'previous_rank' => '867',
                 'institution_name' => 'University of South Africa',
                 'country' => 'South Africa',
                 'region' => 'Africa',
@@ -27514,8 +27514,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '851-900',
+                'rank_2026' => '906',
+                'previous_rank' => '867',
                 'institution_name' => 'Virginia Commonwealth University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -27543,8 +27543,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '901-950',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '906',
+                'previous_rank' => '960',
                 'institution_name' => 'Yeungnam University',
                 'country' => 'Republic of Korea',
                 'region' => 'Asia',
@@ -27572,8 +27572,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '851-900',
+                'rank_2026' => '960',
+                'previous_rank' => '867',
                 'institution_name' => 'Abylkas Saginov Karaganda Technical University',
                 'country' => 'Kazakhstan',
                 'region' => 'Asia',
@@ -27601,7 +27601,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
+                'rank_2026' => '960',
                 'previous_rank' => null,
                 'institution_name' => 'Al Nahrain University',
                 'country' => 'Iraq',
@@ -27630,8 +27630,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '851-900',
+                'rank_2026' => '960',
+                'previous_rank' => '867',
                 'institution_name' => 'Al-Quds University',
                 'country' => 'Palestine',
                 'region' => 'Asia',
@@ -27659,8 +27659,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '960',
+                'previous_rank' => '1003',
                 'institution_name' => 'Amity University',
                 'country' => 'India',
                 'region' => 'Asia',
@@ -27688,8 +27688,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '960',
+                'previous_rank' => '960',
                 'institution_name' => 'Athens University of Economics And Business',
                 'country' => 'Greece',
                 'region' => 'Europe',
@@ -27717,8 +27717,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '851-900',
+                'rank_2026' => '960',
+                'previous_rank' => '867',
                 'institution_name' => 'Charles Sturt University',
                 'country' => 'Australia',
                 'region' => 'Oceania',
@@ -27746,8 +27746,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '851-900',
+                'rank_2026' => '960',
+                'previous_rank' => '867',
                 'institution_name' => 'Clarkson University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -27775,8 +27775,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '960',
+                'previous_rank' => '960',
                 'institution_name' => 'Clemson University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -27804,8 +27804,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '851-900',
+                'rank_2026' => '960',
+                'previous_rank' => '867',
                 'institution_name' => 'CY Cergy Paris University',
                 'country' => 'France',
                 'region' => 'Europe',
@@ -27833,8 +27833,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '960',
+                'previous_rank' => '1003',
                 'institution_name' => 'Escuela Superior Politécnica del Litoral - ESPOL',
                 'country' => 'Ecuador',
                 'region' => 'Americas',
@@ -27862,8 +27862,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '960',
+                'previous_rank' => '960',
                 'institution_name' => 'Ferdowsi University of Mashhad',
                 'country' => 'Iran (Islamic Republic of)',
                 'region' => 'Asia',
@@ -27891,8 +27891,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '960',
+                'previous_rank' => '1003',
                 'institution_name' => 'George Mason University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -27920,8 +27920,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '960',
+                'previous_rank' => '1003',
                 'institution_name' => 'Guru Gobind Singh Indraprastha University',
                 'country' => 'India',
                 'region' => 'Asia',
@@ -27949,8 +27949,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '960',
+                'previous_rank' => '1003',
                 'institution_name' => 'Hasanuddin University',
                 'country' => 'Indonesia',
                 'region' => 'Asia',
@@ -27978,8 +27978,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '801-850',
+                'rank_2026' => '960',
+                'previous_rank' => '843',
                 'institution_name' => 'Immanuel Kant Baltic Federal University',
                 'country' => 'Russian Federation',
                 'region' => 'Europe',
@@ -28007,8 +28007,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '960',
+                'previous_rank' => '960',
                 'institution_name' => 'Indian Institute of Technology Bhubaneswar (IIT BBS)',
                 'country' => 'India',
                 'region' => 'Asia',
@@ -28036,7 +28036,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
+                'rank_2026' => '960',
                 'previous_rank' => '791-800',
                 'institution_name' => 'Ivane Javakhishvili Tbilisi State University',
                 'country' => 'Georgia',
@@ -28065,7 +28065,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
+                'rank_2026' => '960',
                 'previous_rank' => null,
                 'institution_name' => 'Khazar University',
                 'country' => 'Azerbaijan',
@@ -28094,8 +28094,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '960',
+                'previous_rank' => '960',
                 'institution_name' => 'Kumamoto University',
                 'country' => 'Japan',
                 'region' => 'Asia',
@@ -28123,8 +28123,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '901-950',
+                'rank_2026' => '960',
+                'previous_rank' => '906',
                 'institution_name' => 'Kyrgyz-Turkish Manas University',
                 'country' => 'Kyrgyzstan',
                 'region' => 'Asia',
@@ -28152,8 +28152,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '901-950',
+                'rank_2026' => '960',
+                'previous_rank' => '906',
                 'institution_name' => 'Lodz University',
                 'country' => 'Poland',
                 'region' => 'Europe',
@@ -28181,8 +28181,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '711-720',
+                'rank_2026' => '960',
+                'previous_rank' => '721',
                 'institution_name' => 'Nanjing Agricultural University',
                 'country' => 'China (Mainland)',
                 'region' => 'Asia',
@@ -28210,8 +28210,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '960',
+                'previous_rank' => '1003',
                 'institution_name' => 'Nanjing Normal University',
                 'country' => 'China (Mainland)',
                 'region' => 'Asia',
@@ -28239,8 +28239,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '960',
+                'previous_rank' => '1003',
                 'institution_name' => 'National Chung Cheng University',
                 'country' => 'Taiwan',
                 'region' => 'Asia',
@@ -28268,8 +28268,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '901-950',
+                'rank_2026' => '960',
+                'previous_rank' => '906',
                 'institution_name' => 'North South University',
                 'country' => 'Bangladesh',
                 'region' => 'Asia',
@@ -28297,8 +28297,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '851-900',
+                'rank_2026' => '960',
+                'previous_rank' => '867',
                 'institution_name' => 'North-West University',
                 'country' => 'South Africa',
                 'region' => 'Africa',
@@ -28326,8 +28326,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '851-900',
+                'rank_2026' => '960',
+                'previous_rank' => '867',
                 'institution_name' => 'Okayama University',
                 'country' => 'Japan',
                 'region' => 'Asia',
@@ -28355,8 +28355,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '960',
+                'previous_rank' => '1003',
                 'institution_name' => 'Rochester Institute of Technology (RIT)',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -28384,8 +28384,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '960',
+                'previous_rank' => '960',
                 'institution_name' => 'Saint Louis University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -28413,8 +28413,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '960',
+                'previous_rank' => '1003',
                 'institution_name' => 'Sohar University',
                 'country' => 'Oman',
                 'region' => 'Asia',
@@ -28442,8 +28442,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '960',
+                'previous_rank' => '960',
                 'institution_name' => 'Sophia University',
                 'country' => 'Japan',
                 'region' => 'Asia',
@@ -28471,8 +28471,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '901-950',
+                'rank_2026' => '960',
+                'previous_rank' => '906',
                 'institution_name' => 'South Ural State University',
                 'country' => 'Russian Federation',
                 'region' => 'Europe',
@@ -28500,8 +28500,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '901-950',
+                'rank_2026' => '960',
+                'previous_rank' => '906',
                 'institution_name' => 'The Robert Gordon University',
                 'country' => 'United Kingdom',
                 'region' => 'Europe',
@@ -28529,8 +28529,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '960',
+                'previous_rank' => '960',
                 'institution_name' => 'Universidad Autónoma Metropolitana (UAM)',
                 'country' => 'Mexico',
                 'region' => 'Americas',
@@ -28558,8 +28558,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '781-790',
+                'rank_2026' => '960',
+                'previous_rank' => '785',
                 'institution_name' => 'Universidad de Belgrano',
                 'country' => 'Argentina',
                 'region' => 'Americas',
@@ -28587,8 +28587,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '960',
+                'previous_rank' => '960',
                 'institution_name' => 'Universidad de Córdoba - España',
                 'country' => 'Spain',
                 'region' => 'Europe',
@@ -28616,8 +28616,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '960',
+                'previous_rank' => '960',
                 'institution_name' => 'Universidad de La Sabana',
                 'country' => 'Colombia',
                 'region' => 'Americas',
@@ -28645,8 +28645,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '901-950',
+                'rank_2026' => '960',
+                'previous_rank' => '906',
                 'institution_name' => 'Universidad EAFIT',
                 'country' => 'Colombia',
                 'region' => 'Americas',
@@ -28674,7 +28674,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
+                'rank_2026' => '960',
                 'previous_rank' => null,
                 'institution_name' => 'Universidad Espíritu Santo (UEES)',
                 'country' => 'Ecuador',
@@ -28703,8 +28703,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '901-950',
+                'rank_2026' => '960',
+                'previous_rank' => '906',
                 'institution_name' => 'Universidad Externado de Colombia',
                 'country' => 'Colombia',
                 'region' => 'Americas',
@@ -28732,8 +28732,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '901-950',
+                'rank_2026' => '960',
+                'previous_rank' => '906',
                 'institution_name' => 'Universidad Nacional Mayor de San Marcos',
                 'country' => 'Peru',
                 'region' => 'Americas',
@@ -28761,8 +28761,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '960',
+                'previous_rank' => '960',
                 'institution_name' => 'Universidad Torcuato Di Tella',
                 'country' => 'Argentina',
                 'region' => 'Americas',
@@ -28790,8 +28790,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '851-900',
+                'rank_2026' => '960',
+                'previous_rank' => '867',
                 'institution_name' => 'Universita\' degli Studi di Ferrara',
                 'country' => 'Italy',
                 'region' => 'Europe',
@@ -28819,8 +28819,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '901-950',
+                'rank_2026' => '960',
+                'previous_rank' => '906',
                 'institution_name' => 'Università della Calabria',
                 'country' => 'Italy',
                 'region' => 'Europe',
@@ -28848,8 +28848,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '960',
+                'previous_rank' => '960',
                 'institution_name' => 'University of Bahrain',
                 'country' => 'Bahrain',
                 'region' => 'Asia',
@@ -28877,7 +28877,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
+                'rank_2026' => '960',
                 'previous_rank' => null,
                 'institution_name' => 'University of Cyberjaya',
                 'country' => 'Malaysia',
@@ -28906,8 +28906,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '901-950',
+                'rank_2026' => '960',
+                'previous_rank' => '906',
                 'institution_name' => 'University of Ha\'il',
                 'country' => 'Saudi Arabia',
                 'region' => 'Asia',
@@ -28935,8 +28935,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '960',
+                'previous_rank' => '960',
                 'institution_name' => 'University of Lahore',
                 'country' => 'Pakistan',
                 'region' => 'Asia',
@@ -28964,8 +28964,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '960',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of Massachusetts - Boston',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -28993,8 +28993,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '960',
+                'previous_rank' => '960',
                 'institution_name' => 'University of the Western Cape',
                 'country' => 'South Africa',
                 'region' => 'Africa',
@@ -29025,8 +29025,8 @@ class  WorldUniversityRankingSeeder extends Seeder
 
         DB::table('world_university_rankings')->insert([
             [
-                'rank_2026' => '951-1000',
-                'previous_rank' => '801-850',
+                'rank_2026' => '960',
+                'previous_rank' => '843',
                 'institution_name' => 'Wuhan University of Technology',
                 'country' => 'China (Mainland)',
                 'region' => 'Asia',
@@ -29054,7 +29054,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
+                'rank_2026' => '1003',
                 'previous_rank' => null,
                 'institution_name' => 'Adamson University',
                 'country' => 'Philippines',
@@ -29083,7 +29083,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
+                'rank_2026' => '1003',
                 'previous_rank' => null,
                 'institution_name' => 'Aga Khan University',
                 'country' => 'Pakistan',
@@ -29112,8 +29112,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Al Azhar University',
                 'country' => 'Egypt',
                 'region' => 'Africa',
@@ -29141,8 +29141,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1003',
+                'previous_rank' => '1207',
                 'institution_name' => 'Alexandru Ioan Cuza University',
                 'country' => 'Romania',
                 'region' => 'Europe',
@@ -29170,8 +29170,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Aligarh Muslim University (AMU), Aligarh',
                 'country' => 'India',
                 'region' => 'Asia',
@@ -29199,8 +29199,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '1003',
+                'previous_rank' => '960',
                 'institution_name' => 'Almaty Technological University',
                 'country' => 'Kazakhstan',
                 'region' => 'Asia',
@@ -29228,8 +29228,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Amrita Vishwa Vidyapeetham',
                 'country' => 'India',
                 'region' => 'Asia',
@@ -29257,8 +29257,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'An-Najah National University',
                 'country' => 'Palestine',
                 'region' => 'Asia',
@@ -29286,8 +29286,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Arab Academy for Science, Technology and Maritime Transport',
                 'country' => 'Egypt',
                 'region' => 'Africa',
@@ -29315,8 +29315,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '1003',
+                'previous_rank' => '960',
                 'institution_name' => 'Asfendiyarov Kazakh National Medical University',
                 'country' => 'Kazakhstan',
                 'region' => 'Asia',
@@ -29344,8 +29344,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Assiut University',
                 'country' => 'Egypt',
                 'region' => 'Africa',
@@ -29373,7 +29373,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
+                'rank_2026' => '1003',
                 'previous_rank' => null,
                 'institution_name' => 'Azerbaijan University of Architecture and Construction',
                 'country' => 'Azerbaijan',
@@ -29402,8 +29402,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Banaras Hindu University',
                 'country' => 'India',
                 'region' => 'Asia',
@@ -29431,8 +29431,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Baylor University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -29460,8 +29460,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '901-950',
+                'rank_2026' => '1003',
+                'previous_rank' => '906',
                 'institution_name' => 'Beijing University of Posts and Telecommunications',
                 'country' => 'China (Mainland)',
                 'region' => 'Asia',
@@ -29489,8 +29489,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Binghamton University SUNY',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -29518,8 +29518,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Birmingham City University',
                 'country' => 'United Kingdom',
                 'region' => 'Europe',
@@ -29547,8 +29547,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Brigham Young University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -29576,8 +29576,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1003',
+                'previous_rank' => '1207',
                 'institution_name' => 'CEU University',
                 'country' => 'Spain',
                 'region' => 'Europe',
@@ -29605,8 +29605,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Chung Yuan Christian University',
                 'country' => 'Taiwan',
                 'region' => 'Asia',
@@ -29634,8 +29634,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Chungbuk National University',
                 'country' => 'Republic of Korea',
                 'region' => 'Asia',
@@ -29663,8 +29663,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '1003',
+                'previous_rank' => '960',
                 'institution_name' => 'Clark University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -29692,8 +29692,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Cracow University of Technology of Tadeusz Kościuszko',
                 'country' => 'Poland',
                 'region' => 'Europe',
@@ -29721,8 +29721,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '1003',
+                'previous_rank' => '960',
                 'institution_name' => 'D. Serikbayev East Kazakhstan Technical University',
                 'country' => 'Kazakhstan',
                 'region' => 'Asia',
@@ -29750,8 +29750,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1003',
+                'previous_rank' => '1207',
                 'institution_name' => 'Daffodil International University',
                 'country' => 'Bangladesh',
                 'region' => 'Asia',
@@ -29779,8 +29779,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Dankook University',
                 'country' => 'Republic of Korea',
                 'region' => 'Asia',
@@ -29808,8 +29808,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Ege Üniversitesi',
                 'country' => 'Türkiye',
                 'region' => 'Asia',
@@ -29837,8 +29837,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '1003',
+                'previous_rank' => '960',
                 'institution_name' => 'Financial University under the Government of the Russian Federation',
                 'country' => 'Russian Federation',
                 'region' => 'Europe',
@@ -29866,8 +29866,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1003',
+                'previous_rank' => '1207',
                 'institution_name' => 'Florida Atlantic University - Boca Raton',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -29895,8 +29895,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Fordham University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -29924,8 +29924,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Gebze Technical University',
                 'country' => 'Türkiye',
                 'region' => 'Asia',
@@ -29953,8 +29953,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '901-950',
+                'rank_2026' => '1003',
+                'previous_rank' => '906',
                 'institution_name' => 'Georgian Technical University',
                 'country' => 'Georgia',
                 'region' => 'Asia',
@@ -29982,7 +29982,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
+                'rank_2026' => '1003',
                 'previous_rank' => null,
                 'institution_name' => 'German University of Technology in Oman  (GUTECH)',
                 'country' => 'Oman',
@@ -30011,8 +30011,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Gifu University',
                 'country' => 'Japan',
                 'region' => 'Asia',
@@ -30040,8 +30040,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Glasgow Caledonian University',
                 'country' => 'United Kingdom',
                 'region' => 'Europe',
@@ -30069,8 +30069,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '1003',
+                'previous_rank' => '960',
                 'institution_name' => 'Hallym University',
                 'country' => 'Republic of Korea',
                 'region' => 'Asia',
@@ -30098,8 +30098,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Harbin Engineering University',
                 'country' => 'China (Mainland)',
                 'region' => 'Asia',
@@ -30127,8 +30127,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Hohai University',
                 'country' => 'China (Mainland)',
                 'region' => 'Asia',
@@ -30156,8 +30156,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Howard University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -30185,7 +30185,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
+                'rank_2026' => '1003',
                 'previous_rank' => null,
                 'institution_name' => 'Islamic University of Lebanon',
                 'country' => 'Lebanon',
@@ -30214,8 +30214,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'IU Indianapolis',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -30243,7 +30243,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
+                'rank_2026' => '1003',
                 'previous_rank' => null,
                 'institution_name' => 'Kalinga Institute of Industrial Technology',
                 'country' => 'India',
@@ -30272,8 +30272,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Kangwon National University',
                 'country' => 'Republic of Korea',
                 'region' => 'Asia',
@@ -30301,8 +30301,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Kazakh-British Technical University',
                 'country' => 'Kazakhstan',
                 'region' => 'Asia',
@@ -30330,8 +30330,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Kent State University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -30359,8 +30359,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1003',
+                'previous_rank' => '1207',
                 'institution_name' => 'Kookmin University',
                 'country' => 'Republic of Korea',
                 'region' => 'Asia',
@@ -30388,8 +30388,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '851-900',
+                'rank_2026' => '1003',
+                'previous_rank' => '867',
                 'institution_name' => 'Kyrgyz Russian Slavic University',
                 'country' => 'Kyrgyzstan',
                 'region' => 'Asia',
@@ -30417,8 +30417,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Kyushu Institute of Technology',
                 'country' => 'Japan',
                 'region' => 'Asia',
@@ -30446,8 +30446,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Leeds Beckett University',
                 'country' => 'United Kingdom',
                 'region' => 'Europe',
@@ -30475,8 +30475,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Lobachevsky State University of Nizhni Novgorod',
                 'country' => 'Russian Federation',
                 'region' => 'Europe',
@@ -30504,8 +30504,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Lodz University of Technology',
                 'country' => 'Poland',
                 'region' => 'Europe',
@@ -30533,8 +30533,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'London Metropolitan University',
                 'country' => 'United Kingdom',
                 'region' => 'Europe',
@@ -30562,8 +30562,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Loyola University Chicago',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -30591,8 +30591,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '901-950',
+                'rank_2026' => '1003',
+                'previous_rank' => '906',
                 'institution_name' => 'Makerere University',
                 'country' => 'Uganda',
                 'region' => 'Africa',
@@ -30620,8 +30620,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '1003',
+                'previous_rank' => '960',
                 'institution_name' => 'Mansoura University',
                 'country' => 'Egypt',
                 'region' => 'Africa',
@@ -30649,8 +30649,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Marmara University',
                 'country' => 'Türkiye',
                 'region' => 'Asia',
@@ -30678,8 +30678,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'MATE Hungarian University of Agriculture and Life Sciences',
                 'country' => 'Hungary',
                 'region' => 'Europe',
@@ -30707,7 +30707,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
+                'rank_2026' => '1003',
                 'previous_rank' => null,
                 'institution_name' => 'Middle East University Jordan',
                 'country' => 'Jordan',
@@ -30736,8 +30736,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Mississippi State University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -30765,8 +30765,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Mustansiriyah University',
                 'country' => 'Iraq',
                 'region' => 'Asia',
@@ -30794,8 +30794,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Mutah University',
                 'country' => 'Jordan',
                 'region' => 'Asia',
@@ -30823,8 +30823,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Mykolas Romeris University',
                 'country' => 'Lithuania',
                 'region' => 'Europe',
@@ -30852,8 +30852,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Narxoz University',
                 'country' => 'Kazakhstan',
                 'region' => 'Asia',
@@ -30881,8 +30881,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '901-950',
+                'rank_2026' => '1003',
+                'previous_rank' => '906',
                 'institution_name' => 'National Research Saratov State University',
                 'country' => 'Russian Federation',
                 'region' => 'Europe',
@@ -30910,8 +30910,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'National Technical University "Kharkiv Polytechnic Institute"',
                 'country' => 'Ukraine',
                 'region' => 'Europe',
@@ -30939,8 +30939,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'National University Lviv Polytechnic',
                 'country' => 'Ukraine',
                 'region' => 'Europe',
@@ -30968,8 +30968,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '901-950',
+                'rank_2026' => '1003',
+                'previous_rank' => '906',
                 'institution_name' => 'Nicolaus Copernicus University',
                 'country' => 'Poland',
                 'region' => 'Europe',
@@ -30997,8 +30997,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '1003',
+                'previous_rank' => '960',
                 'institution_name' => 'Niigata University',
                 'country' => 'Japan',
                 'region' => 'Asia',
@@ -31026,8 +31026,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Northern Arizona University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -31055,8 +31055,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '1003',
+                'previous_rank' => '960',
                 'institution_name' => 'Northern Borders University',
                 'country' => 'Saudi Arabia',
                 'region' => 'Asia',
@@ -31084,8 +31084,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Northwest University (China)',
                 'country' => 'China (Mainland)',
                 'region' => 'Asia',
@@ -31113,7 +31113,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
+                'rank_2026' => '1003',
                 'previous_rank' => null,
                 'institution_name' => 'Notre Dame University-Louaize (NDU)',
                 'country' => 'Lebanon',
@@ -31142,8 +31142,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1003',
+                'previous_rank' => '1207',
                 'institution_name' => 'Obuda University',
                 'country' => 'Hungary',
                 'region' => 'Europe',
@@ -31171,8 +31171,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Ohio University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -31200,8 +31200,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '851-900',
+                'rank_2026' => '1003',
+                'previous_rank' => '867',
                 'institution_name' => 'Pavol Josef Safarik University',
                 'country' => 'Slovakia',
                 'region' => 'Europe',
@@ -31229,8 +31229,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '1003',
+                'previous_rank' => '960',
                 'institution_name' => 'Pontificia Universidad Catolica del Ecuador',
                 'country' => 'Ecuador',
                 'region' => 'Americas',
@@ -31258,8 +31258,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Pontificia Universidade Católica de São Paulo (PUC -SP)',
                 'country' => 'Brazil',
                 'region' => 'Americas',
@@ -31287,8 +31287,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '851-900',
+                'rank_2026' => '1003',
+                'previous_rank' => '867',
                 'institution_name' => 'Poznan University of Life Sciences',
                 'country' => 'Poland',
                 'region' => 'Europe',
@@ -31316,8 +31316,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Poznan University of Technology',
                 'country' => 'Poland',
                 'region' => 'Europe',
@@ -31345,8 +31345,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '1003',
+                'previous_rank' => '960',
                 'institution_name' => 'Rhodes University',
                 'country' => 'South Africa',
                 'region' => 'Africa',
@@ -31374,8 +31374,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '1003',
+                'previous_rank' => '960',
                 'institution_name' => 'Riga Stradins University',
                 'country' => 'Latvia',
                 'region' => 'Europe',
@@ -31403,8 +31403,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '901-950',
+                'rank_2026' => '1003',
+                'previous_rank' => '906',
                 'institution_name' => 'Ritsumeikan Asia Pacific University',
                 'country' => 'Japan',
                 'region' => 'Asia',
@@ -31432,8 +31432,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Saint-Petersburg Mining University',
                 'country' => 'Russian Federation',
                 'region' => 'Europe',
@@ -31461,7 +31461,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
+                'rank_2026' => '1003',
                 'previous_rank' => null,
                 'institution_name' => 'Samarkand State University',
                 'country' => 'Uzbekistan',
@@ -31490,8 +31490,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'San Diego State University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -31519,8 +31519,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Sebelas Maret University',
                 'country' => 'Indonesia',
                 'region' => 'Asia',
@@ -31548,8 +31548,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1003',
+                'previous_rank' => '1207',
                 'institution_name' => 'Seoul National University of Science and Technology',
                 'country' => 'Republic of Korea',
                 'region' => 'Asia',
@@ -31577,8 +31577,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Sheffield Hallam University',
                 'country' => 'United Kingdom',
                 'region' => 'Europe',
@@ -31606,8 +31606,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Siberian Federal University',
                 'country' => 'Russian Federation',
                 'region' => 'Europe',
@@ -31635,8 +31635,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Silesian University of Technology in Gliwice',
                 'country' => 'Poland',
                 'region' => 'Europe',
@@ -31664,8 +31664,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Slovak University of Technology in Bratislava',
                 'country' => 'Slovakia',
                 'region' => 'Europe',
@@ -31693,8 +31693,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Soonchunhyang University',
                 'country' => 'Republic of Korea',
                 'region' => 'Asia',
@@ -31722,8 +31722,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '1003',
+                'previous_rank' => '960',
                 'institution_name' => 'Southern Federal University',
                 'country' => 'Russian Federation',
                 'region' => 'Europe',
@@ -31751,8 +31751,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Southern Methodist University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -31780,8 +31780,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Southwest University',
                 'country' => 'China (Mainland)',
                 'region' => 'Asia',
@@ -31809,8 +31809,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'SRM Institute of Science and Technology (f.k.a SRM University)',
                 'country' => 'India',
                 'region' => 'Asia',
@@ -31838,7 +31838,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
+                'rank_2026' => '1003',
                 'previous_rank' => null,
                 'institution_name' => 'Sumgait State University',
                 'country' => 'Azerbaijan',
@@ -31867,8 +31867,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Sumy State University',
                 'country' => 'Ukraine',
                 'region' => 'Europe',
@@ -31896,8 +31896,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Sungshin Women\'s University',
                 'country' => 'Republic of Korea',
                 'region' => 'Asia',
@@ -31925,8 +31925,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Széchenyi István University',
                 'country' => 'Hungary',
                 'region' => 'Europe',
@@ -31954,7 +31954,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
+                'rank_2026' => '1003',
                 'previous_rank' => null,
                 'institution_name' => 'Tashkent State University of Economics',
                 'country' => 'Uzbekistan',
@@ -31983,8 +31983,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Technical University of Kosice',
                 'country' => 'Slovakia',
                 'region' => 'Europe',
@@ -32012,8 +32012,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Technical University of Ostrava',
                 'country' => 'Czechia',
                 'region' => 'Europe',
@@ -32041,8 +32041,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Telkom University (aka Telkom Institute of Technology)',
                 'country' => 'Indonesia',
                 'region' => 'Asia',
@@ -32070,8 +32070,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1003',
+                'previous_rank' => '1207',
                 'institution_name' => 'The City College of New York',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -32099,8 +32099,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'The Federal University of Sao Carlos, UFSCar',
                 'country' => 'Brazil',
                 'region' => 'Americas',
@@ -32128,8 +32128,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'The Hashemite University',
                 'country' => 'Jordan',
                 'region' => 'Asia',
@@ -32157,8 +32157,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Tokyo Metropolitan University',
                 'country' => 'Japan',
                 'region' => 'Asia',
@@ -32186,8 +32186,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidad Andrés Bello - UNAB',
                 'country' => 'Chile',
                 'region' => 'Americas',
@@ -32215,7 +32215,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
+                'rank_2026' => '1003',
                 'previous_rank' => null,
                 'institution_name' => 'Universidad Argentina de la Empresa -UADE',
                 'country' => 'Argentina',
@@ -32244,8 +32244,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidad Austral de Chile',
                 'country' => 'Chile',
                 'region' => 'Americas',
@@ -32273,8 +32273,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidad de Castilla-La Mancha',
                 'country' => 'Spain',
                 'region' => 'Europe',
@@ -32302,8 +32302,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidad de Guadalajara (UDG)',
                 'country' => 'Mexico',
                 'region' => 'Americas',
@@ -32331,8 +32331,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidad de las Américas Puebla (UDLAP)',
                 'country' => 'Mexico',
                 'region' => 'Americas',
@@ -32360,8 +32360,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '1003',
+                'previous_rank' => '960',
                 'institution_name' => 'Universidad de León',
                 'country' => 'Spain',
                 'region' => 'Europe',
@@ -32389,8 +32389,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidad de Puerto Rico',
                 'country' => 'Puerto Rico',
                 'region' => 'Americas',
@@ -32418,8 +32418,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '1003',
+                'previous_rank' => '960',
                 'institution_name' => 'Universidad de San Andrés',
                 'country' => 'Argentina',
                 'region' => 'Americas',
@@ -32447,8 +32447,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidad de Talca',
                 'country' => 'Chile',
                 'region' => 'Americas',
@@ -32476,8 +32476,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidad del Valle',
                 'country' => 'Colombia',
                 'region' => 'Americas',
@@ -32505,8 +32505,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidad Diego Portales',
                 'country' => 'Chile',
                 'region' => 'Americas',
@@ -32534,8 +32534,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidad ICESI',
                 'country' => 'Colombia',
                 'region' => 'Americas',
@@ -32563,8 +32563,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '1003',
+                'previous_rank' => '960',
                 'institution_name' => 'Universidad Nacional de Rosario',
                 'country' => 'Argentina',
                 'region' => 'Americas',
@@ -32592,8 +32592,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '851-900',
+                'rank_2026' => '1003',
+                'previous_rank' => '867',
                 'institution_name' => 'Universidad ORT Uruguay',
                 'country' => 'Uruguay',
                 'region' => 'Americas',
@@ -32621,8 +32621,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidad Peruana Cayetano Heredia',
                 'country' => 'Peru',
                 'region' => 'Americas',
@@ -32650,8 +32650,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '901-950',
+                'rank_2026' => '1003',
+                'previous_rank' => '906',
                 'institution_name' => 'Universidad Pontificia Bolivariana',
                 'country' => 'Colombia',
                 'region' => 'Americas',
@@ -32679,8 +32679,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidad Rey Juan Carlos',
                 'country' => 'Spain',
                 'region' => 'Europe',
@@ -32708,8 +32708,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidad Simón Bolívar Venezuela',
                 'country' => 'Venezuela (Bolivarian Republic of)',
                 'region' => 'Americas',
@@ -32737,8 +32737,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '1003',
+                'previous_rank' => '960',
                 'institution_name' => 'Universidad Técnica Federico Santa María',
                 'country' => 'Chile',
                 'region' => 'Americas',
@@ -32766,8 +32766,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidade da Coruña',
                 'country' => 'Spain',
                 'region' => 'Europe',
@@ -32795,8 +32795,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidade Federal do Paraná (UFPR)',
                 'country' => 'Brazil',
                 'region' => 'Americas',
@@ -32824,8 +32824,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universita\' degli Studi di Napoli "Parthenope"',
                 'country' => 'Italy',
                 'region' => 'Europe',
@@ -32853,8 +32853,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Università degli Studi di Udine',
                 'country' => 'Italy',
                 'region' => 'Europe',
@@ -32882,8 +32882,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universita degli Studi "G. D\'Annunzio" Chieti-Pescara',
                 'country' => 'Italy',
                 'region' => 'Europe',
@@ -32911,8 +32911,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1003',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universitas Sumatera Utara',
                 'country' => 'Indonesia',
                 'region' => 'Asia',
@@ -32940,8 +32940,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universität Bielefeld',
                 'country' => 'Germany',
                 'region' => 'Europe',
@@ -32969,8 +32969,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universitat de Lleida',
                 'country' => 'Spain',
                 'region' => 'Europe',
@@ -32998,7 +32998,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
+                'rank_2026' => '1003',
                 'previous_rank' => null,
                 'institution_name' => 'Universitat Jaume I',
                 'country' => 'Spain',
@@ -33027,7 +33027,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
+                'rank_2026' => '1003',
                 'previous_rank' => null,
                 'institution_name' => 'Université de Bretagne Occidentale (UBO)',
                 'country' => 'France',
@@ -33056,8 +33056,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Université de Sfax',
                 'country' => 'Tunisia',
                 'region' => 'Africa',
@@ -33085,8 +33085,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Université Lumière Lyon 2',
                 'country' => 'France',
                 'region' => 'Europe',
@@ -33114,8 +33114,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '901-950',
+                'rank_2026' => '1003',
+                'previous_rank' => '906',
                 'institution_name' => 'Université Paris 2 Panthéon-Assas',
                 'country' => 'France',
                 'region' => 'Europe',
@@ -33143,8 +33143,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '1003',
+                'previous_rank' => '960',
                 'institution_name' => 'Université Sorbonne Paris Nord',
                 'country' => 'France',
                 'region' => 'Europe',
@@ -33172,8 +33172,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '1003',
+                'previous_rank' => '960',
                 'institution_name' => 'Université Toulouse 1, Capitole',
                 'country' => 'France',
                 'region' => 'Europe',
@@ -33201,8 +33201,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1003',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universiti Malaysia Perlis (UniMAP)',
                 'country' => 'Malaysia',
                 'region' => 'Asia',
@@ -33230,8 +33230,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universiti Malaysia Sarawak (UNIMAS)',
                 'country' => 'Malaysia',
                 'region' => 'Asia',
@@ -33259,8 +33259,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universiti Tun Hussein Onn University of Malaysia (UTHM)',
                 'country' => 'Malaysia',
                 'region' => 'Asia',
@@ -33288,8 +33288,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '901-950',
+                'rank_2026' => '1003',
+                'previous_rank' => '906',
                 'institution_name' => 'University of Alabama, Birmingham',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -33317,7 +33317,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
+                'rank_2026' => '1003',
                 'previous_rank' => null,
                 'institution_name' => 'University of Anbar',
                 'country' => 'Iraq',
@@ -33346,8 +33346,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of Arkansas Fayetteville',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -33375,7 +33375,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
+                'rank_2026' => '1003',
                 'previous_rank' => null,
                 'institution_name' => 'University of Balamand',
                 'country' => 'Lebanon',
@@ -33404,8 +33404,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '1003',
+                'previous_rank' => '960',
                 'institution_name' => 'University of Central Lancashire',
                 'country' => 'United Kingdom',
                 'region' => 'Europe',
@@ -33433,8 +33433,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '1003',
+                'previous_rank' => '960',
                 'institution_name' => 'University of Colombo',
                 'country' => 'Sri Lanka',
                 'region' => 'Asia',
@@ -33462,8 +33462,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '1003',
+                'previous_rank' => '960',
                 'institution_name' => 'University of Denver',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -33491,8 +33491,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of Deusto',
                 'country' => 'Spain',
                 'region' => 'Europe',
@@ -33520,8 +33520,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '901-950',
+                'rank_2026' => '1003',
+                'previous_rank' => '906',
                 'institution_name' => 'University of East London',
                 'country' => 'United Kingdom',
                 'region' => 'Europe',
@@ -33549,8 +33549,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of Hradec Kralove',
                 'country' => 'Czechia',
                 'region' => 'Europe',
@@ -33578,8 +33578,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of Ibadan',
                 'country' => 'Nigeria',
                 'region' => 'Africa',
@@ -33607,8 +33607,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of Idaho',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -33636,8 +33636,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of Ioannina',
                 'country' => 'Greece',
                 'region' => 'Europe',
@@ -33665,7 +33665,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
+                'rank_2026' => '1003',
                 'previous_rank' => null,
                 'institution_name' => 'University of Isfahan',
                 'country' => 'Iran (Islamic Republic of)',
@@ -33694,8 +33694,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of Karachi',
                 'country' => 'Pakistan',
                 'region' => 'Asia',
@@ -33723,8 +33723,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of Lagos',
                 'country' => 'Nigeria',
                 'region' => 'Africa',
@@ -33752,8 +33752,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of Louisville',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -33781,8 +33781,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of Malaysia Sabah (UMS)',
                 'country' => 'Malaysia',
                 'region' => 'Asia',
@@ -33810,8 +33810,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '851-900',
+                'rank_2026' => '1003',
+                'previous_rank' => '867',
                 'institution_name' => 'University of Mississippi',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -33839,8 +33839,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of Missouri, Kansas City',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -33868,8 +33868,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '901-950',
+                'rank_2026' => '1003',
+                'previous_rank' => '906',
                 'institution_name' => 'University of Murcia',
                 'country' => 'Spain',
                 'region' => 'Europe',
@@ -33897,8 +33897,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '901-950',
+                'rank_2026' => '1003',
+                'previous_rank' => '906',
                 'institution_name' => 'University of Nairobi',
                 'country' => 'Kenya',
                 'region' => 'Africa',
@@ -33926,7 +33926,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
+                'rank_2026' => '1003',
                 'previous_rank' => null,
                 'institution_name' => 'University of Nevada - Reno',
                 'country' => 'United States of America',
@@ -33955,8 +33955,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of New England',
                 'country' => 'Australia',
                 'region' => 'Oceania',
@@ -33984,8 +33984,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of New Hampshire',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -34013,8 +34013,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of North Carolina at Charlotte',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -34042,8 +34042,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '1003',
+                'previous_rank' => '960',
                 'institution_name' => 'University of Parma',
                 'country' => 'Italy',
                 'region' => 'Europe',
@@ -34071,8 +34071,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '1003',
+                'previous_rank' => '960',
                 'institution_name' => 'University of Regina',
                 'country' => 'Canada',
                 'region' => 'Americas',
@@ -34100,8 +34100,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of Rhode Island',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -34129,8 +34129,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of Salento',
                 'country' => 'Italy',
                 'region' => 'Europe',
@@ -34158,8 +34158,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '1003',
+                'previous_rank' => '960',
                 'institution_name' => 'University of South Bohemia',
                 'country' => 'Czechia',
                 'region' => 'Europe',
@@ -34187,8 +34187,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of Tabuk',
                 'country' => 'Saudi Arabia',
                 'region' => 'Asia',
@@ -34216,8 +34216,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of Texas Arlington',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -34245,8 +34245,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of Texas at San Antonio',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -34274,7 +34274,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
+                'rank_2026' => '1003',
                 'previous_rank' => null,
                 'institution_name' => 'University of the Algarve',
                 'country' => 'Portugal',
@@ -34303,8 +34303,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of the Free State',
                 'country' => 'South Africa',
                 'region' => 'Africa',
@@ -34332,8 +34332,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of Toledo',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -34361,8 +34361,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of Tulsa',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -34390,8 +34390,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of Vermont',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -34419,8 +34419,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of Warmia and Mazury in Olsztyn',
                 'country' => 'Poland',
                 'region' => 'Europe',
@@ -34448,8 +34448,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of Wolverhampton',
                 'country' => 'United Kingdom',
                 'region' => 'Europe',
@@ -34477,8 +34477,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of Wyoming',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -34506,8 +34506,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of Zilina',
                 'country' => 'Slovakia',
                 'region' => 'Europe',
@@ -34535,8 +34535,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Utah State University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -34564,7 +34564,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
+                'rank_2026' => '1003',
                 'previous_rank' => null,
                 'institution_name' => 'Van Lang University',
                 'country' => 'Viet Nam',
@@ -34593,8 +34593,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Warsaw University of Life Sciences',
                 'country' => 'Poland',
                 'region' => 'Europe',
@@ -34622,8 +34622,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'West Virginia University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -34651,8 +34651,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'William & Mary',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -34680,8 +34680,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Xi\'an Jiaotong-Liverpool University',
                 'country' => 'China (Mainland)',
                 'region' => 'Asia',
@@ -34709,8 +34709,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '901-950',
+                'rank_2026' => '1003',
+                'previous_rank' => '906',
                 'institution_name' => 'Yerevan State University',
                 'country' => 'Armenia',
                 'region' => 'Asia',
@@ -34738,8 +34738,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '901-950',
+                'rank_2026' => '1003',
+                'previous_rank' => '906',
                 'institution_name' => 'Yokohama City University',
                 'country' => 'Japan',
                 'region' => 'Asia',
@@ -34767,8 +34767,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1003',
+                'previous_rank' => '1003',
                 'institution_name' => 'Yokohama National University',
                 'country' => 'Japan',
                 'region' => 'Asia',
@@ -34796,8 +34796,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1001-1200',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1003',
+                'previous_rank' => '1207',
                 'institution_name' => 'Yuan Ze University',
                 'country' => 'Taiwan',
                 'region' => 'Asia',
@@ -34825,7 +34825,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'ADA University',
                 'country' => 'Azerbaijan',
@@ -34854,7 +34854,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'Ahmadu Bello University, Zaria',
                 'country' => 'Nigeria',
@@ -34883,7 +34883,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'Al Zaytoonah University',
                 'country' => 'Jordan',
@@ -34912,8 +34912,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Al-Balqa Applied University',
                 'country' => 'Jordan',
                 'region' => 'Asia',
@@ -34941,7 +34941,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'Amman Arab University',
                 'country' => 'Jordan',
@@ -34970,7 +34970,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'Ashoka University',
                 'country' => 'India',
@@ -34999,8 +34999,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Ataturk University',
                 'country' => 'Türkiye',
                 'region' => 'Asia',
@@ -35028,8 +35028,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Bahauddin Zakariya University',
                 'country' => 'Pakistan',
                 'region' => 'Asia',
@@ -35057,8 +35057,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Beijing Foreign Studies University',
                 'country' => 'China (Mainland)',
                 'region' => 'Asia',
@@ -35086,8 +35086,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Beijing University of Chinese Medicine',
                 'country' => 'China (Mainland)',
                 'region' => 'Asia',
@@ -35115,8 +35115,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Benemérita Universidad Autónoma de Puebla',
                 'country' => 'Mexico',
                 'region' => 'Americas',
@@ -35144,7 +35144,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'Beni-Suef University',
                 'country' => 'Egypt',
@@ -35173,8 +35173,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Birzeit university',
                 'country' => 'Palestine',
                 'region' => 'Asia',
@@ -35202,8 +35202,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'BRAC University',
                 'country' => 'Bangladesh',
                 'region' => 'Asia',
@@ -35231,8 +35231,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'British University in Egypt',
                 'country' => 'Egypt',
                 'region' => 'Africa',
@@ -35260,8 +35260,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Brock University',
                 'country' => 'Canada',
                 'region' => 'Americas',
@@ -35289,7 +35289,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => '1401+',
                 'institution_name' => 'California Polytechnic State University',
                 'country' => 'United States of America',
@@ -35318,7 +35318,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'Can Tho University',
                 'country' => 'Viet Nam',
@@ -35347,8 +35347,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Canterbury Christ Church University',
                 'country' => 'United Kingdom',
                 'region' => 'Europe',
@@ -35376,8 +35376,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Chang Jung Christian University',
                 'country' => 'Taiwan',
                 'region' => 'Asia',
@@ -35405,8 +35405,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'China University of Political Science and Law',
                 'country' => 'China (Mainland)',
                 'region' => 'Asia',
@@ -35434,8 +35434,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Chitkara University',
                 'country' => 'India',
                 'region' => 'Asia',
@@ -35463,8 +35463,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Cukurova University',
                 'country' => 'Türkiye',
                 'region' => 'Asia',
@@ -35492,8 +35492,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Damascus University',
                 'country' => 'Syrian Arab Republic',
                 'region' => 'Asia',
@@ -35521,7 +35521,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'Delta University for Science & Technology',
                 'country' => 'Egypt',
@@ -35550,8 +35550,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Dokuz Eylül Üniversitesi',
                 'country' => 'Türkiye',
                 'region' => 'Asia',
@@ -35579,8 +35579,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Doshisha University',
                 'country' => 'Japan',
                 'region' => 'Asia',
@@ -35608,8 +35608,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Erciyes Üniversitesi',
                 'country' => 'Türkiye',
                 'region' => 'Asia',
@@ -35637,8 +35637,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Feng Chia University',
                 'country' => 'Taiwan',
                 'region' => 'Asia',
@@ -35666,8 +35666,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Fu Jen Catholic University',
                 'country' => 'Taiwan',
                 'region' => 'Asia',
@@ -35695,7 +35695,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'Galgotias University',
                 'country' => 'India',
@@ -35724,8 +35724,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'German university in Cairo',
                 'country' => 'Egypt',
                 'region' => 'Africa',
@@ -35753,8 +35753,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Gunma University',
                 'country' => 'Japan',
                 'region' => 'Asia',
@@ -35782,8 +35782,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Hanoi University of Science and Technology',
                 'country' => 'Viet Nam',
                 'region' => 'Asia',
@@ -35811,8 +35811,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Helwan University',
                 'country' => 'Egypt',
                 'region' => 'Africa',
@@ -35840,7 +35840,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'Industrial University of Ho Chi Minh City',
                 'country' => 'Viet Nam',
@@ -35869,7 +35869,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'Institut Teknologi Nasional Bandung (ITENAS Bandung)',
                 'country' => 'Indonesia',
@@ -35898,8 +35898,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Instituto Tecnológico de Santo Domingo (INTEC)',
                 'country' => 'Dominican Republic',
                 'region' => 'Americas',
@@ -35927,8 +35927,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'International Christian University',
                 'country' => 'Japan',
                 'region' => 'Asia',
@@ -35956,8 +35956,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'International Islamic University Islamabad (IIU)',
                 'country' => 'Pakistan',
                 'region' => 'Asia',
@@ -35985,7 +35985,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'Islamic Azad University',
                 'country' => 'Iran (Islamic Republic of)',
@@ -36014,8 +36014,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Islamic University of Madinah',
                 'country' => 'Saudi Arabia',
                 'region' => 'Asia',
@@ -36043,7 +36043,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'Islamic University of Technology',
                 'country' => 'Bangladesh',
@@ -36072,8 +36072,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Istanbul Aydin University',
                 'country' => 'Türkiye',
                 'region' => 'Asia',
@@ -36101,8 +36101,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Ivan Franko National University of Lviv',
                 'country' => 'Ukraine',
                 'region' => 'Europe',
@@ -36130,8 +36130,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Izmir Yüksek Teknoloji Enstitüsü (IYTE)',
                 'country' => 'Türkiye',
                 'region' => 'Asia',
@@ -36159,8 +36159,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Jahangirnagar University',
                 'country' => 'Bangladesh',
                 'region' => 'Asia',
@@ -36188,8 +36188,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Jeju National University',
                 'country' => 'Republic of Korea',
                 'region' => 'Asia',
@@ -36217,8 +36217,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Kagoshima University',
                 'country' => 'Japan',
                 'region' => 'Asia',
@@ -36246,8 +36246,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Kazakh Ablai khan University of International Relations and World Languages',
                 'country' => 'Kazakhstan',
                 'region' => 'Asia',
@@ -36278,8 +36278,8 @@ class  WorldUniversityRankingSeeder extends Seeder
 
         DB::table('world_university_rankings')->insert([
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Kharkiv National University of Radio Electronics',
                 'country' => 'Ukraine',
                 'region' => 'Europe',
@@ -36307,8 +36307,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'King Mongkut\'s Institute of Technology Ladkrabang',
                 'country' => 'Thailand',
                 'region' => 'Asia',
@@ -36336,8 +36336,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'King Mongkut\'s University of Technology North Bangkok',
                 'country' => 'Thailand',
                 'region' => 'Asia',
@@ -36365,8 +36365,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Kwame Nkrumah University of Science and Technology',
                 'country' => 'Ghana',
                 'region' => 'Africa',
@@ -36394,8 +36394,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Kyoto Institute of Technology',
                 'country' => 'Japan',
                 'region' => 'Asia',
@@ -36423,7 +36423,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'Kyrgyz National University',
                 'country' => 'Kyrgyzstan',
@@ -36452,8 +36452,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Kyrgyz State Technical University named after I. Razzakov',
                 'country' => 'Kyrgyzstan',
                 'region' => 'Asia',
@@ -36481,7 +36481,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'Latvia University of Life Sciences and Technologies',
                 'country' => 'Latvia',
@@ -36510,8 +36510,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Marquette University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -36539,8 +36539,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Meiji University',
                 'country' => 'Japan',
                 'region' => 'Asia',
@@ -36568,8 +36568,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Miami University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -36597,8 +36597,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Nagoya Institute of Technology (NIT)',
                 'country' => 'Japan',
                 'region' => 'Asia',
@@ -36626,7 +36626,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'National Chin-Yi University of Technology',
                 'country' => 'Taiwan',
@@ -36655,8 +36655,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'National Dong Hwa University',
                 'country' => 'Taiwan',
                 'region' => 'Asia',
@@ -36684,8 +36684,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'National Research University Moscow Power Engineering Institute (MPEI)',
                 'country' => 'Russian Federation',
                 'region' => 'Europe',
@@ -36713,8 +36713,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'National Taiwan Ocean University',
                 'country' => 'Taiwan',
                 'region' => 'Asia',
@@ -36742,8 +36742,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'National University of Kyiv-Mohyla Academy (NaUKMA)',
                 'country' => 'Ukraine',
                 'region' => 'Europe',
@@ -36771,7 +36771,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'New Mexico State University',
                 'country' => 'United States of America',
@@ -36800,8 +36800,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Novosibirsk State Technical University',
                 'country' => 'Russian Federation',
                 'region' => 'Europe',
@@ -36829,8 +36829,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Odessa I.I.Mechnikov National University',
                 'country' => 'Ukraine',
                 'region' => 'Europe',
@@ -36858,8 +36858,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Osmania University, Hyderabad',
                 'country' => 'India',
                 'region' => 'Asia',
@@ -36887,7 +36887,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'Ozyegin University',
                 'country' => 'Türkiye',
@@ -36916,7 +36916,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'Palestine Technical University - Kadoorie',
                 'country' => 'Palestine',
@@ -36945,8 +36945,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Pondicherry University',
                 'country' => 'India',
                 'region' => 'Asia',
@@ -36974,8 +36974,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Pontificia Universidade Católica do Rio Grande do Sul',
                 'country' => 'Brazil',
                 'region' => 'Americas',
@@ -37003,8 +37003,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Portland State University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -37032,7 +37032,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'Pratt Institute',
                 'country' => 'United States of America',
@@ -37061,8 +37061,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Pukyong National University',
                 'country' => 'Republic of Korea',
                 'region' => 'Asia',
@@ -37090,8 +37090,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '951-1000',
+                'rank_2026' => '1207',
+                'previous_rank' => '960',
                 'institution_name' => 'Queen Margaret University , Edinburgh',
                 'country' => 'United Kingdom',
                 'region' => 'Europe',
@@ -37119,7 +37119,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'Riphah International University',
                 'country' => 'Pakistan',
@@ -37148,8 +37148,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Saint-Petersburg Electrotechnical University LETI',
                 'country' => 'Russian Federation',
                 'region' => 'Europe',
@@ -37177,8 +37177,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Saken Seifullin Kazakh Agrotechnical University',
                 'country' => 'Kazakhstan',
                 'region' => 'Asia',
@@ -37206,8 +37206,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Samara National Research University (Samara University)',
                 'country' => 'Russian Federation',
                 'region' => 'Europe',
@@ -37235,8 +37235,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Sathyabama Institute of Science and Technology',
                 'country' => 'India',
                 'region' => 'Asia',
@@ -37264,8 +37264,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Seattle University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -37293,7 +37293,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'Selcuk University',
                 'country' => 'Türkiye',
@@ -37322,8 +37322,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Shanghai International Studies University',
                 'country' => 'China (Mainland)',
                 'region' => 'Asia',
@@ -37351,8 +37351,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Shanghai University of Finance and Economics',
                 'country' => 'China (Mainland)',
                 'region' => 'Asia',
@@ -37380,8 +37380,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Shinshu University',
                 'country' => 'Japan',
                 'region' => 'Asia',
@@ -37409,7 +37409,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'Shiv Nadar University',
                 'country' => 'India',
@@ -37438,8 +37438,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Siksha ‘O’ Anusandhan (Deemed to be University), SOA',
                 'country' => 'India',
                 'region' => 'Asia',
@@ -37467,8 +37467,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Slovak University of Agriculture in Nitra',
                 'country' => 'Slovakia',
                 'region' => 'Europe',
@@ -37496,8 +37496,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Sookmyung Women\'s University',
                 'country' => 'Republic of Korea',
                 'region' => 'Asia',
@@ -37525,8 +37525,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Suranaree University of Technology',
                 'country' => 'Thailand',
                 'region' => 'Asia',
@@ -37554,8 +37554,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Taibah University',
                 'country' => 'Saudi Arabia',
                 'region' => 'Asia',
@@ -37583,8 +37583,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Tamkang University',
                 'country' => 'Taiwan',
                 'region' => 'Asia',
@@ -37612,8 +37612,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Tanta University',
                 'country' => 'Egypt',
                 'region' => 'Africa',
@@ -37641,7 +37641,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'Tashkent State Transport University',
                 'country' => 'Uzbekistan',
@@ -37670,8 +37670,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Technical University of Cluj-Napoca',
                 'country' => 'Romania',
                 'region' => 'Europe',
@@ -37699,8 +37699,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Technical University of Liberec',
                 'country' => 'Czechia',
                 'region' => 'Europe',
@@ -37728,8 +37728,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Technische Universität Kaiserslautern',
                 'country' => 'Germany',
                 'region' => 'Europe',
@@ -37757,8 +37757,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Tecnológico de Costa Rica (TEC)',
                 'country' => 'Costa Rica',
                 'region' => 'Americas',
@@ -37786,8 +37786,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'The "Gheorghe Asachi" Technical University of Iasi',
                 'country' => 'Romania',
                 'region' => 'Europe',
@@ -37815,8 +37815,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'The Russian Presidential Academy of National Economy and Public Administration',
                 'country' => 'Russian Federation',
                 'region' => 'Europe',
@@ -37844,8 +37844,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'The University of Northampton',
                 'country' => 'United Kingdom',
                 'region' => 'Europe',
@@ -37873,7 +37873,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => '1401+',
                 'institution_name' => 'The University of Notre Dame, Australia',
                 'country' => 'Australia',
@@ -37902,7 +37902,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'Tishk International University',
                 'country' => 'Iraq',
@@ -37931,8 +37931,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Tokai University',
                 'country' => 'Japan',
                 'region' => 'Asia',
@@ -37960,8 +37960,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Tokushima University',
                 'country' => 'Japan',
                 'region' => 'Asia',
@@ -37989,8 +37989,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Tomas Bata University in Zlin',
                 'country' => 'Czechia',
                 'region' => 'Europe',
@@ -38018,8 +38018,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Transilvania University of Brasov',
                 'country' => 'Romania',
                 'region' => 'Europe',
@@ -38047,8 +38047,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Tunghai University',
                 'country' => 'Taiwan',
                 'region' => 'Asia',
@@ -38076,7 +38076,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'UCAM Universidad Católica San Antonio de Murcia',
                 'country' => 'Spain',
@@ -38105,8 +38105,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidad Autónoma Chapingo',
                 'country' => 'Mexico',
                 'region' => 'Americas',
@@ -38134,8 +38134,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universidad Autónoma de Guadalajara',
                 'country' => 'Mexico',
                 'region' => 'Americas',
@@ -38163,8 +38163,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidad Autónoma de Nuevo León (UANL)',
                 'country' => 'Mexico',
                 'region' => 'Americas',
@@ -38192,8 +38192,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universidad Autónoma del Estado de Hidalgo',
                 'country' => 'Mexico',
                 'region' => 'Americas',
@@ -38221,8 +38221,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidad Autónoma del Estado de México',
                 'country' => 'Mexico',
                 'region' => 'Americas',
@@ -38250,8 +38250,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universidad Católica del Norte',
                 'country' => 'Chile',
                 'region' => 'Americas',
@@ -38279,8 +38279,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '901-950',
+                'rank_2026' => '1207',
+                'previous_rank' => '906',
                 'institution_name' => 'Universidad Central Marta Abreu de Las Villas',
                 'country' => 'Cuba',
                 'region' => 'Americas',
@@ -38308,7 +38308,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'Universidad Cientifica del Sur',
                 'country' => 'Peru',
@@ -38337,8 +38337,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidad de la Frontera (UFRO)',
                 'country' => 'Chile',
                 'region' => 'Americas',
@@ -38366,8 +38366,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universidad de Las Américas (UDLA) Ecuador',
                 'country' => 'Ecuador',
                 'region' => 'Americas',
@@ -38395,8 +38395,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidad de Lima',
                 'country' => 'Peru',
                 'region' => 'Americas',
@@ -38424,8 +38424,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidad de los Andes Mérida',
                 'country' => 'Venezuela (Bolivarian Republic of)',
                 'region' => 'Americas',
@@ -38453,8 +38453,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universidad de Monterrey',
                 'country' => 'Mexico',
                 'region' => 'Americas',
@@ -38482,8 +38482,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universidad de Valparaíso',
                 'country' => 'Chile',
                 'region' => 'Americas',
@@ -38511,8 +38511,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universidad del Desarrollo',
                 'country' => 'Chile',
                 'region' => 'Americas',
@@ -38540,8 +38540,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidad del Norte',
                 'country' => 'Colombia',
                 'region' => 'Americas',
@@ -38569,7 +38569,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'Universidad del Valle de Guatemala (UVG)',
                 'country' => 'Guatemala',
@@ -38598,8 +38598,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universidad Industrial de Santander',
                 'country' => 'Colombia',
                 'region' => 'Americas',
@@ -38627,8 +38627,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidad Jesuita de Guadalajara - ITESO',
                 'country' => 'Mexico',
                 'region' => 'Americas',
@@ -38656,8 +38656,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universidad Nacional Costa Rica',
                 'country' => 'Costa Rica',
                 'region' => 'Americas',
@@ -38685,8 +38685,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidad Nacional de Asunción',
                 'country' => 'Paraguay',
                 'region' => 'Americas',
@@ -38714,8 +38714,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidad Nacional de Cuyo',
                 'country' => 'Argentina',
                 'region' => 'Americas',
@@ -38743,8 +38743,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universidad Nacional de Ingeniería Peru',
                 'country' => 'Peru',
                 'region' => 'Americas',
@@ -38772,8 +38772,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidad Nacional de San Luis',
                 'country' => 'Argentina',
                 'region' => 'Americas',
@@ -38801,8 +38801,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidad Nacional del Centro de la Provincia de Buenos Aires',
                 'country' => 'Argentina',
                 'region' => 'Americas',
@@ -38830,8 +38830,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universidad Nacional del Litoral',
                 'country' => 'Argentina',
                 'region' => 'Americas',
@@ -38859,8 +38859,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universidad Peruana de Ciencias Aplicadas (UPC)',
                 'country' => 'Peru',
                 'region' => 'Americas',
@@ -38888,8 +38888,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidad Tecnológica de Panamá (UTP)',
                 'country' => 'Panama',
                 'region' => 'Americas',
@@ -38917,8 +38917,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidad Tecnológica Nacional (UTN)',
                 'country' => 'Argentina',
                 'region' => 'Americas',
@@ -38946,8 +38946,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universidade do Estado do Rio de Janeiro (UERJ)',
                 'country' => 'Brazil',
                 'region' => 'Americas',
@@ -38975,8 +38975,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universidade Federal da Bahia',
                 'country' => 'Brazil',
                 'region' => 'Americas',
@@ -39004,8 +39004,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidade Federal de Pernambuco (UFPE)',
                 'country' => 'Brazil',
                 'region' => 'Americas',
@@ -39033,8 +39033,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universidade Federal de Santa Maria',
                 'country' => 'Brazil',
                 'region' => 'Americas',
@@ -39062,8 +39062,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universidade Federal de Viçosa',
                 'country' => 'Brazil',
                 'region' => 'Americas',
@@ -39091,8 +39091,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universidade Federal do Ceará (UFC)',
                 'country' => 'Brazil',
                 'region' => 'Americas',
@@ -39120,8 +39120,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universidade Federal Fluminense',
                 'country' => 'Brazil',
                 'region' => 'Americas',
@@ -39149,8 +39149,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universidade Presbiteriana Mackenzie',
                 'country' => 'Brazil',
                 'region' => 'Americas',
@@ -39178,7 +39178,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'Universita\' degli Studi di Urbino Carlo Bo',
                 'country' => 'Italy',
@@ -39207,8 +39207,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universitas Muhammadiyah Yogyakarta (UMY)',
                 'country' => 'Indonesia',
                 'region' => 'Asia',
@@ -39236,8 +39236,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universitas Negeri Yogyakarta',
                 'country' => 'Indonesia',
                 'region' => 'Asia',
@@ -39265,8 +39265,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universitas Pendidikan Indonesia',
                 'country' => 'Indonesia',
                 'region' => 'Asia',
@@ -39294,7 +39294,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'Universitas Trisakti',
                 'country' => 'Indonesia',
@@ -39323,8 +39323,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Universität Siegen',
                 'country' => 'Germany',
                 'region' => 'Europe',
@@ -39352,8 +39352,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Université de Caen Normandie',
                 'country' => 'France',
                 'region' => 'Europe',
@@ -39381,8 +39381,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Université de Limoges',
                 'country' => 'France',
                 'region' => 'Europe',
@@ -39410,8 +39410,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Université de Poitiers',
                 'country' => 'France',
                 'region' => 'Europe',
@@ -39439,8 +39439,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Université de Sousse',
                 'country' => 'Tunisia',
                 'region' => 'Africa',
@@ -39468,8 +39468,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Université de Tunis',
                 'country' => 'Tunisia',
                 'region' => 'Africa',
@@ -39497,7 +39497,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'Université Ibn Tofail',
                 'country' => 'Morocco',
@@ -39526,8 +39526,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Université Jean Moulin Lyon 3',
                 'country' => 'France',
                 'region' => 'Europe',
@@ -39555,8 +39555,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Université Mohammed V de Rabat',
                 'country' => 'Morocco',
                 'region' => 'Africa',
@@ -39584,8 +39584,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Université Paris-Nanterre',
                 'country' => 'France',
                 'region' => 'Europe',
@@ -39613,8 +39613,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'Université Paul-Valéry Montpellier 3',
                 'country' => 'France',
                 'region' => 'Europe',
@@ -39642,8 +39642,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universiti Kuala Lumpur (UniKL)',
                 'country' => 'Malaysia',
                 'region' => 'Asia',
@@ -39671,7 +39671,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'Universiti Malaysia Kelantan',
                 'country' => 'Malaysia',
@@ -39700,8 +39700,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universiti Teknikal Malaysia Melaka (UTeM)',
                 'country' => 'Malaysia',
                 'region' => 'Asia',
@@ -39729,8 +39729,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'University of Babylon',
                 'country' => 'Iraq',
                 'region' => 'Asia',
@@ -39758,8 +39758,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'University of Basrah',
                 'country' => 'Iraq',
                 'region' => 'Asia',
@@ -39787,8 +39787,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of Derby',
                 'country' => 'United Kingdom',
                 'region' => 'Europe',
@@ -39816,8 +39816,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'University of International Business and Economics',
                 'country' => 'China (Mainland)',
                 'region' => 'Asia',
@@ -39845,7 +39845,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'University of Kerbala',
                 'country' => 'Iraq',
@@ -39874,8 +39874,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of Khartoum',
                 'country' => 'Sudan',
                 'region' => 'Africa',
@@ -39903,8 +39903,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'University of Kufa',
                 'country' => 'Iraq',
                 'region' => 'Asia',
@@ -39932,7 +39932,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'University of Management and Technology (UMT), Pakistan',
                 'country' => 'Pakistan',
@@ -39961,8 +39961,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'University of Memphis',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -39990,8 +39990,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'University of Miskolc',
                 'country' => 'Hungary',
                 'region' => 'Europe',
@@ -40019,7 +40019,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'University of Mosul',
                 'country' => 'Iraq',
@@ -40048,8 +40048,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'University of North Carolina at Greensboro',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -40077,8 +40077,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of Novi Sad',
                 'country' => 'Serbia',
                 'region' => 'Europe',
@@ -40106,8 +40106,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'University of Ostrava',
                 'country' => 'Czechia',
                 'region' => 'Europe',
@@ -40135,8 +40135,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'University of Pannonia',
                 'country' => 'Hungary',
                 'region' => 'Europe',
@@ -40164,8 +40164,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'University of Pardubice',
                 'country' => 'Czechia',
                 'region' => 'Europe',
@@ -40193,8 +40193,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'University of Peradeniya',
                 'country' => 'Sri Lanka',
                 'region' => 'Asia',
@@ -40222,7 +40222,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'University of Petra',
                 'country' => 'Jordan',
@@ -40251,8 +40251,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'University of Primorska',
                 'country' => 'Slovenia',
                 'region' => 'Europe',
@@ -40280,8 +40280,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'University of Rajshahi',
                 'country' => 'Bangladesh',
                 'region' => 'Asia',
@@ -40309,8 +40309,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'University of Rijeka',
                 'country' => 'Croatia',
                 'region' => 'Europe',
@@ -40338,8 +40338,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'University of San Diego',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -40367,8 +40367,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'University of San Francisco',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -40396,8 +40396,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of Sarajevo',
                 'country' => 'Bosnia and Herzegovina',
                 'region' => 'Europe',
@@ -40425,8 +40425,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'University of Silesia in Katowice',
                 'country' => 'Poland',
                 'region' => 'Europe',
@@ -40454,8 +40454,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'University of South Alabama (USA)',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -40483,8 +40483,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'University of Split',
                 'country' => 'Croatia',
                 'region' => 'Europe',
@@ -40512,8 +40512,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'University of Texas El Paso',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -40541,8 +40541,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'University of Tyumen',
                 'country' => 'Russian Federation',
                 'region' => 'Europe',
@@ -40570,8 +40570,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'University of Wisconsin Milwaukee',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -40599,8 +40599,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'University POLITEHNICA of Bucharest',
                 'country' => 'Romania',
                 'region' => 'Europe',
@@ -40628,8 +40628,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1001-1200',
+                'rank_2026' => '1207',
+                'previous_rank' => '1003',
                 'institution_name' => 'University Toulouse – Jean Jaurès',
                 'country' => 'France',
                 'region' => 'Europe',
@@ -40657,8 +40657,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'West University of Timisoara',
                 'country' => 'Romania',
                 'region' => 'Europe',
@@ -40686,8 +40686,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Western Michigan University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -40715,7 +40715,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'Yessenov University',
                 'country' => 'Kazakhstan',
@@ -40744,8 +40744,8 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
-                'previous_rank' => '1201-1400',
+                'rank_2026' => '1207',
+                'previous_rank' => '1207',
                 'institution_name' => 'Zagazig University',
                 'country' => 'Egypt',
                 'region' => 'Africa',
@@ -40773,7 +40773,7 @@ class  WorldUniversityRankingSeeder extends Seeder
                 'overall_score' => null
         ],
             [
-                'rank_2026' => '1201-1400',
+                'rank_2026' => '1207',
                 'previous_rank' => null,
                 'institution_name' => 'Zarqa University',
                 'country' => 'Jordan',
@@ -40861,7 +40861,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Anadolu University',
                 'country' => 'Türkiye',
                 'region' => 'Asia',
@@ -40890,7 +40890,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Aoyama Gakuin University',
                 'country' => 'Japan',
                 'region' => 'Asia',
@@ -40948,7 +40948,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Atma Jaya Catholic University Indonesia',
                 'country' => 'Indonesia',
                 'region' => 'Asia',
@@ -40977,7 +40977,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Belarusian State University of Informatics and Radioelectronics',
                 'country' => 'Belarus',
                 'region' => 'Europe',
@@ -41006,7 +41006,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Belgorod State University',
                 'country' => 'Russian Federation',
                 'region' => 'Europe',
@@ -41064,7 +41064,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Central Michigan University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -41093,7 +41093,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Chaoyang University of Technology',
                 'country' => 'Taiwan',
                 'region' => 'Asia',
@@ -41122,7 +41122,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Chittagong University of Engineering and Technology',
                 'country' => 'Bangladesh',
                 'region' => 'Asia',
@@ -41180,7 +41180,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Cleveland State University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -41238,7 +41238,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Escuela Politécnica Nacional',
                 'country' => 'Ecuador',
                 'region' => 'Americas',
@@ -41267,7 +41267,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Harper Adams University',
                 'country' => 'United Kingdom',
                 'region' => 'Europe',
@@ -41296,7 +41296,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Herzen State Pedagogical University of Russia',
                 'country' => 'Russian Federation',
                 'region' => 'Europe',
@@ -41325,7 +41325,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Hongik University',
                 'country' => 'Republic of Korea',
                 'region' => 'Asia',
@@ -41354,7 +41354,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Hue University',
                 'country' => 'Viet Nam',
                 'region' => 'Asia',
@@ -41441,7 +41441,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Islamic University of Indonesia (Universitas Islam Indonesia)',
                 'country' => 'Indonesia',
                 'region' => 'Asia',
@@ -41470,7 +41470,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Istanbul Bilgi Üniversitesi',
                 'country' => 'Türkiye',
                 'region' => 'Asia',
@@ -41528,7 +41528,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Jamia Hamdard, New Delhi',
                 'country' => 'India',
                 'region' => 'Asia',
@@ -41557,7 +41557,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Kazan National Research Technological University',
                 'country' => 'Russian Federation',
                 'region' => 'Europe',
@@ -41586,7 +41586,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Khulna University',
                 'country' => 'Bangladesh',
                 'region' => 'Asia',
@@ -41615,7 +41615,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Khulna University of Engineering and Technology',
                 'country' => 'Bangladesh',
                 'region' => 'Asia',
@@ -41644,7 +41644,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Kindai University (previously Kinki University)',
                 'country' => 'Japan',
                 'region' => 'Asia',
@@ -41673,7 +41673,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Lublin University of Technology',
                 'country' => 'Poland',
                 'region' => 'Europe',
@@ -41818,7 +41818,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Mendeleev University of Chemical Technology of Russia',
                 'country' => 'Russian Federation',
                 'region' => 'Europe',
@@ -41876,7 +41876,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'National Taipei University',
                 'country' => 'Taiwan',
                 'region' => 'Asia',
@@ -41934,7 +41934,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Pavlodar State University named after Toraighyrov',
                 'country' => 'Kazakhstan',
                 'region' => 'Asia',
@@ -41963,7 +41963,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Perm State University',
                 'country' => 'Russian Federation',
                 'region' => 'Europe',
@@ -42021,7 +42021,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Pontificia Universidad Catolica Madre y Maestra (PUCMM)',
                 'country' => 'Dominican Republic',
                 'region' => 'Americas',
@@ -42079,7 +42079,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Rikkyo University',
                 'country' => 'Japan',
                 'region' => 'Asia',
@@ -42137,7 +42137,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'San Francisco State University',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -42369,7 +42369,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Suez Canal University',
                 'country' => 'Egypt',
                 'region' => 'Africa',
@@ -42630,7 +42630,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universidad de Panama',
                 'country' => 'Panama',
                 'region' => 'Americas',
@@ -42659,7 +42659,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universidad de Piura',
                 'country' => 'Peru',
                 'region' => 'Americas',
@@ -42688,7 +42688,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universidad de Tarapaca',
                 'country' => 'Chile',
                 'region' => 'Americas',
@@ -42717,7 +42717,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universidad del Bio-Bio',
                 'country' => 'Chile',
                 'region' => 'Americas',
@@ -42746,7 +42746,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universidad del Zulia',
                 'country' => 'Venezuela (Bolivarian Republic of)',
                 'region' => 'Americas',
@@ -42775,7 +42775,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universidad La Salle (ULSA)',
                 'country' => 'Mexico',
                 'region' => 'Americas',
@@ -42804,7 +42804,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universidad Latinoamericana de Ciencia y Tecnología Costa Rica (ULACIT)',
                 'country' => 'Costa Rica',
                 'region' => 'Americas',
@@ -42833,7 +42833,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universidad Metropolitana',
                 'country' => 'Venezuela (Bolivarian Republic of)',
                 'region' => 'Americas',
@@ -42862,7 +42862,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Universidad Nacional Agraria la Molina',
                 'country' => 'Peru',
                 'region' => 'Americas',
@@ -42891,7 +42891,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1205',
                 'institution_name' => 'Universidad Nacional de San Martín (UNSAM)',
                 'country' => 'Argentina',
                 'region' => 'Americas',
@@ -42920,7 +42920,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1204',
                 'institution_name' => 'Universidad Nacional del Sur',
                 'country' => 'Argentina',
                 'region' => 'Americas',
@@ -43007,7 +43007,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1400',
                 'institution_name' => 'Universidade Federal do Rio Grande Do Norte',
                 'country' => 'Brazil',
                 'region' => 'Americas',
@@ -43036,7 +43036,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1201',
                 'institution_name' => 'Università degli studi di Bergamo',
                 'country' => 'Italy',
                 'region' => 'Europe',
@@ -43239,7 +43239,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1400',
                 'institution_name' => 'University of Missouri Saint Louis',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -43326,7 +43326,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1201',
                 'institution_name' => 'University of Sri Jayewardenepura',
                 'country' => 'Sri Lanka',
                 'region' => 'Asia',
@@ -43355,7 +43355,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1203',
                 'institution_name' => 'University of the Pacific',
                 'country' => 'United States of America',
                 'region' => 'Americas',
@@ -43413,7 +43413,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1202',
                 'institution_name' => 'University of West Bohemia',
                 'country' => 'Czechia',
                 'region' => 'Europe',
@@ -43442,7 +43442,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1201',
                 'institution_name' => 'Voronezh State University',
                 'country' => 'Russian Federation',
                 'region' => 'Europe',
@@ -43500,7 +43500,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         ],
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1207',
                 'institution_name' => 'Yamaguchi University',
                 'country' => 'Japan',
                 'region' => 'Asia',
@@ -43532,7 +43532,7 @@ class  WorldUniversityRankingSeeder extends Seeder
         DB::table('world_university_rankings')->insert([
             [
                 'rank_2026' => '1401+',
-                'previous_rank' => '1201-1400',
+                'previous_rank' => '1201',
                 'institution_name' => 'Youngsan University',
                 'country' => 'Republic of Korea',
                 'region' => 'Asia',

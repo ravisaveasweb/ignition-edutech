@@ -16,33 +16,58 @@ class ScholarshipsTable
         return $table
             ->columns([
                 TextColumn::make('name')
-                    ->searchable(),
+                    ->label('Scholarship')
+                    ->searchable()
+                    ->sortable(),
+
                 TextColumn::make('amount')
+                    ->label('Amount')
                     ->numeric()
-                    ->sortable(),
+                    ->sortable()
+                    ->formatStateUsing(
+                        fn($state) => $state !== null
+                            ? '₹' . number_format((float) $state)
+                            : '—'
+                    ),
+
                 TextColumn::make('deadline')
-                    ->date()
+                    ->label('Deadline')
+                    ->date('d M Y')
                     ->sortable(),
+
                 TextColumn::make('created_at')
-                    ->dateTime()
+                    ->label('Created')
+                    ->dateTime('d M Y, h:i A')
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
+
                 TextColumn::make('updated_at')
-                    ->dateTime()
+                    ->label('Updated')
+                    ->dateTime('d M Y, h:i A')
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
+
             ->filters([
                 //
             ])
+
             ->recordActions([
-                EditAction::make(),
-                DeleteAction::make(),
+                EditAction::make()
+                    ->label('Edit'),
+
+                DeleteAction::make()
+                    ->label('Delete'),
             ])
+
             ->toolbarActions([
                 BulkActionGroup::make([
                     DeleteBulkAction::make(),
                 ]),
+            ])
+
+            ->extraAttributes([
+                'class' => 'ign-scholarships-table-scope',
             ]);
     }
 }

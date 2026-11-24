@@ -20,6 +20,7 @@ use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Filament\Support\Assets\Css;
 
+
 class AdminPanelProvider extends PanelProvider
 {
     public function panel(Panel $panel): Panel
@@ -54,17 +55,38 @@ class AdminPanelProvider extends PanelProvider
                     asset('css/filament/filament/university-table.css')
                 ),
 
-                 Css::make(
+                Css::make(
                     'users-table',
                     asset('css/filament/filament/users-table.css')
                 ),
 
-                   Css::make(
-                    'users-table',
+                Css::make(
+                    'ign-blog-posts-table',
                     asset('css/filament/filament/blog-posts-table.css')
+                ),
+
+                Css::make(
+                    'ign-success-stories-table',
+                    asset('css/filament/filament/success-stories-table.css')
+                ),
+
+                Css::make(
+                    'ign-success-story-reviews-table',
+                    asset('css/filament/filament/success-story-reviews-table.css')
+                ),
+
+                Css::make(
+                    'ign-success-story-reviews-table',
+                    asset('css/filament/filament/success-story-reviews-table.css')
+                ),
+
+                Css::make(
+                    'ign-scholarships-table',
+                    asset('css/filament/filament/scholarships-table.css')
                 ),
             ])
 
+            
 
 
             ->navigationGroups([
@@ -85,6 +107,7 @@ class AdminPanelProvider extends PanelProvider
             ->widgets([
                 AccountWidget::class,
                 FilamentInfoWidget::class,
+
             ])
             ->middleware([
                 EncryptCookies::class,

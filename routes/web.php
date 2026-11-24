@@ -16,7 +16,6 @@ use App\Http\Controllers\CollegeNewsController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\StudyIndiaAuthController;
 use App\Http\Controllers\StudyIndiaReviewController;
-
 use App\Http\Controllers\StudyAbroadReviewController;
 use App\Http\Controllers\StudyIndiaController;
 use App\Http\Controllers\SuccessStoryController;

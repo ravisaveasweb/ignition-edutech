@@ -1,0 +1,109 @@
+.ign-scholarships-table-scope {
+    --ign-scholarships-navy: #0a2540;
+    --ign-scholarships-orange: #eb933a;
+    --ign-scholarships-line: #b9c7d4;
+    --ign-scholarships-soft-line: #dce3e9;
+    --ign-scholarships-header: #f4f7fa;
+    --ign-scholarships-hover: #fff8ef;
+}
+
+
+.ign-scholarships-table-scope table {
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+}
+
+
+.ign-scholarships-table-scope table thead th {
+    background: #f4f7fa !important;
+    color: #0a2540 !important;
+    border-right: 1px solid #b9c7d4 !important;
+    border-bottom: 2px solid #b9c7d4 !important;
+    padding: 15px 18px !important;
+    font-weight: 800 !important;
+    white-space: nowrap !important;
+}
+
+.ign-scholarships-table-scope table thead th:last-child {
+    border-right: 0 !important;
+}
+
+
+.ign-scholarships-table-scope table tbody td {
+    background: #fff !important;
+    color: #374151 !important;
+    border-right: 1px solid #b9c7d4 !important;
+    border-bottom: 1px solid #dce3e9 !important;
+    padding: 17px 18px !important;
+}
+
+.ign-scholarships-table-scope table tbody td:last-child {
+    border-right: 0 !important;
+}
+
+
+.ign-scholarships-table-scope table tbody tr:hover td {
+    background: #fff8ef !important;
+}
+
+
+.ign-scholarships-table-scope table tbody td:first-child {
+    color: #0a2540 !important;
+    font-weight: 700 !important;
+}
+
+
+
+.ign-scholarships-table-scope table tbody td:nth-child(2) {
+    color: #0a2540 !important;
+    font-weight: 800 !important;
+    white-space: nowrap !important;
+}
+
+
+
+.ign-scholarships-table-scope table tbody td:nth-child(3) {
+    color: #4b5563 !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+}
+
+
+
+.ign-scholarships-table-scope table tbody td:last-child .fi-icon-btn {
+    border: 1px solid #d7e0e8 !important;
+    border-radius: 8px !important;
+    background: #fff !important;
+    color: #0a2540 !important;
+}
+
+.ign-scholarships-table-scope table tbody td:last-child .fi-icon-btn:hover {
+    background: #0a2540 !important;
+    border-color: #b9c7d4 !important;
+    color: #fff !important;
+}
+
+
+.ign-scholarships-table-scope table tbody td:last-child .fi-icon-btn.text-danger {
+    color: #c2410c !important;
+    border-color: #ead1c0 !important;
+}
+
+.ign-scholarships-table-scope table tbody td:last-child .fi-icon-btn.text-danger:hover {
+    background: #c2410c !important;
+    border-color: #c2410c !important;
+    color: #fff !important;
+}
+
+
+@media(max-width:768px) {
+
+    .ign-scholarships-table-scope table {
+        min-width: 760px !important;
+    }
+
+    .ign-scholarships-table-scope table thead th,
+    .ign-scholarships-table-scope table tbody td {
+        padding: 13px 14px !important;
+    }
+}

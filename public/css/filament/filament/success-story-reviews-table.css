@@ -1,0 +1,206 @@
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-ta-content {
+    border: 1px solid #dbe3ec !important;
+    background: #ffffff !important;
+    overflow-x: auto !important
+}
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-ta-table {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important
+}
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-ta-header-cell {
+    background: #f8fafc !important;
+    border-right: 1px solid #dbe3ec !important;
+    border-bottom: 1px solid #cbd5e1 !important;
+    padding-top: 13px !important;
+    padding-bottom: 13px !important;
+    vertical-align: middle !important
+}
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-ta-header-cell:last-child {
+    border-right: none !important
+}
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-ta-header-cell-label {
+    color: #0a2540 !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.02em
+}
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-ta-cell {
+    border-right: 1px solid #e2e8f0 !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+    padding-top: 14px !important;
+    padding-bottom: 14px !important;
+    vertical-align: middle !important;
+    background: #ffffff
+}
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-ta-cell:last-child {
+    border-right: none !important
+}
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-ta-row:last-child .fi-ta-cell {
+    border-bottom: none !important
+}
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-ta-row {
+    transition: background-color 0.18s ease, box-shadow 0.18s ease
+}
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-ta-row:hover .fi-ta-cell {
+    background: #f7f9fc !important
+}
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-ta-row:nth-child(even) .fi-ta-cell {
+    background: #fcfdff
+}
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-ta-row:hover .fi-ta-cell {
+    background: #f7f9fc !important
+}
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-ta-cell:first-child img {
+    border: 2px solid #ffffff !important;
+    box-shadow: 0 2px 8px rgba(10, 37, 64, 0.14);
+    object-fit: cover
+}
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-ta-cell:nth-child(2) {
+    color: #0a2540 !important
+}
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-ta-cell:nth-child(2) .fi-ta-text {
+    font-weight: 700 !important
+}
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-ta-cell:nth-child(2) .fi-ta-col-description {
+    color: #64748b !important;
+    font-size: 12px !important;
+    margin-top: 3px !important
+}
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-ta-cell:nth-child(3),
+.fi-ta.ign-success-story-reviews-table-scope .fi-ta-cell:nth-child(4) {
+    color: #334155 !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important
+}
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-badge {
+    border-radius: 999px !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    padding-left: 9px !important;
+    padding-right: 9px !important;
+    white-space: nowrap
+}
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-ta-cell:nth-child(6) {
+    white-space: nowrap !important;
+    text-align: center !important
+}
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-ta-cell:nth-child(6) .fi-ta-text {
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important
+}
+
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-ta-cell:nth-child(7),
+.fi-ta.ign-success-story-reviews-table-scope .fi-ta-cell:nth-child(8) {
+    text-align: center !important
+}
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-toggle {
+    margin-left: auto !important;
+    margin-right: auto !important
+}
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-ta-cell:nth-child(9) {
+    text-align: center !important
+}
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-ta-record-action {
+    border-radius: 8px !important;
+    transition: background-color 0.18s ease, color 0.18s ease, transform 0.18s ease
+}
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-ta-record-action:hover {
+    transform: translateY(-1px)
+}
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-ta-cell:last-child {
+    text-align: center !important
+}
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-ta-header-toolbar {
+    background: #ffffff !important;
+    border-bottom: 1px solid #dbe3ec !important
+}
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-input {
+    border-color: #dbe3ec !important;
+    border-radius: 8px !important;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease
+}
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-input:focus {
+    border-color: #eb933a !important;
+    box-shadow: 0 0 0 3px rgba(235, 147, 58, 0.12) !important
+}
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-btn {
+    border-radius: 8px !important
+}
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-pagination {
+    padding: 14px 16px !important;
+    border-top: 1px solid #dbe3ec !important;
+    background: #ffffff !important
+}
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-pagination-item {
+    border-radius: 7px !important
+}
+
+.fi-ta.ign-success-story-reviews-table-scope .fi-ta-empty-state {
+    padding-top: 45px !important;
+    padding-bottom: 45px !important
+}
+
+@media (max-width:1024px) {
+    .fi-ta.ign-success-story-reviews-table-scope .fi-ta-table {
+        min-width: 1000px !important
+    }
+
+    .fi-ta.ign-success-story-reviews-table-scope .fi-ta-cell {
+        padding-left: 12px !important;
+        padding-right: 12px !important
+    }
+}
+
+@media (max-width:768px) {
+    .fi-ta.ign-success-story-reviews-table-scope .fi-ta-content {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch
+    }
+
+    .fi-ta.ign-success-story-reviews-table-scope .fi-ta-table {
+        min-width: 950px !important
+    }
+
+    .fi-ta.ign-success-story-reviews-table-scope .fi-ta-header-cell-label {
+        font-size: 11px !important
+    }
+
+    .fi-ta.ign-success-story-reviews-table-scope .fi-ta-cell {
+        padding-top: 12px !important;
+        padding-bottom: 12px !important
+    }
+}

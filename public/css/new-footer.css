@@ -49,6 +49,7 @@
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.25;
+    color: #fff;
 }
 
 .ignft-cta-subtitle {
@@ -77,8 +78,10 @@
     text-decoration: none;
     border: 2px solid transparent;
     transition: background .2s, color .2s, border-color .2s;
-    background: var(--ign-lime);
-    color: var(--ign-ink);
+    /* background: var(--ign-lime); */
+    background: #fe6205;
+    /* color: var(--ign-ink); */
+    color:#fff;
 }
 
 .ignft-cta-btn-call {

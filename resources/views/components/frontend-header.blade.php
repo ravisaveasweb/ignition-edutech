@@ -148,7 +148,7 @@
                 <div class="row align-items-center">
                     <div class="col-xxl-2 col-xl-2 col-lg-6 col-md-6 col-6">
                         <div class="tp-header-logo-1 tp-header-logo">
-                            <a href="https://ignitionedutech.com">
+                            <a href="{{ route('home') }}">
                                 <img class="logo-1" src="{{ asset('img/logo/ignition-logo.png') }}"
                                     alt="Ignition logo">
                                 <img class="logo-2" src="{{ asset('img/logo/ignition-logo.png') }}"
