@@ -1,0 +1,295 @@
+
+/* Cities table theme */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) {
+    --ign-cities-navy: #0a2540;
+    --ign-cities-orange: #eb933a;
+    --ign-cities-orange-dark: #d7791f;
+    --ign-cities-border: #dce3eb;
+    --ign-cities-border-strong: #c5d0dc;
+    --ign-cities-text: #243b53;
+    --ign-cities-hover: #fff8ef;
+}
+
+/* Main table container */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-ctn {
+    background: #ffffff !important;
+    border: 1px solid var(--ign-cities-border-strong) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 3px 14px rgba(10,37,64,.06) !important;
+    overflow: hidden !important;
+}
+
+/* Horizontal scrolling */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-content {
+    width: 100% !important;
+    overflow-x: auto !important;
+    scrollbar-width: thin;
+    scrollbar-color: var(--ign-cities-orange) #edf1f5;
+}
+
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-content::-webkit-scrollbar {
+    height: 7px;
+}
+
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-content::-webkit-scrollbar-track {
+    background: #edf1f5;
+}
+
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-content::-webkit-scrollbar-thumb {
+    background: var(--ign-cities-orange);
+    border-radius: 20px;
+}
+
+/* Table structure */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-table {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    background: #ffffff !important;
+}
+
+/* Table header */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-table thead th,
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-header-cell {
+    background: #c5d0dc !important;
+    color: var(--ign-cities-navy) !important;
+    padding: 16px 20px !important;
+    border-right: 1px solid var(--ign-cities-border) !important;
+    border-bottom: 2px solid var(--ign-cities-border-strong) !important;
+    font-weight: 700 !important;
+    vertical-align: middle !important;
+}
+
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-header-cell:last-child {
+    border-right: 0 !important;
+}
+
+/* Header labels */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-header-cell label,
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-header-cell .fi-ta-header-cell-label,
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-header-cell .fi-sortable {
+    color: var(--ign-cities-navy) !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    letter-spacing: .045em !important;
+    text-transform: uppercase !important;
+}
+
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-header-cell svg {
+    color: var(--ign-cities-orange-dark) !important;
+}
+
+/* Table rows */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-row {
+    background: #ffffff !important;
+    transition: background-color .2s ease !important;
+}
+
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-row:nth-child(even) {
+    background: #fafbfd !important;
+}
+
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-row:hover {
+    background: var(--ign-cities-hover) !important;
+}
+
+/* Vertical and horizontal cell separators */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-table tbody tr > td,
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-table tbody tr > .fi-ta-cell {
+    padding: 17px 20px !important;
+    border-right: 1px solid var(--ign-cities-border) !important;
+    border-bottom: 1px solid var(--ign-cities-border) !important;
+    color: var(--ign-cities-text) !important;
+    vertical-align: middle !important;
+}
+
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-table tbody tr > td:last-child,
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-table tbody tr > .fi-ta-cell:last-child {
+    border-right: 0 !important;
+}
+
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-table tbody tr:last-child > td,
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-table tbody tr:last-child > .fi-ta-cell {
+    border-bottom: 0 !important;
+}
+
+/* Cell typography */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-cell .fi-size-sm {
+    color: var(--ign-cities-text) !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+}
+
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-text-item {
+    color: var(--ign-cities-text) !important;
+    line-height: 1.6 !important;
+}
+
+/* Record actions container */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-actions {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    flex-wrap: nowrap !important;
+}
+
+/* Action buttons - preserve natural sizing */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-actions .fi-icon-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 8px !important;
+    margin: 0 !important;
+    border-radius: 8px !important;
+    box-sizing: border-box !important;
+    flex: 0 0 auto !important;
+    vertical-align: middle !important;
+    transition: background-color .2s ease, color .2s ease, border-color .2s ease !important;
+}
+
+/* Edit action - blue */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-actions .fi-icon-btn[aria-label*="Edit" i],
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-actions .fi-icon-btn[title*="Edit" i] {
+    color: #2563eb !important;
+    background: #eff6ff !important;
+    border: 1px solid #bfdbfe !important;
+}
+
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-actions .fi-icon-btn[aria-label*="Edit" i] svg,
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-actions .fi-icon-btn[title*="Edit" i] svg {
+    color: #2563eb !important;
+}
+
+/* Edit hover */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-actions .fi-icon-btn[aria-label*="Edit" i]:hover,
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-actions .fi-icon-btn[title*="Edit" i]:hover {
+    color: #ffffff !important;
+    background: #2563eb !important;
+    border-color: #2563eb !important;
+}
+
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-actions .fi-icon-btn[aria-label*="Edit" i]:hover svg,
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-actions .fi-icon-btn[title*="Edit" i]:hover svg {
+    color: #ffffff !important;
+}
+
+/* Delete action - red */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-actions .fi-icon-btn[aria-label*="Delete" i],
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-actions .fi-icon-btn[title*="Delete" i] {
+    color: #dc2626 !important;
+    background: #fef2f2 !important;
+    border: 1px solid #fecaca !important;
+}
+
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-actions .fi-icon-btn[aria-label*="Delete" i] svg,
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-actions .fi-icon-btn[title*="Delete" i] svg {
+    color: #dc2626 !important;
+}
+
+/* Delete hover */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-actions .fi-icon-btn[aria-label*="Delete" i]:hover,
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-actions .fi-icon-btn[title*="Delete" i]:hover {
+    color: #ffffff !important;
+    background: #dc2626 !important;
+    border-color: #dc2626 !important;
+}
+
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-actions .fi-icon-btn[aria-label*="Delete" i]:hover svg,
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-actions .fi-icon-btn[title*="Delete" i]:hover svg {
+    color: #ffffff !important;
+}
+
+/* Actions column alignment */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-table tbody td:last-child {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+/* Action dropdown */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-dropdown-list {
+    background: #ffffff !important;
+    border: 1px solid var(--ign-cities-border-strong) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 8px 24px rgba(10,37,64,.12) !important;
+    padding: 6px !important;
+}
+
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-dropdown-list-item {
+    border-radius: 7px !important;
+    transition: background-color .2s ease !important;
+}
+
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-dropdown-list-item:hover {
+    background: var(--ign-cities-hover) !important;
+    color: var(--ign-cities-navy) !important;
+}
+
+/* Search inputs */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-input-wrp {
+    background: #ffffff !important;
+    border: 1px solid var(--ign-cities-border-strong) !important;
+    border-radius: 9px !important;
+    box-shadow: none !important;
+    transition: all .2s ease !important;
+}
+
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-input-wrp:focus-within {
+    border-color: var(--ign-cities-orange) !important;
+    box-shadow: 0 0 0 3px rgba(235,147,58,.13) !important;
+}
+
+/* Toolbar and filters */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-header-toolbar,
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-filters {
+    background: #ffffff !important;
+}
+
+/* Pagination */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-pagination {
+    padding: 16px 20px !important;
+    background: #ffffff !important;
+    border-top: 1px solid var(--ign-cities-border) !important;
+}
+
+/* Checkboxes */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) input[type="checkbox"] {
+    accent-color: var(--ign-cities-orange) !important;
+    cursor: pointer;
+}
+
+/* Status badges */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-badge {
+    border-radius: 20px !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    padding: 4px 10px !important;
+}
+
+/* Responsive layout */
+@media (max-width: 767px) {
+    body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-ctn {
+        border-radius: 9px !important;
+    }
+
+    body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-table {
+        min-width: 650px !important;
+    }
+
+    body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-header-cell,
+    body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-cell {
+        padding: 13px 14px !important;
+    }
+
+    body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-pagination {
+        padding: 13px 14px !important;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-row,
+    body:has(.fi-sidebar-item a[aria-current="page"][href*="cities"]) .fi-ta-actions .fi-icon-btn {
+        transition: none !important;
+    }
+}

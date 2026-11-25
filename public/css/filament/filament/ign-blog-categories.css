@@ -1,0 +1,194 @@
+
+
+.ign-blog-categories-table {
+    --ign-blog-categories-navy: #0a2540;
+    --ign-blog-categories-orange: #eb933a;
+    --ign-blog-categories-dark-orange: #d7791f;
+    --ign-blog-categories-border: #d8e0e9;
+}
+
+/* Main table container */
+
+.ign-blog-categories-table .fi-ta-ctn {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 13px;
+    box-shadow: 0 5px 20px rgba(10, 37, 64, 0.08);
+    overflow: hidden;
+}
+
+/* Table header */
+
+.ign-blog-categories-table .fi-ta-header-cell {
+    /* background: #0a2540 !important; */
+    padding: 17px 20px;
+    border-right: 1px solid #cbd5e1;
+    border-bottom: 3px solid #cbd5e1;
+}
+
+.ign-blog-categories-table .fi-ta-header-cell:last-child {
+    border-right: none;
+}
+
+.ign-blog-categories-table .fi-ta-header-cell label,
+.ign-blog-categories-table .fi-ta-header-cell .fi-ta-header-cell-label,
+.ign-blog-categories-table .fi-ta-header-cell .fi-sortable {
+    color: #ffffff !important;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+/* Sorting icons */
+
+.ign-blog-categories-table .fi-ta-header-cell svg {
+    color: #f4ad61 !important;
+}
+
+/* Body cells */
+
+.ign-blog-categories-table .fi-ta-cell {
+    padding: 18px 20px;
+    border-right: 1px solid #e0e6ed;
+    border-bottom: 1px solid #dce3eb;
+    color: #243b53;
+    vertical-align: middle;
+}
+
+.ign-blog-categories-table .fi-ta-cell:last-child {
+    border-right: none;
+}
+
+/* Alternating row background */
+
+.ign-blog-categories-table .fi-ta-row:nth-child(even) {
+    background: #f4f7fb;
+}
+
+.ign-blog-categories-table .fi-ta-row:nth-child(odd) {
+    background: #ffffff;
+}
+
+/* Hover effect */
+
+.ign-blog-categories-table .fi-ta-row {
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ign-blog-categories-table .fi-ta-row:hover {
+    background: #fff3e5 !important;
+    box-shadow: inset 4px 0 0 #eb933a;
+}
+
+/* Category text */
+
+.ign-blog-categories-table .fi-ta-cell .fi-size-sm {
+    color: #0a2540;
+    font-weight: 500;
+}
+
+/* Visibility icons */
+
+.ign-blog-categories-table .fi-ta-cell .fi-icon {
+    transition: transform 0.2s ease;
+}
+
+.ign-blog-categories-table .fi-ta-row:hover .fi-ta-cell .fi-icon {
+    transform: scale(1.12);
+}
+
+/* Action group */
+
+.ign-blog-categories-table .fi-ta-actions {
+    gap: 8px;
+}
+
+.ign-blog-categories-table .fi-ta-actions .fi-icon-btn {
+    background: #edf3f9;
+    border: 1px solid #d2deeb;
+    border-radius: 8px;
+    color: #0a2540;
+    transition: all 0.2s ease;
+}
+
+.ign-blog-categories-table .fi-ta-actions .fi-icon-btn:hover {
+    background: #eb933a;
+    border-color: #d7791f;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Dropdown menu */
+
+.ign-blog-categories-table .fi-dropdown-list {
+    border: 1px solid #dce3eb;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(10, 37, 64, 0.15);
+}
+
+.ign-blog-categories-table .fi-dropdown-list-item:hover {
+    background: #fff3e5;
+    color: #0a2540;
+}
+
+/* Pagination */
+
+.ign-blog-categories-table .fi-ta-pagination {
+    padding: 17px 20px;
+    background: #f1f5f9;
+    border-top: 1px solid #d8e0e9;
+}
+
+/* Search input */
+
+.ign-blog-categories-table .fi-input-wrp {
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+}
+
+.ign-blog-categories-table .fi-input-wrp:focus-within {
+    border-color: #eb933a;
+    box-shadow: 0 0 0 3px rgba(235, 147, 58, 0.15);
+}
+
+/* Bulk selection */
+
+.ign-blog-categories-table .fi-ta-selection-indicator {
+    border: 1px solid #eb933a;
+    border-radius: 9px;
+    background: #fff3e5;
+}
+
+/* Horizontal scrollbar */
+
+.ign-blog-categories-table .fi-ta-content {
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #eb933a #e8edf3;
+}
+
+.ign-blog-categories-table .fi-ta-content::-webkit-scrollbar {
+    height: 8px;
+}
+
+.ign-blog-categories-table .fi-ta-content::-webkit-scrollbar-track {
+    background: #e8edf3;
+}
+
+.ign-blog-categories-table .fi-ta-content::-webkit-scrollbar-thumb {
+    background: #eb933a;
+    border-radius: 20px;
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+    .ign-blog-categories-table .fi-ta-header-cell {
+        padding: 14px 15px;
+    }
+
+    .ign-blog-categories-table .fi-ta-cell {
+        padding: 15px;
+    }
+}

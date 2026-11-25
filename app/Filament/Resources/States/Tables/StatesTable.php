@@ -12,9 +12,13 @@ class StatesTable
     public static function configure(Table $table): Table
     {
         return $table
+          ->extraAttributes([
+                'class' => 'ign-states-table',
+            ])
             ->columns([
                 TextColumn::make('id')
                     ->sortable(),
+                    
 
                 TextColumn::make('name')
                     ->searchable()
@@ -27,6 +31,7 @@ class StatesTable
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable(),
+                    
             ])
             ->recordActions([
                 EditAction::make(),

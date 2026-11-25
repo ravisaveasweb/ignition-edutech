@@ -48,7 +48,7 @@ class AdminPanelProvider extends PanelProvider
 
                 Css::make(
                     'study-india-reviews-table',
-                    asset('css/filament/study-india-reviews-table.css')
+                    asset('css/filament/filament/study-india-reviews-table.css')
                 ),
                 Css::make(
                     'ign-university-table',
@@ -76,17 +76,32 @@ class AdminPanelProvider extends PanelProvider
                 ),
 
                 Css::make(
-                    'ign-success-story-reviews-table',
-                    asset('css/filament/filament/success-story-reviews-table.css')
-                ),
-
-                Css::make(
                     'ign-scholarships-table',
                     asset('css/filament/filament/scholarships-table.css')
                 ),
+
+                Css::make(
+                    'ign-blog-categories',
+                    asset('css/filament/filament/ign-blog-categories.css')
+                ),
+                Css::make(
+                    'ign-blog-authors',
+                    asset('css/filament/filament/ign-blog-authors.css')
+                ),
+
+                 Css::make(
+                    'ign-cities-table',
+                    asset('css/filament/filament/ign-cities-table.css')
+                ),
+
+                 Css::make(
+                    'ign-states-table',
+                    asset('css/filament/filament/ign-states-table.css')
+                ),
+
+                
             ])
 
-            
 
 
             ->navigationGroups([

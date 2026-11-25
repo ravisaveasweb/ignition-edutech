@@ -1,0 +1,285 @@
+
+
+/* ==========================================================
+   SUCCESS STORIES - ADMIN DASHBOARD CARDS
+   TEXT ONLY
+   Unique Prefix:
+   ign-success-stories-dashboard-card-
+========================================================== */
+
+
+/* ==========================================================
+   TABLE CONTAINER
+========================================================== */
+
+.fi-ta.ign-success-stories-dashboard-cards-scope
+.fi-ta-content {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+
+/* ==========================================================
+   HIDE TABLE HEADER
+========================================================== */
+
+.fi-ta.ign-success-stories-dashboard-cards-scope
+.fi-ta-header {
+    display: none !important;
+}
+
+
+/* ==========================================================
+   CARD GRID
+========================================================== */
+
+.fi-ta.ign-success-stories-dashboard-cards-scope
+.fi-ta-tbody {
+    display: grid !important;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr)) !important;
+
+    gap: 22px !important;
+
+    padding: 4px !important;
+
+    background: transparent !important;
+}
+
+
+/* ==========================================================
+   CARD
+========================================================== */
+
+.fi-ta.ign-success-stories-dashboard-cards-scope
+.fi-ta-row {
+    display: block !important;
+
+    background: #ffffff !important;
+
+    border: 1px solid #e2e8f0 !important;
+
+    border-radius: 14px !important;
+
+    overflow: hidden !important;
+
+    box-shadow:
+        0 2px 10px rgba(15, 23, 42, 0.04) !important;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease !important;
+}
+
+
+/* ==========================================================
+   CARD HOVER
+========================================================== */
+
+.fi-ta.ign-success-stories-dashboard-cards-scope
+.fi-ta-row:hover {
+    transform: translateY(-3px) !important;
+
+    border-color: #cbd5e1 !important;
+
+    box-shadow:
+        0 12px 28px rgba(15, 23, 42, 0.08) !important;
+}
+
+
+/* ==========================================================
+   TABLE CELLS
+========================================================== */
+
+.fi-ta.ign-success-stories-dashboard-cards-scope
+.fi-ta-cell {
+    border: 0 !important;
+
+    padding: 0 !important;
+}
+
+
+/* ==========================================================
+   CARD BODY
+========================================================== */
+
+.ign-success-stories-dashboard-card-body {
+    padding: 28px 22px 22px !important;
+
+    text-align: center !important;
+
+    min-height: 205px !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    justify-content: center !important;
+}
+
+
+/* ==========================================================
+   STUDENT NAME
+========================================================== */
+
+.ign-success-stories-dashboard-card-name {
+    color: #0a2540 !important;
+
+    font-size: 17px !important;
+
+    line-height: 1.4 !important;
+
+    font-weight: 700 !important;
+
+    text-align: center !important;
+}
+
+
+/* ==========================================================
+   COURSE
+========================================================== */
+
+.ign-success-stories-dashboard-card-course {
+    margin-top: 8px !important;
+
+    color: #64748b !important;
+
+    font-size: 13px !important;
+
+    line-height: 1.5 !important;
+
+    text-align: center !important;
+}
+
+
+/* ==========================================================
+   COLLEGE
+========================================================== */
+
+.ign-success-stories-dashboard-card-college {
+    margin-top: 3px !important;
+
+    color: #64748b !important;
+
+    font-size: 13px !important;
+
+    line-height: 1.5 !important;
+
+    text-align: center !important;
+}
+
+
+/* ==========================================================
+   COUNTRY
+========================================================== */
+
+.ign-success-stories-dashboard-card-country {
+    margin-top: 10px !important;
+
+    color: #94a3b8 !important;
+
+    font-size: 12px !important;
+
+    line-height: 1.5 !important;
+
+    text-align: center !important;
+}
+
+
+/* ==========================================================
+   RATING
+========================================================== */
+
+.ign-success-stories-dashboard-card-rating {
+    margin-top: 18px !important;
+
+    color: #eb933a !important;
+
+    font-size: 15px !important;
+
+    line-height: 1.4 !important;
+
+    font-weight: 700 !important;
+
+    text-align: center !important;
+}
+
+
+/* ==========================================================
+   ACTION AREA
+========================================================== */
+
+.fi-ta.ign-success-stories-dashboard-cards-scope
+.fi-ta-record-actions {
+    display: flex !important;
+
+    justify-content: center !important;
+
+    align-items: center !important;
+
+    gap: 18px !important;
+
+    padding: 14px 20px 18px !important;
+
+    border-top: 1px solid #f1f5f9 !important;
+
+    background: #ffffff !important;
+}
+
+
+/* ==========================================================
+   EDIT BUTTON
+========================================================== */
+
+.fi-ta.ign-success-stories-dashboard-cards-scope
+.fi-ta-record-actions
+.fi-btn {
+    font-size: 12px !important;
+
+    font-weight: 600 !important;
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 1100px) {
+
+    .fi-ta.ign-success-stories-dashboard-cards-scope
+    .fi-ta-tbody {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr)) !important;
+
+        gap: 18px !important;
+    }
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 700px) {
+
+    .fi-ta.ign-success-stories-dashboard-cards-scope
+    .fi-ta-tbody {
+
+        grid-template-columns:
+            1fr !important;
+
+        gap: 16px !important;
+
+        padding: 2px !important;
+    }
+
+    .ign-success-stories-dashboard-card-body {
+        min-height: 190px !important;
+
+        padding: 24px 18px 20px !important;
+    }
+}

@@ -20,55 +20,95 @@ class AuthorsTable
     public static function configure(Table $table): Table
     {
         return $table
+
+            ->extraAttributes([
+                'class' => 'ign-blog-authors-table',
+            ])
+
             ->columns([
+
                 Split::make([
+
                     Stack::make([
+
                         TextColumn::make('name')
+                            ->label('Author Name')
                             ->searchable()
                             ->sortable()
-                            ->weight(FontWeight::Medium)
+                            ->weight(FontWeight::SemiBold)
+                            ->color('primary')
                             ->alignLeft(),
 
                         TextColumn::make('email')
-                            ->label('Email address')
+                            ->label('Email Address')
                             ->searchable()
                             ->sortable()
                             ->color('gray')
+                            ->icon('heroicon-m-envelope')
                             ->alignLeft(),
-                    ])->space(),
+
+                    ])->space(2),
 
                     Stack::make([
+
                         TextColumn::make('github_handle')
-                            // ->icon('icon-github')
-                            ->label('GitHub handle')
+                            ->label('GitHub Handle')
+                            ->placeholder('Not provided')
+                            ->color('gray')
+                            ->icon('heroicon-m-code-bracket')
                             ->alignLeft(),
 
                         TextColumn::make('twitter_handle')
-                            // ->icon('icon-twitter')
+                            ->label('X / Twitter')
+                            ->placeholder('Not provided')
+                            ->color('gray')
+                            ->icon('heroicon-m-at-symbol')
                             ->alignLeft(),
+
                     ])->space(2),
+
                 ])->from('md'),
+
             ])
+
             ->filters([
                 //
             ])
+
             ->recordActions([
+
                 ActionGroup::make([
+
                     Action::make('view_github')
                         ->label('View GitHub')
-                        // ->icon('icon-github')
+                        ->icon('heroicon-m-code-bracket')
                         ->color('gray')
-                        ->url(fn (Author $record): string => "https://github.com/{$record->github_handle}")
+                        ->url(
+                            fn(Author $record): string =>
+                            "https://github.com/{$record->github_handle}"
+                        )
                         ->openUrlInNewTab()
-                        ->hidden(fn (Author $record): bool => blank($record->github_handle)),
+                        ->hidden(
+                            fn(Author $record): bool =>
+                            blank($record->github_handle)
+                        ),
+
                     Action::make('view_twitter')
-                        ->label('View Twitter')
-                        // ->icon('icon-twitter')
+                        ->label('View X / Twitter')
+                        ->icon('heroicon-m-at-symbol')
                         ->color('gray')
-                        ->url(fn (Author $record): string => "https://x.com/{$record->twitter_handle}")
+                        ->url(
+                            fn(Author $record): string =>
+                            "https://x.com/{$record->twitter_handle}"
+                        )
                         ->openUrlInNewTab()
-                        ->hidden(fn (Author $record): bool => blank($record->twitter_handle)),
+                        ->hidden(
+                            fn(Author $record): bool =>
+                            blank($record->twitter_handle)
+                        ),
+
                     EditAction::make(),
+
                     DeleteAction::make()
                         ->action(function (): void {
                             Notification::make()
@@ -76,9 +116,13 @@ class AuthorsTable
                                 ->warning()
                                 ->send();
                         }),
+
                 ]),
+
             ])
+
             ->groupedBulkActions([
+
                 DeleteBulkAction::make()
                     ->action(function (): void {
                         Notification::make()
@@ -86,6 +130,7 @@ class AuthorsTable
                             ->warning()
                             ->send();
                     }),
+
             ]);
     }
 }

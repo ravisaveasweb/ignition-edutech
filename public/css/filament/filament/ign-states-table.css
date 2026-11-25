@@ -1,0 +1,206 @@
+
+/* States table theme */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) {
+    --ign-states-navy: #0a2540;
+    --ign-states-orange: #eb933a;
+    --ign-states-border: #dce3eb;
+    --ign-states-border-strong: #c5d0dc;
+    --ign-states-text: #243b53;
+    --ign-states-hover: #fff8ef;
+}
+
+/* Main table container */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-ctn {
+    background: #ffffff !important;
+    border: 1px solid var(--ign-states-border-strong) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 3px 14px rgba(10,37,64,.06) !important;
+}
+
+/* Horizontal scrolling */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-content {
+    width: 100% !important;
+    overflow-x: auto !important;
+    scrollbar-width: thin;
+    scrollbar-color: var(--ign-states-orange) #edf1f5;
+}
+
+/* Table structure */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-table {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    background: #ffffff !important;
+}
+
+/* Table header */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-table thead th,
+body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-header-cell {
+    background: #c5d0dc !important;
+    color: var(--ign-states-navy) !important;
+    padding: 16px 20px !important;
+    border-right: 1px solid var(--ign-states-border) !important;
+    border-bottom: 2px solid var(--ign-states-border-strong) !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    vertical-align: middle !important;
+}
+
+body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-header-cell svg {
+    color: var(--ign-states-orange) !important;
+}
+
+/* Table rows */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-row {
+    background: #ffffff !important;
+    transition: background-color .2s ease !important;
+}
+
+body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-row:nth-child(even) {
+    background: #fafbfd !important;
+}
+
+body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-row:hover {
+    background: var(--ign-states-hover) !important;
+}
+
+/* Vertical and horizontal cell borders */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-table tbody td {
+    padding: 17px 20px !important;
+    border-right: 1px solid var(--ign-states-border) !important;
+    border-bottom: 1px solid var(--ign-states-border) !important;
+    color: var(--ign-states-text) !important;
+    vertical-align: middle !important;
+}
+
+body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-table tbody td:last-child {
+    border-right: 0 !important;
+}
+
+body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-table tbody tr:last-child td {
+    border-bottom: 0 !important;
+}
+
+/* Cell typography */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-text-item {
+    color: var(--ign-states-text) !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+}
+
+/* Record actions alignment */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-actions {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    flex-wrap: nowrap !important;
+}
+
+/* Action button base */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-actions .fi-icon-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 8px !important;
+    margin: 0 !important;
+    border-radius: 8px !important;
+    box-sizing: border-box !important;
+    flex: 0 0 auto !important;
+    transition: background-color .2s ease, color .2s ease, border-color .2s ease !important;
+}
+
+/* Edit button */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-actions .fi-icon-btn[aria-label*="Edit" i],
+body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-actions .fi-icon-btn[title*="Edit" i] {
+    color: #2563eb !important;
+    background: #eff6ff !important;
+    border: 1px solid #bfdbfe !important;
+}
+
+/* Edit hover */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-actions .fi-icon-btn[aria-label*="Edit" i]:hover,
+body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-actions .fi-icon-btn[title*="Edit" i]:hover {
+    color: #ffffff !important;
+    background: #2563eb !important;
+    border-color: #2563eb !important;
+}
+
+/* Delete button */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-actions .fi-icon-btn[aria-label*="Delete" i],
+body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-actions .fi-icon-btn[title*="Delete" i] {
+    color: #dc2626 !important;
+    background: #fef2f2 !important;
+    border: 1px solid #fecaca !important;
+}
+
+/* Delete hover */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-actions .fi-icon-btn[aria-label*="Delete" i]:hover,
+body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-actions .fi-icon-btn[title*="Delete" i]:hover {
+    color: #ffffff !important;
+    background: #dc2626 !important;
+    border-color: #dc2626 !important;
+}
+
+/* Action icons */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-actions .fi-icon-btn svg {
+    width: 16px !important;
+    height: 16px !important;
+    flex-shrink: 0 !important;
+}
+
+/* Search inputs */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-input-wrp {
+    background: #ffffff !important;
+    border: 1px solid var(--ign-states-border-strong) !important;
+    border-radius: 9px !important;
+    box-shadow: none !important;
+}
+
+body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-input-wrp:focus-within {
+    border-color: var(--ign-states-orange) !important;
+    box-shadow: 0 0 0 3px rgba(235,147,58,.13) !important;
+}
+
+/* Toolbar and filters */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-header-toolbar,
+body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-filters {
+    background: #ffffff !important;
+}
+
+/* Pagination */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-pagination {
+    padding: 16px 20px !important;
+    background: #ffffff !important;
+    border-top: 1px solid var(--ign-states-border) !important;
+}
+
+/* Checkboxes */
+body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) input[type="checkbox"] {
+    accent-color: var(--ign-states-orange) !important;
+    cursor: pointer;
+}
+
+/* Responsive layout */
+@media (max-width: 767px) {
+    body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-table {
+        min-width: 650px !important;
+    }
+
+    body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-table thead th,
+    body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-table tbody td {
+        padding: 13px 14px !important;
+    }
+
+    body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-pagination {
+        padding: 13px 14px !important;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-row,
+    body:has(.fi-sidebar-item a[aria-current="page"][href*="states"]) .fi-ta-actions .fi-icon-btn {
+        transition: none !important;
+    }
+}

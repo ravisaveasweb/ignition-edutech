@@ -21,32 +21,82 @@ class CategoriesTable
     public static function configure(Table $table): Table
     {
         return $table
+
+            ->extraAttributes([
+                'class' => 'ign-blog-categories-table',
+            ])
+
             ->columns([
+
                 TextColumn::make('name')
+                    ->label('Category Name')
                     ->searchable()
                     ->sortable()
-                    ->weight(FontWeight::Medium),
+                    ->weight(FontWeight::SemiBold)
+                    ->color('gray')
+                    ->wrap(),
+
                 TextColumn::make('slug')
+                    ->label('URL Slug')
                     ->searchable()
-                    ->sortable(),
+                    ->sortable()
+                    ->color('gray')
+                    ->copyable()
+                    ->copyMessage('Slug copied'),
+
                 IconColumn::make('is_visible')
-                    ->label('Visibility'),
+                    ->label('Visibility')
+                    ->boolean()
+                    ->trueColor('success')
+                    ->falseColor('gray')
+                    ->alignCenter(),
+
                 TextColumn::make('updated_at')
-                    ->label('Last modified at')
-                    ->date(),
+                    ->label('Last Modified')
+                    ->dateTime('d M Y')
+                    ->sortable()
+                    ->color('gray')
+                    ->placeholder('Never modified'),
+
             ])
+
             ->filters([
                 //
             ])
+
             ->recordActions([
+
                 ActionGroup::make([
+
                     Action::make('toggle_visibility')
-                        ->icon(fn (PostCategory $record): Heroicon => $record->is_visible ? Heroicon::EyeSlash : Heroicon::Eye)
+                        ->label(fn (PostCategory $record): string =>
+                            $record->is_visible ? 'Hide Category' : 'Show Category'
+                        )
+                        ->icon(fn (PostCategory $record): Heroicon =>
+                            $record->is_visible ? Heroicon::EyeSlash : Heroicon::Eye
+                        )
                         ->color('gray')
-                        ->label(fn (PostCategory $record): string => $record->is_visible ? 'Hide category' : 'Show category')
-                        ->action(fn (PostCategory $record) => $record->update(['is_visible' => ! $record->is_visible])),
+                        ->requiresConfirmation()
+                        ->modalHeading(fn (PostCategory $record): string =>
+                            $record->is_visible ? 'Hide Category?' : 'Show Category?'
+                        )
+                        ->modalDescription('Are you sure you want to change this category visibility?')
+                        ->action(function (PostCategory $record): void {
+
+                            $record->update([
+                                'is_visible' => ! $record->is_visible,
+                            ]);
+
+                            Notification::make()
+                                ->title('Category visibility updated')
+                                ->success()
+                                ->send();
+                        }),
+
                     ViewAction::make(),
+
                     EditAction::make(),
+
                     DeleteAction::make()
                         ->action(function (): void {
                             Notification::make()
@@ -54,9 +104,13 @@ class CategoriesTable
                                 ->warning()
                                 ->send();
                         }),
+
                 ]),
+
             ])
+
             ->groupedBulkActions([
+
                 DeleteBulkAction::make()
                     ->action(function (): void {
                         Notification::make()
@@ -64,6 +118,7 @@ class CategoriesTable
                             ->warning()
                             ->send();
                     }),
+
             ]);
     }
 }
