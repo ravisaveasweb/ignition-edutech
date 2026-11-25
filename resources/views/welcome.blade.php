@@ -615,6 +615,10 @@
                 <li class="yj-feature-item">
                     <span class="yj-icon-check"><i class="{{ $yjFeature['icon'] }}"></i></span>
                     <span class="yj-feature-text">{{ $yjFeature['title'] }}</span>
+
+                    <span class="yj-feature-arrow" aria-hidden="true">
+                        <i class="bi bi-arrow-right"></i>
+                    </span>
                 </li>
             @endforeach
         </ul>
