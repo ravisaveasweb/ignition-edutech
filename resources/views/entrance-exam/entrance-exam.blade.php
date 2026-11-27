@@ -305,6 +305,11 @@ $exams = collect(config('entrance_exam', []))->values()->all();
 <script>
     window.entranceExamData = @json($exams);
 </script>
+{{-- <script src="{{ asset('js/entrance-exam.js') }}?v=5"></script> --}}
+
+<script>
+    window.entranceExamDetailsUrl = @json(url('/entrance-exams-details'));
+</script>
 <script src="{{ asset('js/entrance-exam.js') }}?v=5"></script>
 
 {{-- <x-frontend-footer /> --}}

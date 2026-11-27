@@ -2,33 +2,6 @@
 
 <x-study-abroad-header />
 
-{{-- @section('title', 'Overseas Study Counselling | Ignition Edutech')
-
-@section('meta')
-    <meta name="description"
-        content="End-to-end overseas study counselling from Ignition Edutech — every course, every country. Course, country and university selection, entrance exam prep (SAT, GRE, TOEFL, IELTS, PTE), documentation, visa, scholarships, financing and pre-departure support.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "serviceType": "Overseas Study Counselling",
-        "provider": {
-            "@type": "EducationalOrganization",
-            "name": "Ignition Edutech Private Limited",
-            "telephone": "+91-8655-055-150",
-            "email": "support@ignitionedutech.com"
-        },
-        "areaServed": "IN",
-        "description": "A 10-step overseas study counselling journey covering every course and every country — profile evaluation, shortlisting, entrance exam training, documentation, visas, scholarships, financing and pre-departure orientation."
-    }
-    </script>
-@endsection --}}
-
 
 <div class="sa-page">
 
@@ -356,6 +329,128 @@
         </div>
     </section>
 
+
+    <section class="ign-home-explore-carousel-section">
+    <div class="ign-home-explore-carousel-container">
+
+        <div class="ign-home-explore-carousel-heading">
+            <div>
+                <span class="ign-home-explore-carousel-eyebrow">
+                    DISCOVER MORE
+                </span>
+
+                <h2>Explore More</h2>
+
+                <p>
+                    Everything you need for your education journey.
+                </p>
+            </div>
+        </div>
+
+        @php
+            $ignHomeExploreCarouselGroups = [
+                [
+                    'key' => 'study-abroad',
+                    'title' => 'Study Abroad',
+                    'description' => 'Explore international education opportunities.',
+                    'items' => [
+                        [
+                            'title' => 'Study Abroad',
+                            'description' => 'Explore international universities and destinations.',
+                            'icon' => 'bi-globe',
+                            'image' => asset('img/study-abroad-carousel/study-global.jpg'),
+                            'url' => url('/study-abroad'),
+                        ],
+                        [
+                            'title' => 'Abroad Entrance Exams',
+                            'description' => 'Prepare for international entrance examinations.',
+                            'icon' => 'bi-journal-text',
+                            'image' => asset('img/study-abroad-carousel/study-abroad-exams.jpg'),
+                            'url' => route('exams.index'),
+                        ],
+                        [
+                            'title' => 'College News',
+                            'description' => 'Explore the latest international education news.',
+                            'icon' => 'bi-newspaper',
+                            'image' => asset('img/study-abroad-carousel/study-abroad-college-news.jpg'),
+                            'url' => route('college-news.index', ['section' => 'study-abroad']),
+                        ],
+                        [
+                            'title' => 'College Reviews',
+                            'description' => 'Read experiences from students studying abroad.',
+                            'icon' => 'bi-chat-square-text',
+                            'image' => asset('img/study-abroad-carousel/study-abroad-reviews.jpg'),
+                            'url' => route('study-abroad.reviews.index') . '#viewReviewForAbroad',
+                        ],
+                        [
+                            'title' => 'Ask a Question',
+                            'description' => 'Get guidance about studying in another country.',
+                            'icon' => 'bi-question-circle',
+                            'image' => asset('img/study-abroad-carousel/study-abroad-questions.jpg'),
+                            'url' => route('questions.index'),
+                        ],
+                    ],
+                ],
+            ];
+        @endphp
+
+        @foreach ($ignHomeExploreCarouselGroups as $ignHomeExploreCarouselGroup)
+            <div class="ign-home-explore-carousel-group" data-ign-home-explore-carousel-section
+                data-ign-home-explore-carousel-key="{{ $ignHomeExploreCarouselGroup['key'] }}">
+                <div class="ign-home-explore-carousel-group-heading">
+                    <div class="ign-home-explore-carousel-group-info">
+                        <h3>{{ $ignHomeExploreCarouselGroup['title'] }}</h3>
+                        <p>{{ $ignHomeExploreCarouselGroup['description'] }}</p>
+                    </div>
+
+                    <div class="ign-home-explore-carousel-controls">
+                        <button type="button" class="ign-home-explore-carousel-arrow"
+                            data-ign-home-explore-carousel-prev
+                            aria-label="Scroll {{ $ignHomeExploreCarouselGroup['title'] }} backward">
+                            <i class="bi bi-arrow-left"></i>
+                        </button>
+
+                        <button type="button" class="ign-home-explore-carousel-arrow"
+                            data-ign-home-explore-carousel-next
+                            aria-label="Scroll {{ $ignHomeExploreCarouselGroup['title'] }} forward">
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="ign-home-explore-carousel-viewport" data-ign-home-explore-carousel-viewport>
+                    <div class="ign-home-explore-carousel-track" data-ign-home-explore-carousel-track>
+                        @foreach ($ignHomeExploreCarouselGroup['items'] as $ignHomeExploreCarouselItem)
+                            <a href="{{ $ignHomeExploreCarouselItem['url'] }}"
+                                class="ign-home-explore-carousel-card">
+                                <div class="ign-home-explore-carousel-image">
+                                    <img src="{{ $ignHomeExploreCarouselItem['image'] }}"
+                                        alt="{{ $ignHomeExploreCarouselItem['title'] }}" loading="lazy">
+
+                                    <span class="ign-home-explore-carousel-icon">
+                                        <i class="bi {{ $ignHomeExploreCarouselItem['icon'] }}"></i>
+                                    </span>
+                                </div>
+
+                                <div class="ign-home-explore-carousel-content">
+                                    <h4>{{ $ignHomeExploreCarouselItem['title'] }}</h4>
+
+                                    <p>{{ $ignHomeExploreCarouselItem['description'] }}</p>
+
+                                    <span class="ign-home-explore-carousel-link">
+                                        Explore Now
+                                        <i class="bi bi-arrow-right"></i>
+                                    </span>
+                                </div>
+                            </a>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        @endforeach
+
+    </div>
+</section>
 
 
     {{-- WORLD UNIVERSITY RANKINGS --}}
@@ -815,6 +910,9 @@
         </div>
     </section>
 
+
+    
+
     {{-- ============ FAQ ============ --}}
     <section class="sa-faq">
         <div class="container reveal">
@@ -969,3 +1067,282 @@
             
         });
     </script>
+
+
+
+
+<script>
+    (function() {
+        'use strict';
+
+        function ignHomeExploreCarouselInitialize() {
+            const sections = document.querySelectorAll('[data-ign-home-explore-carousel-section]');
+
+            if (!sections.length) return;
+
+            const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            sections.forEach(function(section) {
+                if (section.dataset.ignHomeExploreCarouselInitialized === 'true') return;
+
+                const viewport = section.querySelector('[data-ign-home-explore-carousel-viewport]');
+                const track = section.querySelector('[data-ign-home-explore-carousel-track]');
+                const previous = section.querySelector('[data-ign-home-explore-carousel-prev]');
+                const next = section.querySelector('[data-ign-home-explore-carousel-next]');
+
+                if (!viewport || !track) return;
+
+                const originalCards = Array.from(track.children);
+
+                if (originalCards.length < 2) return;
+
+                section.dataset.ignHomeExploreCarouselInitialized = 'true';
+
+                // IMPORTANT: Keep this as the only auto-scroll controller.
+                const speed = 150;
+
+                let animationFrame = null;
+                let previousTime = 0;
+                let resumeTimer = null;
+                let paused = true;
+                let userInteracting = false;
+
+                // Calculate the exact width of the ORIGINAL card set.
+                let originalWidth = 0;
+
+                // CLONE CARDS
+                originalCards.forEach(function(card) {
+                    const clone = card.cloneNode(true);
+
+                    clone.setAttribute('aria-hidden', 'true');
+
+                    clone.querySelectorAll('a, button').forEach(function(element) {
+                        element.setAttribute('tabindex', '-1');
+                    });
+
+                    track.appendChild(clone);
+                });
+
+                // CALCULATE LOOP WIDTH
+                function ignHomeExploreCarouselCalculateWidth() {
+                    // Calculate the distance between the first original and first cloned card.
+                    if (originalCards.length && track.children[originalCards.length]) {
+                        const firstOriginal = originalCards[0];
+                        const firstClone = track.children[originalCards.length];
+
+                        originalWidth = firstClone.offsetLeft - firstOriginal.offsetLeft;
+                    }
+                }
+
+                ignHomeExploreCarouselCalculateWidth();
+
+                // PAUSE
+                function ignHomeExploreCarouselPause() {
+                    paused = true;
+                    previousTime = 0;
+
+                    if (animationFrame !== null) {
+                        cancelAnimationFrame(animationFrame);
+                        animationFrame = null;
+                    }
+                }
+
+                // RESUME
+                function ignHomeExploreCarouselResume() {
+                    if (reducedMotion || document.hidden || userInteracting) return;
+                    if (!paused) return;
+
+                    paused = false;
+                    previousTime = 0;
+
+                    animationFrame = requestAnimationFrame(ignHomeExploreCarouselAnimate);
+                }
+
+                // AUTO SCROLL
+                function ignHomeExploreCarouselAnimate(timestamp) {
+                    animationFrame = null;
+
+                    if (paused || userInteracting || document.hidden) return;
+
+                    if (previousTime !== 0) {
+                        // Limit frame delta to prevent visible jumps.
+                        const elapsed = Math.min((timestamp - previousTime) / 1000, 0.016);
+
+                        viewport.scrollLeft += speed * elapsed;
+
+                        // Seamless loop.
+                        if (originalWidth > 0 && viewport.scrollLeft >= originalWidth) {
+                            viewport.scrollLeft -= originalWidth;
+                        }
+                    }
+
+                    previousTime = timestamp;
+                    animationFrame = requestAnimationFrame(ignHomeExploreCarouselAnimate);
+                }
+
+                // START USER INTERACTION
+                function ignHomeExploreCarouselStartInteraction() {
+                    userInteracting = true;
+                    clearTimeout(resumeTimer);
+                    ignHomeExploreCarouselPause();
+                }
+
+                // END USER INTERACTION
+                function ignHomeExploreCarouselEndInteraction() {
+                    clearTimeout(resumeTimer);
+
+                    resumeTimer = setTimeout(function() {
+                        userInteracting = false;
+                        paused = true;
+                        ignHomeExploreCarouselResume();
+                    }, 500);
+                }
+
+                // BUTTON SCROLL
+                function ignHomeExploreCarouselManualScroll(direction) {
+                    userInteracting = true;
+                    clearTimeout(resumeTimer);
+                    ignHomeExploreCarouselPause();
+
+                    const card = originalCards[0];
+                    const gap = 20;
+
+                    const cardWidth = card ?
+                        card.getBoundingClientRect().width + gap :
+                        300;
+
+                    const scrollAmount = cardWidth * 2;
+
+                    viewport.scrollLeft += direction === 'next' ?
+                        scrollAmount :
+                        -scrollAmount;
+
+                    // Keep the position inside the duplicated range.
+                    if (originalWidth > 0 && viewport.scrollLeft >= originalWidth) {
+                        viewport.scrollLeft -= originalWidth;
+                    }
+
+                    if (viewport.scrollLeft < 0 && originalWidth > 0) {
+                        viewport.scrollLeft += originalWidth;
+                    }
+
+                    resumeTimer = setTimeout(function() {
+                        userInteracting = false;
+                        paused = true;
+                        ignHomeExploreCarouselResume();
+                    }, 500);
+                }
+
+                // PREVIOUS
+                if (previous) {
+                    previous.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        ignHomeExploreCarouselManualScroll('previous');
+                    });
+                }
+
+                // NEXT
+                if (next) {
+                    next.addEventListener('click', function(event) {
+                        event.preventDefault();
+                        ignHomeExploreCarouselManualScroll('next');
+                    });
+                }
+
+                // MOUSE ENTER
+                section.addEventListener('mouseenter', function() {
+                    clearTimeout(resumeTimer);
+                    ignHomeExploreCarouselPause();
+                });
+
+                // MOUSE LEAVE
+                section.addEventListener('mouseleave', function() {
+                    if (!userInteracting) {
+                        paused = true;
+                        ignHomeExploreCarouselResume();
+                    }
+                });
+
+                // POINTER START
+                viewport.addEventListener('pointerdown', function() {
+                    ignHomeExploreCarouselStartInteraction();
+                }, {
+                    passive: true
+                });
+
+                // POINTER END
+                viewport.addEventListener('pointerup', function() {
+                    ignHomeExploreCarouselEndInteraction();
+                }, {
+                    passive: true
+                });
+
+                // POINTER CANCEL
+                viewport.addEventListener('pointercancel', function() {
+                    ignHomeExploreCarouselEndInteraction();
+                }, {
+                    passive: true
+                });
+
+                // WHEEL
+                viewport.addEventListener('wheel', function() {
+                    ignHomeExploreCarouselStartInteraction();
+                    clearTimeout(resumeTimer);
+
+                    resumeTimer = setTimeout(function() {
+                        userInteracting = false;
+                        paused = true;
+                        ignHomeExploreCarouselResume();
+                    }, 500);
+                }, {
+                    passive: true
+                });
+
+                // KEYBOARD FOCUS
+                section.addEventListener('focusin', function() {
+                    ignHomeExploreCarouselPause();
+                });
+
+                section.addEventListener('focusout', function(event) {
+                    if (!section.contains(event.relatedTarget) && !userInteracting) {
+                        paused = true;
+                        ignHomeExploreCarouselResume();
+                    }
+                });
+
+                // VISIBILITY
+                document.addEventListener('visibilitychange', function() {
+                    if (document.hidden) {
+                        ignHomeExploreCarouselPause();
+                    } else if (
+                        !userInteracting &&
+                        !section.contains(document.activeElement)
+                    ) {
+                        paused = true;
+                        ignHomeExploreCarouselResume();
+                    }
+                });
+
+                // WINDOW RESIZE
+                window.addEventListener('resize', function() {
+                    ignHomeExploreCarouselCalculateWidth();
+                }, {
+                    passive: true
+                });
+
+                // START
+                if (!reducedMotion) {
+                    paused = true;
+                    ignHomeExploreCarouselResume();
+                }
+            });
+        }
+
+        // INITIALIZE
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', ignHomeExploreCarouselInitialize);
+        } else {
+            ignHomeExploreCarouselInitialize();
+        }
+    })();
+</script>

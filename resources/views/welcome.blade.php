@@ -329,7 +329,7 @@
 
 <section class="logo-section">
     <div class="container">
-        <h2 class="section-title">Learn From India's Top Universities</h2>
+        <h2 class="section-title2">Learn From India's Top Universities</h2>
         <div class="logo-slider">
             <!-- Left Arrow -->
             <button class="slider-btn prev">&#10094;</button>
@@ -625,16 +625,13 @@
     </div>
 </section>
 
-<section class="ir-hero-section">
+{{-- <section class="ir-hero-section">
     <div class="ir-container">
         <!-- Top Call to Action Block -->
         <div class="ir-cta-block">
             <span class="ir-tagline">Education Reimagined.</span>
             <h2 class="ir-main-heading">Lifelong Success Begins Here.</h2>
 
-            {{-- <div class="ir-btn-wrapper">
-                <a href="/contact" class="ir-btn-primary">Book a Free Counselling Session</a>
-            </div> --}}
             <a href="#" class="ir-btn-primary  ign-enquiry-popup-trigger" data-source="Home - Hero Banner">
                 Book a Free Counselling Session
             </a>
@@ -642,7 +639,7 @@
 
         <hr class="ir-divider" />
     </div>
-</section>
+</section> --}}
 
 <section class="programs-section">
     <div class="container">
@@ -655,7 +652,17 @@
             @foreach ($programCourses as $program)
                 <div class="program-card">
                     <div class="icon-online">
-                        <img src="{{ asset($program['image']) }}" alt="">
+                        @if (str_contains(strtolower($program['title']), 'mba'))
+                            <i class="bi bi-briefcase-fill"></i>
+                        @elseif (str_contains(strtolower($program['title']), 'bba'))
+                            <i class="bi bi-bar-chart-fill"></i>
+                        @elseif (str_contains(strtolower($program['title']), 'mca'))
+                            <i class="bi bi-code-slash"></i>
+                        @elseif (str_contains(strtolower($program['title']), 'bca'))
+                            <i class="bi bi-laptop-fill"></i>
+                        @else
+                            <i class="bi bi-mortarboard-fill"></i>
+                        @endif
                     </div>
                     <h3>{{ $program['title'] }}</h3>
                     <p>{{ $program['description'] }}</p>
@@ -708,9 +715,9 @@
                         future.
                     </p>
                     <ul class="help-points">
-                        <li>✔ Find the best program based on your career goals</li>
-                        <li>✔ Understand fees, eligibility & admission process</li>
-                        <li>✔ Get support with university selection</li>
+                        <li> Find the best program based on your career goals</li>
+                        <li> Understand fees, eligibility & admission process</li>
+                        <li>Get support with university selection</li>
                     </ul>
                     <div class="help-actions">
                         <a href="#" class="btn-primary  ign-enquiry-popup-trigger"
@@ -746,6 +753,8 @@
         </div>
     </div>
 </section>
+
+
 
 <section class="testimonials">
     <div class="container">
@@ -858,26 +867,52 @@
 </section>
 
 
-<section class="success-section">
-    <div class="container">
-        <h2>Success Stories That Inspire</h2>
-        <p class="subtitle">Students who transformed their careers with us</p>
-        <div class="cards">
+<section class="ign-home-success-stories-module">
+    <div class="ign-home-success-stories-wrap">
+
+        <h2 class="ign-home-success-stories-heading">
+            Success Stories That Inspire
+        </h2>
+
+        <p class="ign-home-success-stories-intro">
+            Students who transformed their careers with us
+        </p>
+
+        <div class="ign-home-success-stories-grid">
 
             @foreach ($successStories as $story)
-                <div class="card">
-                    <img src="{{ asset($story['image']) }}" alt="">
-                    <div class="card-content-area">
-                        <h3>{{ $story['title'] }}</h3>
-                        <p>{{ $story['description'] }}</p>
-                        <span>- {{ $story['name'] }}</span>
-                        <small>{{ $story['course'] }}</small>
+                <div class="ign-home-success-stories-item">
+
+                    <img src="{{ asset($story['image']) }}" alt="" class="ign-home-success-stories-photo">
+
+                    <div class="ign-home-success-stories-body">
+
+                        <h3 class="ign-home-success-stories-story-title">
+                            {{ $story['title'] }}
+                        </h3>
+
+                        <p class="ign-home-success-stories-story-text">
+                            {{ $story['description'] }}
+                        </p>
+
+                        <span class="ign-home-success-stories-student">
+                            - {{ $story['name'] }}
+                        </span>
+
+                        <small class="ign-home-success-stories-program">
+                            {{ $story['course'] }}
+                        </small>
+
                     </div>
                 </div>
             @endforeach
 
         </div>
-        <a href="{{ route('success-stories.index') }}" class="view-more">View More Success Stories →</a>
+
+        <a href="{{ route('success-stories.index') }}" class="ign-home-success-stories-action">
+            View More Success Stories →
+        </a>
+
     </div>
 </section>
 
@@ -903,114 +938,284 @@
     </div>
 </section>
 
-<section class="online-education">
-    <div class="container-education">
-        <div class="left-content">
-            <h2>Online Education That <br> Fits Your Life & Goals</h2>
-            <p>
-                At Ignition Edutech, we believe in helping students achieve their academic and career goals
-                with flexible learning solutions.
-            </p>
-            <p>
-                Our online degree programs are designed for students and working professionals who want to
-                advance their education without compromising their schedules. With expert faculty, practical
-                coursework, and industry-relevant curriculum, we ensure that you not only earn a degree but
-                also gain the skills and confidence to succeed in your career.
+
+<section class="ign-home-online-learning">
+    <div class="ign-home-online-learning__container">
+
+        {{-- SECTION INTRO --}}
+        <div class="ign-home-online-learning__header">
+            <span class="ign-home-online-learning__eyebrow">
+                <span class="ign-home-online-learning__eyebrow-line"></span>
+                LEARN. GROW. SUCCEED.
+                <span class="ign-home-online-learning__eyebrow-line"></span>
+            </span>
+            <h2 class="ign-home-online-learning__title">
+                Online Education That
+                <span>Moves You Forward</span>
+            </h2>
+            <p class="ign-home-online-learning__subtitle">
+                Discover flexible online degree programs that fit your lifestyle, support your ambitions, and help you
+                build a successful future.
             </p>
         </div>
-        <div class="middle-content">
-            <h4>Why Online Education is the Future?</h4>
-            <ul>
-                <li>Learn from anywhere, anytime</li>
-                <li>Industry-relevant curriculum</li>
-                <li>Cost-effective education</li>
-                <li>Better work-life-study balance</li>
-                <li>Globally recognized degrees</li>
-            </ul>
+
+        {{-- MAIN CONTENT --}}
+        <div class="ign-home-online-learning__main">
+
+            {{-- LEFT: CONTENT --}}
+            <div class="ign-home-online-learning__content">
+                <span class="ign-home-online-learning__tag">
+                    <i class="bi bi-mortarboard"></i>
+                    YOUR LEARNING, YOUR WAY
+                </span>
+                <h3 class="ign-home-online-learning__content-title">
+                    Make Your Education Work
+                    <span>For Your Life</span>
+                </h3>
+                <p class="ign-home-online-learning__description">
+                    At Ignition Edutech, we make quality education more accessible and convenient. Explore online
+                    programs that allow you to pursue your academic goals while balancing your work and personal
+                    commitments.
+                </p>
+                <p class="ign-home-online-learning__description">
+                    From choosing the right university to finding a suitable course, our guidance helps you make
+                    informed decisions at every step of your journey.
+                </p>
+
+                {{-- KEY ADVANTAGES --}}
+                <div class="ign-home-online-learning__points">
+                    <div class="ign-home-online-learning__point">
+                        <span class="ign-home-online-learning__point-icon"><i class="bi bi-clock"></i></span>
+                        <span>
+                            <strong>Flexible Learning</strong>
+                            <small>Study at your convenience</small>
+                        </span>
+                    </div>
+                    <div class="ign-home-online-learning__point">
+                        <span class="ign-home-online-learning__point-icon"><i class="bi bi-laptop"></i></span>
+                        <span>
+                            <strong>Learn From Anywhere</strong>
+                            <small>Access learning online</small>
+                        </span>
+                    </div>
+                    <div class="ign-home-online-learning__point">
+                        <span class="ign-home-online-learning__point-icon"><i class="bi bi-compass"></i></span>
+                        <span>
+                            <strong>Expert Guidance</strong>
+                            <small>Choose with confidence</small>
+                        </span>
+                    </div>
+                </div>
+
+                {{-- CTA --}}
+                <div class="ign-home-online-learning__actions">
+                    <a href="#" class="ign-home-online-learning__primary-btn ign-enquiry-popup-trigger"
+                            data-source="Home - Online Education">
+                        Get Free Counselling
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                    <span class="ign-home-online-learning__cta-note">
+                        <i class="bi bi-check-circle-fill"></i>
+                        Get guidance for your education journey
+                    </span>
+                </div>
+            </div>
+
+            {{-- RIGHT: IMAGE --}}
+            <div class="ign-home-online-learning__visual">
+                <div class="ign-home-online-learning__visual-backdrop"></div>
+                <div class="ign-home-online-learning__image">
+                    <img src="{{ asset('img/help/index-help.jpg') }}" alt="Student learning through online education"
+                        loading="lazy">
+                    <div class="ign-home-online-learning__image-shade"></div>
+                    <div class="ign-home-online-learning__image-caption">
+                        <span class="ign-home-online-learning__caption-icon"><i class="bi bi-book-half"></i></span>
+                        <span>
+                            <strong>Build Skills. Shape Your Future.</strong>
+                            <small>Take the next step in your education.</small>
+                        </span>
+                    </div>
+                </div>
+                <div class="ign-home-online-learning__floating-card">
+                    <span class="ign-home-online-learning__floating-icon"><i class="bi bi-lightbulb"></i></span>
+                    <span>
+                        <strong>Make Smarter Choices</strong>
+                        <small>Find a program that fits your goals</small>
+                    </span>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="right-image">
-        <img src="{{ asset('img/help/index-help.jpg') }}" alt="Online Learning">
-    </div>
-</section>
 
-<section class="faq-section">
-    <div class="container">
+        {{-- BENEFITS SECTION --}}
+        <div class="ign-home-online-learning__benefits">
+            <div class="ign-home-online-learning__benefits-heading">
+                <span class="ign-home-online-learning__eyebrow">THE ONLINE LEARNING ADVANTAGE</span>
+                <h3>Why Choose <span>Online Education?</span></h3>
+                <p>A smarter way to learn, develop new skills, and move closer to your career goals.</p>
+            </div>
 
-        <div class="row align-items-start g-4">
+            {{-- Five BENEFIT CARDS --}}
 
-            <!-- Left FAQ -->
+            <div class="ign-home-online-learning__cards">
 
-            <div class="col-lg-6">
-
-                <h2 class="faq-title mb-4">
-                    Frequently Asked Questions
-                </h2>
-
-                <div class="faq-item active">
-                    <div class="faq-question">
-                        Are the degrees UGC approved?
-                        <span>−</span>
+                {{-- CARD 01 --}}
+                <article class="ign-home-online-learning__card">
+                    <div class="ign-home-online-learning__card-top">
+                        <span class="ign-home-online-learning__card-icon ign-home-online-learning__card-icon--blue">
+                            <i class="bi bi-globe2"></i>
+                        </span>
+                        <span class="ign-home-online-learning__card-number">01</span>
                     </div>
 
-                    <div class="faq-answer">
-                        Yes, all the universities we are associated with are UGC
-                        approved and recognized.
-                    </div>
-                </div>
+                    <h4>Learn Anytime, Anywhere</h4>
 
-                <div class="faq-item">
-                    <div class="faq-question">
-                        How is the online learning experience?
-                        <span>+</span>
-                    </div>
+                    <p>
+                        Access online classes, study materials and learning resources
+                        from anywhere, whenever it suits your schedule.
+                    </p>
 
-                    <div class="faq-answer">
-                        Our platform provides interactive classes, recorded
-                        lectures, and expert guidance.
-                    </div>
-                </div>
+                    <span class="ign-home-online-learning__card-link">
+                        Learn without limits
+                        <i class="bi bi-arrow-up-right"></i>
+                    </span>
+                </article>
 
-                <div class="faq-item">
-                    <div class="faq-question">
-                        What are the eligibility criteria?
-                        <span>+</span>
+                {{-- CARD 02 --}}
+                <article class="ign-home-online-learning__card">
+                    <div class="ign-home-online-learning__card-top">
+                        <span class="ign-home-online-learning__card-icon ign-home-online-learning__card-icon--orange">
+                            <i class="bi bi-lightbulb"></i>
+                        </span>
+                        <span class="ign-home-online-learning__card-number">02</span>
                     </div>
 
-                    <div class="faq-answer">
-                        Eligibility depends on the program. Generally, a 10+2 or
-                        graduation is required.
-                    </div>
-                </div>
+                    <h4>Industry-Relevant Curriculum</h4>
 
-                <div class="faq-item">
-                    <div class="faq-question">
-                        Can I get placement support?
-                        <span>+</span>
-                    </div>
+                    <p>
+                        Build practical knowledge and in-demand skills through
+                        industry-aligned courses designed for today's careers.
+                    </p>
 
-                    <div class="faq-answer">
-                        Yes, we provide placement assistance, resume building,
-                        and interview preparation.
-                    </div>
-                </div>
+                    <span class="ign-home-online-learning__card-link">
+                        Build career skills
+                        <i class="bi bi-arrow-up-right"></i>
+                    </span>
+                </article>
 
-                <div class="faq-item">
-                    <div class="faq-question">
-                        How can I pay the course fee?
-                        <span>+</span>
+                {{-- CARD 03 --}}
+                <article class="ign-home-online-learning__card">
+                    <div class="ign-home-online-learning__card-top">
+                        <span class="ign-home-online-learning__card-icon ign-home-online-learning__card-icon--green">
+                            <i class="bi bi-wallet2"></i>
+                        </span>
+                        <span class="ign-home-online-learning__card-number">03</span>
                     </div>
 
-                    <div class="faq-answer">
-                        You can pay via online transfer, EMI options, or
-                        supported payment gateways.
+                    <h4>Cost-Effective Education</h4>
+
+                    <p>
+                        Pursue your academic goals with affordable learning options
+                        while saving on commuting and relocation expenses.
+                    </p>
+
+                    <span class="ign-home-online-learning__card-link">
+                        Learn smarter
+                        <i class="bi bi-arrow-up-right"></i>
+                    </span>
+                </article>
+
+                {{-- CARD 04 --}}
+                <article class="ign-home-online-learning__card">
+                    <div class="ign-home-online-learning__card-top">
+                        <span class="ign-home-online-learning__card-icon ign-home-online-learning__card-icon--blue">
+                            <i class="bi bi-clock-history"></i>
+                        </span>
+                        <span class="ign-home-online-learning__card-number">04</span>
                     </div>
-                </div>
+
+                    <h4>Better Work-Life-Study Balance</h4>
+
+                    <p>
+                        Balance your professional responsibilities, personal life
+                        and education with flexible online learning.
+                    </p>
+
+                    <span class="ign-home-online-learning__card-link">
+                        Study at your pace
+                        <i class="bi bi-arrow-up-right"></i>
+                    </span>
+                </article>
+
+                {{-- CARD 05 --}}
+                <article class="ign-home-online-learning__card">
+                    <div class="ign-home-online-learning__card-top">
+                        <span class="ign-home-online-learning__card-icon ign-home-online-learning__card-icon--orange">
+                            <i class="bi bi-award"></i>
+                        </span>
+                        <span class="ign-home-online-learning__card-number">05</span>
+                    </div>
+
+                    <h4>Globally Recognized Degrees</h4>
+
+                    <p>
+                        Explore recognized university programs that can support
+                        your academic progression and career opportunities.
+                    </p>
+
+                    <span class="ign-home-online-learning__card-link">
+                        Explore opportunities
+                        <i class="bi bi-arrow-up-right"></i>
+                    </span>
+                </article>
 
             </div>
 
-            <!-- Right CTA -->
+        </div>
 
+    </div>
+</section>
+
+
+
+<section class="faq-section">
+    <div class="container">
+        <div class="row align-items-start g-4">
+            <!-- Left FAQ -->
+            <div class="col-lg-6">
+                <h2 class="faq-title mb-4">Frequently Asked Questions</h2>
+
+                <div class="faq-item active">
+                    <div class="faq-question">Are the degrees UGC approved? <span>−</span></div>
+                    <div class="faq-answer">Yes, all the universities we are associated with are UGC approved and
+                        recognized.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How is the online learning experience? <span>+</span></div>
+                    <div class="faq-answer">Our platform provides interactive classes, recorded lectures, and expert
+                        guidance.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">What are the eligibility criteria? <span>+</span></div>
+                    <div class="faq-answer">Eligibility depends on the program. Generally, a 10+2 or graduation is
+                        required.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can I get placement support? <span>+</span></div>
+                    <div class="faq-answer">Yes, we provide placement assistance, resume building, and interview
+                        preparation.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How can I pay the course fee? <span>+</span></div>
+                    <div class="faq-answer">You can pay via online transfer, EMI options, or supported payment
+                        gateways.</div>
+                </div>
+            </div>
+
+            <!-- Right CTA -->
             <div class="col-lg-6">
                 <div class="cta-card-right">
                     <div class="cta-card">
@@ -1026,6 +1231,7 @@
                                         data-source="Home - Hero Banner">Talk to Counselor</a>
                                 </div>
                             </div>
+
                             <div class="col-md-4 text-center">
                                 <img src="{{ asset('img/about/frequently-img.png') }}" class="img-fluid frequently"
                                     alt="Graduation">
@@ -1034,100 +1240,18 @@
                     </div>
                 </div>
             </div>
-
         </div>
-
     </div>
 </section>
 
 
-{{-- <div class="hs-form-frame" data-region="na2" data-form-id="a7c9f6e6-c812-409c-8110-288692f5e36e"
-    data-portal-id="247564101"></div> --}}
-
 
 <x-university-enquiry-popup :courses="$courses ?? []" />
 
-{{-- <x-frontend-footer /> --}}
 <x-new-footer />
 
 
 <!-- footer-area-start -->
-
-{{-- <script>
-    const track = document.getElementById("logoTrack");
-    const nextBtn = document.querySelector(".logo-section .next");
-    const prevBtn = document.querySelector(".logo-section .prev");
-
-    let scrollAmount = 200;
-    let autoScrollSpeed = 2;
-    let autoScroll;
-    let isPaused = false;
-
-    // Duplicate logos for infinite loop
-    const originalItems = Array.from(track.children);
-
-    originalItems.forEach((item) => {
-        track.appendChild(item.cloneNode(true));
-    });
-
-
-    // Automatic Infinite Horizontal Scrolling
-    function startAutoScroll() {
-        clearInterval(autoScroll);
-
-        autoScroll = setInterval(() => {
-            if (isPaused) return;
-
-            track.scrollLeft += autoScrollSpeed;
-
-            // Loop continuously without jumping to the beginning
-            if (track.scrollLeft >= halfWidth) {
-                track.scrollLeft -= halfWidth;
-            }
-
-        }, 15);
-    }
-
-    // Next Button
-    nextBtn.addEventListener("click", () => {
-        isPaused = true;
-
-        track.scrollBy({
-            left: scrollAmount,
-            behavior: "smooth"
-        });
-
-        setTimeout(() => {
-            isPaused = false;
-        }, 700);
-    });
-
-    // Previous Button
-    prevBtn.addEventListener("click", () => {
-        isPaused = true;
-
-        track.scrollBy({
-            left: -scrollAmount,
-            behavior: "smooth"
-        });
-
-        setTimeout(() => {
-            isPaused = false;
-        }, 700);
-    });
-
-    // Pause on Hover
-    track.addEventListener("mouseenter", () => {
-        isPaused = true;
-    });
-
-    track.addEventListener("mouseleave", () => {
-        isPaused = false;
-    });
-
-    // Start Auto Scroll
-    startAutoScroll();
-</script> --}}
 
 
 

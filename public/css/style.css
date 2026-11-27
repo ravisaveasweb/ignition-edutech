@@ -10594,8 +10594,9 @@ table.ie-table tbody tr:nth-child(even) {
     padding: 0;
     color: #111827;
     font-size: 42px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.2;
+    letter-spacing: -.3px;
 }
 
 .ign-home-explore-carousel-heading p {
@@ -10953,7 +10954,8 @@ table.ie-table tbody tr:nth-child(even) {
 
 @media (max-width: 575px) {
     .ign-home-explore-carousel-section {
-        padding: 42px 0;
+        /* padding: 42px 0; */
+                padding: 25px 15px 40px;
     }
 
     .ign-home-explore-carousel-container {

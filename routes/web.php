@@ -19,6 +19,7 @@ use App\Http\Controllers\StudyIndiaReviewController;
 use App\Http\Controllers\StudyAbroadReviewController;
 use App\Http\Controllers\StudyIndiaController;
 use App\Http\Controllers\SuccessStoryController;
+use App\Http\Controllers\EntranceExamController;
 
 
 
@@ -236,27 +237,12 @@ Route::get('/study-abroad/global-scholarships/{scholarship_id}', [StudyAbroadGlo
 
 // India Entrance exam section start 
 
-Route::get('/entrance-exams', function () {
-    $exams = collect(config('entrance_exam', []))->values()->all();
-    return view('entrance-exam.entrance-exam', compact('exams'));
-})->name('entrance-exams.index');
 
-Route::get('/entrance-exams-details/{slug?}', function ($slug = 'jee-main') {
-    $exams = collect(config('entrance_exam', []));
-    $exam = $exams->firstWhere('slug', $slug);
+Route::get('/entrance-exams', [EntranceExamController::class, 'index'])
+    ->name('entrance-exams.index');
 
-    abort_if(!$exam, 404);
-
-    $exam['exam_name'] = $exam['full_name'] ?? $exam['name'] ?? 'Entrance Exam';
-    $exam['short_name'] = $exam['name'] ?? 'Exam Details';
-    $exam['conducting_body'] = $exam['conducting_authority'] ?? 'Not available';
-    $exam['exam_level'] = $exam['level'] ?? 'Not specified';
-    $exam['course_name'] = $exam['course_name'] ?? $exam['category'] ?? 'Not specified';
-    $exam['overview'] = $exam['overview'] ?? $exam['description'] ?? '';
-    $exam['duration'] = $exam['duration'] ?? 'Check official notification';
-
-    return view('entrance-exam.entrance-exam-details', compact('exam'));
-})->name('entrance-exams-details.index');
+Route::get('/entrance-exams-details/{slug}', [EntranceExamController::class, 'details'])
+    ->name('entrance-exams-details.index');
 
 
 // India Entrance exam section end

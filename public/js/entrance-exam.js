@@ -152,9 +152,14 @@ document.addEventListener('DOMContentLoaded', function () {
         const link = document.createElement('a');
         link.className = 'ign-ee-exam-link';
 
+        // const slug = text(exam.slug);
+        // link.href = slug
+        //     ? '/entrance-exams-details/' + encodeURIComponent(slug)
+        //     : '#ign-ee-exam-list';
+
         const slug = text(exam.slug);
         link.href = slug
-            ? '/entrance-exams-details/' + encodeURIComponent(slug)
+            ? window.entranceExamDetailsUrl + '/' + encodeURIComponent(slug)
             : '#ign-ee-exam-list';
 
         link.setAttribute('aria-label', 'Explore ' + text(exam.name, 'exam') + ' details');
